@@ -13,7 +13,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Action | Default | Notes |
 |---|---|---|
 | Open Sidekick | **Ctrl+Alt+K** (Win/Linux) / **⌘⌥K** (macOS) | Captures selection, then summons Sidekick |
-| Open Sidekick – Clipboard tab | **Ctrl+Shift+C** / **⌘⇧C** | Jumps straight to the Clipboard tab |
+| Open Sidekick – Clipboard tab | **Ctrl+Alt+C** / **⌘⌥C** | Jumps straight to the Clipboard tab |
 | Superlookup | **Ctrl+Alt+L** / **⌘⌥L** | Sends the selection to Superlookup |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup |
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
