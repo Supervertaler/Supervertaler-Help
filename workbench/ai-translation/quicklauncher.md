@@ -14,12 +14,12 @@ The **Supervertaler Sidekick** is a floating AI assistant window that gives you 
 
 | Method | Shortcut |
 |--------|----------|
-| Supervertaler Sidekick (Chat) | **Alt+K** |
+| Supervertaler Sidekick (Chat) | **Ctrl+Alt+K** (⌘⌥K on macOS) |
 | QuickTrans (instant translation) | **Ctrl+Alt+Q** |
 
 Select text in any application (Word, memoQ, Trados, browser, etc.), then press the shortcut. The assistant opens with the selected text ready to use.
 
-- **Alt+K** opens the **Chat** tab for AI conversation
+- **Ctrl+Alt+K** (⌘⌥K on macOS) opens the **Chat** tab for AI conversation
 - **Ctrl+Alt+Q** opens the **QuickTrans** tab and immediately fetches translations from all enabled providers
 
 ::: info
@@ -147,14 +147,14 @@ You can change the default keyboard shortcuts in **Settings > Keyboard Shortcuts
 | Default shortcut | Action |
 |------------------|--------|
 | **Ctrl+Q** | Open Supervertaler Sidekick (in-app) |
-| **Alt+K** | Open Supervertaler Sidekick (global, from any app) |
+| **Ctrl+Alt+K** (⌘⌥K on macOS) | Open Supervertaler Sidekick (global, from any app) |
 | **Ctrl+Alt+Q** | Open QuickTrans (global, from any app) |
 | **Ctrl+M** | QuickTrans (in-app, direct) |
 
 ## Tips
 
 - **Ctrl+Alt+Q is the fastest way to translate** -- select text anywhere, press the shortcut, results appear instantly
-- **Press Alt+K without selecting text** to open the assistant for general AI chat
+- **Press Ctrl+Alt+K without selecting text** to open the assistant for general AI chat
 - **Use text conversions** for quick formatting changes without leaving your current app
 - **Right-click context chips** to browse and select specific TMs or termbases
 - **Paste images** (Ctrl+V) to ask the AI about screenshots or diagrams

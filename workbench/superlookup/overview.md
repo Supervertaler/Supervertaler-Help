@@ -6,7 +6,7 @@ SuperLookup is your unified concordance and research hub, bringing together all 
 |-----|----------|-------|
 | From the translation grid | **Ctrl+K** | Opens Sidekick directly to the SuperLookup tab; selected text is used as the search query automatically |
 | From any application (system-wide) | **Ctrl+Alt+L** | Select any text in any app, press the shortcut, and SuperLookup opens with that text pre-filled |
-| Via Sidekick | **Alt+K** then click the SuperLookup tab | Alt+K opens Sidekick to whatever tab was last active; click SuperLookup, or right-click the tab title and set it as the default |
+| Via Sidekick | **Ctrl+Alt+K** (⌘⌥K on macOS) then click the SuperLookup tab | Ctrl+Alt+K opens Sidekick to whatever tab was last active; click SuperLookup, or right-click the tab title and set it as the default |
 
 ## Tabs
 

@@ -1,6 +1,6 @@
 When you have **Supervertaler for Trados** running with the AI Assistant panel active, the floating Sidekick Chat tab automatically picks up the project context from Trados — the active segment, surrounding segments, TM matches, termbase hits, and project metadata. You can ask the chat questions about your real translation work without switching away from Trados Studio.
 
-This is especially useful on small laptop screens where there's not enough room to keep the in-Trados Assistant panel visible alongside the editor. **Alt+K** summons Sidekick over Trados; **Esc** dismisses it; **Ctrl+Tab** cycles between Chat, SuperLookup, Clipboard, and AutoFingers.
+This is especially useful on small laptop screens where there's not enough room to keep the in-Trados Assistant panel visible alongside the editor. **Ctrl+Alt+K** (⌘⌥K on macOS) summons Sidekick over Trados; **Esc** dismisses it; **Ctrl+Tab** cycles between Chat, SuperLookup, Clipboard, and AutoFingers.
 
 ## How it works
 

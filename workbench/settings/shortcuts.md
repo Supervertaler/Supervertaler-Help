@@ -12,12 +12,12 @@ The 🌍 actions and their out-of-the-box bindings:
 
 | Action | Default | Notes |
 |---|---|---|
-| Open Sidekick | **Alt+K** (Win/Linux) / **⌥K** (macOS) | Captures selection, then summons Sidekick |
-| Open Sidekick – Clipboard tab | **Ctrl+Shift+C** / **⌃⇧C** | Jumps straight to the Clipboard tab |
-| Superlookup | **Ctrl+Alt+L** / **⌃⌥L** | Sends the selection to Superlookup |
-| QuickTrans | **Ctrl+Alt+Q** / **⌃⌥Q** | Instant translation popup |
-| Voice dictation / push-to-talk | **Ctrl+Alt+D** / **⌃⌥D** | Hold to record, release to insert |
-| AutoFingers Always-On (toggle) | **Ctrl+Alt+A** / **⌃⌥A** | Continuous listening on/off |
+| Open Sidekick | **Ctrl+Alt+K** (Win/Linux) / **⌘⌥K** (macOS) | Captures selection, then summons Sidekick |
+| Open Sidekick – Clipboard tab | **Ctrl+Shift+C** / **⌘⇧C** | Jumps straight to the Clipboard tab |
+| Superlookup | **Ctrl+Alt+L** / **⌘⌥L** | Sends the selection to Superlookup |
+| QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup |
+| Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
+| AutoFingers Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 

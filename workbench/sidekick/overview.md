@@ -37,17 +37,17 @@ Voice commands and push-to-talk dictation. Create commands that press keyboard s
 
 ### Opening Sidekick
 
-| How                                | Shortcut       | Notes                                                                                                                       |
-| ---------------------------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Open / hide Sidekick from anywhere | **Alt+K**      | Opens to whichever tab was last active, unless a default tab is set                                                         |
-| Open SuperLookup from the editor   | **Ctrl+K**     | Opens Sidekick directly to the SuperLookup tab and runs a search on any selected text                                       |
-| SuperLookup from any application   | **Ctrl+Alt+L** | System-wide shortcut – select text in any app, press the shortcut, and SuperLookup opens with that text as the search query |
+| How                                | Shortcut          | Notes                                                                                                                       |
+| ---------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Open / hide Sidekick from anywhere | **Ctrl+Alt+K** (⌘⌥K on macOS) | Opens to whichever tab was last active, unless a default tab is set                                             |
+| Open SuperLookup from the editor   | **Ctrl+K**        | Opens Sidekick directly to the SuperLookup tab and runs a search on any selected text                                       |
+| SuperLookup from any application   | **Ctrl+Alt+L** (⌘⌥L on macOS) | System-wide shortcut – select text in any app, press the shortcut, and SuperLookup opens with that text as the search query |
 
 Press **Esc** to hide Sidekick and return focus to whatever was active.
 
 #### Setting a default tab
 
-By default, **Alt+K** reopens Sidekick to whichever tab you last used. To always open to a specific tab, right-click that tab's title inside Sidekick and choose **Set as default tab**.
+By default, **Ctrl+Alt+K** reopens Sidekick to whichever tab you last used. To always open to a specific tab, right-click that tab's title inside Sidekick and choose **Set as default tab**.
 
 ***
 

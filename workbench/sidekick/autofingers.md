@@ -22,15 +22,15 @@ Always-On runs a continuous microphone stream in the background. When you speak,
 
 **Focus matters:** AutoFingers sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
-### Push-to-Talk (F9 / Ctrl+Alt+D)
+### Push-to-Talk (F9 / Ctrl+Shift+Space)
 
-Press **F9** (inside the Workbench editor) or **Ctrl+Alt+D** (globally, from any application) to record a single utterance for free-form running-text dictation. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
+Press **F9** (inside the Workbench editor) or **Ctrl+Shift+Space** (globally, from any application – ⌘⇧Space on macOS) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
 
 **Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, AutoFingers pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
 
 **F9 modes** (configurable in the Push-to-Talk settings):
 - **Toggle** (default) – press once to start, press again to stop
-- **Hold-to-talk** – hold the key to record, release to stop. _Note: this only affects F9. The global Ctrl+Alt+D hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
+- **Hold-to-talk** – hold the key to record, release to stop. _Note: this only affects F9. The global Ctrl+Shift+Space hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
 
 ---
 
@@ -70,14 +70,14 @@ You can also use the **Edit** button in the toolbar above the table.
 Click **+ Add** above the table. Choose a command type:
 
 - **Command** – calls an internal Workbench action (confirm segment, next segment, etc.)
-- **Keystroke** – sends a key combination to the active window (e.g. `ctrl+enter`)
+- **Keystroke** – sends a key combination to the active window. Click into the **Keystroke** field and press the keys you want to send (e.g. press Ctrl+Enter); the field shows the platform-native symbols (⌘⇧⌥⌃ on macOS, Ctrl+Shift+Alt elsewhere) so you don't have to translate between platforms.
 - **AHK Script** – runs an AutoHotkey v2 script file
 - **AHK Inline** – runs a short AutoHotkey v2 snippet directly
 
-The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below the Action field that updates with the Type dropdown — it lists modifier syntax and special-key names for Keystroke, common AHK patterns for AutoHotkey Code, the available internal action names, etc. So you don't need to memorise the full reference up front.
+The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below the Action field that updates with the Type dropdown — it explains the press-to-capture editor for Keystroke commands, lists common AHK patterns for AutoHotkey Code, names the available internal actions, etc. So you don't need to memorise the full reference up front.
 
 {% hint style="info" %}
-Keystroke commands use `SendInput` under the hood, which works correctly with WPF applications like Trados Studio. Standard key names supported: `ctrl`, `alt`, `shift`, `win`, `enter`, `tab`, `escape`, `space`, `backspace`, `delete`, `insert`, `home`, `end`, `pageup`, `pagedown`, `up`, `down`, `left`, `right`, `f1`–`f12`.
+**Keystroke commands are cross-platform.** A command captured as **Ctrl+S** on Windows is stored in Qt's portable format and fires **⌘S** automatically on macOS – the macOS dispatcher swaps Ctrl ↔ Cmd internally to match what every Mac app does. So you can build your command list once and it works on whichever machine Supervertaler is running on. Under the hood, Windows uses `SendInput` (compatible with WPF apps like Trados Studio) and macOS uses AppleScript via `osascript`.
 {% endhint %}
 
 ### Removing a command
@@ -112,9 +112,9 @@ The first time you start Always-On with Vosk, the small English model (~40 MB) a
 
 ### Push-to-talk dictation engine
 
-The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles **F9** / **Ctrl+Alt+D** when you trigger push-to-talk dictation. This is independent of the Always-On engine, because the two paths have different needs:
+The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles **F9** / **Ctrl+Shift+Space** when you trigger push-to-talk dictation. This is independent of the Always-On engine, because the two paths have different needs:
 
-| Setting | What runs when you press Ctrl+Alt+D / F9 |
+| Setting | What runs when you press Ctrl+Shift+Space / F9 |
 |---|---|
 | **Same as Always-On** _(default)_ | Auto-routes: Vosk or faster-whisper Always-On → faster-whisper push-to-talk; OpenAI API Always-On → OpenAI API push-to-talk |
 | **faster-whisper (offline)** | Always faster-whisper, regardless of Always-On engine |
@@ -122,7 +122,7 @@ The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what h
 
 The "ℹ️ Push-to-talk will use: ..." indicator below the dropdown shows the *resolved* engine (after auto-routing) so you always know which backend will run.
 
-**Why isn't Vosk an option here?** Vosk's grammar mode is built for fixed phrases, not free-form transcription. Pressing Ctrl+Alt+D produces running text, which Whisper handles vastly better. So push-to-talk silently falls through to a Whisper engine even when Always-On is set to Vosk.
+**Why isn't Vosk an option here?** Vosk's grammar mode is built for fixed phrases, not free-form transcription. Pressing Ctrl+Shift+Space produces running text, which Whisper handles vastly better. So push-to-talk silently falls through to a Whisper engine even when Always-On is set to Vosk.
 
 ### faster-whisper model
 
@@ -191,11 +191,11 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 
 | Shortcut | Action |
 |----------|--------|
-| **Ctrl+Alt+A** | Toggle Always-On listening |
-| **Ctrl+Alt+D** | Push-to-talk (one utterance) |
+| **Ctrl+Alt+A** (⌘⌥A on macOS) | Toggle Always-On listening |
+| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) |
 | **F9** | Push-to-talk (inside Workbench editor) |
 
-Hotkeys can be customised in **Settings → Keyboard Shortcuts → Global**.
+Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](../settings/shortcuts.md#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 
 ---
 

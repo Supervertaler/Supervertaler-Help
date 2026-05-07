@@ -3,7 +3,7 @@ The Clipboard Manager in Supervertaler Sidekick captures everything you copy to 
 | How | Shortcut |
 |-----|----------|
 | Open Sidekick directly to the Clipboard tab from any application | **Ctrl+Shift+C** |
-| Open Sidekick generally (then click the Clipboard tab) | **Alt+K** |
+| Open Sidekick generally (then click the Clipboard tab) | **Ctrl+Alt+K** (⌘⌥K on macOS) |
 
 ![](<../../.gitbook/assets/Supervertaler-Workbench-Sidekick-Clipboard.png>)
 
