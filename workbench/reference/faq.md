@@ -140,7 +140,7 @@ Developed with assistance from **Claude AI** (Anthropic) using collaborative hum
 
 * ✅ Provider-agnostic (switch between OpenAI, Claude, Gemini)
 * ✅ Open source - audit and customize the code
-* ✅ Advanced features: Superbench, Supervertaler Sidekick, project termbases
+* ✅ Advanced features: Supervertaler Sidekick, project termbases
 * ✅ No vendor lock-in or monthly subscriptions
 
 **Unique Selling Points:**
@@ -148,7 +148,6 @@ Developed with assistance from **Claude AI** (Anthropic) using collaborative hum
 * **2-Layer Prompt Architecture** with AI-generated custom prompts
 * **Project Termbases** with automatic term extraction
 * **Supervoice** - F9 voice dictation in 100+ languages
-* **Superbench** - Benchmark AI models on YOUR projects
 * **Universal Lookup** - Ctrl+Alt+L system-wide TM search
 
 ***
@@ -370,13 +369,6 @@ Full guide: [Installation](../get-started/installation.md)
 * 5 model sizes (tiny to large)
 * Dictate directly into target cells
 
-**📊 Superbench (LLM Benchmarking)**
-
-* Test GPT-4o, Claude, Gemini on YOUR projects
-* chrF++ scoring with adaptive segment sampling
-* Excel export with side-by-side comparison
-* Find best model for your language pair/domain
-
 **💾 Translation Memory**
 
 * SQLite-based TM with FTS5 full-text search
@@ -595,7 +587,7 @@ See: Full keyboard shortcut list in [Keyboard Shortcuts](../editor/keyboard-shor
 * **Best Context:** Gemini 1.5 Pro (2M tokens)
 * **General Use:** GPT-4o or Claude 3.5 Sonnet
 
-Test models with Superbench to find best for your language pair/domain!
+Try a couple of models on a representative passage from your project to see which one handles your language pair and domain best.
 
 ### How does AI translation work in Supervertaler?
 
@@ -688,7 +680,6 @@ Test models with Superbench to find best for your language pair/domain!
 **Online Features (require internet):**
 
 * AI translation via OpenAI/Claude/Gemini APIs
-* Superbench model testing
 * Supervertaler Sidekick (document analysis, prompt generation)
 
 **Offline Features:**
@@ -788,11 +779,6 @@ ollama pull translategemma:4b
 * **Disk:** 2-10 GB per model (varies by size)
 * **GPU:** Optional but recommended (NVIDIA/AMD for faster inference)
 * **Internet:** Only needed for initial model download
-
-**For Superbench:**
-
-* Multiple API keys (GPT-4o, Claude, Gemini)
-* Sufficient API credits for testing runs
 
 ### Why is my antivirus flagging Supervertaler as malware?
 
@@ -931,7 +917,7 @@ This is a **known false positive** that affects applications built with PyInstal
 
 **Cost Management:**
 
-* Use Superbench to test which model gives best value for your content
+* Try a couple of models on a representative passage to see which gives the best value for your content
 * Consider using Gemini Flash (economical) for first draft
 * Then use Claude 3.5 Sonnet or GPT-4o for final polish
 * Check TM matches before translating (100% matches = free)
@@ -1026,7 +1012,7 @@ See: [Prompt Manager](../ai-translation/prompt-library.md) for full details
 * **Check internet:** Use wired connection if possible
 * **Upgrade API plan:** Higher-tier plans have better rate limits
 
-**Use Superbench** to test which model gives best speed/quality balance for your content!
+Try a couple of models on a representative passage to see which gives the best speed/quality balance for your content.
 
 ### API errors - what do they mean?
 
@@ -1507,7 +1493,6 @@ The Superlookup Web Resources tab includes an **embedded browser** that lets you
 **Near Future (v1.10+):**
 
 * Enhanced QA tools (consistency checks, tag validation)
-* Improved Superbench (more models, better scoring)
 * Advanced filtering options
 * Performance optimizations for very large projects
 
