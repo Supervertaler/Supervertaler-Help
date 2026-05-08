@@ -70,7 +70,7 @@
 
 ---
 
-## 🖥️ Get Started
+## 🖥️ ━━━ Workbench ━━━
 
 * [Supervertaler Workbench](workbench/README.md)
 * [Installation](workbench/get-started/installation.md)
