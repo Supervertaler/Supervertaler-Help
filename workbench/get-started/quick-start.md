@@ -1,5 +1,9 @@
 # Quick Start Guide
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 This guide will get you translating in under 5 minutes.
 
 If you're not sure where to begin: import a file, translate a few segments, then export back to your CAT tool.

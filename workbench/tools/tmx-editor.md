@@ -1,5 +1,9 @@
 # TMX Editor
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Supervertaler includes a built-in TMX editor for inspecting and editing TMX translation memories.
 
 ## Where to find it

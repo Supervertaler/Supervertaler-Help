@@ -1,5 +1,9 @@
 # Supervertaler Sidekick
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 The **Supervertaler Sidekick** is a floating AI assistant window that gives you instant access to an AI chat, instant machine translation (QuickTrans), text conversions, snippets, and your custom prompts -- from anywhere on your computer.
 
 ## Opening the Assistant

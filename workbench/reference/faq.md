@@ -1,5 +1,9 @@
 # FAQ
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 **Current Version:** v1.9.74 (December 31, 2025) **Framework:** PyQt6 **Last Updated:** January 1, 2026
 
 Welcome to the Supervertaler FAQ! Find answers to common questions about installation, features, workflow, and troubleshooting.

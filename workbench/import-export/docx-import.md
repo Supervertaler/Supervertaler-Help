@@ -1,5 +1,9 @@
 # Importing DOCX Files
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Use DOCX import for normal Word documents (not CAT tool bilingual formats).
 
 DOCX import is handled by the bundled **Okapi sidecar** – an industry-standard localisation library that runs as a small background service. This gives you SRX-based segmentation, proper paragraph and table detection, and a faithful round-trip on export.

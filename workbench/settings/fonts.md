@@ -1,3 +1,7 @@
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Font settings control the typeface and size used in the translation grid and Sidekick panels.
 
 ## What you can change

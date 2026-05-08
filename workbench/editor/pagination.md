@@ -1,5 +1,9 @@
 # Pagination
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Pagination lets you work through large projects in pages (for example 50 segments at a time).
 
 ## Why use pagination

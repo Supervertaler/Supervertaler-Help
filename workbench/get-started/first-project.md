@@ -1,5 +1,9 @@
 # Your First Translation Project
 
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Let's walk through creating a complete translation project from start to finish.
 
 ## Creating a New Project

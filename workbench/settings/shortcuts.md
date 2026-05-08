@@ -1,3 +1,7 @@
+{% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
 Supervertaler has one keyboard shortcut per action. The same combination works whether Supervertaler is the focused application or whether you trigger it from another app – there's no longer a separate "Global" entry to keep in sync with the in-app one.
 
 ## Managing shortcuts

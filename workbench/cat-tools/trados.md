@@ -1,6 +1,10 @@
 # Trados Studio Workflow
 
 {% hint style="info" %}
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+{% endhint %}
+
+{% hint style="info" %}
 **Using Supervertaler for Trados (plugin)?** For documentation on the Trados Studio plugin (TermLens, AI Assistant, Batch Translate), see [Supervertaler for Trados](../supervertaler-for-trados/README.md).
 This page covers the SDLPPX round-trip workflow using Supervertaler as a **standalone application**.
 {% endhint %}
