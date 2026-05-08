@@ -12,13 +12,20 @@ AI provider costs are **separate** from your Supervertaler licence. You pay the 
 
 ### Estimates vs actual cost
 
-The token counts and `~$` figures shown in the **Reports** tab and the chat replies are **estimates**, not the amounts your provider will actually charge:
+From v4.19.86 onwards, the **Reports** tab shows **real billed token counts and cost** as reported by your provider's API – with cache-hit tokens broken out (e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`). When the cost has no `~` prefix, that's the actual amount your provider will charge.
 
-* Token counts are computed from a `chars / 4` heuristic, not the real tokeniser. They typically over-count English by 1.5× to 1.8×.
-* Prices are looked up from the table further down this page, which is updated when providers change their rates – it can lag a few weeks behind the actual published rate.
-* Estimates do not account for provider-side discounts (prompt caching, batch tier, free credits, monthly minimums) or the OpenRouter platform fee.
+The number you see is provider-reported and cache-aware:
 
-For the authoritative number, check your provider's own usage console:
+* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate, cache writes at 1.25×.
+* **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (50% off cached input).
+* **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
+* **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input).
+
+For these providers the in-app number is the authoritative billable figure (modulo any account-level credits or monthly minimums you may have).
+
+The chars/4 estimate is still used as a fallback when the provider didn't return usage info – this affects Ollama (local, free anyway), some Grok / Mistral edge cases, and any response shape we couldn't parse. In those cases the cost still appears with a `~` prefix to flag it as an estimate.
+
+If you want to cross-check against your provider's own dashboard:
 
 | Provider                | Where to look                                                                            |
 | ----------------------- | ---------------------------------------------------------------------------------------- |
@@ -31,7 +38,7 @@ For the authoritative number, check your provider's own usage console:
 | **DeepSeek**            | [platform.deepseek.com – Usage](https://platform.deepseek.com/usage)                      |
 | **Ollama**              | Free – local execution, no provider console.                                              |
 
-The in-app estimate is intended as a sense-check ("is this prompt likely to cost cents or dollars?") rather than a billable figure.
+The in-app number and the provider dashboard should agree to within rounding for any given run. If you see a meaningful gap, the most likely causes (in order) are: a provider-side credit or volume discount the in-app calculator can't see; the in-app pricing table being a few weeks behind a recent rate change; or, for fallback (estimate) cases, the chars/4 heuristic over- or under-counting tokens for that particular language and content type.
 
 ### How costs are calculated
 
