@@ -48,9 +48,11 @@ For full control over a new term, press **Ctrl+Alt+T** (or right-click in the ed
 | **Source synonyms** | Alternative source-language forms for the same concept |
 | **Target synonyms** | Alternative target-language translations |
 | **Definition** | Optional definition or usage note. Supports multiple lines – click the **▼** button to expand the field for longer content. |
-| **Domain** | Subject area or client (e.g. "Legal", "ACME Corp") |
+| **Domain** | Subject area (e.g. "Legal", "Patents", "Medical") |
 | **Notes** | Any additional notes for translators. Supports multiple lines with an expand button, like Definition. |
 | **URL** | Optional reference URL (shown as a clickable link in the term popup) |
+| **Client** | Optional client code (e.g. "ACME", "GLOBEX"). Used to filter the SuperMemory knowledge base context to that client's profile when this term is in scope. |
+| **Project** | Optional project name (e.g. a job code or client-side project ID). Bookkeeping field for the user's own organisation – not sent to the AI in translation prompts. The Termbase Editor's grid lets you sort and filter by Project. |
 | **Non-translatable** | Check this to mark the term as non-translatable |
 
 The term is added to the **project termbase** if one is configured, or the first write-enabled termbase otherwise.

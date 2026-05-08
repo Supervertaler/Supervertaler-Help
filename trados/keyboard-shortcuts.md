@@ -22,7 +22,7 @@ All keyboard shortcuts available in Supervertaler for Trados, with Mac equivalen
 |---------------------|----------------|--------|
 | `Alt+Down` | `Option+Down` | Quick-add term to write termbases |
 | `Alt+Up` | `Option+Up` | Quick-add term to project termbase |
-| `Ctrl+Alt+T` | `Control+Option+T` | Add term entry (opens full editor with definition, domain, notes, synonyms) |
+| `Ctrl+Alt+T` | `Control+Option+T` | Add term entry (opens full editor with definition, domain, notes, URL, client, project, and synonyms) |
 | `Ctrl+Alt+N` | `Control+Option+N` | Quick-add non-translatable term |
 | `Ctrl` (tap) | `Control` (tap) | Toggle the floating **TermLens popup** (open / close) |
 | `Ctrl+Alt+G` | `Control+Option+G` | Open the floating TermLens popup (alternative) |
