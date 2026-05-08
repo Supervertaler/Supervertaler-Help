@@ -1,7 +1,7 @@
 # AI Cost Guide
 
 {% hint style="info" %}
-You are viewing help for **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/workbench/).
+You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/workbench/).
 {% endhint %}
 
 This page helps you estimate the API cost of using AI features in Supervertaler for Trados. All prices are based on official provider pricing as of March 2026 and are shown in **US dollars**.
@@ -9,6 +9,29 @@ This page helps you estimate the API cost of using AI features in Supervertaler 
 {% hint style="info" %}
 AI provider costs are **separate** from your Supervertaler licence. You pay the AI provider directly for the tokens your requests consume. Supervertaler does not add any markup.
 {% endhint %}
+
+### Estimates vs actual cost
+
+The token counts and `~$` figures shown in the **Reports** tab and the chat replies are **estimates**, not the amounts your provider will actually charge:
+
+* Token counts are computed from a `chars / 4` heuristic, not the real tokeniser. They typically over-count English by 1.5× to 1.8×.
+* Prices are looked up from the table further down this page, which is updated when providers change their rates – it can lag a few weeks behind the actual published rate.
+* Estimates do not account for provider-side discounts (prompt caching, batch tier, free credits, monthly minimums) or the OpenRouter platform fee.
+
+For the authoritative number, check your provider's own usage console:
+
+| Provider                | Where to look                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------- |
+| **Anthropic (Claude)**  | [platform.claude.com – Cost](https://platform.claude.com/workspaces/default/cost)         |
+| **OpenAI (GPT)**        | [platform.openai.com – Usage](https://platform.openai.com/settings/organization/usage)    |
+| **Google (Gemini)**     | [console.cloud.google.com – Billing reports](https://console.cloud.google.com/billing/)   |
+| **xAI (Grok)**          | [console.x.ai – Usage](https://console.x.ai/team/default/usage)                           |
+| **Mistral AI**          | [console.mistral.ai – Usage](https://console.mistral.ai/usage)                            |
+| **OpenRouter**          | [openrouter.ai – Activity](https://openrouter.ai/activity)                                |
+| **DeepSeek**            | [platform.deepseek.com – Usage](https://platform.deepseek.com/usage)                      |
+| **Ollama**              | Free – local execution, no provider console.                                              |
+
+The in-app estimate is intended as a sense-check ("is this prompt likely to cost cents or dollars?") rather than a billable figure.
 
 ### How costs are calculated
 
@@ -42,7 +65,8 @@ These are estimates for a representative document. Actual usage varies with segm
 | ----------------------------------- | --------- | --------- | ---------- |
 | **Claude Sonnet 4.6** (recommended) | $0.50     | $0.54     | $0.06      |
 | **Claude Haiku 4.5**                | $0.17     | $0.18     | $0.02      |
-| **Claude Opus 4.6**                 | $0.83     | $0.90     | $0.10      |
+| **Claude Opus 4.7**                 | $2.48     | $2.70     | $0.30      |
+| **Claude Opus 4.6**                 | $2.48     | $2.70     | $0.30      |
 
 #### Google Gemini
 
@@ -77,7 +101,7 @@ These are estimates for a representative document. Actual usage varies with segm
 | Model                               | Translate | Proofread | AutoPrompt |
 | ----------------------------------- | --------- | --------- | ---------- |
 | **Claude Sonnet 4.6** (recommended) | \~$0.53   | \~$0.57   | \~$0.06    |
-| **Claude Opus 4.6**                 | \~$0.88   | \~$0.95   | \~$0.11    |
+| **Claude Opus 4.6**                 | \~$2.62   | \~$2.85   | \~$0.32    |
 | **GPT-5.4**                         | \~$1.57   | \~$1.73   | \~$0.17    |
 | **GPT-5.4 Mini**                    | \~$0.14   | \~$0.16   | \~$0.02    |
 | **Gemini 3.1 Pro**                  | \~$0.37   | \~$0.40   | \~$0.04    |
@@ -122,7 +146,8 @@ For reference, these are the per-token rates used in the calculations above:
 | GPT-5.4 Mini             | $0.75                 | $4.50                  |
 | Claude Sonnet 4.6        | $3.00                 | $15.00                 |
 | Claude Haiku 4.5         | $1.00                 | $5.00                  |
-| Claude Opus 4.6          | $5.00                 | $25.00                 |
+| Claude Opus 4.7          | $15.00                | $75.00                 |
+| Claude Opus 4.6          | $15.00                | $75.00                 |
 | Gemini 2.5 Flash         | $0.30                 | $2.50                  |
 | Gemini 2.5 Pro           | $1.25                 | $10.00                 |
 | Gemini 3.1 Pro (Preview) | $2.00                 | $12.00                 |
@@ -144,7 +169,7 @@ Prices change regularly. Check your provider's pricing page for the latest rates
 * **Start with a budget model** – GPT-5.4 Mini, Gemini 2.5 Flash, or Grok 4.1 Fast are excellent for routine translation at a fraction of the cost.
 * **Use premium models selectively** – reserve GPT-5.4, Claude Opus, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
-* **Check your usage** – the [Usage Statistics](settings/usage-statistics.md) tab in Settings tracks your token consumption per provider.
+* **Check your usage** – the **Reports** tab in Supervertaler Assistant lists every AI call with its estimated token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table at the top of this page) shows the authoritative billable figure.
 
 ### Built-in cost protection
 
