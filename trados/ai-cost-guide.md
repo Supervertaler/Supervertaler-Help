@@ -204,3 +204,4 @@ For everyday work – chat queries, terminology questions, QuickLauncher prompts
 * [AI Proofreader](ai-proofreader.md) – proofread translated segments
 * [AutoPrompt](generate-prompt.md) – generate translation prompts
 * [Licensing & Pricing](licensing.md) – Supervertaler subscription plans
+
