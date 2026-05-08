@@ -68,9 +68,9 @@ pip install -r requirements.txt --force-reinstall
 
 ### Encoding errors (garbled text)
 
-- Try opening the source file in Notepad++ to check encoding
-- Use **Tools → Encoding Repair** to fix common issues
-- Export from source tool with UTF-8 encoding
+- Open the source file in Notepad++ to check the detected encoding; if it shows ANSI/Windows-1252 with mojibake, use *Encoding → Convert to UTF-8* and re-save.
+- For more stubborn cases, run [`ftfy`](https://pypi.org/project/ftfy/) on the file from the command line.
+- Re-export from the source tool with UTF-8 encoding when possible.
 
 ---
 

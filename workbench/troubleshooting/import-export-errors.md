@@ -47,8 +47,8 @@ This page covers common problems when importing or exporting files.
 
 **Fix:**
 
-- Try **Tools → Encoding Repair**.
-- Re-export from the source tool with a modern Unicode/UTF-8 friendly path when possible.
+- Re-export from the source tool with a modern Unicode/UTF-8-friendly path when possible.
+- For Latin-1/Windows-1252 mojibake (e.g. "Ã©" appearing where "é" should be), open the file in a text editor that supports re-interpreting the encoding (Notepad++ has *Encoding → Convert to UTF-8*) or run `ftfy` on it from the command line.
 
 ## Segments don’t match on reimport
 
