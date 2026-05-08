@@ -97,7 +97,7 @@ Full-featured standalone application with all capabilities.
 
 ### Quick Start (5 Steps)
 
-1. **Open PDF Rescue** - Navigate to Assistant panel → PDF Rescue tab
+1. **Open PDF Rescue** - Open the **Tools menu** at the top of the window → **🔍 PDF Rescue**. The tool opens in its own window.
 2. **Import PDF** - Click "📄 PDF" button, select your badly-formatted PDF
 3. **Check formatting option** - Leave "Preserve formatting" checked (default)
 4. **Process** - Click "⚡ Process ALL" to OCR all pages

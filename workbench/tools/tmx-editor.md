@@ -8,7 +8,7 @@ Supervertaler includes a built-in TMX editor for inspecting and editing TMX tran
 
 ## Where to find it
 
-- Go to the **Tools** tab → **✏️ TMX Editor**.
+- Open the **Tools menu** at the top of the window → **✏️ TMX Editor**. The editor opens in its own window.
 
 ## What you can do
 
