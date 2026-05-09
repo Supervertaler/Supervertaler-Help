@@ -656,7 +656,7 @@ Try a couple of models on a representative passage from your project to see whic
 * **openai:** OpenAI API client
 * **anthropic:** Claude API client
 * **google-generativeai:** Gemini API client
-* **openai-whisper (optional):** Offline/local voice dictation (very large dependency; installs PyTorch). The default/recommended path uses the OpenAI Whisper API via `openai`.
+* **vosk + faster-whisper:** Offline voice dictation. Vosk is the always-on commands engine (lightweight, ~15 MB wheel + ~40 MB model on first use). faster-whisper handles running-text dictation via push-to-talk (~30 MB ctranslate2 wheel + a model that downloads on first use). Both are core dependencies – no separate install step.
 * **Pillow (PIL):** Image processing for figure context
 
 **Architecture:**
