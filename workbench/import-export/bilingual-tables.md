@@ -1,7 +1,7 @@
 # Bilingual Tables
 
 {% hint style="info" %}
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🔌 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
 A bilingual table is a side-by-side **Source | Target** export that’s useful for review and handoff.

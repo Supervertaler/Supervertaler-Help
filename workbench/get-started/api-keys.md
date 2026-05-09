@@ -1,5 +1,5 @@
 {% hint style="info" %}
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🔌 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
 To use AI translation you need an API key from at least one provider. Enter your key in **Settings → AI Settings**.

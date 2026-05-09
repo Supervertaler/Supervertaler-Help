@@ -1,7 +1,7 @@
 # Multi-File Projects
 
 {% hint style="info" %}
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🔌 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
 Multi-file projects let you import a whole folder of files as a single Supervertaler project.

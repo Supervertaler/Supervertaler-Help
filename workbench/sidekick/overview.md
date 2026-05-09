@@ -1,7 +1,7 @@
 # Sidekick Overview
 
 {% hint style="info" %}
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🔌 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
 **Supervertaler Sidekick** is the floating side panel in Supervertaler Workbench. It stays visible while you translate, giving you quick access to four areas without switching away from your translation grid.

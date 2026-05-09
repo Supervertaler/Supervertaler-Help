@@ -1,5 +1,5 @@
 {% hint style="info" %}
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🔌 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
+You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
 When you have **Supervertaler for Trados** running with the AI Assistant panel active, the floating Sidekick Chat tab automatically picks up the project context from Trados — the active segment, surrounding segments, TM matches, termbase hits, and project metadata. You can ask the chat questions about your real translation work without switching away from Trados Studio.

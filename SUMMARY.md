@@ -2,7 +2,7 @@
 
 * [Welcome to Supervertaler Help!](README.md)
 
-## 🔌 Get Started
+## 🧩 Get Started
 
 * [Supervertaler for Trados](trados/README.md)
 * [Installation](trados/installation.md)
@@ -10,7 +10,7 @@
 * [Licensing & Pricing](trados/licensing.md)
 * [AI Cost Guide](trados/ai-cost-guide.md)
 
-## 🔌 Features
+## 🧩 Features
 
 * [TermLens](trados/termlens.md)
   * [Adding & Editing Terms](trados/termlens/adding-terms.md)
@@ -41,11 +41,11 @@
   * [Clipboard Mode](trados/clipboard-mode.md)
   * [AutoPrompt](trados/generate-prompt.md)
 
-## 🔌 Terminology
+## 🧩 Terminology
 
 * [Termbase Management](trados/termbase-management.md)
 
-## 🔌 Settings
+## 🧩 Settings
 
 * [TermLens Settings](trados/settings/termlens.md)
 * [AI Settings](trados/settings/ai-settings.md)
@@ -60,7 +60,7 @@
 * [Per-Project Settings](trados/settings/project-settings.md)
 * [Usage Statistics](trados/settings/usage-statistics.md)
 
-## 🔌 Reference
+## 🧩 Reference
 
 * [User Data Folder](trados/data-folder.md)
 * [Keyboard Shortcuts](trados/keyboard-shortcuts.md)
