@@ -11,6 +11,10 @@ This page covers the SDLPPX round-trip workflow using Supervertaler as a **stand
 
 This guide covers working with Trados Studio packages in Supervertaler.
 
+{% hint style="success" %}
+**Just want to consult a Trados TM?** If you don't need to round-trip a project – you only want to query a Trados `.sdltm` file from Supervertaler while it stays in use in Trados – you don't need an SDLPPX package at all. See [Attaching a Trados TM (.sdltm)](../translation-memory/trados-sdltm.md).
+{% endhint %}
+
 ## Recommended: SDLPPX Packages
 
 The best way to work with Trados Studio is using **project packages** (SDLPPX files).

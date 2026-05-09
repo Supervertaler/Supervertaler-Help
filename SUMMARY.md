@@ -120,6 +120,7 @@
 * [Translation Memory Basics](workbench/translation-memory/basics.md)
 * [Creating & Managing TMs](workbench/translation-memory/managing-tms.md)
 * [Importing TMX Files](workbench/translation-memory/importing-tmx.md)
+* [Attaching a Trados TM (.sdltm)](workbench/translation-memory/trados-sdltm.md)
 * [Fuzzy Matching](workbench/translation-memory/fuzzy-matching.md)
 * [Supermemory (Semantic Search)](workbench/translation-memory/supermemory.md)
 
