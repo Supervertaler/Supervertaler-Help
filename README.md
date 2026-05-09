@@ -6,7 +6,7 @@ description: Help and documentation for the Supervertaler suite.
 
 Supervertaler is a translation suite for professional translators, localisers, and people who work with words. There are two products:
 
-#### 🧩 Supervertaler for Trados
+#### 🔌 Supervertaler for Trados
 
 A plugin for [Trados Studio](https://www.trados.com/) that adds AI-powered translation, terminology, and a hands-free assistant to the CAT tool you already use. Source-available, paid (three tiers).
 
