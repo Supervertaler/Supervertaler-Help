@@ -1,5 +1,5 @@
 {% hint style="info" %}
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/workbench/).
+You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
 {% endhint %}
 
 The **Sidekick Bridge** is a pair of small localhost-only HTTP services – one in each product – that let Supervertaler for Trados and Supervertaler Workbench cooperate while you translate. Each bridge runs in the background, exposes a few endpoints on `127.0.0.1` only, and is gated behind a per-session bearer token.
@@ -217,5 +217,5 @@ If you've set the QuickLauncher target to Workbench Sidekick but nothing's appea
 
 * [QuickLauncher](../quicklauncher.md) – the action that drives the Workbench-side bridge
 * [Supervertaler Assistant](../ai-assistant.md) – the in-Trados chat that uses the same context fields the Trados-side bridge exposes
-* [Sidekick Chat – Trados-aware mode (Workbench)](https://supervertaler.gitbook.io/help/workbench/sidekick/trados-aware-chat) – the primary consumer of the Trados-side bridge
+* [Sidekick Chat – Trados-aware mode (Workbench)](https://supervertaler.gitbook.io/help/get-started-1/workbench/sidekick/trados-aware-chat) – the primary consumer of the Trados-side bridge
 * [User Data Folder](../data-folder.md) – where both handshake files live
