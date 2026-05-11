@@ -240,6 +240,56 @@ When to pick which:
 Workbench must be running for this to work. If it isn't (or the [Sidekick Bridge](ai-assistant/sidekick-bridge.md) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
 {% endhint %}
 
+### Sending prompts to the clipboard (paste into claude.ai, ChatGPT, etc.)
+
+Each QuickLauncher prompt can be configured to offer a **Copy to clipboard** destination alongside the usual **Send to Assistant** behaviour. This is useful when you want to paste the fully-expanded prompt – with all `{{SOURCE_SEGMENT}}`, `{{PROJECT}}`, `{{TM_MATCHES}}` etc. already filled in – into an external chat such as a [claude.ai project](https://claude.ai/), ChatGPT, or Gemini.
+
+A common workflow: keep an ongoing project on claude.ai for the document you're translating (with your style guide and reference material attached), and use a QuickLauncher prompt to send the active segment, surrounding context, and TM matches to that project with one keystroke.
+
+#### Enabling clipboard mode for a prompt
+
+1. Open **Settings → Prompts** and double-click the QuickLauncher prompt you want to configure (or create a new one)
+2. In the Prompt Editor, find the **Mode** row
+3. Tick **Copy to clipboard** alongside (or instead of) **Send to Assistant**
+4. If both are ticked, pick which one should be the **Default** from the dropdown
+5. Click **Save**
+
+<figure><img src="../.gitbook/assets/Supervertaler-QuickLauncher-mode-row.png" alt="The Mode row in the Prompt Editor, showing Send to Assistant and Copy to clipboard checkboxes plus a Default dropdown"><figcaption><p>The Mode row in the Prompt Editor.</p></figcaption></figure>
+
+#### How it appears in the menu
+
+* **One mode ticked** – the prompt appears as a flat menu item, exactly as before. Clicking it fires that single mode.
+* **Both modes ticked** – the prompt appears as a **cascading submenu**. The default mode is shown first; hover or press the right arrow to reveal both options.
+
+The submenu items have mnemonic keys, so once a prompt is highlighted you can press:
+
+* `S` – **Send to Supervertaler Assistant**
+* `C` – **Copy prompt to clipboard**
+
+#### What happens when you pick clipboard
+
+The plugin expands every `{{VARIABLE}}` against the current segment, project, and TM context (exactly as it would for the Assistant), then writes the resulting plain text to the Windows clipboard. The menu closes silently – there's no confirmation toast. Switch to your browser tab and press `Ctrl+V` to paste.
+
+{% hint style="info" %}
+Clipboard mode and the **QuickLauncher prompts go to:** routing setting (above) are independent. Routing only controls where the **Send to Assistant** mode lands – clipboard mode always copies locally, regardless of whether the global routing is set to In-Trados Assistant or Workbench Sidekick.
+{% endhint %}
+
+#### YAML reference
+
+If you prefer editing prompt files directly, the relevant frontmatter fields are:
+
+```yaml
+---
+name: Explain selected term
+category: QuickLauncher
+quicklauncher_modes: [assistant, clipboard]
+default_mode: assistant
+---
+```
+
+* `quicklauncher_modes:` – accepts an inline list `[assistant, clipboard]` or a comma-separated string `assistant, clipboard`. Unknown values are silently dropped. When omitted, defaults to `[assistant]`.
+* `default_mode:` – which mode appears first in the submenu when both are configured. Must be one of the values in `quicklauncher_modes`. Defaults to `assistant`.
+
 ***
 
 ### See Also
