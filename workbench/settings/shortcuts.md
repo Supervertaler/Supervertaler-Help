@@ -21,7 +21,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Superlookup | **Ctrl+Alt+L** / **⌘⌥L** | Sends the selection to Superlookup |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup |
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
-| AutoFingers Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
+| Voice Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 
@@ -94,5 +94,5 @@ The settings page has an **Export Cheatsheet (HTML)** button on the right-hand p
 ## Related pages
 
 - [Editor Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
-- [AutoFingers Voice Commands](../sidekick/autofingers.md)
+- [Voice](../sidekick/voice.md)
 - [Sidekick Overview](../sidekick/overview.md)

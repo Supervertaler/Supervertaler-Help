@@ -129,4 +129,4 @@ memoQ's import may not change segment status. You can:
 ## See Also
 
 - [CAT Tool Overview](overview.md)
-- [AutoFingers (memoQ Automation)](../tools/autofingers.md)
+- [Voice (commands and dictation in memoQ)](../sidekick/voice.md)

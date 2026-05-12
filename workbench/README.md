@@ -16,8 +16,8 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 - **Work with CAT tools** – import/export files from memoQ, Trados, Phrase, CafeTran
 - **Translation Memory** – fuzzy matching, TMX import, Supermemory semantic search
 - **Terminology** – glossaries, automatic term highlighting, TermLens
-- **Sidekick panel** – AI assistant, SuperLookup, Clipboard manager, AutoFingers voice commands
-- **AutoFingers** – always-on voice commands and push-to-talk dictation for any application
+- **Sidekick panel** – AI assistant, SuperLookup, Clipboard manager, Voice
+- **Voice** – always-on voice commands and push-to-talk dictation for any application
 - **Superlookup** – system-wide translation lookup (TM, glossary, MT, web)
 - **Quality Assurance** – spellcheck, tag validation, non-translatables
 

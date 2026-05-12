@@ -31,11 +31,11 @@ A persistent clipboard history that captures everything you copy — text snippe
 
 → [Clipboard Manager](clipboard.md)
 
-#### 🎤 AutoFingers
+#### 🎤 Voice
 
 Voice commands and push-to-talk dictation. Create commands that press keyboard shortcuts, run scripts, or call Workbench functions — then speak them while working in Trados, memoQ, Word, or any other app.
 
-→ [AutoFingers Voice Commands](autofingers.md)
+→ [Voice](voice.md)
 
 ***
 
@@ -81,6 +81,6 @@ If Workbench isn't running when Trados tries to send a prompt, Trados silently f
 ### Related pages
 
 * [SuperLookup Overview](../superlookup/overview.md)
-* [AutoFingers Voice Commands](autofingers.md)
+* [Voice](voice.md)
 * [Clipboard Manager](clipboard.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)

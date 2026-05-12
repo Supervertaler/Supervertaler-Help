@@ -95,4 +95,4 @@ The full clip history is stored in your [user data folder](../reference/faq.md) 
 ## Related pages
 
 - [Sidekick Overview](overview.md)
-- [AutoFingers Voice Commands](autofingers.md)
+- [Voice](voice.md)

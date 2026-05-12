@@ -2,9 +2,9 @@
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
-AutoFingers is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
+**Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
 
-Open it via **Sidekick → AutoFingers tab** (the microphone icon), or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere.
+Open it via **Sidekick → Voice tab** (the microphone icon), or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere.
 
 ![](<../../.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png>)
 
@@ -14,23 +14,23 @@ Open it via **Sidekick → AutoFingers tab** (the microphone icon), or press **C
 
 ### Always-On listening
 
-Always-On runs a continuous microphone stream in the background. When you speak, AutoFingers detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to the active recognition engine.
+Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to the active recognition engine.
 
 **With the Vosk engine** _(default)_ the recogniser only emits text for phrases in your command list — anything else is silently dropped as `[unk]`. So Vosk Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions.
 
 **With faster-whisper or OpenAI Whisper API** every utterance is transcribed in full. If it matches a command the action fires; if not (and "Listen for commands only" is off), the transcribed text is typed into whichever window is in the foreground.
 
-**To start:** click **▶ Start Always-On** in the AutoFingers tab, or press **Ctrl+Alt+A** from any application. A red mic icon appears in the system tray while Always-On is active.
+**To start:** click **▶ Start Always-On** in the Voice tab, or press **Ctrl+Alt+A** from any application. A red mic icon appears in the system tray while Always-On is active.
 
 **To stop:** click **⏹ Stop Always-On** or press **Ctrl+Alt+A** again.
 
-**Focus matters:** AutoFingers sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
+**Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
 ### Push-to-Talk (F9 / Ctrl+Shift+Space)
 
 Press **F9** (inside the Workbench editor) or **Ctrl+Shift+Space** (globally, from any application – ⌘⇧Space on macOS) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
 
-**Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, AutoFingers pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
+**Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, Voice pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
 
 **F9 modes** (configurable in the Push-to-Talk settings):
 - **Toggle** (default) – press once to start, press again to stop
@@ -44,7 +44,7 @@ Voice commands execute specific actions when you speak a trigger phrase. They ca
 
 ### The commands table
 
-The commands table (right side of the AutoFingers tab) lists all your configured commands.
+The commands table (right side of the Voice tab) lists all your configured commands.
 
 | Column | Description |
 |--------|-------------|
@@ -167,7 +167,7 @@ Sets the upper limit (in seconds) for a single voice clip. Speech that exceeds t
 
 ## AutoHotkey integration
 
-AutoHotkey v2 must be installed for AHK-type commands to work. Supervertaler checks for it automatically and shows the path in the AutoHotkey section of the AutoFingers settings panel.
+AutoHotkey v2 must be installed for AHK-type commands to work. Supervertaler checks for it automatically and shows the path in the AutoHotkey section of the Voice settings panel.
 
 To verify: the status line shows either the AHK path (green) or "AutoHotkey v2 not found" (orange).
 
@@ -175,9 +175,9 @@ Click **Open scripts folder** to open the folder where standalone AHK script fil
 
 ---
 
-## Using AutoFingers with Trados Studio
+## Using Voice with Trados Studio
 
-AutoFingers sends input at the Win32 hardware-input level (equivalent to physical keystrokes), which is fully compatible with Trados Studio's WPF editor. Useful commands to add:
+Voice sends input at the Win32 hardware-input level (equivalent to physical keystrokes), which is fully compatible with Trados Studio's WPF editor. Useful commands to add:
 
 | Phrase | Type | Action |
 |--------|------|--------|

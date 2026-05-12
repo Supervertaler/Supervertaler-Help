@@ -93,7 +93,7 @@
 
 * [Sidekick Overview](workbench/sidekick/overview.md)
 * [Trados-aware Chat](workbench/sidekick/trados-aware-chat.md)
-* [AutoFingers Voice Commands](workbench/sidekick/autofingers.md)
+* [Voice](workbench/sidekick/voice.md)
 * [Clipboard Manager](workbench/sidekick/clipboard.md)
 
 ## 🖥️ AI Translation

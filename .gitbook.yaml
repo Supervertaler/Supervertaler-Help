@@ -1,0 +1,5 @@
+root: ./
+
+redirects:
+  # v1.9.491: AutoFingers was renamed to Voice. Redirect old bookmarks.
+  workbench/sidekick/autofingers: workbench/sidekick/voice.md
