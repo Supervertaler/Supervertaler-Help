@@ -2,16 +2,16 @@
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
-SuperLookup is your unified concordance and research hub, bringing together all lookup resources in one place. It lives inside the **Sidekick** panel as its own tab.
+SuperLookup is your unified concordance and research hub, bringing together all lookup resources in one place. It's a top tab in Workbench (🔍 SuperLookup), alongside Editor, TMs, Termbases, Clipboard, Voice, and Settings.
 
 ## Opening SuperLookup
 
 | How | Shortcut | Notes |
 |-----|----------|-------|
-| From the translation grid | **Ctrl+K** | Opens Sidekick directly to the SuperLookup tab; selected text is used as the search query automatically |
-| From any application (system-wide) | **Ctrl+Alt+L** | Select any text in any app, press the shortcut, and SuperLookup opens with that text pre-filled. Sidekick stays above other windows (including Trados Studio) while it's visible. The sub-tab it lands on is configurable – see **Configurable landing tab** below. |
-| From any application (system-wide) | **Ctrl+Alt+Q** | Same as Ctrl+Alt+L but always lands on the QuickTrans sub-tab and starts the MT fan-out immediately. |
-| Via Sidekick | **Ctrl+Alt+K** (⌘⌥K on macOS) then click the SuperLookup tab | Ctrl+Alt+K opens Sidekick to whatever tab was last active; click SuperLookup, or right-click the tab title and set it as the default |
+| From the translation grid | **Ctrl+K** | Selects the 🔍 SuperLookup top tab; selected text is used as the search query automatically |
+| From any application (system-wide) | **Ctrl+Alt+L** | Select any text in any app, press the shortcut, and Workbench opens with the SuperLookup tab forward, text pre-filled, and the search auto-fired. The sub-tab it lands on is configurable – see **Configurable landing tab** below. |
+| From any application (system-wide) | **Ctrl+Alt+Q** | Opens the [QuickTrans always-on-top popup](../ai-translation/quicklauncher.md) with parallel translations from every enabled provider. Different from SuperLookup – use SuperLookup for terminology lookup, QuickTrans for fast MT options. |
+| Via the system tray | Right-click the orange Sv icon → **Open SuperLookup** | Useful when the global hotkey is taken by another app |
 
 ## Configurable landing tab
 
@@ -67,13 +67,14 @@ Web resource tabs maintain login sessions between searches, so you stay logged i
 
 - Double-click a result to copy it to the clipboard.
 - Right-click a result for additional options.
-- To always open Sidekick to SuperLookup, right-click the SuperLookup tab title and choose **Set as default tab**.
+- Press **Esc** to hide Workbench back to the system tray once you've grabbed what you needed – Esc unconditionally dismisses from SuperLookup, regardless of whether you were typing in the search box.
 
 ---
 
 ## Related pages
 
-- [Sidekick Overview](../sidekick/overview.md)
+- [Companion Tabs Overview](../sidekick/overview.md)
+- [QuickTrans Popup](../ai-translation/quicklauncher.md)
 - [TM Concordance Search](tm-search.md)
 - [Glossary Search](glossary-search.md)
 - [Machine Translation](mt.md)

@@ -2,7 +2,7 @@
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
-View settings control how the translation grid and Sidekick panel look while you translate.
+View settings control how the translation grid and the side panels look while you translate.
 
 ## Grid display
 
@@ -10,10 +10,9 @@ View settings control how the translation grid and Sidekick panel look while you
 - **Tag colour** – the highlight colour used for inline formatting tags (`<b>`, `<i>`, etc.)
 - **Row height** – compact, normal, or spacious; affects how many segments you see at once without scrolling
 
-## Sidekick
+## Right panel (Chat, matches)
 
-- **Sidekick default side** – whether the Sidekick panel docks to the left or right of the grid
-- **Sidekick width** – default width when shown; can also be dragged at runtime
+- **Right panel default width** – default width of the right-hand panel that hosts the Match Panel and the 💬 Chat tab. Can also be dragged at runtime; the width is remembered across sessions.
 
 ## Tips
 

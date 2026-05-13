@@ -1,86 +1,73 @@
-# Sidekick Overview
-
 {% hint style="info" %}
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
-**Supervertaler Sidekick** is the floating side panel in Supervertaler Workbench. It stays visible while you translate, giving you quick access to four areas without switching away from your translation grid.
+Supervertaler Workbench includes four **companion surfaces** that sit alongside the translation grid: SuperLookup, Clipboard, Voice, and Chat. They cover the lookup-and-capture tasks you reach for dozens of times a day while translating – concordance searches, clipboard history, voice commands, AI conversation – without making you leave the editor or the app you're in.
 
-![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-SuperLookup.png)
+Three of them are top-level tabs in Workbench (next to Editor, TMs, Termbases, AI, Settings); the fourth, Chat, sits as a side panel next to the editor so you can keep an AI conversation visible while you translate.
 
-### Tabs
+{% hint style="info" %}
+**Where did Sidekick go?** Through v1.10.3, these four surfaces lived inside a separate always-on-top floating window called Supervertaler Sidekick. It was retired in v1.10.4 and the tabs were promoted into Workbench itself. The companion surfaces below behave exactly as they did inside Sidekick – they're just hosted differently now, with proper taskbar / Alt+Tab presence and access via top-level tabs instead of a separate window. The global hotkey **Ctrl+Alt+K** that used to summon Sidekick has been unbound.
+{% endhint %}
 
-#### 🔍 SuperLookup
+### 🔍 SuperLookup
 
-Simultaneous search across your Translation Memory, glossaries, machine translation engines, and web resources – all in one panel. When you select text in the editor and press **Ctrl+K**, Sidekick opens directly to SuperLookup with that text pre-filled as the search query.
+Simultaneous search across your translation memories, glossaries, machine-translation engines, and web resources – all in one panel. Select text anywhere on your computer, press **Ctrl+Alt+L**, and Workbench's SuperLookup tab opens with the selected text pre-filled and the search auto-fired.
 
 → [SuperLookup Overview](../superlookup/overview.md)
 
-#### 💬 Chat
+### 📋 Clipboard
 
-The AI assistant tab. Ask questions about terminology, get translation suggestions, or use Studio Tools to interact with your current project. Supports all major AI providers (OpenAI, Claude, Gemini, Ollama).
-
-When **Supervertaler for Trados** is also running with the AI Assistant panel active, the Chat tab automatically picks up the active Trados project context — segment, TM matches, termbase hits, surrounding segments — so you can ask the floating chat questions about your real translation work without leaving Trados Studio.
-
-→ [AI Translation Overview](../ai-translation/overview.md)\
-→ [Trados-aware Chat](trados-aware-chat.md)
-
-#### 📋 Clipboard
-
-A persistent clipboard history that captures everything you copy — text snippets and images — from any application. Click any item to paste it into the active window. History survives restarts.
+A persistent clipboard manager that captures everything you copy – text and images – from any application, plus a third "Menu" column with snippets, special characters, text conversions, and your QuickLauncher prompts. Press **Ctrl+Alt+C** anywhere on your computer to grab the current selection and open the Clipboard tab in one keystroke.
 
 → [Clipboard Manager](clipboard.md)
 
-#### 🎤 Voice
+### 🎤 Voice
 
-Voice commands and push-to-talk dictation. Create commands that press keyboard shortcuts, run scripts, or call Workbench functions — then speak them while working in Trados, memoQ, Word, or any other app.
+Voice commands and push-to-talk dictation. Create commands that press keyboard shortcuts, run scripts, or call Workbench functions – then speak them while working in Trados, memoQ, Word, or any other app. **Ctrl+Alt+A** toggles always-on listening from anywhere.
 
 → [Voice](voice.md)
 
-***
+### 💬 Chat
 
-### Opening Sidekick
+The AI assistant panel, mounted in Workbench's right panel next to the editor (one click on the 💬 Chat tab). Ask questions about terminology, get translation suggestions, attach files for the AI to read, and – when Supervertaler for Trados is also running – pick up the active Trados project context automatically.
 
-| How                                | Shortcut          | Notes                                                                                                                       |
-| ---------------------------------- | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Open / hide Sidekick from anywhere | **Ctrl+Alt+K** (⌘⌥K on macOS) | Opens to whichever tab was last active, unless a default tab is set                                             |
-| Open SuperLookup from the editor   | **Ctrl+K**        | Opens Sidekick directly to the SuperLookup tab and runs a search on any selected text                                       |
-| SuperLookup from any application   | **Ctrl+Alt+L** (⌘⌥L on macOS) | System-wide shortcut – select text in any app, press the shortcut, and SuperLookup opens with that text as the search query |
-
-Press **Esc** to hide Sidekick and return focus to whatever was active.
-
-#### Setting a default tab
-
-By default, **Ctrl+Alt+K** reopens Sidekick to whichever tab you last used. To always open to a specific tab, right-click that tab's title inside Sidekick and choose **Set as default tab**.
+→ [Trados-aware Chat](trados-aware-chat.md)
 
 ***
 
-### Keyboard navigation inside Sidekick
+### Opening the companion tabs
 
-| Key                               | Action                                                   |
-| --------------------------------- | -------------------------------------------------------- |
-| **Ctrl+Tab** / **Ctrl+Shift+Tab** | Cycle through the four tabs                              |
-| **Tab**                           | Move focus from the active tab into the right-pane Menu  |
-| **Left**                          | Return focus from the Menu to the last active tab widget |
-| **Esc**                           | Hide Sidekick entirely                                   |
+| How | Shortcut | Notes |
+| --- | --- | --- |
+| SuperLookup from any application | **Ctrl+Alt+L** (⌘⌥L on macOS) | Auto-copies the current selection and opens SuperLookup with the text pre-filled and the search fired |
+| Clipboard manager from any application | **Ctrl+Alt+C** (⌘⌥C on macOS) | Auto-copies the current selection so the just-copied text lands at the top of the history |
+| QuickTrans popup from any application | **Ctrl+Alt+Q** (⌘⌥Q on macOS) | Opens an always-on-top popup with translations from every enabled provider; see [QuickTrans Popup](../ai-translation/quicklauncher.md) |
+| Voice always-on (toggle) | **Ctrl+Alt+A** (⌘⌥A on macOS) | Starts / stops continuous voice-command listening |
+| Push-to-talk dictation | **Ctrl+Shift+Space** | Records one utterance and types the transcript at the cursor |
+| Open Chat | Click the **💬 Chat** tab in the right panel | Right panel sits next to the editor on the Editor tab |
 
-***
+All of these hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 
-### Receiving QuickLauncher prompts from Trados
+### Pressing Esc dismisses Workbench to the tray
 
-When **Supervertaler for Trados** is also running, Sidekick can be the destination for Ctrl+Q QuickLauncher prompts triggered inside Trados Studio. The user picks a prompt in Trados, the expanded prompt is sent to Sidekick over a localhost bridge, Sidekick pops to the front, maximises to the screen it's on, switches to the Chat tab, and the response renders there instead of in the in-Trados Assistant.
+When you're on SuperLookup, Clipboard, or Voice – the surfaces summoned via global hotkeys – pressing **Esc** hides Workbench back to the system tray. Useful when you're using Workbench as a popup utility from another app: hotkey to summon, Esc to dismiss.
 
-This is opt-in on the Trados side – a dropdown in Trados → **Settings → AI Settings → "QuickLauncher prompts go to:"** picks between the in-Trados Assistant (default) and Workbench Sidekick. Sidekick is always ready to receive; nothing in Workbench needs to be configured.
+* **On SuperLookup**: Esc unconditionally hides Workbench, even when the cursor is in the search box. The dominant use of SuperLookup is a one-shot query, so there's nothing worth keeping if you change your mind.
+* **On Clipboard and Voice**: Esc hides Workbench *unless* the focused widget is a text input (search field, command editor, etc.) – in those cases Esc behaves the way it does in any other app (clears the field, closes a dropdown, etc.).
+* **On Editor, TMs, Termbases, AI, Settings**: Esc keeps its natural editor / dialog / combo-box behaviour. Workbench is never hidden by accident from the surfaces where you actually do work.
 
-If Workbench isn't running when Trados tries to send a prompt, Trados silently falls back to its own Assistant – the prompt is never lost.
+### Tray quick-jump menu
 
-→ [Sidekick Bridge (Trados help)](https://supervertaler.gitbook.io/help/trados/ai-assistant/sidekick-bridge) – wire format and troubleshooting
+Right-click the Workbench tray icon (the orange Sv) for a menu with **Show Workbench**, **Open SuperLookup**, **Open Clipboard**, **Open Voice**, **Open Settings**, plus toggles for **Close to tray** and **Start with computer**.
 
 ***
 
 ### Related pages
 
 * [SuperLookup Overview](../superlookup/overview.md)
-* [Voice](voice.md)
 * [Clipboard Manager](clipboard.md)
+* [Voice](voice.md)
+* [Trados-aware Chat](trados-aware-chat.md)
+* [QuickTrans Popup](../ai-translation/quicklauncher.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)

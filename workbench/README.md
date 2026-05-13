@@ -4,7 +4,7 @@
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
 {% endhint %}
 
-_Help system last updated: 1 May 2026 (for Workbench v1.9.406)_
+_Help system last updated: 13 May 2026 (for Workbench v1.10.19)_
 
 Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, open-source translation application built by translators, for translators.
 
@@ -16,9 +16,10 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 - **Work with CAT tools** – import/export files from memoQ, Trados, Phrase, CafeTran
 - **Translation Memory** – fuzzy matching, TMX import, Supermemory semantic search
 - **Terminology** – glossaries, automatic term highlighting, TermLens
-- **Sidekick panel** – AI assistant, SuperLookup, Clipboard manager, Voice
+- **Companion tabs** – Chat (AI conversation), SuperLookup, Clipboard manager, Voice
 - **Voice** – always-on voice commands and push-to-talk dictation for any application
-- **Superlookup** – system-wide translation lookup (TM, glossary, MT, web)
+- **SuperLookup** – system-wide translation lookup (TM, glossary, MT, web)
+- **QuickTrans Popup** – always-on-top popup with simultaneous translations from every enabled provider
 - **Quality Assurance** – spellcheck, tag validation, non-translatables
 
 | Requirement | Details |

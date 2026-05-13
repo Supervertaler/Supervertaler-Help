@@ -16,12 +16,15 @@ The 🌍 actions and their out-of-the-box bindings:
 
 | Action | Default | Notes |
 |---|---|---|
-| Open Sidekick | **Ctrl+Alt+K** (Win/Linux) / **⌘⌥K** (macOS) | Captures selection, then summons Sidekick |
-| Open Sidekick – Clipboard tab | **Ctrl+Alt+C** / **⌘⌥C** | Jumps straight to the Clipboard tab |
-| Superlookup | **Ctrl+Alt+L** / **⌘⌥L** | Sends the selection to Superlookup |
-| QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup |
+| Open Clipboard | **Ctrl+Alt+C** (Win/Linux) / **⌘⌥C** (macOS) | Auto-copies the current selection, then opens Workbench's Clipboard tab |
+| Open SuperLookup | **Ctrl+Alt+L** / **⌘⌥L** | Auto-copies the current selection, then opens Workbench's SuperLookup tab with the text pre-filled and the search auto-fired |
+| QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup; auto-copies the selection |
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
 | Voice Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
+
+{% hint style="info" %}
+**Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. Sidekick was retired in v1.10.4 and the chord is now unbound by default. The companion tabs (Clipboard, Voice, SuperLookup) are reachable via the dedicated hotkeys above; Chat lives in Workbench's right panel.
+{% endhint %}
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 
@@ -73,15 +76,16 @@ Global hotkeys are registered via the native `RegisterHotKey` API, which consume
 
 Global hotkeys go through `pynput`, which uses XGrabKey under X11. If hotkeys silently don't fire, your user may need to be in the `input` group (`sudo usermod -aG input $USER`, then log out and back in).
 
-## Sidekick keyboard navigation
+## Companion-tab keyboard navigation
+
+When you've summoned the Clipboard, SuperLookup, or Voice tab via a global hotkey, these shortcuts work straight away – no clicking around to land your focus first:
 
 | Shortcut | Action |
 |---|---|
-| **Ctrl+Tab** | Next Sidekick tab |
-| **Ctrl+Shift+Tab** | Previous Sidekick tab |
-| **Tab** | Move focus to Sidekick Menu |
-| **Left** | Return focus to last active Sidekick panel |
-| **Esc** | Hide Sidekick |
+| **Esc** | Hide Workbench to the system tray (quick-lookup tabs only – Editor / Settings / etc. keep the natural Esc) |
+| **↑ / ↓** | Navigate within the focused column (e.g. clipboard text history, snippet list) |
+| **← / →** | Move focus between columns in the Clipboard tab (Text → Images → Menu) |
+| **Enter** | Activate the selected item (paste clip, run snippet, fire conversion) |
 
 ## Editor shortcuts
 
@@ -95,4 +99,4 @@ The settings page has an **Export Cheatsheet (HTML)** button on the right-hand p
 
 - [Editor Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
 - [Voice](../sidekick/voice.md)
-- [Sidekick Overview](../sidekick/overview.md)
+- [Companion Tabs Overview](../sidekick/overview.md)

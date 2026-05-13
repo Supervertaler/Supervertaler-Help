@@ -12,7 +12,7 @@ Supervertaler supports light and dark themes. Switch between them in **Settings 
 
 ## Switching themes
 
-The change takes effect immediately — no restart needed. All panels (grid, Sidekick, dialogs) switch at once.
+The change takes effect immediately – no restart needed. All panels (grid, companion tabs, dialogs, popups) switch at once.
 
 ## Tips
 

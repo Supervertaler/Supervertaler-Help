@@ -89,9 +89,9 @@
 * [Filtering Segments](workbench/editor/filtering.md)
 * [Pagination](workbench/editor/pagination.md)
 
-## 🖥️ Sidekick
+## 🖥️ Companion Tabs
 
-* [Sidekick Overview](workbench/sidekick/overview.md)
+* [Companion Tabs Overview](workbench/sidekick/overview.md)
 * [Trados-aware Chat](workbench/sidekick/trados-aware-chat.md)
 * [Voice](workbench/sidekick/voice.md)
 * [Clipboard Manager](workbench/sidekick/clipboard.md)
@@ -104,7 +104,7 @@
 * [Batch Translation](workbench/ai-translation/batch-translation.md)
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
-* [Supervertaler Sidekick](workbench/ai-translation/quicklauncher.md)
+* [QuickTrans Popup](workbench/ai-translation/quicklauncher.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration

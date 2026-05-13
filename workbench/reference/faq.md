@@ -82,7 +82,7 @@ Supervertaler is **The Ultimate Translation Workbench**. It works alongside your
 * **AI-enhanced translation** with GPT-4, Claude, and Gemini
 * **Project termbases** with automatic term extraction
 * **Translation memory** with fuzzy matching
-* **Supervertaler Sidekick** for conversational AI help
+* **Chat panel** for conversational AI help
 * **Voice dictation** (100+ languages via Whisper)
 * **Prompt Manager** with 38+ built-in prompts
 * **CAT tool integration** (memoQ, Trados, CafeTran)
@@ -132,7 +132,7 @@ Developed with assistance from **Claude AI** (Anthropic) using collaborative hum
 
 * ✅ Works _alongside_ CAT tools as companion
 * ✅ Better AI integration with prompt management
-* ✅ Conversational Supervertaler Sidekick for AI help
+* ✅ Conversational Chat panel for AI help
 * ✅ Voice dictation built-in (100+ languages)
 * ⚠️ Not a full CAT tool replacement (no alignment, LiveDocs, etc.)
 
@@ -140,7 +140,7 @@ Developed with assistance from **Claude AI** (Anthropic) using collaborative hum
 
 * ✅ Provider-agnostic (switch between OpenAI, Claude, Gemini)
 * ✅ Open source - audit and customize the code
-* ✅ Advanced features: Supervertaler Sidekick, project termbases
+* ✅ Advanced features: Chat panel, project termbases
 * ✅ No vendor lock-in or monthly subscriptions
 
 **Unique Selling Points:**
@@ -355,9 +355,9 @@ Full guide: [Installation](../get-started/installation.md)
 * Automatic project.json and TMX backups
 * Never lose your work during translation
 
-**💬 Supervertaler Sidekick**
+**💬 Chat**
 
-* Conversational AI interface in the AI tab
+* Conversational AI interface in Workbench's right panel (and as a sub-tab in the AI tab)
 * Analyze documents and generate custom prompts
 * Attach files (PDF, DOCX, TXT, MD) for context
 * Ask questions about segments and terminology
@@ -423,7 +423,7 @@ Supervertaler previously offered three editing views. Current versions focus on 
 
 * **Multi-attach**: Combine multiple prompts
 * **Favorites**: Star frequently-used prompts
-* **AI-generated**: Ask the Supervertaler Sidekick to create prompts
+* **AI-generated**: Ask the Chat panel to create prompts
 * **Unlimited folders**: Organize your way
 
 **Usage:**
@@ -680,7 +680,7 @@ Try a couple of models on a representative passage from your project to see whic
 **Online Features (require internet):**
 
 * AI translation via OpenAI/Claude/Gemini APIs
-* Supervertaler Sidekick (document analysis, prompt generation)
+* Chat panel (document analysis, prompt generation)
 
 **Offline Features:**
 
@@ -872,7 +872,7 @@ This is a **known false positive** that affects applications built with PyInstal
 4. **Quality Assurance:**
    * Search for specific terms (Ctrl+F)
    * Check consistency of key terminology
-   * Review Supervertaler Sidekick suggestions
+   * Review Chat panel suggestions
 5. **Export & Deliver:**
    * Export to DOCX/TMX/XLIFF
    * Save project (Ctrl+S) for future reference
@@ -942,7 +942,7 @@ This is a **known false positive** that affects applications built with PyInstal
 
 **AI-Generated Prompts:**
 
-1. AI tab → Supervertaler Sidekick → Attach document (PDF/DOCX)
+1. AI tab → Chat panel → Attach document (PDF/DOCX)
 2. Ask: "Analyze this style guide and create a prompt"
 3. AI generates custom prompt based on document
 4. Save and use for your projects

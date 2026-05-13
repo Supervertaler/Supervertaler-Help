@@ -4,11 +4,11 @@ You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-
 
 **Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
 
-Open it via **Sidekick → Voice tab** (the microphone icon), or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere.
+Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voice** entry, or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere on your computer.
 
-![](<../../.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png>)
+![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
 
----
+***
 
 ## Two modes
 
@@ -16,7 +16,7 @@ Open it via **Sidekick → Voice tab** (the microphone icon), or press **Ctrl+Al
 
 Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to the active recognition engine.
 
-**With the Vosk engine** _(default)_ the recogniser only emits text for phrases in your command list — anything else is silently dropped as `[unk]`. So Vosk Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions.
+**With the Vosk engine** _(default)_ the recogniser only emits text for phrases in your command list – anything else is silently dropped as `[unk]`. So Vosk Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions.
 
 **With faster-whisper or OpenAI Whisper API** every utterance is transcribed in full. If it matches a command the action fires; if not (and "Listen for commands only" is off), the transcribed text is typed into whichever window is in the foreground.
 
@@ -36,7 +36,7 @@ Press **F9** (inside the Workbench editor) or **Ctrl+Shift+Space** (globally, fr
 - **Toggle** (default) – press once to start, press again to stop
 - **Hold-to-talk** – hold the key to record, release to stop. _Note: this only affects F9. The global Ctrl+Shift+Space hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
 
----
+***
 
 ## Voice commands
 
@@ -47,7 +47,7 @@ Voice commands execute specific actions when you speak a trigger phrase. They ca
 The commands table (right side of the Voice tab) lists all your configured commands.
 
 | Column | Description |
-|--------|-------------|
+| --- | --- |
 | ☑ | Enable/disable checkbox – uncheck to silence a command without deleting it |
 | Phrase | The primary trigger word or phrase |
 | Aliases | Alternative phrases that also trigger the command |
@@ -78,7 +78,7 @@ Click **+ Add** above the table. Choose a command type:
 - **AHK Script** – runs an AutoHotkey v2 script file
 - **AHK Inline** – runs a short AutoHotkey v2 snippet directly
 
-The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below the Action field that updates with the Type dropdown — it explains the press-to-capture editor for Keystroke commands, lists common AHK patterns for AutoHotkey Code, names the available internal actions, etc. So you don't need to memorise the full reference up front.
+The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below the Action field that updates with the Type dropdown – it explains the press-to-capture editor for Keystroke commands, lists common AHK patterns for AutoHotkey Code, names the available internal actions, etc. So you don't need to memorise the full reference up front.
 
 {% hint style="info" %}
 **Keystroke commands are cross-platform.** A command captured as **Ctrl+S** on Windows is stored in Qt's portable format and fires **⌘S** automatically on macOS – the macOS dispatcher swaps Ctrl ↔ Cmd internally to match what every Mac app does. So you can build your command list once and it works on whichever machine Supervertaler is running on. Under the hood, Windows uses `SendInput` (compatible with WPF apps like Trados Studio) and macOS uses AppleScript via `osascript`.
@@ -90,9 +90,9 @@ Select the row and click **Remove**, or select multiple rows and remove them tog
 
 ### Edits take effect immediately under Vosk
 
-When the Always-On engine is **Vosk**, adding / editing / removing / disabling a command immediately rebuilds Vosk's recogniser grammar in the background — you don't have to stop and restart Always-On to "teach" Vosk a new phrase. The status bar briefly shows `🔄 Vosk grammar refreshed (N phrases)` to confirm the swap took effect. The next utterance you speak will use the new grammar.
+When the Always-On engine is **Vosk**, adding / editing / removing / disabling a command immediately rebuilds Vosk's recogniser grammar in the background – you don't have to stop and restart Always-On to "teach" Vosk a new phrase. The status bar briefly shows `🔄 Vosk grammar refreshed (N phrases)` to confirm the swap took effect. The next utterance you speak will use the new grammar.
 
----
+***
 
 ## Settings
 
@@ -101,16 +101,16 @@ When the Always-On engine is **Vosk**, adding / editing / removing / disabling a
 The dropdown in the Always-On section picks which speech-recognition backend listens for commands.
 
 | Engine | Best for | Speed | Cost | Internet |
-|---|---|---|---|---|
-| **Vosk** _(default, recommended)_ | Commands only — your phrase list, ignores everything else | Instant (~30 ms) | Free | No |
+| --- | --- | --- | --- | --- |
+| **Vosk** _(default, recommended)_ | Commands only – your phrase list, ignores everything else | Instant (~30 ms) | Free | No |
 | **faster-whisper** | Commands + dictation of running text from one continuous mic stream | ~1–3 s | Free | No |
 | **OpenAI Whisper API** | Same as faster-whisper but offloaded to OpenAI's servers | ~0.5–2 s | $0.006 / minute of audio | Yes (API key) |
 
-**Vosk** is the default for new installs. It's purpose-built for fixed-vocabulary command recognition: pass it your active phrase list, and it biases the recogniser toward those phrases while silently dropping anything else as `[unk]`. That makes it both faster *and* more accurate for commands than any Whisper variant — and you can leave Always-On running all day for $0 in API fees and near-zero CPU load.
+**Vosk** is the default for new installs. It's purpose-built for fixed-vocabulary command recognition: pass it your active phrase list, and it biases the recogniser toward those phrases while silently dropping anything else as `[unk]`. That makes it both faster *and* more accurate for commands than any Whisper variant – and you can leave Always-On running all day for $0 in API fees and near-zero CPU load.
 
-**faster-whisper** runs the same Whisper models OpenAI ships, but on a CTranslate2 C++ engine — roughly 4× faster than the original `openai-whisper` package on CPU, with much lower RAM. Choose this if you want **continuous dictation of running text** in always-on mode (every utterance gets transcribed in full, then either typed if it doesn't match a command, or fires the matched command).
+**faster-whisper** runs the same Whisper models OpenAI ships, but on a CTranslate2 C++ engine – roughly 4× faster than the original `openai-whisper` package on CPU, with much lower RAM. Choose this if you want **continuous dictation of running text** in always-on mode (every utterance gets transcribed in full, then either typed if it doesn't match a command, or fires the matched command).
 
-**OpenAI Whisper API** sends each utterance to OpenAI's hosted `whisper-1` model. Slightly faster end-to-end than running faster-whisper locally on most laptops, but each minute of audio costs about $0.006 — so leaving it on all day adds up. Requires an OpenAI API key in **Settings → AI Settings**.
+**OpenAI Whisper API** sends each utterance to OpenAI's hosted `whisper-1` model. Slightly faster end-to-end than running faster-whisper locally on most laptops, but each minute of audio costs about $0.006 – so leaving it on all day adds up. Requires an OpenAI API key in **Settings → AI Settings**.
 
 The first time you start Always-On with Vosk, the small English model (~40 MB) auto-downloads to `<data folder>/vosk-models/`. Same for the small Dutch model when your project's target language is Dutch. Models are cached forever after the first download.
 
@@ -119,7 +119,7 @@ The first time you start Always-On with Vosk, the small English model (~40 MB) a
 The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles **F9** / **Ctrl+Shift+Space** when you trigger push-to-talk dictation. This is independent of the Always-On engine, because the two paths have different needs:
 
 | Setting | What runs when you press Ctrl+Shift+Space / F9 |
-|---|---|
+| --- | --- |
 | **Same as Always-On** _(default)_ | Auto-routes: Vosk or faster-whisper Always-On → faster-whisper push-to-talk; OpenAI API Always-On → OpenAI API push-to-talk |
 | **faster-whisper (offline)** | Always faster-whisper, regardless of Always-On engine |
 | **OpenAI Whisper API (online, fast)** | Always the API, regardless of Always-On engine. Useful pairing: Vosk for free continuous commands + OpenAI API for fast running-text dictation. |
@@ -130,10 +130,10 @@ The "ℹ️ Push-to-talk will use: ..." indicator below the dropdown shows the *
 
 ### faster-whisper model
 
-The Whisper model size dropdown applies whenever a Whisper engine is active — that's faster-whisper for either Always-On or push-to-talk, *or* the OpenAI API. (The API ignores this setting and always uses `whisper-1` server-side.) Larger models are more accurate but slower and need more RAM.
+The Whisper model size dropdown applies whenever a Whisper engine is active – that's faster-whisper for either Always-On or push-to-talk, *or* the OpenAI API. (The API ignores this setting and always uses `whisper-1` server-side.) Larger models are more accurate but slower and need more RAM.
 
 | Model | Download size | Notes |
-|-------|--------------|-------|
+| --- | --- | --- |
 | tiny | ~75 MB | Very fast, lowest accuracy |
 | base | ~142 MB | Good balance (recommended) |
 | small | ~466 MB | Noticeably better accuracy |
@@ -150,7 +150,7 @@ Controls the amplitude threshold used to detect speech onset.
 
 ### Listen for commands only
 
-_Whisper engines only._ The checkbox is hidden when the Always-On engine is **Vosk**, because Vosk's grammar mode already drops non-command speech at the recogniser level — the setting would be a structural no-op there.
+_Whisper engines only._ The checkbox is hidden when the Always-On engine is **Vosk**, because Vosk's grammar mode already drops non-command speech at the recogniser level – the setting would be a structural no-op there.
 
 For **faster-whisper** and the **OpenAI Whisper API**: when checked, Always-On fires voice commands but discards any speech that doesn't match a command – it is not typed. Use this if you only want voice control with a Whisper engine, not dictation. When unchecked, unmatched speech is transcribed and typed at the cursor position.
 
@@ -163,7 +163,7 @@ Sets the upper limit (in seconds) for a single voice clip. Speech that exceeds t
 - **Auto** – uses the project's target language as the transcription hint
 - Explicit language – forces Whisper to transcribe in the selected language, which improves accuracy when the target language differs from the source
 
----
+***
 
 ## AutoHotkey integration
 
@@ -173,14 +173,14 @@ To verify: the status line shows either the AHK path (green) or "AutoHotkey v2 n
 
 Click **Open scripts folder** to open the folder where standalone AHK script files are stored.
 
----
+***
 
 ## Using Voice with Trados Studio
 
 Voice sends input at the Win32 hardware-input level (equivalent to physical keystrokes), which is fully compatible with Trados Studio's WPF editor. Useful commands to add:
 
 | Phrase | Type | Action |
-|--------|------|--------|
+| --- | --- | --- |
 | "confirm segment" | Keystroke | `ctrl+enter` |
 | "next segment" | Keystroke | `alt+down` |
 | "previous segment" | Keystroke | `alt+up` |
@@ -189,23 +189,22 @@ Voice sends input at the Win32 hardware-input level (equivalent to physical keys
 
 After creating a command, start Always-On, click into Trados Studio, and speak the phrase.
 
----
+***
 
 ## Global hotkeys
 
 | Shortcut | Action |
-|----------|--------|
+| --- | --- |
 | **Ctrl+Alt+A** (⌘⌥A on macOS) | Toggle Always-On listening |
 | **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) |
 | **F9** | Push-to-talk (inside Workbench editor) |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](../settings/shortcuts.md#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 
----
+***
 
 ## Related pages
 
-- [Sidekick Overview](overview.md)
+- [Companion Tabs Overview](overview.md)
 - [Keyboard Shortcuts](../settings/shortcuts.md)
 - [AI Settings](../settings/general.md)
-

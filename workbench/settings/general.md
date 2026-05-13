@@ -23,7 +23,7 @@ See [Setting Up API Keys](../get-started/api-keys.md) for step-by-step instructi
 
 ## Voice settings
 
-The Voice tab in [Sidekick](../sidekick/overview.md) contains all voice command and dictation settings (engine, model, sensitivity, push-to-talk mode). They are not duplicated here — open the Voice tab directly to configure them.
+The [🎤 Voice top tab](../sidekick/voice.md) contains all voice command and dictation settings (engine, model, sensitivity, push-to-talk mode). They are not duplicated here – open the Voice tab directly to configure them.
 
 ## Related pages
 
