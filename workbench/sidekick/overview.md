@@ -42,7 +42,7 @@ The AI assistant panel, mounted in Workbench's right panel next to the editor (o
 | --- | --- | --- |
 | SuperLookup from any application | **Ctrl+Alt+L** (⌘⌥L on macOS) | Auto-copies the current selection and opens SuperLookup with the text pre-filled and the search fired |
 | Clipboard manager from any application | **Ctrl+Alt+C** (⌘⌥C on macOS) | Auto-copies the current selection so the just-copied text lands at the top of the history |
-| QuickTrans popup from any application | **Ctrl+Alt+Q** (⌘⌥Q on macOS) | Opens an always-on-top popup with translations from every enabled provider; see [QuickTrans Popup](../ai-translation/quicktrans-popup.md) |
+| QuickTrans popup from any application | **Ctrl+Alt+Q** (⌘⌥Q on macOS) | Opens an always-on-top popup with translations from every enabled provider; see [QuickTrans Popup](quicktrans-popup.md) |
 | Voice always-on (toggle) | **Ctrl+Alt+A** (⌘⌥A on macOS) | Starts / stops continuous voice-command listening |
 | Push-to-talk dictation | **Ctrl+Shift+Space** | Records one utterance and types the transcript at the cursor |
 | Open Chat | Click the **💬 Chat** tab in the right panel | Right panel sits next to the editor on the Editor tab |
@@ -69,5 +69,5 @@ Right-click the Workbench tray icon (the orange Sv) for a menu with **Show Workb
 * [Clipboard Manager](clipboard.md)
 * [Voice](voice.md)
 * [Trados-aware Chat](trados-aware-chat.md)
-* [QuickTrans Popup](../ai-translation/quicktrans-popup.md)
+* [QuickTrans Popup](quicktrans-popup.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)

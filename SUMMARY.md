@@ -95,6 +95,7 @@
 * [Trados-aware Chat](workbench/sidekick/trados-aware-chat.md)
 * [Voice](workbench/sidekick/voice.md)
 * [Clipboard Manager](workbench/sidekick/clipboard.md)
+* [QuickTrans Popup](workbench/sidekick/quicktrans-popup.md)
 
 ## 🖥️ AI Translation
 
@@ -104,7 +105,6 @@
 * [Batch Translation](workbench/ai-translation/batch-translation.md)
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
-* [QuickTrans Popup](workbench/ai-translation/quicktrans-popup.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration

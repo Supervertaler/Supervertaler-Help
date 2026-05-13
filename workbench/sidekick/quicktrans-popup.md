@@ -89,8 +89,8 @@ The QuickTrans chord can be rebound in **Settings → Keyboard Shortcuts**. The 
 
 ## Related pages
 
-* [Companion Tabs Overview](../sidekick/overview.md)
+* [Companion Tabs Overview](overview.md)
+* [Trados-aware Chat](trados-aware-chat.md)
 * [SuperLookup Overview](../superlookup/overview.md)
 * [Machine Translation in SuperLookup](../superlookup/mt.md)
-* [Trados-aware Chat](../sidekick/trados-aware-chat.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)
