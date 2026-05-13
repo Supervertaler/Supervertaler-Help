@@ -171,7 +171,6 @@ The original imported file was moved or deleted.
 1. **Reduce segments per page** in pagination settings (try 50)
 2. **Disable spellcheck** if not needed (Settings → View)
 3. **Close other heavy applications**
-4. **Disable Supermemory** if not using it
 
 ### Navigation between segments is slow
 

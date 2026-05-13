@@ -26,12 +26,11 @@ If you encounter instability:
 
 ## Crashes / memory access violations
 
-Some native dependencies (spellcheck backends, vector search, tokenization libraries) can crash the Python process on certain Linux setups.
+Some native dependencies (spellcheck backends, tokenization libraries) can crash the Python process on certain Linux setups.
 
 If you see random crashes (segfaults) when interacting with the grid:
 
 1. Disable spellcheck and restart
-2. Disable Supermemory and restart
-3. Retry on a smaller project
+2. Retry on a smaller project
 
 If that stabilizes the app, re-enable features one by one.

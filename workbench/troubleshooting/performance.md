@@ -16,9 +16,8 @@ Supervertaler is designed to stay responsive on large projects, but performance 
 ## Quick wins when it feels slow
 
 1. Disable spellcheck temporarily (Settings → View Settings)
-2. Disable Supermemory/semantic features if you don’t need them
-3. Close other heavy apps (browsers with many tabs, IDE builds, etc.)
-4. Restart Supervertaler and reopen the project
+2. Close other heavy apps (browsers with many tabs, IDE builds, etc.)
+3. Restart Supervertaler and reopen the project
 
 ## Large projects
 
@@ -35,5 +34,4 @@ If performance is still poor, note:
 
 - Project size (segment count)
 - Whether spellcheck is enabled
-- Whether Supermemory is enabled
 - Which CAT format you imported

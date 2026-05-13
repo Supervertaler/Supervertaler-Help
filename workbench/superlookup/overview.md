@@ -34,13 +34,6 @@ Search your termbases and glossaries:
 - Right-click to "Edit in Glossary"
 - Direction and language filters (Both / Source / Target + From/To)
 
-### Supermemory
-
-Semantic search across all your TMs:
-- Finds conceptually similar text (not just word matches)
-- Uses AI embeddings to understand meaning
-- Useful for finding paraphrased or reworded content
-
 ### Machine Translation
 
 Get instant MT from multiple providers:

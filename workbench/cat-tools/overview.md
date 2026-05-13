@@ -23,7 +23,6 @@ CAT tools have limited AI integration. Supervertaler lets you:
 - Use multiple LLM providers (GPT-4, Claude, Gemini)
 - Create custom translation prompts
 - Batch translate with context awareness
-- Leverage semantic TM search (Supermemory)
 
 ### Workflow Flexibility
 

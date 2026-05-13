@@ -97,4 +97,3 @@ When multiple TMs match:
 - [Creating & Managing TMs](managing-tms.md)
 - [Importing TMX Files](importing-tmx.md)
 - [Fuzzy Matching](fuzzy-matching.md)
-- [Supermemory (Semantic Search)](supermemory.md)

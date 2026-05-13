@@ -14,7 +14,7 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 
 - **Translate with AI** – GPT-4, Claude, Gemini, or local models via Ollama
 - **Work with CAT tools** – import/export files from memoQ, Trados, Phrase, CafeTran
-- **Translation Memory** – fuzzy matching, TMX import, Supermemory semantic search
+- **Translation Memory** – fuzzy matching, TMX import, concordance search
 - **Terminology** – glossaries, automatic term highlighting, TermLens
 - **Companion tabs** – Chat (AI conversation), SuperLookup, Clipboard manager, Voice
 - **Voice** – always-on voice commands and push-to-talk dictation for any application

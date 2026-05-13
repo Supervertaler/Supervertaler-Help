@@ -112,8 +112,6 @@ The main dependencies are automatically installed via `requirements.txt`:
 | anthropic | Anthropic Claude integration |
 | google-generativeai | Google Gemini integration |
 | python-docx | DOCX file handling |
-| chromadb | Supermemory vector search |
-| sentence-transformers | Semantic embeddings |
 | pyspellchecker | Spellcheck |
 
 ## Next Steps
