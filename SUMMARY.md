@@ -104,7 +104,7 @@
 * [Batch Translation](workbench/ai-translation/batch-translation.md)
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
-* [QuickTrans Popup](workbench/ai-translation/quicklauncher.md)
+* [QuickTrans Popup](workbench/ai-translation/quicktrans-popup.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration
