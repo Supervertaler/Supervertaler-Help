@@ -25,6 +25,10 @@ There are three ways to open SuperSearch:
 The panel docks at the bottom of the editor by default, but you can drag it anywhere -- left, right, floating, or even to a second monitor. Trados remembers the position between sessions.
 
 {% hint style="info" %}
+**Prefer fewer panels?** You can host SuperSearch as a tab inside the Supervertaler Assistant panel instead of its own dockable panel. Go to **Settings > General > Panels** and tick **Show SuperSearch as a tab in the Supervertaler Assistant panel**, then restart Trados Studio. This requires a Supervertaler Assistant licence; without one, SuperSearch stays in its own panel.
+{% endhint %}
+
+{% hint style="info" %}
 **Quick search from the editor:** Select a word or phrase in the source or target segment, then press **Alt+S** (or right-click > **SuperSearch**). The selected text is automatically entered in the search box and the search runs immediately.
 {% endhint %}
 
@@ -55,6 +59,12 @@ Each row shows one matching segment:
 | **Source** | Source text -- matching text is highlighted in yellow                                           |
 | **Target** | Target text -- matching text is highlighted in yellow                                           |
 | **Status** | Confirmation status (Not Translated, Draft, Translated, Translation Approved, Signed Off, etc.) |
+
+### Preview Pane
+
+Below the results grid is a preview pane showing the **full source and target text** of the selected result, side by side, with the match highlighted in yellow. This is handy when a segment is too long to read in its grid row. Click any result row to update the preview, and drag the splitter bar between the grid and the preview pane to resize it.
+
+The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C** to copy, or right-click for a menu with **Copy**, **Select All**, **Copy source**, and **Copy target**. This makes it easy to reuse a previous translation verbatim -- select the target phrase and paste it straight into your active segment.
 
 ## File Selection
 
