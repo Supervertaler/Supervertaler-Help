@@ -14,7 +14,7 @@ Choose one of the supported AI providers:
 
 | Provider | Description |
 |----------|-------------|
-| **OpenAI** | GPT-5.4, GPT-5.4 Mini |
+| **OpenAI** | GPT-5.5, GPT-5.4 Mini |
 | **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.6 |
 | **Gemini (Google)** | Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 31B, Gemma 4 26B MoE |
 | **Grok (xAI)** | Grok 4.20, Grok 4.1 Fast, Grok 4.20 (Reasoning) |
@@ -34,7 +34,13 @@ Enter the API key for your selected provider. The key is stored locally and neve
 
 ## Model selection
 
-A dropdown showing available models for the selected provider. The list is fetched automatically when a valid API key is entered.
+A dropdown showing a curated list of recommended models for the selected provider.
+
+### Custom model
+
+Below the dropdown is an optional **Custom model** field. To use a model that isn't in the curated list – a brand-new release, a preview model, or an OpenRouter router such as `openrouter/free` – type its exact model ID here. When filled, it overrides the dropdown selection; leave it blank to use the model picked from the dropdown.
+
+The field is available for every cloud provider. If you reopen Settings and a saved model isn't in the curated list, it is shown back in the Custom model field.
 
 ## Ollama endpoint
 
@@ -98,7 +104,7 @@ The model dropdown includes a curated selection of the best models for translati
 |-------|-------------|
 | **Claude Sonnet 4.6** | Recommended – best balance of speed, quality, and cost |
 | **Claude Opus 4.6** | Highest quality – best for specialized legal/technical translation |
-| **GPT-5.4** | Premium quality – OpenAI's most advanced model |
+| **GPT-5.5** | Premium quality – OpenAI's most advanced model |
 | **GPT-5.4 Mini** | Fast, affordable, and high quality for everyday translation |
 | **Gemini 3.1 Pro** | Google's most advanced model, large context |
 | **Gemini 3 Flash** | Fast and affordable – great for large batch jobs |
@@ -111,7 +117,7 @@ The model dropdown includes a curated selection of the best models for translati
 
 ### Using any OpenRouter model
 
-The model dropdown is **editable** when OpenRouter is selected. You can pick from the curated list or type any OpenRouter model ID directly – for example, `meta-llama/llama-3.1-70b-instruct` or `deepseek/deepseek-r1`. Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
+OpenRouter exposes far more models than the curated list above. To use one that isn't listed, type its exact model ID into the **Custom model** field (see [Model selection](#model-selection)) – for example, `meta-llama/llama-3.1-70b-instruct`, `deepseek/deepseek-r1`, or a router such as `openrouter/free`. Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
 
 ### Pricing
 
