@@ -36,11 +36,11 @@ Enter the API key for your selected provider. The key is stored locally and neve
 
 A dropdown showing a curated list of recommended models for the selected provider.
 
-### Custom model
+### Model ID
 
-Below the dropdown is an optional **Custom model** field. To use a model that isn't in the curated list – a brand-new release, a preview model, or an OpenRouter router such as `openrouter/free` – type its exact model ID here. When filled, it overrides the dropdown selection; leave it blank to use the model picked from the dropdown.
+Below the dropdown is an optional **Model ID** field. To use a model that isn't in the curated list – a brand-new release, a preview model, or an OpenRouter router such as `openrouter/free` – type its exact model ID here. When filled, it overrides the dropdown selection; leave it blank to use the model picked from the dropdown.
 
-The field is available for every cloud provider. If you reopen Settings and a saved model isn't in the curated list, it is shown back in the Custom model field.
+The field is available for every cloud provider. If you reopen Settings and a saved model isn't in the curated list, it is shown back in the Model ID field.
 
 ## Ollama endpoint
 
@@ -117,7 +117,7 @@ The model dropdown includes a curated selection of the best models for translati
 
 ### Using any OpenRouter model
 
-OpenRouter exposes far more models than the curated list above. To use one that isn't listed, type its exact model ID into the **Custom model** field (see [Model selection](#model-selection)) – for example, `meta-llama/llama-3.1-70b-instruct`, `deepseek/deepseek-r1`, or a router such as `openrouter/free`. Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
+OpenRouter exposes far more models than the curated list above. To use one that isn't listed, type its exact model ID into the **Model ID** field (see [Model selection](#model-selection)) – for example, `meta-llama/llama-3.1-70b-instruct`, `deepseek/deepseek-r1`, or a router such as `openrouter/free`. Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
 
 ### Pricing
 
