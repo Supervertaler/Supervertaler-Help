@@ -132,10 +132,10 @@ Click: 📂 Folder → Select folder with images
 
 #### Step 2: Configure Settings
 
-**Model Selection**:
-- `gpt-4o` (Recommended) - Latest, fastest, best quality
-- `gpt-4o-mini` - Budget option, good quality
-- `gpt-4-turbo` - Alternative, similar quality to gpt-4o
+**Model Selection** (vision-capable models, grouped by provider):
+- **OpenAI**: `gpt-5.5` (Recommended - flagship), `gpt-5.4-mini` (budget option)
+- **Claude**: `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`, `claude-opus-4-7`
+- **Gemini**: `gemini-3.1-flash-lite`, `gemini-2.5-pro`, `gemini-3.1-pro-preview`
 
 **Formatting Option**:
 - ✓ **Preserve formatting (bold/italic/underline)** - Enabled by default

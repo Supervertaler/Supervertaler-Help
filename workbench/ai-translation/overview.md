@@ -8,11 +8,10 @@ Supervertaler integrates with leading AI language models for high-quality transl
 
 | Provider | Models |
 |----------|--------|
-| **OpenAI** | GPT-5.4, GPT-5.4 Mini |
+| **OpenAI** | GPT-5.5, GPT-5.4 Mini |
 | **Anthropic** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.7 |
-| **Google** | Gemini 2.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview) |
-| **Grok** | Grok 4.20, Grok 4.1 Fast |
-| **Mistral** | Mistral Large, Mistral Small, Mistral Nemo |
+| **Google** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
+| **Mistral** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
 | **OpenRouter** | 200+ models via a single API key |
 | **Ollama** | TranslateGemma, Qwen 3, Aya Expanse (local, free) |

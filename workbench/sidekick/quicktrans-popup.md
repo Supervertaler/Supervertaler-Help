@@ -57,7 +57,7 @@ QuickTrans queries up to eleven providers in parallel. Each one is independently
 | Provider | Notes |
 | --- | --- |
 | Claude | Pick the model in Settings → ⚡ QuickTrans (e.g. claude-haiku-4-5 vs claude-sonnet-4-6) |
-| OpenAI | Pick the model (e.g. gpt-4o-mini vs gpt-4o) |
+| OpenAI | Pick the model (e.g. gpt-5.4-mini vs gpt-5.5) |
 | Gemini | Pick the model |
 | Ollama | Local-only; uses the active Ollama model |
 | Custom | One configurable OpenAI-compatible endpoint (URL + model) |

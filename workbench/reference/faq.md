@@ -274,14 +274,6 @@ Full guide: [Installation](../get-started/installation.md)
 * Perfect for translating simple line-by-line text content
 * File → Import → Simple Text File (TXT) / File → Export → Simple Text File - Translated (TXT)
 
-**🔄 Automatic Model Version Checker (v1.9.26)**
-
-* Auto-detects new LLM models from OpenAI, Anthropic, and Google
-* Checks once per 24 hours on startup (configurable)
-* Popup dialog with easy model selection when new models detected
-* Settings → AI Settings → Model Version Checker
-* Manual "Check for New Models Now" button
-
 **🎨 UI Standardization (NEW in v1.9.26)**
 
 * All checkboxes standardized to green with white checkmark design
@@ -561,31 +553,34 @@ See: Full keyboard shortcut list in [Keyboard Shortcuts](../editor/keyboard-shor
 
 **OpenAI:**
 
-* GPT-4o (recommended - best balance of speed/quality)
-* GPT-4 Turbo
-* GPT-4
-* GPT-3.5 Turbo (economical option)
+* GPT-5.5 (flagship - advanced reasoning)
+* GPT-5.4 Mini (fast and economical)
 
 **Anthropic Claude:**
 
-* Claude 3.5 Sonnet (excellent for translation)
-* Claude 3.5 Haiku (fast and economical)
-* Claude 3 Opus (highest capability, slower)
-* Claude 3 Sonnet
-* Claude 3 Haiku
+* Claude Sonnet 4.6 (recommended - best all-round balance)
+* Claude Haiku 4.5 (fast and economical)
+* Claude Opus 4.7 (most capable, 1M context)
 
 **Google Gemini:**
 
-* Gemini 1.5 Pro (2M token context window)
-* Gemini 1.5 Flash (cost-effective)
-* Gemini 2.0 Flash Exp (experimental)
+* Gemini 3.1 Flash-Lite (fast and economical)
+* Gemini 2.5 Pro (premium - complex reasoning)
+* Gemini 3.1 Pro Preview (latest, most capable)
+* Gemma 4 26B MoE (open model)
+
+**Mistral:** Mistral Large, Mistral Small
+
+**DeepSeek:** DeepSeek V4 Pro, DeepSeek V4 Flash
+
+**Plus:** OpenRouter (200+ models via one key), Ollama (local, free), and any OpenAI-compatible endpoint via Custom.
 
 **Recommendations:**
 
-* **Best Quality:** Claude 3.5 Sonnet, GPT-4o
-* **Best Value:** Gemini 1.5 Flash, Claude 3.5 Haiku
-* **Best Context:** Gemini 1.5 Pro (2M tokens)
-* **General Use:** GPT-4o or Claude 3.5 Sonnet
+* **Best all-rounder:** Claude Sonnet 4.6
+* **Best value:** GPT-5.4 Mini, Gemini 3.1 Flash-Lite, Claude Haiku 4.5
+* **Highest quality:** Claude Opus 4.7, GPT-5.5
+* **Free / private:** Ollama (local models)
 
 Try a couple of models on a representative passage from your project to see which one handles your language pair and domain best.
 
@@ -1485,7 +1480,6 @@ The Superlookup Web Resources tab includes an **embedded browser** that lets you
 **Recently Added (selected recent versions):**
 
 * ✅ Simple Text File Import/Export - Line-by-line text translation
-* ✅ Automatic Model Version Checker - Get notified of new LLM models (v1.9.26)
 * ✅ UI Standardization - Consistent green checkbox design throughout
 * ✅ Local LLM support (Ollama) - Run AI translation offline (v1.9.16)
 * ✅ Automatic hardware detection and model recommendations

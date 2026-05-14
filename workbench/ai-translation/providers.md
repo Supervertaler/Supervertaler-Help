@@ -8,31 +8,25 @@ Supervertaler supports multiple AI providers so you can choose what fits your wo
 
 ### OpenAI
 
-Models: **GPT-5.4**, **GPT-5.4 Mini**
+Models: **GPT-5.5**, **GPT-5.4 Mini**
 
-Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). GPT-5.4 Mini is a good starting point – fast, affordable, and high quality for most translation tasks.
+Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). GPT-5.4 Mini is a good starting point – fast, affordable, and high quality for most translation tasks. GPT-5.5 is the flagship for the most demanding work.
 
 ### Anthropic (Claude)
 
-Models: **Claude Sonnet 4.6**, **Claude Haiku 4.5**, **Claude Opus 4.7**, **Claude Opus 4.6**
+Models: **Claude Sonnet 4.6**, **Claude Haiku 4.5**, **Claude Opus 4.7**
 
 Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 4.6 is the recommended default. Haiku 4.5 is the fastest and cheapest option; Opus 4.7 is the most capable.
 
 ### Google (Gemini)
 
-Models: **Gemini 2.5 Flash**, **Gemini 2.5 Pro**, **Gemini 3.1 Pro (Preview)**, **Gemma 4 31B**, **Gemma 4 26B MoE**
+Models: **Gemini 3.1 Flash-Lite**, **Gemini 2.5 Pro**, **Gemini 3.1 Pro (Preview)**, **Gemma 4 26B MoE**
 
-Get an API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Gemini 2.5 Flash offers a generous free tier and is a strong choice for high-volume work.
-
-### Grok (xAI)
-
-Models: **Grok 4.20**, **Grok 4.1 Fast**, **Grok 4.20 (Reasoning)**
-
-Get an API key at [console.x.ai](https://console.x.ai). Grok 4.20 supports a 2M-token context window.
+Get an API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Gemini 3.1 Flash-Lite offers a generous free tier and is a strong choice for high-volume work.
 
 ### Mistral AI
 
-Models: **Mistral Large**, **Mistral Small**, **Mistral Nemo**
+Models: **Mistral Large**, **Mistral Small**
 
 Get an API key at [console.mistral.ai](https://console.mistral.ai). Particularly strong on European languages.
 
