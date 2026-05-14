@@ -103,7 +103,7 @@ The model dropdown includes a curated selection of the best models for translati
 | Model | Description |
 |-------|-------------|
 | **Claude Sonnet 4.6** | Recommended – best balance of speed, quality, and cost |
-| **Claude Opus 4.6** | Highest quality – best for specialized legal/technical translation |
+| **Claude Opus 4.7** | Highest quality – Anthropic's most capable model, 1M context |
 | **GPT-5.5** | Premium quality – OpenAI's most advanced model |
 | **GPT-5.4 Mini** | Fast, affordable, and high quality for everyday translation |
 | **Gemini 3.1 Pro** | Google's most advanced model, large context |
