@@ -179,7 +179,6 @@
 
 ## 🖥️ Reference
 
-* [FAQ](workbench/reference/faq.md)
 * [File Format Reference](workbench/reference/file-formats.md)
 * [Changelog](workbench/reference/changelog.md)
 * [Contributing](workbench/reference/contributing.md)

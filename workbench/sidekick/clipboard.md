@@ -130,7 +130,7 @@ When a column contains no clips, a centred placeholder message is shown:
 
 ## Persistence
 
-The full clip history is stored in your [user data folder](../reference/faq.md) in a shared SQLite database. Items are available the next time you open Supervertaler Workbench.
+The full clip history is stored in your user data folder in a shared SQLite database. Items are available the next time you open Supervertaler Workbench.
 
 ***
 

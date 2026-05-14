@@ -9,7 +9,7 @@ Open **Settings** from the main toolbar or the **View** menu. Settings are organ
 ## AI Settings
 
 - **Provider** – select OpenAI, Anthropic (Claude), Google Gemini, Mistral, or a custom OpenAI-compatible endpoint
-- **API key** – enter and save your key for the selected provider; keys are stored locally in your [user data folder](../reference/faq.md)
+- **API key** – enter and save your key for the selected provider; keys are stored locally in your user data folder
 - **Model** – choose which model to use for AI translation and the Chat assistant
 - **Temperature** – controls how creative vs. literal the AI output is (lower = more consistent)
 - **Max tokens** – upper limit on response length
