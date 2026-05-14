@@ -18,7 +18,7 @@ Choose one of the supported AI providers:
 | **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.6 |
 | **Gemini (Google)** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
 | **Grok (xAI)** | Grok 4.20, Grok 4.1 Fast, Grok 4.20 (Reasoning) |
-| **Mistral AI** | Mistral Large, Mistral Small, Mistral Nemo |
+| **Mistral AI** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
 | **[OpenRouter](#openrouter)** | Access 200+ models from all major providers with a single API key |
 | **Ollama (Local)** | Run models locally, no API key required |
