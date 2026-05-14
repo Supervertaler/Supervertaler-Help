@@ -4,7 +4,7 @@
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
 {% endhint %}
 
-This page helps you estimate the API cost of using AI features in Supervertaler for Trados. All prices are based on official provider pricing as of March 2026 and are shown in **US dollars**.
+This page explains how AI costs work in Supervertaler for Trados and how to keep them under control. It deliberately avoids quoting exact per-model prices – those change often, and Supervertaler already shows you the **real, current cost** of every operation in the **Reports** tab. For exact figures, see [Estimates vs actual cost](#estimates-vs-actual-cost) below.
 
 {% hint style="info" %}
 AI provider costs are **separate** from your Supervertaler licence. You pay the AI provider directly for the tokens your requests consume. Supervertaler does not add any markup.
@@ -12,9 +12,9 @@ AI provider costs are **separate** from your Supervertaler licence. You pay the 
 
 ### Estimates vs actual cost
 
-From v4.19.86 onwards, the **Reports** tab shows **real billed token counts and cost** as reported by your provider's API – with cache-hit tokens broken out (e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`). When the cost has no `~` prefix, that's the actual amount your provider will charge.
+The **Reports** tab shows **real billed token counts and cost** as reported by your provider's API – with cache-hit tokens broken out (e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`). When the cost has no `~` prefix, that's the actual amount your provider will charge. **This is the single best place to see what you're actually spending** – it's live, per-operation, and provider-reported.
 
-The number you see is provider-reported and cache-aware:
+The number is cache-aware:
 
 * **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate, cache writes at 1.25×.
 * **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (50% off cached input).
@@ -23,7 +23,7 @@ The number you see is provider-reported and cache-aware:
 
 For these providers the in-app number is the authoritative billable figure (modulo any account-level credits or monthly minimums you may have).
 
-The chars/4 estimate is still used as a fallback when the provider didn't return usage info – this affects Ollama (local, free anyway), some Grok / Mistral edge cases, and any response shape we couldn't parse. In those cases the cost still appears with a `~` prefix to flag it as an estimate.
+The chars/4 estimate is still used as a fallback when the provider didn't return usage info – this affects Ollama (local, free anyway), some provider edge cases, and any response shape we couldn't parse. In those cases the cost still appears with a `~` prefix to flag it as an estimate.
 
 If you want to cross-check against your provider's own dashboard:
 
@@ -38,7 +38,7 @@ If you want to cross-check against your provider's own dashboard:
 | **DeepSeek**            | [platform.deepseek.com – Usage](https://platform.deepseek.com/usage)                      |
 | **Ollama**              | Free – local execution, no provider console.                                              |
 
-The in-app number and the provider dashboard should agree to within rounding for any given run. If you see a meaningful gap, the most likely causes (in order) are: a provider-side credit or volume discount the in-app calculator can't see; the in-app pricing table being a few weeks behind a recent rate change; or, for fallback (estimate) cases, the chars/4 heuristic over- or under-counting tokens for that particular language and content type.
+The in-app number and the provider dashboard should agree to within rounding for any given run. If you see a meaningful gap, the most likely causes (in order) are: a provider-side credit or volume discount the in-app calculator can't see; the in-app pricing table being a little behind a recent rate change; or, for fallback (estimate) cases, the chars/4 heuristic over- or under-counting tokens for that particular language and content type.
 
 ### How costs are calculated
 
@@ -47,7 +47,7 @@ AI providers charge per **token** – a unit of text roughly equal to ¾ of a wo
 * **Input tokens** – the text you send (source segment, system prompt, terminology context)
 * **Output tokens** – the text the model returns (translated segment, proofread text, generated prompt)
 
-Because Supervertaler translates **segment by segment**, the system prompt and terminology context are included with every segment. For a typical 5,000-word document (\~250 segments), this means:
+Because Supervertaler translates **segment by segment**, the system prompt and terminology context are included with every segment. For a typical 5,000-word document (\~250 segments), the token usage works out roughly like this:
 
 | Task                | Input tokens | Output tokens |
 | ------------------- | ------------ | ------------- |
@@ -55,128 +55,38 @@ Because Supervertaler translates **segment by segment**, the system prompt and t
 | **AI Proofreader**  | \~140,000    | \~8,000       |
 | **AutoPrompt**      | \~10,000     | \~2,000       |
 
-These are estimates for a representative document. Actual usage varies with segment length, terminology context size, and prompt complexity.
+These are estimates for a representative document – actual usage varies with segment length, terminology context size, and prompt complexity. Token counts like these are fairly stable; what changes is the **price per token**, which is why this guide points you to live figures rather than quoting them.
 
-### Cost per 5,000-word document
+### How much will it cost?
 
-#### OpenAI
+There's a wide spread between models. As a rough mental model:
 
-| Model                          | Translate | Proofread | AutoPrompt |
-| ------------------------------ | --------- | --------- | ---------- |
-| **GPT-5.4**                    | $1.49     | $1.64     | $0.16      |
-| **GPT-5.4 Mini** (recommended) | $0.13     | $0.15     | $0.02      |
+* **Local models (Ollama)** are **free** – they run on your own computer, with no API charges at all. The trade-off is that quality depends on your hardware, and they're generally less capable than cloud-hosted models. If you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
+* **Budget cloud models** – the "Mini", "Flash-Lite" and "Small" tier from each provider (e.g. GPT-5.4 Mini, Gemini 3.1 Flash-Lite, Mistral Small, Claude Haiku 4.5) – typically cost a small fraction of a cent per segment. They're excellent for routine, high-volume translation.
+* **Flagship models** – Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro and the like – can run roughly 10–50× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
 
-#### Claude (Anthropic)
-
-| Model                               | Translate | Proofread | AutoPrompt |
-| ----------------------------------- | --------- | --------- | ---------- |
-| **Claude Sonnet 4.6** (recommended) | $0.50     | $0.54     | $0.06      |
-| **Claude Haiku 4.5**                | $0.17     | $0.18     | $0.02      |
-| **Claude Opus 4.7**                 | $2.48     | $2.70     | $0.30      |
-| **Claude Opus 4.6**                 | $2.48     | $2.70     | $0.30      |
-
-#### Google Gemini
-
-| Model                              | Translate | Proofread | AutoPrompt |
-| ---------------------------------- | --------- | --------- | ---------- |
-| **Gemini 2.5 Flash** (recommended) | $0.06     | $0.06     | $0.01      |
-| **Gemini 2.5 Pro**                 | $0.24     | $0.26     | $0.03      |
-| **Gemini 3.1 Pro** (preview)       | $0.35     | $0.38     | $0.04      |
-| **Gemma 4 31B**                    | $0.02     | $0.05     | < $0.01    |
-| **Gemma 4 26B MoE**                | $0.02     | $0.05     | < $0.01    |
-
-#### Grok (xAI)
-
-| Model                       | Translate | Proofread | AutoPrompt |
-| --------------------------- | --------- | --------- | ---------- |
-| **Grok 4.20** (recommended) | $0.30     | $0.33     | $0.03      |
-| **Grok 4.1 Fast**           | $0.03     | $0.03     | < $0.01    |
-| **Grok 4.20 Reasoning**     | –         | –         | $0.09      |
-
-#### Mistral AI
-
-| Model                           | Translate | Proofread | AutoPrompt |
-| ------------------------------- | --------- | --------- | ---------- |
-| **Mistral Large** (recommended) | $0.30     | $0.33     | $0.03      |
-| **Mistral Small**               | $0.01     | $0.02     | < $0.01    |
-| **Mistral Nemo**                | $0.02     | $0.02     | < $0.01    |
-
-#### OpenRouter
-
-[OpenRouter](https://openrouter.ai) lets you access models from all major providers with a single API key. Prices are the same as the provider's own rates plus a **5.5% platform fee**. The curated models in the Supervertaler dropdown include:
-
-| Model                               | Translate | Proofread | AutoPrompt |
-| ----------------------------------- | --------- | --------- | ---------- |
-| **Claude Sonnet 4.6** (recommended) | \~$0.53   | \~$0.57   | \~$0.06    |
-| **Claude Opus 4.6**                 | \~$2.62   | \~$2.85   | \~$0.32    |
-| **GPT-5.4**                         | \~$1.57   | \~$1.73   | \~$0.17    |
-| **GPT-5.4 Mini**                    | \~$0.14   | \~$0.16   | \~$0.02    |
-| **Gemini 3.1 Pro**                  | \~$0.37   | \~$0.40   | \~$0.04    |
-| **Gemini 3 Flash**                  | \~$0.06   | \~$0.07   | \~$0.01    |
-| **Gemma 4 31B**                     | \~$0.02   | \~$0.05   | < $0.01    |
-| **Gemma 4 26B MoE**                 | \~$0.02   | \~$0.05   | < $0.01    |
-| **Mistral Small 4**                 | \~$0.01   | \~$0.01   | < $0.01    |
-| **Qwen 3.6 Plus (Free)**            | Free      | Free      | Free       |
-
-{% hint style="info" %}
-OpenRouter prices are approximate (base provider price + 5.5% fee). You can also type **any** OpenRouter model ID into the model dropdown – browse all 200+ models at [openrouter.ai/models](https://openrouter.ai/models).
-{% endhint %}
-
-#### Ollama (local)
-
-| Model                  | Translate | Proofread | AutoPrompt |
-| ---------------------- | --------- | --------- | ---------- |
-| **TranslateGemma 12B** | Free      | Free      | Free       |
-| **TranslateGemma 4B**  | Free      | Free      | Free       |
-| **Qwen 3 14B**         | Free      | Free      | Free       |
-| **Aya Expanse 8B**     | Free      | Free      | Free       |
-
-{% hint style="success" %}
-**Ollama models run on your own computer** – there are no API costs. The trade-off is that quality depends on your hardware and the models are generally less capable than cloud-hosted models. See [AI Settings](settings/ai-settings.md) for setup instructions.
-{% endhint %}
+To see what a model **actually** costs for your work, run one operation and check the **Reports** tab – it shows the real billed cost. For OpenRouter, expect the underlying provider's rate plus a small platform fee.
 
 ### Our recommendation
 
 {% hint style="success" %}
-**If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 4.6.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content. It costs roughly $0.50 per 5,000-word document, which is a fraction of a cent per segment.
+**If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 4.6.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content – at a cost that works out to a small fraction of a cent per segment.
 {% endhint %}
 
-For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 2.5 Flash** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.6** or **GPT-5.4** are worth the premium.
+For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 3.1 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.7** or **GPT-5.5** are worth the premium.
 
-### Token pricing reference
+### Token pricing
 
-For reference, these are the per-token rates used in the calculations above:
+Supervertaler's in-app cost figures come from a built-in per-token pricing table. Because provider prices change regularly, that table is occasionally a little behind a recent rate change – the **Reports** tab's provider-reported figures are always the authoritative ones. For the definitive current rates, check the provider's own pricing page:
 
-| Model                    | Input (per 1M tokens) | Output (per 1M tokens) |
-| ------------------------ | --------------------- | ---------------------- |
-| GPT-5.4                  | $10.00                | $30.00                 |
-| GPT-5.4 Mini             | $0.75                 | $4.50                  |
-| Claude Sonnet 4.6        | $3.00                 | $15.00                 |
-| Claude Haiku 4.5         | $1.00                 | $5.00                  |
-| Claude Opus 4.7          | $15.00                | $75.00                 |
-| Claude Opus 4.6          | $15.00                | $75.00                 |
-| Gemini 2.5 Flash         | $0.30                 | $2.50                  |
-| Gemini 2.5 Pro           | $1.25                 | $10.00                 |
-| Gemini 3.1 Pro (Preview) | $2.00                 | $12.00                 |
-| Gemma 4 31B              | $0.14                 | $0.40                  |
-| Gemma 4 26B MoE          | $0.13                 | $0.40                  |
-| Grok 4.20                | $2.00                 | $6.00                  |
-| Grok 4.1 Fast            | $0.20                 | $0.50                  |
-| Grok 4.20 (Reasoning)    | $2.00                 | $6.00                  |
-| Mistral Large            | $2.00                 | $6.00                  |
-| Mistral Small            | $0.10                 | $0.30                  |
-| Mistral Nemo             | $0.15                 | $0.15                  |
-
-{% hint style="warning" %}
-Prices change regularly. Check your provider's pricing page for the latest rates: [OpenAI](https://openai.com/api/pricing/) · [Anthropic](https://www.anthropic.com/pricing#anthropic-api) · [Google Gemini](https://ai.google.dev/gemini-api/docs/pricing) · [xAI](https://docs.x.ai/developers/models) · [Mistral](https://mistral.ai/technology/) · [OpenRouter](https://openrouter.ai/models)
-{% endhint %}
+[OpenAI](https://openai.com/api/pricing/) · [Anthropic](https://www.anthropic.com/pricing#anthropic-api) · [Google Gemini](https://ai.google.dev/gemini-api/docs/pricing) · [xAI](https://docs.x.ai/developers/models) · [Mistral](https://mistral.ai/technology/) · [DeepSeek](https://api-docs.deepseek.com/quick_start/pricing/) · [OpenRouter](https://openrouter.ai/models)
 
 ### Tips for managing costs
 
-* **Start with a budget model** – GPT-5.4 Mini, Gemini 2.5 Flash, or Grok 4.1 Fast are excellent for routine translation at a fraction of the cost.
-* **Use premium models selectively** – reserve GPT-5.4, Claude Opus, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
+* **Start with a budget model** – GPT-5.4 Mini, Gemini 3.1 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
+* **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.7, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
-* **Check your usage** – the **Reports** tab in Supervertaler Assistant lists every AI call with its estimated token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table at the top of this page) shows the authoritative billable figure.
+* **Check your usage** – the **Reports** tab in Supervertaler Assistant lists every AI call with its token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 
 ### Built-in cost protection
 
@@ -192,7 +102,7 @@ Regular chat messages include recent conversation history so the AI can follow y
 
 #### Cost warning
 
-If a request is estimated to cost more than $0.50 in input tokens, a confirmation dialogueue appears showing the estimated token count and cost. You can cancel before the expensive request is sent.
+If a request is estimated to cost more than $0.50 in input tokens, a confirmation dialogue appears showing the estimated token count and cost. You can cancel before the expensive request is sent.
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
@@ -202,7 +112,7 @@ If a request is estimated to cost more than $0.50 in input tokens, a confirmatio
 
 #### Choosing the right model
 
-For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-5.4 Mini** or another budget model. Reserve premium models like **GPT-5.4** or **Claude Opus** for AutoPrompt and complex tasks where the quality difference justifies the cost.
+For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-5.4 Mini** or another budget model. Reserve premium models like **GPT-5.5** or **Claude Opus 4.7** for AutoPrompt and complex tasks where the quality difference justifies the cost.
 
 ### See also
 
@@ -211,4 +121,3 @@ For everyday work – chat queries, terminology questions, QuickLauncher prompts
 * [AI Proofreader](ai-proofreader.md) – proofread translated segments
 * [AutoPrompt](generate-prompt.md) – generate translation prompts
 * [Licensing & Pricing](licensing.md) – Supervertaler subscription plans
-
