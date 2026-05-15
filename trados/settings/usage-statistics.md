@@ -6,7 +6,7 @@ You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio
 
 Supervertaler for Trados sends one anonymous, lightweight ping to the developer at startup so he can see how many people are using the plugin and what environments they are running it on. The dialogue below appears once after install or update, and the feature can be switched off at any time.
 
-<figure><img src="../../.gitbook/assets/usage-statistics-dialog.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 #### How it works
 
