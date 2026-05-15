@@ -4,16 +4,16 @@
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
 {% endhint %}
 
-Supervertaler for Trados includes an optional, anonymous usage statistics feature to help the developer understand how many people are using the plugin and what environments they are running it on.
+Supervertaler for Trados sends one anonymous, lightweight ping to the developer at startup so he can see how many people are using the plugin and what environments they are running it on. The dialogue below appears once after install or update, and the feature can be switched off at any time.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/usage-statistics-dialog.png" alt=""><figcaption></figcaption></figure>
 
 #### How it works
 
-* **Strictly opt-in** – on first launch after install or update, a dialogue asks if you would like to participate. You must explicitly click "Yes" to opt in. If you click "No", no data is ever sent.
+* **Default-on, opt-out** – on first launch after install or update, an informational dialogue (shown above) tells you exactly what is collected and gives you a one-click **Turn it off** button. You don't have to do anything to keep it enabled – the dialogue's default action (the bold **Keep it on** button, Enter, Esc, or the X-close) all keep it enabled. Your choice is remembered, and the dialogue isn't shown again.
 * **Minimal data** – a single lightweight ping is sent once per session on plugin startup. The only data included is:
   * A random anonymous ID (a UUID generated locally on your machine – not tied to any account, machine, or identity)
-  * Plugin version (e.g. 4.11.0)
+  * Plugin version (e.g. 4.19.108)
   * OS version (e.g. Windows 11)
   * Trados Studio version
   * System locale (e.g. en-GB)
@@ -35,7 +35,7 @@ Supervertaler for Trados includes an optional, anonymous usage statistics featur
 You can change your choice at any time:
 
 1. Open **Settings** (click the gear icon in the Supervertaler panel)
-2. In the **TermLens** tab, scroll to the bottom
+2. In the **TermLens** tab, scroll to the **Privacy** section
 3. Check or uncheck **"Share anonymous usage statistics (no personal data)"**
 4. Click **OK**
 
@@ -56,7 +56,7 @@ This information directly informs development priorities and compatibility testi
 
 The full source code for both the plugin-side statistics and the server-side endpoint is publicly available:
 
-* **Plugin code**: [`Core/UsageStatistics.cs`](../../src/Supervertaler.Trados/Core/UsageStatistics.cs) on GitHub
+* **Plugin code**: [`Core/UsageStatistics.cs`](https://github.com/Supervertaler/Supervertaler-for-Trados/blob/main/src/Supervertaler.Trados/Core/UsageStatistics.cs) on GitHub
 * **Server code**: The Cloudflare Worker that receives the pings is also open source
 
 You can verify exactly what data is sent by inspecting the code yourself.
