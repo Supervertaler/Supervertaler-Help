@@ -68,8 +68,6 @@
 * [Support & Community](trados/support.md)
 * [Privacy Policy](trados/privacy.md)
 
----
-
 ## 🖥️ Get Started
 
 * [Supervertaler Workbench](workbench/README.md)
