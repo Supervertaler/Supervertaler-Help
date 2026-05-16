@@ -86,21 +86,98 @@ Quick-insert symbols, arrows, primes, dashes, quotes, currency signs, legal symb
 
 ### 🔁 Text Conversions
 
-Transform whatever text is on the clipboard. The conversions are computed against the *current* clipboard contents – so the typical flow is: select text in another app → **Ctrl+Alt+C** to open the Clipboard tab (current selection auto-copies) → navigate to a conversion → Enter to paste the converted text back over your selection.
+Transform whatever text is on the clipboard. The conversions are computed against the *current* clipboard contents – so the typical flow is: select text in another app → **Ctrl+Alt+C** to open the Clipboard Manager (current selection auto-copies) → navigate to a conversion → Enter to paste the converted text back over your selection.
 
-| Conversion | Result |
-| --- | --- |
-| Uppercase | SELECTED TEXT |
-| Lowercase | selected text |
-| Title Case | Selected Text |
-| Sentence case | Selected text |
-| Single curly quotes | 'Selected text' |
-| Double curly quotes | "Selected text" |
-| Round brackets | (Selected text) |
-| Square brackets | \[Selected text] |
-| Remove soft hyphens | Strips invisible U+00AD characters |
-| Double to single quotes | Replaces " with ' |
-| Make bold | Wraps in `<b>…</b>` HTML tags |
+#### The shipped defaults
+
+Eleven conversions ship out of the box: **Uppercase**, **Lowercase**, **Title Case**, **Sentence case**, **Single curly quotes**, **Double curly quotes**, **Round brackets**, **Square brackets**, **Remove soft hyphens (U+00AD)**, **Double quotes → single quotes**, **Make `<b>bold</b>`**.
+
+#### Adding your own
+
+Since v1.10.48, every text conversion is a `.md` file under `<user_data>/text_conversion_library/`. The folder structure on disk is organisational – move files between folders to re-organise; the parent folder name becomes the conversion's category.
+
+Drop a new `.md` file in the right folder, click **🔄 Refresh** on the Menu column, and the new conversion appears. Each file declares one conversion via YAML frontmatter at the top, with an optional human-readable notes section below:
+
+```yaml
+---
+type: wrap
+label: Mark as translator's comment ⟦TC: …⟧
+prefix: " ⟦TC: "
+suffix: "⟧"
+---
+
+Optional notes here. Workbench ignores everything below the closing ---.
+```
+
+The four supported `type` values cover most needs without arbitrary-code execution:
+
+| `type` | What it does | Required fields | Optional fields |
+| --- | --- | --- | --- |
+| `case` | Change case of the whole text | `mode` (one of `upper`, `lower`, `title`, `sentence`, `swap`, `camel`, `snake`, `kebab`) | – |
+| `wrap` | Glue a prefix and suffix around the text | `prefix`, `suffix` | – |
+| `regex_replace` | Find/replace, literal or regex | `find`, `replace` | `regex` (default `true`), `case_sensitive` (default `true`) |
+| `strip_chars` | Remove every occurrence of any listed character | `chars` | – |
+
+Common optional metadata:
+
+* `label` – the display label shown in the Menu. Defaults to the filename stem if omitted (useful when the label contains characters that can't be in filenames, like `:` or `"`).
+* `category` – overrides the folder-derived category. Set to an empty string to surface the conversion at the top level.
+* `enabled` – defaults to `true`. Set to `false` to hide without deleting (useful for project-specific conversions you might want back later).
+
+#### Concrete examples
+
+A wrap conversion for HTML emphasis:
+
+```yaml
+---
+type: wrap
+label: HTML <em>
+prefix: <em>
+suffix: </em>
+---
+```
+
+A strip-chars conversion that removes several invisible characters in one go (uses YAML's `\u` escape inside double quotes):
+
+```yaml
+---
+type: strip_chars
+label: Strip invisible spaces (NBSP + figure space + narrow NBSP)
+chars: "   "
+---
+```
+
+A regex find/replace for em-dash-to-en-dash:
+
+```yaml
+---
+type: regex_replace
+label: "Em dash (—) → en dash (–)"
+find: "—"
+replace: "–"
+regex: false
+---
+```
+
+A regex find/replace using capture groups for UK → US "-our" → "-or" endings:
+
+```yaml
+---
+type: regex_replace
+label: "UK → US: drop the 'u' from -our endings"
+find: "([Cc]olo|[Ff]avo|[Hh]ono|[Ll]abo|[Nn]eighbo|[Bb]ehavio|[Ff]lavo|[Oo]do|[Rr]umo)u(r)"
+replace: "\\1\\2"
+regex: true
+---
+```
+
+(Note the doubled backslashes in `replace` – `\\1` in YAML is needed to produce `\1` in the actual regex replacement string.)
+
+#### Things that DON'T work (and why)
+
+The four `type` values are deliberately limited – no arbitrary Python execution from user-data files, no shell commands, no network calls. If you have a transformation that genuinely needs Python (multi-step pipelines that produce intermediate state, calls to an external library, etc.), open a GitHub issue describing the use case and we'll consider adding a `python_file` type with appropriate safeguards.
+
+Broken conversions (invalid `type`, bad regex, missing required field) are silently skipped on load and logged to the Workbench log – the clipboard flow never breaks on a typo. Fix the file, click 🔄 Refresh, and the conversion comes back.
 
 ### 💬 QuickLauncher Prompts
 
