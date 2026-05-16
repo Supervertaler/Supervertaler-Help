@@ -87,6 +87,30 @@ Generated prompts are formatted as proper Markdown – `##` headings for each ma
 
 The Markdown markup is structural – it does not change what the translator AI does at translation time. The generated prompt's inner OUTPUT FORMAT rule still says "translation only, no markdown formatting in the translation output", so per-segment AI translations remain plain target text.
 
+## Translator's Comment methodology (always-on)
+
+Since v1.10.46, every AutoPrompt-generated prompt embeds the **Translator's Comment** (TC) methodology by default, regardless of source language or domain. The methodology asks the translator AI to silently correct obvious mechanical defects in the source (typos, broken words, hanging mid-sentence breaks, doubled spaces, stray punctuation, reference-numeral mismatches that are unambiguous in context, missing diacritics, etc.) and append a single concise comment at the end of the segment in this exact format:
+
+```
+⟦TC: short factual description of the fix(es)⟧
+```
+
+- The brackets are the mathematical white square brackets **U+27E6** (⟦) and **U+27E7** (⟧). These characters do not occur in source documents, so they are safe as out-of-band markers that can be extracted reliably in post-processing.
+- One marker per segment maximum; multiple fixes are joined with semicolons inside one marker.
+- Segments with no defects emit no marker.
+- When the translator AI inserts a word or short phrase to fill a clear gap, that supplied text is wrapped in standard ASCII square brackets `[like this]` inside the running translation, and the trailing marker references it (e.g. `⟦TC: [bracketed text] supplied to close hanging sentence⟧`).
+- Numerical values, dates, dosages, legal scope language, headings, identifiers, and proper names are never silently "corrected" – defects in those zones are preserved verbatim, with an optional `⟦TC: source ambiguous – ...⟧` marker if doubt exists.
+
+The defect categories that count as "obvious" are adapted to the actual source language by the LLM (Dutch -d/-t verb typos, German missing umlauts, French accent slips, Spanish/Italian conjugation typos, etc.).
+
+{% hint style="info" %}
+**The markers appear inline in the target text** – they are not yet auto-extracted into Workbench segment comments. Extraction into a dedicated comments pane is a separate follow-up. For now, you can copy or strip the markers manually, or run a downstream script that finds `⟦TC: ...⟧` regions and moves them into a structured comment field.
+{% endhint %}
+
+{% hint style="warning" %}
+**Want a generated prompt without the TC methodology?** Edit the generated prompt after creation and remove the TRANSLATOR COMMENT FORMAT section plus any TRANSLATION MANDATE language about silent correction. A per-project opt-out via a UI toggle may be added in a future version – open an issue if you'd like to see it.
+{% endhint %}
+
 ## Reviewing and refining the result
 
 The generated prompt appears in the prompt library tree and is loaded into the **Prompt Editor** automatically. You can:

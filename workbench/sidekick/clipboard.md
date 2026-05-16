@@ -6,10 +6,14 @@ The Clipboard Manager in Supervertaler Workbench captures everything you copy an
 
 | How | Shortcut |
 | --- | --- |
-| Open Clipboard from any application | **Ctrl+Alt+C** (⌘⌥C on macOS) |
-| Open Clipboard tab manually | Click **📋 Clipboard** in the Workbench tab bar |
+| Open Clipboard Manager from any application | **Ctrl+Alt+C** (⌘⌥C on macOS) |
+| Open Clipboard Manager tab manually | Click **📋 Clipboard Manager** in the Workbench tab bar |
 
-When you summon the Clipboard tab via **Ctrl+Alt+C** from another app (e.g. Trados), Workbench automatically sends Ctrl+C in the source app *before* opening the tab. So you don't need a separate "copy first" keystroke – the current selection lands at the top of the clipboard history the moment the tab opens.
+When you summon the Clipboard Manager via **Ctrl+Alt+C** from another app (e.g. Trados), Workbench automatically sends Ctrl+C in the source app *before* opening the tab. So you don't need a separate "copy first" keystroke – the current selection lands at the top of the clipboard history the moment the tab opens.
+
+{% hint style="info" %}
+The tab was renamed from "📋 Clipboard" to "📋 Clipboard Manager" in v1.10.47 to match what the widget actually does – it has been more than a clipboard history for several versions (Snippets, Text Conversions, QuickLauncher Prompts, plus the clipboard history columns).
+{% endhint %}
 
 ![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-Clipboard.png)
 
@@ -63,6 +67,12 @@ After pasting, the item is marked as used and appears greyed out. This makes it 
 ## The Menu column
 
 The third column gives you actions to apply to whatever's on the clipboard. Expand a category by clicking its arrow or pressing **Right** with the category focused.
+
+### 🔄 Refresh button
+
+The Menu column header has a small **🔄 Refresh** button on the right. Click it after editing any snippet `.md` file under `<user_data>/snippet_library/` (rename a snippet, change a snippet body, add a new snippet, delete one) or any QuickLauncher prompt `.md` file in the shared prompt library. Refresh rebuilds the entire Menu tree from disk in one click – before v1.10.47 there was no way to pick up external file edits short of restarting Workbench.
+
+Refresh reloads three sources: the unified prompt library (via `UnifiedPromptLibrary.load_all_prompts()`), the snippet library (re-scans `<user_data>/snippet_library/` with a fresh `SnippetLibrary` instance), and the Text Conversions table (in-code, but rebuilt for symmetry).
 
 ### 📌 Personal Snippets
 
