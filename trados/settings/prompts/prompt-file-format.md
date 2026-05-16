@@ -7,7 +7,6 @@ Prompts are stored as `.md` files (Markdown with YAML frontmatter). This is the 
 ```yaml
 ---
 type: prompt
-name: My Patent Prompt
 description: Patent and IP translation with strict terminology rules
 category: Translate
 ---
@@ -15,15 +14,25 @@ category: Translate
 You are an expert {{SOURCE_LANGUAGE}} to {{TARGET_LANGUAGE}} patent translator...
 ```
 
-| YAML field            | Description                                                                      |
-| --------------------- | -------------------------------------------------------------------------------- |
-| `type`                | Document type – always `prompt` for prompt files                                 |
-| `name`                | Display name shown in the prompt selector                                        |
-| `description`         | Optional summary                                                                 |
-| `category`            | `Translate`, `Proofread`, or `QuickLauncher` – controls where the prompt appears |
-| `quicklauncher_label` | Short label for the QuickLauncher menu (optional, falls back to `name`)          |
-| `default`             | `true` for shipped prompts (managed by the plugin)                               |
-| `sort_order`          | Numeric order within folder (lower values first). Set automatically by the ▲/▼ buttons. |
+The example file above would be saved as e.g. `My Patent Prompt.md` and would appear in the prompt tree as **My Patent Prompt**.
+
+### Naming: filename is authoritative
+
+The **on-disk filename** (without the `.md` extension) is the display name shown in the prompt selector. Renaming `My Patent Prompt.md` to `Client X – Patent EN.md` in Windows Explorer is all you need to do to change how the prompt appears in the tree – click **Refresh** in the Prompts tab to pick up the change.
+
+{% hint style="info" %}
+**The YAML `name:` field is ignored on read.** It used to be the authoritative display name, but that created a confusing split: renaming the file in Explorer didn't update the tree unless you also edited the YAML inside. Filename is now the single source of truth. Old prompts with a `name:` field in their YAML continue to load fine – the field is silently ignored, and is dropped from the file the next time the prompt is saved through the UI. No action required for existing prompts.
+{% endhint %}
+
+| YAML field            | Description                                                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `type`                | Document type – always `prompt` for prompt files                                                                         |
+| `description`         | Optional summary shown under the prompt name in the detail pane                                                          |
+| `category`            | `Translate`, `Proofread`, or `QuickLauncher` – controls where the prompt appears                                         |
+| `quicklauncher_label` | Short label for the QuickLauncher menu (optional, falls back to the filename)                                            |
+| `default`             | `true` for shipped prompts (managed by the plugin)                                                                       |
+| `sort_order`          | Numeric order within folder (lower values first). Set automatically by the ▲/▼ buttons.                                  |
+| `name`                | Ignored on read (legacy field, kept for backward compatibility). The filename is the display name.                       |
 
 {% hint style="info" %}
 Older prompts using the `domain` key instead of `category` are still supported for backward compatibility.

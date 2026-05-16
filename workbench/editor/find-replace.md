@@ -11,12 +11,32 @@ Supervertaler's Find & Replace feature helps you quickly find text and make cons
 - Press `Ctrl+F` or `Ctrl+H`
 - Or go to **Edit → Find & Replace**
 
+## Dialog layout
+
+The action buttons are grouped to make destructive actions visually distinct from non-destructive ones. Reading left to right:
+
+- **Find next | Find all | Highlight all | Clear highlights** – non-destructive: searching and highlighting only, no edits made.
+- A vertical separator marks the boundary.
+- **Replace this | Replace all** – destructive: these modify your translation. They appear with an **amber background** as a visual cue that clicking them changes the document.
+
+The Close button sits at the far right.
+
+### Keyboard shortcuts inside the dialog
+
+| Key | Where | Action |
+|---|---|---|
+| **Enter** | in the Find field | Triggers **Find next** |
+| **Enter** | in the Replace field | Triggers **Replace all** (the existing confirmation prompt still appears first) |
+| **Escape** | anywhere | Closes the dialog |
+
+The Enter-in-Replace shortcut is intentional: the Replace all confirmation dialog catches accidental presses, so pressing Enter never silently overwrites your translation.
+
 ## Basic Usage
 
 ### Finding Text
 
 1. Type your search term in the **Find** field
-2. Click **Find All** to see all matches
+2. Click **Find all** to see all matches, or press **Enter** for Find next
 3. Matches are highlighted in yellow in the grid
 4. The results counter shows how many matches were found
 
@@ -24,8 +44,9 @@ Supervertaler's Find & Replace feature helps you quickly find text and make cons
 
 1. Type your search term in the **Find** field
 2. Type your replacement in the **Replace** field
-3. Click **Replace All** to replace all occurrences
-4. A confirmation shows how many replacements were made
+3. Click the amber **Replace all** button, or press **Enter** while the Replace field has focus
+4. Confirm the replacement count when the dialog asks
+5. A confirmation shows how many replacements were made
 
 ## Search Options
 

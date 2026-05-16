@@ -78,6 +78,10 @@ When you are satisfied with the generated prompt:
 
 The prompt is saved to the **Translate** category in the Prompt Manager and immediately appears in the prompt dropdown on the Batch Operations tab.
 
+{% hint style="info" %}
+**Generated prompts are formatted in proper Markdown** – `##` headings for each major section, `-` bullet lists, `**bold**` for emphasised terms, and a Markdown table for the project-specific glossary. Open one in Obsidian, VS Code, GitHub, or any Markdown-aware viewer and it renders cleanly with a navigable outline. The prompt is also still a perfectly valid system prompt for the translator AI – the Markdown markup is structural, not output instruction.
+{% endhint %}
+
 #### What the Generated Prompt Contains
 
 A generated prompt follows the structure of professional translation prompts used by experienced translators. Depending on the domain, it typically includes:

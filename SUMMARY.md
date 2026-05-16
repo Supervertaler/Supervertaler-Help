@@ -103,6 +103,7 @@
 * [Batch Translation](workbench/ai-translation/batch-translation.md)
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
+* [AutoPrompt](workbench/ai-translation/autoprompt.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration
