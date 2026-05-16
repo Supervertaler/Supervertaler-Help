@@ -5,7 +5,7 @@
 ## 🧩 Get Started
 
 * [Supervertaler for Trados](trados/README.md)
-* [Installation](trados/installation.md)
+* [Installation (Trados)](trados/installation.md)
 * [Getting Started](trados/getting-started.md)
 * [Licensing & Pricing](trados/licensing.md)
 * [AI Cost Guide](trados/ai-cost-guide.md)
@@ -39,7 +39,7 @@
   * [Batch Translate](trados/batch-translate.md)
   * [AI Proofreader](trados/ai-proofreader.md)
   * [Clipboard Mode](trados/clipboard-mode.md)
-  * [AutoPrompt](trados/generate-prompt.md)
+  * [AutoPrompt (Trados)](trados/generate-prompt.md)
 
 ## 🧩 Terminology
 
@@ -63,7 +63,7 @@
 ## 🧩 Reference
 
 * [User Data Folder](trados/data-folder.md)
-* [Keyboard Shortcuts](trados/keyboard-shortcuts.md)
+* [Keyboard Shortcuts (Trados)](trados/keyboard-shortcuts.md)
 * [Troubleshooting](trados/troubleshooting.md)
 * [Support & Community](trados/support.md)
 * [Privacy Policy](trados/privacy.md)
@@ -71,7 +71,7 @@
 ## 🖥️ Get Started
 
 * [Supervertaler Workbench](workbench/README.md)
-* [Installation](workbench/get-started/installation.md)
+* [Installation (Workbench)](workbench/get-started/installation.md)
 * [Quick Start Guide](workbench/get-started/quick-start.md)
 * [Setting Up API Keys](workbench/get-started/api-keys.md)
 * [Your First Translation Project](workbench/get-started/first-project.md)
@@ -82,7 +82,7 @@
 * [Navigating Segments](workbench/editor/navigation.md)
 * [Editing & Confirming](workbench/editor/editing-confirming.md)
 * [Segment Statuses](workbench/editor/segment-statuses.md)
-* [Keyboard Shortcuts](workbench/editor/keyboard-shortcuts.md)
+* [Keyboard Shortcuts (Workbench)](workbench/editor/keyboard-shortcuts.md)
 * [Find & Replace](workbench/editor/find-replace.md)
 * [Filtering Segments](workbench/editor/filtering.md)
 * [Pagination](workbench/editor/pagination.md)
@@ -103,7 +103,7 @@
 * [Batch Translation](workbench/ai-translation/batch-translation.md)
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
-* [AutoPrompt](workbench/ai-translation/autoprompt.md)
+* [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration
@@ -164,7 +164,7 @@
 
 * [General Settings](workbench/settings/general.md)
 * [View Settings](workbench/settings/view.md)
-* [Keyboard Shortcuts](workbench/settings/shortcuts.md)
+* [Keyboard Shortcuts (Workbench)](workbench/settings/shortcuts.md)
 * [Theme (Light/Dark Mode)](workbench/settings/theme.md)
 * [Font Customization](workbench/settings/fonts.md)
 
