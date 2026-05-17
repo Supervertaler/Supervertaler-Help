@@ -2,8 +2,6 @@
 title: "Supervertaler Workbench"
 ---
 
-_Help system last updated: 13 May 2026 (for Workbench v1.10.19)_
-
 Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, open-source translation application built by translators, for translators.
 
 ![Supervertaler Workbench – term and non-translatables insert popup](https://supervertaler.com/screenshots/Supervertaler_v1.9.329_Term_and_NT_insert_popup.png)
