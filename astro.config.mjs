@@ -31,7 +31,11 @@ export default defineConfig({
         Head: './src/components/Head.astro',
         Search: './src/components/Search.astro',
         Sidebar: './src/components/Sidebar.astro',
+        SocialIcons: './src/components/SocialIcons.astro',
       },
+
+      // Theme tweaks (sidebar shading, etc.) — see src/styles/custom.css.
+      customCss: ['./src/styles/custom.css'],
 
       // Sidebar structure imported from ./src/generated/sidebar.js, which
       // is generated from SUMMARY.md by _migrate/generate_sidebar.py.

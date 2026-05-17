@@ -1,0 +1,37 @@
+/*
+ * Custom theme overrides for Supervertaler Help.
+ *
+ * Loaded via the `customCss` option in astro.config.mjs.
+ */
+
+/* ── Sidebar shading ─────────────────────────────────────────────────
+ *
+ * Starlight's default sidebar background matches the page background, so
+ * the nav has no visual separation from the article column.  GitBook
+ * tints the sidebar slightly so the eye reads it as a distinct region;
+ * we match that here using Starlight's own colour tokens (so the tint
+ * tracks light/dark mode automatically).
+ *
+ * Starlight wraps the sidebar in `.sidebar-pane`; the right-hand TOC
+ * (`.right-sidebar`) is intentionally left alone to keep its
+ * lightweight feel.
+ */
+.sidebar-pane {
+  background-color: var(--sl-color-gray-7, var(--sl-color-bg-nav));
+  border-inline-end: 1px solid var(--sl-color-hairline-shade);
+}
+
+/* Light-mode override: the gray-7 token is very dark in the default
+ * dark theme but doesn't exist as "near-white" in light mode, so set an
+ * explicit subtle tint. */
+:root[data-theme='light'] .sidebar-pane {
+  background-color: #f6f7f9;
+  border-inline-end-color: #e5e7eb;
+}
+
+/* Dark mode: a hair lighter than the page background so the panel
+ * reads as a slightly raised surface. */
+:root[data-theme='dark'] .sidebar-pane {
+  background-color: #1a1c20;
+  border-inline-end-color: #2a2d33;
+}
