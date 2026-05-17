@@ -2,6 +2,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+// Sidebar structure is generated from SUMMARY.md (the GitBook-canonical
+// nav) by _migrate/generate_sidebar.py.  Re-run that script whenever
+// SUMMARY.md changes; the JS output is committed so Cloudflare Pages
+// builds don't depend on Python.
+import sidebar from './src/generated/sidebar.js';
+
 // https://astro.build/config
 export default defineConfig({
   // Production URL for sitemap / canonical / OpenGraph tags.
@@ -14,28 +20,29 @@ export default defineConfig({
       description: 'Help and documentation for the Supervertaler suite — Trados Studio plugin and Workbench standalone app.',
 
       // Component overrides — see ./src/components/ for the customisations.
-      // Head: injects per-page Pagefind product filter metadata.
-      // Search: replaces the default Pagefind UI with a custom one that
-      //         scopes by current section and groups results by product.
+      // Head:    injects per-page Pagefind product filter metadata.
+      // Search:  replaces the default Pagefind UI with a custom one that
+      //          scopes by current section and groups results by product.
+      // Sidebar: hides the OTHER product's tree on a product page (so
+      //          /trados/* shows only Trados, /workbench/* shows only
+      //          Workbench).  Landing page and other non-product pages
+      //          still see both trees.
       components: {
         Head: './src/components/Head.astro',
         Search: './src/components/Search.astro',
+        Sidebar: './src/components/Sidebar.astro',
       },
 
-      // Two genuinely separate product trees in the sidebar.  Each product
-      // gets its own top-level group, auto-generated from the folder.  This
-      // is the first cut — restructure to mirror the SUMMARY.md sections
-      // in a later pass once the basic build is verified to work end to end.
-      sidebar: [
-        {
-          label: '🧩 Supervertaler for Trados',
-          autogenerate: { directory: 'trados' },
-        },
-        {
-          label: '🖥️ Supervertaler Workbench',
-          autogenerate: { directory: 'workbench' },
-        },
-      ],
+      // Sidebar structure imported from ./src/generated/sidebar.js, which
+      // is generated from SUMMARY.md by _migrate/generate_sidebar.py.
+      // Two top-level groups (🧩 Trados / 🖥️ Workbench), each with the
+      // original GitBook section grouping (Get Started, Features,
+      // Settings, Reference, etc.) and human-readable labels.
+      //
+      // The custom Sidebar override (./src/components/Sidebar.astro) hides
+      // the OTHER product's tree when the user is on a product page, so
+      // /trados/* shows only Trados and /workbench/* shows only Workbench.
+      sidebar,
 
       // Social / external links shown in the top-right of the header.
       social: [

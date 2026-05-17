@@ -1,0 +1,50 @@
+---
+/**
+ * Custom Sidebar override for Starlight.
+ *
+ * Hides the OTHER product's tree when the user is on a product page,
+ * so a Trados page shows only the Trados sidebar (and vice versa).
+ * On the landing page (or any page outside both product trees) both
+ * trees remain visible so the user can pick a product.
+ *
+ * This is the same UX pattern as Stripe / Notion / Vercel / Linear
+ * docs: each product gets its own focused navigation tree, and the
+ * "other" product is one click away via the landing page (the
+ * /trados/ ↔ /workbench/ switch is also discoverable from the in-app
+ * Help links in each product, which deep-link straight to the right
+ * section).
+ *
+ * Detection key: the URL path prefix.  /trados/* → Trados scope;
+ * /workbench/* → Workbench scope; anything else → both visible.
+ *
+ * The sidebar group labels are tagged with the product name (configured
+ * in astro.config.mjs), so the filter is a simple "does this top-level
+ * group's label contain the current product's name?" check.  Avoids any
+ * dependency on internal Starlight data structures.
+ */
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Sidebar.astro';
+
+const route = Astro.locals.starlightRoute;
+const id: string = route?.entry?.id ?? '';
+
+let currentProduct: 'Trados' | 'Workbench' | null = null;
+if (id === 'trados' || id.startsWith('trados/')) {
+  currentProduct = 'Trados';
+} else if (id === 'workbench' || id.startsWith('workbench/')) {
+  currentProduct = 'Workbench';
+}
+
+// Mutate the sidebar in-place on Astro.locals so the Default sidebar
+// component reads the filtered version.  This is safe because each
+// request gets its own `Astro.locals` object.
+if (currentProduct && route?.sidebar) {
+  const product = currentProduct;
+  route.sidebar = route.sidebar.filter((entry: any) => {
+    const label: string = entry?.label ?? '';
+    return label.includes(product);
+  });
+}
+---
+
+<Default {...Astro.props} />
