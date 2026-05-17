@@ -106,7 +106,7 @@ Regular chat messages include recent conversation history so the AI can follow y
 
 If a request is estimated to cost more than $0.50 in input tokens, a confirmation dialogue appears showing the estimated token count and cost. You can cancel before the expensive request is sent.
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 :::note
 **Keep an eye on the cost indicators.** Every AI response in the chat shows the estimated token count and cost. You can also review all prompts and their costs in the **Reports** tab.

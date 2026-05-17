@@ -12,7 +12,7 @@ Batch Translate lets you translate multiple segments at once using AI. It is loc
 The Batch Operations tab also supports **Proofread** mode for AI-powered quality checking. See [AI Proofreader](ai-proofreader.md) for details.
 :::
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Starting a Batch Translation
 

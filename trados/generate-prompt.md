@@ -8,7 +8,7 @@ You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio
 
 AutoPrompt uses AI to analyse your entire project and generate a comprehensive, domain-specific translation prompt tailored to your document. The generated prompt includes terminology rules, style guidelines, anti-truncation controls, and domain-specific instructions – ready to use with Batch Translate.
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 #### How It Works
 

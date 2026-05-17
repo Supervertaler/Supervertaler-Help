@@ -8,7 +8,7 @@ You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio
 
 The Term Picker is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when TermLens shows many matches and you want a quick overview without scrolling.
 
-<figure><img src="../../.gitbook/assets/Supervertaler-for-Trados-Term-Picker.png" alt=""><figcaption><p>Term Picker dialogue with all matched terms for the current segment</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Term-Picker.png" alt=""><figcaption><p>Term Picker dialogue with all matched terms for the current segment</p></figcaption></figure>
 
 ### Opening the Term Picker
 

@@ -26,7 +26,7 @@ There is nothing to configure. If your Trados project has MultiTerm termbases at
 
 Green chips behave like any other TermLens chip – click to insert, or use **Alt+1** through **Alt+9** to insert by number.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="/.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Read-Only
 

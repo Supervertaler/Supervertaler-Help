@@ -15,7 +15,7 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 3. Select a prompt from the list
 4. The prompt is filled in with the current segment context and submitted to the Supervertaler Assistant chat
 
-<figure><img src="../.gitbook/assets/Supervertaler-QuickLauncher.png" alt="The QuickLauncher context menu showing folder sections and prompt shortcuts"><figcaption><p>The QuickLauncher context menu with folder sections and keyboard shortcuts.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-QuickLauncher.png" alt="The QuickLauncher context menu showing folder sections and prompt shortcuts"><figcaption><p>The QuickLauncher context menu with folder sections and keyboard shortcuts.</p></figcaption></figure>
 
 :::note
 The menu heading **Supervertaler QuickLauncher** is clickable – click it to open **Settings → Prompts**, where you can view, edit, and organise your QuickLauncher prompts.
@@ -256,7 +256,7 @@ A common workflow: keep an ongoing project on claude.ai for the document you're 
 4. If both are ticked, pick which one should be the **Default** from the dropdown
 5. Click **Save**
 
-<figure><img src="../.gitbook/assets/Supervertaler-QuickLauncher-mode-row.png" alt="The Mode row in the Prompt Editor, showing Send to Assistant and Copy to clipboard checkboxes plus a Default dropdown"><figcaption><p>The Mode row in the Prompt Editor.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-QuickLauncher-mode-row.png" alt="The Mode row in the Prompt Editor, showing Send to Assistant and Copy to clipboard checkboxes plus a Default dropdown"><figcaption><p>The Mode row in the Prompt Editor.</p></figcaption></figure>
 
 #### How it appears in the menu
 

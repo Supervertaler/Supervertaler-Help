@@ -24,7 +24,7 @@ The [GitHub repository](https://github.com/Supervertaler/Supervertaler-for-Trado
 2. **Double-click** the downloaded `Supervertaler for Trados.sdlplugin` file
 3. The Trados Plugin Installer opens – select your Trados Studio version and choose an installation location:
 
-<figure><img src="../.gitbook/assets/Trados-plugin-installation-dialogue.png" alt="Trados Plugin Installer showing version selection and installation location options"><figcaption><p>The Trados Plugin Installer lets you choose which Trados version to install for and where to place the plugin.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Trados-plugin-installation-dialogue.png" alt="Trados Plugin Installer showing version selection and installation location options"><figcaption><p>The Trados Plugin Installer lets you choose which Trados version to install for and where to place the plugin.</p></figcaption></figure>
 
 4. Click **Next**, then **Finish** to complete the installation
 5. **Start Trados Studio** – the plugin loads automatically

@@ -11,7 +11,7 @@ SuperMemory is one of several [context sources](context-awareness.md) the assist
 
 Each memory bank is stored as interlinked Markdown files on disk – human-readable, portable, and future-proof. You can open and edit a bank in any text editor, version-control it with Git, and sync it between machines with Dropbox or OneDrive. [Obsidian](https://obsidian.md/) is optional but recommended: it gives you a visual knowledge graph, backlink navigation, and the Web Clipper browser extension for clipping web content directly into your bank. See [Obsidian Setup](super-memory/obsidian-setup.md) for installation instructions.
 
-<figure><img src="../../.gitbook/assets/Sv_SuperMemory-Graph.png" alt="Memory bank knowledge graph in Obsidian"><figcaption><p>A memory bank knowledge graph showing interconnected clients, terminology, and domain knowledge</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Sv_SuperMemory-Graph.png" alt="Memory bank knowledge graph in Obsidian"><figcaption><p>A memory bank knowledge graph showing interconnected clients, terminology, and domain knowledge</p></figcaption></figure>
 
 ## How knowledge is organised
 

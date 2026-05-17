@@ -19,7 +19,7 @@ When you summon the Clipboard Manager via **Ctrl+Alt+C** from another app (e.g. 
 The tab was renamed from "📋 Clipboard" to "📋 Clipboard Manager" in v1.10.47 to match what the widget actually does – it has been more than a clipboard history for several versions (Snippets, Text Conversions, QuickLauncher Prompts, plus the clipboard history columns).
 :::
 
-![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-Clipboard.png)
+![](/.gitbook/assets/Supervertaler-Workbench-Sidekick-Clipboard.png)
 
 ***
 

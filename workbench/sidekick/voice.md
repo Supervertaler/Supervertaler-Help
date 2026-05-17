@@ -10,7 +10,7 @@ You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-
 
 Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voice** entry, or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere on your computer.
 
-![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
+![](/.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
 
 ***
 
