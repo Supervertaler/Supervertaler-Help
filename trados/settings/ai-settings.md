@@ -2,10 +2,6 @@
 title: "Ai Settings"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Configure the AI provider, model, and context options used by the Supervertaler for Trados plugin.
 
 ## Accessing AI settings

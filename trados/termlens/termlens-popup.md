@@ -2,10 +2,6 @@
 title: "TermLens popup"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 The **TermLens popup** is a borderless floating version of the docked TermLens panel for the active segment. Designed for keyboard-only term selection on small screens – and for translators who want to insert terms without ever reaching for the mouse.
 
 <figure><img src="/.gitbook/assets/Supervertaler-for-Trados-TermLens-Popup.png" alt=""><figcaption><p>The TermLens popup with the current match highlighted (amber ring on the source word)</p></figcaption></figure>

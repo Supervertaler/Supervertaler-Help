@@ -2,10 +2,6 @@
 title: "Creating & Managing TMs"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Translation Memories (TMs) help you reuse past translations.
 
 ## Add or create a TM

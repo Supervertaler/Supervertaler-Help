@@ -2,10 +2,6 @@
 title: "Organising Prompts"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 The Prompt Manager tree mirrors the folder structure inside your `prompt_library` directory. You can:
 
 - **Create folders** – click **New Folder** in the toolbar

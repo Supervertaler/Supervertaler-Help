@@ -2,10 +2,6 @@
 title: "Overview"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Supervertaler Workbench includes four **companion surfaces** that sit alongside the translation grid: SuperLookup, Clipboard, Voice, and Chat. They cover the lookup-and-capture tasks you reach for dozens of times a day while translating – concordance searches, clipboard history, voice commands, AI conversation – without making you leave the editor or the app you're in.
 
 Three of them are top-level tabs in Workbench (next to Editor, TMs, Termbases, AI, Settings); the fourth, Chat, sits as a side panel next to the editor so you can keep an AI conversation visible while you translate.

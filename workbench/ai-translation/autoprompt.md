@@ -2,10 +2,6 @@
 title: "Autoprompt"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 AutoPrompt uses an LLM to analyse your current project and generate a comprehensive, project-specific translation prompt. The generated prompt embeds the document's domain, language pair, glossary, confirmed translations, detected source defects, terminology collisions, and preference cascades – ready to use as the **Custom Prompt** for AI translation.
 
 ## When to use it

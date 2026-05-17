@@ -2,10 +2,6 @@
 title: "File Attachments"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 The Supervertaler Assistant supports attaching both images and documents to your messages. Use the **paperclip button** next to the chat input, or drag and drop files directly onto the chat area.
 
 ## Images

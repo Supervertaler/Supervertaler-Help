@@ -2,10 +2,6 @@
 title: "Navigating Segments"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Supervertaler is designed for fast, memoQ-style navigation in the translation grid.
 
 ## Moving between segments

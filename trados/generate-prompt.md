@@ -2,10 +2,6 @@
 title: "AutoPrompt"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 AutoPrompt uses AI to analyse your entire project and generate a comprehensive, domain-specific translation prompt tailored to your document. The generated prompt includes terminology rules, style guidelines, anti-truncation controls, and domain-specific instructions – ready to use with Batch Translate.
 
 <figure><img src="/.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>

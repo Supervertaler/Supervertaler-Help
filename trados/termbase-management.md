@@ -2,10 +2,6 @@
 title: "Termbase Management"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Supervertaler for Trados uses the same SQLite termbase format as Supervertaler Workbench. You manage your termbases through the Settings dialogue.
 
 ## Accessing termbase settings

@@ -2,10 +2,6 @@
 title: "Incognito Mode"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Incognito Mode tells the AI to **anonymise all personal and project data** in its responses. When enabled, project names, file paths, TM names, user names, and other identifying information are automatically replaced with plausible placeholders -- so you can share your screen, record videos, or post screenshots without worrying about exposing confidential client data.
 
 🕵️ Think of it as a privacy filter for your AI chat.

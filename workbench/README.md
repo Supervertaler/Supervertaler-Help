@@ -2,10 +2,6 @@
 title: "Supervertaler Workbench"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 _Help system last updated: 13 May 2026 (for Workbench v1.10.19)_
 
 Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, open-source translation application built by translators, for translators.

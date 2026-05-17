@@ -2,10 +2,6 @@
 title: "Mt"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Machine translation is delivered by the **QuickTrans Popup** – an always-on-top popup window with translations from every enabled provider, summoned independently of the SuperLookup tab. See [QuickTrans Popup](../sidekick/quicktrans-popup.md) for the full reference.
 
 ## Opening QuickTrans

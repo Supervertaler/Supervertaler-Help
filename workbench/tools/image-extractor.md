@@ -2,10 +2,6 @@
 title: "Image Extractor (Superimage)"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 The Image Extractor pulls embedded images out of DOCX files and saves them as numbered PNG files. It also includes a built-in preview so you can quickly review what was extracted.
 
 ## Where to find it

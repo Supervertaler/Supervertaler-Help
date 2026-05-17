@@ -2,10 +2,6 @@
 title: "Pdf Rescue"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 ## Overview
 
 **PDF Rescue** is a specialised AI-powered OCR tool designed to extract clean, editable text from poorly formatted PDFs. Built into Supervertaler, it uses vision-capable LLM OCR to intelligently recognise text, formatting, redactions, stamps, and signatures–producing professional, translator-ready documents.

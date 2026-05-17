@@ -2,10 +2,6 @@
 title: "Backup"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Use the **Export Settings** and **Import Settings** buttons in the **Backup** tab of the Settings dialogue to back up and restore your Supervertaler configuration.
 
 ## Export

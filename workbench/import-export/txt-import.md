@@ -2,10 +2,6 @@
 title: "Importing Text Files"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Text import is the simplest workflow: **each line becomes one segment**.
 
 ## Import steps

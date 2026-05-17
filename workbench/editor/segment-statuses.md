@@ -2,10 +2,6 @@
 title: "Segment Statuses"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Every segment in Supervertaler carries two independent pieces of information:
 
 1. **Match origin** – how the translation got there (TM match, machine translation, manual typing)

@@ -2,10 +2,6 @@
 title: "The Translation Grid"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 The translation grid is where you spend most of your time: each row is a **segment** (usually a sentence or paragraph) with source and target text.
 
 ## Columns

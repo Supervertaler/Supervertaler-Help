@@ -2,10 +2,6 @@
 title: "Batch Translation"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Translate multiple segments at once with AI.
 
 ## Starting Batch Translation

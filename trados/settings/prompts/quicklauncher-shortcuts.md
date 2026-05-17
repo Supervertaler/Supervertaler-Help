@@ -2,10 +2,6 @@
 title: "Quicklauncher Shortcuts"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 ### Marking a prompt as a QuickLauncher shortcut
 
 To make a custom prompt appear in the QuickLauncher right-click menu (`Ctrl+Q`), set `category: QuickLauncher` in the YAML frontmatter:

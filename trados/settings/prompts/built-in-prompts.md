@@ -2,10 +2,6 @@
 title: "Built In Prompts"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 The plugin ships with default prompts organised into three categories:
 
 | Category          | Prompts                                                                                                                                                                      | Used in              |

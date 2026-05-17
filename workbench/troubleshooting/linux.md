@@ -2,10 +2,6 @@
 title: "Linux-Specific Issues"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Supervertaler is Linux compatible, but Windows is the primary development platform.
 
 ## Spellcheck dictionaries

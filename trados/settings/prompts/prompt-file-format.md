@@ -2,10 +2,6 @@
 title: "Prompt File Format"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Prompts are stored as `.md` files (Markdown with YAML frontmatter). This is the same format used by Supervertaler Workbench, so prompts are automatically shared between both applications via the shared `prompt_library` folder. Legacy `.svprompt` files are still loaded for backward compatibility.
 
 ```yaml

@@ -2,10 +2,6 @@
 title: "Prompt Library"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Supervertaler includes a Prompt Manager so you can create, organise, and reuse prompts across projects. It lives in the **AI** tab → **Prompt Manager** sub-tab.
 
 ## Common uses

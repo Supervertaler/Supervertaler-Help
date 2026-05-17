@@ -2,10 +2,6 @@
 title: "Term Extraction"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Term extraction helps you build a glossary from your project’s source text.
 
 ## Typical workflow

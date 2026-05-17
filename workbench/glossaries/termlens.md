@@ -2,10 +2,6 @@
 title: "TermLens"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 TermLens is Supervertaler's inline terminology display. It shows the source text of the current segment word by word, with glossary translations directly underneath each matched term.
 
 ## How it works

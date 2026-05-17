@@ -2,10 +2,6 @@
 title: "AI Cost Guide"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 This page explains how AI costs work in Supervertaler for Trados and how to keep them under control. It deliberately avoids quoting exact per-model prices – those change often, and Supervertaler already shows you the **real, current cost** of every operation in the **Reports** tab. For exact figures, see [Estimates vs actual cost](#estimates-vs-actual-cost) below.
 
 :::note

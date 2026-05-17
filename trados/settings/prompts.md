@@ -2,10 +2,6 @@
 title: "Prompts"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Prompts tell the AI how to behave. The Prompt Manager lets you browse built-in domain prompts, create your own, and mark prompts as QuickLauncher shortcuts.
 
 #### Accessing the Prompt Manager

@@ -2,10 +2,6 @@
 title: "TM Search (Concordance)"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Superlookup’s **TMs** tab lets you do fast concordance searches in your Translation Memories ("find where I translated this before").
 
 ## Open it

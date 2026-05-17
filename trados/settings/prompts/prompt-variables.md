@@ -2,10 +2,6 @@
 title: "Prompt Variables"
 ---
 
-:::note
-You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-:::
-
 Variables are placeholders in your prompt text that are automatically filled in at runtime. Use them to make prompts context-aware without rewriting them for every project or language pair.
 
 ### Language variables – all contexts

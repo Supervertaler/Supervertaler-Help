@@ -2,10 +2,6 @@
 title: "Theme"
 ---
 
-:::note
-You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-:::
-
 Supervertaler supports light and dark themes. Switch between them in **Settings → Theme** or via the toolbar theme toggle.
 
 ## Why use Dark Mode
