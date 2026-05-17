@@ -322,6 +322,10 @@ const sidebar = [
             "link": "/workbench/editor/segment-statuses/"
           },
           {
+            "label": "Comments",
+            "link": "/workbench/editor/comments/"
+          },
+          {
             "label": "Keyboard Shortcuts",
             "link": "/workbench/editor/keyboard-shortcuts/"
           },

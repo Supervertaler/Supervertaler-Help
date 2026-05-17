@@ -82,6 +82,7 @@
 * [Navigating Segments](workbench/editor/navigation.md)
 * [Editing & Confirming](workbench/editor/editing-confirming.md)
 * [Segment Statuses](workbench/editor/segment-statuses.md)
+* [Comments](workbench/editor/comments.md)
 * [Keyboard Shortcuts (Workbench)](workbench/editor/keyboard-shortcuts.md)
 * [Find & Replace](workbench/editor/find-replace.md)
 * [Filtering Segments](workbench/editor/filtering.md)
