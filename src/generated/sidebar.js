@@ -465,27 +465,27 @@ const sidebar = [
         "items": [
           {
             "label": "Termbase Basics",
-            "link": "/workbench/glossaries/basics/"
+            "link": "/workbench/termbases/basics/"
           },
           {
             "label": "Creating Termbases",
-            "link": "/workbench/glossaries/creating/"
+            "link": "/workbench/termbases/creating/"
           },
           {
             "label": "Importing Terms",
-            "link": "/workbench/glossaries/importing/"
+            "link": "/workbench/termbases/importing/"
           },
           {
             "label": "Term Highlighting",
-            "link": "/workbench/glossaries/highlighting/"
+            "link": "/workbench/termbases/highlighting/"
           },
           {
             "label": "TermLens (Inline Terminology)",
-            "link": "/workbench/glossaries/termlens/"
+            "link": "/workbench/termbases/termlens/"
           },
           {
             "label": "Term Extraction",
-            "link": "/workbench/glossaries/extraction/"
+            "link": "/workbench/termbases/extraction/"
           }
         ]
       },
@@ -533,7 +533,7 @@ const sidebar = [
           },
           {
             "label": "Termbase Search",
-            "link": "/workbench/superlookup/glossary-search/"
+            "link": "/workbench/superlookup/termbase-search/"
           },
           {
             "label": "Machine Translation",

@@ -1,0 +1,28 @@
+# Cloudflare Pages redirect rules.
+#
+# Format: <from> <to> <status>
+# See https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# ─── 2026-05-18: glossary → termbase URL migration ────────────────
+# The Workbench help pages moved from /workbench/glossaries/* and
+# /workbench/superlookup/glossary-search/ to /workbench/termbases/*
+# and /workbench/superlookup/termbase-search/ for terminology
+# consistency (the Workbench UI calls them termbases throughout,
+# and v1.10.62+ uses that term in every dialog and tooltip).
+#
+# 301 redirects so:
+#   - External backlinks to the old URLs (anywhere on the web)
+#     don't 404
+#   - In-app help links from older installed Workbench versions
+#     (modules/help_system.py's HelpTopics enum had the old paths
+#     baked in; updated in v1.10.76 but already-installed copies
+#     still ship the old strings) still land on the right page
+#   - Trados plugin v4.19.114 and earlier had no cross-product
+#     links to these specific Workbench help pages, but defensive
+#     here anyway
+#
+# Splat redirect covers all six files in the renamed folder in one
+# rule; explicit rule for the renamed file in superlookup/.
+
+/workbench/glossaries/*                  /workbench/termbases/:splat              301
+/workbench/superlookup/glossary-search/  /workbench/superlookup/termbase-search/  301

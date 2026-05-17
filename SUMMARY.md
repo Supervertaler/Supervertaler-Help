@@ -125,12 +125,12 @@
 
 ## 🖥️ Termbases
 
-* [Termbase Basics](workbench/glossaries/basics.md)
-* [Creating Termbases](workbench/glossaries/creating.md)
-* [Importing Terms](workbench/glossaries/importing.md)
-* [Term Highlighting](workbench/glossaries/highlighting.md)
-* [TermLens (Inline Terminology)](workbench/glossaries/termlens.md)
-* [Term Extraction](workbench/glossaries/extraction.md)
+* [Termbase Basics](workbench/termbases/basics.md)
+* [Creating Termbases](workbench/termbases/creating.md)
+* [Importing Terms](workbench/termbases/importing.md)
+* [Term Highlighting](workbench/termbases/highlighting.md)
+* [TermLens (Inline Terminology)](workbench/termbases/termlens.md)
+* [Term Extraction](workbench/termbases/extraction.md)
 
 ## 🖥️ Import & Export
 
@@ -145,7 +145,7 @@
 
 * [Superlookup Overview](workbench/superlookup/overview.md)
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
-* [Termbase Search](workbench/superlookup/glossary-search.md)
+* [Termbase Search](workbench/superlookup/termbase-search.md)
 * [Machine Translation](workbench/superlookup/mt.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
 

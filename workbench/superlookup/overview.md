@@ -69,6 +69,6 @@ Web resource tabs maintain login sessions between searches, so you stay logged i
 - [Companion Tabs Overview](../sidekick/overview.md)
 - [QuickTrans Popup](../sidekick/quicktrans-popup.md)
 - [TM Concordance Search](tm-search.md)
-- [Termbase Search](glossary-search.md)
+- [Termbase Search](termbase-search.md)
 - [Machine Translation](mt.md)
 - [Web Resources](web-resources.md)
