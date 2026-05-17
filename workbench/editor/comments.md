@@ -20,17 +20,17 @@ There are two kinds of segment comment:
 
 Both kinds coexist and you can have many of each on the same segment.
 
-### Adding a range-anchored comment (Ctrl+Shift+M)
+### Adding a range-anchored comment (Ctrl+M)
 
 1. Click into the source or target cell of a segment.
 2. Select the text the comment is about (e.g. `schroef`, `aangebracht`, or a multi-word phrase).
-3. Press **Ctrl+Shift+M**.
+3. Press **Ctrl+M**.
 4. A dialog opens showing which segment + which field (source or target) you're anchoring to, plus a snippet of your selection for confirmation. Type the comment, click **OK**.
 
 The anchored text immediately gets a soft amber background in the editor cell so you can see at a glance which words have comments attached. The new comment also appears in the all-comments list above (see below).
 
 :::tip
-**Ctrl+Shift+M** instead of Trados's **Ctrl+M** because Workbench's **Ctrl+M** is already bound to QuickTrans. The "Shift" naturally reads as "specialised version of the M action."
+**Ctrl+M** matches the convention in Trados Studio and memoQ. The QuickTrans popup uses a separate system-wide hotkey (**Ctrl+Alt+Q** on Windows/Linux, **⌘+Ctrl+Q** on macOS) that works inside Workbench and in any other application.
 :::
 
 ### Adding a segment-level (unanchored) comment
@@ -38,7 +38,7 @@ The anchored text immediately gets a soft amber background in the editor cell so
 Two ways:
 
 * **Via the bottom editor**: click into the segment, switch to the **💬 Comments → 📝 Segment** sub-tab (or press **Ctrl+N** to jump there with the editor focused), type your comment in the bottom area. Saved as you type. This works for the simple one-comment-per-segment case.
-* **Via Ctrl+Shift+M with no selection**: place the cursor in the source or target cell without selecting any text, press Ctrl+Shift+M. The comment is segment-level. Useful when you want to add a second comment to a segment without disturbing an existing one.
+* **Via Ctrl+M with no selection**: place the cursor in the source or target cell without selecting any text, press Ctrl+M. The comment is segment-level. Useful when you want to add a second comment to a segment without disturbing an existing one.
 
 ### The all-comments list
 
@@ -59,7 +59,7 @@ The list rebuilds itself in real time as you add, edit, or remove comments. The 
 
 The bottom editor is the legacy "one comment per segment" UI. It still works for the simple case (current segment has zero or one segment-level comment). When the current segment is more complex — multiple comments, or any anchored comment — the editor goes **read-only** with a placeholder pointing you to the all-comments list above. This prevents typing in the bottom editor from accidentally clobbering anchored or multi-line comment structures.
 
-In practice: simple segments use the bottom editor as before; segments with anchored or multiple comments use Ctrl+Shift+M and the right-click context menu via the all-list.
+In practice: simple segments use the bottom editor as before; segments with anchored or multiple comments use Ctrl+M and the right-click context menu via the all-list.
 
 ### Editor visual cue: amber background
 
@@ -104,8 +104,9 @@ Proofreading comments are **not** exported to the final document. They're a tran
 | Action | Shortcut / How |
 |---|---|
 | Focus the bottom comments editor (Segment sub-tab) | **Ctrl+N** |
-| Add a range-anchored comment to selected text | **Ctrl+Shift+M** with text selected |
-| Add a segment-level comment via dialog | **Ctrl+Shift+M** with no selection (cursor only) |
+| Add a range-anchored comment to selected text | **Ctrl+M** with text selected |
+| Add a segment-level comment via dialog | **Ctrl+M** with no selection (cursor only) |
+| QuickTrans popup (system-wide hotkey) | **Ctrl+Alt+Q** (Windows/Linux) / **⌘+Ctrl+Q** (macOS) |
 | Add a segment-level comment via inline editor | Click into the bottom editor and type |
 | Jump to a commented segment | Click its **Segment #N** header in the all-comments list |
 | Edit a specific comment | Right-click its header → **✏️ Edit comment…** |
