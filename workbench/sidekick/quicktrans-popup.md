@@ -79,7 +79,7 @@ Tick a provider, save, then trigger Ctrl+Alt+Q again – the popup picks up the 
 ## Tips
 
 * **Ctrl+Alt+Q is the fastest way to translate** – select text anywhere, press the shortcut, results appear instantly. The synthetic Ctrl+C happens internally, so you don't need to copy first.
-* **Use the 🔍 Run in SuperLookup hand-off** for terminology questions. QuickTrans is great for "how does this phrase translate?", SuperLookup is great for "have I translated this term before? what does it mean? is it in a glossary?".
+* **Use the 🔍 Run in SuperLookup hand-off** for terminology questions. QuickTrans is great for "how does this phrase translate?", SuperLookup is great for "have I translated this term before? what does it mean? is it in a termbase?".
 * **The popup lives on top of every other window**, so you can summon it from a browser, a PDF reader, your CAT tool, or anywhere – it overlays whatever's foreground.
 * **Different from Chat.** QuickTrans gives you N parallel translations from N providers; the Chat tab in Workbench's right panel is a conversational AI assistant. Use QuickTrans when you want options, Chat when you want a conversation.
 

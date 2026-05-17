@@ -7,7 +7,7 @@ The **Process Inbox** button in the Supervertaler Assistant toolbar reads raw Ma
 
 ## How to use
 
-1. Drop **Markdown notes** into the active memory bank's `00_INBOX/` folder: client briefs, glossaries, feedback notes, style guides, reference articles, or anything else you have written down as plain `.md` text.
+1. Drop **Markdown notes** into the active memory bank's `00_INBOX/` folder: client briefs, termbases, feedback notes, style guides, reference articles, or anything else you have written down as plain `.md` text.
 2. Open the **Supervertaler Assistant** panel and look for the SuperMemory toolbar below the context bar.
 3. The toolbar shows how many files are waiting in the active bank (e.g. "3 files in inbox").
 4. Click **Process Inbox**.
@@ -33,11 +33,11 @@ Obsidian plugin sidecar files (currently `.edtz`) are a special case: they are e
 
 | You have… | Use this |
 |---|---|
-| A Markdown brief, glossary, feedback note, or anything plain-text you wrote yourself | **Process Inbox** |
+| A Markdown brief, termbase, feedback note, or anything plain-text you wrote yourself | **Process Inbox** |
 | A `.tmx` translation memory | **Distill** |
 | A `.docx` style guide or client briefing | **Distill** |
 | A `.pdf` reference document | **Distill** |
-| A `.xlsx` / `.csv` glossary | **Distill** |
+| A `.xlsx` / `.csv` termbase | **Distill** |
 | A `.sdltb` MultiTerm termbase | **Distill** (right-click in TermLens settings → *Distill into memory bank*) |
 | A `.tbx` termbase | **Distill** |
 

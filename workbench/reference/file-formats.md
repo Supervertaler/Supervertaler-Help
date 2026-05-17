@@ -102,9 +102,9 @@ Features:
   - Generate change report
 ```
 
-### 2. Glossary Integration 📚
+### 2. Termbase Integration 📚
 
-**Concept:** Export segments as glossary entries
+**Concept:** Export segments as termbase entries
 
 ### 3. QA Workflow 🔍
 

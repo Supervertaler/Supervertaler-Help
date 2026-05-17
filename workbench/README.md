@@ -11,10 +11,10 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 - **Translate with AI** – GPT-4, Claude, Gemini, or local models via Ollama
 - **Work with CAT tools** – import/export files from memoQ, Trados, Phrase, CafeTran
 - **Translation Memory** – fuzzy matching, TMX import, concordance search
-- **Terminology** – glossaries, automatic term highlighting, TermLens
+- **Terminology** – termbases, automatic term highlighting, TermLens
 - **Companion tabs** – Chat (AI conversation), SuperLookup, Clipboard manager, Voice
 - **Voice** – always-on voice commands and push-to-talk dictation for any application
-- **SuperLookup** – system-wide translation lookup (TM, glossary, MT, web)
+- **SuperLookup** – system-wide translation lookup (TM, termbase, MT, web)
 - **QuickTrans Popup** – always-on-top popup with simultaneous translations from every enabled provider
 - **Quality Assurance** – spellcheck, tag validation, non-translatables
 

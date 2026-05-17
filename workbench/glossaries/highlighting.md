@@ -2,7 +2,7 @@
 title: "Term Highlighting"
 ---
 
-When a glossary is active, Supervertaler highlights matching terms in the grid.
+When a termbase is active, Supervertaler highlights matching terms in the grid.
 
 ## Why it helps
 
@@ -13,5 +13,5 @@ When a glossary is active, Supervertaler highlights matching terms in the grid.
 ## Tips
 
 - If the highlight is too strong or too subtle, adjust it in [View Settings](../settings/view.md).
-- Tag highlighting and glossary highlighting are separate: tags are for placeholders/formatting, glossaries are for terminology.
+- Tag highlighting and termbase highlighting are separate: tags are for placeholders/formatting, termbases are for terminology.
 - For a word-by-word terminology view with translations underneath each term, see [TermLens](termlens.md).

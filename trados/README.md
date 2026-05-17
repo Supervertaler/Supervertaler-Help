@@ -18,7 +18,7 @@ Supervertaler for Trados – Getting Started (16 min)
 
 #### TermLens (Inline Terminology)
 
-Live terminology display that shows the source text word by word, with glossary translations underneath each matched term. Colour-coded by termbase type:
+Live terminology display that shows the source text word by word, with termbase translations underneath each matched term. Colour-coded by termbase type:
 
 * **Blue** for regular termbase matches
 * **Pink** for project termbase matches (higher priority)

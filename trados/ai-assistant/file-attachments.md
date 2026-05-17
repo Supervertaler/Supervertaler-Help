@@ -18,7 +18,7 @@ Supported image formats: PNG, JPEG, GIF, WebP, BMP. Up to **5 images** per messa
 
 ## Documents
 
-Attach documents to provide the AI with additional reference material -- for example, a client style guide, a glossary in spreadsheet form, a reference PDF, or a translation memory export. The text content is automatically extracted from the document and included in your message as context.
+Attach documents to provide the AI with additional reference material -- for example, a client style guide, a termbase in spreadsheet form, a reference PDF, or a translation memory export. The text content is automatically extracted from the document and included in your message as context.
 
 | Method        | How                                                    |
 | ------------- | ------------------------------------------------------ |

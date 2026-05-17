@@ -1,13 +1,13 @@
 ---
-title: "Creating Glossaries"
+title: "Creating Termbases"
 ---
 
-Glossaries (termbases) help you enforce terminology consistently.
+Termbases help you enforce terminology consistently.
 
-## Create a glossary
+## Create a termbase
 
-1. Open **Project resources → Glossaries**
-2. Click **Create Glossary**
+1. Open **Project resources → Termbases**
+2. Click **Create Termbase**
 3. Give it a name and select languages
 
 ## Add terms while translating
@@ -15,9 +15,9 @@ Glossaries (termbases) help you enforce terminology consistently.
 You can build terminology as you work:
 
 - Select text in both Source and Target
-- Use **Add to Glossary** from the context menu
+- Use **Add to Termbase** from the context menu
 
 ## Tips
 
-- Use a separate glossary per client when terminology differs.
+- Use a separate termbase per client when terminology differs.
 - Add high-priority terms first (product names, UI strings).

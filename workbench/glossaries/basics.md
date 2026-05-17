@@ -1,12 +1,12 @@
 ---
-title: "Glossary Basics"
+title: "Termbase Basics"
 ---
 
-Glossaries (termbases) help ensure consistent terminology across your translations.
+Termbases help ensure consistent terminology across your translations.
 
-## What is a Glossary?
+## What is a Termbase?
 
-A glossary is a database of terms with their translations:
+A termbase is a database of terms with their translations:
 
 | Source (EN) | Target (NL) | Domain | Notes |
 |-------------|-------------|--------|-------|
@@ -14,25 +14,25 @@ A glossary is a database of terms with their translations:
 | click | klikken | IT | Verb |
 | machine learning | machinaal leren | AI | Official term |
 
-## Why Use Glossaries?
+## Why Use Termbases?
 
 1. **Consistency**: Same term = same translation every time
 2. **Efficiency**: Don't look up the same term twice
 3. **Quality**: Use approved terminology
 4. **Client requirements**: Follow style guides
 
-## Glossary Features in Supervertaler
+## Termbase Features in Supervertaler
 
 ### Automatic Highlighting
 
-Terms from active glossaries are highlighted in the source text:
+Terms from active termbases are highlighted in the source text:
 - Green background by default
 - Hover to see the translation
 - Higher priority = darker shade
 
-### Multiple Glossaries
+### Multiple Termbases
 
-Maintain separate glossaries for:
+Maintain separate termbases for:
 - Different clients
 - Different domains (legal, medical, IT)
 - Different projects
@@ -48,10 +48,10 @@ Assign priority (1-10) to terms:
 
 Mark terms as "forbidden" to flag text that should NOT be translated or should be avoided.
 
-## Creating Your First Glossary
+## Creating Your First Termbase
 
-1. Go to **Project resources → Glossaries**
-2. Click **+ Create Glossary**
+1. Go to **Project resources → Termbases**
+2. Click **+ Create Termbase**
 3. Enter a name (e.g., "Client ABC Terminology")
 4. Choose source and target languages
 5. Click **Create**
@@ -60,7 +60,7 @@ Mark terms as "forbidden" to flag text that should NOT be translated or should b
 
 ### Manually
 
-1. Click on your glossary
+1. Click on your termbase
 2. Click **+ Add Term**
 3. Enter source term, target term
 4. Optionally add domain, notes, priority
@@ -69,22 +69,22 @@ Mark terms as "forbidden" to flag text that should NOT be translated or should b
 ### From Selection
 
 1. Select text in the source column
-2. Right-click → **Add to Glossary**
+2. Right-click → **Add to Termbase**
 3. Enter the target translation
-4. Choose which glossary to add to
+4. Choose which termbase to add to
 
 ### Import from File
 
-1. Go to **Project resources → Glossaries**
+1. Go to **Project resources → Termbases**
 2. Click **Import**
 3. Select a TSV file (tab-separated: source, target, domain, notes)
 4. Watch the progress dialog
 
-## Glossary Settings
+## Termbase Settings
 
 ### Activation
 
-Glossaries must be activated to show matches:
+Termbases must be activated to show matches:
 - ✅ **Read**: Terms are highlighted and shown in lookups
 - ✅ **Write**: New terms can be added during translation
 
@@ -95,13 +95,13 @@ Choose how terms appear in the grid:
 - **Dotted Underline**: Subtle underline
 - **Semibold**: Bold text
 
-Go to **Settings → View Settings → Glossary Highlight Style**.
+Go to **Settings → View Settings → Termbase Highlight Style**.
 
 ---
 
 ## See Also
 
-- [Creating Glossaries](creating.md)
+- [Creating Termbases](creating.md)
 - [Importing Terms](importing.md)
 - [Term Highlighting](highlighting.md)
 - [TermLens (Inline Terminology)](termlens.md)

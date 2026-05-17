@@ -27,11 +27,11 @@ Search your Translation Memories for similar text:
 - Source TM column shows which TM the match came from
 - Search direction: Both, Source only, or Target only
 
-### Glossary Matches
+### Termbase Matches
 
-Search your termbases and glossaries:
+Search your termbases:
 - Shows Source, Target, Domain, Notes columns
-- Right-click to "Edit in Glossary"
+- Right-click to "Edit in Termbase"
 - Direction and language filters (Both / Source / Target + From/To)
 
 ### Machine Translation
@@ -69,6 +69,6 @@ Web resource tabs maintain login sessions between searches, so you stay logged i
 - [Companion Tabs Overview](../sidekick/overview.md)
 - [QuickTrans Popup](../sidekick/quicktrans-popup.md)
 - [TM Concordance Search](tm-search.md)
-- [Glossary Search](glossary-search.md)
+- [Termbase Search](glossary-search.md)
 - [Machine Translation](mt.md)
 - [Web Resources](web-resources.md)

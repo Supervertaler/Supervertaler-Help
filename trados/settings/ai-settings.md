@@ -176,7 +176,7 @@ Select which termbases are included in AI prompts. Terminology matches from enab
 For [AutoPrompt](../generate-prompt.md), **TermScan** automatically filters the termbase to only terms that appear in the document's source text, keeping the prompt focused and within token limits.
 
 :::caution
-**Only enable termbases you trust.** The AI will follow your glossary entries even when they are wrong. If a termbase contains inaccurate, outdated, or low-quality translations, the AI will be forced to use them – producing worse results than if no termbase were enabled at all. Modern LLMs are remarkably good at choosing correct terminology on their own. When in doubt, disable termbases and add terms incrementally as you review the AI's output.
+**Only enable termbases you trust.** The AI will follow your termbase entries even when they are wrong. If a termbase contains inaccurate, outdated, or low-quality translations, the AI will be forced to use them – producing worse results than if no termbase were enabled at all. Modern LLMs are remarkably good at choosing correct terminology on their own. When in doubt, disable termbases and add terms incrementally as you review the AI's output.
 :::
 
 ### AI context (mostly Chat and QuickLauncher)
@@ -235,7 +235,7 @@ These two toggles control whether [SuperMemory](../ai-assistant/super-memory.md)
 When enabled, the AI loads client profiles, domain knowledge, style guides, and terminology reasoning from the active memory bank before every translation and chat message. This gives the AI the _reasoning_ behind your terminology decisions, not just the terms themselves.
 
 :::caution
-**Off by default.** SuperMemory is a power-user feature that most translators should opt into deliberately. The simpler workflow – TermLens glossaries + the AI context options above – covers the majority of needs. Enable this toggle once you have a populated memory bank and want the AI to consult it.
+**Off by default.** SuperMemory is a power-user feature that most translators should opt into deliberately. The simpler workflow – TermLens termbases + the AI context options above – covers the majority of needs. Enable this toggle once you have a populated memory bank and want the AI to consult it.
 :::
 
 #### Use memory bank when generating prompts (AutoPrompt)

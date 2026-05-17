@@ -43,7 +43,7 @@ If you plan to reimport into a CAT tool, do not merge/split content across segme
 
 - **Tags** (CAT tool placeholders and formatting markers) are highlighted to make them hard to miss.
 - **Spellcheck** (if enabled) underlines misspelled target words.
-- **Glossary matches** can be highlighted in the source.
+- **Termbase matches** can be highlighted in the source.
 
 ## See also
 

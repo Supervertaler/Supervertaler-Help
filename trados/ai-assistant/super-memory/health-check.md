@@ -33,7 +33,7 @@ When Health Check finishes, a summary bubble always appears at the bottom of the
 :::caution
 **Important:** The AI can and will create, update, and reorganise files in the active memory bank when you run Health Check. To stay safe:
 
-* **Keep originals elsewhere.** Don't put your only copy of a glossary or style guide in a memory bank -- keep the original in its own folder.
+* **Keep originals elsewhere.** Don't put your only copy of a termbase or style guide in a memory bank -- keep the original in its own folder.
 * **Back up your memory banks regularly.** Copy the entire `memory-banks` folder to a backup location before running Health Check for the first time, and periodically after that. If something goes wrong, you can simply replace the bank folder with your backup.
 * **Review changes in Obsidian.** After running Health Check, open Obsidian and browse the recently modified files to verify the AI made sensible changes. Obsidian's search and graph view make this easy.
 :::

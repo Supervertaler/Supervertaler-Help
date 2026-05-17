@@ -12,8 +12,8 @@ description: "Extract knowledge from translation files using AI"
 | **Translation Memory** | `.tmx` | Terminology patterns, consistent style choices, domain-specific phrasing |
 | **MultiTerm termbase** | `.sdltb`, `.xml` | Term pairs with definitions, domains, usage notes |
 | **Word document** | `.docx` | Style rules, client preferences, formatting conventions, terminology |
-| **PDF** | `.pdf` | Style guides, reference material, glossaries, specifications |
-| **Excel / CSV** | `.xlsx`, `.csv`, `.tsv` | Glossaries, terminology lists, term pairs |
+| **PDF** | `.pdf` | Style guides, reference material, termbases, specifications |
+| **Excel / CSV** | `.xlsx`, `.csv`, `.tsv` | Termbases, terminology lists, term pairs |
 | **TBX termbase** | `.tbx` | Term entries with metadata |
 | **Plain text** | `.txt` | Notes, guidelines, reference material |
 
@@ -76,7 +76,7 @@ A 20-page Word document from a client might produce:
 ## Tips
 
 * **Start with your most important client.** Distill their largest TM first -- you'll immediately see the value as the AI surfaces terminology patterns you may not have been consciously aware of.
-* **Combine sources.** Select a client's TM, their style guide PDF, and their glossary Excel file together -- the AI cross-references them to produce richer articles.
+* **Combine sources.** Select a client's TM, their style guide PDF, and their termbase Excel file together -- the AI cross-references them to produce richer articles.
 * **Review before processing.** Distill outputs draft articles to the inbox, not directly to the knowledge base. Always review them in Obsidian before running Process Inbox.
 * **Large files are truncated.** Very large TMX files (100K+ segments) are automatically truncated to fit the AI's context window. For best results with huge TMs, export a representative subset first.
 

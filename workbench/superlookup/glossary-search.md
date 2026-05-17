@@ -1,8 +1,8 @@
 ---
-title: "Glossary Search"
+title: "Termbase Search"
 ---
 
-Superlookup’s **Glossaries** tab searches your Supervertaler glossaries (termbases) for preferred terminology.
+Superlookup’s **Termbases** tab searches your Supervertaler termbases for preferred terminology.
 
 ## Open it
 
@@ -15,7 +15,7 @@ Superlookup’s **Glossaries** tab searches your Supervertaler glossaries (termb
 2. Press `Enter` (or click **Search**).
 3. Optional filters:
 	- **Direction:** Both / Source / Target
-	- **From / To:** filter by glossary language pair (leave as **Any** to search across languages)
+	- **From / To:** filter by termbase language pair (leave as **Any** to search across languages)
 
 ## What you’ll see
 
@@ -23,7 +23,7 @@ Results are shown in a table with:
 
 - **Source**
 - **Target**
-- **Termbase** (glossary name)
+- **Termbase** (termbase name)
 - **Domain**
 - **Notes**
 
@@ -33,20 +33,20 @@ The current search term is highlighted in the results.
 
 - **Double-click** a row to copy the translation.
 - **Copy Translation** copies the selected target term.
-- **Add to Glossary** opens a dialog to add a new term pair (you’ll be prompted to pick a writable glossary).
+- **Add to Termbase** opens a dialog to add a new term pair (you’ll be prompted to pick a writable termbase).
 
-## Edit in Glossary (jump to the entry)
+## Edit in Termbase (jump to the entry)
 
 Right-click a result to open a context menu with:
 
-- **Edit in Glossary: …**
+- **Edit in Termbase: …**
 
-This navigates to **Project resources → Glossaries**, selects the glossary, and filters the terms list to the source term.
+This navigates to **Project resources → Termbases**, selects the termbase, and filters the terms list to the source term.
 
-## Glossary selection
+## Termbase selection
 
-In **Superlookup → Settings → Termbases**, you can pick which glossaries Superlookup searches.
+In **Superlookup → Settings → Termbases**, you can pick which termbases Superlookup searches.
 
 :::note
-If you don’t select any glossaries in the Superlookup Settings tab, Superlookup searches **all available** glossaries.
+If you don’t select any termbases in the Superlookup Settings tab, Superlookup searches **all available** termbases.
 :::

@@ -123,10 +123,10 @@
 * [Attaching a Trados TM (.sdltm)](workbench/translation-memory/trados-sdltm.md)
 * [Fuzzy Matching](workbench/translation-memory/fuzzy-matching.md)
 
-## 🖥️ Glossaries
+## 🖥️ Termbases
 
-* [Glossary Basics](workbench/glossaries/basics.md)
-* [Creating Glossaries](workbench/glossaries/creating.md)
+* [Termbase Basics](workbench/glossaries/basics.md)
+* [Creating Termbases](workbench/glossaries/creating.md)
 * [Importing Terms](workbench/glossaries/importing.md)
 * [Term Highlighting](workbench/glossaries/highlighting.md)
 * [TermLens (Inline Terminology)](workbench/glossaries/termlens.md)
@@ -145,7 +145,7 @@
 
 * [Superlookup Overview](workbench/superlookup/overview.md)
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
-* [Glossary Search](workbench/superlookup/glossary-search.md)
+* [Termbase Search](workbench/superlookup/glossary-search.md)
 * [Machine Translation](workbench/superlookup/mt.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
 

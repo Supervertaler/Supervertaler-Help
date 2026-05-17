@@ -12,7 +12,7 @@ Three of them are top-level tabs in Workbench (next to Editor, TMs, Termbases, A
 
 ### 🔍 SuperLookup
 
-Simultaneous search across your translation memories, glossaries, machine-translation engines, and web resources – all in one panel. Select text anywhere on your computer, press **Ctrl+Alt+L**, and Workbench's SuperLookup tab opens with the selected text pre-filled and the search auto-fired.
+Simultaneous search across your translation memories, termbases, machine-translation engines, and web resources – all in one panel. Select text anywhere on your computer, press **Ctrl+Alt+L**, and Workbench's SuperLookup tab opens with the selected text pre-filled and the search auto-fired.
 
 → [SuperLookup Overview](../superlookup/overview.md)
 

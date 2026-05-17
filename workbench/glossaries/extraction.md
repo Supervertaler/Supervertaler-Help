@@ -2,14 +2,14 @@
 title: "Term Extraction"
 ---
 
-Term extraction helps you build a glossary from your project’s source text.
+Term extraction helps you build a termbase from your project’s source text.
 
 ## Typical workflow
 
 1. Import your project
 2. Run term extraction
 3. Review suggested terms
-4. Add the important ones to your glossary
+4. Add the important ones to your termbase
 
 :::note
 Term extraction is a great first step for technical documents (product names, UI labels, recurring domain terms).

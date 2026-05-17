@@ -2,7 +2,7 @@
 title: "Autoprompt"
 ---
 
-AutoPrompt uses an LLM to analyse your current project and generate a comprehensive, project-specific translation prompt. The generated prompt embeds the document's domain, language pair, glossary, confirmed translations, detected source defects, terminology collisions, and preference cascades – ready to use as the **Custom Prompt** for AI translation.
+AutoPrompt uses an LLM to analyse your current project and generate a comprehensive, project-specific translation prompt. The generated prompt embeds the document's domain, language pair, termbase, confirmed translations, detected source defects, terminology collisions, and preference cascades – ready to use as the **Custom Prompt** for AI translation.
 
 ## When to use it
 
@@ -28,7 +28,7 @@ AutoPrompt gathers the following from your project and sends it to your configur
 | Data | Purpose |
 |---|---|
 | **Full source document** (up to 50,000 characters) | Domain detection, terminology extraction, defect detection, cascade detection, project-context summary |
-| **All termbase entries** | Locked glossary embedded in the generated prompt |
+| **All termbase entries** | Locked termbase embedded in the generated prompt |
 | **Confirmed segment translations** | Used as TM anchors – the highest-authority style and terminology reference, because they are decisions you have already made for this exact document |
 | **Translation Memory entries** (if attached) | Style anchors – the LLM matches the register and lexical choices of validated TM pairs |
 | **Language pair** | Embedded in the generated prompt |
@@ -83,7 +83,7 @@ If the source contains no legal-entity markers (BV, NV, GmbH, Ltd., Meester, not
 
 ## Output format
 
-Generated prompts are formatted as proper Markdown – `##` headings for each major section, `-` bullet lists, `**bold**` for emphasised terms, a Markdown table for the project-specific glossary, and `---` horizontal rules between major sections. Open one in Obsidian, VS Code, GitHub, or any Markdown-aware viewer and it renders cleanly with a navigable outline.
+Generated prompts are formatted as proper Markdown – `##` headings for each major section, `-` bullet lists, `**bold**` for emphasised terms, a Markdown table for the project-specific termbase, and `---` horizontal rules between major sections. Open one in Obsidian, VS Code, GitHub, or any Markdown-aware viewer and it renders cleanly with a navigable outline.
 
 The Markdown markup is structural – it does not change what the translator AI does at translation time. The generated prompt's inner OUTPUT FORMAT rule still says "translation only, no markdown formatting in the translation output", so per-segment AI translations remain plain target text.
 
@@ -117,13 +117,13 @@ The generated prompt appears in the prompt library tree and is loaded into the *
 
 - **Read through the prompt** to verify it matches your project's actual needs.
 - **Edit any section** directly in the editor – the generated prompt is just a regular `.md` file in your prompt library.
-- **Use AutoPrompt as a starting point** – the goal is to give you a high-quality first draft, not the final word. Adjust glossary entries, add client-specific quirks, tighten the register guidance.
+- **Use AutoPrompt as a starting point** – the goal is to give you a high-quality first draft, not the final word. Adjust termbase entries, add client-specific quirks, tighten the register guidance.
 - **Re-run AutoPrompt later** if the project grows (more confirmed segments, more termbase entries) – each run is independent, so a later run produces a fresh prompt that reflects the project's current state.
 
 ## Tips and limitations
 
 - **AutoPrompt cost scales with document size.** For very large projects (hundreds of thousands of words) the per-run cost can become significant. Consider running AutoPrompt against a representative subset rather than the full project for very large jobs.
-- **Termbase quality matters.** If you have an attached termbase that contains generic technical words ("system", "board", "installation") that match almost any document, AutoPrompt will include those entries in the locked glossary and force the AI to follow them. Disable irrelevant termbases before running AutoPrompt.
+- **Termbase quality matters.** If you have an attached termbase that contains generic technical words ("system", "board", "installation") that match almost any document, AutoPrompt will include those entries in the locked termbase and force the AI to follow them. Disable irrelevant termbases before running AutoPrompt.
 - **AutoPrompt does not guess.** If a pre-generation pass finds nothing in the source (no collisions for this domain / language combination, no defects, no cascades), the corresponding section is omitted from the generated prompt rather than padded with hypothetical examples. Hypothetical examples are worse than nothing.
 - **AutoPrompt and Supervertaler for Trados share the same prompt library folder.** A prompt generated in Workbench is immediately visible in the Trados plugin and vice versa.
 

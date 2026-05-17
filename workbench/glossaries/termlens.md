@@ -2,18 +2,18 @@
 title: "TermLens"
 ---
 
-TermLens is Supervertaler's inline terminology display. It shows the source text of the current segment word by word, with glossary translations directly underneath each matched term.
+TermLens is Supervertaler's inline terminology display. It shows the source text of the current segment word by word, with termbase translations directly underneath each matched term.
 
 ## How it works
 
-When you select a segment, TermLens analyses the source text against all active glossaries and displays the result in a visual layout:
+When you select a segment, TermLens analyses the source text against all active termbases and displays the result in a visual layout:
 
-- **Matched words** appear with their glossary translation underneath
+- **Matched words** appear with their termbase translation underneath
 - **Unmatched words** are shown in light text so you can read the full source sentence in context
-- **Project glossary** matches appear in pink; **Background glossary** matches appear in blue
+- **Project termbase** matches appear in pink; **Background termbase** matches appear in blue
 - **Non-translatable** terms (if configured) are shown in a distinct style
 
-This gives you an at-a-glance overview of every term in the segment that has a glossary entry – without having to hover or click anything.
+This gives you an at-a-glance overview of every term in the segment that has a termbase entry – without having to hover or click anything.
 
 ## Where to find it
 
@@ -26,7 +26,7 @@ Both instances update simultaneously when you navigate to a new segment.
 
 ## Inserting terms
 
-You can insert a glossary translation from TermLens into your target text in three ways:
+You can insert a termbase translation from TermLens into your target text in three ways:
 
 ### Click to insert
 
@@ -44,8 +44,8 @@ Each matched term in TermLens is assigned a numbered badge. Press **Alt+1** to i
 
 Right-click a term in TermLens to:
 - **Insert** the translation
-- **Edit** the glossary entry
-- **Delete** the glossary entry
+- **Edit** the termbase entry
+- **Delete** the termbase entry
 
 ## Font settings
 
@@ -58,8 +58,8 @@ You can customise the TermLens font independently from the grid font:
 ## Tips
 
 - Press **F5** to force a refresh if matches appear to be missing.
-- TermLens respects glossary activation – only terms from activated glossaries are shown.
-- If you have many glossaries, designate one as the **Project glossary** (shown in pink) to make its terms stand out.
+- TermLens respects termbase activation – only terms from activated termbases are shown.
+- If you have many termbases, designate one as the **Project termbase** (shown in pink) to make its terms stand out.
 
 ## TermLens for Trados
 
@@ -71,6 +71,6 @@ A standalone version of TermLens is also available as a plugin for **Trados Stud
 
 ## See Also
 
-- [Glossary Basics](basics.md)
+- [Termbase Basics](basics.md)
 - [Term Highlighting](highlighting.md)
 - [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)

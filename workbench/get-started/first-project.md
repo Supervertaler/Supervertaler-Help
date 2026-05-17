@@ -77,11 +77,11 @@ After import, you'll see:
 3. Click **+ Create TM** or **Import TMX**
 4. Your TM will automatically provide matches
 
-### Add a Glossary
+### Add a Termbase
 
 1. Go to **Project resources** tab
-2. Click **Glossaries**
-3. Click **+ Create Glossary**
+2. Click **Termbases**
+3. Click **+ Create Termbase**
 4. Add terms manually or import from TSV
 
 ## Saving Your Project
@@ -111,7 +111,7 @@ When you're finished:
 ```
 Import Document
       ↓
-Set Up TMs & Glossaries (optional)
+Set Up TMs & Termbases (optional)
       ↓
 Translate Segments (manual or AI)
       ↓

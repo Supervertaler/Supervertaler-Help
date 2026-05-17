@@ -2,7 +2,7 @@
 title: "TermLens"
 ---
 
-TermLens is an inline terminology display that shows the source text of the current segment word by word, with glossary translations directly underneath each matched term. It updates automatically when you navigate to a new segment.
+TermLens is an inline terminology display that shows the source text of the current segment word by word, with termbase translations directly underneath each matched term. It updates automatically when you navigate to a new segment.
 
 <figure><img src="/.gitbook/assets/Sv_TermLens.png" alt=""><figcaption></figcaption></figure>
 
@@ -10,7 +10,7 @@ TermLens is an inline terminology display that shows the source text of the curr
 
 When you select a segment in the Trados editor, TermLens analyses the source text against all active termbases and displays the result in a visual layout:
 
-* **Matched words** appear with their glossary translation underneath, on a coloured background
+* **Matched words** appear with their termbase translation underneath, on a coloured background
 * **Unmatched words** are shown in light grey text so you can read the full source sentence in context
 
 This gives you an at-a-glance overview of every term in the segment that has a termbase entry – without hovering or clicking anything.

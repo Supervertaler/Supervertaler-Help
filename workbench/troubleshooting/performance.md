@@ -8,7 +8,7 @@ Supervertaler is designed to stay responsive on large projects, but performance 
 
 - Enable [Pagination](../editor/pagination.md) for very large projects
 - Use a smaller **segments per page** setting (for example 50)
-- Keep only the needed TMs and glossaries enabled
+- Keep only the needed TMs and termbases enabled
 - If semantic search is enabled, allow indexing to complete
 
 ## Quick wins when it feels slow

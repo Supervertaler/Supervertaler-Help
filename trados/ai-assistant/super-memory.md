@@ -19,7 +19,7 @@ Every memory bank has the same seven-folder skeleton. The skeleton is created au
 
 | Folder           | Contents                                                                                              |
 | ---------------- | ----------------------------------------------------------------------------------------------------- |
-| `00_INBOX`       | Raw material – drop zone for unprocessed briefs, feedback notes, glossaries, reference articles       |
+| `00_INBOX`       | Raw material – drop zone for unprocessed briefs, feedback notes, termbases, reference articles       |
 | `01_CLIENTS`     | Client profiles: language preferences, style rules, terminology decisions, project history            |
 | `02_TERMINOLOGY` | Term articles with approved translations, rejected alternatives, and the reasoning behind each choice |
 | `03_DOMAINS`     | Domain-specific conventions and common pitfalls (legal, medical, technical, marketing, financial)     |
@@ -102,8 +102,8 @@ The shared folder also means you can keep your memory banks in a cloud-synced lo
 
 Once a bank exists, you fill it with knowledge in one of several ways:
 
-1. **Drop Markdown notes into `00_INBOX`** – client briefs, glossaries, feedback notes, style guides, reference articles you have written down as `.md` files. These are compiled by Process Inbox.
-2. **Use** [**Distill**](super-memory/distill.md) for everything that is **not** plain Markdown – TMX translation memories, DOCX style guides, PDF reference documents, XLSX/CSV glossaries, MultiTerm termbases. Distill reads each file and writes draft Markdown articles into `00_INBOX/`, ready for Process Inbox to compile.
+1. **Drop Markdown notes into `00_INBOX`** – client briefs, termbases, feedback notes, style guides, reference articles you have written down as `.md` files. These are compiled by Process Inbox.
+2. **Use** [**Distill**](super-memory/distill.md) for everything that is **not** plain Markdown – TMX translation memories, DOCX style guides, PDF reference documents, XLSX/CSV termbases, MultiTerm termbases. Distill reads each file and writes draft Markdown articles into `00_INBOX/`, ready for Process Inbox to compile.
 3. **Use** [**Quick Add**](super-memory/quick-add.md) (Ctrl+Alt+M) to capture a terminology decision or correction while translating. Quick Add appends a short note to the inbox so you can keep working without context-switching.
 4. **Run** [**Process Inbox**](super-memory/process-inbox.md) periodically. The AI reads every Markdown file in `00_INBOX` and files it into `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, or `04_STYLE` as structured articles, interlinked with backlinks.
 5. **Run** [**Health Check**](super-memory/health-check.md) when the bank starts to feel stale. It scans for conflicting terminology, broken links, stale content, and missing cross-references – and heals what it can.

@@ -2,11 +2,11 @@
 title: "Importing Terms"
 ---
 
-You can import terminology from common formats such as TSV/CSV (and other supported glossary exports).
+You can import terminology from common formats such as TSV/CSV (and other supported termbase exports).
 
 ## Import steps
 
-1. Open **Project resources → Glossaries**
+1. Open **Project resources → Termbases**
 2. Choose **Import**
 3. Select your file
 
@@ -16,5 +16,5 @@ You can import terminology from common formats such as TSV/CSV (and other suppor
 - Import before batch translation so AI can follow your terminology.
 
 :::note
-If you don’t see terms highlighting in the grid, ensure the glossary is enabled (Read/active) in Project resources.
+If you don’t see terms highlighting in the grid, ensure the termbase is enabled (Read/active) in Project resources.
 :::

@@ -64,7 +64,7 @@ pip3 install supervertaler
 supervertaler
 ```
 
-If you skip the Java step, Supervertaler shows a friendly dialog at startup with the install command. Plain-text translation, TMX, glossaries, etc. all work without Java – only office-document import/export needs it.
+If you skip the Java step, Supervertaler shows a friendly dialog at startup with the install command. Plain-text translation, TMX, termbases, etc. all work without Java – only office-document import/export needs it.
 
 On first DOCX import, Supervertaler downloads the Okapi sidecar JAR (~28 MB) into `~/Library/Application Support/Supervertaler/okapi-sidecar/`. After that, everything runs locally and offline.
 

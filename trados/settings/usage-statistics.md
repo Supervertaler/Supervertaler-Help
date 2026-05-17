@@ -22,7 +22,7 @@ Supervertaler for Trados sends one anonymous, lightweight ping to the developer 
 #### What is NOT collected
 
 * No translation content
-* No termbase or glossary data
+* No termbase data
 * No file names or project names
 * No personal information (name, email, etc.)
 * No information about which features you use or how often

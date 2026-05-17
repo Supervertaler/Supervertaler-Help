@@ -55,7 +55,7 @@ You can import terminology from a tab-separated values file:
 2. Click **Import from TSV**
 3. Select your `.tsv` file
 4. A confirmation dialog shows the filename, row count, termbase name, and language pair -- check that you are importing into the right termbase
-5. A progress bar tracks the import (useful for large glossaries with thousands of terms)
+5. A progress bar tracks the import (useful for large termbases with thousands of terms)
 
 **File format:**
 
@@ -161,4 +161,4 @@ The AI analyses all terms in the termbase and creates structured articles (termi
 - [TermLens Settings](settings/termlens.md)
 - [Adding & Editing Terms](termlens/adding-terms.md)
 - [Distill](ai-assistant/super-memory/distill.md)
-- [Glossary Basics (Workbench)](https://supervertaler.gitbook.io/supervertaler/glossaries/basics)
+- [Termbase Basics (Workbench)](https://supervertaler.gitbook.io/supervertaler/glossaries/basics)
