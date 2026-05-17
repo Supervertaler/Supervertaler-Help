@@ -69,5 +69,5 @@ The Term Picker shows the same matches as TermLens, but in a flat list format th
 ### See Also
 
 * [Adding & Editing Terms](adding-terms.md)
-* [TermLens (Workbench)](https://supervertaler.gitbook.io/supervertaler/glossaries/termlens)
+* [TermLens (Workbench)](https://help.supervertaler.com/workbench/glossaries/termlens/)
 * [Termbase Management](../termbase-management.md)

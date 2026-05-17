@@ -460,15 +460,15 @@ const sidebar = [
         ]
       },
       {
-        "label": "Glossaries",
+        "label": "Termbases",
         "collapsed": true,
         "items": [
           {
-            "label": "Glossary Basics",
+            "label": "Termbase Basics",
             "link": "/workbench/glossaries/basics/"
           },
           {
-            "label": "Creating Glossaries",
+            "label": "Creating Termbases",
             "link": "/workbench/glossaries/creating/"
           },
           {
@@ -532,7 +532,7 @@ const sidebar = [
             "link": "/workbench/superlookup/tm-search/"
           },
           {
-            "label": "Glossary Search",
+            "label": "Termbase Search",
             "link": "/workbench/superlookup/glossary-search/"
           },
           {
