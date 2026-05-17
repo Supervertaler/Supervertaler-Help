@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Clipboard"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 The Clipboard Manager in Supervertaler Workbench captures everything you copy and keeps a persistent history that survives application restarts. Click any item to paste it; trigger a snippet or text conversion to paste the transformed result back to whichever app you came from.
 
@@ -11,9 +15,9 @@ The Clipboard Manager in Supervertaler Workbench captures everything you copy an
 
 When you summon the Clipboard Manager via **Ctrl+Alt+C** from another app (e.g. Trados), Workbench automatically sends Ctrl+C in the source app *before* opening the tab. So you don't need a separate "copy first" keystroke – the current selection lands at the top of the clipboard history the moment the tab opens.
 
-{% hint style="info" %}
+:::note
 The tab was renamed from "📋 Clipboard" to "📋 Clipboard Manager" in v1.10.47 to match what the widget actually does – it has been more than a clipboard history for several versions (Snippets, Text Conversions, QuickLauncher Prompts, plus the clipboard history columns).
-{% endhint %}
+:::
 
 ![](../../.gitbook/assets/Supervertaler-Workbench-Sidekick-Clipboard.png)
 
@@ -60,9 +64,9 @@ Click any item in the Text or Images list to paste it. What happens:
 
 After pasting, the item is marked as used and appears greyed out. This makes it easy to track which clips you have already inserted in a session.
 
-{% hint style="info" %}
+:::note
 **Latest clip is highlighted on open.** Every time you switch to the Clipboard tab, the most recent text clip (top of the list) is selected automatically – press **Enter** to paste it without touching the mouse. If you'd rather paste an older clip, arrow up/down to it first.
-{% endhint %}
+:::
 
 ## The Menu column
 

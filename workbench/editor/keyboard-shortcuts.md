@@ -1,8 +1,10 @@
-# Keyboard Shortcuts
+---
+title: "Keyboard Shortcuts"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Master these shortcuts to work faster in Supervertaler.
 
@@ -94,9 +96,9 @@ Master these shortcuts to work faster in Supervertaler.
 
 You can view and customize shortcuts in **Settings → Keyboard Shortcuts**.
 
-{% hint style="info" %}
+:::note
 Some shortcuts match memoQ conventions (like `Ctrl+Enter` to confirm) to help translators who switch between tools.
-{% endhint %}
+:::
 
 ## Tips
 

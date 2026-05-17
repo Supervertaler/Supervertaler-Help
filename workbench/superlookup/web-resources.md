@@ -1,8 +1,10 @@
-# Web Resources
+---
+title: "Web Resources"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Superlookup’s **Web Resources** tab gives you a one-click sidebar of reference sites for terminology and research.
 
@@ -19,9 +21,9 @@ In the left sidebar you can choose a mode:
 	- Uses a persistent browser profile so logins/cookies are kept between sessions.
 - **External:** opens your default browser.
 
-{% hint style="info" %}
+:::note
 When Embedded mode is available, Superlookup can pre-load searches for all resources at once.
-{% endhint %}
+:::
 
 ## Search options
 

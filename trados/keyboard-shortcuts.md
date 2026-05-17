@@ -1,20 +1,24 @@
-{% hint style="info" %}
+---
+title: "Keyboard Shortcuts"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 All keyboard shortcuts available in Supervertaler for Trados, with Mac equivalents for users running Trados in Parallels.
 
-{% hint style="info" %}
+:::note
 **Mac users (Parallels):** Ctrl = Control, Alt = Option on Mac keyboards. Check **Parallels → Preferences → Shortcuts** if your modifier key mapping differs.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Trados conflict with Ctrl+Alt+T:** Trados Studio assigns this shortcut to "Insert TM Symbol" by default. If Ctrl+Alt+T does nothing, go to **File → Options → Keyboard Shortcuts**, search for "Insert TM Symbol", and remove or reassign its shortcut to free up Ctrl+Alt+T for Supervertaler.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Trados conflict with Ctrl+Q:** Trados Studio assigns Ctrl+Q to "View Internally Source" by default. This action is rarely used. To free up Ctrl+Q for the QuickLauncher, go to **File → Options → Keyboard Shortcuts**, search for "View Internally Source", and remove or reassign its shortcut.
-{% endhint %}
+:::
 
 ## Terminology
 
@@ -43,9 +47,9 @@ All keyboard shortcuts available in Supervertaler for Trados, with Mac equivalen
 | `Ctrl+Alt+1` ... `Ctrl+Alt+9` | `Control+Option+1` ... `Control+Option+9` | Run QuickLauncher prompt assigned to slot 1–9 |
 | `Ctrl+Alt+0` | `Control+Option+0` | Run QuickLauncher prompt assigned to slot 10 |
 
-{% hint style="info" %}
+:::note
 Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prompt and choose a shortcut from the dropdown in the detail pane. If no slots are assigned, the shortcuts default to menu position order.
-{% endhint %}
+:::
 
 ## SuperMemory
 
@@ -95,13 +99,13 @@ Press the **same digit key** multiple times. Each badge shows the repeated digit
 | 4x | `Alt+1111` ... `Alt+9999` | `Option+1111` ... `Option+9999` | **1111** – **9999** | 28–36 |
 | 5x | `Alt+11111` ... `Alt+99999` | `Option+11111` ... `Option+99999` | **11111** – **99999** | 37–45 |
 
-{% hint style="info" %}
+:::note
 In both modes, when a segment has 9 or fewer matches, pressing Alt+N inserts immediately with no delay.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (tap `Ctrl`) or the **Term Picker** dialogue (`Ctrl+Shift+P`) to insert them.
-{% endhint %}
+:::
 
 ---
 

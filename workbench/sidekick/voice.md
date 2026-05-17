@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Voice"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 **Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
 
@@ -80,9 +84,9 @@ Click **+ Add** above the table. Choose a command type:
 
 The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below the Action field that updates with the Type dropdown – it explains the press-to-capture editor for Keystroke commands, lists common AHK patterns for AutoHotkey Code, names the available internal actions, etc. So you don't need to memorise the full reference up front.
 
-{% hint style="info" %}
+:::note
 **Keystroke commands are cross-platform.** A command captured as **Ctrl+S** on Windows is stored in Qt's portable format and fires **⌘S** automatically on macOS – the macOS dispatcher swaps Ctrl ↔ Cmd internally to match what every Mac app does. So you can build your command list once and it works on whichever machine Supervertaler is running on. Under the hood, Windows uses `SendInput` (compatible with WPF apps like Trados Studio) and macOS uses AppleScript via `osascript`.
-{% endhint %}
+:::
 
 ### Removing a command
 

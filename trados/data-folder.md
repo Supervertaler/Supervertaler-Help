@@ -1,4 +1,6 @@
-# User Data Folder
+---
+title: "User Data Folder"
+---
 
 Supervertaler for Trados shares a user data folder with [Supervertaler Workbench](https://supervertaler.com/workbench). This allows both programs to access the same termbases, translation memories, and prompt library without duplicating files.
 

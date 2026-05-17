@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Providers"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The Supervertaler Assistant supports multiple AI providers. You only need one to get started.
 
@@ -25,11 +29,11 @@ The current provider and model are shown in the status area at the bottom of the
 | **Ollama** | TranslateGemma, Qwen 3, Aya Expanse (local, no API key needed) |
 | **Custom** | Any OpenAI-compatible API endpoint |
 
-{% hint style="info" %}
+:::note
 If you want privacy or offline use, try **Ollama** with a local model. No API key or internet connection needed.
 
 If you prefer a single account that covers many providers, **OpenRouter** gives you access to 200+ models with one key.
-{% endhint %}
+:::
 
 ## Choosing a Model
 

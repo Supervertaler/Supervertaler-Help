@@ -1,8 +1,10 @@
-# Find & Replace
+---
+title: "Find & Replace"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler's Find & Replace feature helps you quickly find text and make consistent changes across your translation.
 
@@ -146,10 +148,10 @@ Clean up common MT artifacts:
 
 ## Tips
 
-{% hint style="success" %}
+:::tip
 **Pro Tip:** Use regex mode for complex patterns. For example, `\s+` matches any whitespace to clean up extra spaces.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 **Undo Support:** All replacements can be undone with `Ctrl+Z` (within the same session).
-{% endhint %}
+:::

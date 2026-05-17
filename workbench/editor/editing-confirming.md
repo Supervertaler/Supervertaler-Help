@@ -1,8 +1,10 @@
-# Editing & Confirming
+---
+title: "Editing & Confirming"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Translate by editing the **Target** column in the grid.
 
@@ -32,9 +34,9 @@ Typical workflow:
 
 You can also confirm by setting the segment **Status** dropdown to a confirmed status.
 
-{% hint style="info" %}
+:::note
 If you plan to reimport into a CAT tool, avoid merging/splitting content across segments.
-{% endhint %}
+:::
 
 ## Related pages
 

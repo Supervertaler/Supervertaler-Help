@@ -1,8 +1,10 @@
-# Phrase (Memsource) Workflow
+---
+title: "Phrase (Memsource) Workflow"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler supports Phrase (Memsource) bilingual DOCX round-trips.
 
@@ -11,9 +13,9 @@ Supervertaler supports Phrase (Memsource) bilingual DOCX round-trips.
 1. In Phrase Editor, go to **Document → Export → Bilingual DOCX**
 2. Save the file
 
-{% hint style="info" %}
+:::note
 Supervertaler works best with two-column bilingual files (Source/Target).
-{% endhint %}
+:::
 
 ## Import to Supervertaler
 
@@ -35,6 +37,6 @@ Import the bilingual DOCX back into Phrase to update the document.
 - Keep any tags/placeholders exactly as-is.
 - Don’t change the table structure in Word.
 
-{% hint style="warning" %}
+:::caution
 Don’t merge or split segments if you plan to reimport.
-{% endhint %}
+:::

@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Autoprompt"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 AutoPrompt uses an LLM to analyse your current project and generate a comprehensive, project-specific translation prompt. The generated prompt embeds the document's domain, language pair, glossary, confirmed translations, detected source defects, terminology collisions, and preference cascades – ready to use as the **Custom Prompt** for AI translation.
 
@@ -33,9 +37,9 @@ AutoPrompt gathers the following from your project and sends it to your configur
 | **Translation Memory entries** (if attached) | Style anchors – the LLM matches the register and lexical choices of validated TM pairs |
 | **Language pair** | Embedded in the generated prompt |
 
-{% hint style="info" %}
+:::note
 For a typical 30,000-word document, AutoPrompt costs roughly $0.20–$0.25 with a Sonnet-class model, or $1.00–$1.15 with an Opus-class model. The full document is sent so the LLM can actually read it and detect real patterns rather than guessing from metadata.
-{% endhint %}
+:::
 
 ## Source-aware pre-generation passes
 
@@ -103,13 +107,13 @@ Since v1.10.46, every AutoPrompt-generated prompt embeds the **Translator's Comm
 
 The defect categories that count as "obvious" are adapted to the actual source language by the LLM (Dutch -d/-t verb typos, German missing umlauts, French accent slips, Spanish/Italian conjugation typos, etc.).
 
-{% hint style="info" %}
+:::note
 **The markers appear inline in the target text** – they are not yet auto-extracted into Workbench segment comments. Extraction into a dedicated comments pane is a separate follow-up. For now, you can copy or strip the markers manually, or run a downstream script that finds `⟦TC: ...⟧` regions and moves them into a structured comment field.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Want a generated prompt without the TC methodology?** Edit the generated prompt after creation and remove the TRANSLATOR COMMENT FORMAT section plus any TRANSLATION MANDATE language about silent correction. A per-project opt-out via a UI toggle may be added in a future version – open an issue if you'd like to see it.
-{% endhint %}
+:::
 
 ## Reviewing and refining the result
 

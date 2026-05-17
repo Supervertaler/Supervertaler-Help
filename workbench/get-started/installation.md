@@ -1,8 +1,10 @@
-# Installation
+---
+title: "Installation"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 ## Windows (Recommended)
 
@@ -97,9 +99,9 @@ sudo apt install hunspell-en-us hunspell-nl  # Add your languages
 python Supervertaler.py
 ```
 
-{% hint style="info" %}
+:::note
 **Linux Users:** If you experience crashes related to spellcheck or ChromaDB, see [Linux-Specific Issues](../troubleshooting/linux.md).
-{% endhint %}
+:::
 
 ## Dependencies
 

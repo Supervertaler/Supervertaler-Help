@@ -1,8 +1,7 @@
 ---
-description: Capture terms, translations, and knowledge while translating
+title: "Quick Add (Ctrl+Alt+M)"
+description: "Capture terms, translations, and knowledge while translating"
 ---
-
-# Quick Add (Ctrl+Alt+M)
 
 While translating in Trados, you can instantly capture a term, a translation pair, or a free-form note to the active memory bank – and optionally inject it into your active translation prompt so the next Ctrl+T picks it up immediately.
 
@@ -37,9 +36,9 @@ This mode is useful when:
 - You want to capture a general observation or client preference rather than a specific term
 - You'd rather let the AI figure out the right article structure
 
-{% hint style="success" %}
+:::tip
 **Tip:** Quick Add is the fastest way to build up a memory bank while translating. Spotted an interesting term? Ctrl+Alt+M, type the translation, and carry on – the AI picks it up on the next turn. For ambiguous cases, tick "Save as raw note" and let Process Inbox sort it out later.
-{% endhint %}
+:::
 
 ## See Also
 

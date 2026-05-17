@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Sidekick Bridge"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The **Sidekick Bridge** is a pair of small localhost-only HTTP services – one in each product – that let Supervertaler for Trados and Supervertaler Workbench cooperate while you translate. Each bridge runs in the background, exposes a few endpoints on `127.0.0.1` only, and is gated behind a per-session bearer token.
 

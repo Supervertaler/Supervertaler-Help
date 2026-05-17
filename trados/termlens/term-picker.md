@@ -1,8 +1,10 @@
-# Term Picker
+---
+title: "Term Picker"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The Term Picker is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when TermLens shows many matches and you want a quick overview without scrolling.
 
@@ -12,9 +14,9 @@ The Term Picker is a compact overlay that shows all matched terms for the curren
 
 Press **Ctrl+Shift+P** to open the Term Picker. It appears as a floating window above the editor.
 
-{% hint style="info" %}
+:::note
 Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. The Term Picker dialogue described on this page is the list-based alternative for users who prefer a tabular UI.
-{% endhint %}
+:::
 
 ### Colour-coded rows
 
@@ -62,9 +64,9 @@ You can insert a term in two ways:
 
 The selected translation is placed at the current cursor position in the target segment.
 
-{% hint style="info" %}
+:::note
 The Term Picker shows the same matches as TermLens, but in a flat list format that is easier to scan when there are many results.
-{% endhint %}
+:::
 
 ***
 

@@ -1,8 +1,10 @@
-# Term Extraction
+---
+title: "Term Extraction"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Term extraction helps you build a glossary from your project’s source text.
 
@@ -13,9 +15,9 @@ Term extraction helps you build a glossary from your project’s source text.
 3. Review suggested terms
 4. Add the important ones to your glossary
 
-{% hint style="info" %}
+:::note
 Term extraction is a great first step for technical documents (product names, UI labels, recurring domain terms).
-{% endhint %}
+:::
 
 ## Tips
 

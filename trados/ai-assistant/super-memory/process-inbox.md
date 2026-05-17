@@ -1,8 +1,7 @@
 ---
-description: Organise raw Markdown notes into structured knowledge base articles
+title: "Process Inbox"
+description: "Organise raw Markdown notes into structured knowledge base articles"
 ---
-
-# Process Inbox
 
 The **Process Inbox** button in the Supervertaler Assistant toolbar reads raw Markdown notes from the active memory bank's `00_INBOX/` folder and uses AI to organise them into structured knowledge base articles – client profiles, terminology entries, domain knowledge, and style guides.
 
@@ -16,13 +15,13 @@ The **Process Inbox** button in the Supervertaler Assistant toolbar reads raw Ma
 
 A summary of all created files appears in the chat when processing is complete.
 
-{% hint style="info" %}
+:::note
 Process Inbox always runs against the **active** memory bank – the one currently selected in the toolbar dropdown. If you want to process material into a different bank, switch the dropdown first.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 The inbox count updates automatically when files are added externally (e.g. via the [Obsidian Web Clipper](obsidian-setup.md#web-clipper)). You can also click the refresh button (↻) on the toolbar to update the count manually.
-{% endhint %}
+:::
 
 ## Markdown only – use Distill for everything else
 

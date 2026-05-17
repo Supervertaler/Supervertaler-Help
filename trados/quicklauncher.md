@@ -1,8 +1,10 @@
-# QuickLauncher
+---
+title: "QuickLauncher"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 QuickLauncher gives you one-click access to your most-used AI prompts directly from the Trados editor, without switching panels or typing anything.
 
@@ -15,9 +17,9 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 
 <figure><img src="../.gitbook/assets/Supervertaler-QuickLauncher.png" alt="The QuickLauncher context menu showing folder sections and prompt shortcuts"><figcaption><p>The QuickLauncher context menu with folder sections and keyboard shortcuts.</p></figcaption></figure>
 
-{% hint style="info" %}
+:::note
 The menu heading **Supervertaler QuickLauncher** is clickable – click it to open **Settings → Prompts**, where you can view, edit, and organise your QuickLauncher prompts.
-{% endhint %}
+:::
 
 The expanded prompt appears as a user message bubble in the **Supervertaler Assistant** chat panel, and the AI response follows immediately below it. The conversation continues from there – you can ask follow-up questions in the chat input as normal.
 
@@ -27,9 +29,9 @@ The expanded prompt appears as a user message bubble in the **Supervertaler Assi
 | ------------------ | -------------- | ------------------------------ |
 | `Ctrl+Q`           | `Control+Q`    | Open QuickLauncher prompt menu |
 
-{% hint style="warning" %}
+:::caution
 Trados Studio assigns `Ctrl+Q` to **View Internally Source** by default. To use `Ctrl+Q` for QuickLauncher, go to **File → Options → Keyboard Shortcuts**, search for **View Internally Source**, and remove or reassign its shortcut.
-{% endhint %}
+:::
 
 ### Prompt variables
 
@@ -50,9 +52,9 @@ QuickLauncher prompts have access to the full segment and project context at the
 | `{{TARGET_SEGMENT}}` | Full text of the **active target segment** (your translation so far) | `The invention relates to...`          |
 | `{{SELECTION}}`      | Text currently **selected** in the editor                            | `werkwijze`                            |
 
-{% hint style="info" %}
+:::note
 **Segment vs selection:** `{{SOURCE_SEGMENT}}` and `{{TARGET_SEGMENT}}` always give the **entire active segment**. `{{SELECTION}}` gives only the **highlighted portion** – useful for term lookups or focused questions. If nothing is selected, `{{SELECTION}}` is an empty string.
-{% endhint %}
+:::
 
 #### Project variables
 
@@ -93,11 +95,11 @@ In a **multi-file project**, a file header is inserted at each boundary (because
 [1] De beschrijving begint hier...
 ```
 
-{% hint style="warning" %}
+:::caution
 `{{PROJECT}}` sends all source segments to the AI. For a typical 10,000-word patent this costs roughly **4–5 cents** per call with a Sonnet-class model – negligible for important work, but avoid using it in high-frequency prompts. The number of surrounding segments for `{{SURROUNDING_SEGMENTS}}` is configured in **Settings → AI Settings → Surrounding segments** (default: 5).
 
 To keep the chat history readable, the chat bubble shows a compact summary (e.g. `[source document – 47 segments]`) instead of the full source text. The complete document is still sent to the AI.
-{% endhint %}
+:::
 
 #### Example: explain a selected term
 
@@ -196,9 +198,9 @@ Use the fuzzy matches as reference where helpful, but produce an accurate
 translation of the source segment – do not simply copy a fuzzy match.
 ```
 
-{% hint style="info" %}
+:::note
 `{{TM_MATCHES}}` only includes matches of **70% or higher**. If no matches meet this threshold, the variable is replaced with "(no fuzzy matches above 70%)". The match data comes from the active segment's translation origin in Trados – the same match shown in the Translation Results pane.
-{% endhint %}
+:::
 
 The plugin fills in all variables and sends the expanded prompt straight to the AI.
 
@@ -236,9 +238,9 @@ When to pick which:
 * **In-Trados Assistant** keeps everything in one window and is the right choice if you want chat history to stay alongside the segment you're translating.
 * **Workbench Sidekick** gives you a much larger reading area – useful for prompts whose responses are multi-paragraph explanations, full translation comparisons, or anything you want to read without squinting at the narrow Assistant panel.
 
-{% hint style="info" %}
+:::note
 Workbench must be running for this to work. If it isn't (or the [Sidekick Bridge](ai-assistant/sidekick-bridge.md) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
-{% endhint %}
+:::
 
 ### Sending prompts to the clipboard (paste into claude.ai, ChatGPT, etc.)
 
@@ -270,9 +272,9 @@ The submenu items have mnemonic keys, so once a prompt is highlighted you can pr
 
 The plugin expands every `{{VARIABLE}}` against the current segment, project, and TM context (exactly as it would for the Assistant), then writes the resulting plain text to the Windows clipboard. The menu closes silently – there's no confirmation toast. Switch to your browser tab and press `Ctrl+V` to paste.
 
-{% hint style="info" %}
+:::note
 Clipboard mode and the **QuickLauncher prompts go to:** routing setting (above) are independent. Routing only controls where the **Send to Assistant** mode lands – clipboard mode always copies locally, regardless of whether the global routing is set to In-Trados Assistant or Workbench Sidekick.
-{% endhint %}
+:::
 
 #### YAML reference
 

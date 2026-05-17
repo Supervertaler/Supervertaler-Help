@@ -1,8 +1,10 @@
-# Exporting Translations
+---
+title: "Exporting Translations"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 When you’re done translating, export in a format that matches your workflow.
 
@@ -23,9 +25,9 @@ If you started from a CAT exchange format (memoQ/Trados/Phrase/CafeTran), export
 - **Don’t “pretty edit” bilingual tables**: changing the table structure in Word can break reimport.
 - Run your CAT tool’s QA after reimport.
 
-{% hint style="warning" %}
+:::caution
 Don’t merge or split segments in Supervertaler when you plan to reimport into a CAT tool.
-{% endhint %}
+:::
 
 ## Choosing the right export
 

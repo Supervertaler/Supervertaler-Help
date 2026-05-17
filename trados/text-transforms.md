@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Replace curly quotes with straight quotes"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Text transforms are a special type of QuickLauncher prompt that performs local find-and-replace operations on the active target segment – instantly, without calling an AI provider.
 
@@ -21,9 +25,9 @@ Text transforms are useful for cleaning up invisible or problematic characters i
 
 The transform runs instantly. A dialogue confirms how many replacements were made, and the cleaned text is copied to your clipboard.
 
-{% hint style="info" %}
+:::note
 Text transforms modify the **target segment** only. The source segment is never changed.
-{% endhint %}
+:::
 
 ## Built-in transforms
 
@@ -52,7 +56,6 @@ Text transforms are stored as `.md` files in your prompt library, just like regu
 Each rule is a `find:` / `replace:` pair. Blank lines between rules are optional but improve readability. Lines starting with `#` are comments.
 
 ```
-# Replace curly quotes with straight quotes
 find: "\u201C"
 replace: "\u0022"
 

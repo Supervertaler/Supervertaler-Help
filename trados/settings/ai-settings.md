@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Ai Settings"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Configure the AI provider, model, and context options used by the Supervertaler for Trados plugin.
 
@@ -24,9 +28,9 @@ Choose one of the supported AI providers:
 | **Ollama (Local)** | Run models locally, no API key required |
 | **Custom (OpenAI-compatible)** | Any provider with an OpenAI-compatible API |
 
-{% hint style="info" %}
+:::note
 You only need one provider to get started. See [Setting Up API Keys](https://supervertaler.gitbook.io/supervertaler/get-started/api-keys) for instructions on obtaining a key.
-{% endhint %}
+:::
 
 ## API key
 
@@ -123,9 +127,9 @@ OpenRouter exposes far more models than the curated list above. To use one that 
 
 OpenRouter adds a **5.5% platform fee** on top of the underlying provider's token price. For example, if Claude Sonnet 4.6 costs $3/$15 per million tokens at Anthropic, it costs approximately $3.17/$15.83 through OpenRouter. For a typical 5,000-word translation costing $0.50, the OpenRouter fee adds less than 3 cents.
 
-{% hint style="info" %}
+:::note
 OpenRouter also offers some **free models** (marked with "Free" in the dropdown). These have no API cost at all – they are rate-limited but perfectly usable for testing or light workloads.
-{% endhint %}
+:::
 
 ## AI context options
 
@@ -161,9 +165,9 @@ The maximum number of source segments to include in the AI prompt when document 
 
 Increase this for very large documents where you want the AI to see more content. Decrease it if you want to reduce token usage.
 
-{% hint style="info" %}
+:::note
 This setting is only available when **Include full document content** is enabled.
-{% endhint %}
+:::
 
 #### Include term definitions and domains
 
@@ -175,9 +179,9 @@ Select which termbases are included in AI prompts. Terminology matches from enab
 
 For [AutoPrompt](../generate-prompt.md), **TermScan** automatically filters the termbase to only terms that appear in the document's source text, keeping the prompt focused and within token limits.
 
-{% hint style="warning" %}
+:::caution
 **Only enable termbases you trust.** The AI will follow your glossary entries even when they are wrong. If a termbase contains inaccurate, outdated, or low-quality translations, the AI will be forced to use them – producing worse results than if no termbase were enabled at all. Modern LLMs are remarkably good at choosing correct terminology on their own. When in doubt, disable termbases and add terms incrementally as you review the AI's output.
-{% endhint %}
+:::
 
 ### AI context (mostly Chat and QuickLauncher)
 
@@ -191,9 +195,9 @@ The behaviour of this checkbox depends on which feature is asking for context:
 - **AutoPrompt (Batch Operations).** When enabled, [AutoPrompt](../generate-prompt.md) samples up to 50 already-translated, human-confirmed segment pairs evenly from the active document and includes them in the meta-prompt as in-project reference translations. This includes 100% / exact matches that have been applied and confirmed, fuzzy-and-edited segments, and segments translated from scratch – any segment with a Translated, Approved, or Signed-off confirmation level qualifies. AutoPrompt does **not** do live TM lookups; it samples confirmed segments straight from the document.
 - **Other Batch Operations (Translate, Proofread).** Unaffected by this checkbox – they always work segment-by-segment without TM reference pairs, regardless of how it's set.
 
-{% hint style="success" %}
+:::tip
 **Tip for AutoPrompt users:** confirm a handful of segments you are happy with before clicking AutoPrompt. Even 10–20 confirmed segments give the AI meaningful style anchors to work from. Without any confirmed segments to sample, the generated prompt won't have in-project reference translations.
-{% endhint %}
+:::
 
 #### Surrounding segments
 
@@ -201,13 +205,13 @@ The number of segments before and after the active segment to include as context
 
 This provides the AI with local context around the segment you are working on. It is also used for the `{{SURROUNDING_SEGMENTS}}` variable in [QuickLauncher prompts](prompts/prompt-variables.md).
 
-{% hint style="info" %}
+:::note
 Batch Operations do not use this setting because each batch already contains a group of segments that provide context for each other.
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::tip
 **Tip:** For the best results, enable all context options. The more information the AI has about your project, document, terminology, and previous translations, the more accurate and consistent its suggestions will be.
-{% endhint %}
+:::
 
 #### QuickLauncher prompts go to
 
@@ -222,9 +226,9 @@ The Workbench-Sidekick option is for users who want the bigger reading area Side
 
 If the option is set to **Workbench Sidekick** but Workbench isn't running (or the [Sidekick Bridge](../ai-assistant/sidekick-bridge.md) isn't reachable for any reason), the QuickLauncher silently falls back to the in-Trados Assistant – a missing Workbench never blocks a prompt.
 
-{% hint style="info" %}
+:::note
 This setting only affects QuickLauncher. The in-Trados Assistant chat, Batch Translate, AI Proofreader, and other AI features keep using their own panels regardless.
-{% endhint %}
+:::
 
 ### SuperMemory context
 
@@ -234,9 +238,9 @@ These two toggles control whether [SuperMemory](../ai-assistant/super-memory.md)
 
 When enabled, the AI loads client profiles, domain knowledge, style guides, and terminology reasoning from the active memory bank before every translation and chat message. This gives the AI the _reasoning_ behind your terminology decisions, not just the terms themselves.
 
-{% hint style="warning" %}
+:::caution
 **Off by default.** SuperMemory is a power-user feature that most translators should opt into deliberately. The simpler workflow – TermLens glossaries + the AI context options above – covers the majority of needs. Enable this toggle once you have a populated memory bank and want the AI to consult it.
-{% endhint %}
+:::
 
 #### Use memory bank when generating prompts (AutoPrompt)
 
@@ -252,9 +256,9 @@ When enabled, AI operations are logged to the **Reports** tab in the Supervertal
 * The **model used**, estimated **token counts**, **cost**, and **duration**
 * Expandable sections for the **system prompt**, **messages**, and **response**
 
-{% hint style="info" %}
+:::note
 **Batch Translate** operations appear as a single consolidated entry showing the combined token count, cost, and total duration for the entire operation – regardless of how many sub-batches were processed.
-{% endhint %}
+:::
 
 Click "Show system prompt...", "Show messages...", or "Show response..." to expand a section. Press **Escape** to collapse it. Use **Copy** to copy a single section, or **Copy all** to copy the full prompt details to your clipboard.
 
@@ -264,9 +268,9 @@ This is useful for:
 * **Debugging prompts** – inspect the full text sent to the AI to understand its behaviour
 * **Comparing models** – run the same prompt with different models and compare token usage
 
-{% hint style="info" %}
+:::note
 Prompt logging is off by default to keep the Reports tab clean. Enable it when you want to inspect or audit your AI usage. Log entries are stored in memory only and cleared when Trados restarts.
-{% endhint %}
+:::
 
 ## Batch settings
 

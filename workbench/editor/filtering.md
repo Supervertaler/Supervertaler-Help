@@ -1,8 +1,10 @@
-# Filtering Segments
+---
+title: "Filtering Segments"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Filtering helps you focus on the segments you need right now.
 
@@ -22,6 +24,6 @@ A fast workflow is to select a word/phrase in the grid and use **Filter on selec
 	- If a filter is not active, it filters on the current selection.
 	- If a filter is active, it clears the filter.
 
-{% hint style="info" %}
+:::note
 Filtering is designed to be fast even in large projects.
-{% endhint %}
+:::

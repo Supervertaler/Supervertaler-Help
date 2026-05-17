@@ -1,8 +1,10 @@
-# TermLens
+---
+title: "TermLens"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 TermLens is an inline terminology display that shows the source text of the current segment word by word, with glossary translations directly underneath each matched term. It updates automatically when you navigate to a new segment.
 
@@ -31,13 +33,13 @@ TermLens uses five background colours to distinguish term types:
 | **Yellow** | Non-translatable term (source = target)                                 |
 | **Green**  | MultiTerm termbase match (`.sdltb`)                                     |
 
-{% hint style="info" %}
+:::note
 Designate one termbase as the **Project termbase** in settings to make its terms appear in pink. Project terms take visual priority over regular terms, making it easy to spot client-specific terminology.
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::tip
 **MultiTerm termbases** attached to your Trados project appear automatically as green chips. They are read-only – to edit MultiTerm terms, use Trados's built-in MultiTerm interface. See [MultiTerm Support](multiterm-support.md) for details.
-{% endhint %}
+:::
 
 ### Chip Indicators
 
@@ -79,9 +81,9 @@ For terms numbered 10 and above, TermLens supports two shortcut styles (configur
 
 The badge on each term chip shows exactly which key combination to use. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details on both modes.
 
-{% hint style="info" %}
+:::note
 Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** or the **Term Picker** dialogue to insert them.
-{% endhint %}
+:::
 
 #### TermLens popup (Ctrl tap)
 
@@ -115,9 +117,9 @@ You can add terms without opening a dialogueue:
 | **Ctrl+Alt+T** | Open the Add Term Entry dialogue (full editor: definition, domain, notes, URL, synonyms) |
 | **Ctrl+Alt+N** | Quick-add the selected text as a non-translatable term                                   |
 
-{% hint style="success" %}
+:::tip
 Quick-add shortcuts use the currently selected source text and the corresponding selected or clipboard target text. The term is added instantly without opening a dialogue.
-{% endhint %}
+:::
 
 ### Font Size
 

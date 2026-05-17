@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Termbase Management"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Supervertaler for Trados uses the same SQLite termbase format as Supervertaler Workbench. You manage your termbases through the Settings dialogue.
 
@@ -16,9 +20,9 @@ The plugin stores all termbases in a single `.db` file (SQLite database).
 - Click **Browse** to select an existing database file
 - Click **Create New** to create a fresh, empty database
 
-{% hint style="info" %}
+:::note
 The `.db` file uses the same Supervertaler SQLite format as the standalone application. On Windows, you can share the same termbase file between both tools by pointing them to the same data folder. On a Mac with Parallels, see the note below.
-{% endhint %}
+:::
 
 ## MultiTerm termbases
 
@@ -34,9 +38,9 @@ Once a database is loaded, the termbase list shows all Supervertaler termbases i
 | **Write** | New terms added via [quick-add shortcuts](termlens/adding-terms.md) go into this termbase |
 | **Project** | Designate as the project termbase (terms shown in pink, prioritised in matching) |
 
-{% hint style="warning" %}
+:::caution
 Only one termbase can be marked as **Project** at a time. Setting a new project termbase clears the flag from the previous one.
-{% endhint %}
+:::
 
 ## Creating a new termbase
 
@@ -84,9 +88,9 @@ software	software		Non-translatable
 user interface	gebruikersinterface|gebruikersomgeving	IT	
 ```
 
-{% hint style="info" %}
+:::note
 TSV files exported from Supervertaler (both the Trados plugin and Workbench) can always be reimported without any changes. Files from other tools are also supported as long as they have recognisable column headers.
-{% endhint %}
+:::
 
 ## Export to TSV
 
@@ -130,19 +134,19 @@ The operation swaps the source and target text, language tags, abbreviations, an
 
 This action is mostly for repairing legacy entries created or edited under v4.19.24 or earlier, when the term entry editor could write values into the wrong DB columns in projects whose direction was the inverse of the termbase's. From v4.19.25 onwards the editor guards against that, so new entries should not need this repair.
 
-{% hint style="info" %}
+:::note
 **Add and Edit dialog fields are always in termbase direction.** The dialog labels and values both reflect the termbase's declared direction – English on the left when the termbase is declared EN→NL, regardless of the current Trados project's direction. From v4.19.25 the values are guaranteed to align with the labels: the Edit dialog re-reads the entry from the database, and the Add dialog swaps the pre-fills internally when the project direction is the inverse of the termbase. Earlier versions could silently write reversed entries in inverse-direction projects – use **Reverse source/target** above to repair any pre-v4.19.25 damage.
-{% endhint %}
+:::
 
 ## Sharing termbases
 
-{% hint style="success" %}
+:::tip
 **Tip:** Keep the `.db` file on a network drive or cloud-synced folder (OneDrive, Dropbox, Google Drive) to share termbases across machines and with colleagues. Since both the Trados plugin and Supervertaler Workbench use the same format, everyone can work from the same terminology.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Mac users (Parallels):** On a Mac, Supervertaler Workbench runs natively on macOS while the Trados plugin runs inside Parallels (Windows). The two products cannot share the same `.db` file directly because the Trados plugin must store its data on the Windows side (`C:\Users\...`) – not on the Mac-side shared folder (`\\Mac\Home\...`). To keep your termbases in sync, export from one side and import on the other after making changes. This is a limitation of Parallels' virtual network filesystem, not of the termbase format itself.
-{% endhint %}
+:::
 
 ## Distill into a memory bank
 

@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Mt"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Machine translation is delivered by the **QuickTrans Popup** – an always-on-top popup window with translations from every enabled provider, summoned independently of the SuperLookup tab. See [QuickTrans Popup](../sidekick/quicktrans-popup.md) for the full reference.
 
@@ -47,6 +51,6 @@ Provider calls run in parallel (each with a 5 s timeout, overall batch capped at
 - You can also **double-click** a result row to copy the translation.
 - Number keys **1**–**9** select the corresponding result (1 = first, 2 = second, etc.).
 
-{% hint style="info" %}
+:::note
 If a provider call fails, QuickTrans shows the error message in red. Failed providers don't block the others.
-{% endhint %}
+:::

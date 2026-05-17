@@ -1,8 +1,10 @@
-# Segment Statuses
+---
+title: "Segment Statuses"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Every segment in Supervertaler carries two independent pieces of information:
 
@@ -33,9 +35,9 @@ When you press **Ctrl+Enter**, the current segment is marked as **Confirmed** an
 
 If you go back and edit a confirmed segment, it automatically drops back to **Draft** until you re-confirm it. This prevents accidental TM entries from half-finished edits.
 
-{% hint style="info" %}
+:::note
 You can also change a segment's status manually via the right-click context menu, or by selecting segments and using the **Status** menu in the menu bar.
-{% endhint %}
+:::
 
 ---
 
@@ -75,9 +77,9 @@ Supervertaler's statuses map cleanly to Trados Studio and memoQ. When you import
 | Rejected | Translation Rejected | Rejected |
 | Locked | Locked | Locked |
 
-{% hint style="warning" %}
+:::caution
 **Trados naming quirk:** In Trados Studio, "Translated" (green checkmark) actually means *confirmed by the translator*. This is equivalent to Supervertaler's **Confirmed**. Trados "Draft" is equivalent to Supervertaler's **Draft**.
-{% endhint %}
+:::
 
 ### Match origins
 

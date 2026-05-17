@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Adding Terms"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Supervertaler for Trados provides several ways to add, edit, and manage terminology without leaving the Trados editor.
 
@@ -14,9 +18,9 @@ The fastest way to add a term while translating:
 
 The term is added instantly to all **write-enabled** termbases. No dialogue, no interruption.
 
-{% hint style="info" %}
+:::note
 Quick-add writes to every termbase that has **Write** enabled in your [TermLens Settings](../settings/termlens.md). If you want to target a specific termbase, use the Add Term Entry dialogue (Ctrl+Alt+T) instead.
-{% endhint %}
+:::
 
 ## Quick-add to project termbase (Alt+Up)
 
@@ -57,13 +61,13 @@ For full control over a new term, press **Ctrl+Alt+T** (or right-click in the ed
 
 The term is added to the **project termbase** if one is configured, or the first write-enabled termbase otherwise.
 
-{% hint style="warning" %}
+:::caution
 **Trados conflict:** Trados Studio assigns **Ctrl+Alt+T** to "Insert TM Symbol" by default. If pressing Ctrl+Alt+T does nothing, you need to remove Trados's binding first. Go to **File → Options → Keyboard Shortcuts**, search for "Insert TM Symbol", and delete or reassign its shortcut. Then Ctrl+Alt+T will work as expected in Supervertaler.
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::tip
 **Tip:** Use the project termbase for client-specific terminology that should be prioritised over background termbases. Project termbase terms appear in pink in TermLens.
-{% endhint %}
+:::
 
 ## Smart selection
 
@@ -89,9 +93,9 @@ When you make a selection, Supervertaler scans the full segment text for every o
 - **Select the whole word when in doubt** – if a segment contains similar-looking words and you want a specific one, a complete-word selection is always matched correctly
 - **Use Ctrl+Alt+T for tricky cases** – the Add Term Entry dialogue lets you review and edit the expanded term before saving, so you can catch any unexpected expansion
 
-{% hint style="info" %}
+:::note
 Press **F2** to manually expand your current selection to word boundaries without adding a term. This lets you preview exactly what Supervertaler would capture before pressing a quick-add shortcut.
-{% endhint %}
+:::
 
 ## Merge prompt
 
@@ -106,9 +110,9 @@ The merge prompt always displays terms in your **project's language direction**,
 
 **Example:** Your termbase already has **adhesion → hechting**. You select **adhesion → aanhechting** and press Alt+Down. The merge prompt appears because the source term “adhesion” already exists. Clicking “Add as Synonym” adds _aanhechting_ as a target synonym of the existing entry, so both translations are grouped together.
 
-{% hint style="info" %}
+:::note
 The merge prompt only appears when the source or target matches exactly (case-insensitive). It does **not** apply to non-translatable quick-add (**Ctrl+Alt+N**).
-{% endhint %}
+:::
 
 ## Editing existing terms
 
@@ -153,9 +157,9 @@ When both the full term and its abbreviation appear in the same segment (e.g., "
 
 Clicking or Alt+digit-inserting an abbreviation chip inserts the **target abbreviation** (first variant), not the full target term.
 
-{% hint style="info" %}
+:::note
 Abbreviations are also included in AI translation prompts, so the AI knows both the full term and its abbreviated form.
-{% endhint %}
+:::
 
 ## Deleting terms
 
@@ -163,9 +167,9 @@ Abbreviations are also included in AI translation prompts, so the AI knows both 
 2. Select **Delete Term**
 3. Confirm the deletion in the dialogue
 
-{% hint style="warning" %}
+:::caution
 Deletion is permanent. The term is removed from the termbase database file.
-{% endhint %}
+:::
 
 ## Bulk Add Non-Translatable
 

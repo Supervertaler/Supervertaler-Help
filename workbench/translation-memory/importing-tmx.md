@@ -1,8 +1,10 @@
-# Importing TMX Files
+---
+title: "Importing TMX Files"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 TMX is the common exchange format for translation memories.
 
@@ -12,9 +14,9 @@ TMX is the common exchange format for translation memories.
 2. Choose **Import TMX**
 3. Select your `.tmx` file
 
-{% hint style="info" %}
+:::note
 Import your TM(s) before batch translation to maximize reuse.
-{% endhint %}
+:::
 
 ## Tips
 

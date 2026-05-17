@@ -1,8 +1,10 @@
-# Tag Validation
+---
+title: "Tag Validation"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 When working with formatted documents or CAT tool files, **tags must be preserved**.
 
@@ -49,6 +51,6 @@ CAT tools use placeholders/tags that must be preserved exactly:
 - Don’t change tag numbers or names (for example `{1}` → `{2}`), even if the translation “looks fine”.
 - If you insert a TM match, double-check that tags/placeholders still match the source.
 
-{% hint style="warning" %}
+:::caution
 For CAT tool workflows, don’t delete or edit placeholder tags unless you know exactly what they represent.
-{% endhint %}
+:::

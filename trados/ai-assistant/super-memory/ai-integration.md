@@ -1,8 +1,7 @@
 ---
-description: How SuperMemory is loaded into the AI context – the algorithm, ranking, and token budget
+title: "AI Integration"
+description: "How SuperMemory is loaded into the AI context – the algorithm, ranking, and token budget"
 ---
-
-# AI Integration
 
 This page is the technical deep dive into **how** SuperMemory – Supervertaler's self-organising translation knowledge base system – loads the active memory bank into the AI context. For the broader picture of all context sources, start with [Context Awareness](../context-awareness.md). For what SuperMemory is and how to create and switch memory banks, start with [SuperMemory](../super-memory.md).
 

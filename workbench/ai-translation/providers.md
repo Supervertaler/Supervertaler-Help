@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Providers"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler supports multiple AI providers so you can choose what fits your workflow and budget. You only need one to get started.
 
@@ -46,9 +50,9 @@ The model dropdown includes a curated selection for translation, and you can als
 
 Get an API key at [openrouter.ai/keys](https://openrouter.ai/keys).
 
-{% hint style="info" %}
+:::note
 OpenRouter adds a 5.5% platform fee on top of the underlying provider's price. For most translation jobs this adds only a few cents.
-{% endhint %}
+:::
 
 ## Local providers
 

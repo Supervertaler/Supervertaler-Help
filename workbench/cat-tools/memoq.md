@@ -1,8 +1,10 @@
-# memoQ Workflow
+---
+title: "memoQ Workflow"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 This guide covers working with memoQ bilingual files in Supervertaler.
 
@@ -17,9 +19,9 @@ This guide covers working with memoQ bilingual files in Supervertaler.
 5. Select **Table format** (two columns)
 6. Export the file
 
-{% hint style="info" %}
+:::note
 The table format with source and target columns works best with Supervertaler.
-{% endhint %}
+:::
 
 ### XLIFF Export
 

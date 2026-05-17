@@ -1,8 +1,10 @@
-# CAT Tool Integration Overview
+---
+title: "CAT Tool Integration Overview"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler is designed to work alongside professional CAT (Computer-Assisted Translation) tools, not replace them. Use it as a **companion tool** for AI-powered translation within your existing workflow.
 

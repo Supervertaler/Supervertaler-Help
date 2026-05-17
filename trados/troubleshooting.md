@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Troubleshooting"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Solutions to common issues with the Supervertaler for Trados plugin.
 
@@ -17,9 +21,9 @@ Solutions to common issues with the Supervertaler for Trados plugin.
 3. **Reinstall the plugin** –remove the plugin via **Trados Plugin Management**, restart Trados, then install it again
 4. **Check for errors** –open **Trados Plugin Management** and look for error messages next to the Supervertaler plugin entry
 
-{% hint style="info" %}
+:::note
 After installing or updating the plugin, always restart Trados Studio completely (close all windows, not just the project).
-{% endhint %}
+:::
 
 ---
 
@@ -44,9 +48,9 @@ After installing or updating the plugin, always restart Trados Studio completely
 - The plugin uses **read-only mode** where possible to minimise conflicts, but write operations (adding terms) require exclusive access
 - Verify the `.db` file is not on a drive that has gone offline (e.g., a disconnected network share)
 
-{% hint style="warning" %}
+:::caution
 If you share the database via a cloud-sync folder, ensure the file is fully synced before opening it in the plugin. Partially synced files can appear locked or corrupt.
-{% endhint %}
+:::
 
 ---
 
@@ -76,9 +80,9 @@ If you share the database via a cloud-sync folder, ensure the file is fully sync
 3. **Check languages** –the termbase's source and target languages must match the current project's language pair
 4. **Navigate to another segment and back** to trigger a MultiTerm auto-refresh (F5 does not reload MultiTerm termbases – only segment navigation does)
 
-{% hint style="info" %}
+:::note
 When you add terms in MultiTerm, navigate to a different segment in Trados to trigger the auto-refresh. TermLens checks for file changes on each segment change.
-{% endhint %}
+:::
 
 See [MultiTerm Support](multiterm-support.md) for full details.
 
@@ -114,9 +118,9 @@ See [MultiTerm Support](multiterm-support.md) for full details.
 2. Copy your `.db` termbase files from the Mac-side location into the new Windows-side folder
 3. Update the data folder path in Supervertaler settings, or delete `%AppData%\Supervertaler\config.json` and restart Trados to trigger the first-run setup again
 
-{% hint style="info" %}
+:::note
 See [Installation – Running on a Mac (Parallels)](installation.md#running-on-a-mac-parallels) for the recommended setup.
-{% endhint %}
+:::
 
 ---
 

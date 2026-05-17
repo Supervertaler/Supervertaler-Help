@@ -1,8 +1,10 @@
-# Spellcheck
+---
+title: "Spellcheck"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler includes a powerful spellcheck system that highlights misspellings while you translate, with support for regional language variants.
 
@@ -18,9 +20,9 @@ Supervertaler uses a **three-tier spellcheck system** that automatically selects
 
 The system automatically falls back through backends: Hunspell → Spylls → pyspellchecker.
 
-{% hint style="info" %}
+:::note
 **Windows Users:** Spylls is automatically used since cyhunspell doesn't compile on Python 3.12+. This works great and supports regional variants!
-{% endhint %}
+:::
 
 ## Features
 
@@ -41,11 +43,11 @@ Supervertaler supports regional language variants. The spellcheck dropdown shows
 - German (DE), German (AT), German (CH)
 - Dutch (NL), Dutch (BE)
 
-{% hint style="success" %}
+:::tip
 **Regional spelling works correctly!**
 - With **English (GB)**: "colour" ✅ correct, "color" ❌ incorrect
 - With **English (US)**: "colour" ❌ incorrect, "color" ✅ correct
-{% endhint %}
+:::
 
 ## Spellcheck Info Dialog
 
@@ -81,9 +83,9 @@ To add spellcheck support for additional languages or variants:
 
 4. **Restart Supervertaler** – The new language will appear in the dropdown
 
-{% hint style="info" %}
+:::note
 **Spylls bundled dictionaries** (EN, RU, SV) are stored inside the spylls pip package, not in your dictionaries folder. Add your own .dic/.aff files to the dictionaries folder to extend available languages.
-{% endhint %}
+:::
 
 ## Custom Dictionary
 

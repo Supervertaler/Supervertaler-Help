@@ -1,8 +1,10 @@
-# TMX Editor
+---
+title: "TMX Editor"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler includes a built-in TMX editor for inspecting and editing TMX translation memories.
 
@@ -31,10 +33,10 @@ Supervertaler includes a built-in TMX editor for inspecting and editing TMX tran
 
 If you’re trying to simplify a TMX that contains formatting or CAT-tool tags, you can remove them before importing.
 
-{% hint style="info" %}
+:::note
 TMX is just XML – some tags are real inline markup (TMX/XLIFF-style), others are literal text like `&lt;b&gt;...&lt;/b&gt;`.
 Cleaning tags can improve matching, but it can also remove important formatting. If you’re unsure, test on a copy first.
-{% endhint %}
+:::
 
 ## Related
 

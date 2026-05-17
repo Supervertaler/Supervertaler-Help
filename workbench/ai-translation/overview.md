@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Overview"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler integrates with leading AI language models for high-quality translation.
 
@@ -44,9 +48,9 @@ Translate multiple segments at once:
 - Configure options in the dialog
 - All selected segments are translated
 
-{% hint style="info" %}
+:::note
 Supervertaler has multiple batch scopes (selected / not-started / etc.). Start with **Edit → Batch Translate → Translate all not-started & pre-translated**.
-{% endhint %}
+:::
 
 ### TM + AI Hybrid
 

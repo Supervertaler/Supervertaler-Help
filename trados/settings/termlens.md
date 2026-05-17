@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Termlens"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Configure how TermLens loads and displays terminology in Trados Studio.
 
@@ -12,9 +16,9 @@ Click the **gear icon** in the TermLens panel, or open the plugin **Settings** d
 
 The path to your Supervertaler termbase `.db` file. Click **Browse** to select a database, or **Create New** to start with an empty one.
 
-{% hint style="info" %}
+:::note
 **Auto-detect:** If Supervertaler Workbench is installed on the same machine, the plugin can automatically detect its default database location. Click **Auto-detect** to find and use it.
-{% endhint %}
+:::
 
 ## Termbase toggles
 
@@ -42,9 +46,9 @@ The header **tick-all** on the Write column also respects this guard – non-mat
 
 The **Read** column is intentionally exempt from the dialog – there is no harm in *reading* a non-matching termbase (its terms simply won't match anything in your segments), only in writing into it.
 
-{% hint style="info" %}
+:::note
 **No project loaded.** If you open the Settings dialog without an active project (for example by clicking the gear from the QuickLauncher header), the plugin has no source language to compare against, so the confirmation is suppressed and ticks behave normally.
-{% endhint %}
+:::
 
 ## MultiTerm termbases
 
@@ -64,9 +68,9 @@ By default, TermLens matches terms regardless of letter case – "polymer", "Pol
 
 You can also control case sensitivity per termbase using the **CS** checkbox in the termbase grid. When the CS checkbox is ticked for a termbase, that termbase always matches case-sensitively; when unticked, it matches case-insensitively.
 
-{% hint style="info" %}
+:::note
 **Tip:** The CS checkbox is useful when you have one termbase with abbreviations that must match exactly (e.g., "GC" should not match "gc") while other termbases should remain case-insensitive.
-{% endhint %}
+:::
 
 ## Panel font size
 

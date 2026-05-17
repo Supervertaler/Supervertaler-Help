@@ -1,8 +1,7 @@
 ---
-description: Extract knowledge from translation files using AI
+title: "Distill"
+description: "Extract knowledge from translation files using AI"
 ---
-
-# Distill
 
 **Distill** extracts knowledge from professional translation files and creates structured knowledge base articles in the active memory bank's inbox. Instead of manually reading through a 50,000-segment translation memory or a 30-page client style guide, the AI analyses the content and distils it into actionable articles: terminology decisions, style conventions, client preferences, and domain knowledge.
 
@@ -31,9 +30,9 @@ description: Extract knowledge from translation files using AI
 
 Distill always writes into the **active** memory bank – the one currently selected in the toolbar dropdown. To distil into a different bank, switch the dropdown first.
 
-{% hint style="info" %}
+:::note
 **Ignored sidecar files.** Distill automatically skips Obsidian plugin sidecar files (currently `.edtz`) sitting in the inbox. These are editor metadata that accompany Markdown notes, not knowledge content, so they are neither sent to the AI nor counted in the "Distill inbox" file count.
-{% endhint %}
+:::
 
 ### From the termbase list (shortcut)
 
@@ -45,9 +44,9 @@ You can distil a termbase directly from the [termbase settings](../../termbase-m
 
 The plugin reads all terms from the termbase, formats them as a structured table, and sends them straight to the Distill pipeline. Draft articles appear in the active memory bank's `00_INBOX` folder – review them in Obsidian, then run **[Process Inbox](process-inbox.md)** as usual.
 
-{% hint style="info" %}
+:::note
 This shortcut is especially useful for MultiTerm termbases attached to your Trados project. Instead of exporting to a file first, you can distil them in one click.
-{% endhint %}
+:::
 
 ## What the AI produces
 

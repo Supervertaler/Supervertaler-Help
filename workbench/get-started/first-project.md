@@ -1,8 +1,10 @@
-# Your First Translation Project
+---
+title: "Your First Translation Project"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Let's walk through creating a complete translation project from start to finish.
 
@@ -92,9 +94,9 @@ After import, you'll see:
 2. Choose a name and location
 3. Your project is saved as `.svproj`
 
-{% hint style="success" %}
+:::tip
 **Tip:** Supervertaler auto-saves your work periodically, but it's good practice to save manually before closing.
-{% endhint %}
+:::
 
 ## Exporting the Translation
 

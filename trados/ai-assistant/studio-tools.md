@@ -1,18 +1,20 @@
-# Studio Tools
+---
+title: "Studio Tools"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler Assistant chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
 
-{% hint style="success" %}
+:::tip
 Studio Tools works with all major AI providers: **Claude**, **OpenAI**, **Gemini**, **Grok**, and **Mistral**. Only Ollama (local models) does not support tool use and will work as before -- plain chat without Trados queries.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 Studio Tools is under active development and some commands might not yet work as expected. If something doesn't work, please contact [support@supervertaler.com](mailto:support@supervertaler.com) and I'll get it working as fast as I can.
-{% endhint %}
+:::
 
 ## How It Works
 
@@ -104,9 +106,9 @@ Studio Tools reads data directly from your local Trados Studio installation. Spe
 
 No data is sent to external services other than the AI provider. The tool results are passed to the AI as part of the conversation so it can format and present them to you.
 
-{% hint style="info" %}
+:::note
 Studio Tools currently provides **read-only** access to your Trados data. It cannot create, modify, or delete projects, TMs, or templates.
-{% endhint %}
+:::
 
 ## See Also
 

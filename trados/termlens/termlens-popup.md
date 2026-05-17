@@ -1,8 +1,10 @@
-# TermLens popup
+---
+title: "TermLens popup"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The **TermLens popup** is a borderless floating version of the docked TermLens panel for the active segment. Designed for keyboard-only term selection on small screens – and for translators who want to insert terms without ever reaching for the mouse.
 
@@ -48,9 +50,9 @@ Both paths share the same insertion logic – there is no difference between pic
 
 Press **E** while a match is highlighted to open the term-entry editor for that entry. The popup closes first so the editor opens with clean focus. The editor is the same dialogue the docked panel's right-click "Edit Term…" menu uses, including the multi-termbase editing case for entries that exist in more than one termbase.
 
-{% hint style="info" %}
+:::note
 **MultiTerm matches are read-only** in TermLens. Pressing E on a green MultiTerm chip flashes a hint instead – edit those entries in **Trados → Termbase Viewer**.
-{% endhint %}
+:::
 
 ### Visuals
 

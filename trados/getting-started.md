@@ -1,12 +1,16 @@
-{% hint style="info" %}
+---
+title: "Getting Started"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 This page walks you through the first-time setup so you can start using TermLens terminology and AI translation inside Trados Studio.
 
-{% hint style="success" %}
+:::tip
 **Prefer to watch?** The [Getting Started screencast](https://www.youtube.com/watch?v=bOIwMAoP7xc) (16 min) covers everything on this page and more – TermLens, prompt generation, AI translation, the Chat window, and purchasing.
-{% endhint %}
+:::
 
 ## First-Time Setup
 
@@ -23,9 +27,9 @@ On the **TermLens** tab:
 
 You can add multiple termbases. Designate one as the **Project termbase** to give its terms higher priority (shown in pink).
 
-{% hint style="info" %}
+:::note
 Supervertaler for Trados uses the same `.db` termbase format as Supervertaler Workbench. Any termbase created in either tool works in both. On Windows, both tools can point to the same `.db` file in a shared data folder. On a Mac running Trados via Parallels, the two products use separate filesystems – see [Running on a Mac](installation.md#running-on-a-mac-parallels) for details.
-{% endhint %}
+:::
 
 ### 3. Configure AI (AI Settings tab)
 
@@ -35,9 +39,9 @@ On the **AI Settings** tab:
 2. Enter your **API key** for the selected provider
 3. Choose a **model**
 
-{% hint style="info" %}
+:::note
 **Don't have an API key yet?** You can skip this step entirely and use **[Clipboard Mode](clipboard-mode.md)** instead. Clipboard Mode lets you translate and proofread using any web-based AI you already have access to – ChatGPT, Claude, Gemini, or any other LLM chat interface. No API key required. It is the fastest way to start using AI translation in Supervertaler for Trados.
-{% endhint %}
+:::
 
 ### 4. Click OK
 

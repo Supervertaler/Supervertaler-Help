@@ -1,14 +1,18 @@
-{% hint style="info" %}
+---
+title: "Overview"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler Workbench includes four **companion surfaces** that sit alongside the translation grid: SuperLookup, Clipboard, Voice, and Chat. They cover the lookup-and-capture tasks you reach for dozens of times a day while translating – concordance searches, clipboard history, voice commands, AI conversation – without making you leave the editor or the app you're in.
 
 Three of them are top-level tabs in Workbench (next to Editor, TMs, Termbases, AI, Settings); the fourth, Chat, sits as a side panel next to the editor so you can keep an AI conversation visible while you translate.
 
-{% hint style="info" %}
+:::note
 **Where did Sidekick go?** Through v1.10.3, these four surfaces lived inside a separate always-on-top floating window called Supervertaler Sidekick. It was retired in v1.10.4 and the tabs were promoted into Workbench itself. The companion surfaces below behave exactly as they did inside Sidekick – they're just hosted differently now, with proper taskbar / Alt+Tab presence and access via top-level tabs instead of a separate window. The global hotkey **Ctrl+Alt+K** that used to summon Sidekick has been unbound.
-{% endhint %}
+:::
 
 ### 🔍 SuperLookup
 

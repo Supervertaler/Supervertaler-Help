@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Prompt Variables"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Variables are placeholders in your prompt text that are automatically filled in at runtime. Use them to make prompts context-aware without rewriting them for every project or language pair.
 
@@ -23,9 +27,9 @@ These are only available in QuickLauncher prompts, because they refer to the spe
 | `{{TARGET_SEGMENT}}` | Full target text of the **active segment** (your translation so far – may be empty or partial) | `The invention relates to a novel method...`                |
 | `{{SELECTION}}`      | Text currently **selected** in the editor (source side preferred; falls back to target side)   | `werkwijze`                                                 |
 
-{% hint style="info" %}
+:::note
 **Segment vs selection:** `{{SOURCE_SEGMENT}}` and `{{TARGET_SEGMENT}}` always give you the **entire active segment**. `{{SELECTION}}` gives you only the **highlighted portion** – useful for looking up or explaining a specific word or phrase within the segment. If nothing is selected, `{{SELECTION}}` is replaced with an empty string.
-{% endhint %}
+:::
 
 ### Project variables – QuickLauncher only
 
@@ -37,11 +41,11 @@ These are only available in QuickLauncher prompts, because they refer to the spe
 | `{{PROJECT}}`              | All source segments in the document, numbered with their actual Trados segment numbers. In multi-file projects a `=== File N ===` header separates each file (Trados restarts segment numbering per file).       |
 | `{{TM_MATCHES}}`           | Translation memory fuzzy matches (≥70%) for the active segment, showing match percentage, TM name, source text, and target text. If no matches meet the threshold, replaced with "(no fuzzy matches above 70%)". |
 
-{% hint style="warning" %}
+:::caution
 `{{PROJECT}}` sends the entire document to the AI and uses significantly more tokens than other variables. For a 10,000-word document, this costs roughly 4–5 cents per call with a Sonnet-class model. Reserve it for prompts where full document context genuinely matters.
 
 To keep the chat history readable, the chat bubble shows a compact summary (e.g. `[source document – 47 segments]`) instead of the full source text. The complete document is still sent to the AI.
-{% endhint %}
+:::
 
 ### Scope: which prompts see which variables
 

@@ -1,8 +1,10 @@
-# Usage Statistics
+---
+title: "Usage Statistics"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Supervertaler for Trados sends one anonymous, lightweight ping to the developer at startup so he can see how many people are using the plugin and what environments they are running it on. The dialogue below appears once after install or update, and the feature can be switched off at any time.
 

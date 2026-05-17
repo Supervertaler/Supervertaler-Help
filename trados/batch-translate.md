@@ -1,14 +1,16 @@
-# Batch Translate
+---
+title: "Batch Translate"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Batch Translate lets you translate multiple segments at once using AI. It is located in the **Supervertaler Assistant** panel, on the **Batch Operations** tab.
 
-{% hint style="info" %}
+:::note
 The Batch Operations tab also supports **Proofread** mode for AI-powered quality checking. See [AI Proofreader](ai-proofreader.md) for details.
-{% endhint %}
+:::
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -40,13 +42,13 @@ Choose a prompt to guide the AI translation style and domain. The prompt selecto
 
 The **active prompt** for the current project is marked with a checkmark in the dropdown. When you open a project that has an active prompt set, it is automatically selected. See [Memory banks – Active Prompt](ai-assistant/super-memory/active-prompt.md) for how to set the active prompt.
 
-{% hint style="success" %}
+:::tip
 **Tip:** If you save a prompt with the same name as your Trados project, the dropdown will auto-select it whenever you open that project. For example, a prompt called "HAYNESPRO" will be auto-selected when working in a project called HAYNESPRO.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 For specialised fields (medical, legal, patent, etc.), create a custom prompt with domain-specific terminology rules and instructions. A tailored prompt is the single most effective way to improve translation quality.
-{% endhint %}
+:::
 
 ### Provider and Model
 
@@ -121,9 +123,9 @@ The exact path is also printed to the **Batch Translate log** at the start of ea
 3. Use **Import** → browse to the backup `.tmx` file → import.
 4. Run **Pre-translate** on your project to apply the recovered translations from the TM.
 
-{% hint style="info" %}
+:::note
 Backup files are **not deleted automatically**. Tidy up the `batch_backups` folder occasionally if disk space is a concern, or keep them as a translation archive.
-{% endhint %}
+:::
 
 ### Clipboard Mode
 

@@ -1,8 +1,10 @@
-# Supervertaler Assistant
+---
+title: "Supervertaler Assistant"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The Supervertaler Assistant is a conversational chat panel that runs inside Trados Studio as a separate dockable panel. It is context-aware: it automatically includes your current source and target text, matched terminology, and TM matches in every request, so the AI can give you informed answers about the segment you are working on.
 
@@ -40,9 +42,9 @@ The conversation is saved automatically after every message and restored the nex
 
 To clear the history, click the **Clear** button in the chat toolbar.
 
-{% hint style="info" %}
+:::note
 Chat history is stored in `~/Supervertaler/trados/chat_history.json`. It is a single global history -- not per project or per file.
-{% endhint %}
+:::
 
 ### Right-Click Menu
 

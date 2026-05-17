@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Overview"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 SuperLookup is your unified concordance and research hub, bringing together all lookup resources in one place. It's a top tab in Workbench (🔍 SuperLookup), alongside Editor, TMs, Termbases, Clipboard, Voice, and Settings.
 

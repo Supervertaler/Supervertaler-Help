@@ -1,8 +1,10 @@
-# Pagination
+---
+title: "Pagination"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Pagination lets you work through large projects in pages (for example 50 segments at a time).
 
@@ -20,6 +22,6 @@ Use the pagination controls to move between pages.
 - **Page Up** → previous page
 - **Page Down** → next page
 
-{% hint style="info" %}
+:::note
 Go to Segment is pagination-aware: jumping to a segment on another page will switch pages automatically.
-{% endhint %}
+:::

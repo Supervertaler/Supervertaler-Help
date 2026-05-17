@@ -1,8 +1,10 @@
-# Using Local LLMs (Ollama)
+---
+title: "Using Local LLMs (Ollama)"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Ollama lets you run LLMs locally for privacy and offline translation.
 
@@ -20,6 +22,6 @@ ollama pull llama3
 
 Once Ollama is installed and running, Supervertaler can use it as a provider.
 
-{% hint style="info" %}
+:::note
 Local models vary a lot in quality. For best results, test a few models on your typical content.
-{% endhint %}
+:::

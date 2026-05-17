@@ -1,8 +1,10 @@
-# Context Awareness
+---
+title: "Context Awareness"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The Supervertaler Assistant is deeply integrated with your Trados project. Every time you send a chat message, translate a batch of segments, or ask AutoPrompt to draft a prompt, the assistant assembles a fresh snapshot of your current work and hands it to the AI. This snapshot is the **context** – everything the AI sees before it produces a reply.
 
@@ -79,23 +81,23 @@ That said, more context is not automatically better. The AI's context window is 
 - including **full document content** for a very long document may leave too little room for memory bank articles to load;
 - layering **three overlapping sources** (TM + termbase + memory bank) on the same concept may produce contradictions the AI has to reconcile on the fly.
 
-{% hint style="info" %}
+:::note
 **Composing tip:** for clients where you have a well-built memory bank, try running a small batch with TM matches disabled and compare the output to a run with everything enabled. The cleaner prompt often produces more consistent terminology, because the memory bank already knows which wording the client prefers and the TM matches are no longer adding anything the bank does not already say better. For unfamiliar domains or one-off projects, keep everything enabled – the TM and termbase are carrying the weight there.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 We have not yet published composition presets (e.g. "Mature client – memory bank only", "Unfamiliar domain – TM + termbase"). Until we do, the sensible approach is to leave everything enabled by default and experiment on a per-project basis. If you find a configuration that works particularly well for your workflow, drop a note in the [community forum](https://translationtech.io).
-{% endhint %}
+:::
 
 ## Controlling the context
 
-{% hint style="info" %}
+:::note
 You can control exactly what context the assistant receives. In the settings dialogue on the **AI Settings** tab, you can toggle document content, TM matches, term metadata, memory bank context, and select which termbases contribute to the AI prompt.
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::tip
 **Tip:** The document-type analysis is especially valuable – it helps the AI understand that "consideration" means something different in a legal contract than in a marketing brochure. Keep full document content and memory bank context enabled unless you have a specific reason to disable them.
-{% endhint %}
+:::
 
 ## See Also
 

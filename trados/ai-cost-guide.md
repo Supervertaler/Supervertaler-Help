@@ -1,14 +1,16 @@
-# AI Cost Guide
+---
+title: "AI Cost Guide"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 This page explains how AI costs work in Supervertaler for Trados and how to keep them under control. It deliberately avoids quoting exact per-model prices – those change often, and Supervertaler already shows you the **real, current cost** of every operation in the **Reports** tab. For exact figures, see [Estimates vs actual cost](#estimates-vs-actual-cost) below.
 
-{% hint style="info" %}
+:::note
 AI provider costs are **separate** from your Supervertaler licence. You pay the AI provider directly for the tokens your requests consume. Supervertaler does not add any markup.
-{% endhint %}
+:::
 
 ### Estimates vs actual cost
 
@@ -69,9 +71,9 @@ To see what a model **actually** costs for your work, run one operation and chec
 
 ### Our recommendation
 
-{% hint style="success" %}
+:::tip
 **If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 4.6.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content – at a cost that works out to a small fraction of a cent per segment.
-{% endhint %}
+:::
 
 For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 3.1 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.7** or **GPT-5.5** are worth the premium.
 
@@ -106,9 +108,9 @@ If a request is estimated to cost more than $0.50 in input tokens, a confirmatio
 
 <figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-{% hint style="info" %}
+:::note
 **Keep an eye on the cost indicators.** Every AI response in the chat shows the estimated token count and cost. You can also review all prompts and their costs in the **Reports** tab.
-{% endhint %}
+:::
 
 #### Choosing the right model
 

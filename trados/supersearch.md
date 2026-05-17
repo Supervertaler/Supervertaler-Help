@@ -1,8 +1,10 @@
-# SuperSearch
+---
+title: "SuperSearch"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 {% embed url="https://youtu.be/549Ulc92FiU" %}
 SuperSearch in action – cross-file search across a Trados project
@@ -24,13 +26,13 @@ There are three ways to open SuperSearch:
 
 The panel docks at the bottom of the editor by default, but you can drag it anywhere -- left, right, floating, or even to a second monitor. Trados remembers the position between sessions.
 
-{% hint style="info" %}
+:::note
 **Prefer fewer panels?** You can host SuperSearch as a tab inside the Supervertaler Assistant panel instead of its own dockable panel. Go to **Settings > General > Panels** and tick **Show SuperSearch as a tab in the Supervertaler Assistant panel**, then restart Trados Studio. This requires a Supervertaler Assistant licence; without one, SuperSearch stays in its own panel.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 **Quick search from the editor:** Select a word or phrase in the source or target segment, then press **Alt+S** (or right-click > **SuperSearch**). The selected text is automatically entered in the search box and the search runs immediately.
-{% endhint %}
+:::
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
@@ -54,9 +56,9 @@ Translation-memory results are found via the project's attached file-based TMs (
 
 The TM list is re-checked every time you search, so a TM you attach to the project mid-session is picked up without reopening the project. SuperSearch searches every attached TM regardless of its **Enabled** / **Concordance** state in the project's TM settings — use the **TMs** button (see below) to narrow the list.
 
-{% hint style="info" %}
+:::note
 TM results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. In **TMs only** mode the Replace bar is therefore disabled.
-{% endhint %}
+:::
 
 ### Search Options
 
@@ -106,9 +108,9 @@ Click either button to open its selection dialog:
 
 The **Files** filter applies in **Project files** and **Files + TMs** modes; the **TMs** filter applies in **Files + TMs** and **TMs only** modes.
 
-{% hint style="info" %}
+:::note
 Both selections persist for the current session. When you switch to a different project, all files and all TMs are included again by default.
-{% endhint %}
+:::
 
 ## Navigating to a Segment
 
@@ -132,13 +134,13 @@ Tick the **Replace** checkbox to reveal the replace bar. Replace always operates
 * For the **active file**: changes go through the Trados API, so they appear immediately and are tracked in Trados's undo history.
 * For **other files**: the SDLXLIFF XML is modified directly on disk. You need to reopen those files to see the changes.
 
-{% hint style="warning" %}
+:::caution
 **Replace All cannot be undone** for files modified on disk. Always review the search results carefully before replacing. Consider saving your project first.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 Replace respects the same **Aa** (case sensitivity) and **.\*** (regex) settings as search. When using regex, you can use capture groups in the replacement (e.g., `$1`, `$2`).
-{% endhint %}
+:::
 
 ### Matches that span inline tags are skipped
 
@@ -160,9 +162,9 @@ When the **.\*** checkbox is enabled, the search query is treated as a .NET regu
 | `"[^"]*"`        | Anything inside double quotes                       |
 | `\s{2,}`         | Two or more consecutive whitespace characters       |
 
-{% hint style="info" %}
+:::note
 Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` and replace with `$2 $1` to swap two words.
-{% endhint %}
+:::
 
 ## Keyboard Shortcuts
 

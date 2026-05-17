@@ -1,8 +1,10 @@
-# Quick Start Guide
+---
+title: "Quick Start Guide"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 This guide will get you translating in under 5 minutes.
 
@@ -12,9 +14,9 @@ If you're not sure where to begin: import a file, translate a few segments, then
 
 Launch the application by running `Supervertaler.exe` (Windows) or `python Supervertaler.py` (from source).
 
-{% hint style="info" %}
+:::note
 If you want to use AI translation, set up your API keys first: [Setting Up API Keys](api-keys.md).
-{% endhint %}
+:::
 
 ## Step 2: Import a Document
 
@@ -29,9 +31,9 @@ If you want to use AI translation, set up your API keys first: [Setting Up API K
 3. Select source and target languages when prompted
 4. Your document appears in the translation grid
 
-{% hint style="info" %}
+:::note
 If you're working with memoQ/Trados/Phrase/CafeTran, always choose the matching import option so tags and statuses round-trip correctly.
-{% endhint %}
+:::
 
 ## Step 3: Navigate the Grid
 
@@ -69,9 +71,9 @@ Most navigation is designed to feel memoQ-like: arrow keys move within a cell, a
 3. Review and edit if needed
 4. Confirm the segment when you're happy
 
-{% hint style="info" %}
+:::note
 If AI translation isn't available yet, double-check provider setup in [Setting Up API Keys](api-keys.md).
-{% endhint %}
+:::
 
 ## Step 5: Save Your Project
 
@@ -87,9 +89,9 @@ If AI translation isn't available yet, double-check provider setup in [Setting U
    * **Bilingual Table** - Side-by-side source/target
    * **Return Package** - For CAT tool workflows
 
-{% hint style="warning" %}
+:::caution
 For CAT tool workflows, always export the matching return format (for example, SDLRPX for Trados return packages) to preserve tags and statuses.
-{% endhint %}
+:::
 
 ***
 

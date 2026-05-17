@@ -1,8 +1,10 @@
-# AutoPrompt
+---
+title: "AutoPrompt"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 AutoPrompt uses AI to analyse your entire project and generate a comprehensive, domain-specific translation prompt tailored to your document. The generated prompt includes terminology rules, style guidelines, anti-truncation controls, and domain-specific instructions – ready to use with Batch Translate.
 
@@ -25,9 +27,9 @@ Supervertaler gathers the following data from your project and sends it to your 
 | **Translated segments** | Human-confirmed segments only (Translated, Approved, or Signed-off status) – used as TM reference pairs and style anchors. Unconfirmed AI-generated translations are excluded. |
 | **Language pair**       | Embedded in the generated prompt                                                                                                                                               |
 
-{% hint style="info" %}
+:::note
 The full document is sent to the AI for analysis. For a typical 30,000-word document, this costs approximately $0.20–$0.25 with a Sonnet-class model, or $1.00–$1.15 with an Opus-class model.
-{% endhint %}
+:::
 
 **2b. TermScan – automatic glossary extraction**
 
@@ -37,13 +39,13 @@ This dramatically reduces the glossary size – for example, a general patent te
 
 The filtering is case-insensitive and checks all variants of each term (source term, abbreviation forms, and synonyms). Terms that do not appear anywhere in the source text are excluded entirely.
 
-{% hint style="warning" %}
+:::caution
 **TermScan filters by content, not by domain.** A patent termbase contains many common technical words – "system", "board", "fan", "screen", "installation" – that will match nearly any engineering document. TermScan will include those entries even though they belong to a completely different translation context, and the AI will be forced to follow them. **Before running AutoPrompt, disable every termbase that does not belong to the current project's domain.** Use [AI Settings](settings/ai-settings.md) → _Termbases included in AI prompts_ to control which termbases contribute to the generated prompt without affecting your TermLens display.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Termbase quality matters.** Only enable termbases in [AI Settings](settings/ai-settings.md) if you are confident they contain accurate, high-quality terminology for your project. A poorly maintained termbase with incorrect or outdated translations will constrain the AI and produce worse results. Modern LLMs – especially Opus-class and GPT-4-class models – are often better at choosing the right translation on their own than when forced to follow a low-quality glossary. When in doubt, disable termbases and let the AI translate freely, then add terms incrementally as you review.
-{% endhint %}
+:::
 
 **3. Domain detection**
 
@@ -78,9 +80,9 @@ When you are satisfied with the generated prompt:
 
 The prompt is saved to the **Translate** category in the Prompt Manager and immediately appears in the prompt dropdown on the Batch Operations tab.
 
-{% hint style="info" %}
+:::note
 **Generated prompts are formatted in proper Markdown** – `##` headings for each major section, `-` bullet lists, `**bold**` for emphasised terms, and a Markdown table for the project-specific glossary. Open one in Obsidian, VS Code, GitHub, or any Markdown-aware viewer and it renders cleanly with a navigable outline. The prompt is also still a perfectly valid system prompt for the translator AI – the Markdown markup is structural, not output instruction.
-{% endhint %}
+:::
 
 #### Translator's Comment methodology (always-on)
 
@@ -98,13 +100,13 @@ Since v4.19.111, every AutoPrompt-generated prompt embeds the **Translator's Com
 
 The defect categories that count as "obvious" are adapted to the actual source language by the LLM (Dutch -d/-t verb typos, German missing umlauts, French accent slips, Spanish/Italian conjugation typos, etc.).
 
-{% hint style="info" %}
+:::note
 **The markers appear inline in the target segment** in Trados Studio – they are not yet auto-extracted into the Studio comments panel. Extraction into the existing Studio comment infrastructure is a planned follow-up; the spec is locked (⟦ and ⟧ delimiters never collide with source text) so the extraction step is small once it gets prioritised.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Want a generated prompt without the TC methodology?** Edit the generated prompt in the Prompt Manager after creation and remove the TRANSLATOR COMMENT FORMAT section plus any TRANSLATION MANDATE language about silent correction. A per-project opt-out via a UI toggle may be added in a future version – open an issue if you'd like to see it.
-{% endhint %}
+:::
 
 #### What the Generated Prompt Contains
 
@@ -137,17 +139,17 @@ Before clicking AutoPrompt, go to **AI Settings → Termbases included in AI pro
 
 This setting is independent of your TermLens display: disabling a termbase for AI context does not hide its chips in the editor. You can keep a termbase visible for reference while excluding it from the generated prompt.
 
-{% hint style="info" %}
+:::note
 **Prefer compact, project-specific termbases.** A small termbase of 50–200 carefully curated entries for this client will produce a far better glossary than a general termbase of 2,000 entries, even after TermScan filtering. Large termbases increase the chance of incorrect or misleading entries being injected into the prompt.
-{% endhint %}
+:::
 
 **Review the glossary section**
 
 The generated prompt includes only the document-relevant terms extracted by TermScan from your enabled termbases. Check that the glossary accurately reflects your terminology preferences. You can ask the AI to reorganise terms by category or add missing mappings.
 
-{% hint style="warning" %}
+:::caution
 If your termbase contains incorrect or low-quality entries, these will be injected into the prompt and the AI will be forced to follow them. Only enable termbases that you trust. When starting a new project with no established terminology, consider disabling termbases entirely and letting the AI translate freely – then add terms as you review.
-{% endhint %}
+:::
 
 **Use with Batch Translate**
 

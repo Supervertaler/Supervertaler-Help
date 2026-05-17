@@ -1,8 +1,10 @@
-# File Attachments
+---
+title: "File Attachments"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The Supervertaler Assistant supports attaching both images and documents to your messages. Use the **paperclip button** next to the chat input, or drag and drop files directly onto the chat area.
 
@@ -39,13 +41,13 @@ The chat bubble shows a compact summary (file name and size) instead of the full
 | Translation files  | TMX, SDLXLIFF, XLIFF/XLF, TBX     |
 | Text and markup    | TXT, Markdown, HTML, JSON, XML     |
 
-{% hint style="info" %}
+:::note
 Up to **5 documents** per message, **20 MB** maximum per file. Very large documents are automatically truncated to avoid exceeding AI context limits. Legacy binary formats (DOC, XLS, PPT) use best-effort text extraction -- for best results, save as the modern format (DOCX, XLSX, PPTX) first.
-{% endhint %}
+:::
 
-{% hint style="success" %}
+:::tip
 **Tip:** Attaching a client style guide or reference document alongside your translation question gives the AI much better context for providing accurate, style-consistent suggestions.
-{% endhint %}
+:::
 
 ## See Also
 

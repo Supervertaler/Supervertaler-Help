@@ -1,8 +1,10 @@
-# The Translation Grid
+---
+title: "The Translation Grid"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 The translation grid is where you spend most of your time: each row is a **segment** (usually a sentence or paragraph) with source and target text.
 
@@ -37,9 +39,9 @@ Common statuses include:
 - Proofread
 - Approved
 
-{% hint style="info" %}
+:::note
 If you plan to reimport into a CAT tool, do not merge/split content across segments. Segment boundaries must stay compatible.
-{% endhint %}
+:::
 
 ## Visual cues
 

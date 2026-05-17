@@ -1,8 +1,10 @@
-# Image Extractor (Superimage)
+---
+title: "Image Extractor (Superimage)"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 The Image Extractor pulls embedded images out of DOCX files and saves them as numbered PNG files. It also includes a built-in preview so you can quickly review what was extracted.
 
@@ -27,6 +29,6 @@ The Image Extractor pulls embedded images out of DOCX files and saves them as nu
 
 If you also use **Image Context**, you can load a folder of figures so Supervertaler can attach relevant images automatically during AI translation (for example when the text references “Figure 2A”).
 
-{% hint style="info" %}
+:::note
 Image Extractor is about getting the images out of DOCX. Image Context is about feeding those images into AI translation when needed.
-{% endhint %}
+:::

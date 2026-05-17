@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Trados Aware Chat"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 The **💬 Chat** tab in Workbench's right panel is a full AI assistant that supports OpenAI, Claude, Gemini, Ollama, and any OpenAI-compatible custom provider. When you have **Supervertaler for Trados** running with its Assistant panel active, Chat automatically picks up the project context from Trados – active segment, surrounding segments, TM matches, termbase hits, project metadata – and answers questions about your real translation work without you having to switch out of Trados.
 

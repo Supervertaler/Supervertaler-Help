@@ -1,8 +1,10 @@
-# Creating Prompts
+---
+title: "Creating Prompts"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Prompts control how the AI translates (tone, domain, rules, formatting).
 
@@ -13,9 +15,9 @@ Prompts control how the AI translates (tone, domain, rules, formatting).
 - Rules for numbers, punctuation, terminology
 - Instructions to preserve tags and placeholders
 
-{% hint style="warning" %}
+:::caution
 If your text contains formatting or CAT tool tags, instruct the model to preserve them exactly.
-{% endhint %}
+:::
 
 ## Quick checklist
 

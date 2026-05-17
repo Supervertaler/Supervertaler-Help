@@ -1,12 +1,16 @@
-{% hint style="info" %}
+---
+title: "Clipboard Mode"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Clipboard Mode lets you translate or proofread segments using **any web-based AI** – ChatGPT, Claude, Gemini, DeepSeek, or any other LLM with a chat interface – without needing an API key. Instead of sending segments to an AI provider via API, Supervertaler builds a ready-to-use prompt and copies it to your clipboard. You paste it into the AI of your choice, copy the response, and paste it back.
 
-{% hint style="success" %}
+:::tip
 **No API key? No problem.** Clipboard Mode is the fastest way to start using AI translation in Supervertaler for Trados. If you already have access to a web-based AI chat – and most people do these days – you can start translating immediately after installing the plugin. No API keys, no provider configuration, no per-token billing. Just tick Clipboard Mode, copy, paste, and translate.
-{% endhint %}
+:::
 
 Clipboard Mode is also ideal if you want to use a model that is not available via API, if you prefer a pay-as-you-go chat subscription, or if you want to try different AI models before committing to a specific provider's API.
 
@@ -100,9 +104,9 @@ Click <t1>here</t1> for details
 
 The AI is instructed to preserve these placeholders exactly as they appear. When you paste the response back, Supervertaler reconstructs the original Trados tags from the placeholders – the same tag reconstruction pipeline used by API-based Batch Translate.
 
-{% hint style="warning" %}
+:::caution
 If a tag is missing or malformed in the AI's response, Supervertaler reports a warning but still writes the translation. Check the log for any tag validation messages.
-{% endhint %}
+:::
 
 ## Choosing an AI Model
 
@@ -115,9 +119,9 @@ Any web-based LLM with a chat interface works with Clipboard Mode. Some recommen
 
 For best results, use the most capable model available in your subscription (e.g., Claude Opus, GPT-4o, Gemini Pro).
 
-{% hint style="info" %}
+:::note
 Most web-based AI chat interfaces have a context limit that determines how many segments you can process at once. If you have a large number of segments, consider using a smaller scope (e.g., Filtered Segments) or processing in multiple rounds.
-{% endhint %}
+:::
 
 ## Clipboard Mode vs API Mode
 
@@ -132,9 +136,9 @@ Most web-based AI chat interfaces have a context limit that determines how many 
 
 Both modes use the same prompts, terminology, document context, and tag handling – the only difference is how the text gets to and from the AI.
 
-{% hint style="info" %}
+:::note
 Many users start with Clipboard Mode to explore AI translation with zero setup, then move to API Mode later for larger projects where full automation is more efficient. The two modes complement each other – you can switch between them at any time by ticking or unticking the Clipboard Mode checkbox.
-{% endhint %}
+:::
 
 ## Combining with AutoPrompt – the hybrid pattern
 
@@ -149,9 +153,9 @@ Many users start with Clipboard Mode to explore AI translation with zero setup, 
 
 The result: paid API for the small-but-clever prompt-writing call, free web tier for the expensive bulk translation. You get the full AutoPrompt analysis pipeline (TermScan, domain detection, sampling of confirmed reference pairs) without paying per-token API rates for the bulk Translate.
 
-{% hint style="info" %}
+:::note
 If you want to run AutoPrompt without using any API key – for example before you have signed up for a provider – you'll need to use API Mode-only features (the in-app Chat panel) at least once for the prompt-generation step. There is currently no clipboard-only AutoPrompt path; AutoPrompt always sends the meta-prompt request to a configured provider.
-{% endhint %}
+:::
 
 ## Tips
 

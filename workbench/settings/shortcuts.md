@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Shortcuts"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler has one keyboard shortcut per action. The same combination works whether Supervertaler is the focused application or whether you trigger it from another app – there's no longer a separate "Global" entry to keep in sync with the in-app one.
 
@@ -22,9 +26,9 @@ The 🌍 actions and their out-of-the-box bindings:
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
 | Voice Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
 
-{% hint style="info" %}
+:::note
 **Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. Sidekick was retired in v1.10.4 and the chord is now unbound by default. The companion tabs (Clipboard, Voice, SuperLookup) are reachable via the dedicated hotkeys above; Chat lives in Workbench's right panel.
-{% endhint %}
+:::
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 

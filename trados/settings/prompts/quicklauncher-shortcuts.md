@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Quicklauncher Shortcuts"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 ### Marking a prompt as a QuickLauncher shortcut
 
@@ -24,9 +28,9 @@ Your prompt content here...
 
 You can also organise QuickLauncher prompts by placing them in a folder called `QuickLauncher` inside your `prompt_library` folder. Any prompt in that folder is automatically treated as a QuickLauncher prompt.
 
-{% hint style="info" %}
+:::note
 QuickLauncher prompts are shared with Supervertaler Workbench via the shared prompt library folder.
-{% endhint %}
+:::
 
 ### Keyboard shortcuts for QuickLauncher prompts
 

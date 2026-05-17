@@ -1,8 +1,10 @@
-# Changelog
+---
+title: "Changelog"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 This page shows you where to find **what changed between versions** of Supervertaler.
 

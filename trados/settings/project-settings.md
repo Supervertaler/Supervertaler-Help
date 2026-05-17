@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Project Settings"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Supervertaler for Trados automatically saves and restores your termbase configuration when you switch between Trados projects. This means each project can use its own Supervertaler database, write targets, and termbase settings without manual reconfiguration.
 
@@ -14,9 +18,9 @@ When you open a different Trados project (or switch to a document from another p
 
 If no project-specific settings exist yet (first time opening a project), the current global settings are used. Once you make any changes and click OK in Settings, those settings are saved for that project.
 
-{% hint style="info" %}
+:::note
 **No action needed:** Per-project settings work automatically in the background. Just configure your termbases as usual – the plugin remembers your choices per project.
-{% endhint %}
+:::
 
 ## What's saved per project
 
@@ -44,9 +48,9 @@ C:\Users\{you}\Supervertaler\trados\projects\
 
 Each file is named with a hash and the project name (e.g., `a1b2c3d4 - MyProject.json`). The JSON file also contains the original project path for reference.
 
-{% hint style="warning" %}
+:::caution
 **Moving a Trados project** to a different folder creates a new project key. The plugin will treat it as a new project and use global defaults until you reconfigure. The old project settings file remains in the `projects` folder and can be safely deleted.
-{% endhint %}
+:::
 
 ## Interaction with global settings
 

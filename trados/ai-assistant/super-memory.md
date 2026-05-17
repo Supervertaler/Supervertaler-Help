@@ -1,10 +1,7 @@
 ---
-description: >-
-  Supervertaler's self-organising translation knowledge base system, organised
-  into memory banks
+title: "SuperMemory"
+description: ">-"
 ---
-
-# SuperMemory
 
 **SuperMemory** is Supervertaler's self-organising translation knowledge base system – a [Karpathy-inspired](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) feature that captures the reasoning behind your translation decisions and makes it available to the AI on every translation. Where a translation memory gives the AI previous wordings and a termbase gives it approved term pairs, SuperMemory gives it the _why_: client preferences, rejected alternatives, domain conventions, style rules, and the accumulated institutional knowledge for each piece of work.
 
@@ -113,9 +110,9 @@ Once a bank exists, you fill it with knowledge in one of several ways:
 
 The result is a knowledge graph that grows with your work and that the AI consults before every translation.
 
-{% hint style="info" %}
+:::note
 **Markdown vs binary files in the inbox.** Process Inbox is a Markdown compiler – it reads `.md` files only. Distill is the feature that reads binary formats (TMX, DOCX, PDF, XLSX, termbases) and turns them into Markdown. If you drop a TMX or PDF in `00_INBOX/` directly, Process Inbox will spot it and tell you to run Distill on it instead, rather than silently ignoring the file. See [Process Inbox](super-memory/process-inbox.md#markdown-only-use-distill-for-everything-else) for the full table.
-{% endhint %}
+:::
 
 ### Templates and the heal-on-activation prompt
 

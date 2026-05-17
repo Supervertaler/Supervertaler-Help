@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Quicktrans Popup"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 The **QuickTrans Popup** is a small always-on-top window that shows machine translations of the currently-selected text from every enabled provider, all at once. Select text anywhere on your computer, press the QuickTrans hotkey, and the popup appears with translations streaming in as each provider responds.
 

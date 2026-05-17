@@ -1,8 +1,10 @@
-# Supervertaler for Trados
+---
+title: "Supervertaler for Trados"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 _Help system last updated: 24 April 2026 (for plugin v4.19.25)_
 

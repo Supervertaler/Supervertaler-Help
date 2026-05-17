@@ -1,8 +1,10 @@
-# Supported File Formats
+---
+title: "Supported File Formats"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Supervertaler can import and export several formats depending on your workflow.
 
@@ -28,9 +30,9 @@ The bundled **Okapi sidecar** lets Supervertaler round-trip a wider set of forma
 
 Okapi extracts the translatable content from the source file plus a *skeleton* file that preserves the original structure. You translate the extracted content; the merge step combines your translation with the skeleton to reconstruct the original format with the new text in place.
 
-{% hint style="info" %}
+:::note
 **Tag handling**: when you see `<g1>` / `</g1>` / `<x2/>` markers in the source segment, leave them in the translation in the same positions. They map back to inline elements like links, buttons, or formatting runs in the original file.
-{% endhint %}
+:::
 
 ## CAT tool exchange formats
 
@@ -51,9 +53,9 @@ Use these formats when you need to round-trip back into a CAT tool.
 
 - **Folder import (Multiple Files)**: import a folder containing DOCX/TXT files into a single multi-file project.
 
-{% hint style="warning" %}
+:::caution
 For CAT tool round-trips, always import and export the matching CAT format. Mixing formats can break tags/statuses on reimport.
-{% endhint %}
+:::
 
 ## Related pages
 

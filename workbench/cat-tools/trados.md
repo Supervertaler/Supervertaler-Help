@@ -1,19 +1,21 @@
-# Trados Studio Workflow
+---
+title: "Trados Studio Workflow"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 **Using Supervertaler for Trados (plugin)?** For documentation on the Trados Studio plugin (TermLens, AI Assistant, Batch Translate), see [Supervertaler for Trados](../supervertaler-for-trados/README.md).
 This page covers the SDLPPX round-trip workflow using Supervertaler as a **standalone application**.
-{% endhint %}
+:::
 
 This guide covers working with Trados Studio packages in Supervertaler.
 
-{% hint style="success" %}
+:::tip
 **Just want to consult a Trados TM?** If you don't need to round-trip a project – you only want to query a Trados `.sdltm` file from Supervertaler while it stays in use in Trados – you don't need an SDLPPX package at all. See [Attaching a Trados TM (.sdltm)](../translation-memory/trados-sdltm.md).
-{% endhint %}
+:::
 
 ## Recommended: SDLPPX Packages
 
@@ -32,9 +34,9 @@ The best way to work with Trados Studio is using **project packages** (SDLPPX fi
 2. Select your `.sdlppx` file
 3. Supervertaler extracts and loads all segments
 
-{% hint style="success" %}
+:::tip
 **Tip**: Package paths are saved in your `.svproj` file, so you can re-export to the same package later.
-{% endhint %}
+:::
 
 ## Translate in Supervertaler
 
@@ -61,9 +63,9 @@ These are highlighted in the grid for visibility.
 2. The return package is created with your translations
 3. Segment status is updated to "Translated"
 
-{% hint style="info" %}
+:::note
 The SDLRPX is created from your original SDLPPX with translations inserted.
-{% endhint %}
+:::
 
 ## Import Back to Trados
 
@@ -94,9 +96,9 @@ Trados Bilingual Review DOCX is designed for **review only**, not translation:
 5. **Translate** and export
 6. **Re-import to Trados**: Merge into project
 
-{% hint style="warning" %}
+:::caution
 This workaround is tedious. Use SDLPPX packages whenever your client provides them.
-{% endhint %}
+:::
 
 ---
 

@@ -1,8 +1,10 @@
-# Incognito Mode
+---
+title: "Incognito Mode"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Incognito Mode tells the AI to **anonymise all personal and project data** in its responses. When enabled, project names, file paths, TM names, user names, and other identifying information are automatically replaced with plausible placeholders -- so you can share your screen, record videos, or post screenshots without worrying about exposing confidential client data.
 
@@ -51,13 +53,13 @@ Some data is left untouched because it carries no identifying information:
 
 The setting takes effect immediately on your next message. Toggle it off when you no longer need anonymisation.
 
-{% hint style="success" %}
+:::tip
 **Tip:** The setting persists across Trados sessions, so remember to toggle it off when you are done sharing. You do not want anonymised data in your regular workflow -- it can make the AI's answers less specific.
-{% endhint %}
+:::
 
-{% hint style="info" %}
+:::note
 Incognito Mode works with all AI providers, not just Claude. The anonymisation instructions are included in the system prompt that every provider receives.
-{% endhint %}
+:::
 
 ## Limitations
 

@@ -1,8 +1,10 @@
-# Glossary Search
+---
+title: "Glossary Search"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Superlookup’s **Glossaries** tab searches your Supervertaler glossaries (termbases) for preferred terminology.
 
@@ -49,6 +51,6 @@ This navigates to **Project resources → Glossaries**, selects the glossary, an
 
 In **Superlookup → Settings → Termbases**, you can pick which glossaries Superlookup searches.
 
-{% hint style="info" %}
+:::note
 If you don’t select any glossaries in the Superlookup Settings tab, Superlookup searches **all available** glossaries.
-{% endhint %}
+:::

@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Trados Sdltm"
+---
+
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 You can attach a Trados Studio Translation Memory (`.sdltm` file) directly to Supervertaler and consult it for matches – without exporting it to TMX first, and without closing Trados.
 

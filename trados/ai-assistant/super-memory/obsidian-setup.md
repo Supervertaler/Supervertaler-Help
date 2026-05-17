@@ -1,8 +1,7 @@
 ---
-description: Setting up Obsidian for your memory banks
+title: "Obsidian Setup"
+description: "Setting up Obsidian for your memory banks"
 ---
-
-# Obsidian Setup
 
 Memory banks store all knowledge as Markdown files, which you can browse and edit with any text editor. For the best experience, we recommend [Obsidian](https://obsidian.md/) -- a free knowledge-base app that visualises the links between your articles as an interactive graph.
 
@@ -34,9 +33,9 @@ The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extens
 
 Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it drops straight into that bank's inbox. Next time you click **[Process Inbox](process-inbox.md)** with that bank active in the toolbar, the AI organises it into structured articles.
 
-{% hint style="info" %}
+:::note
 If you keep several memory banks, create one Web Clipper template per bank so you can choose the destination from the clipper dropdown at clip time.
-{% endhint %}
+:::
 
 ## Recommended plugins
 

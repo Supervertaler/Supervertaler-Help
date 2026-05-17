@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Licensing"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 Supervertaler for Trados uses a simple subscription model: one product, one price, everything included.
 
@@ -18,9 +22,9 @@ No sign-up or credit card is required to start the trial. The remaining days are
 
 One plan, all features included: TermLens inline terminology, AI Assistant & Batch Translate, SuperSearch cross-file search & replace, AI-maintained memory banks, Studio Tools, Clipboard Mode, QuickLauncher, Prompt Library, MultiTerm support, Incognito Mode, and all future features.
 
-{% hint style="info" %}
+:::note
 Annual plans include **2 months free** compared to monthly billing.
-{% endhint %}
+:::
 
 ## Purchasing a Licence
 
@@ -41,9 +45,9 @@ Your licence allows activation on up to **2 machines** (e.g. a desktop and a lap
 
 A confirmation message appears when activation succeeds. The Licence tab shows your plan name, masked licence key, status, and last verification date.
 
-{% hint style="success" %}
+:::tip
 You can also reach the Licence tab by clicking the licence status text in the **About** dialogue (accessible via the **?** button on any panel).
-{% endhint %}
+:::
 
 ## Managing Your Subscription
 
@@ -87,6 +91,6 @@ The licence validation sends only your licence key and a hashed machine fingerpr
 
 Your API keys are stored locally in `%LocalAppData%\Supervertaler.Trados\settings.json` and are never transmitted anywhere except to your chosen AI provider.
 
-{% hint style="info" %}
+:::note
 The full source code is available on [GitHub](https://github.com/Supervertaler/Supervertaler-for-Trados) for security audit. You can verify exactly what the plugin does and does not transmit.
-{% endhint %}
+:::

@@ -1,8 +1,10 @@
-# Importing DOCX Files
+---
+title: "Importing DOCX Files"
+---
 
-{% hint style="info" %}
+:::note
 You are viewing help for 🖥️ **Supervertaler Workbench** – the free, open-source standalone translation app. Looking for help with the Trados Studio plugin? Visit 🧩 [Supervertaler for Trados help](https://supervertaler.gitbook.io/help/trados/).
-{% endhint %}
+:::
 
 Use DOCX import for normal Word documents (not CAT tool bilingual formats).
 
@@ -36,6 +38,6 @@ When you later export back to DOCX, Supervertaler reconstructs the original docu
 
 The Okapi sidecar requires Java – Supervertaler ships a bundled JRE, so this is normally invisible. If the sidecar fails to start (Java missing, port 8090 blocked by another process, …) you'll see an "Okapi sidecar required" dialogue with troubleshooting steps. DOCX import won't fall back silently to a degraded engine.
 
-{% hint style="info" %}
+:::note
 Need OCR? Use [PDF Rescue (OCR)](../tools/pdf-rescue.md) to turn scanned PDFs into editable DOCX before importing.
-{% endhint %}
+:::

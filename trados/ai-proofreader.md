@@ -1,6 +1,10 @@
-{% hint style="info" %}
+---
+title: "Ai Proofreader"
+---
+
+:::note
 You are viewing help for 🧩 **Supervertaler for Trados** – the Trados Studio plugin. Looking for help with the standalone app? Visit 🖥️ [Supervertaler Workbench help](https://supervertaler.gitbook.io/help/get-started-1/workbench/).
-{% endhint %}
+:::
 
 The AI Proofreader checks your translated segments for errors using AI. It identifies issues such as mistranslations, omissions, grammar problems, and inconsistencies, and presents the results as clickable issue cards in the **Reports** tab.
 
@@ -31,9 +35,9 @@ When in Proofread mode, the prompt dropdown shows only prompts with the **Proofr
 
 If no prompt is selected, the AI uses a default proofreading instruction that checks for accuracy, completeness, grammar, and consistency.
 
-{% hint style="info" %}
+:::note
 You can create custom proofreading prompts in the [Prompt Manager](settings/prompts.md). Set the category to **Proofread** so they appear in the dropdown when proofreading.
-{% endhint %}
+:::
 
 ### Default Proofreading Prompt
 
@@ -46,9 +50,9 @@ What the default prompt *does* add:
 * **Source query distinction.** If the source itself contains an error (typo, duplication, missing word, internal inconsistency), the AI prefixes the Issue line with **"Source query:"** and notes whether the translation handled it correctly. A faithful rendering of a flawed source is not a translation error.
 * **Explicit boundaries.** The AI does not re-engineer the source, propose alternative terminology without a citation, flag stylistic preferences as errors, or flag empty target lines (those mean the segment hasn't been translated yet).
 
-{% hint style="info" %}
+:::note
 **If you want to customise:** clone the default in the [Prompt Manager](settings/prompts.md) and edit your copy. The default itself is read-only and gets refreshed when the plugin updates. Your clone keeps all your changes.
-{% endhint %}
+:::
 
 ## Reports Tab
 
@@ -95,9 +99,9 @@ Batch Proofread builds a richer context than Batch Translate – it has to, beca
 
 TM matches and surrounding segments are **not** included in proofreading – these are Chat & QuickLauncher features only. See the [AI Settings](settings/ai-settings.md) page for a full comparison table.
 
-{% hint style="warning" %}
+:::caution
 **Token cost:** Sending the full bilingual document roughly doubles the context size compared to source-only. For typical patent / legal / technical jobs (under ~500 segments) this is a minor cost increase – usually a few extra cents per batch on Sonnet-class models. For very long documents the cost scales linearly; if you proofread a 5,000-segment book you may want to disable Include document context and rely on per-batch context only.
-{% endhint %}
+:::
 
 ## Clipboard Mode
 
