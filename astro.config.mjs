@@ -13,6 +13,15 @@ export default defineConfig({
       title: 'Supervertaler Help',
       description: 'Help and documentation for the Supervertaler suite — Trados Studio plugin and Workbench standalone app.',
 
+      // Component overrides — see ./src/components/ for the customisations.
+      // Head: injects per-page Pagefind product filter metadata.
+      // Search: replaces the default Pagefind UI with a custom one that
+      //         scopes by current section and groups results by product.
+      components: {
+        Head: './src/components/Head.astro',
+        Search: './src/components/Search.astro',
+      },
+
       // Two genuinely separate product trees in the sidebar.  Each product
       // gets its own top-level group, auto-generated from the folder.  This
       // is the first cut — restructure to mirror the SUMMARY.md sections

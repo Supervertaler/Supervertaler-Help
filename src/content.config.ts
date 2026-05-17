@@ -27,6 +27,23 @@ export const collections = {
         'index.mdx',
       ],
       base: './',
+      // GitBook's convention is that `<folder>/README.md` is the homepage
+      // for that folder.  Astro / Starlight defaults treat README as a
+      // regular page, so without this rewrite `trados/README.md` would
+      // be served at `/trados/readme/` and `/trados/` would 404.  We
+      // rewrite the entry id so README pages become the directory index:
+      //
+      //   trados/README.md       → id "trados"   → URL /trados/
+      //   workbench/README.md    → id "workbench" → URL /workbench/
+      //   trados/installation.md → id "trados/installation" → URL /trados/installation/
+      //   index.mdx              → id "index"   → URL /  (Starlight default)
+      //
+      // The rewrite preserves the GitBook convention without renaming
+      // any files (which would break the GitBook sync running in parallel).
+      generateId: ({ entry }) => {
+        const noExt = entry.replace(/\.(md|mdx)$/i, '');
+        return noExt.replace(/(^|\/)README$/i, '');
+      },
     }),
     schema: docsSchema(),
   }),

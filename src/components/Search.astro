@@ -1,0 +1,725 @@
+---
+/**
+ * Custom Search component for Starlight.
+ *
+ * Replaces the default Pagefind UI with a context-aware grouped-results
+ * implementation:
+ *
+ *   - Default search scope = the product the user is currently in
+ *     (detected from URL path).  A "Searching: 🧩 Supervertaler for Trados"
+ *     chip at the top of the modal lets the user clear scope to All.
+ *
+ *   - Results are grouped by product.  Current-section results render
+ *     first.  Other-section results render below in a collapsed
+ *     "Also from <other product>" group that the user can expand.
+ *
+ *   - Each result shows a 🧩 or 🖥️ badge next to its title so even mixed
+ *     results are instantly distinguishable.
+ *
+ *   - Keyboard: Cmd/Ctrl+K opens, Esc closes, ↑/↓ navigate results,
+ *     Enter opens the highlighted result.
+ *
+ *   - Uses the Pagefind JS API directly (loaded from /pagefind/pagefind.js
+ *     after build).  No dependency on Pagefind's default UI bundle.
+ */
+import type { Props } from '@astrojs/starlight/props';
+
+const { labels } = Astro.props;
+const placeholder = labels?.['search.label'] ?? 'Search';
+---
+
+<sv-search class="search-root">
+  <button
+    type="button"
+    class="search-trigger"
+    aria-label={placeholder}
+    aria-keyshortcuts="Control+K"
+    data-open
+  >
+    <svg
+      aria-hidden="true"
+      class="search-icon"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+    >
+      <path
+        d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"
+      ></path>
+    </svg>
+    <span class="search-label">{placeholder}</span>
+    <kbd class="search-shortcut">
+      <kbd>Ctrl</kbd><kbd>K</kbd>
+    </kbd>
+  </button>
+
+  <dialog class="search-dialog" aria-label="Search the docs">
+    <div class="search-dialog-frame">
+      <header class="search-header">
+        <div class="search-scope" data-scope-bar>
+          <span class="search-scope-label">Searching:</span>
+          <span class="search-scope-name" data-scope-name>All docs</span>
+          <button
+            type="button"
+            class="search-scope-clear"
+            data-scope-clear
+            aria-label="Clear scope and search all docs"
+            hidden
+          >
+            ✕ Clear
+          </button>
+        </div>
+        <button
+          type="button"
+          class="search-close"
+          data-close
+          aria-label="Close search"
+        >
+          ✕
+        </button>
+      </header>
+
+      <div class="search-input-wrap">
+        <svg
+          aria-hidden="true"
+          class="search-icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+        >
+          <path
+            d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"
+          ></path>
+        </svg>
+        <input
+          type="search"
+          class="search-input"
+          placeholder="Type to search…"
+          autocomplete="off"
+          spellcheck="false"
+          data-input
+          aria-label="Search input"
+        />
+      </div>
+
+      <div class="search-results" data-results aria-live="polite">
+        <p class="search-empty">Start typing to search the docs.</p>
+      </div>
+    </div>
+  </dialog>
+</sv-search>
+
+<style is:global>
+  /* ── sv-search (custom element) — must flex-grow to claim the
+        empty header space, otherwise the trigger button inside has
+        room to grow but no container to grow into.
+        Left-aligned (justify-content: flex-start) with a small gap
+        from the title so the search box approximately aligns with
+        where the main content column begins on wide monitors, rather
+        than floating in the centre of the header.  ──────────────── */
+  sv-search.search-root {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-start;
+    min-width: 0;                  /* allow shrinking on narrow viewports */
+    margin-inline-start: 2rem;     /* breathing room from the site title */
+    margin-inline-end: 0.75rem;    /* breathing room from the right-side icons */
+  }
+
+  /* ── Trigger button (in the header) ────────────────────────────── */
+  .search-root .search-trigger {
+    align-items: center;
+    background-color: var(--sl-color-black);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+    display: flex;
+    font-family: var(--sl-font);
+    font-size: var(--sl-text-sm);
+    gap: 0.5rem;
+    height: 2.25rem;
+    padding-inline: 0.75rem;
+    /* Fill the sv-search container; the parent's flex:1 supplies the
+       width.  Max-width caps it on very wide screens so it doesn't
+       stretch absurdly. */
+    width: 100%;
+    max-width: 48rem;
+  }
+  .search-root .search-trigger:hover {
+    border-color: var(--sl-color-gray-4);
+    color: var(--sl-color-white);
+  }
+  .search-root .search-label {
+    flex: 1;
+    text-align: start;
+  }
+  .search-root .search-shortcut {
+    align-items: center;
+    color: var(--sl-color-gray-3);
+    display: none;
+    font-family: var(--sl-font-system-mono);
+    font-size: var(--sl-text-xs);
+    gap: 0.125rem;
+  }
+  @media (min-width: 50rem) {
+    .search-root .search-shortcut {
+      display: inline-flex;
+    }
+  }
+  .search-root .search-shortcut kbd {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  /* ── Dialog ────────────────────────────────────────────────────── */
+  .search-dialog {
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.75rem;
+    color: var(--sl-color-white);
+    inset: 0;
+    margin: auto;
+    max-height: min(80vh, 40rem);
+    max-width: 48rem;
+    padding: 0;
+    width: 90vw;
+  }
+  .search-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+  }
+  .search-dialog-frame {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: inherit;
+  }
+
+  /* ── Header (scope chip + close) ───────────────────────────────── */
+  .search-header {
+    align-items: center;
+    border-bottom: 1px solid var(--sl-color-gray-6);
+    display: flex;
+    gap: 0.75rem;
+    justify-content: space-between;
+    padding: 0.625rem 0.875rem;
+  }
+  .search-scope {
+    align-items: center;
+    color: var(--sl-color-gray-3);
+    display: flex;
+    font-size: var(--sl-text-sm);
+    gap: 0.375rem;
+  }
+  .search-scope-name {
+    color: var(--sl-color-white);
+    font-weight: 600;
+  }
+  .search-scope-clear {
+    background: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.375rem;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+    font-size: var(--sl-text-xs);
+    margin-inline-start: 0.25rem;
+    padding: 0.125rem 0.4375rem;
+  }
+  .search-scope-clear:hover {
+    background: var(--sl-color-gray-5);
+    color: var(--sl-color-white);
+  }
+  .search-close {
+    background: transparent;
+    border: none;
+    color: var(--sl-color-gray-3);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+  .search-close:hover {
+    color: var(--sl-color-white);
+  }
+
+  /* ── Input ─────────────────────────────────────────────────────── */
+  .search-input-wrap {
+    align-items: center;
+    border-bottom: 1px solid var(--sl-color-gray-6);
+    display: flex;
+    gap: 0.625rem;
+    padding: 0.75rem 1rem;
+  }
+  .search-input-wrap .search-icon {
+    color: var(--sl-color-gray-3);
+    flex-shrink: 0;
+  }
+  .search-input {
+    background: transparent;
+    border: none;
+    color: var(--sl-color-white);
+    flex: 1;
+    font-family: var(--sl-font);
+    font-size: var(--sl-text-base);
+    outline: none;
+  }
+  .search-input::placeholder {
+    color: var(--sl-color-gray-3);
+  }
+
+  /* ── Results area ──────────────────────────────────────────────── */
+  .search-results {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.5rem 0.5rem 1rem;
+  }
+  .search-empty,
+  .search-no-results {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+  .search-group {
+    margin-top: 0.5rem;
+  }
+  .search-group-title {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-xs);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin: 0.5rem 0.625rem 0.25rem;
+    text-transform: uppercase;
+  }
+  .search-group-toggle {
+    align-items: center;
+    background: transparent;
+    border: none;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--sl-text-sm);
+    gap: 0.375rem;
+    padding: 0.5rem 0.625rem;
+    width: 100%;
+  }
+  .search-group-toggle:hover {
+    color: var(--sl-color-white);
+  }
+  .search-group-toggle-chevron {
+    display: inline-block;
+    transition: transform 0.15s ease-out;
+  }
+  .search-group-toggle[aria-expanded="true"] .search-group-toggle-chevron {
+    transform: rotate(90deg);
+  }
+
+  .search-result {
+    border-radius: 0.5rem;
+    color: var(--sl-color-white);
+    cursor: pointer;
+    display: block;
+    padding: 0.625rem 0.875rem;
+    text-decoration: none;
+  }
+  .search-result:hover,
+  .search-result[data-active="true"] {
+    background: var(--sl-color-gray-6);
+  }
+  .search-result-title {
+    align-items: center;
+    display: flex;
+    font-size: var(--sl-text-base);
+    font-weight: 600;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  .search-result-badge {
+    background: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.375rem;
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-xs);
+    font-weight: 500;
+    line-height: 1;
+    padding: 0.125rem 0.3125rem;
+    text-transform: none;
+    white-space: nowrap;
+  }
+  .search-result-badge.trados {
+    background: rgba(76, 162, 76, 0.12);
+    border-color: rgba(76, 162, 76, 0.35);
+    color: #6fd06f;
+  }
+  .search-result-badge.workbench {
+    background: rgba(96, 144, 232, 0.12);
+    border-color: rgba(96, 144, 232, 0.35);
+    color: #80a8f0;
+  }
+  .search-result-excerpt {
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+    line-height: 1.4;
+    margin: 0.25rem 0 0;
+  }
+  .search-result-excerpt mark {
+    background: rgba(255, 220, 70, 0.25);
+    color: inherit;
+    padding: 0 0.0625rem;
+  }
+</style>
+
+<script>
+  /**
+   * Wire up the custom search element.
+   *
+   * Lifecycle:
+   *   1. Pagefind JS is loaded lazily on first dialog-open (saves payload on
+   *      pages where the user never searches).
+   *   2. Scope is inferred from window.location.pathname on dialog-open.
+   *   3. Input is debounced; each query runs `pagefind.search()` and renders
+   *      results grouped by `filters.product`.
+   *
+   * Pagefind exposes a result list; each entry has `.data()` returning the
+   * full document data (url, excerpt, meta, filters).  We resolve all of
+   * those in parallel before grouping.
+   */
+
+  class SvSearch extends HTMLElement {
+    private dialog!: HTMLDialogElement;
+    private input!: HTMLInputElement;
+    private results!: HTMLElement;
+    private scopeName!: HTMLElement;
+    private scopeClear!: HTMLButtonElement;
+    private pagefind: any = null;
+    private pagefindLoading: Promise<any> | null = null;
+    private currentScope: 'Trados' | 'Workbench' | null = null;
+    private activeIndex: number = -1;
+    private searchToken: number = 0;
+
+    connectedCallback() {
+      this.dialog = this.querySelector('.search-dialog') as HTMLDialogElement;
+      this.input = this.querySelector('[data-input]') as HTMLInputElement;
+      this.results = this.querySelector('[data-results]') as HTMLElement;
+      this.scopeName = this.querySelector('[data-scope-name]') as HTMLElement;
+      this.scopeClear = this.querySelector('[data-scope-clear]') as HTMLButtonElement;
+
+      const openBtn = this.querySelector('[data-open]') as HTMLButtonElement;
+      const closeBtn = this.querySelector('[data-close]') as HTMLButtonElement;
+
+      openBtn.addEventListener('click', () => this.open());
+      closeBtn.addEventListener('click', () => this.close());
+      this.scopeClear.addEventListener('click', () => this.clearScope());
+
+      this.input.addEventListener('input', () => this.onInput());
+      this.input.addEventListener('keydown', (e) => this.onKeydown(e));
+
+      // Close on backdrop click (clicking the dialog element itself when the
+      // click target is the dialog and not inside the frame).
+      this.dialog.addEventListener('click', (e) => {
+        if (e.target === this.dialog) this.close();
+      });
+
+      // Global Cmd/Ctrl+K to open.
+      document.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          this.open();
+        }
+      });
+    }
+
+    private async ensurePagefind() {
+      if (this.pagefind) return this.pagefind;
+      if (this.pagefindLoading) return this.pagefindLoading;
+
+      this.pagefindLoading = (async () => {
+        try {
+          // Pagefind's pagefind.js is generated AFTER the Vite client
+          // build (by Starlight's post-build Pagefind integration), so
+          // it doesn't exist when Rollup tries to resolve imports.
+          // Indirecting through a string variable defeats Vite's static
+          // analysis so the module is fetched at runtime via the
+          // browser's native dynamic import instead.
+          const pagefindUrl = '/pagefind/pagefind.js';
+          // @ts-ignore — runtime-only dynamic import; not resolvable at build time.
+          const mod = await import(/* @vite-ignore */ pagefindUrl);
+          await mod.options({ baseUrl: '/' });
+          this.pagefind = mod;
+          return mod;
+        } catch (err) {
+          console.error('[sv-search] Failed to load Pagefind:', err);
+          this.pagefindLoading = null;
+          throw err;
+        }
+      })();
+
+      return this.pagefindLoading;
+    }
+
+    private detectScopeFromUrl(): 'Trados' | 'Workbench' | null {
+      const path = window.location.pathname.toLowerCase();
+      if (path.startsWith('/trados/') || path === '/trados') return 'Trados';
+      if (path.startsWith('/workbench/') || path === '/workbench') return 'Workbench';
+      return null;
+    }
+
+    private open() {
+      this.currentScope = this.detectScopeFromUrl();
+      this.updateScopeUi();
+      this.input.value = '';
+      this.results.innerHTML =
+        '<p class="search-empty">Start typing to search the docs.</p>';
+      this.activeIndex = -1;
+      this.dialog.showModal();
+      setTimeout(() => this.input.focus(), 0);
+      // Pre-warm Pagefind so the first keystroke is snappy.
+      this.ensurePagefind().catch(() => {});
+    }
+
+    private close() {
+      this.dialog.close();
+    }
+
+    private clearScope() {
+      this.currentScope = null;
+      this.updateScopeUi();
+      // Re-run the search with the new scope.
+      this.onInput();
+    }
+
+    private updateScopeUi() {
+      if (this.currentScope === 'Trados') {
+        this.scopeName.textContent = '🧩 Supervertaler for Trados';
+        this.scopeClear.hidden = false;
+      } else if (this.currentScope === 'Workbench') {
+        this.scopeName.textContent = '🖥️ Supervertaler Workbench';
+        this.scopeClear.hidden = false;
+      } else {
+        this.scopeName.textContent = 'All docs';
+        this.scopeClear.hidden = true;
+      }
+    }
+
+    private async onInput() {
+      const query = this.input.value.trim();
+      const token = ++this.searchToken;
+
+      if (!query) {
+        this.results.innerHTML =
+          '<p class="search-empty">Start typing to search the docs.</p>';
+        return;
+      }
+
+      let pagefind;
+      try {
+        pagefind = await this.ensurePagefind();
+      } catch {
+        this.results.innerHTML =
+          '<p class="search-no-results">Search is unavailable right now.</p>';
+        return;
+      }
+
+      // Cancel-if-stale guard: if the user has typed more characters since
+      // we kicked off this search, drop the result on the floor.
+      if (token !== this.searchToken) return;
+
+      const search = await pagefind.search(query);
+      if (token !== this.searchToken) return;
+
+      const hits = await Promise.all(
+        search.results.slice(0, 50).map((r: any) => r.data())
+      );
+      if (token !== this.searchToken) return;
+
+      this.renderResults(hits);
+    }
+
+    /**
+     * Render results grouped by product.
+     *
+     * Grouping rules:
+     *   - If a scope is set: only that product's results render.  Other
+     *     products are NOT shown (the user explicitly scoped).
+     *   - If no scope: results from the current product (detected fresh
+     *     here, not the cleared scope) render first; others render below
+     *     in a collapsed "Also from …" group.
+     *   - "Other" (no product filter) results render in a final group.
+     */
+    private renderResults(hits: any[]) {
+      if (hits.length === 0) {
+        this.results.innerHTML =
+          '<p class="search-no-results">No results found.</p>';
+        return;
+      }
+
+      const productOf = (h: any): 'Trados' | 'Workbench' | null => {
+        const v = h.filters?.product;
+        if (Array.isArray(v) ? v.includes('Trados') : v === 'Trados') return 'Trados';
+        if (Array.isArray(v) ? v.includes('Workbench') : v === 'Workbench') return 'Workbench';
+        return null;
+      };
+
+      const trados = hits.filter((h) => productOf(h) === 'Trados');
+      const workbench = hits.filter((h) => productOf(h) === 'Workbench');
+      const other = hits.filter((h) => productOf(h) === null);
+
+      const container = document.createElement('div');
+
+      if (this.currentScope === 'Trados') {
+        if (trados.length === 0) {
+          container.innerHTML =
+            '<p class="search-no-results">No Trados results. Try clearing scope to search all docs.</p>';
+        } else {
+          container.appendChild(this.renderGroup('🧩 Trados', trados, 'trados', true));
+        }
+      } else if (this.currentScope === 'Workbench') {
+        if (workbench.length === 0) {
+          container.innerHTML =
+            '<p class="search-no-results">No Workbench results. Try clearing scope to search all docs.</p>';
+        } else {
+          container.appendChild(
+            this.renderGroup('🖥️ Workbench', workbench, 'workbench', true)
+          );
+        }
+      } else {
+        // No scope: prioritise the detected current-section's product first.
+        const detected = this.detectScopeFromUrl();
+        const order: Array<{
+          label: string;
+          hits: any[];
+          kind: 'trados' | 'workbench' | 'other';
+          openByDefault: boolean;
+        }> = [];
+
+        if (detected === 'Trados') {
+          if (trados.length) order.push({ label: '🧩 Trados', hits: trados, kind: 'trados', openByDefault: true });
+          if (workbench.length) order.push({ label: 'Also from 🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: false });
+        } else if (detected === 'Workbench') {
+          if (workbench.length) order.push({ label: '🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: true });
+          if (trados.length) order.push({ label: 'Also from 🧩 Trados', hits: trados, kind: 'trados', openByDefault: false });
+        } else {
+          // No current section either (e.g. on the landing page) — show both
+          // products fully expanded so the user sees everything.
+          if (trados.length) order.push({ label: '🧩 Trados', hits: trados, kind: 'trados', openByDefault: true });
+          if (workbench.length) order.push({ label: '🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: true });
+        }
+
+        if (other.length) {
+          order.push({ label: 'Other', hits: other, kind: 'other', openByDefault: true });
+        }
+
+        for (const g of order) {
+          container.appendChild(this.renderGroup(g.label, g.hits, g.kind, g.openByDefault));
+        }
+      }
+
+      this.results.replaceChildren(container);
+      this.activeIndex = -1;
+    }
+
+    private renderGroup(
+      label: string,
+      hits: any[],
+      kind: 'trados' | 'workbench' | 'other',
+      openByDefault: boolean
+    ): HTMLElement {
+      const wrap = document.createElement('section');
+      wrap.className = 'search-group';
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'search-group-toggle';
+      toggle.setAttribute('aria-expanded', String(openByDefault));
+      toggle.innerHTML = `<span class="search-group-toggle-chevron">▶</span><span>${label} <span style="color: var(--sl-color-gray-3); font-weight: 400;">(${hits.length})</span></span>`;
+
+      const list = document.createElement('div');
+      list.className = 'search-group-list';
+      list.hidden = !openByDefault;
+
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        list.hidden = expanded;
+      });
+
+      for (const h of hits.slice(0, 10)) {
+        list.appendChild(this.renderResult(h, kind));
+      }
+
+      wrap.appendChild(toggle);
+      wrap.appendChild(list);
+      return wrap;
+    }
+
+    private renderResult(hit: any, kind: 'trados' | 'workbench' | 'other'): HTMLElement {
+      const a = document.createElement('a');
+      a.href = hit.url || '#';
+      a.className = 'search-result';
+
+      const title = (hit.meta?.title || hit.url || 'Untitled').trim();
+      const excerpt = hit.excerpt || '';
+
+      const badgeText = kind === 'trados' ? '🧩 Trados' : kind === 'workbench' ? '🖥️ Workbench' : '';
+
+      a.innerHTML = `
+        <p class="search-result-title">
+          <span>${escapeHtml(title)}</span>
+          ${badgeText ? `<span class="search-result-badge ${kind}">${badgeText}</span>` : ''}
+        </p>
+        ${excerpt ? `<p class="search-result-excerpt">${excerpt}</p>` : ''}
+      `;
+
+      return a;
+    }
+
+    private onKeydown(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        this.close();
+        return;
+      }
+      if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        this.moveActive(e.key === 'ArrowDown' ? 1 : -1);
+        return;
+      }
+      if (e.key === 'Enter') {
+        const active = this.results.querySelector(
+          '.search-result[data-active="true"]'
+        ) as HTMLAnchorElement | null;
+        if (active) {
+          e.preventDefault();
+          active.click();
+        }
+      }
+    }
+
+    private moveActive(delta: number) {
+      const items = Array.from(this.results.querySelectorAll<HTMLAnchorElement>('.search-result'));
+      if (items.length === 0) return;
+      this.activeIndex = (this.activeIndex + delta + items.length) % items.length;
+      items.forEach((el, i) => {
+        if (i === this.activeIndex) {
+          el.setAttribute('data-active', 'true');
+          el.scrollIntoView({ block: 'nearest' });
+        } else {
+          el.removeAttribute('data-active');
+        }
+      });
+    }
+  }
+
+  function escapeHtml(s: string): string {
+    return s
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  customElements.define('sv-search', SvSearch);
+</script>

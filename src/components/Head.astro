@@ -1,0 +1,34 @@
+---
+/**
+ * Custom Head override for Starlight.
+ *
+ * Adds a `<meta data-pagefind-filter="product:...">` tag on every page based
+ * on the URL path, so the Pagefind search index can scope and group results
+ * by which product the page belongs to (Supervertaler for Trados vs
+ * Supervertaler Workbench).
+ *
+ * The custom Search component (src/components/Search.astro) reads this
+ * filter via the Pagefind JS API to:
+ *   - Default the search scope to the product the user is currently in.
+ *   - Group results visually by product when scope is "all docs".
+ *
+ * Pages outside both product trees (landing, future top-level pages) get
+ * no product filter, so they appear in search results but aren't tied to
+ * either product's scope.
+ */
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/Head.astro';
+
+const route = Astro.locals.starlightRoute;
+const id = route?.entry?.id ?? '';
+
+let product: 'Trados' | 'Workbench' | null = null;
+if (id === 'trados' || id.startsWith('trados/')) {
+  product = 'Trados';
+} else if (id === 'workbench' || id.startsWith('workbench/')) {
+  product = 'Workbench';
+}
+---
+
+<Default {...Astro.props}><slot /></Default>
+{product && <meta data-pagefind-filter={`product:${product}`} />}
