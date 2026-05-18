@@ -4,7 +4,7 @@ title: "Term Picker"
 
 The Term Picker is a modal dialogue that lists all matched termbase terms and non-translatables for the current segment in a tabular, keyboard-navigable grid. It is useful when TermLens shows many matches and you want a quick overview without the chip layout – or when you want to compare alternative translations side-by-side before committing.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Term-Picker.png" alt=""><figcaption><p>Term Picker dialogue with all matched terms for the current segment, including an expanded synonym row (▾ on row 3)</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Term-Picker.png" alt=""><figcaption><p>The Term Picker dialogue floating over the editor for the active segment, listing every termbase + NT match in a sortable grid. Row 3 is expanded (▾) to show a synonym sub-row underneath. The docked TermLens panel on the right shows the same matches as chips.</p></figcaption></figure>
 
 ### Opening the Term Picker
 

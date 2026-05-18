@@ -4,7 +4,7 @@ title: "TermLens popup"
 
 The **TermLens popup** is a borderless floating version of the docked TermLens panel for the active segment. It mirrors the panel's chips, colours, and metadata indicators exactly, but appears at the cursor on demand – designed for keyboard-only term selection on small screens, and for translators who want to insert terms without ever reaching for the mouse.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Popup.png" alt=""><figcaption><p>The TermLens popup with the current match highlighted (blue ring around the chip)</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Popup.png" alt=""><figcaption><p>The TermLens popup floating at the cursor over the active segment, with the current match highlighted (blue ring around the chip). The docked TermLens panel on the right shows the same matches – the popup is its on-demand mirror.</p></figcaption></figure>
 
 ### When to use it
 
