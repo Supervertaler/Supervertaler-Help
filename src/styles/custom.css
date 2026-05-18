@@ -54,3 +54,36 @@
 .sl-markdown-content img[data-zoomed='true'] {
   cursor: zoom-out;
 }
+
+/* ---------------------------------------------------------------------
+ * Sidebar nested-list indent guides
+ *
+ * Starlight ships very faint, low-contrast borders on its nested
+ * <ul> elements — they're barely visible against the sidebar tint,
+ * making it hard to scan the hierarchy. We strengthen the colour
+ * and bump the border width so the indentation tree reads at a
+ * glance. Reported by a user comparing the sidebar to the editor
+ * screenshot side-by-side.
+ * --------------------------------------------------------------- */
+
+/* Starlight renders nested sidebar items as <ul> nodes inside a
+ * <details>/<ul> tree. The default border-inline-start is a thin
+ * gray-7 / gray-6 hairline; we override with a higher-contrast tone
+ * appropriate to the active theme. */
+.sidebar-pane ul ul,
+.sidebar-pane details ul {
+  border-inline-start-width: 1.5px;
+  border-inline-start-style: solid;
+}
+
+:root[data-theme='light'] .sidebar-pane ul ul,
+:root[data-theme='light'] .sidebar-pane details ul {
+  /* gray-300-ish — clearly visible against the #f6f7f9 sidebar tint. */
+  border-inline-start-color: #c8cdd4;
+}
+
+:root[data-theme='dark'] .sidebar-pane ul ul,
+:root[data-theme='dark'] .sidebar-pane details ul {
+  /* warm gray that reads as a real line against the dark backdrop. */
+  border-inline-start-color: #3a3f47;
+}
