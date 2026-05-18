@@ -481,7 +481,20 @@ const sidebar = [
           },
           {
             "label": "TermLens (Inline Terminology)",
-            "link": "/workbench/termbases/termlens/"
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/workbench/termbases/termlens/"
+              },
+              {
+                "label": "TermLens popup",
+                "link": "/workbench/termbases/termlens-popup/"
+              },
+              {
+                "label": "Term Picker",
+                "link": "/workbench/termbases/term-picker/"
+              }
+            ]
           },
           {
             "label": "Term Extraction",
