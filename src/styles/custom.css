@@ -35,3 +35,22 @@
   background-color: #1a1c20;
   border-inline-end-color: #2a2d33;
 }
+
+/* Click-to-zoom affordance for screenshots inside the rendered Markdown.
+ * Paired with the medium-zoom initialiser in src/components/Head.astro.
+ * Only standalone figure / paragraph images get the cursor — inline
+ * icons inside running text don't (their parent <p> contains text, so
+ * the `p > img` selector still matches but they're rare in practice;
+ * the zoom-in cursor on those is harmless and clicking still does the
+ * sensible zoom). */
+.sl-markdown-content figure img,
+.sl-markdown-content p > img {
+  cursor: zoom-in;
+}
+
+/* Once medium-zoom has activated a zoom (it tags the active image with
+ * data-zoomed="true"), switch the cursor to zoom-out so the user knows
+ * a second click closes the overlay. */
+.sl-markdown-content img[data-zoomed='true'] {
+  cursor: zoom-out;
+}

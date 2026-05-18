@@ -32,3 +32,32 @@ if (id === 'trados' || id.startsWith('trados/')) {
 
 <Default {...Astro.props}><slot /></Default>
 {product && <meta data-pagefind-filter={`product:${product}`} />}
+
+{/*
+  GitBook-style click-to-zoom for embedded screenshots.
+  Uses medium-zoom (~10 KB, zero deps): click an image → zooms full-screen
+  with a dark backdrop; click anywhere / press Esc / scroll to dismiss.
+  Wired up only to <figure><img> blocks and standalone paragraph images
+  inside the rendered Markdown, so inline icons / logos in the chrome
+  don't get the cursor: zoom-in affordance.
+
+  Re-initialised on Astro's `astro:page-load` event so the zoom keeps
+  working through Starlight's soft client-side navigation.
+*/}
+<script>
+  import mediumZoom from 'medium-zoom';
+
+  function initImageZoom(): void {
+    mediumZoom(
+      '.sl-markdown-content figure img, .sl-markdown-content p > img',
+      {
+        background: 'rgba(0, 0, 0, 0.85)',
+        margin: 24,
+        scrollOffset: 80,
+      },
+    );
+  }
+
+  document.addEventListener('DOMContentLoaded', initImageZoom);
+  document.addEventListener('astro:page-load', initImageZoom);
+</script>
