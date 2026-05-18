@@ -54,12 +54,12 @@ const sidebar = [
               {
                 "label": "TermLens popup",
                 "link": "/trados/termlens/termlens-popup/"
-              },
-              {
-                "label": "Term Picker",
-                "link": "/trados/termlens/term-picker/"
               }
             ]
+          },
+          {
+            "label": "Term Picker",
+            "link": "/trados/termlens/term-picker/"
           },
           {
             "label": "MultiTerm Support",
@@ -489,12 +489,12 @@ const sidebar = [
               {
                 "label": "TermLens popup",
                 "link": "/workbench/termbases/termlens-popup/"
-              },
-              {
-                "label": "Term Picker",
-                "link": "/workbench/termbases/term-picker/"
               }
             ]
+          },
+          {
+            "label": "Term Picker",
+            "link": "/workbench/termbases/term-picker/"
           },
           {
             "label": "Term Extraction",

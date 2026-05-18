@@ -15,7 +15,7 @@
 * [TermLens](trados/termlens.md)
   * [Adding & Editing Terms](trados/termlens/adding-terms.md)
   * [TermLens popup](trados/termlens/termlens-popup.md)
-  * [Term Picker](trados/termlens/term-picker.md)
+* [Term Picker](trados/termlens/term-picker.md)
 * [MultiTerm Support](trados/multiterm-support.md)
 * [Supervertaler Assistant](trados/ai-assistant.md)
   * [Context Awareness](trados/ai-assistant/context-awareness.md)
@@ -131,7 +131,7 @@
 * [Term Highlighting](workbench/termbases/highlighting.md)
 * [TermLens (Inline Terminology)](workbench/termbases/termlens.md)
   * [TermLens popup](workbench/termbases/termlens-popup.md)
-  * [Term Picker](workbench/termbases/term-picker.md)
+* [Term Picker](workbench/termbases/term-picker.md)
 * [Term Extraction](workbench/termbases/extraction.md)
 
 ## 🖥️ Import & Export
