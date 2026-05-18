@@ -130,6 +130,8 @@
 * [Importing Terms](workbench/termbases/importing.md)
 * [Term Highlighting](workbench/termbases/highlighting.md)
 * [TermLens (Inline Terminology)](workbench/termbases/termlens.md)
+  * [TermLens popup](workbench/termbases/termlens-popup.md)
+  * [Term Picker](workbench/termbases/term-picker.md)
 * [Term Extraction](workbench/termbases/extraction.md)
 
 ## 🖥️ Import & Export

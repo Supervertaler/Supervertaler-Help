@@ -47,6 +47,17 @@ Right-click a term in TermLens to:
 - **Edit** the termbase entry
 - **Delete** the termbase entry
 
+## On-demand views (popup & picker)
+
+In addition to the always-visible panels, two on-demand views show the same matches in a more focused layout. Use them when the docked panel is hidden, on small screens, or when you want a keyboard-only insertion flow.
+
+| View                                                | Trigger        | Best for                                                                    |
+| --------------------------------------------------- | -------------- | --------------------------------------------------------------------------- |
+| [**TermLens popup**](termlens-popup.md)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with arrow keys, insert with Enter or 1–9. |
+| [**Term Picker**](term-picker.md)                   | **Ctrl+Shift+B** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
+
+Both pull from the same data the docked panel uses, so the chips / rows you see are identical – just laid out differently.
+
 ## Font settings
 
 You can customise the TermLens font independently from the grid font:
@@ -71,6 +82,8 @@ A standalone version of TermLens is also available as a plugin for **Trados Stud
 
 ## See Also
 
+- [TermLens popup](termlens-popup.md) – on-demand floating mirror of the panel (Ctrl tap)
+- [Term Picker](term-picker.md) – tabular grid view of the same matches (Ctrl+Shift+B)
 - [Termbase Basics](basics.md)
 - [Term Highlighting](highlighting.md)
 - [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
