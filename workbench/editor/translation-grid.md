@@ -45,6 +45,15 @@ If you plan to reimport into a CAT tool, do not merge/split content across segme
 - **Spellcheck** (if enabled) underlines misspelled target words.
 - **Termbase matches** can be highlighted in the source.
 
+## TermLens panel placement
+
+You can dock the TermLens panel directly above or below the grid from the **View** menu:
+
+- **Show TermLens above grid** –places the panel between the filter bar and the grid.
+- **Show TermLens below grid** –places it under the grid.
+
+The change applies immediately, no need to reopen the project. Clicking the option that is already active hides the panel again.
+
 ## See also
 
 - [Navigation](navigation.md)

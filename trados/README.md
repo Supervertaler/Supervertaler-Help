@@ -23,9 +23,9 @@ Live terminology display that shows the source text word by word, with termbase 
 * **Blue** for regular termbase matches
 * **Pink** for project termbase matches (higher priority)
 * **Yellow** for non-translatable terms
-* **Green** for MultiTerm termbase matches (`.sdltb` files attached to your Trados project)
+* **Green** for MultiTerm termbase matches (`.sdltb` files attached to your Trados project, or `.ttb` termbases in Trados Studio 2026)
 
-Numbered badges let you insert terms with **Alt+1** through **Alt+9**. MultiTerm termbases are detected automatically from your Trados project and are read-only.
+Numbered badges let you insert terms with **Alt+1** through **Alt+9**. Project termbases are detected automatically from your Trados project and are read-only. On Trados Studio 2026 these are the new `.ttb` termbases –see [Trados Studio 2026 & .ttb](studio-2026.md).
 
 #### Supervertaler Assistant
 
@@ -54,6 +54,8 @@ Self-organising, AI-maintained translation knowledge base. Stores client profile
 | Trados Studio  | 2024 (v18) or later |
 | Windows        | 10 or 11            |
 | .NET Framework | 4.8                 |
+
+There are two builds: one for **Trados Studio 2024** (MultiTerm `.sdltb` termbases) and one for **Trados Studio 2026** (`.ttb` termbases). Install the build that matches your Studio version –see [Trados Studio 2026 & .ttb](studio-2026.md).
 
 ### Shared Termbase Format
 

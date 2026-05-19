@@ -4,6 +4,10 @@ title: "MultiTerm Support"
 
 TermLens automatically detects MultiTerm termbases (`.sdltb` files) attached to your active Trados project and displays their terms alongside your Supervertaler terms.
 
+:::note
+This page covers **Trados Studio 2024**, which uses MultiTerm `.sdltb` termbases. If you are on **Trados Studio 2026**, terminology comes from the new `.ttb` format instead –see [Trados Studio 2026 & .ttb](studio-2026.md).
+:::
+
 ### How It Works
 
 When you open a project in Trados Studio that has MultiTerm termbases attached, TermLens reads those `.sdltb` files and loads all term pairs into its matching engine. MultiTerm terms appear as **green chips** in the TermLens panel, right next to the blue, pink, and yellow chips from your Supervertaler termbases.

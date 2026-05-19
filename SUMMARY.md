@@ -17,6 +17,7 @@
   * [TermLens popup](trados/termlens/termlens-popup.md)
 * [Term Picker](trados/termlens/term-picker.md)
 * [MultiTerm Support](trados/multiterm-support.md)
+* [Trados Studio 2026 & .ttb](trados/studio-2026.md)
 * [Supervertaler Assistant](trados/ai-assistant.md)
   * [Context Awareness](trados/ai-assistant/context-awareness.md)
   * [File Attachments](trados/ai-assistant/file-attachments.md)
