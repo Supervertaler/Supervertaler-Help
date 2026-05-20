@@ -2,7 +2,7 @@
 title: "Keyboard Shortcuts"
 ---
 
-Master these shortcuts to work faster in Supervertaler.
+Master these shortcuts to work faster in Supervertaler. The exact keys are configurable in **Settings → Keyboard Shortcuts**; the tables below list the defaults.
 
 ## Navigation
 
@@ -12,8 +12,8 @@ Master these shortcuts to work faster in Supervertaler.
 | `Ctrl+Up` | Previous segment (always) |
 | `Ctrl+Down` | Next segment (always) |
 | `Ctrl+G` | Go to segment number |
-| `Page Up` | Previous page (when paginated) |
-| `Page Down` | Next page (when paginated) |
+| `Page Up` / `Page Down` | Previous / next page (when paginated) |
+| `Shift+Page Up` / `Shift+Page Down` | Extend selection up / down by a screenful |
 | `Ctrl+Home` | First segment |
 | `Ctrl+End` | Last segment |
 
@@ -21,17 +21,19 @@ Master these shortcuts to work faster in Supervertaler.
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Enter` | Confirm current (or selected) segment(s) |
+| `Ctrl+Enter` | Confirm current (or selected) segment(s) and go to the next |
 | `Ctrl+Shift+Enter` | Confirm selected segments |
 | `Ctrl+Z` | Undo |
 | `Ctrl+Y` | Redo |
-| `Ctrl+C` | Copy |
-| `Ctrl+V` | Paste |
-| `Ctrl+X` | Cut |
+| `Ctrl+C` / `Ctrl+V` / `Ctrl+X` | Copy / paste / cut |
 | `Ctrl+A` | Select all (in cell) |
 | `Shift+Enter` | Insert line break inside a cell |
+| `Tab` | Cycle between the source and target cells |
+| `Ctrl+Tab` | Insert a literal tab character |
 | `Ctrl+,` | Insert next tag / wrap selection with a tag pair (when available) |
+| `Ctrl+Shift+S` | Copy source text to target |
 | `Ctrl+M` | Add a comment to the selected source/target text (or a segment-level comment if nothing is selected) |
+| `Alt+D` | Add the word at the cursor to the custom dictionary |
 
 ## Translation
 
@@ -39,17 +41,18 @@ Master these shortcuts to work faster in Supervertaler.
 |----------|--------|
 | `Ctrl+T` | Translate current segment with AI |
 | `Ctrl+Shift+T` | Translate multiple segments |
-| `Ctrl+1…9` | Insert match #1…#9 |
-| `Ctrl+Space` | Insert currently selected match |
+| `Ctrl+Space` | Insert the currently selected match from the grid |
+| `Alt+1…9` | Insert TermLens term #1…#9 (double-tap for #11…#99) |
+| `Ctrl+Alt+Q` | QuickTrans instant-translation popup (works system-wide) |
+| `Ctrl+Q` | Open QuickLauncher (AI prompt actions) |
 
 ## Find & Replace
 
 | Shortcut | Action |
 |----------|--------|
 | `Ctrl+F` | Open Find & Replace dialog |
-| `F3` | Find next |
-| `Shift+F3` | Find previous |
-| `Ctrl+H` | Replace (same as Ctrl+F) |
+| `Ctrl+H` | Open Find & Replace on the Replace tab |
+| `Enter` (in the Find box) | Find next match |
 
 ## Filtering
 
@@ -61,15 +64,26 @@ Master these shortcuts to work faster in Supervertaler.
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+K` | Open Superlookup |
-| `Ctrl+Alt+L` | System-wide TM lookup (if configured) |
+| `Ctrl+K` | Open SuperLookup (concordance) for the selection |
+| `Ctrl+Alt+L` | SuperLookup as a system-wide hotkey (works from any application) |
+| `Alt+K` | Open SuperLookup seeded with the current selection |
 
 ## View
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Plus` | Increase font size |
-| `Ctrl+Minus` | Decrease font size |
+| `Ctrl+Plus` | Increase grid font size |
+| `Ctrl+Minus` | Decrease grid font size |
+| `Ctrl+Shift+=` / `Ctrl+Shift+-` | Increase / decrease results-pane font size |
+| `Ctrl+Shift+H` | Toggle tag view |
+
+## Resources & Tools
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+Shift+M` | TM Manager (separate window) |
+| `F5` | Force-refresh matches (clear cache) |
+| `Ctrl+Alt+C` | Open the Clipboard manager (system-wide) |
 
 ## File Operations
 
@@ -77,6 +91,7 @@ Master these shortcuts to work faster in Supervertaler.
 |----------|--------|
 | `Ctrl+S` | Save project |
 | `Ctrl+O` | Open project |
+| `Alt+F4` | Quit the application |
 
 ## Termbase / Glossary
 
@@ -84,38 +99,39 @@ Master these shortcuts to work faster in Supervertaler.
 |----------|--------|
 | `Ctrl+Alt+T` | Add the selected term pair to a termbase (opens the entry dialog) |
 | `Alt+Left` | Quick-add the selected term pair to the last-used termbase |
-| `Alt+Up` | Quick-add the selected term pair to the project termbase |
-| `Alt+Down` | Quick-add the selected term pair to the background termbase |
+| `Alt+Up` (or `Ctrl+Shift+1`) | Quick-add the selected term pair to the project termbase |
+| `Alt+Down` (or `Ctrl+Shift+2`) | Quick-add the selected term pair to the background termbase |
 | `Ctrl+Alt+N` | Add the selection to Non-Translatables |
 
-## Voice Commands (if enabled)
+## Voice (if enabled)
 
 | Shortcut | Action |
 |----------|--------|
-| `F9` | Push-to-talk / Stop always-on listening |
+| `Ctrl+Shift+Space` | Voice dictation / push-to-talk (default — configurable) |
+| `Ctrl+Alt+A` | Toggle Always-On listening |
 
 ---
 
-## Customizing Shortcuts
+## Customising shortcuts
 
-You can view and customize shortcuts in **Settings → Keyboard Shortcuts**.
+You can view and customise every shortcut in **Settings → Keyboard Shortcuts**, and export a printable cheatsheet (HTML) or the raw definitions (JSON) from there.
 
 :::note
-Some shortcuts match memoQ conventions (like `Ctrl+Enter` to confirm) to help translators who switch between tools.
+Some shortcuts match memoQ and Trados conventions (like `Ctrl+Enter` to confirm) to help translators who switch between tools.
 :::
 
 ## Tips
 
-### memoQ-Style Navigation
+### memoQ-style navigation
 
 The arrow keys work like memoQ:
 - Press `↓` at the **last line** of a cell to move to the next segment
 - Press `↑` at the **first line** of a cell to move to the previous segment
 - Cursor column position is preserved when moving between segments
 
-### Quick Filtering
+### Quick filtering
 
 1. Select text in any segment
 2. Press `Ctrl+Shift+F` to filter
 3. Only segments containing that text are shown
-4. Press `Ctrl+Shift+F` again to clear filter
+4. Press `Ctrl+Shift+F` again to clear the filter
