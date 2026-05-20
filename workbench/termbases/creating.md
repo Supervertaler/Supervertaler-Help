@@ -17,7 +17,7 @@ You can build terminology as you work:
 - Select text in both Source and Target
 - Use **Add to Termbase** from the context menu
 
-The right-click menu offers several routes: **Add to Termbase** (`Ctrl+Alt+T`, opens the entry dialog), and the quick-adds **Quick Add to Termbase** (`Alt+Left`), **Quick Add to Project Termbase** (`Alt+Up`), and **Quick Add to Background Termbase** (`Alt+Down`).
+The right-click menu offers several routes: **Add to Termbase** (`Ctrl+Alt+T`, opens the entry dialog), and the quick-adds **Quick Add to Project Termbase** (`Alt+Up`) and **Quick Add to Background Termbase** (`Alt+Down`).
 
 ## Similar Term Found — merge as a synonym
 

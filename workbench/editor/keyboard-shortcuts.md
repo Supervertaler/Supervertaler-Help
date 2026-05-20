@@ -98,7 +98,6 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | Shortcut | Action |
 |----------|--------|
 | `Ctrl+Alt+T` | Add the selected term pair to a termbase (opens the entry dialog) |
-| `Alt+Left` | Quick-add the selected term pair to the last-used termbase |
 | `Alt+Up` (or `Ctrl+Shift+1`) | Quick-add the selected term pair to the project termbase |
 | `Alt+Down` (or `Ctrl+Shift+2`) | Quick-add the selected term pair to the background termbase |
 | `Ctrl+Alt+N` | Add the selection to Non-Translatables |
