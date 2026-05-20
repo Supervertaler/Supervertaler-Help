@@ -142,7 +142,7 @@
 * [Importing Text Files](workbench/import-export/txt-import.md)
 * [Multi-File Projects](workbench/import-export/multi-file.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
-* [Bilingual Tables](workbench/import-export/bilingual-tables.md)
+* [Supervertaler Bilingual Table](workbench/import-export/bilingual-tables.md)
 
 ## 🖥️ SuperLookup
 
@@ -182,6 +182,5 @@
 
 ## 🖥️ Reference
 
-* [Supervertaler Bilingual Table](workbench/reference/file-formats.md)
 * [Changelog](workbench/reference/changelog.md)
 * [Contributing](workbench/reference/contributing.md)
