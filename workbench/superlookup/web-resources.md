@@ -2,11 +2,11 @@
 title: "Web Resources"
 ---
 
-Superlookup’s **Web Resources** tab gives you a one-click sidebar of reference sites for terminology and research.
+SuperLookup’s **Web Resources** tab gives you a one-click sidebar of reference sites for terminology and research.
 
 ## How it works
 
-- You use the **main Superlookup search box** (top of the window) and click **Search**.
+- You use the **main SuperLookup search box** (top of the window) and click **Search**.
 - The Web Resources tab uses your **From → To** language direction when building URLs.
 
 ## Browser modes
@@ -18,7 +18,7 @@ In the left sidebar you can choose a mode:
 - **External:** opens your default browser.
 
 :::note
-When Embedded mode is available, Superlookup can pre-load searches for all resources at once.
+When Embedded mode is available, SuperLookup can pre-load searches for all resources at once.
 :::
 
 ## Search options
@@ -48,4 +48,4 @@ The sidebar includes (by default):
 
 ## Show/hide resources
 
-In **Superlookup → Settings → Web Resources**, you can toggle which sites appear in the sidebar.
+In **SuperLookup → Settings → Web Resources**, you can toggle which sites appear in the sidebar.

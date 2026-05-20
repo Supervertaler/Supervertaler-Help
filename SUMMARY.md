@@ -144,9 +144,9 @@
 * [Exporting Translations](workbench/import-export/exporting.md)
 * [Bilingual Tables](workbench/import-export/bilingual-tables.md)
 
-## 🖥️ Superlookup
+## 🖥️ SuperLookup
 
-* [Superlookup Overview](workbench/superlookup/overview.md)
+* [SuperLookup Overview](workbench/superlookup/overview.md)
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
 * [Termbase Search](workbench/superlookup/termbase-search.md)
 * [Machine Translation](workbench/superlookup/mt.md)

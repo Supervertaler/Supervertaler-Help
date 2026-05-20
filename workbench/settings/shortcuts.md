@@ -52,7 +52,7 @@ Internally, shortcuts are stored in Qt's cross-platform format, which uses **Ctr
 | `Shift` | Shift | **Shift** (⇧) |
 | `Meta` | Windows key | **Control** (⌃) |
 
-You only ever see this if you export shortcuts to JSON or look at the cheatsheet HTML – the UI itself always shows you platform-native symbols on macOS and plain names on Windows. The default for Superlookup is therefore stored as `Ctrl+Alt+L` and displayed as **Ctrl+Alt+L** on Windows and **⌘⌥L** on macOS, both of which fire the same physical chord on each platform.
+You only ever see this if you export shortcuts to JSON or look at the cheatsheet HTML – the UI itself always shows you platform-native symbols on macOS and plain names on Windows. The default for SuperLookup is therefore stored as `Ctrl+Alt+L` and displayed as **Ctrl+Alt+L** on Windows and **⌘⌥L** on macOS, both of which fire the same physical chord on each platform.
 
 ## Per-platform notes
 

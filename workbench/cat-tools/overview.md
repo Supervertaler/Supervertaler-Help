@@ -45,7 +45,7 @@ CAT tools have limited AI integration. Supervertaler lets you:
 │                                                             │
 │  4. Import bilingual file                                  │
 │  5. AI translate + post-edit                               │
-│  6. Use Superlookup for research                           │
+│  6. Use SuperLookup for research                           │
 │  7. Export bilingual file                                  │
 └─────────────────────────────────────────────────────────────┘
                             ↓

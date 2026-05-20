@@ -2,7 +2,7 @@
 title: "TM Search (Concordance)"
 ---
 
-Superlookup’s **TMs** tab lets you do fast concordance searches in your Translation Memories ("find where I translated this before").
+SuperLookup’s **TMs** tab lets you do fast concordance searches in your Translation Memories ("find where I translated this before").
 
 ## Open it
 
@@ -32,8 +32,8 @@ At the top of the tab you can switch between:
 
 ## TM selection
 
-In **Superlookup → Settings → Translation Memories**, you can choose which TMs to search.
+In **SuperLookup → Settings → Translation Memories**, you can choose which TMs to search.
 
 :::note
-If you don’t select any TMs in the Superlookup Settings tab, Superlookup searches **all available** TMs.
+If you don’t select any TMs in the SuperLookup Settings tab, SuperLookup searches **all available** TMs.
 :::

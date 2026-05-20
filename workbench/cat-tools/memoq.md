@@ -62,7 +62,7 @@ These tags are highlighted in dark red in the grid (matching memoQ's color).
 ### Tips for memoQ Projects
 
 - **Preserve tags**: Keep all `{1}`, `[2}` tags in your translation
-- **Use Superlookup**: Press `Ctrl+K` for TM and termbase searches
+- **Use SuperLookup**: Press `Ctrl+K` for TM and termbase searches
 - **Batch translate**: Select multiple segments and press `Ctrl+Shift+T`
 
 ## Export from Supervertaler

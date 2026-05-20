@@ -2,11 +2,11 @@
 title: "Termbase Search"
 ---
 
-Superlookup’s **Termbases** tab searches your Supervertaler termbases for preferred terminology.
+SuperLookup’s **Termbases** tab searches your Supervertaler termbases for preferred terminology.
 
 ## Open it
 
-- **In Supervertaler:** press `Ctrl+K` (or open the **SuperLookup** tab, or **Tools → Superlookup**).
+- **In Supervertaler:** press `Ctrl+K` (or open the **SuperLookup** tab, or **Tools → SuperLookup**).
 - **From any application:** press `Ctrl+Alt+L` (system-wide hotkey).
 
 ## How to search
@@ -45,8 +45,8 @@ This navigates to the **Termbases** tab, selects the termbase, and filters the t
 
 ## Termbase selection
 
-In **Superlookup → Settings → Termbases**, you can pick which termbases Superlookup searches.
+In **SuperLookup → Settings → Termbases**, you can pick which termbases SuperLookup searches.
 
 :::note
-If you don’t select any termbases in the Superlookup Settings tab, Superlookup searches **all available** termbases.
+If you don’t select any termbases in the SuperLookup Settings tab, SuperLookup searches **all available** termbases.
 :::
