@@ -1,36 +1,42 @@
 ---
-title: "File Format Reference"
+title: "Supervertaler Bilingual Table"
 ---
 
-This page summarises the **Supervertaler project data** export — a bilingual,
-six-column layout available as either a Word table (DOCX) or tab-separated
-values (TSV). Use it for review, archiving, spreadsheet analysis, or scripted
-processing of a project's segments.
-
-For the full technical specification, see the [repository copy](https://github.com/Supervertaler/Supervertaler-Workbench/blob/main/docs/specifications/SUPERVERTALER_DATA_FORMAT.md).
+The **Supervertaler Bilingual Table** is a branded Word (DOCX) export that lays
+your project out as a side-by-side table — handy for reviewing, proofreading, or
+handing off to someone who doesn't use a CAT tool. One variant can be edited and
+**re-imported** to pull the changes back into your project.
 
 ## Columns
 
+The table has five columns:
+
 | Column | Description |
 |--------|-------------|
-| **ID** | Segment identifier |
-| **Status** | Translation status (e.g. not started, pre-translated, draft, confirmed, locked) |
+| **#** | Segment number |
 | **Source** | Source text |
-| **Target** | Target text |
-| **Paragraph** | Original paragraph ID |
-| **Notes** | Translator / proofreader comments (optional) |
+| **Target** | Target text (edit this when proofreading) |
+| **Status** | Segment status |
+| **Notes** | Segment comments |
 
-## The two formats
+A header above the table shows the project name, language pair, segment count, and export date.
 
-- **DOCX** — a Word table with the six columns above. Best for review, printing, or Word-based workflows.
-- **TSV** — tab-separated, UTF-8, with a header row. Best for opening in a spreadsheet or processing with scripts.
+## Two variants
 
-## Exporting
+**File → Export** offers two versions:
 
-**File → Export → Supervertaler project data**, then choose DOCX or TSV.
+- **Supervertaler Bilingual Table — With Tags (DOCX)** — formatting tags stay visible as markup. This is the **re-importable** version: edit the Target cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text.
+- **Supervertaler Bilingual Table — Formatted (DOCX)** — inline formatting (bold, italic, underline) is rendered instead of shown as tags. This version is for **client delivery or archiving** and **cannot be re-imported**.
+
+## Round-trip (proofread and re-import)
+
+1. Export the **With Tags** version.
+2. Edit the **Target** column (and **Notes**, if you like) in Word — leave the **#** and **Source** columns untouched.
+3. Back in Workbench: **File → Import → Bilingual Table (DOCX) – Update Project**.
+4. The edited targets (and notes) are matched back to your segments by number.
 
 ## Related
 
+- [Bilingual Tables](../import-export/bilingual-tables.md) — overview of side-by-side exports
 - [Supported File Formats](../import-export/formats.md) — everything Workbench can import and export
-- [Bilingual Tables](../import-export/bilingual-tables.md) — bilingual round-trip with memoQ / CafeTran / Trados
 - [Exporting Translations](../import-export/exporting.md)

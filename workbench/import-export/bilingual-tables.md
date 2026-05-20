@@ -14,3 +14,4 @@ A bilingual table is a side-by-side **Source | Target** export that’s useful f
 
 - Bilingual tables are not always suitable for CAT tool reimport.
 - For round-trips, prefer the dedicated CAT exchange formats described in [CAT Tool Overview](../cat-tools/overview.md).
+- Supervertaler's own re-importable bilingual table (DOCX) is documented in [Supervertaler Bilingual Table](../reference/file-formats.md).
