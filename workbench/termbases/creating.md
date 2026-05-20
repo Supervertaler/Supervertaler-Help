@@ -6,7 +6,7 @@ Termbases help you enforce terminology consistently.
 
 ## Create a termbase
 
-1. Open **Project resources → Termbases**
+1. Open the **Termbases** tab
 2. Click **Create Termbase**
 3. Give it a name and select languages
 

@@ -13,8 +13,8 @@ Supervertaler is designed for fast, memoQ-style navigation in the translation gr
 
 If you want to move between segments regardless of where the cursor is inside the cell:
 
-- **Alt+Up** → previous segment
-- **Alt+Down** → next segment
+- **Ctrl+Up** → previous segment
+- **Ctrl+Down** → next segment
 
 ### Jump to a segment
 

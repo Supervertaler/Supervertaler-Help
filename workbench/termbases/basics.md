@@ -50,7 +50,7 @@ Mark terms as "forbidden" to flag text that should NOT be translated or should b
 
 ## Creating Your First Termbase
 
-1. Go to **Project resources → Termbases**
+1. Go to the **Termbases** tab
 2. Click **+ Create Termbase**
 3. Enter a name (e.g., "Client ABC Terminology")
 4. Choose source and target languages
@@ -75,7 +75,7 @@ Mark terms as "forbidden" to flag text that should NOT be translated or should b
 
 ### Import from File
 
-1. Go to **Project resources → Termbases**
+1. Go to the **Termbases** tab
 2. Click **Import**
 3. Select a TSV file (tab-separated: source, target, domain, notes)
 4. Watch the progress dialog

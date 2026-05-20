@@ -7,7 +7,6 @@ The Image Extractor pulls embedded images out of DOCX files and saves them as nu
 ## Where to find it
 
 - **Tools → Image Extractor (Superimage)...**
-- Or: **Project resources** → **🎯 Image Context** (the Image Extractor lives in the bottom section of that tab)
 
 ## Extract images from a DOCX
 

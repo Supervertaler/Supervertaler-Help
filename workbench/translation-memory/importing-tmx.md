@@ -6,7 +6,7 @@ TMX is the common exchange format for translation memories.
 
 ## Import steps
 
-1. Open **Project resources → Translation Memories**
+1. Open the **TMs** tab
 2. Choose **Import TMX**
 3. Select your `.tmx` file
 

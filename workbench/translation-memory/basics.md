@@ -64,7 +64,7 @@ When you select a segment:
 
 | Action | How |
 |--------|-----|
-| Insert match | Double-click or press `Ctrl+1-9` for first 9 matches |
+| Insert match | Double-click, or select it and press `Ctrl+Space` |
 | Copy match | Right-click → Copy |
 | View in context | Right-click → View in TM |
 
@@ -86,7 +86,7 @@ You can have multiple TMs:
 
 When multiple TMs match:
 - Higher priority TMs shown first
-- Can reorder in Project resources
+- Can reorder in the **TMs** tab
 
 ---
 

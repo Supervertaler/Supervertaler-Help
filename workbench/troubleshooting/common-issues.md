@@ -130,7 +130,7 @@ the same positions in the translation.
 
 **Solution:**
 
-- Open **Project resources → Translation Memories**.
+- Open the **TMs** tab.
 - Ensure the TM is added and **Read** is enabled.
 - Verify source/target language pair matches your project.
 
@@ -143,10 +143,6 @@ the same positions in the translation.
 - Make sure you translated the segments (target column isn't empty)
 - Check you're exporting the correct format
 - Verify the segments are confirmed
-
-### Trados SDLRPX shows "Draft" status
-
-Update to v1.9.32 or later - this bug was fixed.
 
 ### "Source file not found" on export
 
@@ -169,14 +165,6 @@ The original imported file was moved or deleted.
 1. **Pick a smaller Per page size** above the grid (the grid shows all segments by default; try 100 or 50)
 2. **Disable spellcheck** if not needed (Settings → View)
 3. **Close other heavy applications**
-
-### Navigation between segments is slow
-
-Fixed in v1.9.66:
-- Termbase cache now works correctly
-- Verbose logging removed
-
-Update to the latest version.
 
 ### Large files take forever to import
 

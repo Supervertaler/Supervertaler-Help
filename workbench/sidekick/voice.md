@@ -26,15 +26,15 @@ Always-On runs a continuous microphone stream in the background. When you speak,
 
 **Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
-### Push-to-Talk (F9 / Ctrl+Shift+Space)
+### Push-to-Talk (Ctrl+Shift+Space)
 
-Press **F9** (inside the Workbench editor) or **Ctrl+Shift+Space** (globally, from any application – ⌘⇧Space on macOS) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
+Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
 
 **Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, Voice pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
 
-**F9 modes** (configurable in the Push-to-Talk settings):
+**Push-to-talk modes** (configurable in the Push-to-Talk settings):
 - **Toggle** (default) – press once to start, press again to stop
-- **Hold-to-talk** – hold the key to record, release to stop. _Note: this only affects F9. The global Ctrl+Shift+Space hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
+- **Hold-to-talk** – hold the key to record, release to stop. _Note: hold-to-talk only works if you rebind dictation to a non-global (in-app) key. The default global hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
 
 ***
 
@@ -116,9 +116,9 @@ The first time you start Always-On with Vosk, the small English model (~40 MB) a
 
 ### Push-to-talk dictation engine
 
-The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles **F9** / **Ctrl+Shift+Space** when you trigger push-to-talk dictation. This is independent of the Always-On engine, because the two paths have different needs:
+The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles your push-to-talk dictation hotkey (**Ctrl+Shift+Space** by default). This is independent of the Always-On engine, because the two paths have different needs:
 
-| Setting | What runs when you press Ctrl+Shift+Space / F9 |
+| Setting | What runs when you trigger push-to-talk dictation |
 | --- | --- |
 | **Same as Always-On** _(default)_ | Auto-routes: Vosk or faster-whisper Always-On → faster-whisper push-to-talk; OpenAI API Always-On → OpenAI API push-to-talk |
 | **faster-whisper (offline)** | Always faster-whisper, regardless of Always-On engine |
@@ -196,8 +196,7 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 | Shortcut | Action |
 | --- | --- |
 | **Ctrl+Alt+A** (⌘⌥A on macOS) | Toggle Always-On listening |
-| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) |
-| **F9** | Push-to-talk (inside Workbench editor) |
+| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) — default, configurable |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](../settings/shortcuts.md#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 

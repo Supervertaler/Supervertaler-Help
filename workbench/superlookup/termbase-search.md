@@ -6,8 +6,8 @@ Superlookup’s **Termbases** tab searches your Supervertaler termbases for pref
 
 ## Open it
 
-- **In Supervertaler:** press `Ctrl+K`.
-- Or open Superlookup from the menu: **Edit → Superlookup…** (`Ctrl+Alt+L`).
+- **In Supervertaler:** press `Ctrl+K` (or open the **SuperLookup** tab, or **Tools → Superlookup**).
+- **From any application:** press `Ctrl+Alt+L` (system-wide hotkey).
 
 ## How to search
 
@@ -41,7 +41,7 @@ Right-click a result to open a context menu with:
 
 - **Edit in Termbase: …**
 
-This navigates to **Project resources → Termbases**, selects the termbase, and filters the terms list to the source term.
+This navigates to the **Termbases** tab, selects the termbase, and filters the terms list to the source term.
 
 ## Termbase selection
 

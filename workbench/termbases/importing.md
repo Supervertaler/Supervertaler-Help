@@ -6,7 +6,7 @@ You can import terminology from common formats such as TSV/CSV (and other suppor
 
 ## Import steps
 
-1. Open **Project resources → Termbases**
+1. Open the **Termbases** tab
 2. Choose **Import**
 3. Select your file
 
@@ -16,5 +16,5 @@ You can import terminology from common formats such as TSV/CSV (and other suppor
 - Import before batch translation so AI can follow your terminology.
 
 :::note
-If you don’t see terms highlighting in the grid, ensure the termbase is enabled (Read/active) in Project resources.
+If you don’t see terms highlighting in the grid, ensure the termbase is enabled (Read/active) in the **Termbases** tab.
 :::

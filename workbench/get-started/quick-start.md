@@ -33,14 +33,15 @@ If you're working with memoQ/Trados/Phrase/CafeTran, always choose the matching 
 
 ## Step 3: Navigate the Grid
 
-The translation grid has 4 columns:
+The translation grid has 5 columns:
 
 | Column     | Description                  |
 | ---------- | ---------------------------- |
 | **#**      | Segment number               |
-| **Status** | Translation status indicator |
+| **Type**   | Segment type (¶, heading, list item, …) |
 | **Source** | Original text (read-only)    |
 | **Target** | Your translation (editable)  |
+| **Status** | Translation status indicator |
 
 ### Basic Navigation
 

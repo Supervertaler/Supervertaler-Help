@@ -66,7 +66,6 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 |----------|--------|
 | `Ctrl+K` | Open SuperLookup (concordance) for the selection |
 | `Ctrl+Alt+L` | SuperLookup as a system-wide hotkey (works from any application) |
-| `Alt+K` | Open SuperLookup seeded with the current selection |
 
 ## View
 
