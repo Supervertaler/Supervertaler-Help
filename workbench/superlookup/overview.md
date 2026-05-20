@@ -2,7 +2,9 @@
 title: "Overview"
 ---
 
-SuperLookup is your unified concordance and research hub, bringing together all lookup resources in one place. It's a top tab in Workbench (🔍 SuperLookup), alongside Editor, TMs, Termbases, Clipboard, Voice, and Settings.
+SuperLookup is your unified concordance and research hub, bringing together all lookup resources in one place. If you've used **LogiTerm Pro**, the idea will feel familiar: one search box across your termbases, translation memories, and web resources.
+
+It's a top tab in Workbench (🔍 SuperLookup), alongside Editor, TMs, Termbases, Clipboard, Voice, and Settings.
 
 ## Opening SuperLookup
 
