@@ -67,6 +67,18 @@ Anchored comment ranges show a soft amber background in the source or target cel
 
 If you edit the target text after creating an anchored comment, the amber highlight stays at its original character offsets. If your edit shifts the anchor's intended target, the highlight may end up on slightly-different wording. The simplest workaround is to edit the text first, then create the anchored comment.
 
+### Reaching a comment from the grid
+
+You don't have to open the Comments tab first to find a comment — you can get to it straight from the segment in the grid:
+
+* **Hover** the amber-highlighted range in a source or target cell to see the comment as a tooltip.
+* **Right-click** the highlighted range and choose **💬 Open comment**. Workbench switches the right panel to the **💬 Comments → 📝 Segment** sub-tab and briefly flashes the matching entry — handy when the Match Panel (or another tab) was showing.
+
+Segment-level comments have no highlighted range to aim at, so they're reachable two other ways:
+
+* **Right-click anywhere** in a commented segment's source or target cell → **💬 Open comment(s)** (opens the segment's first comment).
+* **Hover or right-click the Status cell** of a commented segment: the tooltip lists the segment's comments, and right-clicking offers **💬 Open comment(s)**.
+
 ### Comments in exported documents
 
 When you export your project back to a Word document (**File → Export → Export Translated Document…**), every segment comment becomes a Word comment in the output `.docx`. Behaviour per comment kind:
@@ -109,6 +121,7 @@ Proofreading comments are **not** exported to the final document. They're a tran
 | QuickTrans popup (system-wide hotkey) | **Ctrl+Alt+Q** (Windows/Linux) / **⌘+Ctrl+Q** (macOS) |
 | Add a segment-level comment via inline editor | Click into the bottom editor and type |
 | Jump to a commented segment | Click its **Segment #N** header in the all-comments list |
+| Open a comment from the grid | Hover the highlight for a tooltip; right-click the highlight, the cell, or the Status cell → **💬 Open comment(s)** |
 | Edit a specific comment | Right-click its header → **✏️ Edit comment…** |
 | Delete a specific comment | Right-click its header → **🗑️ Delete comment** |
 | Configure the author name for exported comments | **Settings → User Identity → Translator Name** |
