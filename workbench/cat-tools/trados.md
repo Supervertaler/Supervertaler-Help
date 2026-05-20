@@ -3,7 +3,7 @@ title: "Trados Studio Workflow"
 ---
 
 :::note
-**Using Supervertaler for Trados (plugin)?** For documentation on the Trados Studio plugin (TermLens, AI Assistant, Batch Translate), see [Supervertaler for Trados](https://supervertaler.gitbook.io/help/trados/).
+**Using Supervertaler for Trados (plugin)?** For documentation on the Trados Studio plugin (TermLens, AI Assistant, Batch Translate), see [Supervertaler for Trados](https://help.supervertaler.com/trados/).
 This page covers the SDLPPX round-trip workflow using Supervertaler as a **standalone application**.
 :::
 

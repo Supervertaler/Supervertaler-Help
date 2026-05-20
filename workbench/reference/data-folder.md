@@ -4,7 +4,7 @@ title: "User Data Folder"
 
 Supervertaler Workbench keeps your termbases, translation memories, prompt
 library, settings, and projects in a single user data folder. This folder is
-**shared with [Supervertaler for Trados](https://supervertaler.gitbook.io/help/trados/data-folder)**,
+**shared with [Supervertaler for Trados](https://help.supervertaler.com/trados/data-folder/)**,
 so both programs read and write the same terminology, TMs, and prompts without
 duplicating files.
 
@@ -81,5 +81,5 @@ and data are preserved.
 
 ## Related
 
-- [Supervertaler for Trados — User Data Folder](https://supervertaler.gitbook.io/help/trados/data-folder)
+- [Supervertaler for Trados — User Data Folder](https://help.supervertaler.com/trados/data-folder/)
 - [General Settings](../settings/general.md)

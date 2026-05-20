@@ -154,4 +154,4 @@ See [Support & Community](support.md) for all the ways to get help.
 - [TermLens Settings](settings/termlens.md)
 - [AI Settings](settings/ai-settings.md)
 - [Termbase Management](termbase-management.md)
-- [Common Issues (Workbench)](https://supervertaler.gitbook.io/supervertaler/troubleshooting/common-issues)
+- [Common Issues (Workbench)](https://help.supervertaler.com/workbench/troubleshooting/common-issues/)
