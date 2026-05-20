@@ -26,3 +26,11 @@
 
 /workbench/glossaries/*                  /workbench/termbases/:splat              301
 /workbench/superlookup/glossary-search/  /workbench/superlookup/termbase-search/  301
+
+# ─── 2026-05-20: page moves ───────────────────────────────────────
+# "File Format Reference" was merged into Import & Export and became the
+# Supervertaler Bilingual Table page.
+/workbench/reference/file-formats/       /workbench/import-export/bilingual-tables/  301
+# AutoFingers was renamed to Voice (this redirect previously lived only in the
+# now-unused .gitbook.yaml, so it never actually fired on Cloudflare Pages).
+/workbench/sidekick/autofingers/         /workbench/sidekick/voice/                  301

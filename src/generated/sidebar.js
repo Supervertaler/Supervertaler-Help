@@ -66,6 +66,10 @@ const sidebar = [
             "link": "/trados/multiterm-support/"
           },
           {
+            "label": "Trados Studio 2026 & .ttb",
+            "link": "/trados/studio-2026/"
+          },
+          {
             "label": "Supervertaler Assistant",
             "items": [
               {
@@ -527,17 +531,17 @@ const sidebar = [
             "link": "/workbench/import-export/exporting/"
           },
           {
-            "label": "Bilingual Tables",
+            "label": "Supervertaler Bilingual Table",
             "link": "/workbench/import-export/bilingual-tables/"
           }
         ]
       },
       {
-        "label": "Superlookup",
+        "label": "SuperLookup",
         "collapsed": true,
         "items": [
           {
-            "label": "Superlookup Overview",
+            "label": "SuperLookup Overview",
             "link": "/workbench/superlookup/overview/"
           },
           {
@@ -651,8 +655,8 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
-            "label": "File Format Reference",
-            "link": "/workbench/reference/file-formats/"
+            "label": "User Data Folder",
+            "link": "/workbench/reference/data-folder/"
           },
           {
             "label": "Changelog",
