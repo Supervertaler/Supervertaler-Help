@@ -3,3 +3,6 @@ root: ./
 redirects:
   # v1.9.491: AutoFingers was renamed to Voice. Redirect old bookmarks.
   workbench/sidekick/autofingers: workbench/sidekick/voice.md
+  # The old "File Format Reference" page moved into Import & Export and became
+  # the Supervertaler Bilingual Table page.
+  workbench/reference/file-formats: workbench/import-export/bilingual-tables.md
