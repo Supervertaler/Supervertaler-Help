@@ -33,7 +33,7 @@ If you want to move between segments regardless of where the cursor is inside th
 
 ## Pagination
 
-If your project is large, you can enable pagination and move page-by-page.
+By default all segments are shown on one page. You can split the project into fixed-size pages with the **Per page** selector (very large projects open paginated automatically).
 
 - See: [Pagination](pagination.md)
 

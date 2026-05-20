@@ -166,7 +166,7 @@ The original imported file was moved or deleted.
 
 ### Application is slow
 
-1. **Reduce segments per page** in pagination settings (try 50)
+1. **Pick a smaller Per page size** above the grid (the grid shows all segments by default; try 100 or 50)
 2. **Disable spellcheck** if not needed (Settings → View)
 3. **Close other heavy applications**
 

@@ -37,7 +37,7 @@ The anchored text immediately gets a soft amber background in the editor cell so
 
 Two ways:
 
-* **Via the bottom editor**: click into the segment, switch to the **💬 Comments → 📝 Segment** sub-tab (or press **Ctrl+N** to jump there with the editor focused), type your comment in the bottom area. Saved as you type. This works for the simple one-comment-per-segment case.
+* **Via the bottom editor**: click into the segment, switch to the **💬 Comments → 📝 Segment** sub-tab, type your comment in the bottom area. Saved as you type. This works for the simple one-comment-per-segment case.
 * **Via Ctrl+M with no selection**: place the cursor in the source or target cell without selecting any text, press Ctrl+M. The comment is segment-level. Useful when you want to add a second comment to a segment without disturbing an existing one.
 
 ### The all-comments list
@@ -103,7 +103,7 @@ Proofreading comments are **not** exported to the final document. They're a tran
 
 | Action | Shortcut / How |
 |---|---|
-| Focus the bottom comments editor (Segment sub-tab) | **Ctrl+N** |
+| Focus the bottom comments editor (Segment sub-tab) | Click the **💬 Comments → 📝 Segment** sub-tab |
 | Add a range-anchored comment to selected text | **Ctrl+M** with text selected |
 | Add a segment-level comment via dialog | **Ctrl+M** with no selection (cursor only) |
 | QuickTrans popup (system-wide hotkey) | **Ctrl+Alt+Q** (Windows/Linux) / **⌘+Ctrl+Q** (macOS) |

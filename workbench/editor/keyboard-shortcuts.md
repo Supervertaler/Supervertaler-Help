@@ -9,11 +9,11 @@ Master these shortcuts to work faster in Supervertaler.
 | Shortcut | Action |
 |----------|--------|
 | `↑/↓` | Previous/next segment when cursor is at the first/last line of the cell |
-| `Alt+Up` | Previous segment (always) |
-| `Alt+Down` | Next segment (always) |
+| `Ctrl+Up` | Previous segment (always) |
+| `Ctrl+Down` | Next segment (always) |
 | `Ctrl+G` | Go to segment number |
-| `Page Up` | Previous page (pagination) |
-| `Page Down` | Next page (pagination) |
+| `Page Up` | Previous page (when paginated) |
+| `Page Down` | Next page (when paginated) |
 | `Ctrl+Home` | First segment |
 | `Ctrl+End` | Last segment |
 
@@ -31,6 +31,7 @@ Master these shortcuts to work faster in Supervertaler.
 | `Ctrl+A` | Select all (in cell) |
 | `Shift+Enter` | Insert line break inside a cell |
 | `Ctrl+,` | Insert next tag / wrap selection with a tag pair (when available) |
+| `Ctrl+M` | Add a comment to the selected source/target text (or a segment-level comment if nothing is selected) |
 
 ## Translation
 
@@ -40,8 +41,6 @@ Master these shortcuts to work faster in Supervertaler.
 | `Ctrl+Shift+T` | Translate multiple segments |
 | `Ctrl+1…9` | Insert match #1…#9 |
 | `Ctrl+Space` | Insert currently selected match |
-| `Ctrl+Up` | Previous match (results panel) |
-| `Ctrl+Down` | Next match (results panel) |
 
 ## Find & Replace
 
@@ -78,7 +77,16 @@ Master these shortcuts to work faster in Supervertaler.
 |----------|--------|
 | `Ctrl+S` | Save project |
 | `Ctrl+O` | Open project |
-| `Ctrl+N` | New project |
+
+## Termbase / Glossary
+
+| Shortcut | Action |
+|----------|--------|
+| `Ctrl+Alt+T` | Add the selected term pair to a termbase (opens the entry dialog) |
+| `Alt+Left` | Quick-add the selected term pair to the last-used termbase |
+| `Alt+Up` | Quick-add the selected term pair to the project termbase |
+| `Alt+Down` | Quick-add the selected term pair to the background termbase |
+| `Ctrl+Alt+N` | Add the selection to Non-Translatables |
 
 ## Voice Commands (if enabled)
 

@@ -9,7 +9,6 @@ Machine translation is delivered by the **QuickTrans Popup** – an always-on-to
 | How | Notes |
 |-----|-------|
 | **Ctrl+Alt+Q** (⌘⌥Q on macOS) | Opens the QuickTrans always-on-top popup and starts the MT fan-out immediately on the selected text. Auto-copies the current selection so you don't need a separate Ctrl+C first. |
-| **Ctrl+M** | Same popup, but uses the current Workbench grid-cell text (no selection needed). |
 | Editor right-click → ⚡ QuickTrans | Right-click menu in the editor. |
 | **🔍 Run in SuperLookup** button in the popup header | After you've seen the QuickTrans results, click 🔍 to hand the same query off to Workbench's SuperLookup tab for a richer concordance / termbase / web look-up. |
 
