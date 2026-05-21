@@ -37,6 +37,24 @@ A common pattern is a small Python proxy that wraps free web MT engines and pres
 Free web MT engines are reverse-engineered and may break or rate-limit without notice; a proxy keeps that complexity outside Workbench. Always check each engine's terms of use for your use case.
 :::
 
+## Free Dutch ↔ English engines (via a multi-engine proxy)
+
+If your proxy exposes several engines as "models", set **Model / engine** to the engine's key. For Dutch ↔ English, these work well:
+
+| Model / engine | Notes |
+|---|---|
+| `google` | Reliable, fast. |
+| `microsoft_builtin` | Reliable; good Dutch. |
+| `modernmt_builtin` | Reliable. |
+| `lingvanex_builtin` | Works; quality varies. |
+| `deepl_builtin` | Free DeepL — excellent quality **when available**, but the free endpoint rate-limits aggressively (HTTP 429), so it may intermittently fall back to another engine. |
+
+China-focused engines (`sogou`, `transmart`, `niutrans`) and the patent engine `cnpat` are not recommended for Dutch ↔ English.
+
+:::note
+These engines are reverse-engineered free web services. Availability and quality vary, and `deepl_builtin` in particular can be throttled. For dependable DeepL, use the official DeepL engine (with an API key) built into Workbench's MT settings.
+:::
+
 ## Custom MT vs the AI custom endpoint
 
 | | Custom MT endpoint | AI custom endpoint |
