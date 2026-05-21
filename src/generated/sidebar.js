@@ -366,10 +366,24 @@ const sidebar = [
           {
             "label": "Clipboard Manager",
             "link": "/workbench/sidekick/clipboard/"
+          }
+        ]
+      },
+      {
+        "label": "QuickTrans",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "QuickTrans Overview",
+            "link": "/workbench/quicktrans/overview/"
           },
           {
-            "label": "QuickTrans Popup",
-            "link": "/workbench/sidekick/quicktrans-popup/"
+            "label": "Machine Translation engines",
+            "link": "/workbench/quicktrans/machine-translation/"
+          },
+          {
+            "label": "Custom MT endpoint",
+            "link": "/workbench/quicktrans/custom-mt-endpoint/"
           }
         ]
       },
@@ -551,14 +565,6 @@ const sidebar = [
           {
             "label": "Termbase Search",
             "link": "/workbench/superlookup/termbase-search/"
-          },
-          {
-            "label": "Machine Translation",
-            "link": "/workbench/superlookup/mt/"
-          },
-          {
-            "label": "Custom MT endpoint",
-            "link": "/workbench/superlookup/custom-mt-endpoint/"
           },
           {
             "label": "Web Resources",

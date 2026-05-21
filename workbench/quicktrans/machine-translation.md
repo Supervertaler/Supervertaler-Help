@@ -2,7 +2,7 @@
 title: "Machine Translation"
 ---
 
-Machine translation is delivered by the **QuickTrans Popup** – an always-on-top popup window with translations from every enabled provider, summoned independently of the SuperLookup tab. See [QuickTrans Popup](../sidekick/quicktrans-popup.md) for the full reference.
+Machine translation is delivered by **QuickTrans** – an always-on-top popup (and dockable panel) with translations from every enabled provider. See [QuickTrans](overview.md) for the full reference.
 
 ## Opening QuickTrans
 

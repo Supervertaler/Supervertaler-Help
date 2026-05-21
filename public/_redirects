@@ -34,3 +34,11 @@
 # AutoFingers was renamed to Voice (this redirect previously lived only in the
 # now-unused .gitbook.yaml, so it never actually fired on Cloudflare Pages).
 /workbench/sidekick/autofingers/         /workbench/sidekick/voice/                  301
+
+# ─── 2026-05-21: QuickTrans/MT pages moved out of SuperLookup & Companion Tabs ───
+# Machine Translation, Custom MT endpoint and the QuickTrans popup now live in a
+# dedicated /workbench/quicktrans/ section (they are not part of SuperLookup or
+# the companion tabs structurally or in the app).
+/workbench/superlookup/mt/ /workbench/quicktrans/machine-translation/ 301
+/workbench/superlookup/custom-mt-endpoint/ /workbench/quicktrans/custom-mt-endpoint/ 301
+/workbench/sidekick/quicktrans-popup/ /workbench/quicktrans/overview/ 301

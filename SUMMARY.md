@@ -95,7 +95,12 @@
 * [Trados-aware Chat](workbench/sidekick/trados-aware-chat.md)
 * [Voice](workbench/sidekick/voice.md)
 * [Clipboard Manager](workbench/sidekick/clipboard.md)
-* [QuickTrans Popup](workbench/sidekick/quicktrans-popup.md)
+
+## 🖥️ QuickTrans
+
+* [QuickTrans Overview](workbench/quicktrans/overview.md)
+* [Machine Translation engines](workbench/quicktrans/machine-translation.md)
+* [Custom MT endpoint](workbench/quicktrans/custom-mt-endpoint.md)
 
 ## 🖥️ AI Translation
 
@@ -149,8 +154,6 @@
 * [SuperLookup Overview](workbench/superlookup/overview.md)
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
 * [Termbase Search](workbench/superlookup/termbase-search.md)
-* [Machine Translation](workbench/superlookup/mt.md)
-* [Custom MT endpoint](workbench/superlookup/custom-mt-endpoint.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
 
 ## 🖥️ Quality Assurance

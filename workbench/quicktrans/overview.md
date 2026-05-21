@@ -1,10 +1,13 @@
 ---
-title: "Quicktrans Popup"
+title: "QuickTrans"
 ---
 
-The **QuickTrans Popup** is a small always-on-top window that shows machine translations of the currently-selected text from every enabled provider, all at once. Select text anywhere on your computer, press the QuickTrans hotkey, and the popup appears with translations streaming in as each provider responds.
+**QuickTrans** shows fast machine translations of the selected text from every enabled provider at once. It runs in two ways:
 
-It's a single-purpose surface – just translations, no chat – and it stays on top of every other window until you press 1–9 / Enter / click to pick a result, or Esc to dismiss.
+- a **global always-on-top popup**, summoned with **Ctrl+Alt+Q** anywhere on your computer; and
+- a **docked panel** inside the Workbench grid – it can sit below, above, or to the right of the grid (beside TermLens), showing the same results inline as you move between segments.
+
+The rest of this page describes the popup. It's a single-purpose surface – just translations, no chat – and it stays on top of every other window until you press 1–9 / Enter / click to pick a result, or Esc to dismiss.
 
 ## Opening QuickTrans
 
@@ -89,8 +92,8 @@ The QuickTrans chord can be rebound in **Settings → Keyboard Shortcuts**. The 
 
 ## Related pages
 
-* [Companion Tabs Overview](overview.md)
-* [Trados-aware Chat](trados-aware-chat.md)
+* [Machine Translation engines](machine-translation.md)
+* [Custom MT endpoint](custom-mt-endpoint.md)
+* [Companion Tabs Overview](../sidekick/overview.md)
 * [SuperLookup Overview](../superlookup/overview.md)
-* [Machine Translation in SuperLookup](../superlookup/mt.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)
