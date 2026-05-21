@@ -21,9 +21,14 @@ It is deliberately separate from the **AI custom endpoint** used for the AI Assi
    - **Endpoint URL** – the OpenAI-compatible base URL, e.g. `http://127.0.0.1:1234/v1`
    - **Model / engine** – the model (or, for a multi-engine proxy, the engine name, e.g. `google`)
    - **API key** – only if your endpoint requires one; leave blank otherwise
+   - **Show this profile in QuickTrans** – tick to include this profile as a QuickTrans result; untick to keep it configured but hidden
 5. Click **💾 Save QuickTrans Settings**.
 
-Each saved profile with an endpoint appears as its own result in the QuickTrans popup (summoned with **Ctrl+Alt+Q**). Add more profiles with **+** to expose several engines at once; remove one with **−**.
+Each profile that is enabled (**Show this profile in QuickTrans** ticked) and has an endpoint appears as its own result in the QuickTrans popup (summoned with **Ctrl+Alt+Q**). Add more profiles with **+** to expose several engines at once; remove one with **−**.
+
+:::note
+The "Custom MT endpoint" checkbox is the master on/off for the whole feature; the per-profile "Show this profile in QuickTrans" checkbox lets you pick which of your saved profiles actually appear, so you can keep several configured but show only the ones you want.
+:::
 
 :::note
 The endpoint must be OpenAI **chat-completions** compatible (it receives a `POST` to `/v1/chat/completions` with `messages` and a `model`, and returns the translation as the assistant message). Workbench sends a strict "translate only" prompt, so the endpoint should return just the translated text.
