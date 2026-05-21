@@ -4,7 +4,7 @@ title: "Supervertaler Workbench"
 
 Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, open-source translation application built by translators, for translators.
 
-![Supervertaler Workbench – term and non-translatables insert popup](https://supervertaler.com/screenshots/Supervertaler_v1.9.329_Term_and_NT_insert_popup.png)
+![Supervertaler Workbench – translation grid with TermLens, QuickTrans, and TM panels](/.gitbook/assets/Supervertaler-Workbench-2026-05-21.png)
 
 **Supervertaler Workbench** integrates AI-powered translation with traditional CAT tool workflows. It runs on Windows, macOS, and Linux.
 
