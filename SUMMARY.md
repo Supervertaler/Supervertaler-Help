@@ -24,7 +24,7 @@
   * [Studio Tools](trados/ai-assistant/studio-tools.md)
   * [Incognito Mode](trados/ai-assistant/incognito-mode.md)
   * [Providers and Models](trados/ai-assistant/providers.md)
-  * [Sidekick Bridge](trados/ai-assistant/sidekick-bridge.md)
+  * [Supervertaler Bridge](trados/ai-assistant/supervertaler-bridge.md)
   * [SuperMemory](trados/ai-assistant/super-memory.md)
     * [Quick Add](trados/ai-assistant/super-memory/quick-add.md)
     * [Process Inbox](trados/ai-assistant/super-memory/process-inbox.md)

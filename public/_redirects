@@ -43,6 +43,12 @@
 /workbench/superlookup/custom-mt-endpoint/ /workbench/quicktrans/custom-mt-endpoint/ 301
 /workbench/sidekick/quicktrans-popup/ /workbench/quicktrans/overview/ 301
 
+# ─── 2026-05-21: "Sidekick Bridge" renamed to "Supervertaler Bridge" ───
+# The cross-product bridge feature was rebranded. The on-disk handshake
+# filename stays sidekick-bridge.json for wire compatibility, but the help
+# page slug was de-sidekicked.
+/trados/ai-assistant/sidekick-bridge/    /trados/ai-assistant/supervertaler-bridge/  301
+
 # ─── 2026-05-21: "Companion Tabs" section dissolved ───────────────
 # The artificial "Companion Tabs" grouping was removed. Voice and the
 # Clipboard Manager are now their own top-level sections; Chat moved

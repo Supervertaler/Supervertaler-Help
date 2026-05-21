@@ -235,7 +235,7 @@ When to pick which:
 * **Workbench Sidekick** gives you a much larger reading area – useful for prompts whose responses are multi-paragraph explanations, full translation comparisons, or anything you want to read without squinting at the narrow Assistant panel.
 
 :::note
-Workbench must be running for this to work. If it isn't (or the [Sidekick Bridge](ai-assistant/sidekick-bridge.md) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
+Workbench must be running for this to work. If it isn't (or the [Supervertaler Bridge](ai-assistant/supervertaler-bridge.md) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
 :::
 
 ### Sending prompts to the clipboard (paste into claude.ai, ChatGPT, etc.)

@@ -10,7 +10,7 @@ This is especially useful on small laptop screens where there's not enough room 
 
 ## How it works
 
-Supervertaler for Trados runs a tiny localhost-only HTTP service called the **Sidekick Bridge** while the AI Assistant panel is active. (The name is historical – it predates the Sidekick retirement in Workbench v1.10.4 and is kept stable because the Trados-side C# class looks up the bridge by that name.) Workbench's Chat panel detects the bridge automatically and uses it to fetch the current Trados project state on every message you send.
+Supervertaler for Trados runs a tiny localhost-only HTTP service called the **Supervertaler Bridge** while the AI Assistant panel is active. (The name is historical – it predates the Sidekick retirement in Workbench v1.10.4 and is kept stable because the Trados-side C# class looks up the bridge by that name.) Workbench's Chat panel detects the bridge automatically and uses it to fetch the current Trados project state on every message you send.
 
 Nothing leaves your computer – the bridge listens only on `127.0.0.1`, requires a per-session authentication token, and is never reachable from outside the machine.
 
@@ -47,7 +47,7 @@ This is opt-in on the Trados side – a dropdown in Trados → **Settings → AI
 
 If Workbench isn't running when Trados tries to send a prompt, Trados silently falls back to its own Assistant – the prompt is never lost.
 
-→ [Sidekick Bridge (Trados help)](https://help.supervertaler.com/trados/ai-assistant/sidekick-bridge/) – wire format and troubleshooting
+→ [Supervertaler Bridge (Trados help)](https://help.supervertaler.com/trados/ai-assistant/supervertaler-bridge/) – wire format and troubleshooting
 
 ## Example questions
 
@@ -74,7 +74,7 @@ The chat will infer the domain from the surrounding segments and reply.
 * The bridge listens **only on `127.0.0.1`** (loopback). Other devices on your network can never reach it.
 * Each Trados session gets a **fresh authentication token** – stale tokens from old sessions are useless.
 * The bridge **only starts when you have Assistant access** (paid subscription or trial). Without Assistant access, no bridge is started.
-* You can disable the bridge entirely on the Trados side by editing the plugin's `settings.json` and setting `"sidekickBridgeEnabled": false`. See [Sidekick Bridge](../../trados/ai-assistant/sidekick-bridge.md) for details.
+* You can disable the bridge entirely on the Trados side by editing the plugin's `settings.json` and setting `"sidekickBridgeEnabled": false`. See [Supervertaler Bridge](../../trados/ai-assistant/supervertaler-bridge.md) for details.
 
 ## Troubleshooting
 
@@ -99,5 +99,5 @@ The bridge was reachable earlier but is no longer responding. Make sure Trados S
 ## Related pages
 
 * [AI Translation Overview](overview.md)
-* [Sidekick Bridge (Trados side)](../../trados/ai-assistant/sidekick-bridge.md)
+* [Supervertaler Bridge (Trados side)](../../trados/ai-assistant/supervertaler-bridge.md)
 * [Supervertaler Assistant (Trados)](../../trados/ai-assistant.md)

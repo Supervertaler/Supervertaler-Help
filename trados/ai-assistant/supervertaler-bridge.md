@@ -1,8 +1,8 @@
 ---
-title: "Sidekick Bridge"
+title: "Supervertaler Bridge"
 ---
 
-The **Sidekick Bridge** is a pair of small localhost-only HTTP services – one in each product – that let Supervertaler for Trados and Supervertaler Workbench cooperate while you translate. Each bridge runs in the background, exposes a few endpoints on `127.0.0.1` only, and is gated behind a per-session bearer token.
+The **Supervertaler Bridge** is a pair of small localhost-only HTTP services – one in each product – that let Supervertaler for Trados and Supervertaler Workbench cooperate while you translate. Each bridge runs in the background, exposes a few endpoints on `127.0.0.1` only, and is gated behind a per-session bearer token.
 
 The two directions are independent and either side can be used without the other:
 

@@ -76,7 +76,7 @@ Global hotkeys are registered via the native `RegisterHotKey` API, which consume
 
 Global hotkeys go through `pynput`, which uses XGrabKey under X11. If hotkeys silently don't fire, your user may need to be in the `input` group (`sudo usermod -aG input $USER`, then log out and back in).
 
-## Companion-tab keyboard navigation
+## Quick-lookup tab keyboard navigation
 
 When you've summoned the Clipboard, SuperLookup, or Voice tab via a global hotkey, these shortcuts work straight away – no clicking around to land your focus first:
 
@@ -86,6 +86,18 @@ When you've summoned the Clipboard, SuperLookup, or Voice tab via a global hotke
 | **↑ / ↓** | Navigate within the focused column (e.g. clipboard text history, snippet list) |
 | **← / →** | Move focus between columns in the Clipboard tab (Text → Images → Menu) |
 | **Enter** | Activate the selected item (paste clip, run snippet, fire conversion) |
+
+### Pressing Esc dismisses Workbench to the tray
+
+On the surfaces you summon with a global hotkey – SuperLookup, Clipboard, and Voice – pressing **Esc** hides Workbench back to the system tray. Handy when you're using Workbench as a popup utility from another app: hotkey to summon, Esc to dismiss.
+
+* **On SuperLookup**: Esc unconditionally hides Workbench, even when the cursor is in the search box. SuperLookup is mostly a one-shot query, so there's nothing worth keeping if you change your mind.
+* **On Clipboard and Voice**: Esc hides Workbench *unless* the focused widget is a text input (search field, command editor, etc.) – in those cases Esc behaves the way it does in any other app (clears the field, closes a dropdown, etc.).
+* **On Editor, TMs, Termbases, AI, Settings**: Esc keeps its natural editor / dialog / combo-box behaviour. Workbench is never hidden by accident from the surfaces where you actually do work.
+
+### Tray quick-jump menu
+
+Right-click the Workbench tray icon (the orange **Sv**) for a menu with **Show Workbench**, **Open SuperLookup**, **Open Clipboard**, **Open Voice**, **Open Settings**, plus toggles for **Close to tray** and **Start with computer**.
 
 ## Editor shortcuts
 

@@ -220,7 +220,7 @@ Picks where Ctrl+Q [QuickLauncher](../quicklauncher.md) prompts run.
 
 The Workbench-Sidekick option is for users who want the bigger reading area Sidekick provides for long explanations, or who prefer to keep all their AI chat history in one product rather than split between Trados and Workbench.
 
-If the option is set to **Workbench Sidekick** but Workbench isn't running (or the [Sidekick Bridge](../ai-assistant/sidekick-bridge.md) isn't reachable for any reason), the QuickLauncher silently falls back to the in-Trados Assistant – a missing Workbench never blocks a prompt.
+If the option is set to **Workbench Sidekick** but Workbench isn't running (or the [Supervertaler Bridge](../ai-assistant/supervertaler-bridge.md) isn't reachable for any reason), the QuickLauncher silently falls back to the in-Trados Assistant – a missing Workbench never blocks a prompt.
 
 :::note
 This setting only affects QuickLauncher. The in-Trados Assistant chat, Batch Translate, AI Proofreader, and other AI features keep using their own panels regardless.

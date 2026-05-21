@@ -97,8 +97,8 @@ const sidebar = [
                 "link": "/trados/ai-assistant/providers/"
               },
               {
-                "label": "Sidekick Bridge",
-                "link": "/trados/ai-assistant/sidekick-bridge/"
+                "label": "Supervertaler Bridge",
+                "link": "/trados/ai-assistant/supervertaler-bridge/"
               },
               {
                 "label": "SuperMemory",
