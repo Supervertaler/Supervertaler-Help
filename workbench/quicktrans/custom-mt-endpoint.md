@@ -39,7 +39,7 @@ The endpoint must be OpenAI **chat-completions** compatible (it receives a `POST
 A common pattern is a small Python proxy that wraps free web MT engines and presents them as OpenAI "models". Run it locally (e.g. on `http://127.0.0.1:1234`), then add a Custom MT profile per engine you want, setting **Model / engine** to the engine name the proxy expects.
 
 :::note
-Free web MT engines are reverse-engineered and may break or rate-limit without notice; a proxy keeps that complexity outside Workbench. Always check each engine's terms of use for your use case.
+Free, unofficial web MT services are best-effort: availability and quality can vary, and they may rate-limit without notice. A proxy keeps that handling outside Workbench. Use each service in line with its own terms, and prefer an official provider API for production work.
 :::
 
 ## Free Dutch ↔ English engines (via a multi-engine proxy)
@@ -57,7 +57,7 @@ If your proxy exposes several engines as "models", set **Model / engine** to the
 China-focused engines (`sogou`, `transmart`, `niutrans`) and the patent engine `cnpat` are not recommended for Dutch ↔ English.
 
 :::note
-These engines are reverse-engineered free web services. Availability and quality vary, and `deepl_builtin` in particular can be throttled. For dependable DeepL, use the official DeepL engine (with an API key) built into Workbench's MT settings.
+These are free, best-effort services and their availability and quality vary; `deepl_builtin` in particular can be throttled. For dependable, production-grade DeepL, use the official DeepL engine (with an API key) built into Workbench's MT settings.
 :::
 
 ## Custom MT vs the AI custom endpoint
