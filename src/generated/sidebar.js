@@ -557,6 +557,10 @@ const sidebar = [
             "link": "/workbench/superlookup/mt/"
           },
           {
+            "label": "Custom MT endpoint",
+            "link": "/workbench/superlookup/custom-mt-endpoint/"
+          },
+          {
             "label": "Web Resources",
             "link": "/workbench/superlookup/web-resources/"
           }

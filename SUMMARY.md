@@ -150,6 +150,7 @@
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
 * [Termbase Search](workbench/superlookup/termbase-search.md)
 * [Machine Translation](workbench/superlookup/mt.md)
+* [Custom MT endpoint](workbench/superlookup/custom-mt-endpoint.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
 
 ## 🖥️ Quality Assurance
