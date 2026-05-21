@@ -27,22 +27,19 @@ Both kinds coexist and you can have many of each on the same segment.
 3. Press **Ctrl+M**.
 4. A dialog opens showing which segment + which field (source or target) you're anchoring to, plus a snippet of your selection for confirmation. Type the comment, click **OK**.
 
-The anchored text immediately gets a soft amber background in the editor cell so you can see at a glance which words have comments attached. The new comment also appears in the all-comments list above (see below).
+The anchored text immediately gets a soft amber background in the editor cell so you can see at a glance which words have comments attached. The new comment also appears in the all-comments list (see below).
 
 :::tip
-**Ctrl+M** matches the convention in Trados Studio and memoQ. The QuickTrans popup uses a separate system-wide hotkey (**Ctrl+Alt+Q** on Windows/Linux, **⌘+Ctrl+Q** on macOS) that works inside Workbench and in any other application.
+**Ctrl+M** matches memoQ's "Add comment" shortcut. (Trados Studio uses **Ctrl+Shift+N** for the same action.) You can also add a comment without the keyboard: **right-click in the source or target cell → 💬 Add comment**.
 :::
 
 ### Adding a segment-level (unanchored) comment
 
-Two ways:
-
-* **Via the bottom editor**: click into the segment, switch to the **💬 Comments → 📝 Segment** sub-tab, type your comment in the bottom area. Saved as you type. This works for the simple one-comment-per-segment case.
-* **Via Ctrl+M with no selection**: place the cursor in the source or target cell without selecting any text, press Ctrl+M. The comment is segment-level. Useful when you want to add a second comment to a segment without disturbing an existing one.
+Place the cursor in the source or target cell **without selecting any text**, then press **Ctrl+M** (or right-click → **💬 Add segment comment**). The comment is attached to the whole segment rather than to a specific range. Useful for a general note, or for adding another comment to a segment without disturbing an existing one.
 
 ### The all-comments list
 
-The top half of the Segment sub-tab shows **one entry per Comment** — not per segment. A segment with three comments shows three entries, in document order. Each entry has:
+The Segment sub-tab shows **one entry per Comment** — not per segment. A segment with three comments shows three entries, in document order. Each entry has:
 
 * A clickable **Segment #N** header. For anchored comments, the header reads `Segment #N  ⚓ source` or `Segment #N  ⚓ target` to tell you what kind of anchor it has.
 * For anchored comments: a quoted snippet of the anchored text, so you can see what the comment is *about* without jumping to the segment.
@@ -53,13 +50,11 @@ Clicking the **Segment #N** header jumps the grid to that segment (cross-page-aw
 
 **Right-click** on a Segment header (or anywhere on the entry) opens a context menu with **✏️ Edit comment…** and **🗑️ Delete comment**. Edit opens a small dialog pre-populated with the existing text; saving with an empty text field deletes the comment. Delete prompts for confirmation.
 
-The list rebuilds itself in real time as you add, edit, or remove comments. The splitter between the list and the bottom editor can be dragged to give either side more space.
+The list rebuilds itself in real time as you add, edit, or remove comments.
 
-### The bottom editor
-
-The bottom editor is the legacy "one comment per segment" UI. It still works for the simple case (current segment has zero or one segment-level comment). When the current segment is more complex — multiple comments, or any anchored comment — the editor goes **read-only** with a placeholder pointing you to the all-comments list above. This prevents typing in the bottom editor from accidentally clobbering anchored or multi-line comment structures.
-
-In practice: simple segments use the bottom editor as before; segments with anchored or multiple comments use Ctrl+M and the right-click context menu via the all-list.
+:::note
+Earlier versions had a separate "Comment on current segment" box at the bottom of the tab. It only handled a single, unanchored note and overwrote the whole comment list when edited, so it was removed in v1.10.142. All comments — anchored and segment-level — now live in the one list, and you add them with **Ctrl+M** or **right-click → 💬 Add comment** in the editor.
+:::
 
 ### Editor visual cue: amber background
 
@@ -115,11 +110,8 @@ Proofreading comments are **not** exported to the final document. They're a tran
 
 | Action | Shortcut / How |
 |---|---|
-| Focus the bottom comments editor (Segment sub-tab) | Click the **💬 Comments → 📝 Segment** sub-tab |
-| Add a range-anchored comment to selected text | **Ctrl+M** with text selected |
-| Add a segment-level comment via dialog | **Ctrl+M** with no selection (cursor only) |
-| QuickTrans popup (system-wide hotkey) | **Ctrl+Alt+Q** (Windows/Linux) / **⌘+Ctrl+Q** (macOS) |
-| Add a segment-level comment via inline editor | Click into the bottom editor and type |
+| Add a range-anchored comment to selected text | **Ctrl+M** with text selected, or right-click → **💬 Add comment** |
+| Add a segment-level comment | **Ctrl+M** with no selection (cursor only), or right-click → **💬 Add segment comment** |
 | Jump to a commented segment | Click its **Segment #N** header in the all-comments list |
 | Open a comment from the grid | Hover the highlight for a tooltip; right-click the highlight, the cell, or the Status cell → **💬 Open comment(s)** |
 | Edit a specific comment | Right-click its header → **✏️ Edit comment…** |
