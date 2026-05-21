@@ -204,6 +204,6 @@ Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessib
 
 ## Related pages
 
-- [Companion Tabs Overview](overview.md)
+- [Clipboard Manager](../clipboard/overview.md)
 - [Keyboard Shortcuts](../settings/shortcuts.md)
-- [AI Settings](../settings/general.md)
+- [General Settings](../settings/general.md)

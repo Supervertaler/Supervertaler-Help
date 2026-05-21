@@ -348,28 +348,6 @@ const sidebar = [
         ]
       },
       {
-        "label": "Companion Tabs",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "Companion Tabs Overview",
-            "link": "/workbench/sidekick/overview/"
-          },
-          {
-            "label": "Trados-aware Chat",
-            "link": "/workbench/sidekick/trados-aware-chat/"
-          },
-          {
-            "label": "Voice",
-            "link": "/workbench/sidekick/voice/"
-          },
-          {
-            "label": "Clipboard Manager",
-            "link": "/workbench/sidekick/clipboard/"
-          }
-        ]
-      },
-      {
         "label": "QuickTrans",
         "collapsed": true,
         "items": [
@@ -418,6 +396,10 @@ const sidebar = [
           {
             "label": "AutoPrompt",
             "link": "/workbench/ai-translation/autoprompt/"
+          },
+          {
+            "label": "Chat (AI conversation panel)",
+            "link": "/workbench/ai-translation/chat/"
           },
           {
             "label": "Using Local LLMs (Ollama)",
@@ -569,6 +551,26 @@ const sidebar = [
           {
             "label": "Web Resources",
             "link": "/workbench/superlookup/web-resources/"
+          }
+        ]
+      },
+      {
+        "label": "Voice",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Voice Commands & Dictation",
+            "link": "/workbench/voice/overview/"
+          }
+        ]
+      },
+      {
+        "label": "Clipboard Manager",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Clipboard Manager",
+            "link": "/workbench/clipboard/overview/"
           }
         ]
       },

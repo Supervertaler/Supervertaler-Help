@@ -23,7 +23,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Voice Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
 
 :::note
-**Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. Sidekick was retired in v1.10.4 and the chord is now unbound by default. The companion tabs (Clipboard, Voice, SuperLookup) are reachable via the dedicated hotkeys above; Chat lives in Workbench's right panel.
+**Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. That window was retired in v1.10.4 and the chord is now unbound by default. The Clipboard Manager, Voice, and SuperLookup tabs are reachable via the dedicated hotkeys above; Chat lives in the AI tab and in Workbench's right panel.
 :::
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
@@ -98,5 +98,5 @@ The settings page has an **Export Cheatsheet (HTML)** button on the right-hand p
 ## Related pages
 
 - [Editor Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
-- [Voice](../sidekick/voice.md)
-- [Companion Tabs Overview](../sidekick/overview.md)
+- [Voice Commands & Dictation](../voice/overview.md)
+- [Clipboard Manager](../clipboard/overview.md)

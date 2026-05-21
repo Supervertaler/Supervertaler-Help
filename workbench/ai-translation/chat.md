@@ -1,8 +1,10 @@
 ---
-title: "Trados Aware Chat"
+title: "Chat"
 ---
 
-The **💬 Chat** tab in Workbench's right panel is a full AI assistant that supports OpenAI, Claude, Gemini, Ollama, and any OpenAI-compatible custom provider. When you have **Supervertaler for Trados** running with its Assistant panel active, Chat automatically picks up the project context from Trados – active segment, surrounding segments, TM matches, termbase hits, project metadata – and answers questions about your real translation work without you having to switch out of Trados.
+The **💬 Chat** panel is a full AI assistant that supports OpenAI, Claude, Gemini, Ollama, and any OpenAI-compatible custom provider. It's available in two places: as the **Chat** sub-tab of the **✦ AI** top tab, and as a **💬 Chat** tab in the editor's right panel so you can keep a conversation visible while you translate.
+
+When you have **Supervertaler for Trados** running with its Assistant panel active, Chat automatically picks up the project context from Trados – active segment, surrounding segments, TM matches, termbase hits, project metadata – and answers questions about your real translation work without you having to switch out of Trados.
 
 This is especially useful on small laptop screens where there's not enough room to keep the in-Trados Assistant panel visible alongside the editor. Summon Workbench, click the **💬 Chat** tab, and ask away while Trados stays in front for the actual editing.
 
@@ -96,6 +98,6 @@ The bridge was reachable earlier but is no longer responding. Make sure Trados S
 
 ## Related pages
 
-* [Companion Tabs Overview](overview.md)
+* [AI Translation Overview](overview.md)
 * [Sidekick Bridge (Trados side)](../../trados/ai-assistant/sidekick-bridge.md)
 * [Supervertaler Assistant (Trados)](../../trados/ai-assistant.md)

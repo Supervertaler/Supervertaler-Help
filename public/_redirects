@@ -33,7 +33,7 @@
 /workbench/reference/file-formats/       /workbench/import-export/bilingual-tables/  301
 # AutoFingers was renamed to Voice (this redirect previously lived only in the
 # now-unused .gitbook.yaml, so it never actually fired on Cloudflare Pages).
-/workbench/sidekick/autofingers/         /workbench/sidekick/voice/                  301
+/workbench/sidekick/autofingers/         /workbench/voice/overview/                  301
 
 # ─── 2026-05-21: QuickTrans/MT pages moved out of SuperLookup & Companion Tabs ───
 # Machine Translation, Custom MT endpoint and the QuickTrans popup now live in a
@@ -42,3 +42,12 @@
 /workbench/superlookup/mt/ /workbench/quicktrans/machine-translation/ 301
 /workbench/superlookup/custom-mt-endpoint/ /workbench/quicktrans/custom-mt-endpoint/ 301
 /workbench/sidekick/quicktrans-popup/ /workbench/quicktrans/overview/ 301
+
+# ─── 2026-05-21: "Companion Tabs" section dissolved ───────────────
+# The artificial "Companion Tabs" grouping was removed. Voice and the
+# Clipboard Manager are now their own top-level sections; Chat moved
+# under AI Translation; the Companion Tabs Overview page was deleted.
+/workbench/sidekick/overview/            /workbench/voice/overview/                  301
+/workbench/sidekick/voice/               /workbench/voice/overview/                  301
+/workbench/sidekick/clipboard/           /workbench/clipboard/overview/              301
+/workbench/sidekick/trados-aware-chat/   /workbench/ai-translation/chat/             301

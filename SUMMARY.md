@@ -89,13 +89,6 @@
 * [Filtering Segments](workbench/editor/filtering.md)
 * [Pagination](workbench/editor/pagination.md)
 
-## 🖥️ Companion Tabs
-
-* [Companion Tabs Overview](workbench/sidekick/overview.md)
-* [Trados-aware Chat](workbench/sidekick/trados-aware-chat.md)
-* [Voice](workbench/sidekick/voice.md)
-* [Clipboard Manager](workbench/sidekick/clipboard.md)
-
 ## 🖥️ QuickTrans
 
 * [QuickTrans Overview](workbench/quicktrans/overview.md)
@@ -111,6 +104,7 @@
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
 * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
+* [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ CAT Tool Integration
@@ -155,6 +149,14 @@
 * [TM Concordance Search](workbench/superlookup/tm-search.md)
 * [Termbase Search](workbench/superlookup/termbase-search.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
+
+## 🖥️ Voice
+
+* [Voice Commands & Dictation](workbench/voice/overview.md)
+
+## 🖥️ Clipboard Manager
+
+* [Clipboard Manager](workbench/clipboard/overview.md)
 
 ## 🖥️ Quality Assurance
 

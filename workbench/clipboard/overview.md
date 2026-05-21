@@ -1,5 +1,5 @@
 ---
-title: "Clipboard"
+title: "Clipboard Manager"
 ---
 
 The Clipboard Manager in Supervertaler Workbench captures everything you copy and keeps a persistent history that survives application restarts. Click any item to paste it; trigger a snippet or text conversion to paste the transformed result back to whichever app you came from.
@@ -223,7 +223,6 @@ The full clip history is stored in your user data folder in a shared SQLite data
 
 ## Related pages
 
-* [Companion Tabs Overview](overview.md)
-* [Voice](voice.md)
-* [Trados-aware Chat](trados-aware-chat.md)
+* [Voice Commands & Dictation](../voice/overview.md)
+* [Chat (AI conversation panel)](../ai-translation/chat.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)

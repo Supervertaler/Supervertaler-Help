@@ -127,4 +127,4 @@ memoQ's import may not change segment status. You can:
 ## See Also
 
 - [CAT Tool Overview](overview.md)
-- [Voice (commands and dictation in memoQ)](../sidekick/voice.md)
+- [Voice (commands and dictation in memoQ)](../voice/overview.md)

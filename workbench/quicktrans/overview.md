@@ -94,6 +94,5 @@ The QuickTrans chord can be rebound in **Settings → Keyboard Shortcuts**. The 
 
 * [Machine Translation engines](machine-translation.md)
 * [Custom MT endpoint](custom-mt-endpoint.md)
-* [Companion Tabs Overview](../sidekick/overview.md)
 * [SuperLookup Overview](../superlookup/overview.md)
 * [Keyboard Shortcuts](../settings/shortcuts.md)
