@@ -142,6 +142,7 @@
 * [Multi-File Projects](workbench/import-export/multi-file.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
 * [Supervertaler Bilingual Table](workbench/import-export/bilingual-tables.md)
+* [AI-Readable Markdown Export](workbench/import-export/ai-readable-markdown.md)
 
 ## 🖥️ SuperLookup
 

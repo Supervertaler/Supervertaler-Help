@@ -529,6 +529,10 @@ const sidebar = [
           {
             "label": "Supervertaler Bilingual Table",
             "link": "/workbench/import-export/bilingual-tables/"
+          },
+          {
+            "label": "AI-Readable Markdown Export",
+            "link": "/workbench/import-export/ai-readable-markdown/"
           }
         ]
       },
