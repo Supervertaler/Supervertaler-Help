@@ -16,10 +16,11 @@ If you already have a hand-tuned prompt that works for your client, you do not n
 
 ## Launching it
 
-1. Open the **AI** tab.
-2. In the **Prompt Manager** sub-tab, click **✨ AutoPrompt** in the toolbar above the prompt tree.
-3. The analysis runs in the AI Assistant chat panel – progress messages appear as it works.
-4. When generation finishes, the new prompt is saved to the **Translate** category in your prompt library and is automatically selected as the **Custom Prompt ⭐** for this project.
+1. Open the **✨ AI** tab.
+2. In the **Prompt Manager** sub-tab, find Section 2 (**Custom Prompt**) on the left side of the panel. The right column of that section is labelled "Generate one automatically" and contains a single **✨ AutoPrompt** button. Click it.
+3. A **"Generating AutoPrompt"** progress dialog appears with an indeterminate busy bar. Reasoning-capable models (Opus, GPT-5, etc.) take 1–3 minutes; the rest of Supervertaler stays responsive while you wait. The dialog has a working Cancel button — cancelling stops the response being processed, though it can't actually abort the HTTP request in-flight on the provider's side.
+4. When generation finishes, a **"Save AutoPrompt"** dialog opens. It shows a read-only preview of the generated content, plus a **Name** field (pre-filled with your project name) and a **Folder** dropdown (defaulting to **Translate** but listing every other top-level folder in your library — editable, so you can type a brand-new folder name and it'll be created on save).
+5. Click **Save** to write the prompt to the library and set it as the **Custom Prompt ⭐** for this project. Click **Cancel** to discard — the generated content stays in the chat log above so you can copy it out manually if you want it as text but not as a file.
 
 ## What gets analysed
 
