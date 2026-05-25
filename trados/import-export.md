@@ -70,6 +70,13 @@ The **Segments: N** label tracks the current selection live.
 
 Single-file documents see no change — the file list, output radio, and per-file UI are all hidden.
 
+**Markdown exports get the same multi-file affordance** in both layouts:
+
+* **Table layout**: 6-column table (`#`, source, target, **File**, status, notes) with a section-break row (`| | **📄 File: <name>** | | | | |`) prefacing each new file's segments.
+* **Stacked layouts**: a `## 📄 File: <name>` heading appears before the first segment of each new file.
+
+Re-import auto-detects whether the Markdown table is 5- or 6-column and parses accordingly.
+
 ## Locked segments
 
 Trados segments can be **locked** (read-only in the editor) independently of their confirmation level — so a segment can be both `ApprovedTranslation` and locked, or `Draft` and locked. On large projects with a lot of locked-approved content, sending those segments to a proofreader is usually noise: any edits they make there can't be written back to Trados anyway.
