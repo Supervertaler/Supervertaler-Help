@@ -70,6 +70,23 @@ The **Segments: N** label tracks the current selection live.
 
 Single-file documents see no change — the file list, output radio, and per-file UI are all hidden.
 
+## Locked segments
+
+Trados segments can be **locked** (read-only in the editor) independently of their confirmation level — so a segment can be both `ApprovedTranslation` and locked, or `Draft` and locked. On large projects with a lot of locked-approved content, sending those segments to a proofreader is usually noise: any edits they make there can't be written back to Trados anyway.
+
+A dedicated checkbox controls how the export handles them:
+
+> **Include locked segments (🔒 marked in Status column)** — default ON.
+
+* **ON (default)** — locked segments are exported alongside everything else, and every locked row gets a **🔒** prefix in the Status column (e.g. `🔒 ApprovedTranslation`). The proofreader can see at a glance which rows aren't editable round-trippable, and the re-import will refuse to overwrite them.
+* **OFF** — locked segments are skipped entirely. The exported file only contains rows that are actually still editable. Useful on multi-thousand-segment projects where the bulk of the work is already locked.
+
+The checkbox lives right under the **"Refuse to apply edits that drop source-required tags"** option on the tab.
+
+**On re-import**, locked segments are honoured regardless of the export-side setting: edits made to a locked row are reported as a *locked-segment* item in the re-import summary's "other issues" count, and **not** written back to Trados. To genuinely change a locked segment, unlock it in Trados first, then re-import.
+
+The locked flag also lives in the sidecar manifest (`is_locked: true` / `false` per segment) so the source of truth for which segments were locked at export time is preserved.
+
 ## Re-import workflow
 
 Click **📥 Re-import…**, pick the round-tripped file. Supervertaler:
@@ -77,10 +94,10 @@ Click **📥 Re-import…**, pick the round-tripped file. Supervertaler:
 1. Loads the file's sidecar manifest (the `.svexport.json` written alongside the export).
 2. For each row in the file, looks up the matching segment in Trados via the manifest's `(ParagraphUnitId, SegmentId)` mapping.
 3. Compares the file's target text against the current Trados target — same serialisation pipeline on both sides, so only real edits register as changes.
-4. Counts up: **changes to apply**, **unchanged**, **tag-mismatch** (will be skipped under strict mode), and **other issues** (segment missing, locked, source text was tampered with).
+4. Counts up: **changes to apply**, **unchanged**, **tag-mismatch** (will be skipped under strict mode), and **other issues** (segment missing, **locked**, source text was tampered with).
 5. Shows you a summary dialog with **OK** / **Cancel**.
 
-Click **OK** and Supervertaler writes the accepted changes back via the same code path the batch AI translator uses — confirmation level is preserved, locked segments are respected.
+Click **OK** and Supervertaler writes the accepted changes back via the same code path the batch AI translator uses — confirmation level is preserved, and **locked segments are skipped automatically** (the writeback queries `IsLocked` on every segment, so a lock toggled in Trados between export and re-import is also respected).
 
 ## Recent exports
 
@@ -98,6 +115,7 @@ Every export writes a small `.svexport.json` file alongside the bilingual file. 
 * Per-segment `(number → ParagraphUnitId / SegmentId)` mapping
 * A SHA-256 prefix of the source text for tamper detection
 * For multi-file exports: per-segment source file id + name
+* Per-segment `is_locked: true | false` flag (snapshot at export time)
 
 The manifest is what lets re-import find the exact Trados segments even if the proofreader accidentally reorders rows. If the manifest goes missing, re-import falls back to current-document mapping (which loses source-tamper protection but still works).
 
