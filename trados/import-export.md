@@ -27,8 +27,21 @@ This is the workflow you'd use for:
 | **Supervertaler Bilingual Table** (default) | 5-column table — `#`, source, target, status, notes. Identical to the Workbench's bilingual-table export, so files can move between both products. |
 | **Stacked source-on-top** | Source paragraph, target paragraph, segment-by-segment. Easier to read for proofreaders skimming long paragraphs. |
 | **Stacked target-on-top** | Same as above with source and target swapped. |
+| **Bracketed `[SEGMENT NNNN]`** (Markdown only) | AI-friendly compact format that matches the Supervertaler Workbench's "AI-readable" export style. One block per segment with 2-letter ISO language codes labelling each line — some LLMs handle this more reliably than a markdown table. |
 
-The 5-column table is the only round-trippable layout — the stacked layouts are export-only.
+All four layouts are **re-importable**: the Bilingual Table uses the `#` column for anchors, the stacked layouts use `## Segment N` headings, and the bracketed layout uses the `[SEGMENT NNNN]` heading. DOCX and HTML exports fall back to *Stacked source-on-top* when the bracketed layout is selected (it only makes sense as plain text).
+
+The bracketed layout looks like this:
+
+```
+[SEGMENT 0001]
+EN: <b>MASHUP APPLICATION PROCESSING SYSTEM</b>
+NL: <b>MASHUP-APPLICATIEVERWERKINGSSYSTEEM</b>
+
+[SEGMENT 0002]
+EN: <b>FIELD OF THE INVENTION</b>
+NL: <b>GEBIED VAN DE UITVINDING</b>
+```
 
 ## Inline formatting markers
 
