@@ -41,6 +41,7 @@
   * [AI Proofreader](trados/ai-proofreader.md)
   * [Clipboard Mode](trados/clipboard-mode.md)
   * [AutoPrompt (Trados)](trados/generate-prompt.md)
+* [Import / Export](trados/import-export.md)
 
 ## 🧩 Terminology
 

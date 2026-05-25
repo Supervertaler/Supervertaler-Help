@@ -175,6 +175,10 @@ const sidebar = [
                 "link": "/trados/generate-prompt/"
               }
             ]
+          },
+          {
+            "label": "Import / Export",
+            "link": "/trados/import-export/"
           }
         ]
       },
