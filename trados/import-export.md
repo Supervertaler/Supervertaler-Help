@@ -107,6 +107,26 @@ The checkbox lives right under the **"Refuse to apply edits that drop source-req
 
 The locked flag also lives in the sidecar manifest (`is_locked: true` / `false` per segment) so the source of truth for which segments were locked at export time is preserved.
 
+## Filtering by confirmation status
+
+Just below the locked-segments option is a **Statuses to include in export** group of six checkboxes — one per Trados confirmation level:
+
+* **Unspecified** — not yet translated (the initial state of a fresh segment)
+* **Draft** — in progress
+* **Translated** — confirmed by the translator
+* **Approved (translation)** — first-pass approval
+* **Approved (sign-off)** — final approval
+* **Rejected** — marked for rework
+
+All six are checked by default — no filter, every segment is included. Untick any subset to narrow the export to just those statuses. Common use-cases:
+
+* **Tick only Translated** — send a draft pass to a proofreader.
+* **Tick only Approved (translation)** — send near-final material out for a sign-off review.
+* **Untick Approved (sign-off)** — exclude locked-down rows the client has already signed off on, so the proofreader only sees what's still in play.
+* **Tick only Draft + Unspecified** — generate a worklist of what's still unfinished.
+
+This filter composes orthogonally with the **Include locked segments** option and the multi-file **Files to export** list — every segment must pass all three filters to make it into the bilingual file.
+
 ## Re-import workflow
 
 Click **📥 Re-import…**, pick the round-tripped file. Supervertaler:
