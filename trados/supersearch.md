@@ -2,13 +2,11 @@
 title: "SuperSearch"
 ---
 
-{% embed url="https://youtu.be/549Ulc92FiU" %}
-SuperSearch in action – cross-file search across a Trados project
-{% endembed %}
-
 SuperSearch is a cross-file search and replace tool that lets you find text across **all SDLXLIFF files** in your Trados project -- not just the file you currently have open -- and, optionally, across the project's **translation memories** as well. It lives in its own dockable panel, so you can keep it visible while you translate.
 
 Matching text is highlighted in yellow in the results grid, making it easy to spot exactly where the search term appears in each segment.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/549Ulc92FiU" title="SuperSearch in action – cross-file search across a Trados project" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Opening the Panel
 
