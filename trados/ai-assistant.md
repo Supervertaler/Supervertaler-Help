@@ -1,14 +1,14 @@
 ---
-title: "Supervertaler Assistant"
+title: "Supervertaler"
 ---
 
-The Supervertaler Assistant is a conversational chat panel that runs inside Trados Studio as a separate dockable panel. It is context-aware: it automatically includes your current source and target text, matched terminology, and TM matches in every request, so the AI can give you informed answers about the segment you are working on.
+The Supervertaler is a conversational chat panel that runs inside Trados Studio as a separate dockable panel. It is context-aware: it automatically includes your current source and target text, matched terminology, and TM matches in every request, so the AI can give you informed answers about the segment you are working on.
 
 <figure><img src="/.gitbook/assets/Sv_Supervertaler-Assistant.png" alt=""><figcaption></figcaption></figure>
 
 ## Opening the Panel
 
-The Supervertaler Assistant lives in its own dockable panel. To open it, go to **View > Supervertaler Assistant**.
+The Supervertaler lives in its own dockable panel. To open it, go to **View > Supervertaler**.
 
 You can dock the panel on the right side, bottom, or as a floating window. Trados remembers the panel position between sessions.
 

@@ -34,7 +34,7 @@ Your licence allows activation on up to **2 machines** (e.g. a desktop and a lap
 ## Activating Your Licence
 
 1. Open Trados Studio
-2. Click the **gear icon** (⚙) on the TermLens or Supervertaler Assistant panel
+2. Click the **gear icon** (⚙) on the TermLens or Supervertaler panel
 3. Go to the **Licence** tab
 4. Enter your licence key in the text field
 5. Click **Activate**

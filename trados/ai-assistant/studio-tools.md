@@ -2,7 +2,7 @@
 title: "Studio Tools"
 ---
 
-Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler Assistant chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
+Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
 
 :::tip
 Studio Tools works with all major AI providers: **Claude**, **OpenAI**, **Gemini**, **Grok**, and **Mistral**. Only Ollama (local models) does not support tool use and will work as before -- plain chat without Trados queries.
@@ -14,7 +14,7 @@ Studio Tools is under active development and some commands might not yet work as
 
 ## How It Works
 
-When you send a message in the Supervertaler Assistant, the AI automatically decides whether it needs to query Trados Studio to answer your question. If it does, it calls the appropriate tool behind the scenes, reads the result, and presents the information in a clear format.
+When you send a message in the Supervertaler, the AI automatically decides whether it needs to query Trados Studio to answer your question. If it does, it calls the appropriate tool behind the scenes, reads the result, and presents the information in a clear format.
 
 You do not need to use any special syntax or commands. Just ask your question naturally.
 
@@ -108,5 +108,5 @@ Studio Tools currently provides **read-only** access to your Trados data. It can
 
 ## See Also
 
-* [Supervertaler Assistant](../ai-assistant.md) -- The chat interface where Studio Tools is available
+* [Supervertaler](../ai-assistant.md) -- The chat interface where Studio Tools is available
 * [AI Settings](../settings/ai-settings.md) -- Configure your AI provider

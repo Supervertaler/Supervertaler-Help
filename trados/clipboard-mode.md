@@ -16,7 +16,7 @@ Clipboard Mode is available in both **Translate** and **Proofread** modes on the
 
 ### Translating with Clipboard Mode
 
-1. Open the **Supervertaler Assistant** panel and switch to the **Batch Operations** tab
+1. Open the **Supervertaler** panel and switch to the **Batch Operations** tab
 2. Set the mode to **Translate**
 3. Tick the **Clipboard Mode** checkbox
 4. Choose a **scope** (Empty Segments Only, All Segments, etc.)

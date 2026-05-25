@@ -2,7 +2,7 @@
 title: "Batch Translate"
 ---
 
-Batch Translate lets you translate multiple segments at once using AI. It is located in the **Supervertaler Assistant** panel, on the **Batch Operations** tab.
+Batch Translate lets you translate multiple segments at once using AI. It is located in the **Supervertaler** panel, on the **Batch Operations** tab.
 
 :::note
 The Batch Operations tab also supports **Proofread** mode for AI-powered quality checking. See [AI Proofreader](ai-proofreader.md) for details.
@@ -12,7 +12,7 @@ The Batch Operations tab also supports **Proofread** mode for AI-powered quality
 
 ### Starting a Batch Translation
 
-1. Open the **Supervertaler Assistant** panel (View > Supervertaler Assistant)
+1. Open the **Supervertaler** panel (View > Supervertaler)
 2. Switch to the **Batch Translate** tab
 3. Choose a **scope** from the dropdown
 4. Choose a **prompt** from the prompt selector
@@ -160,7 +160,7 @@ AI translation is a first draft. After a batch run:
 * [Clipboard Mode](clipboard-mode.md)
 * [AutoPrompt](generate-prompt.md)
 * [AI Proofreader](ai-proofreader.md)
-* [Supervertaler Assistant](ai-assistant.md)
+* [Supervertaler](ai-assistant.md)
 * [TermLens](termlens.md)
 * [SuperMemory](ai-assistant/super-memory.md)
 * [Keyboard Shortcuts](keyboard-shortcuts.md)

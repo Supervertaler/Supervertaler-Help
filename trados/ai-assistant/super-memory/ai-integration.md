@@ -73,5 +73,5 @@ Both are enabled by default. Disabling them does not delete your memory banks �
 - [Context Awareness](../context-awareness.md) – The full menu of context sources, including memory banks as one section among several
 - [SuperMemory](../super-memory.md) – What SuperMemory is, what memory banks are, and how to create one
 - [AI Settings](../../settings/ai-settings.md) – Toggles for memory bank context
-- [Supervertaler Assistant](../../ai-assistant.md) – Overview of the chat panel
+- [Supervertaler](../../ai-assistant.md) – Overview of the chat panel
 - [Batch Translate](../../batch-translate.md) – Batch translation with full context

@@ -3,12 +3,12 @@ title: "Process Inbox"
 description: "Organise raw Markdown notes into structured knowledge base articles"
 ---
 
-The **Process Inbox** button in the Supervertaler Assistant toolbar reads raw Markdown notes from the active memory bank's `00_INBOX/` folder and uses AI to organise them into structured knowledge base articles – client profiles, terminology entries, domain knowledge, and style guides.
+The **Process Inbox** button in the Supervertaler toolbar reads raw Markdown notes from the active memory bank's `00_INBOX/` folder and uses AI to organise them into structured knowledge base articles – client profiles, terminology entries, domain knowledge, and style guides.
 
 ## How to use
 
 1. Drop **Markdown notes** into the active memory bank's `00_INBOX/` folder: client briefs, termbases, feedback notes, style guides, reference articles, or anything else you have written down as plain `.md` text.
-2. Open the **Supervertaler Assistant** panel and look for the SuperMemory toolbar below the context bar.
+2. Open the **Supervertaler** panel and look for the SuperMemory toolbar below the context bar.
 3. The toolbar shows how many files are waiting in the active bank (e.g. "3 files in inbox").
 4. Click **Process Inbox**.
 5. The AI reads each Markdown file, creates structured articles in the appropriate folders, and archives the originals to `00_INBOX/_archive/`.

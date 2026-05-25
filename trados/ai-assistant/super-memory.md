@@ -5,7 +5,7 @@ description: ">-"
 
 **SuperMemory** is Supervertaler's self-organising translation knowledge base system – a [Karpathy-inspired](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) feature that captures the reasoning behind your translation decisions and makes it available to the AI on every translation. Where a translation memory gives the AI previous wordings and a termbase gives it approved term pairs, SuperMemory gives it the _why_: client preferences, rejected alternatives, domain conventions, style rules, and the accumulated institutional knowledge for each piece of work.
 
-Knowledge inside SuperMemory is organised into one or more **memory banks** – self-contained folders that each act as an Obsidian-compatible vault. You can keep a single default bank, or several banks side by side (one per client, one per domain, one per language pair) and switch between them in one click from the Supervertaler Assistant toolbar. This page covers both SuperMemory as a system and how to work with the memory banks inside it.
+Knowledge inside SuperMemory is organised into one or more **memory banks** – self-contained folders that each act as an Obsidian-compatible vault. You can keep a single default bank, or several banks side by side (one per client, one per domain, one per language pair) and switch between them in one click from the Supervertaler toolbar. This page covers both SuperMemory as a system and how to work with the memory banks inside it.
 
 SuperMemory is one of several [context sources](context-awareness.md) the assistant consults when it translates a segment, drafts a prompt, or answers a chat message. It sits alongside termbases, translation memories, document content, and segment metadata – you can enable any combination of the five, and the AI draws from whichever are active in AI Settings.
 
@@ -15,7 +15,7 @@ Each memory bank is stored as interlinked Markdown files on disk – human-reada
 
 ## How knowledge is organised
 
-Every memory bank has the same seven-folder skeleton. The skeleton is created automatically when you make a new bank, and it is shared byte-for-byte with the Python Supervertaler Assistant – so a bank created in Trados works unchanged in the standalone app and vice versa.
+Every memory bank has the same seven-folder skeleton. The skeleton is created automatically when you make a new bank, and it is shared byte-for-byte with the Python Supervertaler – so a bank created in Trados works unchanged in the standalone app and vice versa.
 
 | Folder           | Contents                                                                                              |
 | ---------------- | ----------------------------------------------------------------------------------------------------- |
@@ -58,7 +58,7 @@ A fresh install ships with one empty bank named `default`. You can keep that as 
 
 ### Switching banks
 
-The **Memory Bank** dropdown in the Supervertaler Assistant toolbar lists every bank it finds under the memory banks folder. The one you pick is the **active bank** – the assistant reads from it until you choose another. Switching is immediate: the next chat turn, the next batch translation, and the next Process Inbox run all use the new bank. No restart needed, and your chat history is preserved across the switch.
+The **Memory Bank** dropdown in the Supervertaler toolbar lists every bank it finds under the memory banks folder. The one you pick is the **active bank** – the assistant reads from it until you choose another. Switching is immediate: the next chat turn, the next batch translation, and the next Process Inbox run all use the new bank. No restart needed, and your chat history is preserved across the switch.
 
 The active bank persists across Trados sessions. If you close Trados with `acme-legal` selected, it will still be `acme-legal` when you reopen.
 
@@ -66,7 +66,7 @@ The active bank persists across Trados sessions. If you close Trados with `acme-
 
 To create a new bank without leaving the chat panel:
 
-1. Click the **Memory Bank** dropdown in the Supervertaler Assistant toolbar.
+1. Click the **Memory Bank** dropdown in the Supervertaler toolbar.
 2. Scroll to the bottom of the list and choose **+ New memory bank…**
 3. A small dialog appears asking for a short name. Valid names are lowercase letters, digits, hyphens, or underscores – for example, `legal`, `medical`, `acme-corp`, `eu_procurement`. As you type, the dialog shows a live preview of the folder name that will be created.
 4. Click **Create**. The new bank is created on disk with the full seven-folder skeleton, the dropdown refreshes to show it, and the assistant switches to it immediately.
@@ -92,9 +92,9 @@ Typical layouts:
 * **One bank per domain** – `legal`, `medical`, `technical`, `marketing`.
 * **One bank per language pair** – `nl-en`, `de-en`, `fr-en` if your domains are similar across clients but the style and terminology vary by direction.
 
-## Sharing banks with the Python Supervertaler Assistant
+## Sharing banks with the Python Supervertaler
 
-Memory banks are stored in the **shared Supervertaler data folder** – the same folder the Python Supervertaler Assistant uses – so banks created on either side are immediately visible to the other. The folder layout, skeleton, and naming rules are identical byte-for-byte. You can create a bank in the Python assistant, drop files into its inbox from the web clipper, and then switch to it from the Trados plugin; both products will see the same articles.
+Memory banks are stored in the **shared Supervertaler data folder** – the same folder the Python Supervertaler uses – so banks created on either side are immediately visible to the other. The folder layout, skeleton, and naming rules are identical byte-for-byte. You can create a bank in the Python assistant, drop files into its inbox from the web clipper, and then switch to it from the Trados plugin; both products will see the same articles.
 
 The shared folder also means you can keep your memory banks in a cloud-synced location (OneDrive, Dropbox, iCloud) and have the same banks available on any machine where either product is installed.
 

@@ -56,15 +56,15 @@ It is ticked by default. **Always leave it ticked.** Before placing the fresh in
 After restarting Trados Studio, open a project in the Editor view. You should see:
 
 * **TermLens panel** – docked above the editor area (or in the bottom panel area)
-* **Supervertaler Assistant panel** – docked on the right side
+* **Supervertaler panel** – docked on the right side
 
 **If the TermLens panel is not visible**
 
 Go to **View > TermLens** to show the panel.
 
-**If the Supervertaler Assistant panel is not visible**
+**If the Supervertaler panel is not visible**
 
-Go to **View > Supervertaler Assistant** to show the panel.
+Go to **View > Supervertaler** to show the panel.
 
 :::tip
 Both panels are standard Trados dockable panels. You can drag them to any docking position (left, right, top, bottom, floating) or move them to a second monitor. Trados remembers their position between sessions.

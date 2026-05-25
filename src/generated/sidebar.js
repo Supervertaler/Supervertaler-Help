@@ -70,7 +70,7 @@ const sidebar = [
             "link": "/trados/studio-2026/"
           },
           {
-            "label": "Supervertaler Assistant",
+            "label": "Supervertaler",
             "items": [
               {
                 "label": "Overview",
@@ -177,7 +177,7 @@ const sidebar = [
             ]
           },
           {
-            "label": "Import / Export",
+            "label": "Import/Export",
             "link": "/trados/import-export/"
           }
         ]

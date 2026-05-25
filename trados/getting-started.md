@@ -53,7 +53,7 @@ Settings are saved and applied immediately.
 
 ### Clipboard Mode (no API key needed)
 
-1. Open the **Supervertaler Assistant** panel and switch to the **Batch Operations** tab
+1. Open the **Supervertaler** panel and switch to the **Batch Operations** tab
 2. Tick the **Clipboard Mode** checkbox
 3. Click **Copy to Clipboard** – a ready-to-use prompt with your segments, terminology, and instructions is copied
 4. Paste it into any web-based AI (ChatGPT, Claude, Gemini, etc.) and send it
@@ -67,9 +67,9 @@ See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
 2. Press **Ctrl+T** to translate the active segment with AI
 3. The AI translation appears in the target cell
 
-### Supervertaler Assistant
+### Supervertaler
 
-1. Open the **Supervertaler Assistant** panel (View > Supervertaler Assistant)
+1. Open the **Supervertaler** panel (View > Supervertaler)
 2. Switch to the **Chat** tab
 3. Type a question about the current segment and press **Enter**
 4. The assistant responds with context from your terminology and TM matches
@@ -80,7 +80,7 @@ See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
 |---------|------|
 | TermLens terminology display | [TermLens](termlens.md) |
 | AI via clipboard (no API key) | [Clipboard Mode](clipboard-mode.md) |
-| AI chat interface | [Supervertaler Assistant](ai-assistant.md) |
+| AI chat interface | [Supervertaler](ai-assistant.md) |
 | Bulk AI translation | [Batch Translate](batch-translate.md) |
 | All shortcuts | [Keyboard Shortcuts](keyboard-shortcuts.md) |
 
@@ -91,4 +91,4 @@ See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
 - [Installation](installation.md)
 - [Clipboard Mode](clipboard-mode.md)
 - [TermLens](termlens.md)
-- [Supervertaler Assistant](ai-assistant.md)
+- [Supervertaler](ai-assistant.md)

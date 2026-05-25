@@ -9,7 +9,7 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 1. **Right-click** anywhere in the editor (or press `Ctrl+Q`)
 2. Click **QuickLauncher** in the context menu
 3. Select a prompt from the list
-4. The prompt is filled in with the current segment context and submitted to the Supervertaler Assistant chat
+4. The prompt is filled in with the current segment context and submitted to the Supervertaler chat
 
 <figure><img src="/.gitbook/assets/Supervertaler-QuickLauncher.png" alt="The QuickLauncher context menu showing folder sections and prompt shortcuts"><figcaption><p>The QuickLauncher context menu with folder sections and keyboard shortcuts.</p></figcaption></figure>
 
@@ -17,7 +17,7 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 The menu heading **Supervertaler QuickLauncher** is clickable – click it to open **Settings → Prompts**, where you can view, edit, and organise your QuickLauncher prompts.
 :::
 
-The expanded prompt appears as a user message bubble in the **Supervertaler Assistant** chat panel, and the AI response follows immediately below it. The conversation continues from there – you can ask follow-up questions in the chat input as normal.
+The expanded prompt appears as a user message bubble in the **Supervertaler** chat panel, and the AI response follows immediately below it. The conversation continues from there – you can ask follow-up questions in the chat input as normal.
 
 ### Keyboard shortcut
 
@@ -222,7 +222,7 @@ QuickLauncher prompts live in the shared `prompt_library` folder used by both Su
 
 ### Routing prompts to Workbench Sidekick
 
-By default, a QuickLauncher prompt's response appears in the in-Trados **Supervertaler Assistant** chat panel. You can also have it land in **Supervertaler Workbench's Sidekick Chat** instead.
+By default, a QuickLauncher prompt's response appears in the in-Trados **Supervertaler** chat panel. You can also have it land in **Supervertaler Workbench's Sidekick Chat** instead.
 
 Open **Settings → AI Settings** and find the **QuickLauncher prompts go to:** dropdown. Pick:
 
@@ -261,7 +261,7 @@ A common workflow: keep an ongoing project on claude.ai for the document you're 
 
 The submenu items have mnemonic keys, so once a prompt is highlighted you can press:
 
-* `S` – **Send to Supervertaler Assistant**
+* `S` – **Send to Supervertaler**
 * `C` – **Copy prompt to clipboard**
 
 #### What happens when you pick clipboard
@@ -294,5 +294,5 @@ default_mode: assistant
 
 * [Text Transforms](text-transforms.md)
 * [Prompts](settings/prompts.md)
-* [Supervertaler Assistant](ai-assistant.md)
+* [Supervertaler](ai-assistant.md)
 * [Keyboard Shortcuts](keyboard-shortcuts.md)

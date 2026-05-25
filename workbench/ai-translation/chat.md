@@ -37,7 +37,7 @@ When the chip is on, every message you send to Chat is preceded by a context blo
 | **TM matches** | Fuzzy and exact matches Trados has found for the active segment, with their match percentages and TM names |
 | **Termbase hits** | Term entries from your enabled termbases that match the active segment, including definitions, domains, and notes |
 
-This is the same context the in-Trados Supervertaler Assistant chat already uses, so answer quality is comparable.
+This is the same context the in-Trados Supervertaler chat already uses, so answer quality is comparable.
 
 ## QuickLauncher prompts from Trados
 
@@ -83,7 +83,7 @@ The bridge isn't being detected. Check:
 
 1. Trados Studio is running with **Supervertaler for Trados v4.19.52 or later**
 2. You have a paid subscription or active trial (the bridge is gated behind Assistant access)
-3. You've **opened the Supervertaler Assistant panel** at least once in this Trados session – the bridge starts lazily when the panel is first activated
+3. You've **opened the Supervertaler panel** at least once in this Trados session – the bridge starts lazily when the panel is first activated
 4. The handshake file `~/Supervertaler/trados/runtime/bridge.json` exists. If it doesn't, check the bridge log at `%TEMP%\Supervertaler-bridge.log` for diagnostic information.
 
 **The chip appears but the answers don't seem to use the project context.**
@@ -92,7 +92,7 @@ Send a question that explicitly references your segment, like *"Which termbase e
 
 **The chip is greyed out.**
 
-The bridge was reachable earlier but is no longer responding. Make sure Trados Studio is still running and the Supervertaler Assistant panel hasn't been closed. The chip recovers automatically (within ~3 seconds) when Trados is reachable again.
+The bridge was reachable earlier but is no longer responding. Make sure Trados Studio is still running and the Supervertaler panel hasn't been closed. The chip recovers automatically (within ~3 seconds) when Trados is reachable again.
 
 ---
 
@@ -100,4 +100,4 @@ The bridge was reachable earlier but is no longer responding. Make sure Trados S
 
 * [AI Translation Overview](overview.md)
 * [Supervertaler Bridge (Trados side)](../../trados/ai-assistant/supervertaler-bridge.md)
-* [Supervertaler Assistant (Trados)](../../trados/ai-assistant.md)
+* [Supervertaler (Trados)](../../trados/ai-assistant.md)

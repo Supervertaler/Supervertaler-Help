@@ -165,5 +165,5 @@ If your project evolves significantly (new terminology, different document secti
 
 * [Batch Translate](batch-translate.md)
 * [Prompts](settings/prompts.md)
-* [Supervertaler Assistant](ai-assistant.md)
+* [Supervertaler](ai-assistant.md)
 * [AI Settings](settings/ai-settings.md)

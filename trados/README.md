@@ -25,7 +25,7 @@ Live terminology display that shows the source text word by word, with termbase 
 
 Numbered badges let you insert terms with **Alt+1** through **Alt+9**. Project termbases are detected automatically from your Trados project and are read-only. On Trados Studio 2026 these are the new `.ttb` termbases –see [Trados Studio 2026 & .ttb](studio-2026.md).
 
-#### Supervertaler Assistant
+#### Supervertaler
 
 A conversational AI chat panel that is aware of your current segment, matched terminology, and TM matches. Ask questions about translation choices, get alternative phrasings, or request explanations –all without leaving Trados.
 
@@ -65,4 +65,4 @@ Press **F1** at any time to open context-sensitive help for the panel or dialogu
 
 ### Next Steps
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Installation</strong></td><td><a href="installation.md">Install the plugin →</a></td></tr><tr><td><strong>Getting Started</strong></td><td><a href="getting-started.md">Set up termbases and AI →</a></td></tr><tr><td><strong>TermLens</strong></td><td><a href="termlens.md">Inline terminology display →</a></td></tr><tr><td><strong>Supervertaler Assistant</strong></td><td><a href="ai-assistant.md">Chat with AI in Trados →</a></td></tr><tr><td><strong>MultiTerm Support</strong></td><td><a href="multiterm-support.md">Use MultiTerm termbases in TermLens →</a></td></tr><tr><td><strong>Batch Translate</strong></td><td><a href="batch-translate.md">Translate segments in bulk →</a></td></tr><tr><td><strong>Keyboard Shortcuts</strong></td><td><a href="keyboard-shortcuts.md">All shortcuts at a glance →</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Installation</strong></td><td><a href="installation.md">Install the plugin →</a></td></tr><tr><td><strong>Getting Started</strong></td><td><a href="getting-started.md">Set up termbases and AI →</a></td></tr><tr><td><strong>TermLens</strong></td><td><a href="termlens.md">Inline terminology display →</a></td></tr><tr><td><strong>Supervertaler</strong></td><td><a href="ai-assistant.md">Chat with AI in Trados →</a></td></tr><tr><td><strong>MultiTerm Support</strong></td><td><a href="multiterm-support.md">Use MultiTerm termbases in TermLens →</a></td></tr><tr><td><strong>Batch Translate</strong></td><td><a href="batch-translate.md">Translate segments in bulk →</a></td></tr><tr><td><strong>Keyboard Shortcuts</strong></td><td><a href="keyboard-shortcuts.md">All shortcuts at a glance →</a></td></tr></tbody></table>

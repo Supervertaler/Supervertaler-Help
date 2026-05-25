@@ -2,7 +2,7 @@
 title: "Providers"
 ---
 
-The Supervertaler Assistant supports multiple AI providers. You only need one to get started.
+The Supervertaler supports multiple AI providers. You only need one to get started.
 
 ## Switching Models
 
@@ -46,6 +46,6 @@ Some features are provider-specific:
 
 ## See Also
 
-* [Supervertaler Assistant](../ai-assistant.md) -- Overview
+* [Supervertaler](../ai-assistant.md) -- Overview
 * [AI Settings](../settings/ai-settings.md) -- API keys, endpoints, advanced options
 * [AI Cost Guide](../ai-cost-guide.md) -- Token pricing and cost estimates

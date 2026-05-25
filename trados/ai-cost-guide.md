@@ -84,7 +84,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 * **Start with a budget model** – GPT-5.4 Mini, Gemini 3.1 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
 * **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.7, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
-* **Check your usage** – the **Reports** tab in Supervertaler Assistant lists every AI call with its token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
+* **Check your usage** – the **Reports** tab in Supervertaler lists every AI call with its token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 
 ### Built-in cost protection
 

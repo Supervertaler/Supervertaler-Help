@@ -21,7 +21,7 @@ There are three ways to open SuperSearch:
 The panel docks at the bottom of the editor by default, but you can drag it anywhere -- left, right, floating, or even to a second monitor. Trados remembers the position between sessions.
 
 :::note
-**Prefer fewer panels?** You can host SuperSearch as a tab inside the Supervertaler Assistant panel instead of its own dockable panel. Go to **Settings > General > Panels** and tick **Show SuperSearch as a tab in the Supervertaler Assistant panel**, then restart Trados Studio. This requires a Supervertaler Assistant licence; without one, SuperSearch stays in its own panel.
+**Prefer fewer panels?** You can host SuperSearch as a tab inside the Supervertaler panel instead of its own dockable panel. Go to **Settings > General > Panels** and tick **Show SuperSearch as a tab in the Supervertaler panel**, then restart Trados Studio. This requires a Supervertaler licence; without one, SuperSearch stays in its own panel.
 :::
 
 :::note
@@ -181,6 +181,6 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 
 ## See Also
 
-* [Supervertaler Assistant](ai-assistant.md) -- AI-powered chat and context
+* [Supervertaler](ai-assistant.md) -- AI-powered chat and context
 * [Batch Operations](batch-operations.md) -- Batch translate and proofread
 * [Keyboard Shortcuts](keyboard-shortcuts.md) -- All shortcuts in one place

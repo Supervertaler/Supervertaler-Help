@@ -108,7 +108,7 @@ Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (tap `Ctrl
 ## See Also
 
 - [TermLens](termlens.md)
-- [Supervertaler Assistant](ai-assistant.md)
+- [Supervertaler](ai-assistant.md)
 - [SuperSearch](supersearch.md)
 - [Batch Translate](batch-translate.md)
 - [SuperMemory](ai-assistant/super-memory.md)

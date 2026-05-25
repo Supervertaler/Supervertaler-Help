@@ -2,7 +2,7 @@
 title: "File Attachments"
 ---
 
-The Supervertaler Assistant supports attaching both images and documents to your messages. Use the **paperclip button** next to the chat input, or drag and drop files directly onto the chat area.
+The Supervertaler supports attaching both images and documents to your messages. Use the **paperclip button** next to the chat input, or drag and drop files directly onto the chat area.
 
 ## Images
 
@@ -47,5 +47,5 @@ Up to **5 documents** per message, **20 MB** maximum per file. Very large docume
 
 ## See Also
 
-* [Supervertaler Assistant](../ai-assistant.md) -- Overview
+* [Supervertaler](../ai-assistant.md) -- Overview
 * [Context Awareness](context-awareness.md) -- What context is sent automatically
