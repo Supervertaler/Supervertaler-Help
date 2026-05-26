@@ -1,22 +1,31 @@
 ---
-title: "Term Picker"
+title: "TermPicker"
 ---
 
-The Term Picker is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when TermLens shows many matches and you want a quick overview without scrolling.
+**TermPicker** is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when [TermLens](../termlens.md) shows many matches and you want a quick overview without scrolling.
 
-<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Term-Picker.png" alt=""><figcaption><p>Term Picker dialogue with all matched terms for the current segment</p></figcaption></figure>
-
-### Opening the Term Picker
-
-Press **Ctrl+Shift+P** to open the Term Picker. It appears as a floating window above the editor.
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Term-Picker.png" alt=""><figcaption><p>TermPicker dialogue with all matched terms for the current segment</p></figcaption></figure>
 
 :::note
-Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. The Term Picker dialogue described on this page is the list-based alternative for users who prefer a tabular UI.
+**TermLens and TermPicker are sibling surfaces.** Both consume termbase matches for the current segment, but present them differently:
+
+- **TermLens** shows matches *in context* – the source sentence with terms highlighted in place. Best for reading and scanning.
+- **TermPicker** shows the same matches as a flat sortable list with keyboard-driven Enter-to-insert. Best for quick insertion.
+
+Underneath both: your termbases.
+:::
+
+### Opening TermPicker
+
+Press **Ctrl+Shift+P** to open TermPicker. It appears as a floating window above the editor.
+
+:::note
+Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. TermPicker described on this page is the list-based alternative for users who prefer a tabular UI.
 :::
 
 ### Colour-coded rows
 
-Each row in the Term Picker is colour-coded by termbase type:
+Each row in TermPicker is colour-coded by termbase type:
 
 | Colour     | Meaning                             |
 | ---------- | ----------------------------------- |
@@ -38,7 +47,7 @@ Press **Left arrow** to collapse the synonyms again.
 
 ### Keyboard navigation
 
-The Term Picker is designed for fast keyboard use:
+TermPicker is designed for fast keyboard use:
 
 | Key           | Action                                        |
 | ------------- | --------------------------------------------- |
@@ -61,7 +70,7 @@ You can insert a term in two ways:
 The selected translation is placed at the current cursor position in the target segment.
 
 :::note
-The Term Picker shows the same matches as TermLens, but in a flat list format that is easier to scan when there are many results.
+TermPicker shows the same matches as TermLens, but in a flat list format that is easier to scan when there are many results.
 :::
 
 ***

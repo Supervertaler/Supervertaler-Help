@@ -62,3 +62,11 @@
 # The viewer is now folded into the Prompt Manager (Section 4) and the page
 # moved out of Tools into AI Translation alongside Prompt Manager + AutoPrompt.
 /workbench/tools/image-extractor/        /workbench/ai-translation/image-context/    301
+
+# ─── 2026-05-26: "Term Picker" renamed to "TermPicker" ────────────
+# Naming cleanup: TermLens and TermPicker are now treated as sibling
+# surfaces on top of termbases (rather than the old "TermLens — Term
+# Picker" framing where the picker felt like a sub-mode of TermLens).
+# The page slugs follow the brand: term-picker/ → termpicker/.
+/workbench/termbases/term-picker/   /workbench/termbases/termpicker/   301
+/trados/termlens/term-picker/       /trados/termlens/termpicker/       301

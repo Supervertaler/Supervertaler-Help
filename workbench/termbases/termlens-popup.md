@@ -68,11 +68,11 @@ The popup uses the same chip rendering, colour scheme, and metadata indicators a
 
 See the [TermLens overview](termlens.md) for the full colour key.
 
-### TermLens popup vs Term Picker dialogue
+### TermLens popup vs TermPicker
 
 Both show the same matches for the active segment. Pick whichever fits your style:
 
-|          | TermLens popup (Ctrl tap)                                | [Term Picker dialogue](term-picker.md) (Ctrl+Shift+B)   |
+|          | TermLens popup (Ctrl tap)                                | [TermPicker](termpicker.md) (Ctrl+Shift+B)              |
 | -------- | -------------------------------------------------------- | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word   | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                      | Many matches that benefit from sorting / typing-to-jump |
@@ -84,5 +84,5 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 ### See Also
 
 * [TermLens overview](termlens.md)
-* [Term Picker dialogue](term-picker.md)
+* [TermPicker](termpicker.md)
 * [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)

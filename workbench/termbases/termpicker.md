@@ -1,18 +1,27 @@
 ---
-title: "Term Picker"
+title: "TermPicker"
 ---
 
-The Term Picker is a modal dialogue that lists all matched termbase terms and non-translatables for the current segment in a tabular, keyboard-navigable grid. It is useful when TermLens shows many matches and you want a quick overview without the chip layout – or when you want to compare alternative translations side-by-side before committing.
+**TermPicker** is a modal dialogue that lists all matched termbase terms and non-translatables for the current segment in a tabular, keyboard-navigable grid. It is useful when [TermLens](termlens.md) shows many matches and you want a quick overview without the chip layout – or when you want to compare alternative translations side-by-side before committing.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Term-Picker.png" alt=""><figcaption><p>The Term Picker dialogue floating over the editor for the active segment, listing every termbase + NT match in a sortable grid. Row 3 is expanded (▾) to show a synonym sub-row underneath. The docked TermLens panel on the right shows the same matches as chips.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Term-Picker.png" alt=""><figcaption><p>The TermPicker dialogue floating over the editor for the active segment, listing every termbase + NT match in a sortable grid. Row 3 is expanded (▾) to show a synonym sub-row underneath. The docked TermLens panel on the right shows the same matches as chips.</p></figcaption></figure>
 
-### Opening the Term Picker
+:::note
+**TermLens and TermPicker are sibling surfaces, not parent/child.** Both consume termbase matches for the current segment, but present them in completely different ways:
 
-Press **Ctrl+Shift+B** to open the Term Picker. It appears as a modal window above the editor. (B = term**B**ase.)
+- **TermLens** shows matches *in context* – the source sentence with terms highlighted in place and translation chips anchored to where each term sits. Best for reading and scanning.
+- **TermPicker** shows the same matches as a flat sortable list with keyboard-driven Enter-to-insert. Best for quick insertion when you already know which term you want.
+
+Underneath both: your termbases.
+:::
+
+### Opening TermPicker
+
+Press **Ctrl+Shift+B** to open TermPicker. It appears as a modal window above the editor. (B = term**B**ase.)
 
 The shortcut is fully remappable via **Settings → Keyboard Shortcuts** under the `term_picker` action.
 
-> Looking for the lone-Ctrl-tap behaviour? That opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. The Term Picker described on this page is the table-based alternative for users who prefer a tabular UI.
+> Looking for the lone-Ctrl-tap behaviour? That opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. TermPicker described on this page is the table-based alternative for users who prefer a tabular UI.
 
 ### Colour-coded rows
 
@@ -39,7 +48,7 @@ Press **Left arrow** to collapse the synonyms again.
 
 ### Keyboard navigation
 
-The Term Picker is designed for fast keyboard use:
+TermPicker is designed for fast keyboard use:
 
 | Key           | Action                                                            |
 | ------------- | ----------------------------------------------------------------- |
@@ -64,9 +73,9 @@ The selected translation lands at the current cursor position in the target segm
 
 ### Persisted layout
 
-The Term Picker remembers your preferred size and column widths between sessions, so once you resize it to fit your screen the layout sticks.
+TermPicker remembers your preferred size and column widths between sessions, so once you resize it to fit your screen the layout sticks.
 
-> The Term Picker shows the same matches as TermLens, but in a flat sortable list format that scales better when there are many results.
+> TermPicker shows the same matches as TermLens, but in a flat sortable list format that scales better when there are many results.
 
 ***
 

@@ -58,8 +58,8 @@ const sidebar = [
             ]
           },
           {
-            "label": "Term Picker",
-            "link": "/trados/termlens/term-picker/"
+            "label": "TermPicker",
+            "link": "/trados/termlens/termpicker/"
           },
           {
             "label": "MultiTerm Support",
@@ -501,8 +501,8 @@ const sidebar = [
             ]
           },
           {
-            "label": "Term Picker",
-            "link": "/workbench/termbases/term-picker/"
+            "label": "TermPicker",
+            "link": "/workbench/termbases/termpicker/"
           },
           {
             "label": "Term Extraction",

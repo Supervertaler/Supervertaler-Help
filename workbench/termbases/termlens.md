@@ -54,7 +54,7 @@ In addition to the always-visible panels, two on-demand views show the same matc
 | View                                                | Trigger        | Best for                                                                    |
 | --------------------------------------------------- | -------------- | --------------------------------------------------------------------------- |
 | [**TermLens popup**](termlens-popup.md)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with arrow keys, insert with Enter or 1–9. |
-| [**Term Picker**](term-picker.md)                   | **Ctrl+Shift+B** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
+| [**TermPicker**](termpicker.md)                     | **Ctrl+Shift+B** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
 
 Both pull from the same data the docked panel uses, so the chips / rows you see are identical – just laid out differently.
 
@@ -83,7 +83,7 @@ A standalone version of TermLens is also available as a plugin for **Trados Stud
 ## See Also
 
 - [TermLens popup](termlens-popup.md) – on-demand floating mirror of the panel (Ctrl tap)
-- [Term Picker](term-picker.md) – tabular grid view of the same matches (Ctrl+Shift+B)
+- [TermPicker](termpicker.md) – tabular grid view of the same matches (Ctrl+Shift+B)
 - [Termbase Basics](basics.md)
 - [Term Highlighting](highlighting.md)
 - [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)

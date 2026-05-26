@@ -180,6 +180,6 @@ For adding many non-translatable terms at once (e.g., a list of brand names or p
 
 ## See Also
 
-- [Term Picker](term-picker.md)
+- [TermPicker](termpicker.md)
 - [Termbase Management](../termbase-management.md)
 - [TermLens Settings](../settings/termlens.md)

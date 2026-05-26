@@ -20,7 +20,7 @@ The **TermLens popup** is a borderless floating version of the docked TermLens p
 | **Escape**              | Close without inserting                          |
 | Click outside the popup | Close without inserting                          |
 
-A "Ctrl tap" is a press-and-release of the Ctrl key on its own – no other key in between, and held for less than 400 ms. The same memoQ-style trigger that older versions of Supervertaler used to open the Term Picker dialogue.
+A "Ctrl tap" is a press-and-release of the Ctrl key on its own – no other key in between, and held for less than 400 ms. The same memoQ-style trigger that older versions of Supervertaler used to open TermPicker.
 
 ### Cycling between matches
 
@@ -54,11 +54,11 @@ Press **E** while a match is highlighted to open the term-entry editor for that 
 
 The popup uses the same chip rendering, colour scheme, and metadata indicators as the docked TermLens panel – pink for project termbase terms, blue for regular Supervertaler terms, yellow for non-translatable, green for MultiTerm. See the [TermLens overview](../termlens.md) for the full colour key.
 
-### TermLens popup vs Term Picker dialogue
+### TermLens popup vs TermPicker
 
 Both show the same matches for the active segment. Pick whichever fits your style:
 
-|          | TermLens popup (Ctrl tap)                              | [Term Picker dialogue](term-picker.md) (Ctrl+Shift+P)   |
+|          | TermLens popup (Ctrl tap)                              | [TermPicker](termpicker.md) (Ctrl+Shift+P)              |
 | -------- | ------------------------------------------------------ | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                    | Many matches that benefit from sorting / typing-to-jump |
@@ -70,5 +70,5 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 ### See Also
 
 * [TermLens overview](../termlens.md)
-* [Term Picker dialogue](term-picker.md)
+* [TermPicker](termpicker.md)
 * [Keyboard shortcuts](../keyboard-shortcuts.md)

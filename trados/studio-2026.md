@@ -21,7 +21,7 @@ In Studio 2026, TermLens reads the new `.ttb` termbases attached to your project
 
 `.ttb` termbases are **read-only** in TermLens, just like MultiTerm termbases. To add or edit terms, use Studio 2026's built-in Termbases view.
 
-Everything else –the Supervertaler, Batch Translate, SuperSearch, the Term Picker, AI terminology injection –works identically across both builds.
+Everything else – Supervertaler, Batch Translate, SuperSearch, TermPicker, AI terminology injection – works identically across both builds.
 
 ## What about my existing `.sdltb` termbases?
 
