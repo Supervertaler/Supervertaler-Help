@@ -6,7 +6,7 @@ Multi-file projects let you import a whole folder of files as a single Supervert
 
 ## Import a folder
 
-1. Go to **File → Import → Folder (Multiple Files)...**
+1. Go to **Project → Import → Folder (Multiple Files)...**
 2. Choose a folder containing supported files (DOCX/TXT/MD)
 3. Select which files to include
 4. Choose the **source** and **target** languages

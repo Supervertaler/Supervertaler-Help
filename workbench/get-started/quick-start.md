@@ -16,7 +16,7 @@ If you want to use AI translation, set up your API keys first: [Setting Up API K
 
 ## Step 2: Import a Document
 
-1. Go to **File → Import**
+1. Go to **Project → Import**
 2. Choose your file type:
    * **DOCX** - Standard Word documents
    * **Text File** - Plain text (one segment per line)
@@ -74,13 +74,13 @@ If AI translation isn't available yet, double-check provider setup in [Setting U
 
 ## Step 5: Save Your Project
 
-1. Press `Ctrl+S` or go to **File → Save Project**
+1. Press `Ctrl+S` or go to **Project → Save Project**
 2. Choose a location and filename
 3. Projects are saved as `.svproj` files
 
 ## Step 6: Export Your Translation
 
-1. Go to **File → Export**
+1. Go to **Project → Export**
 2. Choose the appropriate format:
    * **DOCX** - Translated Word document
    * **Bilingual Table** - Side-by-side source/target

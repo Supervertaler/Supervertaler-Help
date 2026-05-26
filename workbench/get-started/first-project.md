@@ -8,7 +8,7 @@ Let's walk through creating a complete translation project from start to finish.
 
 ### Option 1: Import a Document
 
-1. Go to **File → Import → DOCX...**
+1. Go to **Project → Import → DOCX...**
 2. Select your Word document
 3. Choose the source language (e.g., "English")
 4. Choose the target language (e.g., "Dutch")
@@ -18,13 +18,13 @@ Your document is now segmented and ready for translation.
 
 ### Option 2: Import a Text File
 
-1. Go to **File → Import → Text File...**
+1. Go to **Project → Import → Text File...**
 2. Select your `.txt` file
 3. Each line becomes a separate segment
 
 ### Option 3: Multi-File Project
 
-1. Go to **File → Import → Folder (Multiple Files)...**
+1. Go to **Project → Import → Folder (Multiple Files)...**
 2. Select a folder containing DOCX or TXT files
 3. Choose which files to include
 4. All files are imported as one project
@@ -101,7 +101,7 @@ See [Segment Statuses](../editor/segment-statuses.md) for the full list.
 
 When you're finished:
 
-1. Go to **File → Export**
+1. Go to **Project → Export**
 2. Choose your format:
    - **DOCX** - Standard Word document with translations
    - **Bilingual Table** - Source and target side by side

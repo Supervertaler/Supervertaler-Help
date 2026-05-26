@@ -64,7 +64,7 @@ This page covers common problems when importing or exporting files.
 
 **Fix:**
 
-- Use **File → Relocate Source Folder** and point it to the new location.
+- Use **Project → Relocate Source Folder** and point it to the new location.
 - If the original source is gone, re-import the project from the correct source.
 
 ## Exported file has no translations

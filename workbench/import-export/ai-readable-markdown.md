@@ -7,7 +7,7 @@ for AI chat tools (ChatGPT, Claude, Gemini, and the like). Use it when you want
 to ask an AI about a translation as a whole — for a second opinion, a
 consistency check, or a bulk review — rather than going segment by segment.
 
-Find it under **File → Export → 📄 AI-Readable Markdown**, which offers two
+Find it under **Project → Export → 📄 AI-Readable Markdown**, which offers two
 layouts.
 
 ## Two layouts

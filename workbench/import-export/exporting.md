@@ -6,7 +6,7 @@ When you’re done translating, export in a format that matches your workflow.
 
 ## Export steps
 
-1. Go to **File → Export**
+1. Go to **Project → Export**
 2. Choose an export type (for example DOCX, bilingual table, or a CAT return format)
 3. Pick a destination and save
 

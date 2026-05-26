@@ -6,7 +6,7 @@ Text import is the simplest workflow: **each line becomes one segment**.
 
 ## Import steps
 
-1. Go to **File → Import → Text File...**
+1. Go to **Project → Import → Text File...**
 2. Select your `.txt` file
 3. Choose the **source** and **target** languages
 

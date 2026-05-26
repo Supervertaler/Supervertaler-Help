@@ -28,7 +28,7 @@ A header above the table shows the project name, language pair, segment count, a
 
 ## Two variants
 
-**File → Export** offers two versions:
+**Project → Export** offers two versions:
 
 - **Supervertaler Bilingual Table — With Tags (DOCX)** — formatting tags stay visible as markup. This is the **re-importable** version: edit the Target cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text.
 
@@ -42,7 +42,7 @@ A header above the table shows the project name, language pair, segment count, a
 
 1. Export the **With Tags** version.
 2. Edit the **Target** column (and **Notes**, if you like) in Word — leave the **#** and **Source** columns untouched.
-3. Back in Workbench: **File → Import → Bilingual Table (DOCX) – Update Project**.
+3. Back in Workbench: **Project → Import → Bilingual Table (DOCX) – Update Project**.
 4. The edited targets (and notes) are matched back to your segments by number.
 
 ## Other bilingual tables

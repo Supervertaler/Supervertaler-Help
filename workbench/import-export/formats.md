@@ -11,7 +11,7 @@ Supervertaler can import and export several formats depending on your workflow.
 
 ## Other formats via Okapi
 
-The bundled **Okapi sidecar** lets Supervertaler round-trip a wider set of formats. Pick a file in any of the following types via **File → Import → Other format via Okapi…**, translate in the grid, then **File → Export → Original format via Okapi…** to write a translated file back in the same format:
+The bundled **Okapi sidecar** lets Supervertaler round-trip a wider set of formats. Pick a file in any of the following types via **Project → Import → Other format via Okapi…**, translate in the grid, then **Project → Export → Original format via Okapi…** to write a translated file back in the same format:
 
 | Format | Extension(s) | Notes |
 |---|---|---|

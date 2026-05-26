@@ -76,7 +76,7 @@ Segment-level comments have no highlighted range to aim at, so they're reachable
 
 ### Comments in exported documents
 
-When you export your project back to a Word document (**File → Export → Export Translated Document…**), every segment comment becomes a Word comment in the output `.docx`. Behaviour per comment kind:
+When you export your project back to a Word document (**Project → Export → Export Translated Document…**), every segment comment becomes a Word comment in the output `.docx`. Behaviour per comment kind:
 
 * **Range-anchored to target text**: the Word comment's range highlight covers exactly the anchored characters. If the anchor boundaries cut mid-run (e.g. inside a bold word), Workbench splits the run cleanly and preserves the formatting on both halves. Visually identical to a Trados or memoQ comment.
 * **Range-anchored to source text**: the source text isn't in the exported (target-only) DOCX, so Workbench falls back to anchoring the comment to the whole paragraph, with the source snippet prefixed in the comment body. Example: `[Re: "schroef" (source)] translated as 'screw' based on context`. The reviewer reading the file sees the comment with the relevant source quote inline.

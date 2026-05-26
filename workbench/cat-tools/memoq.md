@@ -28,8 +28,8 @@ The table format with source and target columns works best with Supervertaler.
 
 ## Import to Supervertaler
 
-1. Go to **File → Import → memoQ Bilingual DOCX...**
-   - Or **File → Import → memoQ XLIFF...**
+1. Go to **Project → Import → memoQ Bilingual DOCX...**
+   - Or **Project → Import → memoQ XLIFF...**
 2. Select your exported file
 3. The segments appear in the translation grid
 
@@ -67,7 +67,7 @@ These tags are highlighted in dark red in the grid (matching memoQ's color).
 
 ## Export from Supervertaler
 
-1. Go to **File → Export → memoQ Bilingual DOCX...**
+1. Go to **Project → Export → memoQ Bilingual DOCX...**
 2. Choose a filename
 3. The bilingual table is recreated with your translations
 
