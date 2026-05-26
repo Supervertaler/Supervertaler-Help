@@ -48,6 +48,6 @@ If you already have an `Images` folder ready (e.g. one you extracted in an earli
 
 When AI translation runs (single-segment or batch), Supervertaler scans each segment's source text for figure references (`Figure 1`, `Fig. 2A`, `Table 3`, …). If a match is found AND a corresponding image file is loaded AND the active model supports vision (Claude Sonnet/Opus, GPT-4o and later, Gemini), the image is base64-encoded (or passed as PIL data for Gemini) and attached to the request. Segments without figure references are translated text-only.
 
-:::caution
-**AutoPrompt does not see your images.** The AutoPrompt generator analyses the source text only — it does not load figure images into its meta-prompt. See [AutoPrompt](../ai-translation/autoprompt.md) for what it does send.
+:::note
+**AutoPrompt CAN see your images — opt-in only.** Since v1.10.178, the AutoPrompt button in Section 2 of the Prompt Manager has a companion checkbox labelled **"🖼️ Include loaded figure images"**. Tick it before clicking AutoPrompt to ship the loaded figures alongside the meta-prompt — the LLM then uses the drawings to lock terminology decisions directly into the generated prompt. Off by default; opting in is a deliberate per-project choice that adds a small extra cost ($0.05–$0.30 with Sonnet-class for 10–20 figures). See [AutoPrompt](../ai-translation/autoprompt.md) for the full flow and pre-flight gates.
 :::
