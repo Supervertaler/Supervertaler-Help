@@ -72,7 +72,7 @@ See the [TermLens overview](termlens.md) for the full colour key.
 
 Both show the same matches for the active segment. Pick whichever fits your style:
 
-|          | TermLens popup (Ctrl tap)                                | [TermPicker](termpicker.md) (Ctrl+Shift+B)              |
+|          | TermLens popup (Ctrl tap)                                | [TermPicker](termpicker.md) (Ctrl+Shift+P)              |
 | -------- | -------------------------------------------------------- | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word   | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                      | Many matches that benefit from sorting / typing-to-jump |

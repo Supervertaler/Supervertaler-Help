@@ -17,7 +17,7 @@ Underneath both: your termbases.
 
 ### Opening TermPicker
 
-Press **Ctrl+Shift+B** to open TermPicker. It appears as a modal window above the editor. (B = term**B**ase.)
+Press **Ctrl+Shift+P** to open TermPicker. It appears as a modal window above the editor. (P = **P**icker — matches the Trados plugin and follows the VS Code-style command-palette convention.)
 
 The shortcut is fully remappable via **Settings → Keyboard Shortcuts** under the `term_picker` action.
 
