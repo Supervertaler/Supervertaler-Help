@@ -22,7 +22,7 @@ your project.
 | **Source** | Source text |
 | **Target** | Target text (edit this when proofreading) |
 | **Status** | Segment status |
-| **Notes** | Segment comments |
+| **Comments** | Segment comments — edit, add, or clear; changes round-trip on re-import |
 
 A header above the table shows the project name, language pair, segment count, and export date.
 
@@ -41,9 +41,15 @@ A header above the table shows the project name, language pair, segment count, a
 ## Round-trip (proofread and re-import)
 
 1. Export the **With Tags** version.
-2. Edit the **Target** column (and **Notes**, if you like) in Word — leave the **#** and **Source** columns untouched.
+2. Edit in Word — leave the **#** and **Source** columns untouched:
+   - The **Target** column for translation edits.
+   - The **Comments** column to edit, add, or clear segment comments. New comments added to segments that had none in Workbench are also round-tripped.
 3. Back in Workbench: **Project → Import → Bilingual Table (DOCX) – Update Project**.
-4. The edited targets (and notes) are matched back to your segments by number.
+4. Supervertaler diffs the file against your project and shows a preview before applying. Target changes set the segment back to "Not Started" so you can re-confirm; comment changes replace the segment's existing comments verbatim with the proofreader's text (no `[Review: …]` wrapping or appending — round-trip in, round-trip out).
+
+:::note
+Re-imports written by Workbench v1.10.182 and earlier had a bug where comments-only edits were silently discarded — only segments whose target text *also* changed had their comments updated. Fixed in v1.10.183: a comment edit on its own is now picked up, and a comment cleared in the bilingual file clears it on the segment.
+:::
 
 ## Other bilingual tables
 
