@@ -10,7 +10,7 @@ Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voic
 
 ***
 
-## Two modes
+## Three modes
 
 ### Always-On listening
 
@@ -26,7 +26,7 @@ Always-On runs a continuous microphone stream in the background. When you speak,
 
 **Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
-### Push-to-Talk (Ctrl+Shift+Space)
+### Push-to-Talk dictation (Ctrl+Shift+Space)
 
 Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
 
@@ -35,6 +35,25 @@ Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macO
 **Push-to-talk modes** (configurable in the Push-to-Talk settings):
 - **Toggle** (default) – press once to start, press again to stop
 - **Hold-to-talk** – hold the key to record, release to stop. _Note: hold-to-talk only works if you rebind dictation to a non-global (in-app) key. The default global hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
+
+### Push-to-Talk for commands (Ctrl+Alt+V) — v1.10.193
+
+Press and **hold** **Ctrl+Alt+V** (the default; configurable in **Settings → Keyboard Shortcuts**) to temporarily activate the command listener for the duration of the hold. Release the key to stop it again. Works globally, from any application.
+
+This is a third mode that sits between the two above:
+
+- Always-On is the **toggle** version of command listening — mic open continuously, listens for commands all day.
+- Command Push-to-Talk is the **hold** version — mic open only while you hold the chord, so the rest of the time the microphone is genuinely free for other applications.
+
+**When to use this mode:**
+
+- You also use an external dictation app (Wispr Flow, Dragon, macOS Dictation, etc.) for running-text dictation and don't want Supervertaler's always-on mic competing for the audio stream.
+- You only need voice commands occasionally — pressing a hotkey when you want to issue one is less intrusive than leaving the mic open all day.
+- You're on a laptop battery-conscious about the always-on Vosk model running 24/7.
+
+**Coexistence with the toggle mode:** if Always-On is already running when you press Ctrl+Alt+V, the hotkey is a no-op — it won't restart what's already going, and releasing it won't stop Always-On either (we never touch what we didn't start). So the two modes don't fight each other; you can use whichever feels right for the moment.
+
+**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+A or click ⏹ Stop Always-On — it doesn't auto-stop on key release. Lift to a manual toggle there.
 
 ***
 
