@@ -57,3 +57,8 @@
 /workbench/sidekick/voice/               /workbench/voice/overview/                  301
 /workbench/sidekick/clipboard/           /workbench/clipboard/overview/              301
 /workbench/sidekick/trados-aware-chat/   /workbench/ai-translation/chat/             301
+
+# ─── 2026-05-26: "Image Extractor (Superimage)" renamed to "Image Context" ───
+# The viewer is now folded into the Prompt Manager (Section 4) and the page
+# moved out of Tools into AI Translation alongside Prompt Manager + AutoPrompt.
+/workbench/tools/image-extractor/        /workbench/ai-translation/image-context/    301

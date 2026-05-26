@@ -402,6 +402,10 @@ const sidebar = [
             "link": "/workbench/ai-translation/autoprompt/"
           },
           {
+            "label": "Image Context",
+            "link": "/workbench/ai-translation/image-context/"
+          },
+          {
             "label": "Chat (AI conversation panel)",
             "link": "/workbench/ai-translation/chat/"
           },
@@ -611,10 +615,6 @@ const sidebar = [
           {
             "label": "TMX Editor",
             "link": "/workbench/tools/tmx-editor/"
-          },
-          {
-            "label": "Image Extractor",
-            "link": "/workbench/tools/image-extractor/"
           }
         ]
       },

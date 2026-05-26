@@ -105,6 +105,7 @@
 * [Creating Prompts](workbench/ai-translation/prompts.md)
 * [Prompt Manager](workbench/ai-translation/prompt-library.md)
 * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
+* [Image Context](workbench/ai-translation/image-context.md)
 * [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
@@ -170,7 +171,6 @@
 
 * [PDF Rescue (OCR)](workbench/tools/pdf-rescue.md)
 * [TMX Editor](workbench/tools/tmx-editor.md)
-* [Image Extractor](workbench/tools/image-extractor.md)
 
 ## 🖥️ Settings
 
