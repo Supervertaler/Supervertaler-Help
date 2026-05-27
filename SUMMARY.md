@@ -175,6 +175,7 @@
 ## 🖥️ Settings
 
 * [General Settings](workbench/settings/general.md)
+* [Language (UI Translation)](workbench/settings/language.md)
 * [View Settings](workbench/settings/view.md)
 * [Keyboard Shortcuts (Workbench)](workbench/settings/shortcuts.md)
 * [Theme (Light/Dark Mode)](workbench/settings/theme.md)

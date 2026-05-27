@@ -627,6 +627,10 @@ const sidebar = [
             "link": "/workbench/settings/general/"
           },
           {
+            "label": "Language (UI Translation)",
+            "link": "/workbench/settings/language/"
+          },
+          {
             "label": "View Settings",
             "link": "/workbench/settings/view/"
           },
