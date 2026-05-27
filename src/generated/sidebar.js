@@ -179,6 +179,10 @@ const sidebar = [
           {
             "label": "Import/Export",
             "link": "/trados/import-export/"
+          },
+          {
+            "label": "Shared TM Bridge with Workbench",
+            "link": "/trados/shared-tm-bridge/"
           }
         ]
       },
@@ -460,6 +464,10 @@ const sidebar = [
           {
             "label": "Attaching a Trados TM (.sdltm)",
             "link": "/workbench/translation-memory/trados-sdltm/"
+          },
+          {
+            "label": "Shared TM Bridge with Trados",
+            "link": "/workbench/translation-memory/shared-tm-bridge/"
           },
           {
             "label": "Fuzzy Matching",
