@@ -48,29 +48,45 @@ The Enter-in-Replace shortcut is intentional: the Replace all confirmation dialo
 
 ## Search Options
 
-### Match Mode
+### Match
+
+Three mutually exclusive modes (radio buttons):
 
 | Mode | Description |
 |------|-------------|
-| **Contains** | Matches anywhere in the text |
-| **Whole Word** | Only matches complete words |
-| **Starts With** | Matches at the beginning of text |
-| **Ends With** | Matches at the end of text |
-| **Regex** | Use regular expressions |
+| **Anything** | Matches the search term anywhere in the text (the default) |
+| **Whole words** | Matches the search term only as a complete word |
+| **Entire segment** | Matches only when the whole segment equals the search term |
 
-### Case Sensitivity
+### Case sensitive
 
-Toggle **Case Sensitive** to:
 - ✅ **On**: "Hello" won't match "hello"
-- ❌ **Off**: "Hello" matches "hello", "HELLO", etc.
+- ❌ **Off** (default): "Hello" matches "hello", "HELLO", etc.
 
-### Search Scope
+### Auto-adjust case
+
+When replacing, adjusts the replacement to match the case pattern of each match — ALL CAPS → uppercased, all lower → lowercased, Title Case → title-cased. It has no effect when **Case sensitive** is on, and is ignored in **Regex** mode.
+
+### Search in
 
 | Scope | Description |
 |-------|-------------|
-| **Source + Target** | Search in both columns |
-| **Source Only** | Search only in source text |
-| **Target Only** | Search only in translations |
+| **Source** | Search the source column |
+| **Target** (default) | Search the translations |
+| Both | Tick both boxes to search source and target |
+
+## Regular expressions
+
+Tick **Regex** to treat the Find field as a regular expression (Python `re` syntax).
+
+- **Backreferences in Replace:** capture groups in the pattern can be reused in the Replace field as `\1`, `\2`, … (or `\g<name>` for named groups). For example, Find `"([^"]+)"` and Replace `«\1»` turns `"events"` into `«events»`.
+- **Case sensitive** still applies (off = the whole pattern matches case-insensitively).
+- While Regex is on, the **Match** modes and **Auto-adjust case** don't apply and are greyed out.
+- **Invalid patterns are caught:** an unbalanced pattern (e.g. `(`) or a bad backreference (e.g. `\9` with no matching group) shows a clear error and changes nothing — it never crashes or partially replaces.
+
+:::tip
+A few handy patterns: `\s+` (runs of whitespace), ` {2,}` (two or more spaces), `\b(\w+)\s+\1\b` (doubled words like "the the"), ` +$` (trailing spaces).
+:::
 
 ## History Dropdowns
 
@@ -94,30 +110,36 @@ Save and reuse multiple find/replace operations as a set.
 ### Adding Operations to a Set
 
 1. Enter your Find and Replace terms
-2. Set your options (case, scope, mode)
+2. Set your options (Match mode, Case sensitive, Regex, Search in) — these are all saved with the operation
 3. Click **➕ Add Current to Set**
 4. The operation is saved to the active set
 
 ### Managing Operations
 
 In the F&R Sets panel:
-- ✅ Enable/disable individual operations
-- 📝 Edit operations (double-click)
-- ⬆️⬇️ Reorder operations
-- 🗑️ Delete operations
+- **✓ (Enabled) column** – tick to include an operation when you click **Run All**; untick to skip it. (Hover for a reminder.)
+- **Edit** – double-click an operation to load it back into the Find/Replace fields.
+- **🗑 Delete Operation** – removes the selected operation from the set.
+- **🗑 Delete Set** – removes the selected set entirely.
+
+The **Match** column shows each operation's mode, or **Regex** when the operation is a regular expression.
 
 ### Running a Batch
 
-1. Select your set from the dropdown
-2. Click **▶️ Run All**
-3. A progress dialog shows each operation
+1. Select your set
+2. Click **▶ Run All**
+3. Each enabled operation runs in turn; regex operations (shown as "Regex" in the Match column) run with backreferences
 4. See how many replacements were made
 
-### Importing & Exporting Sets
+:::caution
+**An empty "Replace with" deletes matches.** An operation with a blank Replace field replaces every match with nothing — i.e. it deletes the matched text. If a set contains any such operation, Run All lists them and defaults the confirmation button to **No**, so you don't wipe text by accident.
+:::
+
+### Importing & exporting sets
 
 Share sets with colleagues:
-- **Export**: Click **📤 Export Set** to save as `.svfr` file
-- **Import**: Click **📥 Import Set** to load a shared file
+- **📤 Export** – save the selected set as a `.svfr` file
+- **📥 Import** – load a shared `.svfr` file
 
 ## Use Cases
 
