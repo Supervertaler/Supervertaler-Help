@@ -178,6 +178,8 @@
 ## 🖥️ Settings
 
 * [General Settings](workbench/settings/general.md)
+* [TM Settings](workbench/settings/tm-settings.md)
+* [Termbase Settings](workbench/settings/termbase-settings.md)
 * [Language (UI Translation)](workbench/settings/language.md)
 * [View Settings](workbench/settings/view.md)
 * [Keyboard Shortcuts (Workbench)](workbench/settings/shortcuts.md)

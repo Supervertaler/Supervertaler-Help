@@ -639,6 +639,14 @@ const sidebar = [
             "link": "/workbench/settings/general/"
           },
           {
+            "label": "TM Settings",
+            "link": "/workbench/settings/tm-settings/"
+          },
+          {
+            "label": "Termbase Settings",
+            "link": "/workbench/settings/termbase-settings/"
+          },
+          {
             "label": "Language (UI Translation)",
             "link": "/workbench/settings/language/"
           },
