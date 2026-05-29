@@ -134,7 +134,7 @@ Click: 📂 Folder → Select folder with images
 
 **Model Selection** (vision-capable models, grouped by provider):
 - **OpenAI**: `gpt-5.5` (Recommended - flagship), `gpt-5.4-mini` (budget option)
-- **Claude**: `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`, `claude-opus-4-7`
+- **Claude**: `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`, `claude-opus-4-8`
 - **Gemini**: `gemini-3.1-flash-lite`, `gemini-2.5-pro`, `gemini-3.1-pro-preview`
 
 **Formatting Option**:

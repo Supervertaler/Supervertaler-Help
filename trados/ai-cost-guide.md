@@ -61,7 +61,7 @@ There's a wide spread between models. As a rough mental model:
 
 * **Local models (Ollama)** are **free** – they run on your own computer, with no API charges at all. The trade-off is that quality depends on your hardware, and they're generally less capable than cloud-hosted models. If you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Budget cloud models** – the "Mini", "Flash-Lite" and "Small" tier from each provider (e.g. GPT-5.4 Mini, Gemini 3.1 Flash-Lite, Mistral Small, Claude Haiku 4.5) – typically cost a small fraction of a cent per segment. They're excellent for routine, high-volume translation.
-* **Flagship models** – Claude Opus 4.7, GPT-5.5, Gemini 3.1 Pro and the like – can run roughly 10–50× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
+* **Flagship models** – Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro and the like – can run roughly 10–50× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
 
 To see what a model **actually** costs for your work, run one operation and check the **Reports** tab – it shows the real billed cost. For OpenRouter, expect the underlying provider's rate plus a small platform fee.
 
@@ -71,7 +71,7 @@ To see what a model **actually** costs for your work, run one operation and chec
 **If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 4.6.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content – at a cost that works out to a small fraction of a cent per segment.
 :::
 
-For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 3.1 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.7** or **GPT-5.5** are worth the premium.
+For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 3.1 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.8** or **GPT-5.5** are worth the premium.
 
 ### Token pricing
 
@@ -82,7 +82,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 ### Tips for managing costs
 
 * **Start with a budget model** – GPT-5.4 Mini, Gemini 3.1 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
-* **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.7, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
+* **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.8, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Check your usage** – the **Reports** tab in Supervertaler lists every AI call with its token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 
@@ -110,7 +110,7 @@ If a request is estimated to cost more than $0.50 in input tokens, a confirmatio
 
 #### Choosing the right model
 
-For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-5.4 Mini** or another budget model. Reserve premium models like **GPT-5.5** or **Claude Opus 4.7** for AutoPrompt and complex tasks where the quality difference justifies the cost.
+For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-5.4 Mini** or another budget model. Reserve premium models like **GPT-5.5** or **Claude Opus 4.8** for AutoPrompt and complex tasks where the quality difference justifies the cost.
 
 ### See also
 

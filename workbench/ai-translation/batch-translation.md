@@ -20,7 +20,7 @@ Translate multiple segments at once with AI.
 
 Choose your LLM provider:
 - OpenAI (GPT-5.5, GPT-5.4 Mini)
-- Anthropic (Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.7)
+- Anthropic (Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8)
 - Google (Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro)
 - Mistral, DeepSeek
 - Ollama (local models)
@@ -64,7 +64,7 @@ Enable **"🔄 Retry until all segments are translated"** to:
 ### Quality vs Speed
 
 - Claude Sonnet 4.6: Good all-round balance of speed and quality
-- GPT-5.5 / Claude Opus 4.7: Highest quality, slower and more expensive
+- GPT-5.5 / Claude Opus 4.8: Highest quality, slower and more expensive
 - GPT-5.4 Mini / Gemini 3.1 Flash-Lite: Fastest, lower cost
 
 ### Post-Edit Strategy

@@ -14,9 +14,9 @@ Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api
 
 ### Anthropic (Claude)
 
-Models: **Claude Sonnet 4.6**, **Claude Haiku 4.5**, **Claude Opus 4.7**
+Models: **Claude Sonnet 4.6**, **Claude Haiku 4.5**, **Claude Opus 4.8**
 
-Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 4.6 is the recommended default. Haiku 4.5 is the fastest and cheapest option; Opus 4.7 is the most capable.
+Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 4.6 is the recommended default. Haiku 4.5 is the fastest and cheapest option; Opus 4.8 is the most capable.
 
 ### Google (Gemini)
 

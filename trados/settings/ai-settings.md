@@ -15,7 +15,7 @@ Choose one of the supported AI providers:
 | Provider | Description |
 |----------|-------------|
 | **OpenAI** | GPT-5.5, GPT-5.4 Mini |
-| **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.7 |
+| **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 |
 | **Gemini (Google)** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
 | **Grok (xAI)** | Grok 4.3 |
 | **Mistral AI** | Mistral Large, Mistral Small |
@@ -103,7 +103,7 @@ The model dropdown includes a curated selection of the best models for translati
 | Model | Description |
 |-------|-------------|
 | **Claude Sonnet 4.6** | Recommended – best balance of speed, quality, and cost |
-| **Claude Opus 4.7** | Highest quality – Anthropic's most capable model, 1M context |
+| **Claude Opus 4.8** | Highest quality – Anthropic's most capable model, 1M context |
 | **GPT-5.5** | Premium quality – OpenAI's most advanced model |
 | **GPT-5.4 Mini** | Fast, affordable, and high quality for everyday translation |
 | **Gemini 3.1 Pro** | Google's most advanced model, large context |
