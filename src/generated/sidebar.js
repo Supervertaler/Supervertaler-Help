@@ -539,6 +539,10 @@ const sidebar = [
             "link": "/workbench/import-export/multi-file/"
           },
           {
+            "label": "Import Options (File Types)",
+            "link": "/workbench/import-export/import-options/"
+          },
+          {
             "label": "Exporting Translations",
             "link": "/workbench/import-export/exporting/"
           },

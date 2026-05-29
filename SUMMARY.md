@@ -144,6 +144,7 @@
 * [Importing DOCX Files](workbench/import-export/docx-import.md)
 * [Importing Text Files](workbench/import-export/txt-import.md)
 * [Multi-File Projects](workbench/import-export/multi-file.md)
+* [Import Options (File Types)](workbench/import-export/import-options.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
 * [Supervertaler Bilingual Table](workbench/import-export/bilingual-tables.md)
 * [AI-Readable Markdown Export](workbench/import-export/ai-readable-markdown.md)
