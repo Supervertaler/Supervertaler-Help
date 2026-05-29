@@ -530,10 +530,19 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       const search = await pagefind.search(query);
       if (token !== this.searchToken) return;
 
-      const hits = await Promise.all(
+      // Resolve each result's data independently with allSettled (not all):
+      // if a single fragment fails to load or decompress — e.g. a transient
+      // Cloudflare edge-cache hiccup — we render the results that DID load
+      // instead of letting one rejection blank the entire list (the
+      // "results appear then vanish" failure mode).
+      const settled = await Promise.allSettled(
         search.results.slice(0, 50).map((r: any) => r.data())
       );
       if (token !== this.searchToken) return;
+
+      const hits = settled
+        .filter((s) => s.status === 'fulfilled')
+        .map((s: any) => s.value);
 
       this.renderResults(hits);
     }
