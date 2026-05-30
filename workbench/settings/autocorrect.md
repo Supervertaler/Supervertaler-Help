@@ -8,9 +8,11 @@ This feature was requested in [discussion #211](https://github.com/orgs/Superver
 
 ## Where to find it
 
-**Settings → General → ✍️ AutoCorrect while typing**
+**Settings → ✍️ AutoCorrect** (its own tab in the Settings sidebar, just below General).
 
-The master switch enables or disables all rules at once. Each rule below it can also be toggled individually. Changes take effect on the **very next keystroke** — no app restart, no grid reload.
+The master switch enables or disables all rules at once. Each rule below it can also be toggled individually.
+
+This tab **saves automatically** — there is no Save button. Every toggle is written to your settings the moment you click it and takes effect on the **very next keystroke** — no app restart, no grid reload.
 
 ## Rules
 
@@ -51,7 +53,7 @@ If AutoCorrect converts something you actually wanted to leave alone, press **Ba
 
 ## Turning a single rule off temporarily
 
-The fastest way is to use the per-rule toggles in Settings. Both the master switch and the per-rule checkboxes are honoured on the next keystroke. There's no per-segment override yet — if you want one in a future version, please open an issue.
+Use the per-rule toggles on the **Settings → ✍️ AutoCorrect** tab. Because the tab saves automatically, both the master switch and the per-rule checkboxes are honoured on the next keystroke without clicking anything else. There's no per-segment override yet — if you want one in a future version, please open an issue.
 
 ## See also
 
