@@ -639,6 +639,10 @@ const sidebar = [
             "link": "/workbench/settings/general/"
           },
           {
+            "label": "AutoCorrect while typing",
+            "link": "/workbench/settings/autocorrect/"
+          },
+          {
             "label": "TM Settings",
             "link": "/workbench/settings/tm-settings/"
           },

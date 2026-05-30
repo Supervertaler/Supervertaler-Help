@@ -178,6 +178,7 @@
 ## 🖥️ Settings
 
 * [General Settings](workbench/settings/general.md)
+* [AutoCorrect while typing](workbench/settings/autocorrect.md)
 * [TM Settings](workbench/settings/tm-settings.md)
 * [Termbase Settings](workbench/settings/termbase-settings.md)
 * [Language (UI Translation)](workbench/settings/language.md)
