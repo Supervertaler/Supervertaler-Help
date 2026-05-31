@@ -547,11 +547,15 @@ const sidebar = [
             "link": "/workbench/import-export/exporting/"
           },
           {
-            "label": "Supervertaler Bilingual Table",
+            "label": "Supervertaler Re-importable Table (DOCX)",
             "link": "/workbench/import-export/bilingual-tables/"
           },
           {
-            "label": "AI-Readable Markdown Export",
+            "label": "Supervertaler Re-importable Text (AI-friendly)",
+            "link": "/workbench/import-export/bilingual-text/"
+          },
+          {
+            "label": "AI-Readable Markdown Export (read-only)",
             "link": "/workbench/import-export/ai-readable-markdown/"
           }
         ]

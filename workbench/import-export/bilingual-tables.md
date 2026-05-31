@@ -1,12 +1,14 @@
 ---
-title: "Supervertaler Bilingual Table"
+title: "Supervertaler Re-importable Table (DOCX)"
 ---
 
-The **Supervertaler Bilingual Table** is a branded Word (DOCX) export that lays
-your project out as a side-by-side table — handy for reviewing, proofreading, or
-handing off to someone who doesn't use a CAT tool. Its defining feature: one
-variant can be edited and **re-imported** to pull the changes straight back into
-your project.
+The **Supervertaler Re-importable Table** is a branded Word (DOCX) export that
+lays your project out as a side-by-side table — handy for reviewing,
+proofreading, or handing off to someone who doesn't use a CAT tool. Its defining
+feature: it can be edited and **re-imported** to pull the changes straight back
+into your project. (Its plain-text sibling,
+[Re-importable Text](bilingual-text.md), does the same round-trip in an
+AI-friendly text format.)
 
 ## When to use it
 
@@ -28,23 +30,23 @@ A header above the table shows the project name, language pair, segment count, a
 
 ## Two variants
 
-**Project → Export** offers two versions:
+There are two Word-table exports, deliberately separated by whether they round-trip:
 
-- **Supervertaler Bilingual Table — With Tags (DOCX)** — formatting tags stay visible as markup. This is the **re-importable** version: edit the Target cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text.
+- **Project → Export → 🔁 Supervertaler Re-importable → Bilingual Table (DOCX)** — the **re-importable** version. Formatting tags stay visible as markup; edit the Target/Comments cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text. The document is titled *Supervertaler Re-importable Table*.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-With-Tags.png" alt=""><figcaption><p>The <strong>With Tags</strong> variant: formatting shown as visible markup, with a notice that segment numbers and source text must stay unchanged so the file can be re-imported after proofreading.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-With-Tags.png" alt=""><figcaption><p>The re-importable variant: formatting shown as visible markup, with a notice that segment numbers and source text must stay unchanged so the file can be re-imported after proofreading.</p></figcaption></figure>
 
-- **Supervertaler Bilingual Table — Formatted (DOCX)** — inline formatting (bold, italic, underline) is rendered instead of shown as tags. This version is for **client delivery or archiving** and **cannot be re-imported**.
+- **Project → Export → Supervertaler Formatted Table (DOCX, read-only)** — inline formatting (bold, italic, underline) is rendered instead of shown as tags. This version is for **client delivery or archiving** and **cannot be re-imported**.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-Formatted.png" alt=""><figcaption><p>The <strong>Formatted</strong> variant: inline formatting rendered for client delivery or archiving — not re-importable.</p></figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-Formatted.png" alt=""><figcaption><p>The formatted variant: inline formatting rendered for client delivery or archiving — not re-importable.</p></figcaption></figure>
 
 ## Round-trip (proofread and re-import)
 
-1. Export the **With Tags** version.
+1. Export the **re-importable** Bilingual Table.
 2. Edit in Word — leave the **#** and **Source** columns untouched:
    - The **Target** column for translation edits.
    - The **Comments** column to edit, add, or clear segment comments. New comments added to segments that had none in Workbench are also round-tripped.
-3. Back in Workbench: **Project → Import → Bilingual Table (DOCX) – Update Project**.
+3. Back in Workbench: **Project → Import → 🔁 Supervertaler Re-importable → Bilingual Table (DOCX) – Update Project**.
 4. Supervertaler diffs the file against your project and shows a preview before applying. Target changes set the segment back to "Not Started" so you can re-confirm; comment changes replace the segment's existing comments verbatim with the proofreader's text (no `[Review: …]` wrapping or appending — round-trip in, round-trip out).
 
 :::note

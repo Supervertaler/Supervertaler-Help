@@ -146,8 +146,9 @@
 * [Multi-File Projects](workbench/import-export/multi-file.md)
 * [Import Options (File Types)](workbench/import-export/import-options.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
-* [Supervertaler Bilingual Table](workbench/import-export/bilingual-tables.md)
-* [AI-Readable Markdown Export](workbench/import-export/ai-readable-markdown.md)
+* [Supervertaler Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
+* [Supervertaler Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
+* [AI-Readable Markdown Export (read-only)](workbench/import-export/ai-readable-markdown.md)
 
 ## 🖥️ SuperLookup
 
