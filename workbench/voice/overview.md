@@ -55,6 +55,25 @@ This is a third mode that sits between the two above:
 
 **Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+A or click ⏹ Stop Always-On — it doesn't auto-stop on key release. Lift to a manual toggle there.
 
+### Pause Always-On for external dictation — v1.10.246
+
+The opposite trade-off to Command Push-to-Talk: keep Always-On running **permanently**, but have it step off the microphone for the moments you're dictating into an **external** tool (Wispr Flow, Dragon, macOS Dictation, …). You bind one of *your* keys — the same key you press to start your external dictation — and Always-On pauses while it's engaged, then resumes. So your voice commands stay available all day, and the two never fight over the mic.
+
+The key is **recorded, not typed**, so it works with keys you can't express as text — including media keys like **fast-forward**, which many people use to trigger their dictation tool.
+
+**To set it up** — Voice tab → **⏸️ Pause Always-On for external dictation**:
+
+1. Click **Record key**, then press the key you use for your external dictation tool. The label shows what was captured (e.g. *Media Next / Fast-Forward*).
+2. Choose a **mode**:
+   - **Hold** _(default)_ — Always-On pauses only while you hold the key and resumes the instant you release it. Pair this with **hold-to-talk** tools like Wispr Flow: hold your key → speak → release, and Always-On is live again.
+   - **Toggle** — press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
+
+It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* — your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
+
+:::note
+**Which to use — this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.
+:::
+
 ***
 
 ## Voice commands
