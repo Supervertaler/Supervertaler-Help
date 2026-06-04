@@ -88,6 +88,13 @@ When multiple TMs match:
 - Higher priority TMs shown first
 - Can reorder in the **TMs** tab
 
+### Sending segments to several TMs at once
+
+To push your confirmed translations into more than one TM in a single run, use
+**Bulk Operations ▸ Update active TMs**. Under **Target Translation Memories**,
+tick every TM you want to update – the segments are written to all of them in
+one pass, with a per-TM summary of how many were sent to each.
+
 ---
 
 ## See Also
