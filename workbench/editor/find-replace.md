@@ -75,6 +75,15 @@ When replacing, adjusts the replacement to match the case pattern of each match 
 | **Target** (default) | Search the translations |
 | Both | Tick both boxes to search source and target |
 
+### Reset edited to Draft
+
+When a replacement changes a target segment that was **Confirmed**, **Proofread** or **Approved**, that segment is reset to **Draft**, so the segments Find & Replace touched are easy to spot and re-check afterwards.
+
+- ✅ **On** (default): edited finished segments drop back to Draft.
+- ❌ **Off**: segments keep their existing status.
+
+This applies to **Replace this**, **Replace all** and **F&R Sets** batch runs. Only segments whose text actually changes are affected, and replacing in the source column never changes a status. The setting is remembered between sessions, and `Ctrl+Z` restores the original text and status together.
+
 ## Regular expressions
 
 Tick **Regex** to treat the Find field as a regular expression (Python `re` syntax).
