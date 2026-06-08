@@ -547,6 +547,10 @@ const sidebar = [
             "link": "/workbench/import-export/exporting/"
           },
           {
+            "label": "Export Verification (Word-Count Check)",
+            "link": "/workbench/import-export/export-verification/"
+          },
+          {
             "label": "Supervertaler Re-importable Table (DOCX)",
             "link": "/workbench/import-export/bilingual-tables/"
           },

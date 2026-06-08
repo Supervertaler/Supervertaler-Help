@@ -34,8 +34,13 @@ Don’t merge or split segments in Supervertaler when you plan to reimport into 
 	- CafeTran bilingual table DOCX
 - For review-only delivery, consider [Bilingual Tables](bilingual-tables.md).
 
+## Checking the export
+
+After every DOCX export, Supervertaler automatically compares the word count of the exported file against your translated segments and warns you if text looks like it was dropped. See [Export Verification (Word-Count Check)](export-verification.md).
+
 ## Related pages
 
 - [Supported File Formats](formats.md)
+- [Export Verification (Word-Count Check)](export-verification.md)
 - [Bilingual Tables](bilingual-tables.md)
 - [CAT Tool Overview](../cat-tools/overview.md)
