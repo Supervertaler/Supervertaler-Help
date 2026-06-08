@@ -41,7 +41,18 @@ Comment: Verify the shade of "brown"
 ```
 
 - The `EN:` line is the **source** — leave it alone.
-- The `NL:` line is the **target** — edit it freely (it may span several lines).
+- The `NL:` line is the **target** — edit it freely, but **keep it on one line**.
+  Where the target needs a hard line break — for example to split a subtitle
+  across two lines — write the literal token `[newline]`:
+
+  ```
+  NL: Welkom bij dit webinar[newline]over de waardeketenanalyse
+  ```
+
+  On re-import `[newline]` is turned back into a real line break, so the two-line
+  layout is preserved on export. *(Introduced in v1.10.255; files exported before
+  that — with the target genuinely wrapped over several lines — still re-import
+  unchanged.)*
 - The `Comment:` line is always present (blank when the segment has no comment)
   so you can see the field exists. **Edit it, fill the blank one, or clear it** —
   the change re-imports into the segment's comments. It too may span several lines.
@@ -53,10 +64,12 @@ Comment: Verify the shade of "brown"
 ## Editing with an LLM
 
 Hand the `.txt` to ChatGPT, Claude, Gemini, etc. with an instruction such as
-*"edit only the `NL:` lines; leave the `[SEGMENT …]` markers, the `EN:` lines,
-and the `{…}` tags untouched."* Because each line is labelled (not separated by
-table columns), it survives pipe characters, line breaks, and long inputs
-without the source/target roles getting confused.
+*"edit only the `NL:` lines; keep each one on a single line, using the literal
+token `[newline]` for any line break; leave the `[SEGMENT …]` markers, the `EN:`
+lines, and the `{…}` tags untouched."* Because each field is one labelled line
+(not a table column), it survives pipe characters and long inputs without the
+source/target roles getting confused, and keeping targets to one line stops an
+agent from accidentally reflowing them.
 
 ## Re-importing
 
