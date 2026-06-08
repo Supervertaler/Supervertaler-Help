@@ -24,6 +24,8 @@ This page covers:
 
 <figure><img src="/.gitbook/assets/Workbench-Settings-Language-Dropdown.png" alt=""><figcaption><p>Settings → General → Language dropdown</p></figcaption></figure>
 
+<figure><img src="/.gitbook/assets/UI-Localisation-Dutch.png" alt=""><figcaption><p>The Workbench interface after picking a locale – here localised to Dutch</p></figcaption></figure>
+
 ### Locale options
 
 | Entry | Meaning |
