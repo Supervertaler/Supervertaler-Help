@@ -40,7 +40,9 @@ Status: Confirmed
 Comment: Verify the shade of "brown"
 ```
 
-- The `EN:` line is the **source** — leave it alone.
+- The `EN:` line is the **source** — leave it alone. It's shown on **one line for
+  reference**; its original line breaks aren't significant and are never written
+  back to your project.
 - The `NL:` line is the **target** — edit it freely, but **keep it on one line**.
   Where the target needs a hard line break — for example to split a subtitle
   across two lines — write the literal token `[newline]`:
@@ -60,6 +62,11 @@ Comment: Verify the shade of "brown"
   them as you like.
 - `{1}`, `[1}`, `<92>` and similar are **structural tags** — keep them; dropping
   one will flag the segment on re-import (see below).
+
+A real file looks like this — note the single-line sources and the `[newline]`
+token marking where each target splits across two lines:
+
+![A Supervertaler Re-importable Text file: the header lists the project details and the editing rules, the NL: source lines each sit on one line, and two EN: targets show the [newline] token highlighted where a subtitle is split across two lines.](/.gitbook/assets/SUPERVERTALER-RE-IMPORTABLE-TEXT-newlines.png)
 
 ## Editing with an LLM
 
