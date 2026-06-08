@@ -62,7 +62,7 @@ translations/
 
 ## What's inside an XLIFF file?
 
-The format is standard **XLIFF 1.2** – the same format Workbench imports through **File → Import → Bilingual XLIFF**. Every CAT tool in regular use reads it natively.
+The format is standard **XLIFF 1.2** – the same format Workbench imports through **Project → Import → Import Document…** (using the XLIFF filter). Every CAT tool in regular use reads it natively.
 
 A `.xlf` file has one entry per translatable string. Each entry looks like this:
 
@@ -101,7 +101,7 @@ The whole flow is designed so you can use whichever CAT tool you already work in
 
 ### CAT-tool specifics
 
-**Workbench itself:** File → Import → Bilingual XLIFF. Choose the generic XLIFF filter (not SDLXLIFF or MQXLIFF). Translate in the editor. Export back via File → Export.
+**Workbench itself:** Project → Import → **Import Document…** and choose the generic XLIFF filter (not SDLXLIFF or MQXLIFF). Translate in the editor, then export back via Project → Export → **Export Translated Document…**.
 
 **Trados Studio:** File → Open → Translate Single Document → select the `.xlf`. Studio recognises XLIFF 1.2 out of the box. Save Target As to export.
 

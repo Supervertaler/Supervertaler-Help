@@ -8,7 +8,7 @@ Let's walk through creating a complete translation project from start to finish.
 
 ### Option 1: Import a Document
 
-1. Go to **Project → Import → DOCX...**
+1. Go to **Project → Import → Import Document…** (`Ctrl+O`)
 2. Select your Word document
 3. Choose the source language (e.g., "English")
 4. Choose the target language (e.g., "Dutch")
@@ -18,7 +18,7 @@ Your document is now segmented and ready for translation.
 
 ### Option 2: Import a Text File
 
-1. Go to **Project → Import → Text File...**
+1. Go to **Project → Import → Text / Markdown File (TXT, MD)…**
 2. Select your `.txt` file
 3. Each line becomes a separate segment
 

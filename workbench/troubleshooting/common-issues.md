@@ -147,7 +147,7 @@ the same positions in the translation.
 ### "Source file not found" on export
 
 The original imported file was moved or deleted.
-- Use **Project → Relocate Source Folder** to point to the new location
+- Use **Project → Export → 🔗 Relocate Source Folder** to point to the new location
 - Or re-import the source file
 
 ### Formatting lost after round-trip

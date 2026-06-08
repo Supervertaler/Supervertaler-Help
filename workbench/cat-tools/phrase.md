@@ -15,13 +15,13 @@ Supervertaler works best with two-column bilingual files (Source/Target).
 
 ## Import to Supervertaler
 
-1. In Supervertaler: **Project → Open** and select the bilingual DOCX
+1. In Supervertaler: **Project → Import → Phrase (Memsource) → Bilingual (DOCX)…** and select the bilingual DOCX
 2. Translate (AI or manual) and review in the grid
 3. Confirm segments when ready (`Ctrl+Enter`)
 
 ## Export back to Phrase
 
-1. In Supervertaler: **Project → Export → Phrase Bilingual DOCX**
+1. In Supervertaler: **Project → Export → Phrase (Memsource) → Bilingual - Translated (DOCX)…**
 2. Save the file
 
 ## Reimport to Phrase

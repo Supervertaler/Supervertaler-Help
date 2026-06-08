@@ -8,7 +8,7 @@ DOCX import is handled by the bundled **Okapi sidecar** – an industry-standard
 
 ## Import steps
 
-1. Go to **Project → Import → DOCX...**
+1. Go to **Project → Import → Import Document…** (`Ctrl+O`)
 2. Select your `.docx` file
 3. Choose the **source** and **target** languages when prompted
 4. The document is segmented into rows in the translation grid – formatting tags (`<b>`, `<i>`, `<u>`, hyperlinks, runs) appear inline so you can preserve them in the translation

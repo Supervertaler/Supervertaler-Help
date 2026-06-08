@@ -26,7 +26,7 @@ The best way to work with Trados Studio is using **project packages** (SDLPPX fi
 
 ### Import to Supervertaler
 
-1. Go to **Project → Import → Trados Package (SDLPPX)...**
+1. Go to **Project → Import → Trados Studio → Package (SDLPPX)…**
 2. Select your `.sdlppx` file
 3. Supervertaler extracts and loads all segments
 
@@ -55,7 +55,7 @@ These are highlighted in the grid for visibility.
 
 ## Export as Return Package
 
-1. Go to **Project → Export → Trados Return Package (SDLRPX)...**
+1. Go to **Project → Export → Trados Studio → Return Package (SDLRPX)…**
 2. The return package is created with your translations
 3. Segment status is updated to "Translated"
 
@@ -86,9 +86,9 @@ Trados Bilingual Review DOCX is designed for **review only**, not translation:
 
 1. **In Trados**: Copy all source to target first
    - Edit → Task → Copy source to target (batch task)
-2. **Export**: Project → Export → For Bilingual Review
+2. **Export**: Project → Export → Trados Studio → Bilingual Review - Translated (DOCX)
 3. **In Word**: Delete all target text (cells remain, but empty)
-4. **Import to Supervertaler**: Project → Import → Trados Bilingual DOCX
+4. **Import to Supervertaler**: Project → Import → Trados Studio → Bilingual Review (DOCX)
 5. **Translate** and export
 6. **Re-import to Trados**: Merge into project
 
@@ -132,7 +132,7 @@ Ensure you keep all `<1>`, `</1>` tags in exactly the same positions.
 
 ### Source files not found on re-export
 
-If you moved your project, use **Project → Relocate Source Folder** to point to the new location of the SDLPPX.
+If you moved your project, use **Project → Export → 🔗 Relocate Source Folder** to point to the new location of the SDLPPX.
 
 ---
 
