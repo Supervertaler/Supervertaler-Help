@@ -40,9 +40,11 @@ Status: Confirmed
 Comment: Verify the shade of "brown"
 ```
 
-- The `EN:` line is the **source** — leave it alone. It's shown on **one line for
-  reference**; its original line breaks aren't significant and are never written
-  back to your project.
+- The `EN:` line is the **source** — leave it alone. It stays on **one line**, and
+  a `[newline]` in it marks where the original source broke across two lines (e.g.
+  a subtitle cue). The source is read-only and never written back to your project,
+  so these tokens are just there to show its structure — handy for spotting a
+  target that's missing a break the source has.
 - The `NL:` line is the **target** — edit it freely, but **keep it on one line**.
   Where the target needs a hard line break — for example to split a subtitle
   across two lines — write the literal token `[newline]`:
