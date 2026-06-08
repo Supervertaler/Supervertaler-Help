@@ -124,7 +124,11 @@ The SDLPPX might be corrupted or use an unsupported format.
 
 ### Status shows "Draft" instead of "Translated"
 
-Fixed in v1.9.32. Update to the latest version.
+Fixed in **v1.10.259**. Earlier versions exported every segment as **Draft**
+regardless of its status in the grid, so even a fully-confirmed project arrived
+unconfirmed in Trados. Now a confirmed project exports with each segment marked
+**Translated** (Approved/Proofread map to *ApprovedTranslation*). Update to
+v1.10.259 or later and re-export the return package.
 
 ### Tags not matching
 
