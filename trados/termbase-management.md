@@ -161,4 +161,4 @@ The AI analyses all terms in the termbase and creates structured articles (termi
 - [TermLens Settings](settings/termlens.md)
 - [Adding & Editing Terms](termlens/adding-terms.md)
 - [Distill](ai-assistant/super-memory/distill.md)
-- [Termbase Basics (Workbench)](https://help.supervertaler.com/workbench/termbases/basics/)
+- [Termbase Basics (Workbench)](https://docs.supervertaler.com/workbench/termbases/basics/)

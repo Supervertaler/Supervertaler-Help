@@ -33,7 +33,7 @@ Start here: [Quick Start Guide](get-started/quick-start.md)
 
 Looking for the **Trados Studio plugin**? It has its own help center:
 
-[**Supervertaler for Trados Help →**](https://help.supervertaler.com/trados/)
+[**Supervertaler for Trados Help →**](https://docs.supervertaler.com/trados/)
 
 Both tools share the same SQLite-based termbase format (`.db`) – termbases created in one work in the other.
 

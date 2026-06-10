@@ -57,7 +57,7 @@ There are two builds: one for **Trados Studio 2024** (MultiTerm `.sdltb` termbas
 
 ### Shared Termbase Format
 
-Supervertaler for Trados uses the same SQLite-based termbase format (`.db`) as [Supervertaler Workbench](https://help.supervertaler.com/workbench/). Termbases created in either tool are fully compatible – you can open the same `.db` file in both applications.
+Supervertaler for Trados uses the same SQLite-based termbase format (`.db`) as [Supervertaler Workbench](https://docs.supervertaler.com/workbench/). Termbases created in either tool are fully compatible – you can open the same `.db` file in both applications.
 
 ### Context-Sensitive Help
 

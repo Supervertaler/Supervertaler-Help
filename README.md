@@ -2,7 +2,7 @@
 description: Help and documentation for the Supervertaler suite.
 ---
 
-# Welcome to Supervertaler Help!
+# Welcome to Supervertaler Docs!
 
 Supervertaler is a translation suite for professional translators, localisers, and people who work with words. There are two products:
 

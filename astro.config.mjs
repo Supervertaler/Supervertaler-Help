@@ -12,11 +12,11 @@ import sidebar from './src/generated/sidebar.js';
 export default defineConfig({
   // Production URL for sitemap / canonical / OpenGraph tags.
   // Update if the chosen subdomain changes.
-  site: 'https://help.supervertaler.com',
+  site: 'https://docs.supervertaler.com',
 
   integrations: [
     starlight({
-      title: 'Supervertaler Help',
+      title: 'Supervertaler Docs',
       description: 'Help and documentation for the Supervertaler suite — Trados Studio plugin and Workbench standalone app.',
 
       // Component overrides — see ./src/components/ for the customisations.

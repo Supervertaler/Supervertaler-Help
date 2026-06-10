@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Welcome to Supervertaler Help!](README.md)
+* [Welcome to Supervertaler Docs!](README.md)
 
 ## 🧩 Get Started
 

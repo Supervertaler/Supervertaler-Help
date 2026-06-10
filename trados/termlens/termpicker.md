@@ -78,5 +78,5 @@ TermPicker shows the same matches as TermLens, but in a flat list format that is
 ### See Also
 
 * [Adding & Editing Terms](adding-terms.md)
-* [TermLens (Workbench)](https://help.supervertaler.com/workbench/termbases/termlens/)
+* [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/)
 * [Termbase Management](../termbase-management.md)

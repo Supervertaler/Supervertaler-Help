@@ -98,4 +98,4 @@ See [Keyboard Shortcuts](../keyboard-shortcuts.md) for the full reference.
 - [Termbase Management](../termbase-management.md)
 - [MultiTerm Support](../multiterm-support.md)
 - [AI Settings](ai-settings.md)
-- [TermLens (Workbench)](https://help.supervertaler.com/workbench/termbases/termlens/)
+- [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/)

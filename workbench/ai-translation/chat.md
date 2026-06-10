@@ -47,7 +47,7 @@ This is opt-in on the Trados side – a dropdown in Trados → **Settings → AI
 
 If Workbench isn't running when Trados tries to send a prompt, Trados silently falls back to its own Assistant – the prompt is never lost.
 
-→ [Supervertaler Bridge (Trados help)](https://help.supervertaler.com/trados/ai-assistant/supervertaler-bridge/) – wire format and troubleshooting
+→ [Supervertaler Bridge (Trados help)](https://docs.supervertaler.com/trados/ai-assistant/supervertaler-bridge/) – wire format and troubleshooting
 
 ## Example questions
 

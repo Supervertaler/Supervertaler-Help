@@ -25,7 +25,7 @@ Choose one of the supported AI providers:
 | **Custom (OpenAI-compatible)** | Any provider with an OpenAI-compatible API |
 
 :::note
-You only need one provider to get started. See [Setting Up API Keys](https://help.supervertaler.com/workbench/get-started/api-keys/) for instructions on obtaining a key.
+You only need one provider to get started. See [Setting Up API Keys](https://docs.supervertaler.com/workbench/get-started/api-keys/) for instructions on obtaining a key.
 :::
 
 ## API key
@@ -282,4 +282,4 @@ Configure the **batch size** for the [Batch Translate](batch-translate.md) featu
 - [Prompts](prompts.md)
 - [AI Cost Guide](../ai-cost-guide.md)
 - [TermLens Settings](termlens.md)
-- [Supported LLM Providers (Workbench)](https://help.supervertaler.com/workbench/ai-translation/providers/)
+- [Supported LLM Providers (Workbench)](https://docs.supervertaler.com/workbench/ai-translation/providers/)

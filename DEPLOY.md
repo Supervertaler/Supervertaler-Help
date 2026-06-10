@@ -1,6 +1,6 @@
 # Deployment to Cloudflare Pages
 
-Step-by-step setup for publishing this site at **`help.supervertaler.com`** on Cloudflare Pages, free tier.  One-time setup; afterwards every `git push` to `main` auto-deploys.
+Step-by-step setup for publishing this site at **`docs.supervertaler.com`** on Cloudflare Pages, free tier.  One-time setup; afterwards every `git push` to `main` auto-deploys.
 
 ## 0. Prerequisites
 
@@ -54,26 +54,26 @@ Sanity-check:
 
 If any of those fail, the Cloudflare build log shows what went wrong — open the deploy in the dashboard and scroll the build output.
 
-## 4. Attach the custom domain `help.supervertaler.com`
+## 4. Attach the custom domain `docs.supervertaler.com`
 
 In the Cloudflare Pages project view:
 
 1. **Custom domains** tab → **Set up a custom domain**.
-2. Enter **`help.supervertaler.com`**.
+2. Enter **`docs.supervertaler.com`**.
 3. Cloudflare creates the DNS CNAME record automatically (since DNS is managed in the same Cloudflare account) and provisions an SSL cert (Let's Encrypt, free).  Takes ~1 minute.
-4. The site is now live at <https://help.supervertaler.com>.
+4. The site is now live at <https://docs.supervertaler.com>.
 
 ## 5. After deploy works: re-point the in-app Help links
 
-In Workbench (`modules/help_system.py`) and Trados (`Core/HelpSystem.cs`), update the base URL constant from `https://supervertaler.gitbook.io/help/` to `https://help.supervertaler.com/`.  Both files have a single base-URL constant + per-topic slug enums, so the change is one edit each.
+In Workbench (`modules/help_system.py`) and Trados (`Core/HelpSystem.cs`), update the base URL constant from `https://supervertaler.gitbook.io/help/` to `https://docs.supervertaler.com/`.  Both files have a single base-URL constant + per-topic slug enums, so the change is one edit each.
 
 Once those go out in the next Workbench / Trados version bumps, the in-app **Help** buttons point at the new site.
 
 ## 6. Decommission GitBook (when you're confident)
 
-Once `help.supervertaler.com` has been live and stable for a couple of weeks:
+Once `docs.supervertaler.com` has been live and stable for a couple of weeks:
 
-1. In GitBook (web UI), replace the site content with a single "We've moved" page linking to <https://help.supervertaler.com>.
+1. In GitBook (web UI), replace the site content with a single "We've moved" page linking to <https://docs.supervertaler.com>.
 2. Optionally configure URL redirects from old GitBook page slugs to the new equivalents (Pro plan feature; on free, the single notice page is the simplest option).
 3. Eventually unpublish the GitBook space entirely.
 
