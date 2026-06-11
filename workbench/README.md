@@ -43,6 +43,6 @@ Both tools share the same SQLite-based termbase format (`.db`) – termbases cre
 
 - Browse this help center using the sidebar
 - Report issues on [GitHub](https://github.com/Supervertaler/Supervertaler-Workbench/issues)
-- Join [GitHub Discussions](https://github.com/orgs/Supervertaler/discussions)
+- Ask on the [Supervertaler Forum](https://forum.supervertaler.com/)
 - Visit [supervertaler.com](https://supervertaler.com)
 

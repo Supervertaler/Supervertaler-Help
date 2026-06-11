@@ -7,7 +7,7 @@ Contributions are welcome – bug reports, documentation improvements, and code 
 ## Where to start
 
 - Report issues: https://github.com/Supervertaler/Supervertaler-Workbench/issues
-- Discussions / questions: https://github.com/orgs/Supervertaler/discussions
+- Questions / discussion: https://forum.supervertaler.com/
 
 ## Documentation edits
 
