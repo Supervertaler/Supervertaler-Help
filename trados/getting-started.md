@@ -53,7 +53,7 @@ Settings are saved and applied immediately.
 
 ### Clipboard Mode (no API key needed)
 
-1. Open the **Supervertaler** panel and switch to the **Batch Operations** tab
+1. Open the **Supervertaler Assistant** panel and switch to the **Batch Operations** tab
 2. Tick the **Clipboard Mode** checkbox
 3. Click **Copy to Clipboard** – a ready-to-use prompt with your segments, terminology, and instructions is copied
 4. Paste it into any web-based AI (ChatGPT, Claude, Gemini, etc.) and send it
@@ -69,7 +69,7 @@ See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
 
 ### Supervertaler
 
-1. Open the **Supervertaler** panel (View > Supervertaler)
+1. Open the **Supervertaler Assistant** panel (View > Supervertaler Assistant)
 2. Switch to the **Chat** tab
 3. Type a question about the current segment and press **Enter**
 4. The assistant responds with context from your terminology and TM matches

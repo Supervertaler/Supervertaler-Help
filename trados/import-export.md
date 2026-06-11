@@ -2,9 +2,9 @@
 title: "Import/Export"
 ---
 
-The **Import/Export** tab in the Supervertaler panel exports the active Trados document's segments to a proofreader-friendly file (Word DOCX, Markdown, or HTML), then re-imports the proofreader's edits back into Trados with a confirmation diff.
+The **Import/Export** tab in the Supervertaler Assistant panel exports the active Trados document's segments to a proofreader-friendly file (Word DOCX, Markdown, or HTML), then re-imports the proofreader's edits back into Trados with a confirmation diff.
 
-![The Import/Export tab in the Supervertaler panel, showing format and layout pickers, the multi-file file list with per-file segment counts, output mode radios, and the Recent exports list.](/.gitbook/assets/Supervertaler-for-Trados-Import-Export.png)
+![The Import/Export tab in the Supervertaler Assistant panel, showing format and layout pickers, the multi-file file list with per-file segment counts, output mode radios, and the Recent exports list.](/.gitbook/assets/Supervertaler-for-Trados-Import-Export.png)
 
 This is the workflow you'd use for:
 

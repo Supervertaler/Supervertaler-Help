@@ -23,17 +23,17 @@ When Supervertaler Workbench's Sidekick Chat is asked a question (with the **�
 - Termbase hits from your enabled termbases
 - Project name, file name, source and target language
 
-This is the same context the in-Trados Supervertaler chat already uses for its own answers — the bridge just exposes it to the Workbench client.
+This is the same context the in-Trados Supervertaler Assistant chat already uses for its own answers — the bridge just exposes it to the Workbench client.
 
 The bridge also accepts an "insert translation" command from the Workbench client, so a future build of Workbench Sidekick will be able to drop AI-suggested translations directly into your active Trados target cell.
 
 ### When it runs
 
-The bridge is started automatically by the Supervertaler panel when **all** of these are true:
+The bridge is started automatically by the Supervertaler Assistant panel when **all** of these are true:
 
 1. You have **Assistant access** — a paid subscription or an active trial. Users without Assistant access never start the bridge.
 2. The hidden setting `AiSettings.SidekickBridgeEnabled` in `settings.json` is `true` (the default).
-3. You have **opened the Supervertaler panel** at least once in this Trados session. The panel is lazy – Trados doesn't initialise it until you activate it.
+3. You have **opened the Supervertaler Assistant panel** at least once in this Trados session. The panel is lazy – Trados doesn't initialise it until you activate it.
 
 The bridge is stopped automatically when Trados Studio exits. If Trados crashes or is force-killed, the next start of Trados detects the stale handshake file and replaces it with a fresh one.
 

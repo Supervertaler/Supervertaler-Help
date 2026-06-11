@@ -2,7 +2,7 @@
 title: "Providers"
 ---
 
-The Supervertaler supports multiple AI providers. You only need one to get started.
+The Supervertaler Assistant supports multiple AI providers. You only need one to get started.
 
 ## Switching Models
 

@@ -2,7 +2,7 @@
 title: "Context Awareness"
 ---
 
-The Supervertaler is deeply integrated with your Trados project. Every time you send a chat message, translate a batch of segments, or ask AutoPrompt to draft a prompt, the assistant assembles a fresh snapshot of your current work and hands it to the AI. This snapshot is the **context** – everything the AI sees before it produces a reply.
+The Supervertaler Assistant is deeply integrated with your Trados project. Every time you send a chat message, translate a batch of segments, or ask AutoPrompt to draft a prompt, the assistant assembles a fresh snapshot of your current work and hands it to the AI. This snapshot is the **context** – everything the AI sees before it produces a reply.
 
 This page is the single place that lists every context source. Each section is a brief overview with a link to the feature's canonical page for more depth. If you have ever wondered *"what exactly does the AI know when I ask it something?"*, the answer is this page.
 

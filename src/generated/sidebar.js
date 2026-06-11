@@ -70,7 +70,7 @@ const sidebar = [
             "link": "/trados/studio-2026/"
           },
           {
-            "label": "Supervertaler",
+            "label": "Supervertaler Assistant",
             "items": [
               {
                 "label": "Overview",

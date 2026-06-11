@@ -2,7 +2,7 @@
 title: "Studio Tools"
 ---
 
-Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
+Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler Assistant chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
 
 :::tip
 Studio Tools works with all major AI providers: **Claude**, **OpenAI**, **Gemini**, **Grok**, and **Mistral**. Only Ollama (local models) does not support tool use and will work as before -- plain chat without Trados queries.

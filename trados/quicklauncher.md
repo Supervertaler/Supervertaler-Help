@@ -9,7 +9,7 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 1. **Right-click** anywhere in the editor (or press `Ctrl+Q`)
 2. Click **QuickLauncher** in the context menu
 3. Select a prompt from the list
-4. The prompt is filled in with the current segment context and submitted to the Supervertaler chat
+4. The prompt is filled in with the current segment context and submitted to the Supervertaler Assistant chat
 
 <figure><img src="/.gitbook/assets/Supervertaler-QuickLauncher.png" alt="The QuickLauncher context menu showing folder sections and prompt shortcuts"><figcaption><p>The QuickLauncher context menu with folder sections and keyboard shortcuts.</p></figcaption></figure>
 

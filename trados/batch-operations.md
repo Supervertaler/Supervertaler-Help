@@ -2,7 +2,7 @@
 title: "Batch Operations"
 ---
 
-The **Batch Operations** tab in the Supervertaler panel provides two AI-powered modes for processing multiple segments at once:
+The **Batch Operations** tab in the Supervertaler Assistant panel provides two AI-powered modes for processing multiple segments at once:
 
 | Mode | Description |
 |------|-------------|

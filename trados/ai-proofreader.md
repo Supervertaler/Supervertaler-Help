@@ -6,7 +6,7 @@ The AI Proofreader checks your translated segments for errors using AI. It ident
 
 ## Starting a Proofreading Run
 
-1. Open the **Supervertaler** panel (View > Supervertaler)
+1. Open the **Supervertaler Assistant** panel (View > Supervertaler Assistant)
 2. Switch to the **Batch Operations** tab
 3. Select **Proofread** (instead of Translate)
 4. Choose a **scope** from the dropdown
@@ -52,7 +52,7 @@ What the default prompt *does* add:
 
 ## Reports Tab
 
-Proofreading results appear in the **Reports** tab of the Supervertaler panel. Each issue is shown as a clickable card containing:
+Proofreading results appear in the **Reports** tab of the Supervertaler Assistant panel. Each issue is shown as a clickable card containing:
 
 * **Segment number** – the actual per-file segment number as shown in the Trados editor grid
 * **Issue description** – what the AI found wrong

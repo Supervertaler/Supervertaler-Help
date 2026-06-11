@@ -215,7 +215,7 @@ Picks where Ctrl+Q [QuickLauncher](../quicklauncher.md) prompts run.
 
 | Option | Where the prompt and response appear |
 |--------|-------------------------------------|
-| **In-Trados AI Assistant** (default) | The Supervertaler chat panel in Trados Studio. Same behaviour as before this setting existed. |
+| **In-Trados AI Assistant** (default) | The Supervertaler Assistant panel in Trados Studio. Same behaviour as before this setting existed. |
 | **Workbench Sidekick** | Supervertaler Workbench's floating Sidekick Chat. The window pops to the front and maximises to the screen it's on, the prompt is echoed into the chat, and the AI's response appears there instead of in Trados. |
 
 The Workbench-Sidekick option is for users who want the bigger reading area Sidekick provides for long explanations, or who prefer to keep all their AI chat history in one product rather than split between Trados and Workbench.
@@ -246,7 +246,7 @@ When enabled, SuperMemory articles are included in the [AutoPrompt](../generate-
 
 ### Log prompts and responses to Reports tab
 
-When enabled, AI operations are logged to the **Reports** tab in the Supervertaler panel. Each log entry shows:
+When enabled, AI operations are logged to the **Reports** tab in the Supervertaler Assistant panel. Each log entry shows:
 
 * The **feature and prompt name** (e.g. "QuickLauncher · Explain in Context")
 * The **model used**, estimated **token counts**, **cost**, and **duration**
