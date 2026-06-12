@@ -80,6 +80,23 @@ const sidebar = [
             "link": "/trados/ai-assistant/"
           },
           {
+            "label": "Chat",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/trados/ai-assistant/chat/"
+              },
+              {
+                "label": "File Attachments",
+                "link": "/trados/ai-assistant/file-attachments/"
+              },
+              {
+                "label": "Studio Tools",
+                "link": "/trados/ai-assistant/studio-tools/"
+              }
+            ]
+          },
+          {
             "label": "Batch Operations",
             "items": [
               {
@@ -150,24 +167,25 @@ const sidebar = [
             ]
           },
           {
-            "label": "File Attachments",
-            "link": "/trados/ai-assistant/file-attachments/"
-          },
-          {
-            "label": "Studio Tools",
-            "link": "/trados/ai-assistant/studio-tools/"
-          },
-          {
-            "label": "Context Awareness",
-            "link": "/trados/ai-assistant/context-awareness/"
-          },
-          {
-            "label": "Providers and Models",
-            "link": "/trados/ai-assistant/providers/"
-          },
-          {
-            "label": "Incognito Mode",
-            "link": "/trados/ai-assistant/incognito-mode/"
+            "label": "How the assistant works",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/trados/ai-assistant/how-it-works/"
+              },
+              {
+                "label": "Context Awareness",
+                "link": "/trados/ai-assistant/context-awareness/"
+              },
+              {
+                "label": "Providers and Models",
+                "link": "/trados/ai-assistant/providers/"
+              },
+              {
+                "label": "Incognito Mode",
+                "link": "/trados/ai-assistant/incognito-mode/"
+              }
+            ]
           }
         ]
       },
