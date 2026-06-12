@@ -10,43 +10,52 @@
 * [Licensing & Pricing](trados/licensing.md)
 * [AI Cost Guide](trados/ai-cost-guide.md)
 
-## 🧩 Features
+## 🧩 TermLens
 
 * [TermLens](trados/termlens.md)
   * [Adding & Editing Terms](trados/termlens/adding-terms.md)
   * [TermLens popup](trados/termlens/termlens-popup.md)
 * [TermPicker](trados/termlens/termpicker.md)
 * [MultiTerm Support](trados/multiterm-support.md)
-* [Trados Studio 2026 & .ttb](trados/studio-2026.md)
-* [Supervertaler Assistant](trados/ai-assistant.md)
-  * [Context Awareness](trados/ai-assistant/context-awareness.md)
-  * [File Attachments](trados/ai-assistant/file-attachments.md)
-  * [Studio Tools](trados/ai-assistant/studio-tools.md)
-  * [Incognito Mode](trados/ai-assistant/incognito-mode.md)
-  * [Providers and Models](trados/ai-assistant/providers.md)
-  * [Supervertaler Bridge](trados/ai-assistant/supervertaler-bridge.md)
-  * [SuperMemory](trados/ai-assistant/super-memory.md)
-    * [Quick Add](trados/ai-assistant/super-memory/quick-add.md)
-    * [Process Inbox](trados/ai-assistant/super-memory/process-inbox.md)
-    * [Health Check](trados/ai-assistant/super-memory/health-check.md)
-    * [Distill](trados/ai-assistant/super-memory/distill.md)
-    * [Active Prompt](trados/ai-assistant/super-memory/active-prompt.md)
-    * [AI Integration](trados/ai-assistant/super-memory/ai-integration.md)
-    * [Obsidian Setup](trados/ai-assistant/super-memory/obsidian-setup.md)
-* [SuperSearch](trados/supersearch.md)
-* [QuickLauncher](trados/quicklauncher.md)
-* [Text Transforms](trados/text-transforms.md)
+* [Termbase Management](trados/termbase-management.md)
+
+## 🧩 Supervertaler Assistant
+
+* [Overview](trados/ai-assistant.md)
 * [Batch Operations](trados/batch-operations.md)
   * [Batch Translate](trados/batch-translate.md)
   * [AI Proofreader](trados/ai-proofreader.md)
   * [Clipboard Mode](trados/clipboard-mode.md)
   * [AutoPrompt (Trados)](trados/generate-prompt.md)
 * [Import/Export](trados/import-export.md)
+* [Reports](trados/reports.md)
+* [SuperMemory](trados/ai-assistant/super-memory.md)
+  * [Quick Add](trados/ai-assistant/super-memory/quick-add.md)
+  * [Process Inbox](trados/ai-assistant/super-memory/process-inbox.md)
+  * [Health Check](trados/ai-assistant/super-memory/health-check.md)
+  * [Distill](trados/ai-assistant/super-memory/distill.md)
+  * [Active Prompt](trados/ai-assistant/super-memory/active-prompt.md)
+  * [AI Integration](trados/ai-assistant/super-memory/ai-integration.md)
+  * [Obsidian Setup](trados/ai-assistant/super-memory/obsidian-setup.md)
+* [File Attachments](trados/ai-assistant/file-attachments.md)
+* [Studio Tools](trados/ai-assistant/studio-tools.md)
+* [Context Awareness](trados/ai-assistant/context-awareness.md)
+* [Providers and Models](trados/ai-assistant/providers.md)
+* [Incognito Mode](trados/ai-assistant/incognito-mode.md)
+
+## 🧩 SuperSearch
+
+* [SuperSearch](trados/supersearch.md)
+
+## 🧩 More Tools
+
+* [QuickLauncher](trados/quicklauncher.md)
+* [Text Transforms](trados/text-transforms.md)
+
+## 🧩 Integration
+
+* [Supervertaler Bridge](trados/ai-assistant/supervertaler-bridge.md)
 * [Shared TM Bridge with Workbench](trados/shared-tm-bridge.md)
-
-## 🧩 Terminology
-
-* [Termbase Management](trados/termbase-management.md)
 
 ## 🧩 Settings
 
@@ -65,6 +74,7 @@
 
 ## 🧩 Reference
 
+* [Trados Studio 2026 & .ttb](trados/studio-2026.md)
 * [User Data Folder](trados/data-folder.md)
 * [Keyboard Shortcuts (Trados)](trados/keyboard-shortcuts.md)
 * [Troubleshooting](trados/troubleshooting.md)

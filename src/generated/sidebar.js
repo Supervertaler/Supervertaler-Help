@@ -37,7 +37,7 @@ const sidebar = [
         ]
       },
       {
-        "label": "Features",
+        "label": "TermLens",
         "collapsed": true,
         "items": [
           {
@@ -66,90 +66,18 @@ const sidebar = [
             "link": "/trados/multiterm-support/"
           },
           {
-            "label": "Trados Studio 2026 & .ttb",
-            "link": "/trados/studio-2026/"
-          },
+            "label": "Termbase Management",
+            "link": "/trados/termbase-management/"
+          }
+        ]
+      },
+      {
+        "label": "Supervertaler Assistant",
+        "collapsed": true,
+        "items": [
           {
-            "label": "Supervertaler Assistant",
-            "items": [
-              {
-                "label": "Overview",
-                "link": "/trados/ai-assistant/"
-              },
-              {
-                "label": "Context Awareness",
-                "link": "/trados/ai-assistant/context-awareness/"
-              },
-              {
-                "label": "File Attachments",
-                "link": "/trados/ai-assistant/file-attachments/"
-              },
-              {
-                "label": "Studio Tools",
-                "link": "/trados/ai-assistant/studio-tools/"
-              },
-              {
-                "label": "Incognito Mode",
-                "link": "/trados/ai-assistant/incognito-mode/"
-              },
-              {
-                "label": "Providers and Models",
-                "link": "/trados/ai-assistant/providers/"
-              },
-              {
-                "label": "Supervertaler Bridge",
-                "link": "/trados/ai-assistant/supervertaler-bridge/"
-              },
-              {
-                "label": "SuperMemory",
-                "items": [
-                  {
-                    "label": "Overview",
-                    "link": "/trados/ai-assistant/super-memory/"
-                  },
-                  {
-                    "label": "Quick Add",
-                    "link": "/trados/ai-assistant/super-memory/quick-add/"
-                  },
-                  {
-                    "label": "Process Inbox",
-                    "link": "/trados/ai-assistant/super-memory/process-inbox/"
-                  },
-                  {
-                    "label": "Health Check",
-                    "link": "/trados/ai-assistant/super-memory/health-check/"
-                  },
-                  {
-                    "label": "Distill",
-                    "link": "/trados/ai-assistant/super-memory/distill/"
-                  },
-                  {
-                    "label": "Active Prompt",
-                    "link": "/trados/ai-assistant/super-memory/active-prompt/"
-                  },
-                  {
-                    "label": "AI Integration",
-                    "link": "/trados/ai-assistant/super-memory/ai-integration/"
-                  },
-                  {
-                    "label": "Obsidian Setup",
-                    "link": "/trados/ai-assistant/super-memory/obsidian-setup/"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "SuperSearch",
-            "link": "/trados/supersearch/"
-          },
-          {
-            "label": "QuickLauncher",
-            "link": "/trados/quicklauncher/"
-          },
-          {
-            "label": "Text Transforms",
-            "link": "/trados/text-transforms/"
+            "label": "Overview",
+            "link": "/trados/ai-assistant/"
           },
           {
             "label": "Batch Operations",
@@ -181,18 +109,103 @@ const sidebar = [
             "link": "/trados/import-export/"
           },
           {
-            "label": "Shared TM Bridge with Workbench",
-            "link": "/trados/shared-tm-bridge/"
+            "label": "Reports",
+            "link": "/trados/reports/"
+          },
+          {
+            "label": "SuperMemory",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/trados/ai-assistant/super-memory/"
+              },
+              {
+                "label": "Quick Add",
+                "link": "/trados/ai-assistant/super-memory/quick-add/"
+              },
+              {
+                "label": "Process Inbox",
+                "link": "/trados/ai-assistant/super-memory/process-inbox/"
+              },
+              {
+                "label": "Health Check",
+                "link": "/trados/ai-assistant/super-memory/health-check/"
+              },
+              {
+                "label": "Distill",
+                "link": "/trados/ai-assistant/super-memory/distill/"
+              },
+              {
+                "label": "Active Prompt",
+                "link": "/trados/ai-assistant/super-memory/active-prompt/"
+              },
+              {
+                "label": "AI Integration",
+                "link": "/trados/ai-assistant/super-memory/ai-integration/"
+              },
+              {
+                "label": "Obsidian Setup",
+                "link": "/trados/ai-assistant/super-memory/obsidian-setup/"
+              }
+            ]
+          },
+          {
+            "label": "File Attachments",
+            "link": "/trados/ai-assistant/file-attachments/"
+          },
+          {
+            "label": "Studio Tools",
+            "link": "/trados/ai-assistant/studio-tools/"
+          },
+          {
+            "label": "Context Awareness",
+            "link": "/trados/ai-assistant/context-awareness/"
+          },
+          {
+            "label": "Providers and Models",
+            "link": "/trados/ai-assistant/providers/"
+          },
+          {
+            "label": "Incognito Mode",
+            "link": "/trados/ai-assistant/incognito-mode/"
           }
         ]
       },
       {
-        "label": "Terminology",
+        "label": "SuperSearch",
         "collapsed": true,
         "items": [
           {
-            "label": "Termbase Management",
-            "link": "/trados/termbase-management/"
+            "label": "SuperSearch",
+            "link": "/trados/supersearch/"
+          }
+        ]
+      },
+      {
+        "label": "More Tools",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "QuickLauncher",
+            "link": "/trados/quicklauncher/"
+          },
+          {
+            "label": "Text Transforms",
+            "link": "/trados/text-transforms/"
+          }
+        ]
+      },
+      {
+        "label": "Integration",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Supervertaler Bridge",
+            "link": "/trados/ai-assistant/supervertaler-bridge/"
+          },
+          {
+            "label": "Shared TM Bridge with Workbench",
+            "link": "/trados/shared-tm-bridge/"
           }
         ]
       },
@@ -259,6 +272,10 @@ const sidebar = [
         "label": "Reference",
         "collapsed": true,
         "items": [
+          {
+            "label": "Trados Studio 2026 & .ttb",
+            "link": "/trados/studio-2026/"
+          },
           {
             "label": "User Data Folder",
             "link": "/trados/data-folder/"
