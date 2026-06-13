@@ -91,44 +91,30 @@
 * [Setting Up API Keys](workbench/get-started/api-keys.md)
 * [Your First Translation Project](workbench/get-started/first-project.md)
 
-## 🖥️ Editor & Translation
+## 🖥️ Importing & Exporting
 
-* [The Editor](workbench/editor/translation-grid.md)
+* [Supported File Formats](workbench/import-export/formats.md)
+* [Importing DOCX Files](workbench/import-export/docx-import.md)
+* [Importing Text Files](workbench/import-export/txt-import.md)
+* [Multi-File Projects](workbench/import-export/multi-file.md)
+* [Import Options (File Types)](workbench/import-export/import-options.md)
+* [Exporting Translations](workbench/import-export/exporting.md)
+  * [Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
+  * [Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
+  * [AI-Readable Markdown Export](workbench/import-export/ai-readable-markdown.md)
+* [Export Verification (Word-Count Check)](workbench/import-export/export-verification.md)
+
+## 🖥️ The Editor
+
+* [The Translation Grid](workbench/editor/translation-grid.md)
 * [Navigating Segments](workbench/editor/navigation.md)
 * [Editing & Confirming](workbench/editor/editing-confirming.md)
 * [Segment Statuses](workbench/editor/segment-statuses.md)
 * [Comments](workbench/editor/comments.md)
-* [Keyboard Shortcuts (Workbench)](workbench/editor/keyboard-shortcuts.md)
 * [Find & Replace](workbench/editor/find-replace.md)
 * [Filtering Segments](workbench/editor/filtering.md)
 * [Pagination](workbench/editor/pagination.md)
-
-## 🖥️ QuickTrans
-
-* [QuickTrans Overview](workbench/quicktrans/overview.md)
-* [Machine Translation engines](workbench/quicktrans/machine-translation.md)
-* [Custom MT endpoint](workbench/quicktrans/custom-mt-endpoint.md)
-
-## 🖥️ AI Translation
-
-* [AI Translation Overview](workbench/ai-translation/overview.md)
-* [Supported LLM Providers](workbench/ai-translation/providers.md)
-* [Single Segment Translation](workbench/ai-translation/single-segment.md)
-* [Batch Translation](workbench/ai-translation/batch-translation.md)
-* [Creating Prompts](workbench/ai-translation/prompts.md)
-* [Prompt Manager](workbench/ai-translation/prompt-library.md)
-* [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
-* [Image Context](workbench/ai-translation/image-context.md)
-* [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
-* [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
-
-## 🖥️ CAT Tool Integration
-
-* [CAT Tool Overview](workbench/cat-tools/overview.md)
-* [memoQ Workflow](workbench/cat-tools/memoq.md)
-* [Trados Studio Workflow](workbench/cat-tools/trados.md)
-* [Phrase (Memsource) Workflow](workbench/cat-tools/phrase.md)
-* [CafeTran Workflow](workbench/cat-tools/cafetran.md)
+* [Keyboard Shortcuts (Workbench)](workbench/editor/keyboard-shortcuts.md)
 
 ## 🖥️ Translation Memory
 
@@ -150,18 +136,18 @@
 * [TermPicker](workbench/termbases/termpicker.md)
 * [Term Extraction](workbench/termbases/extraction.md)
 
-## 🖥️ Import & Export
+## 🖥️ AI Translation
 
-* [Supported File Formats](workbench/import-export/formats.md)
-* [Importing DOCX Files](workbench/import-export/docx-import.md)
-* [Importing Text Files](workbench/import-export/txt-import.md)
-* [Multi-File Projects](workbench/import-export/multi-file.md)
-* [Import Options (File Types)](workbench/import-export/import-options.md)
-* [Exporting Translations](workbench/import-export/exporting.md)
-* [Export Verification (Word-Count Check)](workbench/import-export/export-verification.md)
-* [Supervertaler Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
-* [Supervertaler Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
-* [AI-Readable Markdown Export (read-only)](workbench/import-export/ai-readable-markdown.md)
+* [AI Translation Overview](workbench/ai-translation/overview.md)
+* [Supported LLM Providers](workbench/ai-translation/providers.md)
+* [Single Segment Translation](workbench/ai-translation/single-segment.md)
+* [Batch Translation](workbench/ai-translation/batch-translation.md)
+* [Prompts](workbench/ai-translation/prompts.md)
+  * [Prompt Manager](workbench/ai-translation/prompt-library.md)
+  * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
+* [Image Context](workbench/ai-translation/image-context.md)
+* [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
+* [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 
 ## 🖥️ SuperLookup
 
@@ -170,24 +156,29 @@
 * [Termbase Search](workbench/superlookup/termbase-search.md)
 * [Web Resources](workbench/superlookup/web-resources.md)
 
-## 🖥️ Voice
-
-* [Voice Commands & Dictation](workbench/voice/overview.md)
-
-## 🖥️ Clipboard Manager
-
-* [Clipboard Manager](workbench/clipboard/overview.md)
-
 ## 🖥️ Quality Assurance
 
 * [Spellcheck](workbench/qa/spellcheck.md)
 * [Tag Validation](workbench/qa/tag-validation.md)
 * [Non-Translatables](workbench/qa/non-translatables.md)
 
-## 🖥️ Tools
+## 🖥️ Productivity Tools
 
+* [QuickTrans](workbench/quicktrans/overview.md)
+  * [Machine Translation Engines](workbench/quicktrans/machine-translation.md)
+  * [Custom MT Endpoint](workbench/quicktrans/custom-mt-endpoint.md)
+* [Clipboard Manager](workbench/clipboard/overview.md)
+* [Voice Commands & Dictation](workbench/voice/overview.md)
 * [PDF Rescue (OCR)](workbench/tools/pdf-rescue.md)
 * [TMX Editor](workbench/tools/tmx-editor.md)
+
+## 🖥️ CAT Tool Integration
+
+* [CAT Tool Overview](workbench/cat-tools/overview.md)
+* [memoQ Workflow](workbench/cat-tools/memoq.md)
+* [Trados Studio Workflow](workbench/cat-tools/trados.md)
+* [Phrase (Memsource) Workflow](workbench/cat-tools/phrase.md)
+* [CafeTran Workflow](workbench/cat-tools/cafetran.md)
 
 ## 🖥️ Settings
 
@@ -197,7 +188,7 @@
 * [Termbase Settings](workbench/settings/termbase-settings.md)
 * [Language (UI Translation)](workbench/settings/language.md)
 * [View Settings](workbench/settings/view.md)
-* [Keyboard Shortcuts (Workbench)](workbench/settings/shortcuts.md)
+* [Customising Shortcuts](workbench/settings/shortcuts.md)
 * [Theme (Light/Dark Mode)](workbench/settings/theme.md)
 * [Font Customization](workbench/settings/fonts.md)
 

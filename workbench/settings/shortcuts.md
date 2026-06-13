@@ -1,5 +1,5 @@
 ---
-title: "Shortcuts"
+title: "Customising Shortcuts"
 ---
 
 Supervertaler has one keyboard shortcut per action. The same combination works whether Supervertaler is the focused application or whether you trigger it from another app – there's no longer a separate "Global" entry to keep in sync with the in-app one.

@@ -349,11 +349,62 @@ const sidebar = [
         ]
       },
       {
-        "label": "Editor & Translation",
+        "label": "Importing & Exporting",
         "collapsed": true,
         "items": [
           {
-            "label": "The Editor",
+            "label": "Supported File Formats",
+            "link": "/workbench/import-export/formats/"
+          },
+          {
+            "label": "Importing DOCX Files",
+            "link": "/workbench/import-export/docx-import/"
+          },
+          {
+            "label": "Importing Text Files",
+            "link": "/workbench/import-export/txt-import/"
+          },
+          {
+            "label": "Multi-File Projects",
+            "link": "/workbench/import-export/multi-file/"
+          },
+          {
+            "label": "Import Options (File Types)",
+            "link": "/workbench/import-export/import-options/"
+          },
+          {
+            "label": "Exporting Translations",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/workbench/import-export/exporting/"
+              },
+              {
+                "label": "Re-importable Table (DOCX)",
+                "link": "/workbench/import-export/bilingual-tables/"
+              },
+              {
+                "label": "Re-importable Text (AI-friendly)",
+                "link": "/workbench/import-export/bilingual-text/"
+              },
+              {
+                "label": "AI-Readable Markdown Export",
+                "link": "/workbench/import-export/ai-readable-markdown/"
+              }
+            ]
+          },
+          {
+            "label": "Export Verification (Word-Count Check)",
+            "link": "/workbench/import-export/export-verification/"
+          }
+        ]
+      },
+      {
+        "label": "The Editor",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "The Translation Grid",
             "link": "/workbench/editor/translation-grid/"
           },
           {
@@ -373,10 +424,6 @@ const sidebar = [
             "link": "/workbench/editor/comments/"
           },
           {
-            "label": "Keyboard Shortcuts",
-            "link": "/workbench/editor/keyboard-shortcuts/"
-          },
-          {
             "label": "Find & Replace",
             "link": "/workbench/editor/find-replace/"
           },
@@ -387,96 +434,10 @@ const sidebar = [
           {
             "label": "Pagination",
             "link": "/workbench/editor/pagination/"
-          }
-        ]
-      },
-      {
-        "label": "QuickTrans",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "QuickTrans Overview",
-            "link": "/workbench/quicktrans/overview/"
           },
           {
-            "label": "Machine Translation engines",
-            "link": "/workbench/quicktrans/machine-translation/"
-          },
-          {
-            "label": "Custom MT endpoint",
-            "link": "/workbench/quicktrans/custom-mt-endpoint/"
-          }
-        ]
-      },
-      {
-        "label": "AI Translation",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "AI Translation Overview",
-            "link": "/workbench/ai-translation/overview/"
-          },
-          {
-            "label": "Supported LLM Providers",
-            "link": "/workbench/ai-translation/providers/"
-          },
-          {
-            "label": "Single Segment Translation",
-            "link": "/workbench/ai-translation/single-segment/"
-          },
-          {
-            "label": "Batch Translation",
-            "link": "/workbench/ai-translation/batch-translation/"
-          },
-          {
-            "label": "Creating Prompts",
-            "link": "/workbench/ai-translation/prompts/"
-          },
-          {
-            "label": "Prompt Manager",
-            "link": "/workbench/ai-translation/prompt-library/"
-          },
-          {
-            "label": "AutoPrompt",
-            "link": "/workbench/ai-translation/autoprompt/"
-          },
-          {
-            "label": "Image Context",
-            "link": "/workbench/ai-translation/image-context/"
-          },
-          {
-            "label": "Chat (AI conversation panel)",
-            "link": "/workbench/ai-translation/chat/"
-          },
-          {
-            "label": "Using Local LLMs (Ollama)",
-            "link": "/workbench/ai-translation/ollama/"
-          }
-        ]
-      },
-      {
-        "label": "CAT Tool Integration",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "CAT Tool Overview",
-            "link": "/workbench/cat-tools/overview/"
-          },
-          {
-            "label": "memoQ Workflow",
-            "link": "/workbench/cat-tools/memoq/"
-          },
-          {
-            "label": "Trados Studio Workflow",
-            "link": "/workbench/cat-tools/trados/"
-          },
-          {
-            "label": "Phrase (Memsource) Workflow",
-            "link": "/workbench/cat-tools/phrase/"
-          },
-          {
-            "label": "CafeTran Workflow",
-            "link": "/workbench/cat-tools/cafetran/"
+            "label": "Keyboard Shortcuts",
+            "link": "/workbench/editor/keyboard-shortcuts/"
           }
         ]
       },
@@ -554,48 +515,53 @@ const sidebar = [
         ]
       },
       {
-        "label": "Import & Export",
+        "label": "AI Translation",
         "collapsed": true,
         "items": [
           {
-            "label": "Supported File Formats",
-            "link": "/workbench/import-export/formats/"
+            "label": "AI Translation Overview",
+            "link": "/workbench/ai-translation/overview/"
           },
           {
-            "label": "Importing DOCX Files",
-            "link": "/workbench/import-export/docx-import/"
+            "label": "Supported LLM Providers",
+            "link": "/workbench/ai-translation/providers/"
           },
           {
-            "label": "Importing Text Files",
-            "link": "/workbench/import-export/txt-import/"
+            "label": "Single Segment Translation",
+            "link": "/workbench/ai-translation/single-segment/"
           },
           {
-            "label": "Multi-File Projects",
-            "link": "/workbench/import-export/multi-file/"
+            "label": "Batch Translation",
+            "link": "/workbench/ai-translation/batch-translation/"
           },
           {
-            "label": "Import Options (File Types)",
-            "link": "/workbench/import-export/import-options/"
+            "label": "Prompts",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/workbench/ai-translation/prompts/"
+              },
+              {
+                "label": "Prompt Manager",
+                "link": "/workbench/ai-translation/prompt-library/"
+              },
+              {
+                "label": "AutoPrompt",
+                "link": "/workbench/ai-translation/autoprompt/"
+              }
+            ]
           },
           {
-            "label": "Exporting Translations",
-            "link": "/workbench/import-export/exporting/"
+            "label": "Image Context",
+            "link": "/workbench/ai-translation/image-context/"
           },
           {
-            "label": "Export Verification (Word-Count Check)",
-            "link": "/workbench/import-export/export-verification/"
+            "label": "Chat (AI conversation panel)",
+            "link": "/workbench/ai-translation/chat/"
           },
           {
-            "label": "Supervertaler Re-importable Table (DOCX)",
-            "link": "/workbench/import-export/bilingual-tables/"
-          },
-          {
-            "label": "Supervertaler Re-importable Text (AI-friendly)",
-            "link": "/workbench/import-export/bilingual-text/"
-          },
-          {
-            "label": "AI-Readable Markdown Export (read-only)",
-            "link": "/workbench/import-export/ai-readable-markdown/"
+            "label": "Using Local LLMs (Ollama)",
+            "link": "/workbench/ai-translation/ollama/"
           }
         ]
       },
@@ -622,26 +588,6 @@ const sidebar = [
         ]
       },
       {
-        "label": "Voice",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "Voice Commands & Dictation",
-            "link": "/workbench/voice/overview/"
-          }
-        ]
-      },
-      {
-        "label": "Clipboard Manager",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "Clipboard Manager",
-            "link": "/workbench/clipboard/overview/"
-          }
-        ]
-      },
-      {
         "label": "Quality Assurance",
         "collapsed": true,
         "items": [
@@ -660,9 +606,34 @@ const sidebar = [
         ]
       },
       {
-        "label": "Tools",
+        "label": "Productivity Tools",
         "collapsed": true,
         "items": [
+          {
+            "label": "QuickTrans",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/workbench/quicktrans/overview/"
+              },
+              {
+                "label": "Machine Translation Engines",
+                "link": "/workbench/quicktrans/machine-translation/"
+              },
+              {
+                "label": "Custom MT Endpoint",
+                "link": "/workbench/quicktrans/custom-mt-endpoint/"
+              }
+            ]
+          },
+          {
+            "label": "Clipboard Manager",
+            "link": "/workbench/clipboard/overview/"
+          },
+          {
+            "label": "Voice Commands & Dictation",
+            "link": "/workbench/voice/overview/"
+          },
           {
             "label": "PDF Rescue (OCR)",
             "link": "/workbench/tools/pdf-rescue/"
@@ -670,6 +641,32 @@ const sidebar = [
           {
             "label": "TMX Editor",
             "link": "/workbench/tools/tmx-editor/"
+          }
+        ]
+      },
+      {
+        "label": "CAT Tool Integration",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "CAT Tool Overview",
+            "link": "/workbench/cat-tools/overview/"
+          },
+          {
+            "label": "memoQ Workflow",
+            "link": "/workbench/cat-tools/memoq/"
+          },
+          {
+            "label": "Trados Studio Workflow",
+            "link": "/workbench/cat-tools/trados/"
+          },
+          {
+            "label": "Phrase (Memsource) Workflow",
+            "link": "/workbench/cat-tools/phrase/"
+          },
+          {
+            "label": "CafeTran Workflow",
+            "link": "/workbench/cat-tools/cafetran/"
           }
         ]
       },
@@ -702,7 +699,7 @@ const sidebar = [
             "link": "/workbench/settings/view/"
           },
           {
-            "label": "Keyboard Shortcuts",
+            "label": "Customising Shortcuts",
             "link": "/workbench/settings/shortcuts/"
           },
           {
