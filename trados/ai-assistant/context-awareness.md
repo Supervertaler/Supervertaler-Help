@@ -82,7 +82,7 @@ That said, more context is not automatically better. The AI's context window is 
 :::
 
 :::caution
-We have not yet published composition presets (e.g. "Mature client – memory bank only", "Unfamiliar domain – TM + termbase"). Until we do, the sensible approach is to leave everything enabled by default and experiment on a per-project basis. If you find a configuration that works particularly well for your workflow, drop a note in the [community forum](https://translationtech.io).
+We have not yet published composition presets (e.g. "Mature client – memory bank only", "Unfamiliar domain – TM + termbase"). Until we do, the sensible approach is to leave everything enabled by default and experiment on a per-project basis. If you find a configuration that works particularly well for your workflow, drop a note in [GitHub Discussions](https://github.com/orgs/Supervertaler/discussions).
 :::
 
 ## Controlling the context

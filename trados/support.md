@@ -6,9 +6,9 @@ There are several ways to get help with Supervertaler for Trados.
 
 ---
 
-## Supervertaler Forum
+## GitHub Discussions
 
-The [Supervertaler Forum](https://forum.supervertaler.com/) is the main community hub for both Supervertaler for Trados and Supervertaler Workbench. It is the best place to:
+[GitHub Discussions](https://github.com/orgs/Supervertaler/discussions) is the main community hub for both Supervertaler for Trados and Supervertaler Workbench. It is the best place to:
 
 - Ask questions and get help from other users
 - Share tips, workflows, and best practices
@@ -16,7 +16,7 @@ The [Supervertaler Forum](https://forum.supervertaler.com/) is the main communit
 - Discuss anything related to Supervertaler
 
 :::tip
-**[Visit the Supervertaler Forum →](https://forum.supervertaler.com/)**
+**[Visit Supervertaler Discussions →](https://github.com/orgs/Supervertaler/discussions)**
 :::
 
 ---
