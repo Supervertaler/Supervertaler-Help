@@ -566,6 +566,10 @@ const sidebar = [
           {
             "label": "Using Local LLMs (Ollama)",
             "link": "/workbench/ai-translation/ollama/"
+          },
+          {
+            "label": "Token Usage & Costs",
+            "link": "/workbench/ai-translation/usage-costs/"
           }
         ]
       },

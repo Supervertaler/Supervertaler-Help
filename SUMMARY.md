@@ -149,6 +149,7 @@
 * [Image Context](workbench/ai-translation/image-context.md)
 * [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
+* [Token Usage & Costs](workbench/ai-translation/usage-costs.md)
 
 ## 🖥️ SuperLookup
 
