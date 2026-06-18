@@ -9,6 +9,7 @@
 * [Getting Started](trados/getting-started.md)
 * [Licensing & Pricing](trados/licensing.md)
 * [AI Cost Guide](trados/ai-cost-guide.md)
+* [Token Usage & Costs](trados/usage-costs.md)
 
 ## 🧩 TermLens
 

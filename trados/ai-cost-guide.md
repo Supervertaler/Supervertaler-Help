@@ -84,7 +84,8 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 * **Start with a budget model** – GPT-5.4 Mini, Gemini 3.1 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
 * **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.8, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
-* **Check your usage** – the **Reports** tab in Supervertaler lists every AI call with its token count and cost, and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
+* **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](usage-costs.md)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
+* **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](usage-costs.md#monthly-budget).
 
 ### Built-in cost protection
 
@@ -114,6 +115,7 @@ For everyday work – chat queries, terminology questions, QuickLauncher prompts
 
 ### See also
 
+* [Token Usage & Costs](usage-costs.md) – the persistent usage log, the Usage & Costs report, CSV/Excel export, and the monthly budget
 * [AI Settings](settings/ai-settings.md) – configure your API keys and choose a model
 * [Batch Translate](batch-translate.md) – translate segments in bulk
 * [AI Proofreader](ai-proofreader.md) – proofread translated segments

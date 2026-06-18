@@ -33,6 +33,10 @@ const sidebar = [
           {
             "label": "AI Cost Guide",
             "link": "/trados/ai-cost-guide/"
+          },
+          {
+            "label": "Token Usage & Costs",
+            "link": "/trados/usage-costs/"
           }
         ]
       },
