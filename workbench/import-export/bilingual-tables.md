@@ -14,7 +14,6 @@ AI-friendly text format.)
 
 - A proofreading round-trip in Word: export, edit the targets, re-import.
 - Sharing with a reviewer who doesn't use your CAT tool.
-- Client delivery or archiving (the formatted version).
 
 ## Columns
 
@@ -28,17 +27,15 @@ AI-friendly text format.)
 
 A header above the table shows the project name, language pair, segment count, and export date.
 
-## Two variants
+## Where to find it
 
-There are two Word-table exports, deliberately separated by whether they round-trip:
+**Project → Export → 🔁 Supervertaler Re-importable → Bilingual Table (DOCX)**. Formatting tags stay visible as markup; edit the Target/Comments cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text. The document is titled *Supervertaler Re-importable Table*.
 
-- **Project → Export → 🔁 Supervertaler Re-importable → Bilingual Table (DOCX)** — the **re-importable** version. Formatting tags stay visible as markup; edit the Target/Comments cells, save, and bring the changes back in (see below). Don't change the segment numbers (#) or the source text. The document is titled *Supervertaler Re-importable Table*.
+<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-With-Tags.png" alt=""><figcaption><p>The re-importable Bilingual Table: formatting shown as visible markup, with a notice that segment numbers and source text must stay unchanged so the file can be re-imported after proofreading.</p></figcaption></figure>
 
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-With-Tags.png" alt=""><figcaption><p>The re-importable variant: formatting shown as visible markup, with a notice that segment numbers and source text must stay unchanged so the file can be re-imported after proofreading.</p></figcaption></figure>
-
-- **Project → Export → Supervertaler Formatted Table (DOCX, read-only)** — inline formatting (bold, italic, underline) is rendered instead of shown as tags. This version is for **client delivery or archiving** and **cannot be re-imported**.
-
-<figure><img src="/.gitbook/assets/Supervertaler-Workbench-Bilingual-Table-Formatted.png" alt=""><figcaption><p>The formatted variant: inline formatting rendered for client delivery or archiving — not re-importable.</p></figcaption></figure>
+:::note
+Need a clean copy with real bold/italic for a client, rather than visible tags? Export the finished document itself via **Project → Export → Export Translated Document** — it renders formatting properly in the original file layout.
+:::
 
 ## Round-trip (proofread and re-import)
 
