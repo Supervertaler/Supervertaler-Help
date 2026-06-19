@@ -12,7 +12,7 @@ Use single-segment translation when you want maximum control: translate one segm
 4. Edit if needed
 5. Confirm the segment
 
-You can also trigger this from the menu: **Edit → Translate Segment**.
+You can also trigger this from the menu: **Translate → Translate Current Segment**.
 
 ## Tips
 

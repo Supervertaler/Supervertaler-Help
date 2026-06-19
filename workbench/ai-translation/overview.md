@@ -40,12 +40,12 @@ Translate one segment at a time:
 
 Translate multiple segments at once:
 - Select segments (Shift+click for range)
-- Press `Ctrl+Shift+T` or use **Edit → Batch Translate**
+- Press `Ctrl+Shift+T` or use **Translate → Batch Translate**
 - Configure options in the dialog
 - All selected segments are translated
 
 :::note
-Supervertaler has multiple batch scopes (selected / not-started / etc.). Start with **Edit → Batch Translate → Translate all not-started & pre-translated**.
+Supervertaler has multiple batch scopes (selected / not-started / etc.). Start with **Translate → Batch Translate → Translate all not-started & pre-translated**.
 :::
 
 ### TM + AI Hybrid
