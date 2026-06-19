@@ -91,10 +91,12 @@ See [Segment Statuses](../editor/segment-statuses.md) for the full list.
 
 1. Press `Ctrl+S`
 2. Choose a name and location
-3. Your project is saved as `.svproj`
+3. Your project is saved as a folder containing the `.svproj` file, a `source/`
+   folder (your original document), and — once you export — a `target/` folder.
+   See [The Project Folder](../import-export/project-folder.md).
 
 :::tip
-**Tip:** Supervertaler auto-saves your work periodically, but it's good practice to save manually before closing.
+**Tip:** Supervertaler auto-saves your work periodically, but it's good practice to save manually before closing. To move a project, move the **whole folder**, not just the `.svproj`.
 :::
 
 ## Exporting the Translation

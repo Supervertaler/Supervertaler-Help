@@ -10,6 +10,13 @@ When you’re done translating, export in a format that matches your workflow.
 2. Choose an export type (for example DOCX, bilingual table, or a CAT return format)
 3. Pick a destination and save
 
+:::tip
+For **Export Translated Document** (and Simple Text), the Save dialog opens in
+your project's `target/` folder by default, so finished translations land
+alongside their sources. You can still browse elsewhere — see
+[The Project Folder](project-folder.md).
+:::
+
 ## CAT tool round-trips
 
 If you started from a CAT exchange format (memoQ/Trados/Phrase/CafeTran), export the matching return format.

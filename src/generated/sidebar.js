@@ -377,6 +377,10 @@ const sidebar = [
             "link": "/workbench/import-export/import-options/"
           },
           {
+            "label": "The Project Folder",
+            "link": "/workbench/import-export/project-folder/"
+          },
+          {
             "label": "Exporting Translations",
             "items": [
               {

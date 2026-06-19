@@ -99,6 +99,7 @@
 * [Importing Text Files](workbench/import-export/txt-import.md)
 * [Multi-File Projects](workbench/import-export/multi-file.md)
 * [Import Options (File Types)](workbench/import-export/import-options.md)
+* [The Project Folder](workbench/import-export/project-folder.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
   * [Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
   * [Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
