@@ -394,6 +394,10 @@ const sidebar = [
             ]
           },
           {
+            "label": "Pseudo-translation (Export Test)",
+            "link": "/workbench/import-export/pseudo-translation/"
+          },
+          {
             "label": "Export Verification (Word-Count Check)",
             "link": "/workbench/import-export/export-verification/"
           }

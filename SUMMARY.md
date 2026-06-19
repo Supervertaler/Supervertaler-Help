@@ -102,6 +102,7 @@
 * [Exporting Translations](workbench/import-export/exporting.md)
   * [Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
   * [Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
+* [Pseudo-translation (Export Test)](workbench/import-export/pseudo-translation.md)
 * [Export Verification (Word-Count Check)](workbench/import-export/export-verification.md)
 
 ## 🖥️ The Editor
