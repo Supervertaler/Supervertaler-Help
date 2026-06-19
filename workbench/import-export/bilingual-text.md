@@ -13,8 +13,7 @@ for Trados plugin. Added in v1.10.231.
 segment blocks rely on line breaks being preserved, and a Markdown renderer
 collapses single line breaks — which would scramble the structure. AI agents
 read the raw characters when you paste a file into a chat, so plain text is both
-safe and maximally readable. (If you just want a nice table to *read* in a chat,
-use the read-only [AI-Readable Markdown Table](ai-readable-markdown.md) instead.)
+safe and maximally readable.
 :::
 
 ## Exporting
@@ -123,5 +122,4 @@ are skipped — and why. Nothing is applied until you click **Apply changes**.
 ## Related
 
 - [Supervertaler Re-importable Table (DOCX)](bilingual-tables.md)
-- [AI-Readable Markdown Export (read-only)](ai-readable-markdown.md)
 - [Exporting Translations](exporting.md)

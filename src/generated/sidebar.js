@@ -390,10 +390,6 @@ const sidebar = [
               {
                 "label": "Re-importable Text (AI-friendly)",
                 "link": "/workbench/import-export/bilingual-text/"
-              },
-              {
-                "label": "AI-Readable Markdown Export",
-                "link": "/workbench/import-export/ai-readable-markdown/"
               }
             ]
           },
