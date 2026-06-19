@@ -24,6 +24,14 @@ When you later export back to DOCX, Supervertaler reconstructs the original docu
 - **Hyperlinks**: anchor text and links round-trip identically – broken or working
 - **Images and other non-translatable content**: passed through untouched
 
+:::note
+The document you import becomes the project's **source**. When you save the
+project, Supervertaler copies it into the project's `source/` folder and refers
+to it by a relative path — so this faithful round-trip keeps working even if you
+later move, rename, or delete the original you imported from. See
+[The Project Folder](project-folder.md).
+:::
+
 ## Tips
 
 - If you are working with memoQ/Trados/Phrase/CafeTran, prefer the specific CAT workflow import instead of generic DOCX.
