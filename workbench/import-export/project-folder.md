@@ -7,6 +7,14 @@ holds the project file together with the documents it works on. Keeping
 everything in one folder means a project is self-contained: you can move,
 rename, zip or email the folder and it still opens and exports correctly.
 
+:::note
+**New Project** has a "📁 Create a dedicated folder for this project" checkbox
+(on by default). When it's on, the first save tucks the `.svproj` into its own
+folder as shown below. Turn it off to save the `.svproj` flat, wherever you
+choose — the folder layout is never forced, so you can keep your own naming or
+nest a project inside a larger job folder.
+:::
+
 ## What's in a project folder
 
 ```
