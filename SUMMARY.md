@@ -109,6 +109,7 @@
 ## 🖥️ The Editor
 
 * [The Translation Grid](workbench/editor/translation-grid.md)
+* [Document Preview](workbench/editor/preview.md)
 * [Navigating Segments](workbench/editor/navigation.md)
 * [Editing & Confirming](workbench/editor/editing-confirming.md)
 * [Segment Statuses](workbench/editor/segment-statuses.md)

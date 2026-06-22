@@ -75,6 +75,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | `Ctrl+Minus` | Decrease grid font size |
 | `Ctrl+Shift+=` / `Ctrl+Shift+-` | Increase / decrease results-pane font size |
 | `Ctrl+Shift+H` | Toggle tag view |
+| `Ctrl+Alt+P` | Toggle the [Document Preview](preview.md) panel (and back to the previous tab) |
 
 ## Resources & Tools
 
