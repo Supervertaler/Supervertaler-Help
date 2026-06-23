@@ -416,6 +416,10 @@ const sidebar = [
             "link": "/workbench/editor/translation-grid/"
           },
           {
+            "label": "Document Preview",
+            "link": "/workbench/editor/preview/"
+          },
+          {
             "label": "Navigating Segments",
             "link": "/workbench/editor/navigation/"
           },
@@ -653,6 +657,10 @@ const sidebar = [
           {
             "label": "TMX Editor",
             "link": "/workbench/tools/tmx-editor/"
+          },
+          {
+            "label": "Statistics (Analyse Against TM)",
+            "link": "/workbench/tools/statistics/"
           }
         ]
       },

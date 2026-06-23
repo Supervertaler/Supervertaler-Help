@@ -175,6 +175,7 @@
 * [Voice Commands & Dictation](workbench/voice/overview.md)
 * [PDF Rescue (OCR)](workbench/tools/pdf-rescue.md)
 * [TMX Editor](workbench/tools/tmx-editor.md)
+* [Statistics (Analyse Against TM)](workbench/tools/statistics.md)
 
 ## 🖥️ CAT Tool Integration
 
