@@ -10,6 +10,23 @@ The **Statistics** tool analyses the document you have open against one or more 
 
 You need a project open with segments. Press **F1** (or the **?** in the top-right of the dialog) to return to this page at any time.
 
+## ⚡ Quick Count (no project needed)
+
+When you just want a fast count and don't want to set up a project, use **Tools → ⚡ Quick Count…** instead:
+
+1. Browse to **one or more files**. Supported: **DOCX** (plus IDML, HTML, XLIFF, PO, XLSX, PPTX via Okapi) and the CAT bilingual formats **Trados `.sdlxliff`** and **memoQ `.mqxliff`**.
+2. The same Statistics dialog opens — pick your TMs and matching depth, then **Analyse**.
+
+DOCX files are sentence-segmented through Okapi exactly like a normal import, so the numbers match the project-based tool. If a file can't be read it's reported on its own and the rest are still counted. The language pair used for segmentation/matching is the open project's, or your last-used import pair if no project is open.
+
+:::note
+**Selecting several files:** in the file browser, Ctrl-click (or Shift-click) to select multiple files in the *same folder*, then click **Open**. The native dialog can't select across different folders at once.
+:::
+
+### Per-file breakdown
+
+When you analyse **more than one file** (Quick Count with several files, or a multi-file project), each translation memory's result shows a combined **All files** total followed by a **per-file** table, so you can see how each file contributes. The breakdown also appears in the HTML/Excel/CSV exports. Single-file analyses just show the one total.
+
 ## How to use it
 
 1. Tick one or more translation memories to analyse against. The TMs already activated for the current project are ticked for you.
