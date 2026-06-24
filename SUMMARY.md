@@ -188,6 +188,7 @@
 ## 🖥️ Settings
 
 * [General Settings](workbench/settings/general.md)
+* [Backup](workbench/settings/backup.md)
 * [AutoCorrect while typing](workbench/settings/autocorrect.md)
 * [TM Settings](workbench/settings/tm-settings.md)
 * [Termbase Settings](workbench/settings/termbase-settings.md)

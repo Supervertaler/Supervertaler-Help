@@ -699,6 +699,10 @@ const sidebar = [
             "link": "/workbench/settings/general/"
           },
           {
+            "label": "Backup",
+            "link": "/workbench/settings/backup/"
+          },
+          {
             "label": "AutoCorrect while typing",
             "link": "/workbench/settings/autocorrect/"
           },

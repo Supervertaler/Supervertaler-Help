@@ -54,6 +54,10 @@ You can dock the TermLens panel directly above or below the grid from the **View
 
 The change applies immediately, no need to reopen the project. Clicking the option that is already active hides the panel again.
 
+## Splitting and merging segments
+
+Right-click in a **Source** cell to **✂ Split segment here** (at the clicked position) or **🔗 Merge with next segment** — Trados/memoQ-style re-segmentation, fully undoable. See [Editing & Confirming](editing-confirming.md#splitting-and-merging-segments) for details and when it's available.
+
 ## See also
 
 - [Navigation](navigation.md)
