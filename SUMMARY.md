@@ -52,6 +52,7 @@
 
 ## 🧩 More Tools
 
+* [AutoTagger](trados/autotagger.md)
 * [QuickLauncher](trados/quicklauncher.md)
 * [Text Transforms](trados/text-transforms.md)
 
@@ -150,6 +151,8 @@
   * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
 * [Image Context](workbench/ai-translation/image-context.md)
 * [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
+* [FuzzyFixer (Adapt Fuzzy Matches)](workbench/ai-translation/fuzzyfixer.md)
+* [AutoTagger (Place Inline Tags)](workbench/ai-translation/autotagger.md)
 * [Using Local LLMs (Ollama)](workbench/ai-translation/ollama.md)
 * [Token Usage & Costs](workbench/ai-translation/usage-costs.md)
 

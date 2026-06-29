@@ -208,6 +208,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "AutoTagger",
+            "link": "/trados/autotagger/"
+          },
+          {
             "label": "QuickLauncher",
             "link": "/trados/quicklauncher/"
           },
@@ -570,6 +574,14 @@ const sidebar = [
           {
             "label": "Chat (AI conversation panel)",
             "link": "/workbench/ai-translation/chat/"
+          },
+          {
+            "label": "FuzzyFixer (Adapt Fuzzy Matches)",
+            "link": "/workbench/ai-translation/fuzzyfixer/"
+          },
+          {
+            "label": "AutoTagger (Place Inline Tags)",
+            "link": "/workbench/ai-translation/autotagger/"
           },
           {
             "label": "Using Local LLMs (Ollama)",
