@@ -165,6 +165,7 @@
 
 ## 🖥️ Quality Assurance
 
+* [AI Proofreading](workbench/qa/proofreading.md)
 * [Spellcheck](workbench/qa/spellcheck.md)
 * [Tag Validation](workbench/qa/tag-validation.md)
 * [Non-Translatables](workbench/qa/non-translatables.md)
