@@ -5,7 +5,7 @@ title: "Comments"
 The **💬 Comments** tab in Workbench's right panel is where per-segment annotations live. There are two sub-tabs:
 
 * **📝 Segment** — comments you author while translating: context notes, queries for the client, reminders to yourself, anchored highlights on specific words.
-* **✅ Proofreading** — read-only AI-generated proofreading feedback, keyed by the LLM that produced it.
+* **✅ Proofreading** — AI-generated proofreading feedback, listed across the whole project and colour-coded by the LLM that produced it (read-only text; delete individually or all at once).
 
 Both are stored on the segment itself and persist in the `.svproj` file. Segment comments are **exported to the final document as Word comments** (yellow comment bubbles in the right margin of the exported `.docx`), with the range highlight covering exactly the words you anchored the comment to. Proofreading comments are review-only and don't export.
 
@@ -46,7 +46,7 @@ The Segment sub-tab shows **one entry per Comment** — not per segment. A segme
 * The full comment body.
 * A small footer line with the author and timestamp, plus a `(right-click for edit/delete)` hint.
 
-Clicking the **Segment #N** header jumps the grid to that segment (cross-page-aware — switches pagination first if needed).
+Clicking the **Segment #N** header jumps the grid to that segment (cross-page-aware — switches pagination first if needed). Conversely, **selecting a segment in the grid scrolls the list to — and highlights — that segment's comment(s)**, so the active segment's notes are always in view without hunting for them.
 
 **Right-click** on a Segment header (or anywhere on the entry) opens a context menu with **✏️ Edit comment…** and **🗑️ Delete comment**. Edit opens a small dialog pre-populated with the existing text; saving with an empty text field deletes the comment. Delete prompts for confirmation.
 
@@ -74,6 +74,8 @@ Segment-level comments have no highlighted range to aim at, so they're reachable
 * **Right-click anywhere** in a commented segment's source or target cell → **💬 Open comment(s)** (opens the segment's first comment).
 * **Hover or right-click the Status cell** of a commented segment: the tooltip lists the segment's comments, and right-clicking offers **💬 Open comment(s)**.
 
+The Status cell is also **colour-coded** so you can tell comment types apart at a glance: a segment with a **segment comment** shows an **amber** background, one with a **proofreading comment** shows **purple**, and a segment that has **both** shows a **split amber|purple** background.
+
 ### Comments in exported documents
 
 When you export your project back to a Word document (**Project → Export → Export Translated Document…**), every segment comment becomes a Word comment in the output `.docx`. Behaviour per comment kind:
@@ -100,11 +102,23 @@ If you need range-anchored comments to survive a round-trip, export as DOCX rath
 
 ## Proofreading comments
 
-The **✅ Proofreading** sub-tab is read-only. It shows AI-generated feedback for the current segment, organised by which LLM produced it (so if you ran the same project through multiple proofreading passes with different models, you can compare what each model flagged).
+The **✅ Proofreading** sub-tab lists AI-generated review feedback across the **whole project** — mirroring the Segment sub-tab's all-comments list, so the two tabs now behave the same way. Generate the feedback with **QA ▸ Proofreading ▸ Proofread Translation…** (proofreading moved into the new [QA menu](#the-qa-menu) in v1.10.327).
 
-To populate this tab, run **AI → Batch AI Proofread** on your project. Each segment that the proofreader flagged gets an entry, with the model's findings shown verbatim. There's no editing — you read the feedback, decide whether to act on it, and either change the target text or leave it alone.
+Each entry is one **(segment, model)** result:
+
+* A clickable **Segment #N · model** header that jumps the grid to that segment (cross-page-aware).
+* The proofreader's findings, shown verbatim. The text is **read-only** — you read it and decide whether to act on it.
+* A **🗑️ delete** button that removes just that one comment.
+
+**Each LLM engine gets its own colour**, so if you ran the project through more than one model (e.g. GPT *and* Claude), you can tell at a glance which model flagged what. Selecting a segment in the grid scrolls the list to — and highlights — that segment's proofreading comment(s), exactly like the Segment sub-tab.
+
+To clear everything at once, use **QA ▸ Proofreading ▸ Delete All Proofreading Comments**. Deletion is safe: re-running **Proofread Translation** regenerates the comments.
 
 Proofreading comments are **not** exported to the final document. They're a translator-side review tool.
+
+### The QA menu
+
+AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**), which also hosts **Delete All Proofreading Comments**. QA is Workbench's home for quality-assurance features — see also [Spellcheck](../qa/spellcheck.md), [Tag Validation](../qa/tag-validation.md) and [Non-Translatables](../qa/non-translatables.md).
 
 ## Quick reference
 
@@ -116,6 +130,9 @@ Proofreading comments are **not** exported to the final document. They're a tran
 | Open a comment from the grid | Hover the highlight for a tooltip; right-click the highlight, the cell, or the Status cell → **💬 Open comment(s)** |
 | Edit a specific comment | Right-click its header → **✏️ Edit comment…** |
 | Delete a specific comment | Right-click its header → **🗑️ Delete comment** |
+| Generate proofreading comments | **QA ▸ Proofreading ▸ Proofread Translation…** |
+| Delete one proofreading comment | **🗑️** button on its entry in the **✅ Proofreading** list |
+| Delete all proofreading comments | **QA ▸ Proofreading ▸ Delete All Proofreading Comments** |
 | Configure the author name for exported comments | **Settings → User Identity → Translator Name** |
 
 ## Related
