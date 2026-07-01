@@ -2,9 +2,9 @@
 title: "Import/Export"
 ---
 
-The **Import/Export** tab in the Supervertaler Assistant panel exports the active Trados document's segments to a proofreader-friendly file (Word DOCX, Markdown, or HTML), then re-imports the proofreader's edits back into Trados with a confirmation diff.
+The **Import/Export** tab in the Supervertaler Assistant panel exports the active Trados document's segments to a proofreader-friendly file (Word DOCX, Bilingual Text, or HTML), then re-imports the proofreader's edits back into Trados with a confirmation diff.
 
-![The Import/Export tab in the Supervertaler Assistant panel, showing format and layout pickers, the multi-file file list with per-file segment counts, output mode radios, and the Recent exports list.](/.gitbook/assets/Supervertaler-for-Trados-Import-Export.png)
+![The Import/Export tab in the Supervertaler Assistant panel, showing the format picker, the multi-file file list with per-file segment counts, output mode radios, and the Recent exports list.](/.gitbook/assets/Supervertaler-for-Trados-Import-Export.png)
 
 This is the workflow you'd use for:
 
@@ -14,24 +14,23 @@ This is the workflow you'd use for:
 
 ## Formats
 
-| Format | When to use |
-|---|---|
-| **Word document (.docx)** | The default. A round-trippable bilingual table the proofreader edits in Word. |
-| **Markdown (.md)** | Same data in plain-text Markdown — friendly for diffing, version control, or piping into an LLM. |
-| **HTML (.html)** | Client-facing read-only report. Cannot be re-imported. |
+The export offers three formats, matching the Supervertaler Workbench:
 
-## Layouts
+| Format | Re-importable | When to use |
+|---|---|---|
+| **Word document (.docx)** | ✅ | The default. A 5-column bilingual table (`#`, source, target, status, notes) the proofreader edits in Word. Identical to the Workbench's [Bilingual Table](../workbench/import-export/bilingual-tables.md), so files move between both products. |
+| **Bilingual Text (AI-friendly) (.txt)** | ✅ | A compact plain-text format — one block per segment — ideal for pasting into ChatGPT / Claude / Gemini or editing in any text editor. Identical to the Workbench's [Bilingual Text](../workbench/import-export/bilingual-text.md). |
+| **HTML report (.html)** | ❌ | Client-facing read-only report. Cannot be re-imported. |
 
-| Layout | Shape |
-|---|---|
-| **Supervertaler Bilingual Table** (default) | 5-column table — `#`, source, target, status, notes. Identical to the Workbench's bilingual-table export, so files can move between both products. |
-| **Stacked source-on-top** | Source paragraph, target paragraph, segment-by-segment. Easier to read for proofreaders skimming long paragraphs. |
-| **Stacked target-on-top** | Same as above with source and target swapped. |
-| **Bracketed `[SEGMENT NNNN]`** (Markdown only) | AI-friendly compact format that matches the Supervertaler Workbench's "AI-readable" export style. One block per segment with 2-letter ISO language codes labelling each line — some LLMs handle this more reliably than a markdown table. |
+There's no separate "layout" picker: each format has one shape — DOCX and HTML use the 5-column table, and Bilingual Text uses the bracketed `[SEGMENT NNNN]` blocks below.
 
-All four layouts are **re-importable**: the Bilingual Table uses the `#` column for anchors, the stacked layouts use `## Segment N` headings, and the bracketed layout uses the `[SEGMENT NNNN]` heading. DOCX and HTML exports fall back to *Stacked source-on-top* when the bracketed layout is selected (it only makes sense as plain text).
+:::note
+**Why "Text" and not "Markdown"?** The `.txt` file is deliberately plain text: its segment blocks rely on line breaks being preserved, which a Markdown renderer would collapse. AI agents read the raw characters when you paste the file into a chat, so plain text is both safe and maximally readable. *(Earlier versions offered a Markdown (.md) format and stacked source/target layouts; these were retired in favour of the two round-trippable formats above. Files exported by those older versions can still be re-imported.)*
+:::
 
-The bracketed layout looks like this:
+## The Bilingual Text format
+
+Each segment is one block, blank-line separated, with 2-letter language codes labelling the source and target lines:
 
 ```
 [SEGMENT 0001]
@@ -42,6 +41,12 @@ NL: <b>MASHUP-APPLICATIEVERWERKINGSSYSTEEM</b>
 EN: <b>FIELD OF THE INVENTION</b>
 NL: <b>GEBIED VAN DE UITVINDING</b>
 ```
+
+- The `EN:` line is the **source** — leave it alone. It stays on **one line**; a `[newline]` token in it marks where the original source broke across two lines (read-only reference, never written back).
+- The `NL:` line is the **target** — edit it freely, but **keep it on one line**. Where the target needs a hard line break (e.g. to split a subtitle across two lines), write the literal token `[newline]`; on re-import it's turned back into a real break. Older files that wrapped a field over several physical lines still re-import unchanged.
+- The `[SEGMENT NNNN]` markers are the alignment anchors — don't rename them.
+
+Because each field is one labelled line (not a table column), it survives pipe characters and long inputs without the source/target roles getting confused, and keeping targets to one line stops an LLM from accidentally reflowing them. This matches the Workbench's Bilingual Text export byte-for-byte, so a file produced by either tool round-trips through the other.
 
 ## Inline formatting markers
 
@@ -78,17 +83,10 @@ The **Segments: N** label tracks the current selection live.
 
 ### Output mode
 
-* **Combine into one DOCX** (default) — produces a single bilingual file containing all selected files joined together. The table grows a 6th **File** column, and a yellow-highlighted "📄 File: `<name>`" section-break row appears between each file's segments so the proofreader can see file boundaries at a glance.
-* **Separate DOCX per file** — asks for a folder and writes one bilingual file per selected source file.
+* **Combine into one file** (default) — produces a single bilingual file containing all selected files joined together, with a file-boundary marker between each source file so the proofreader can see where one file ends and the next begins. In a **DOCX** the table grows a 6th **File** column with a highlighted "📄 File: `<name>`" section-break row; in a **Bilingual Text** file a `📄 File: <name>` marker line prefaces each new file's first segment.
+* **Separate file per file** — asks for a folder and writes one bilingual file per selected source file.
 
-Single-file documents see no change — the file list, output radio, and per-file UI are all hidden.
-
-**Markdown exports get the same multi-file affordance** in both layouts:
-
-* **Table layout**: 6-column table (`#`, source, target, **File**, status, notes) with a section-break row (`| | **📄 File: <name>** | | | | |`) prefacing each new file's segments.
-* **Stacked layouts**: a `## 📄 File: <name>` heading appears before the first segment of each new file.
-
-Re-import auto-detects whether the Markdown table is 5- or 6-column and parses accordingly.
+Single-file documents see no change — the file list, output radio, and per-file UI are all hidden. (On re-import, the DOCX table's 5- vs 6-column form is auto-detected.)
 
 ## Locked segments
 
