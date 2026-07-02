@@ -15,6 +15,17 @@ Supervertaler for Trados ships as two separate plugin builds from the same codeb
 
 Install the build that matches your Studio version. The 2024 build will not load in Studio 2026, and vice versa, because the two Studio releases use different plugin frameworks and termbase engines.
 
+## Version numbering
+
+Each build's **major version tracks the Trados Studio major it targets**, so the two builds always carry distinct, non-colliding version numbers that share the same tail:
+
+| Build | Example version |
+|-------|-----------------|
+| Trados Studio 2024 | `18.20.86` |
+| Trados Studio 2026 | `19.20.86` |
+
+So you can tell at a glance which Studio a build is for: a `18.x` plugin is for Studio 2024, a `19.x` plugin is for Studio 2026. (Releases up to and including `4.20.85` used a single shared number for both builds.)
+
 ## TermLens and `.ttb` termbases
 
 In Studio 2026, TermLens reads the new `.ttb` termbases attached to your project automatically –there is nothing to configure. Terms appear as **green chips** in the TermLens panel, exactly as MultiTerm terms do in the 2024 build, and behave the same way (click to insert, or **Alt+1**–**Alt+9** to insert by number).
