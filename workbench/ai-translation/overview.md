@@ -99,7 +99,7 @@ When batch translating, you can choose the provider in the dialog.
 
 1. **Use specific prompts** - Include domain, style, and rules
 2. **Provide context** - Enable "include context" for surrounding segments
-3. **Add termbase terms** - Attach terminology for consistent translations
+3. **Add termbase terms** - Attach terminology for consistent translations (see [Sending Terms to the AI](../termbases/ai-injection.md))
 4. **Post-edit** - AI is great but not perfect; always review
 
 ### Common Issues

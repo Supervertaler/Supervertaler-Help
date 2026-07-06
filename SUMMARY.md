@@ -135,6 +135,7 @@
 * [Creating Termbases](workbench/termbases/creating.md)
 * [Importing Terms](workbench/termbases/importing.md)
 * [Term Highlighting](workbench/termbases/highlighting.md)
+* [Sending Terms to the AI](workbench/termbases/ai-injection.md)
 * [TermLens (Inline Terminology)](workbench/termbases/termlens.md)
   * [TermLens popup](workbench/termbases/termlens-popup.md)
 * [TermPicker](workbench/termbases/termpicker.md)

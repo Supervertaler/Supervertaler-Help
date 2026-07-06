@@ -104,5 +104,6 @@ Go to **Settings → View Settings → Termbase Highlight Style**.
 - [Creating Termbases](creating.md)
 - [Importing Terms](importing.md)
 - [Term Highlighting](highlighting.md)
+- [Sending Terms to the AI](ai-injection.md)
 - [TermLens (Inline Terminology)](termlens.md)
 - [Term Extraction](extraction.md)
