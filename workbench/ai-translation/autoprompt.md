@@ -18,9 +18,14 @@ If you already have a hand-tuned prompt that works for your client, you do not n
 
 1. Open the **✨ AI** tab.
 2. In the **Prompt Manager** sub-tab, find Section 2 (**Custom Prompt**) on the left side of the panel. The right column of that section is labelled "Generate one automatically" and contains a single **✨ AutoPrompt** button. Click it.
-3. A **"Generating AutoPrompt"** progress dialog appears with an indeterminate busy bar. Reasoning-capable models (Opus, GPT-5, etc.) take 1–3 minutes; the rest of Supervertaler stays responsive while you wait. The dialog has a working Cancel button — cancelling stops the response being processed, though it can't actually abort the HTTP request in-flight on the provider's side.
-4. When generation finishes, a **"Save AutoPrompt"** dialog opens. It shows a read-only preview of the generated content, plus a **Name** field (pre-filled with your project name) and a **Folder** dropdown (defaulting to **Translate** but listing every other top-level folder in your library — editable, so you can type a brand-new folder name and it'll be created on save).
-5. Click **Save** to write the prompt to the library and set it as the **Custom Prompt ⭐** for this project. Click **Cancel** to discard — the generated content stays in the chat log above so you can copy it out manually if you want it as text but not as a file.
+3. Supervertaler briefly reads a sample of the document with the AI to detect its context, then an **"AutoPrompt – confirm context"** dialog appears. It shows the detected domain (e.g. *Marketing – creative marketing copy, playful tone*) with:
+   - a **Domain** dropdown you can leave as-is or correct, and
+   - an optional **Context briefing** box where you can type a short note (e.g. "creative copy, playful tone, keep product names untranslated").
+
+   Click **Generate** to proceed (this is the normal case — just press Enter), or **Cancel** to abort. Anything you type in the briefing is treated as authoritative and overrides the detected domain where they conflict.
+4. A **"Generating AutoPrompt"** progress dialog appears with an indeterminate busy bar. Reasoning-capable models (Opus, GPT-5, etc.) take 1–3 minutes; the rest of Supervertaler stays responsive while you wait. The dialog has a working Cancel button — cancelling stops the response being processed, though it can't actually abort the HTTP request in-flight on the provider's side.
+5. When generation finishes, a **"Save AutoPrompt"** dialog opens. It shows a read-only preview of the generated content, plus a **Name** field (pre-filled with your project name) and a **Folder** dropdown (defaulting to **Translate** but listing every other top-level folder in your library — editable, so you can type a brand-new folder name and it'll be created on save).
+6. Click **Save** to write the prompt to the library and set it as the **Custom Prompt ⭐** for this project. Click **Cancel** to discard — the generated content stays in the chat log above so you can copy it out manually if you want it as text but not as a file.
 
 ## What gets analysed
 
@@ -28,7 +33,7 @@ AutoPrompt gathers the following from your project and sends it to your configur
 
 | Data | Purpose |
 |---|---|
-| **Full source document** (up to 50,000 characters) | Domain detection, terminology extraction, defect detection, cascade detection, project-context summary |
+| **Full source document** (up to 50,000 characters) | Context classification, terminology extraction, defect detection, cascade detection, project-context summary |
 | **All termbase entries** | Locked termbase embedded in the generated prompt |
 | **Confirmed segment translations** | Used as TM anchors – the highest-authority style and terminology reference, because they are decisions you have already made for this exact document |
 | **Translation Memory entries** (if attached) | Style anchors – the LLM matches the register and lexical choices of validated TM pairs |
@@ -42,19 +47,23 @@ For a typical 30,000-word document, AutoPrompt costs roughly $0.20–$0.25 with 
 
 Before the meta-prompt is sent to the LLM, Workbench runs several lightweight passes against the source content and injects the findings into the meta-prompt. The findings tell the LLM what to look for and give it concrete document-specific anchors instead of generic scaffolding.
 
-### Domain detection
+### Context detection (AI-based)
 
-A keyword-based local pass classifies the document into one of:
+When you click AutoPrompt, Supervertaler sends a sample of the source to the AI and asks it to classify the document into one of:
 
-- **Patent** – claims, embodiments, prior art, figure references, EP / US / WO patent numbers
+- **Patent** – claims, embodiments, prior art, figures, patent conventions
 - **Legal** – contracts, clauses, statutory references, notarial titles
-- **Medical** – clinical terms, dosages, ICD / ATC codes, anatomical terminology
+- **Medical** – clinical terms, dosages, anatomical terminology
 - **Technical** – specifications, software terms, standards
 - **Financial** – figures, IFRS / GAAP, regulatory language
 - **Marketing** – brand, audience, campaign language
 - **General** – fallback for mixed or unclassified content
 
-Keywords are recognised in English, Dutch, and (for high-signal terms) German and French. A separate patent-marker check looks for `conclusie N` / `claim N`, `volgens conclusie`, `uitvoeringsvorm`, `stand der techniek`, `omvattende`, `FIG.` references, and patent-number citations – when three or more distinct markers are present, the domain is locked to **patent** regardless of which other domain happens to have the highest keyword score. This catches the common failure mode where a Dutch or German patent gets misclassified as "legal" because patent applications look superficially legal.
+The AI reads the actual text rather than counting keywords, so classification is reliable across languages and doesn't get fooled by superficial cues (for example a creative text that happens to mention a "Fig. 1" is no longer mistaken for a patent). The detected domain is shown in the **confirm-context** dialog before generation, where you can override it or add a briefing (see [Launching it](#launching-it) above).
+
+:::note
+Earlier versions used an editable keyword list under **Settings → Domain Detection** to drive this. That panel has been removed: the AI classifier makes it unnecessary, and if the classifier ever gets it wrong you simply correct the domain (or add a one-line briefing) in the confirm-context dialog.
+:::
 
 ### Terminology-collision detection
 
