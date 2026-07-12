@@ -9,6 +9,8 @@ title: "QuickTrans"
 
 The rest of this page describes the popup. It's a single-purpose surface – just translations, no chat – and it stays on top of every other window until you press 1–9 / Enter / click to pick a result, or Esc to dismiss.
 
+![The Supervertaler QuickTrans popup over Trados Studio, showing the editable source text, the English → Dutch language pair, and numbered results from each enabled provider grouped into Machine translation and AI / LLM sections](/.gitbook/assets/Supervertaler-Workbench-QuickTrans.png)
+
 ## Opening QuickTrans
 
 | Method | Shortcut | Notes |
