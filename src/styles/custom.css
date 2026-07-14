@@ -48,6 +48,13 @@
   cursor: zoom-in;
 }
 
+/* Complete the frame around tightly cropped native context-menu screenshots.
+ * The source image already contains #c6c6c6 vertical edges, but its top and
+ * bottom edges were lost in the crop. */
+.sl-markdown-content .complete-menu-frame > img {
+  border-block: 1px solid #c6c6c6;
+}
+
 /* Once medium-zoom has activated a zoom (it tags the active image with
  * data-zoomed="true"), switch the cursor to zoom-out so the user knows
  * a second click closes the overlay. */

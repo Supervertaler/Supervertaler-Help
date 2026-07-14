@@ -13,7 +13,7 @@ With an active segment that has a correct translation but wrong/missing tags:
 - Right-click in the editor → **Auto-tag active segment**, or
 - Press **Ctrl+Alt+G**.
 
-![The Trados Studio editor context menu with Auto-tag active segment highlighted and its Ctrl+Alt+G shortcut shown](/.gitbook/assets/AutoTagger_Supervertaler_for_Trados.png)
+<p class="complete-menu-frame"><img src="/.gitbook/assets/AutoTagger_Supervertaler_for_Trados.png" alt="The Trados Studio editor context menu with Auto-tag active segment highlighted and its Ctrl+Alt+G shortcut shown"></p>
 
 Trados Undo (`Ctrl+Z`) reverts it.
 
