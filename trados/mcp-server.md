@@ -48,6 +48,8 @@ The server exposes these tools to the AI app:
 ## Setting it up
 
 1. In Trados Studio, open **Supervertaler Settings → AI Settings** and click **Connect AI assistant…** at the bottom. The dialog shows your current connection status.
+
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_Server_settings.png" alt="The Supervertaler Settings dialog, AI Settings tab, with the External AI assistants (MCP) section and its Connect AI assistant button highlighted at the bottom"><figcaption>The External AI assistants (MCP) section at the bottom of the AI Settings tab.</figcaption></figure>
 2. **Claude Desktop** (easiest): click **Download extension (.mcpb)**, then double-click the downloaded `Supervertaler-MCP-Server.mcpb` file. Claude Desktop installs it as an extension. Restart Claude Desktop.
 3. **Other AI apps**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`.
 
