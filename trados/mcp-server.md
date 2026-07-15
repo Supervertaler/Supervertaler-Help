@@ -4,7 +4,7 @@ title: "Supervertaler MCP Server"
 
 The Supervertaler MCP Server connects **Claude Desktop** directly to your live Trados Studio session. You chat in Claude's own window, and it answers from your real project data: the document open in the editor, your translation memories, and your termbases. It can also make changes for you, always under your supervision.
 
-> **Which AI apps work?** Claude Desktop is fully supported and is the recommended app. Other MCP clients that support **local (STDIO) MCP servers in normal chat** – such as Claude Code – also work. **ChatGPT's desktop app is not currently supported**: it only exposes local MCP servers to its coding-agent mode, not to normal chat, so it can't reach your Trados session the way Claude Desktop does. HTTP-based support for more apps is on the roadmap.
+> **Which AI apps work?** Claude Desktop is fully supported and is the recommended app. Other MCP clients that run **local (STDIO) MCP servers on your own machine** – such as Claude Code – also work. **ChatGPT's desktop app is not supported**: it runs MCP servers in a cloud environment rather than on your computer, so it cannot reach the Supervertaler bridge, which is local to your machine by design (your project never leaves your PC). This is a difference in how the two apps are built, not something the plugin can change.
 
 MCP ([Model Context Protocol](https://modelcontextprotocol.io/)) is the open standard that lets AI applications securely call tools exposed by other programs. The Supervertaler MCP Server is the first MCP server that talks to a **live** Trados Studio editor session – other Trados-related MCP servers work on project files on disk, not the document you are working on.
 
@@ -137,7 +137,7 @@ Everything stays on your computer:
 ## Requirements
 
 * Supervertaler for Trados with an active licence or trial (the bridge is part of the AI Assistant).
-* Claude Desktop (recommended), or another MCP client that supports local STDIO servers in normal chat. Note that this means a **desktop** app – the claude.ai *website* cannot reach a local MCP server. ChatGPT's desktop app is not currently supported (see the note at the top of this page).
+* Claude Desktop (recommended), or another MCP client that runs local STDIO servers on your own machine. Note that this means a **desktop** app that executes the server locally – the claude.ai *website* and ChatGPT's desktop app cannot reach a local MCP server (see the note at the top of this page).
 * Windows (the MCP server is a self-contained exe; no additional runtimes needed).
 
 ## Troubleshooting
