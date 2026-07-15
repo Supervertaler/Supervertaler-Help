@@ -58,6 +58,7 @@
 
 ## 🧩 Integration
 
+* [Supervertaler MCP Server](trados/mcp-server.md)
 * [Supervertaler Bridge](trados/ai-assistant/supervertaler-bridge.md)
 * [Shared TM Bridge with Workbench](trados/shared-tm-bridge.md)
 

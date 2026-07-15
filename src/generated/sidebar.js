@@ -226,6 +226,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "Supervertaler MCP Server",
+            "link": "/trados/mcp-server/"
+          },
+          {
             "label": "Supervertaler Bridge",
             "link": "/trados/ai-assistant/supervertaler-bridge/"
           },
@@ -508,6 +512,10 @@ const sidebar = [
             "link": "/workbench/termbases/highlighting/"
           },
           {
+            "label": "Sending Terms to the AI",
+            "link": "/workbench/termbases/ai-injection/"
+          },
+          {
             "label": "TermLens (Inline Terminology)",
             "items": [
               {
@@ -619,6 +627,10 @@ const sidebar = [
         "label": "Quality Assurance",
         "collapsed": true,
         "items": [
+          {
+            "label": "AI Proofreading",
+            "link": "/workbench/qa/proofreading/"
+          },
           {
             "label": "Spellcheck",
             "link": "/workbench/qa/spellcheck/"
