@@ -45,6 +45,73 @@ The server exposes these tools to the AI app:
 * Changes land in the open document but are **not saved** – you decide when to save in Studio.
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
 
+## Prompt cookbook
+
+You talk to the AI in plain language – there are no commands to memorise. The AI decides which tools to call from what you say. This section lists, per task, the kinds of things you can say, so you know the full range of what's possible. Mix and combine freely ("find X, then fix Y").
+
+### Project status and progress
+
+* "What's the status of my Trados project?"
+* "How many segments are left to translate?"
+* "Which file am I working on, and what's the language pair?"
+* "How many words are still untranslated?" / "Give me the analysis statistics – fuzzies, repetitions, new words." *(from v18.20.95)*
+* "How far along is each file in this project?" *(from v18.20.95)*
+
+### Finding and reading segments
+
+* "Show me all untranslated segments."
+* "Show me the Draft segments so I can see what the AI wrote earlier."
+* "Find all segments containing *flange*."
+* "How many times does *doekrol* appear in this project? Is it translated consistently?"
+* "Show me segments 50 to 100." (paging)
+* "List the files in this merged document." / "Only show me segments from the contract file." *(from v18.20.95)*
+
+### Terminology
+
+* "What does my termbase say for *sluitkracht*?"
+* "Look up *support arm* – do I have an established translation?"
+* "Go through the project and make me a glossary of the key terms."
+* "We agreed *draagarm* = *support arm* – add it to my termbase."
+* "Extract the recurring technical terms from this document and add the ones I approve to my termbase."
+
+### Translation memory
+
+* "How did I translate this sentence before?"
+* "Search my TM for *scherminrichting*."
+* "Before translating, check my TM and termbase and follow what you find."
+
+### The segment I'm working on
+
+* "Translate this segment." / "Explain this sentence."
+* "What do my TM and termbase say about the current segment?"
+* "Give me three alternative translations for this segment, then insert the one I pick."
+
+### Writing translations (always reviewable)
+
+* "Draft translations for all untranslated segments – I'll review them in Studio."
+* "Translate the segments containing *warranty*, use my termbase, set them to Draft."
+* "Redo segment 14 – too literal, make it flow better, then update it."
+* "Set all my Draft segments to Translated." (status-only changes work too)
+
+Everything the AI writes lands as **Draft** unless you say otherwise, locked segments are never touched, and nothing is saved until you save in Studio.
+
+### Quality and consistency
+
+* "Find segments where the source and target numbers don't match."
+* "Check my translated segments against the termbase and list violations."
+* "Find all repeated sentences that I translated differently." *(from v18.20.95)*
+* "…then align them all to the best version." (pairs with the write tools)
+
+### Working across sources
+
+Because the AI has all tools in one conversation, the most powerful prompts combine them:
+
+* "Compare how I translated *closing force* in this project vs my TM – if they differ, tell me which is more common and align the project."
+* "Draft the remaining segments, but first build a glossary from the segments I already translated and stick to it."
+* "Review my Draft segments against the source: flag mistranslations, fix typos directly, and list anything you weren't sure about."
+
+Items marked *(from v18.20.95)* require the next plugin version; everything else works from v18.20.94.
+
 ## Setting it up
 
 1. In Trados Studio, open **Supervertaler Settings → AI Settings** and click **Connect AI assistant…** at the bottom. The dialog shows your current connection status.
