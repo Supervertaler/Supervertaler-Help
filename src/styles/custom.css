@@ -48,6 +48,29 @@
   cursor: zoom-in;
 }
 
+/* ── Screenshot framing ──────────────────────────────────────────────
+ *
+ * Light screenshots (chat windows, dialogs on white) blend into the
+ * page background with no visible edge. A hairline border + soft
+ * corners gives every content image a faint frame so it reads as a
+ * distinct object. Same explicit light/dark tints as the sidebar
+ * rules above so the frame stays faint in both themes. */
+.sl-markdown-content figure img,
+.sl-markdown-content p > img {
+  border: 1px solid var(--sl-color-hairline-shade);
+  border-radius: 6px;
+}
+
+:root[data-theme='light'] .sl-markdown-content figure img,
+:root[data-theme='light'] .sl-markdown-content p > img {
+  border-color: #e5e7eb;
+}
+
+:root[data-theme='dark'] .sl-markdown-content figure img,
+:root[data-theme='dark'] .sl-markdown-content p > img {
+  border-color: #2a2d33;
+}
+
 /* Complete the frame around tightly cropped native context-menu screenshots.
  * The source image already contains #c6c6c6 vertical edges, but its top and
  * bottom edges were lost in the crop. */
