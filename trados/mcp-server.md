@@ -134,7 +134,7 @@ Items marked *(from v18.20.95)* require the next plugin version; everything else
 1. In Trados Studio, open **Supervertaler Settings → AI Settings** and click **Connect AI assistant…** at the bottom. The dialog shows your current connection status.
 
 <figure><img src="/.gitbook/assets/Supervertaler_MCP_Server_settings.png" alt="The Supervertaler Settings dialog, AI Settings tab, with the External AI assistants (MCP) section and its Connect AI assistant button highlighted at the bottom"><figcaption>The External AI assistants (MCP) section at the bottom of the AI Settings tab.</figcaption></figure>
-2. **Claude Desktop** (easiest): click **Download extension (.mcpb)**, then double-click the downloaded `Supervertaler-MCP-Server.mcpb` file. Claude Desktop installs it as an extension. Restart Claude Desktop.
+2. **Claude Desktop** (easiest): click **Download extension (.mcpb)** to get `Supervertaler-MCP-Server.mcpb`. Then in Claude Desktop open **Settings → Extensions** and **drag the downloaded file onto that page** (double-clicking the file also works if your system associates `.mcpb` files with Claude Desktop – many systems don't, and Windows will ask what app to open it with; just cancel and use the drag method). Confirm the install, then restart Claude Desktop.
 3. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. This works for clients that support local STDIO MCP servers in their normal chat (see the note at the top about ChatGPT).
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
@@ -157,6 +157,7 @@ Everything stays on your computer:
 
 ## Troubleshooting
 
+* **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead drag the file onto Claude Desktop's **Settings → Extensions** page.
 * **The AI says it can't reach Trados** – make sure Trados Studio is running and a document is open in the editor (the bridge starts with the editor). The Connect dialog's status lines show whether the bridge is up.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
