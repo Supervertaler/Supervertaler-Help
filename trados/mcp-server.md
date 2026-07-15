@@ -78,8 +78,9 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 
 ### Translation memory
 
-* "How did I translate this sentence before?"
+* "How did I translate this sentence before?" *(searches the Trados TMs attached to your project – from v18.20.95)*
 * "Search my TM for *scherminrichting*."
+* "Search only the target side of my TMs for *roller blind*." *(from v18.20.95)*
 * "Before translating, check my TM and termbase and follow what you find."
 
 ### The segment I'm working on
