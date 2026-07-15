@@ -39,6 +39,10 @@ The server exposes these tools to the AI app:
 | `search_tm` | Search your Supervertaler (Workbench-bridged) translation memories |
 | `lookup_term` | Look up a term in your termbases (exact first, then substring matching) |
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
+| `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
+| `check_tags` | Translated segments with missing or extra inline tags *(v18.20.95)* |
+| `check_terminology` | Translated segments that don't use the termbase's expected translation *(v18.20.95)* |
+| `list_resources` | The TMs and termbases attached to your project and Supervertaler setup *(v18.20.95)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
@@ -104,10 +108,16 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 
 ### Quality and consistency
 
-* "Find segments where the source and target numbers don't match."
-* "Check my translated segments against the termbase and list violations."
+* "Find segments where the source and target numbers don't match." *(from v18.20.95)*
+* "Check my tags – any segments missing formatting?" *(from v18.20.95)*
+* "Check my translated segments against the termbase and list violations." *(from v18.20.95)*
 * "Find all repeated sentences that I translated differently." *(from v18.20.95)*
+* "Run all your QA checks and give me a report."
 * "…then align them all to the best version." (pairs with the write tools)
+
+### Resources
+
+* "Which TMs and termbases is this project using?" *(from v18.20.95)*
 
 ### Working across sources
 
