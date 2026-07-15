@@ -31,10 +31,14 @@ The server exposes these tools to the AI app:
 | Tool | What it does |
 | --- | --- |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
-| `get_segments` | List segments, with filters (status, contains-text) and paging |
+| `get_segments` | List segments, with filters (status, contains-text, file) and paging |
+| `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
 | `get_active_segment` | The segment you are editing right now, with TM matches and termbase hits |
-| `search_tm` | Search your Supervertaler translation memories |
+| `get_project_statistics` | Analysis bands and per-file confirmation statistics – word counts, progress *(v18.20.95)* |
+| `search_studio_tm` | Concordance-search the Trados TMs attached to the project (.sdltm and GroupShare) *(v18.20.95)* |
+| `search_tm` | Search your Supervertaler (Workbench-bridged) translation memories |
 | `lookup_term` | Look up a term in your termbases (exact first, then substring matching) |
+| `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
