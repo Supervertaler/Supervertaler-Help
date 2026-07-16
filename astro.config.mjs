@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import starlightLlmsTxt from 'starlight-llms-txt';
 
 // Sidebar structure is generated from SUMMARY.md (the GitBook-canonical
 // nav) by _migrate/generate_sidebar.py.  Re-run that script whenever
@@ -65,6 +66,55 @@ export default defineConfig({
           label: 'supervertaler.com',
           href: 'https://supervertaler.com',
         },
+      ],
+
+      // llms.txt for AI agents (https://llmstxt.org/): generates
+      //   /llms.txt        — index with links to the docs as Markdown
+      //   /llms-full.txt   — the entire docs in one Markdown file
+      //   /llms-small.txt  — abridged version for small context windows
+      // plus per-product subsets under /_llms-txt/. Supervertaler ships
+      // an MCP server, so being conveniently machine-readable is part
+      // of the product story, not just SEO. Pinned to 0.7.x — newer
+      // plugin versions require Starlight >= 0.38.
+      plugins: [
+        starlightLlmsTxt({
+          details:
+            'Supervertaler is a suite of AI-enhanced translation tools: ' +
+            'a Trados Studio plugin (TermLens terminology, AI assistant, ' +
+            'batch operations, MCP server for Claude Desktop) and the ' +
+            'standalone Workbench CAT tool.',
+          optionalLinks: [
+            {
+              label: 'supervertaler.com',
+              url: 'https://supervertaler.com',
+              description: 'Product website',
+            },
+            {
+              label: 'GitHub: Workbench',
+              url: 'https://github.com/Supervertaler/Supervertaler-Workbench',
+              description: 'Supervertaler Workbench source and releases',
+            },
+            {
+              label: 'GitHub: Trados plugin',
+              url: 'https://github.com/Supervertaler/Supervertaler-for-Trados',
+              description: 'Supervertaler for Trados issues and releases',
+            },
+          ],
+          customSets: [
+            {
+              label: 'Supervertaler for Trados',
+              description:
+                'Docs for the Trados Studio plugin only',
+              paths: ['trados/**'],
+            },
+            {
+              label: 'Supervertaler Workbench',
+              description:
+                'Docs for the standalone Workbench app only',
+              paths: ['workbench/**'],
+            },
+          ],
+        }),
       ],
 
     }),
