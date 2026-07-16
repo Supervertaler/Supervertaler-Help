@@ -1,0 +1,47 @@
+---
+/**
+ * Custom Footer override for Starlight.
+ *
+ * Renders the default footer (edit link, last-updated, pagination,
+ * "Built with Starlight" credit) and appends a small note advertising
+ * the machine-readable llms.txt endpoints, so human readers can
+ * discover what AI agents find automatically at the root URL.
+ *
+ * The llms* files are generated at build time by the starlight-llms-txt
+ * plugin configured in astro.config.mjs.
+ */
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default><slot /></Default>
+
+<div class="sv-llms-note">
+  🤖 These docs are AI-readable: <a href="/llms.txt">llms.txt</a>
+  <span class="sv-llms-sep">·</span>
+  <a href="/llms-full.txt">full</a>
+  <span class="sv-llms-sep">·</span>
+  <a href="/_llms-txt/supervertaler-for-trados.txt">Trados only</a>
+  <span class="sv-llms-sep">·</span>
+  <a href="/_llms-txt/supervertaler-workbench.txt">Workbench only</a>
+</div>
+
+<style>
+  .sv-llms-note {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-xs);
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .sv-llms-note a {
+    color: var(--sl-color-gray-2);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+  .sv-llms-note a:hover {
+    color: var(--sl-color-white);
+  }
+  .sv-llms-sep {
+    margin-inline: 0.25rem;
+    opacity: 0.6;
+  }
+</style>

@@ -33,6 +33,9 @@ export default defineConfig({
         Search: './src/components/Search.astro',
         Sidebar: './src/components/Sidebar.astro',
         SocialIcons: './src/components/SocialIcons.astro',
+        // Footer: default footer + a small "AI-readable docs" note
+        // linking the llms.txt endpoints generated at build time.
+        Footer: './src/components/Footer.astro',
       },
 
       // Theme tweaks (sidebar shading, etc.) — see src/styles/custom.css.
