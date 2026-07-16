@@ -1,0 +1,8 @@
+# docs.supervertaler.com – everyone welcome, including AI agents.
+# Supervertaler integrates AI assistants (see /trados/mcp-server/), so these
+# docs are deliberately open to AI crawlers and real-time AI readers.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.supervertaler.com/sitemap-index.xml
