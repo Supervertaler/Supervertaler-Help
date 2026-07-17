@@ -139,6 +139,8 @@ Items marked *(from v18.20.95)* require the next plugin version; everything else
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
 
+> **Important – wake the connection once per session.** After opening a document, **click the Supervertaler Assistant panel once** (its tab on the right edge of the editor, or **View → Supervertaler Assistant**) – or open **Supervertaler Settings**. This starts the connection to your AI app. You only need to do it once each time you start Trados Studio; if your AI app can't reach Trados, this is almost always why. *(A future update will start the connection automatically, without this step.)*
+
 Install the extension **or** use a manual config entry – not both, or every tool will appear twice in the AI app. The Connect dialog warns you if it detects this.
 
 ## Privacy and security
@@ -159,7 +161,7 @@ Everything stays on your computer:
 
 * **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Dragging the file onto the page does not work.)
 * **The Extensions page is stuck on "Loading extensions…"** – the page needs to reach Anthropic's extension directory once before it renders; we've seen it hang on the Microsoft Store build of Claude Desktop. Fully quit Claude Desktop (including the system tray icon) and reopen it; check your internet connection. If it keeps hanging, there's a universal fallback that skips the Extensions page entirely: download `Supervertaler-MCP-Server-exe.zip` instead, unzip it somewhere permanent, and use the **Copy config snippet** button in the plugin's Connect dialog to add the server manually to `claude_desktop_config.json` (Claude Desktop → Settings → Developer → Edit Config).
-* **The AI says it can't reach Trados** – make sure Trados Studio is running and a document is open in the editor (the bridge starts with the editor). The Connect dialog's status lines show whether the bridge is up.
+* **The AI says it can't reach Trados** – the most common cause: the connection hasn't been woken up this session. Make sure Trados Studio is running with a document open in the editor, then **click the Supervertaler Assistant panel once** (or open Supervertaler Settings) to start it. You only need to do this once per Studio session. The Connect dialog's status lines show whether the connection is up. *(A future update will remove this step.)*
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
 * The bridge writes a diagnostic log to `<your data folder>\trados\runtime\bridge.log`.
