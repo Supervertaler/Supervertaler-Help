@@ -47,11 +47,24 @@ The server exposes these tools to the AI app:
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
+| `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
+| `find_and_replace` | Find & replace across the target text – tag-safe, with a preview before applying |
+| `get_comments` | Read the Trados comments in the document |
+| `add_comment` | Add a Trados comment to a segment (flag a source issue, leave a review note) |
+| `update_comment` | Edit an existing Trados comment |
+| `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment |
+| `analyze_files` | Run **Analyse Files** – computes the perfect/exact/fuzzy/new/repetition leverage breakdown *(v18.20.106)* |
+| `pretranslate` | Run **Pre-translate Files** – fill untranslated segments with their TM matches |
+| `update_tm` | Run **Update Main Translation Memories** – write confirmed segments to the project TM |
+| `export_target` | Run **Generate Target Translations** – write out the translated target files |
+| `get_task_status` | Check a background batch task's progress (analyse, pre-translate, …) *(v18.20.104)* |
 | `list_prompts` | Browse your Supervertaler prompt library, optionally filtered by folder or search term *(v18.20.101)* |
 | `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
 
-*(The AI also has tools for moving the editor to a segment, reading and adding Trados comments, find-and-replace across the target, running Studio's Verify Files, and triggering batch tasks – analyse files, pre-translate, update TM, and generate target files – which run in the background so a long analysis never stalls the chat.)*
+> The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
+>
+> This list grows over time. For the current set on your installed version, just ask the AI *"what can I do?"* (the `help` tool).
 
 ### Safety rails on write actions
 
