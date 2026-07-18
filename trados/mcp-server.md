@@ -46,6 +46,11 @@ The server exposes these tools to the AI app:
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
+| `list_prompts` | Browse your Supervertaler prompt library, optionally filtered by folder or search term *(v18.20.101)* |
+| `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
+| `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
+
+*(The AI also has tools for moving the editor to a segment, reading and adding Trados comments, find-and-replace across the target, running Studio's Verify Files, and triggering batch tasks such as pre-translate, update TM, and generate target files.)*
 
 ### Safety rails on write actions
 
@@ -119,6 +124,17 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 
 * "Which TMs and termbases is this project using?" *(from v18.20.95)*
 
+### Your prompt library *(from v18.20.101)*
+
+The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate (and shared with the Supervertaler Workbench):
+
+* "List my prompts." / "Show me the prompts in my Translate folder."
+* "Show me my Default Translation Prompt."
+* "Look at my Default Translation Prompt and suggest improvements for patent work, then save it as a new prompt."
+* "Turn what we just worked out into a prompt and save it as *Client X house style*."
+
+Built-in default prompts are protected – the AI saves your version under a new name rather than overwriting them.
+
 ### Working across sources
 
 Because the AI has all tools in one conversation, the most powerful prompts combine them:
@@ -134,7 +150,7 @@ Items marked *(from v18.20.95)* require the next plugin version; everything else
 <figure><img src="/.gitbook/assets/Supervertaler_MCP_Server_settings.png" alt="The Supervertaler Settings dialog, AI Settings tab, with the External AI assistants (MCP) section and its Connect AI assistant button highlighted at the bottom"><figcaption>The External AI assistants (MCP) section at the bottom of the AI Settings tab.</figcaption></figure>
 
 1. In Trados Studio, open **Supervertaler Settings → AI Settings** and click **Connect AI assistant…** at the bottom. The dialog shows your current connection status.
-2. **Claude Desktop** (easiest): click **Download extension (.mcpb)** to get `Supervertaler-MCP-Server.mcpb`. Then in Claude Desktop open **Settings → Extensions**, scroll to **Advanced settings**, click **Install extension…**, and choose the downloaded file. (If your system opens `.mcpb` files with Claude Desktop, double-clicking the file also works – many systems don't and will ask what app to open it with; just cancel and use the Install extension button.) Confirm the install, then restart Claude Desktop.
+2. **Claude Desktop** (easiest): click **Download extension (.mcpb)** to get `Supervertaler-MCP-Server.mcpb`. Then in Claude Desktop open **Settings → Extensions** and **drag the `.mcpb` file onto the page** – it shows a *"Drag .MCPB or .DXT files here to install"* target. (Prefer a file picker? Scroll to **Advanced settings** and use the **Install extension…** button instead.) Confirm the install. Double-clicking the `.mcpb` only works if your system has associated that file type with Claude Desktop; many don't and will ask which app to use – just cancel and drag-and-drop instead.
 3. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. This works for clients that support local STDIO MCP servers in their normal chat (see the note at the top about ChatGPT).
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
@@ -159,7 +175,7 @@ Everything stays on your computer:
 
 ## Troubleshooting
 
-* **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Dragging the file onto the page does not work.)
+* **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead either **drag the `.mcpb` onto the Extensions page**, or use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Drag-and-drop works once the Extensions page has finished loading – if it's stuck on "Loading extensions…", see the next point first.)
 * **The Extensions page is stuck on "Loading extensions…"** – the page needs to reach Anthropic's extension directory once before it renders; we've seen it hang on the Microsoft Store build of Claude Desktop. Fully quit Claude Desktop (including the system tray icon) and reopen it; check your internet connection. If it keeps hanging, there's a universal fallback that skips the Extensions page entirely: download `Supervertaler-MCP-Server-exe.zip` instead, unzip it somewhere permanent, and use the **Copy config snippet** button in the plugin's Connect dialog to add the server manually to `claude_desktop_config.json` (Claude Desktop → Settings → Developer → Edit Config).
 * **The AI says it can't reach Trados** – make sure Trados Studio is running with a **document open in the editor** (the connection starts automatically once a document is open, not just when Studio is running). The Connect dialog's status lines show whether the connection is up. On older plugin versions (before 18.20.99 / 19.20.99) you also had to click the Supervertaler Assistant panel once per session – updating the plugin removes that step.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
