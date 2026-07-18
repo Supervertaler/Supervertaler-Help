@@ -30,6 +30,7 @@ The server exposes these tools to the AI app:
 
 | Tool | What it does |
 | --- | --- |
+| `help` | A curated menu of what you can ask – shown when you say *"what can I do?"* *(v18.20.106)* |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
 | `get_segments` | List segments, with filters (status, contains-text, file) and paging |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
@@ -50,7 +51,7 @@ The server exposes these tools to the AI app:
 | `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
 
-*(The AI also has tools for moving the editor to a segment, reading and adding Trados comments, find-and-replace across the target, running Studio's Verify Files, and triggering batch tasks such as pre-translate, update TM, and generate target files.)*
+*(The AI also has tools for moving the editor to a segment, reading and adding Trados comments, find-and-replace across the target, running Studio's Verify Files, and triggering batch tasks – analyse files, pre-translate, update TM, and generate target files – which run in the background so a long analysis never stalls the chat.)*
 
 ### Safety rails on write actions
 
@@ -63,6 +64,10 @@ The server exposes these tools to the AI app:
 ## Prompt cookbook
 
 You talk to the AI in plain language – there are no commands to memorise. The AI decides which tools to call from what you say. This section lists, per task, the kinds of things you can say, so you know the full range of what's possible. Mix and combine freely ("find X, then fix Y").
+
+> **Not sure where to start? Just ask *"What can I do?"*** (or *"what can you do?"*) and the assistant shows a grouped menu of everything below – so you don't have to read this page first.
+
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_what_can_I_do.png" alt="Claude Desktop showing the answer to 'What can I do?' – a grouped, bulleted menu of example phrasings under headings such as Project &#38; progress, Find &#38; read segments, and Translation memory &#38; terminology"><figcaption>Ask <em>"What can I do?"</em> and the assistant lists what you can ask it, grouped by task.</figcaption></figure>
 
 ### Project status and progress
 
