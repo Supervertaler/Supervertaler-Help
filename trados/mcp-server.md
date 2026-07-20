@@ -61,6 +61,7 @@ The server exposes these tools to the AI app:
 | `list_prompts` | Browse your Supervertaler prompt library, optionally filtered by folder or search term *(v18.20.101)* |
 | `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
+| `get_prompt_context` | Everything the AI needs to write a translation prompt tailored to your open project – source text, domain, terms, TM examples *(v18.20.109)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >
@@ -150,6 +151,7 @@ The AI can read and improve the Markdown prompts in your Supervertaler prompt li
 * "Show me my Default Translation Prompt."
 * "Look at my Default Translation Prompt and suggest improvements for patent work, then save it as a new prompt."
 * "Turn what we just worked out into a prompt and save it as *Client X house style*."
+* "Look at my open project and write me a translation prompt tailored to it." *(from v18.20.109 – the AI reads the source text, detected domain, relevant terms, and TM examples via `get_prompt_context`, then drafts and saves the prompt. How much source it sees is set under Settings → AI Settings → "Prompt context – source segments"; 0 = the whole document.)*
 
 Built-in default prompts are protected – the AI saves your version under a new name rather than overwriting them.
 
