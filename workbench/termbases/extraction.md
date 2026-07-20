@@ -12,7 +12,11 @@ title: "Term Extraction"
 
 Go to the **Termbases** tab and click **🔍 Extract Terms** in the button bar beneath the termbase list, next to **+ Create New**.
 
-The button is greyed out until a project is loaded, because extraction reads the current project's segments.
+Extraction reads the source segments of the open project, so open a project first – clicking with none open just tells you to.
+
+:::note
+**On Workbench v1.10.351 and earlier, this button is permanently greyed out** and the feature cannot be reached at all, regardless of whether a project is open. Fixed in **v1.10.352**.
+:::
 
 ### Choosing the source text
 
