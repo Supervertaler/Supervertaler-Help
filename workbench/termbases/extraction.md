@@ -29,7 +29,7 @@ The dialogue offers two sources:
 | **Target Language** | the project's target language | The language the model translates each term into. |
 | **Domain / Subject** | blank | Optional hint, e.g. `mechanical engineering` or `sewing machines`. Leave blank and the model infers the domain from the text itself. |
 
-Click **🤖 Extract Terms with AI**. The call takes a few seconds; the dialogue stays responsive while it runs.
+Click **🤖 Extract Terms with AI**. Small texts return in seconds; a full-length document (e.g. a complete patent application) takes a minute or so. The dialogue stays responsive while it runs.
 
 :::note
 **Your source text is sent to the configured AI provider** – the same one that handles your translations, so this adds no exposure beyond translating the project. If a project must not leave your machine, use a local model (Ollama) as your provider.
@@ -48,13 +48,15 @@ Results fill a table of term pairs:
 
 Edit cells directly to fix anything before committing – your edits are what gets saved, not the model's original answer.
 
+To tick or untick many rows at once, select them (Shift/Ctrl+click) and **right-click** → *Untick selected* / *Tick selected*.
+
 On very large projects only the first portion of the text (roughly 8–9k words) is analysed, and the results label says so explicitly – nothing is truncated silently.
 
 ### Creating the project termbase
 
 Click **Create Project Termbase**, then give it a name. The default is `<Project name> Terminology`.
 
-Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and refreshes the termbase list. Terms with targets immediately produce [TermLens](termlens.md) suggestions; empty-target entries can be completed later – see [Creating termbases](creating.md).
+Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and makes it the **Project termbase** – it appears in the Termbases tab with the pink **Project** tick and **Read** enabled, so terms with targets immediately produce [TermLens](termlens.md) suggestions. Empty-target entries can be completed later – see [Creating termbases](creating.md).
 
 :::note
 **One project termbase per project.** If the project already has one, you are asked what to do (v1.10.358+): make the new termbase the project termbase (the existing one is kept as a regular termbase), save the new one as a regular termbase alongside, or cancel. Nothing is deleted in any case.
