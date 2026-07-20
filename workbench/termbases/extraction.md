@@ -44,7 +44,7 @@ Click **🔍 Extract Terms** inside the dialogue to run the extraction. Results 
 | ------ | ------- |
 | **Select** | Tick box controlling whether the term is added. Every row starts ticked. |
 | **Term** | The candidate term. |
-| **Frequency** | How many times it occurs in the source text. |
+| **Frequency** | How many times it occurs in the source text, counted case-insensitively. |
 | **Score** | Ranking score – see below. Rows are sorted highest first. |
 
 If nothing comes back, Supervertaler suggests lowering the minimum frequency – that is usually the right fix on short documents.
@@ -58,11 +58,12 @@ The score ranks candidates by how term-like they look:
 * **Frequency** contributes on a logarithmic scale, so the tenth occurrence adds far less than the second.
 * **Multi-word terms get a bonus** proportional to their length, since a recurring three-word phrase is usually more valuable than a common single word.
 * **Terms containing `-`, `_`, `.` or `/`** get a bonus, as these often mark technical identifiers and compounds.
+* **Capitalised terms get a bonus**, since product names and other proper nouns are usually worth capturing. The bonus applies only when every word of the term is capitalised.
 
 Anything falling below **Min Frequency** scores zero and is dropped entirely.
 
 :::note
-**Extracted terms arrive lowercased.** Text is normalised to lower case before candidates are counted, so `Supervertaler Workbench` is extracted as `supervertaler workbench`. Fix the casing when you edit the entries – it matters for terms whose capitalisation is meaningful, such as product names and abbreviations.
+**Casing is preserved, not invented.** Candidates are counted case-insensitively, so `System` and `system` are the same term rather than two competing entries. Each candidate is then displayed using whichever spelling is most common in the source text. Where a term appears capitalised as often as not – typically because it sometimes starts a sentence – the lower-case form wins, so genuine proper nouns keep their capitals without every sentence-initial word being promoted to one. Still check the casing when you edit the entries; a term that only ever appears at the start of a sentence will come through capitalised.
 :::
 
 ### Creating the project termbase
