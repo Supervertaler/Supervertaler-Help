@@ -57,7 +57,7 @@ Click **Create Project Termbase**, then give it a name. The default is `<Project
 Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and refreshes the termbase list. Terms with targets immediately produce [TermLens](termlens.md) suggestions; empty-target entries can be completed later – see [Creating termbases](creating.md).
 
 :::note
-**One project termbase per project.** If the project already has one, creation fails with an error rather than merging into it. To extract again, rename or delete the existing project termbase first.
+**One project termbase per project.** If the project already has one, you are asked what to do (v1.10.358+): make the new termbase the project termbase (the existing one is kept as a regular termbase), save the new one as a regular termbase alongside, or cancel. Nothing is deleted in any case.
 :::
 
 ### Tips
