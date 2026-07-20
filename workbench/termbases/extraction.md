@@ -2,10 +2,10 @@
 title: "Term Extraction"
 ---
 
-**Term extraction** scans your project's source segments and proposes a ranked list of candidate terms, which you can then turn into a project termbase in one step. It is a fast way to seed terminology for a technical document before you start translating.
+**Term extraction** sends your project's source text to your configured AI model and returns a proposed **bilingual project glossary** – source terms paired with translations – which you review, edit, and turn into a project termbase in one step.
 
 :::note
-**Extraction is monolingual.** It produces a list of *source* terms with empty targets – it does not suggest translations. You fill in the target side afterwards, by hand or with [AI injection](ai-injection.md). Think of it as building the left-hand column of your termbase.
+**Requires Workbench v1.10.357 or later.** Earlier versions used a mechanical frequency-based extractor (monolingual, no translations); it has been retired. Extraction now uses the same AI provider and model as your translations, configured under **AI → Settings**.
 :::
 
 ### Opening the extraction dialogue
@@ -14,76 +14,57 @@ Go to the **Termbases** tab and click **🔍 Extract Terms** in the button bar b
 
 Extraction reads the source segments of the open project, so open a project first – clicking with none open just tells you to.
 
-:::note
-**On Workbench v1.10.351 and earlier, this button is permanently greyed out** and the feature cannot be reached at all, regardless of whether a project is open. Fixed in **v1.10.352**.
-:::
-
 ### Choosing the source text
 
 The dialogue offers two sources:
 
 * **Use project segments** (default) – extracts from all source segments in the loaded project.
-* **Paste text manually** – enables the text box below, so you can extract from arbitrary text without importing it. Useful for a reference document or a client's style guide.
+* **Paste text manually** – enables the text box below, so you can extract from arbitrary text. Useful for a reference document or a client's style guide.
 
-### Extraction parameters
+### Extraction settings
 
-| Parameter | Range | Default | What it does |
-| --------- | ----- | ------- | ------------ |
-| **Source Language** | en, nl, de, fr, es | en | Selects the stop-word list used to filter out common words. Also becomes the new termbase's source language. |
-| **Min Frequency** | 1–20 | 2 | How many times a candidate must occur to be considered. Raise it on long documents to cut noise; lower it to 1 on short ones. |
-| **Max N-gram** | 1–5 | 3 | Longest multi-word term to consider. 1 finds single words only; 3 finds up to three-word phrases. |
-| **Max Terms** | 10–1000 | 100 | Caps how many candidates appear in the results table, keeping the highest-scoring ones. |
+| Setting | Default | What it does |
+| ------- | ------- | ------------ |
+| **Source Language** | the project's source language | Tells the model what language the text is in. Free text – any language works. |
+| **Target Language** | the project's target language | The language the model translates each term into. |
+| **Domain / Subject** | blank | Optional hint, e.g. `mechanical engineering` or `sewing machines`. Leave blank and the model infers the domain from the text itself. |
 
-Only these five languages have stop-word lists. Extracting from another language still works, but common function words will not be filtered out, so expect more noise and consider raising **Min Frequency**.
+Click **🤖 Extract Terms with AI**. The call takes a few seconds; the dialogue stays responsive while it runs.
+
+:::note
+**Your source text is sent to the configured AI provider** – the same one that handles your translations, so this adds no exposure beyond translating the project. If a project must not leave your machine, use a local model (Ollama) as your provider.
+:::
 
 ### Reviewing the results
 
-Click **🔍 Extract Terms** inside the dialogue to run the extraction. Results fill a table with four columns:
+Results fill a table of term pairs:
 
 | Column | Meaning |
 | ------ | ------- |
-| **Select** | Tick box controlling whether the term is added. Every row starts ticked. |
-| **Term** | The candidate term. |
-| **Frequency** | How many times it occurs in the source text, counted case-insensitively. |
-| **Score** | Ranking score – see below. Rows are sorted highest first. |
+| **Select** | Tick box controlling whether the pair is added. Every row starts ticked. |
+| **Source** | The term, in its canonical (dictionary) form. **Editable** – click to correct. |
+| **Target** | The model's translation. **Editable.** May be empty where the model was unsure – fill it in or untick the row. |
+| **Note** | Optional context from the model, such as a domain label or a caveat. |
 
-If nothing comes back, Supervertaler suggests lowering the minimum frequency – that is usually the right fix on short documents.
+Edit cells directly to fix anything before committing – your edits are what gets saved, not the model's original answer.
 
-Untick anything you do not want before continuing. Reviewing matters here: extraction is statistical, not semantic, so it will happily propose frequent-but-useless phrases alongside genuine terminology.
-
-#### How the score is calculated
-
-The score ranks candidates by how term-like they look:
-
-* **Frequency** contributes on a logarithmic scale, so the tenth occurrence adds far less than the second.
-* **Multi-word terms get a bonus** proportional to their length, since a recurring three-word phrase is usually more valuable than a common single word.
-* **Terms containing `-`, `_`, `.` or `/`** get a bonus, as these often mark technical identifiers and compounds.
-* **Capitalised terms get a bonus**, since product names and other proper nouns are usually worth capturing. The bonus applies only when every word of the term is capitalised.
-
-Anything falling below **Min Frequency** scores zero and is dropped entirely.
-
-:::note
-**Casing is preserved, not invented.** Candidates are counted case-insensitively, so `System` and `system` are the same term rather than two competing entries. Each candidate is then displayed using whichever spelling is most common in the source text. Where a term appears capitalised as often as not – typically because it sometimes starts a sentence – the lower-case form wins, so genuine proper nouns keep their capitals without every sentence-initial word being promoted to one. Still check the casing when you edit the entries; a term that only ever appears at the start of a sentence will come through capitalised.
-:::
+On very large projects only the first portion of the text (roughly 8–9k words) is analysed, and the results label says so explicitly – nothing is truncated silently.
 
 ### Creating the project termbase
 
 Click **Create Project Termbase**, then give it a name. The default is `<Project name> Terminology`.
 
-Supervertaler creates a project-scoped termbase containing every ticked term, with the target side left empty, and refreshes the termbase list.
+Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and refreshes the termbase list. Terms with targets immediately produce [TermLens](termlens.md) suggestions; empty-target entries can be completed later – see [Creating termbases](creating.md).
 
 :::note
 **One project termbase per project.** If the project already has one, creation fails with an error rather than merging into it. To extract again, rename or delete the existing project termbase first.
 :::
 
-Because entries land with empty targets, they will not produce useful [TermLens](termlens.md) suggestions until you fill the target side in. See [Creating termbases](creating.md) for editing entries.
+### Tips
 
-### Limitations
-
-* Monolingual – no translation suggestions.
-* Stop-word filtering covers five languages only.
-* Purely statistical: frequency and shape, no linguistic analysis and no lemmatisation, so inflected forms of one term count as separate candidates.
-* One project termbase per project, with no merge into an existing one.
+- The model's output is a proposal, not a verdict – review it as you would any AI suggestion, especially target translations of ambiguous terms.
+- A one-word domain hint noticeably improves precision on specialised texts.
+- If you build prompts with **AutoPrompt**, note that it already performs glossary extraction as part of prompt generation – the two are complementary: this feature produces a *termbase* you can edit, share, and reuse across sessions.
 
 ***
 
