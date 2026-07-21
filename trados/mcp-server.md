@@ -44,6 +44,10 @@ The server exposes these tools to the AI app:
 | `check_tags` | Translated segments with missing or extra inline tags *(v18.20.95)* |
 | `check_terminology` | Translated segments that don't use the termbase's expected translation *(v18.20.95)* |
 | `list_resources` | The TMs and termbases attached to your project and Supervertaler setup *(v18.20.95)* |
+| `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
+| `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
+| `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
+| `list_project_templates` | Your Trados project templates *(v18.20.111)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
