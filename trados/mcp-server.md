@@ -50,6 +50,8 @@ The server exposes these tools to the AI app:
 | `list_project_templates` | Your Trados project templates *(v18.20.111)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
 | `add_term` | Add a source/target pair to your Write termbases |
+| `update_term` | Fix an existing entry in your Write termbases – exact-match, all other fields preserved *(v18.20.113)* |
+| `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
 | `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
 | `find_and_replace` | Find & replace across the target text – tag-safe, with a preview before applying |
