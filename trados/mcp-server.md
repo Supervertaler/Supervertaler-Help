@@ -96,6 +96,8 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Which file am I working on, and what's the language pair?"
 * "How many words are still untranslated?" / "Give me the analysis statistics – fuzzies, repetitions, new words." *(from v18.20.95)*
 * "How far along is each file in this project?" *(from v18.20.95)*
+* "What projects do I have?" / "When did I create the ACME job, and where is it on disk?" *(all Studio versions' registries – from v18.20.111)*
+* "Which TMs and project templates are on this machine?" *(from v18.20.111)*
 
 ### Finding and reading segments
 
@@ -113,6 +115,9 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Go through the project and make me a glossary of the key terms."
 * "We agreed *draagarm* = *support arm* – add it to my termbase."
 * "Extract the recurring technical terms from this document and add the ones I approve to my termbase."
+* "That pair is outdated – replace it with the official MDR term in both termbases." *(update, exact-match, audited in chat – from v18.20.113)*
+* "Delete that junk entry the QA keeps flagging." *(Write-enabled termbases only; the AI confirms before deleting – from v18.20.113)*
+* "Only consult my **active** termbases for this lookup." *(restricts to termbases with Read ticked; otherwise inactive hits are flagged – from v18.20.113)*
 
 ### Translation memory
 
@@ -169,7 +174,7 @@ Because the AI has all tools in one conversation, the most powerful prompts comb
 * "Draft the remaining segments, but first build a glossary from the segments I already translated and stick to it."
 * "Review my Draft segments against the source: flag mistranslations, fix typos directly, and list anything you weren't sure about."
 
-Items marked *(from v18.20.95)* require the next plugin version; everything else works from v18.20.94.
+Version tags like *(from v18.20.111)* show the plugin version a capability first shipped in – if the AI doesn't offer it, update the plugin. New tools appear in your AI app automatically after a plugin update; no extension reinstall is needed.
 
 ## Setting it up
 
@@ -181,7 +186,7 @@ Items marked *(from v18.20.95)* require the next plugin version; everything else
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
 
-> **Tip.** The connection starts automatically as soon as you have a document open in the Trados editor – you don't need to open the Supervertaler Assistant panel. (On plugin versions before 18.20.99 / 19.20.99 you had to click the Assistant panel once per session to start it; on current versions it's automatic.)
+> **Tip.** The connection starts automatically **as soon as Trados Studio is running** – no document or panel needed, so machine-wide questions ("what projects do I have?") work straight from the Projects view. (History: on 18.20.99–18.20.111 the connection started when you opened a document in the editor; before 18.20.99 you had to click the Supervertaler Assistant panel once per session.)
 
 Install the extension **or** use a manual config entry – not both, or every tool will appear twice in the AI app. The Connect dialog warns you if it detects this.
 
@@ -203,7 +208,7 @@ Everything stays on your computer:
 
 * **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead either **drag the `.mcpb` onto the Extensions page**, or use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Drag-and-drop works once the Extensions page has finished loading – if it's stuck on "Loading extensions…", see the next point first.)
 * **The Extensions page is stuck on "Loading extensions…"** – the page needs to reach Anthropic's extension directory once before it renders; we've seen it hang on the Microsoft Store build of Claude Desktop. Fully quit Claude Desktop (including the system tray icon) and reopen it; check your internet connection. If it keeps hanging, there's a universal fallback that skips the Extensions page entirely: download `Supervertaler-MCP-Server-exe.zip` instead, unzip it somewhere permanent, and use the **Copy config snippet** button in the plugin's Connect dialog to add the server manually to `claude_desktop_config.json` (Claude Desktop → Settings → Developer → Edit Config).
-* **The AI says it can't reach Trados** – make sure Trados Studio is running with a **document open in the editor** (the connection starts automatically once a document is open, not just when Studio is running). The Connect dialog's status lines show whether the connection is up. On older plugin versions (before 18.20.99 / 19.20.99) you also had to click the Supervertaler Assistant panel once per session – updating the plugin removes that step.
+* **The AI says it can't reach Trados** – make sure Trados Studio is running; from v18.20.112 the connection starts with Studio itself (on 18.20.99–18.20.111 you additionally needed a document open in the editor, and before that a click on the Supervertaler Assistant panel – updating the plugin removes those steps). The Connect dialog's status lines show whether the connection is up. Tools that read the open document still need one open, and will say so.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
 * The bridge writes a diagnostic log to `<your data folder>\trados\runtime\bridge.log`.
