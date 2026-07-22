@@ -53,6 +53,7 @@ The server exposes these tools to the AI app:
 | `update_term` | Fix an existing entry in your Write termbases – exact-match, all other fields preserved *(v18.20.113)* |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
+| `save_document` | Save the open document (Ctrl+S) – only when you ask or approve *(v18.20.115)* |
 | `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
 | `find_and_replace` | Find & replace across the target text – tag-safe, with a preview before applying |
 | `get_comments` | Read the Trados comments in the document |
@@ -78,7 +79,7 @@ The server exposes these tools to the AI app:
 * Translations written by the AI are set to **Draft** status unless it explicitly sets another status – so you can filter for them in Studio and review everything.
 * **Locked segments are never touched.**
 * Updates are limited to 200 segments per call; larger jobs are processed in reported batches.
-* Changes land in the open document but are **not saved** – you decide when to save in Studio.
+* Changes land in the open document but are **not saved automatically** – saving stays your decision. From v18.20.115 the AI can run the save for you (`save_document`, same as Ctrl+S), but only when you ask or approve – *"save and run the analysis"* is one instruction, silent saving is not allowed.
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
 
 ## Prompt cookbook
