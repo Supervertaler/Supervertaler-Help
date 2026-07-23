@@ -23,6 +23,17 @@ After installing or updating the plugin, always restart Trados Studio completely
 
 ---
 
+## A keyboard shortcut does nothing
+
+**Symptoms:** A Supervertaler shortcut – e.g. `Ctrl+T` (translate segment), `Ctrl+Alt+T` (add term), `Ctrl+Alt+N` (non-translatable), `Ctrl+Alt+G` (AutoTagger), `Alt+Up` (quick-add to project termbase) or `Ctrl+Q` (QuickLauncher) – has no effect in the editor.
+
+**Solutions:**
+
+1. **Clear the conflicting Trados default** – Trados Studio ships with its own actions bound to these key combinations, and the Trados binding wins. Go to **File → Options → Keyboard Shortcuts**, search for the conflicting Trados action, and delete its binding. The full table of what to delete is in [Keyboard Shortcuts](keyboard-shortcuts.md#first-time-setup-free-up-trados-shortcuts)
+2. **Repeat after a reinstall** – reinstalling or resetting Trados Studio restores its default bindings, so the shortcuts stop working again until you clear them once more
+
+---
+
 ## "Could not load SQLite" or DLL errors
 
 **Symptoms:** Error messages about missing DLLs or SQLite when opening settings or loading a termbase.

@@ -70,6 +70,12 @@ Go to **View > Supervertaler Assistant** to show the panel.
 Both panels are standard Trados dockable panels. You can drag them to any docking position (left, right, top, bottom, floating) or move them to a second monitor. Trados remembers their position between sessions.
 :::
 
+#### Free up the keyboard shortcuts
+
+Trados Studio's own default bindings sit on several of the key combinations Supervertaler uses (`Ctrl+T`, `Ctrl+Alt+T`, `Ctrl+Alt+N`, `Ctrl+Alt+G`, `Alt+Up`, `Ctrl+Q`) – and the Trados binding wins, so those Supervertaler shortcuts do nothing until you clear the defaults. This takes two minutes in **File → Options → Keyboard Shortcuts** and only needs doing once per Trados installation.
+
+See [First-time setup: free up Trados shortcuts](keyboard-shortcuts.md#first-time-setup-free-up-trados-shortcuts) for the full table of what to delete.
+
 #### Running on a Mac (Parallels)
 
 If you are running Trados Studio inside **Parallels Desktop** on a Mac, there is one important rule for the first-run setup:

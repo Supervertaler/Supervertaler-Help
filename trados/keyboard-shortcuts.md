@@ -8,12 +8,21 @@ All keyboard shortcuts available in Supervertaler for Trados, with Mac equivalen
 **Mac users (Parallels):** Ctrl = Control, Alt = Option on Mac keyboards. Check **Parallels → Preferences → Shortcuts** if your modifier key mapping differs.
 :::
 
-:::caution
-**Trados conflict with Ctrl+Alt+T:** Trados Studio assigns this shortcut to "Insert TM Symbol" by default. If Ctrl+Alt+T does nothing, go to **File → Options → Keyboard Shortcuts**, search for "Insert TM Symbol", and remove or reassign its shortcut to free up Ctrl+Alt+T for Supervertaler.
-:::
+## First-time setup: free up Trados shortcuts
 
-:::caution
-**Trados conflict with Ctrl+Q:** Trados Studio assigns Ctrl+Q to "View Internally Source" by default. This action is rarely used. To free up Ctrl+Q for the QuickLauncher, go to **File → Options → Keyboard Shortcuts**, search for "View Internally Source", and remove or reassign its shortcut.
+Trados Studio ships with its own default bindings on several of the key combinations Supervertaler uses – and the Trados binding wins. If a Supervertaler shortcut does nothing, this is almost always why. Go to **File → Options → Keyboard Shortcuts**, search for the Trados action named below, and delete (or reassign) its binding:
+
+| Shortcut | Trados default action (delete its binding) | Supervertaler action that needs it |
+|---|---|---|
+| `Ctrl+T` | Apply Translation Result | Translate the active segment |
+| `Ctrl+Alt+T` | Insert TM Symbol (™) | Add term entry (full editor) |
+| `Ctrl+Alt+N` | New Cloud Project | Quick-add non-translatable term |
+| `Ctrl+Alt+G` | Open GroupShare Project | Auto-tag active segment (AutoTagger) |
+| `Alt+Up` | Focus Previous Row | Quick-add term to project termbase |
+| `Ctrl+Q` | View Internally Source | Open QuickLauncher |
+
+:::note
+The same applies to any other Supervertaler shortcut that appears dead: search **File → Options → Keyboard Shortcuts** for that key combination and clear the Trados binding. You only need to do this once per Trados installation – but repeat it after reinstalling or resetting Trados Studio.
 :::
 
 ## Terminology
@@ -25,7 +34,6 @@ All keyboard shortcuts available in Supervertaler for Trados, with Mac equivalen
 | `Ctrl+Alt+T` | `Control+Option+T` | Add term entry (opens full editor with definition, domain, notes, URL, client, project, and synonyms) |
 | `Ctrl+Alt+N` | `Control+Option+N` | Quick-add non-translatable term |
 | `Ctrl` (tap) | `Control` (tap) | Toggle the floating **TermLens popup** (open / close) |
-| `Ctrl+Alt+G` | `Control+Option+G` | Open the floating TermLens popup (alternative) |
 | `Ctrl+Shift+P` | `Control+Shift+P` | Open **TermPicker** (list-based) |
 | `Alt+1` ... `Alt+9` | `Option+1` ... `Option+9` | Insert term 1–9 by badge number |
 
@@ -58,6 +66,12 @@ Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prom
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
 | `Alt+S` | `Option+S` | Open SuperSearch -- searches for the selected source/target text across all project files |
+
+## AutoTagger
+
+| Shortcut (Windows) | Shortcut (Mac) | Action |
+|---------------------|----------------|--------|
+| `Ctrl+Alt+G` | `Control+Option+G` | Auto-tag the active segment – places the source segment's inline tags in the target |
 
 ## Navigation and Display
 
@@ -110,5 +124,6 @@ Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (tap `Ctrl
 - [TermLens](termlens.md)
 - [Supervertaler](ai-assistant.md)
 - [SuperSearch](supersearch.md)
+- [AutoTagger](autotagger.md)
 - [Batch Translate](batch-translate.md)
 - [SuperMemory](ai-assistant/super-memory.md)
