@@ -50,7 +50,7 @@ For a discussion of when stacking all four sources may or may not be optimal, se
 
 ## Memory-aware chat
 
-The chat panel is memory-aware by default. When you ask the assistant a question about the current segment, it has access to the active memory bank alongside the document context, terminology, and TM matches – so you can ask things like:
+Once memory-bank context is enabled (see below), the chat panel is memory-aware. When you ask the assistant a question about the current segment, it has access to the active memory bank alongside the document context, terminology, and TM matches – so you can ask things like:
 
 - "What register should I use for this client?"
 - "Does this client prefer *whilst* or *while*?"
@@ -66,7 +66,7 @@ Memory bank context can be toggled on or off in [AI Settings](../../settings/ai-
 - **Include memory bank in AI context** – enables KB context for translations and chat.
 - **Use memory bank when generating prompts (AutoPrompt)** – enables KB context when AutoPrompt drafts a new translation prompt.
 
-Both are enabled by default. Disabling them does not delete your memory banks – the content stays on disk and can be re-enabled at any time.
+Both are **off by default** – turn on *Include memory bank in AI context* to activate the integration described on this page. Disabling them again does not delete your memory banks – the content stays on disk and can be re-enabled at any time.
 
 ## See Also
 
