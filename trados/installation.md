@@ -72,7 +72,7 @@ Both panels are standard Trados dockable panels. You can drag them to any dockin
 
 #### Free up the keyboard shortcuts
 
-Trados Studio's own default bindings sit on several of the key combinations Supervertaler uses (`Ctrl+T`, `Ctrl+Alt+T`, `Ctrl+Alt+N`, `Ctrl+Alt+G`, `Alt+Up`, `Ctrl+Q`) – and the Trados binding wins, so those Supervertaler shortcuts do nothing until you clear the defaults. This takes two minutes in **File → Options → Keyboard Shortcuts** and only needs doing once per Trados installation.
+Trados Studio's own default bindings sit on several of the key combinations Supervertaler uses (`Ctrl+Alt+T`, `Ctrl+Alt+N`, `Ctrl+Alt+G`, `Alt+Up`, `Ctrl+Q`) – and the Trados binding wins, so those Supervertaler shortcuts do nothing until you clear the defaults. This takes two minutes in **File → Options → Keyboard Shortcuts** and only needs doing once per Trados installation.
 
 See [First-time setup: free up Trados shortcuts](keyboard-shortcuts.md#first-time-setup-free-up-trados-shortcuts) for the full table of what to delete.
 

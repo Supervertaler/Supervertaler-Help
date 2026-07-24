@@ -16,9 +16,10 @@ The **TermLens popup** is a borderless floating version of the docked TermLens p
 | Key                     | Action                                           |
 | ----------------------- | ------------------------------------------------ |
 | **Ctrl** (tap)          | Toggle the popup (open if closed, close if open) |
-| **Ctrl+Alt+G**          | Open the popup (alternative shortcut)            |
 | **Escape**              | Close without inserting                          |
 | Click outside the popup | Close without inserting                          |
+
+The popup has no second default shortcut – the Ctrl-tap is its trigger. (Earlier versions listed **Ctrl+Alt+G** as an alternative; that key now belongs to [AutoTagger](../autotagger.md). You can assign your own key to the popup in **File → Options → Keyboard Shortcuts** if you'd like one.)
 
 A "Ctrl tap" is a press-and-release of the Ctrl key on its own – no other key in between, and held for less than 400 ms. The same memoQ-style trigger that older versions of Supervertaler used to open TermPicker.
 

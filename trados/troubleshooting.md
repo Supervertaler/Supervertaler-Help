@@ -25,7 +25,7 @@ After installing or updating the plugin, always restart Trados Studio completely
 
 ## A keyboard shortcut does nothing
 
-**Symptoms:** A Supervertaler shortcut – e.g. `Ctrl+T` (translate segment), `Ctrl+Alt+T` (add term), `Ctrl+Alt+N` (non-translatable), `Ctrl+Alt+G` (AutoTagger), `Alt+Up` (quick-add to project termbase) or `Ctrl+Q` (QuickLauncher) – has no effect in the editor.
+**Symptoms:** A Supervertaler shortcut – e.g. `Alt+T` (translate segment), `Ctrl+Alt+T` (add term), `Ctrl+Alt+N` (non-translatable), `Ctrl+Alt+G` (AutoTagger), `Alt+Up` (quick-add to project termbase) or `Ctrl+Q` (QuickLauncher) – has no effect in the editor.
 
 **Solutions:**
 
