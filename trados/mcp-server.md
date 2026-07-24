@@ -32,7 +32,7 @@ The server exposes these tools to the AI app:
 | --- | --- |
 | `help` | A curated menu of what you can ask – shown when you say *"what can I do?"* *(v18.20.106)* |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
-| `get_segments` | List segments, with filters (status, contains-text, file) and paging |
+| `get_segments` | List segments, with filters (status, contains-text, file) and paging – or fetch exact segments by the grid number(s) you see in Studio (`fromNumber`/`toNumber`) *(grid numbers v18.20.114)* |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
 | `get_active_segment` | The segment you are editing right now, with TM matches and termbase hits |
 | `get_project_statistics` | Analysis bands and per-file confirmation statistics – word counts, progress *(v18.20.95)* |
