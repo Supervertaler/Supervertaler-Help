@@ -14,7 +14,6 @@ Trados Studio ships with its own default bindings on several of the key combinat
 
 | Shortcut | Trados default action (delete its binding) | Supervertaler action that needs it |
 |---|---|---|
-| `Ctrl+T` | Apply Translation Result | Translate the active segment |
 | `Ctrl+Alt+T` | Insert TM Symbol (™) | Add term entry (full editor) |
 | `Ctrl+Alt+N` | New Cloud Project | Quick-add non-translatable term |
 | `Ctrl+Alt+G` | Open GroupShare Project | Auto-tag active segment (AutoTagger) |
@@ -42,7 +41,11 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
 | `Ctrl+Q` | `Control+Q` | Open QuickLauncher prompt menu |
-| `Ctrl+T` | `Control+T` | Translate the active segment (uses Batch Translate settings) |
+| `Alt+T` | `Option+T` | Translate the active segment (uses Batch Translate settings) |
+
+:::note
+**Why `Alt+T` and not `Ctrl+T`?** `Ctrl+T` is a Trados factory default ("Apply Translation Result"). Binding *both* to one key made a single press fire both commands, which raced on the same segment and could freeze Studio – so the default moved to the collision-free `Alt+T` (in plugin v18/19.20.119). If you upgraded from an earlier version and still have it on `Ctrl+T`, reassign it to `Alt+T` (or any free key) in **File → Options → Keyboard Shortcuts**; Studio keeps your existing binding across updates.
+:::
 
 ## QuickLauncher Shortcuts
 
