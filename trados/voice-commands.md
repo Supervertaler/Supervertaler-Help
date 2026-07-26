@@ -29,26 +29,29 @@ If the TermLens panel isn't open, a small floating status strip appears instead 
 
 ### Default commands
 
-Everything works out of the box – no configuration needed:
+Everything works out of the box – no configuration needed. Most commands also respond to an alias, so you can use whichever phrasing comes naturally:
 
-| Say | Action |
-| --- | ------ |
-| "confirm" | Confirm segment and move to next unconfirmed |
-| "next segment" / "previous segment" | Move between segments without confirming |
-| "go to the top" / "go to the bottom" | Jump to the first / last segment |
-| "copy source" | Copy source to target |
-| "clear target" | Clear the target segment |
-| "term one" … "term nine" | Insert TermLens match 1–9 (with [capitalisation adaptation](termlens.md#automatic-capitalisation)) |
-| "match one" … "match nine" | Apply Translation Results match 1–9 (Ctrl+1–9) |
-| "term picker" | Open [TermPicker](termlens/termpicker.md) |
-| "term popup" | Open the [TermLens popup](termlens/termlens-popup.md) |
-| "add term" | Quick-add the selection to your write termbases (Alt+Down) |
-| "add project term" | Quick-add the selection to the project termbase (Alt+Up) |
-| "translate" | AI-translate the active segment |
-| "concordance" | Concordance search on the selection (F3) |
-| "zoom in" / "zoom out" | Increase / decrease the editor font size (see setup below) |
-| "escape" | Close the focused popup or dialog |
-| "stop listening" | Turn voice commands off |
+| Say | Or | Action |
+| --- | -- | ------ |
+| "confirm" | "confirm segment" | Confirm segment and move to next unconfirmed |
+| "next segment" | "go down" | Move to the next segment (without confirming) |
+| "previous segment" | "go up" | Move to the previous segment |
+| "go to the top" | "go to top" | Jump to the first segment (Ctrl+Home) |
+| "go to the bottom" | "go to bottom" | Jump to the last segment (Ctrl+End) |
+| "copy source" | "copy from source" | Copy source to target |
+| "clear target" | | Clear the target segment |
+| "term one" … "term nine" | | Insert TermLens match 1–9 (with [capitalisation adaptation](termlens.md#automatic-capitalisation)) |
+| "match one" … "match nine" | | Apply Translation Results match 1–9 (Ctrl+1–9) |
+| "term picker" | "pick term" | Open [TermPicker](termlens/termpicker.md) |
+| "term popup" | "show terms" | Open the [TermLens popup](termlens/termlens-popup.md) |
+| "add term" | "new term" | Quick-add the selection to your write termbases (Alt+Down) |
+| "add project term" | "project term" | Quick-add the selection to the project termbase (Alt+Up) |
+| "translate" | "translate segment" | AI-translate the active segment |
+| "concordance" | "search memory" | Concordance search on the selection (F3) |
+| "zoom in" | "bigger font" | Increase the editor font size (see setup below) |
+| "zoom out" | "smaller font" | Decrease the editor font size (see setup below) |
+| "escape" | "close window" | Close the focused popup or dialog |
+| "stop listening" | "voice off" | Turn voice commands off |
 
 ### One-time setup for "zoom in" / "zoom out"
 
@@ -67,9 +70,9 @@ From then on, "zoom in" and "zoom out" control the editor font size hands-free. 
 * **Grammar-constrained** – the recogniser listens *only* for your command phrases, which is what makes commands fast and reliable. Normal speech and dictation are ignored.
 * **Foreground guard** – commands only execute while Trados Studio is the active window. Speaking in another app can't trigger anything ("stop listening" is the one exception – it always works).
 
-### Advanced: customising commands
+### Customising commands
 
-Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **Advanced** dialog:
+Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **Voice command settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
 
 * Enable/disable individual commands
 * Edit spoken phrases and add aliases
@@ -88,7 +91,7 @@ Default commands added in plugin updates are **merged into your saved set automa
 ### Troubleshooting
 
 * **"Voice commands could not start"** – check that a microphone is available in Windows sound settings, and that the first-run download completed (an interrupted download can be retried by simply starting voice commands again).
-* **A command isn't recognised** – speak the phrase on its own, at normal pace. If a phrase never triggers, give it a more distinctive alias in the Advanced dialog.
+* **A command isn't recognised** – speak the phrase on its own, at normal pace. If a phrase never triggers, give it a more distinctive alias in Voice command settings.
 * **Corrupt model** – delete the `trados/voice/models` folder in your Supervertaler data folder; the next activation re-downloads it.
 
 ### See Also
