@@ -47,6 +47,12 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 **Why `Alt+T` and not `Ctrl+T`?** `Ctrl+T` is a Trados factory default ("Apply Translation Result"). Binding *both* to one key made a single press fire both commands, which raced on the same segment and could freeze Studio – so the default moved to the collision-free `Alt+T` (in plugin v18/19.20.119). If you upgraded from an earlier version and still have it on `Ctrl+T`, reassign it to `Alt+T` (or any free key) in **File → Options → Keyboard Shortcuts**; Studio keeps your existing binding across updates.
 :::
 
+## Voice Commands
+
+| Shortcut (Windows) | Shortcut (Mac) | Action |
+|---------------------|----------------|--------|
+| `Ctrl+Alt+V` | `Control+Option+V` | Toggle [voice commands](voice-commands.md) on/off (same as clicking the 🎤 button in the TermLens header) |
+
 ## QuickLauncher Shortcuts
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
