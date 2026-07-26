@@ -81,7 +81,9 @@ Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **A
 The recogniser only listens for the phrases in your command list, so keep phrases short and distinct from each other. After saving, the recogniser updates immediately – no restart needed.
 :::
 
-Commands are stored in `trados/settings/voice_commands.json` in your Supervertaler data folder, in the same format as Supervertaler Workbench's voice commands – so you can exchange command sets between the two products. Click **Restore defaults** in the Advanced dialog to return to the built-in set (do this after updating the plugin to pick up newly added default commands).
+Commands are stored in `trados/settings/voice_commands.json` in your Supervertaler data folder, in the same format as Supervertaler Workbench's voice commands – so you can exchange command sets between the two products.
+
+Default commands added in plugin updates are **merged into your saved set automatically** – your customisations are never touched. Because of this, if you want to get rid of a default command, **untick it rather than delete it** (a deleted phrase would come back if a later update re-ships it). **Restore defaults** replaces everything with the built-in set, discarding your customisations.
 
 ### Troubleshooting
 
