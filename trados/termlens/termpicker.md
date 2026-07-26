@@ -69,6 +69,8 @@ You can insert a term in two ways:
 
 The selected translation is placed at the current cursor position in the target segment.
 
+Like the TermLens chips, the picker displays and inserts terms with the capitalisation of the segment occurrence (first occurrence when a term appears more than once) rather than the stored capitalisation – see [Adapt term capitalisation](../settings/termlens.md#adapt-term-capitalisation).
+
 :::note
 TermPicker shows the same matches as TermLens, but in a flat list format that is easier to scan when there are many results.
 :::

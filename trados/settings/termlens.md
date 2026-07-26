@@ -68,6 +68,20 @@ You can also control case sensitivity per termbase using the **CS** checkbox in 
 **Tip:** The CS checkbox is useful when you have one termbase with abbreviations that must match exactly (e.g., "GC" should not match "gc") while other termbases should remain case-insensitive.
 :::
 
+## Adapt term capitalisation
+
+**Adapt term capitalisation to the segment** (on by default) makes TermLens display and insert target terms with the capitalisation of the source occurrence in the segment rather than the capitalisation stored in the termbase:
+
+* A term stored as "More preferably" shows and inserts as **"more preferably"** when the segment contains it lower-case mid-sentence
+* A term stored lower-case is **capitalised** when the occurrence starts the sentence
+* An **ALL-CAPS** occurrence (e.g. in a heading) upper-cases the whole inserted term
+
+The adaptation applies everywhere a term is displayed or inserted: the TermLens chips, Alt+digit shortcuts, the TermLens popup and TermPicker.
+
+:::note
+The rules are deliberately conservative. Acronyms and mixed-case terms (MRI, pH, MultiTerm) are never altered, abbreviation matches keep their stored casing, and suffix-tolerant Korean/Japanese matches are left untouched. Untick the option to always show and insert terms exactly as stored.
+:::
+
 ## Panel font size
 
 Adjust the font size used in the TermLens display panel. Valid range: **7 pt** to **16 pt**.

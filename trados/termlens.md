@@ -64,6 +64,12 @@ You can resize the term popup by dragging the grip in the bottom-right corner. T
 
 Click any translation shown under a source word. The translation is inserted at the cursor position in the target field.
 
+#### Automatic capitalisation
+
+Displayed and inserted terms follow the capitalisation of the source occurrence in the segment, not the capitalisation stored in the termbase. A term stored as "More preferably" shows and inserts as "more preferably" when the segment contains it lower-case mid-sentence; a lower-case stored term is capitalised when the occurrence starts the sentence; and an ALL-CAPS occurrence (a heading, say) upper-cases the whole term. This applies to every insertion path – chip clicks, Alt+digit shortcuts, the TermLens popup and TermPicker.
+
+The rules are deliberately conservative: acronyms and mixed-case terms (MRI, pH) are never altered, and abbreviation matches keep their stored casing. You can switch the behaviour off with **Adapt term capitalisation to the segment** in [TermLens settings](settings/termlens.md#adapt-term-capitalisation).
+
 #### Keyboard Shortcuts (Alt+1 through Alt+9)
 
 Each matched term in TermLens is assigned a **numbered badge**. Press **Alt+1** to insert the first match, **Alt+2** for the second, and so on up to **Alt+9**.
