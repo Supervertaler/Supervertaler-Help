@@ -11,6 +11,8 @@ Two ways to toggle voice commands:
 * Click the **🎤 microphone button** in the TermLens panel header (next to the ↻ refresh button)
 * Press **Ctrl+Alt+V** (also available in the editor right-click menu)
 
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-commands-button.png" alt="The microphone button in the TermLens header, green while listening"><figcaption>The 🎤 button in the TermLens header – green while listening</figcaption></figure>
+
 The microphone button shows the state at a glance:
 
 | Colour | Meaning |
@@ -73,6 +75,8 @@ From then on, "zoom in" and "zoom out" control the editor font size hands-free. 
 ### Customising commands
 
 Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **Voice command settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
+
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-command-settings.png" alt="The Voice command settings dialog with the full command grid"><figcaption>Voice command settings – every phrase, alias and action is editable</figcaption></figure>
 
 * Enable/disable individual commands
 * Edit spoken phrases and add aliases
