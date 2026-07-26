@@ -208,6 +208,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "Voice Commands",
+            "link": "/trados/voice-commands/"
+          },
+          {
             "label": "AutoTagger",
             "link": "/trados/autotagger/"
           },

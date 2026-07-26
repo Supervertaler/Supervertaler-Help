@@ -52,6 +52,7 @@
 
 ## 🧩 More Tools
 
+* [Voice Commands](trados/voice-commands.md)
 * [AutoTagger](trados/autotagger.md)
 * [QuickLauncher](trados/quicklauncher.md)
 * [Text Transforms](trados/text-transforms.md)
