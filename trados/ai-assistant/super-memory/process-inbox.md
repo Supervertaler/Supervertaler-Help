@@ -20,12 +20,12 @@ Process Inbox always runs against the **active** memory bank – the one current
 :::
 
 :::note
-The inbox count updates automatically when files are added externally (e.g. via the [Obsidian Web Clipper](obsidian-setup.md#web-clipper)). You can also click the refresh button (↻) on the toolbar to update the count manually.
+The inbox count updates automatically when files are added externally (e.g. via the [Obsidian Web Clipper](/trados/ai-assistant/super-memory/obsidian-setup/#web-clipper)). You can also click the refresh button (↻) on the toolbar to update the count manually.
 :::
 
 ## Markdown only – use Distill for everything else
 
-Process Inbox is a Markdown compiler. It reads `.md` files and writes structured `.md` articles. It does **not** read translation memories, termbases, Word documents, PDFs, or spreadsheets. For any file that is not plain Markdown, use [**Distill**](distill.md) instead – it knows how to extract knowledge from binary formats and writes its output as Markdown into the same `00_INBOX/` folder, ready for Process Inbox to compile.
+Process Inbox is a Markdown compiler. It reads `.md` files and writes structured `.md` articles. It does **not** read translation memories, termbases, Word documents, PDFs, or spreadsheets. For any file that is not plain Markdown, use [**Distill**](/trados/ai-assistant/super-memory/distill/) instead – it knows how to extract knowledge from binary formats and writes its output as Markdown into the same `00_INBOX/` folder, ready for Process Inbox to compile.
 
 If you drop a non-Markdown file (e.g. a `.tmx` or `.pdf`) into the inbox folder by mistake, the inbox count still includes it – so the Process Inbox button lights up – but clicking the button shows a message pointing you at Distill instead. Process Inbox will not silently ignore your file, and it will not crash trying to compile a binary blob as Markdown.
 
@@ -62,7 +62,7 @@ Each article includes rich YAML frontmatter with metadata and backlinks to relat
 | `domain` | Subject area (e.g. Legal, Medical, Marketing) |
 | `client` | Client name when applicable |
 | `language_pair` | Source → target language codes |
-| `confidence` | `high` / `medium` / `low` – set by the AI based on the authority of the source material. Low-confidence articles are flagged for human review by [Health Check](health-check.md). |
+| `confidence` | `high` / `medium` / `low` – set by the AI based on the authority of the source material. Low-confidence articles are flagged for human review by [Health Check](/trados/ai-assistant/super-memory/health-check/). |
 | `sources` | Original filenames the article was derived from, for traceability. Terminology articles always quote exact source and target terms verbatim. |
 | `tldr` | One-sentence summary for fast scanning in Obsidian previews and the master indices below |
 | `created` / `updated` | Timestamps maintained automatically |
@@ -75,7 +75,7 @@ After every successful Process Inbox run, three master index files are refreshed
 * `client-summary.md` – one section per client with their `tldr` or first paragraph
 * `domain-summary.md` – one section per domain with their `tldr` or first paragraph
 
-These indexes are built by scanning frontmatter directly – no extra LLM call – and complete in under a second. Open them in Obsidian to browse the whole bank at a glance. [Health Check](health-check.md) refreshes them as well.
+These indexes are built by scanning frontmatter directly – no extra LLM call – and complete in under a second. Open them in Obsidian to browse the whole bank at a glance. [Health Check](/trados/ai-assistant/super-memory/health-check/) refreshes them as well.
 
 ## Templates and the heal-on-activation prompt
 
@@ -87,7 +87,7 @@ The restore is non-destructive: existing template files in the bank are never ov
 
 ## See Also
 
-- [Distill](distill.md) – extract knowledge from translation files (TMX, DOCX, PDF, termbases)
-- [Health Check](health-check.md) – scan and repair the active memory bank
-- [SuperMemory](../super-memory.md) – overview of SuperMemory and memory banks
-- [Obsidian Setup](obsidian-setup.md) – installing Obsidian and the Web Clipper
+- [Distill](/trados/ai-assistant/super-memory/distill/) – extract knowledge from translation files (TMX, DOCX, PDF, termbases)
+- [Health Check](/trados/ai-assistant/super-memory/health-check/) – scan and repair the active memory bank
+- [SuperMemory](/trados/ai-assistant/super-memory/) – overview of SuperMemory and memory banks
+- [Obsidian Setup](/trados/ai-assistant/super-memory/obsidian-setup/) – installing Obsidian and the Web Clipper

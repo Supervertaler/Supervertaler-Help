@@ -4,7 +4,7 @@ title: "Token Usage & Costs"
 
 Supervertaler keeps a **persistent log of the AI tokens and cost** of every operation, and a built-in **Usage & Costs report** to total and export it. This is the place to answer questions like *"how much did this project cost me?"*, *"how many tokens did we use this month?"*, or *"what should I bill this client for AI?"* — and it works for every provider, including custom and self-hosted models.
 
-It complements the **[Reports](reports.md)** tab (which shows each call live, as you work) and the **[AI Cost Guide](ai-cost-guide.md)** (which explains how costs work). The usage log is the durable, after-the-fact record.
+It complements the **[Reports](/trados/reports/)** tab (which shows each call live, as you work) and the **[AI Cost Guide](/trados/ai-cost-guide/)** (which explains how costs work). The usage log is the durable, after-the-fact record.
 
 :::note
 The usage log records **metadata only** — model, token counts, cost, project, file and language pair — and **never the prompt or response text**. That keeps the file small and safe to open in a spreadsheet or hand to an institution's monitoring team.
@@ -14,7 +14,7 @@ The usage log records **metadata only** — model, token counts, cost, project, 
 
 ### The usage log file
 
-Every AI call appends one line to a monthly file in your [Supervertaler data folder](data-folder.md):
+Every AI call appends one line to a monthly file in your [Supervertaler data folder](/trados/data-folder/):
 
 ```
 …\Supervertaler\trados\usage\usage-2026-06.jsonl
@@ -33,7 +33,7 @@ The file is **JSONL** (one JSON object per line), so you can open it directly in
 A few things worth knowing:
 
 * **Every flow is covered** — Translate, Batch Translate, Quick Launcher, AutoPrompt, Proofread and Chat. A batch run is recorded as **one** line (the whole job), not one line per segment.
-* **`source`** is `actual` when the figures are the real token counts reported by the provider's API, or `estimated` when they fall back to the chars/4 heuristic (see [Estimates vs actual cost](ai-cost-guide.md#estimates-vs-actual-cost)). Cache reads/writes are broken out (`in_cache_read` / `in_cache_write`).
+* **`source`** is `actual` when the figures are the real token counts reported by the provider's API, or `estimated` when they fall back to the chars/4 heuristic (see [Estimates vs actual cost](/trados/ai-cost-guide/#estimates-vs-actual-cost)). Cache reads/writes are broken out (`in_cache_read` / `in_cache_write`).
 * **`cost_known`** is `false` when the model isn't in the price list — the **tokens are still logged**, the cost just shows as unknown until you add a rate (see [Custom and self-hosted models](#custom-and-self-hosted-models)).
 * It's **on by default**. Turn it off any time in **Settings → AI Settings → "Keep a persistent token-usage log"**.
 
@@ -83,8 +83,8 @@ Local models (Ollama) are priced at `0` — their token counts are still recorde
 
 ### See also
 
-* [AI Cost Guide](ai-cost-guide.md) — how AI costs work, estimates vs. actual, provider dashboards
-* [Reports](reports.md) — live, per-call token counts and cost as you work
-* [AI Settings](settings/ai-settings.md) — where the toggle, budget and report button live
-* [Batch Translate](batch-translate.md) — the main driver of token usage
-* [Data folder](data-folder.md) — where the usage log and project files live
+* [AI Cost Guide](/trados/ai-cost-guide/) — how AI costs work, estimates vs. actual, provider dashboards
+* [Reports](/trados/reports/) — live, per-call token counts and cost as you work
+* [AI Settings](/trados/settings/ai-settings/) — where the toggle, budget and report button live
+* [Batch Translate](/trados/batch-translate/) — the main driver of token usage
+* [Data folder](/trados/data-folder/) — where the usage log and project files live

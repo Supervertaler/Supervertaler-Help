@@ -25,7 +25,7 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 | **License** | Free and open source (MIT) |
 | **Source** | [github.com/Supervertaler/Supervertaler-Workbench](https://github.com/Supervertaler/Supervertaler-Workbench) |
 
-Start here: [Quick Start Guide](get-started/quick-start.md)
+Start here: [Quick Start Guide](/workbench/get-started/quick-start/)
 
 ---
 

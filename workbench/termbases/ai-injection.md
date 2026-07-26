@@ -54,7 +54,7 @@ If you mark a term as **forbidden** in the termbase, the AI is explicitly told *
 
 ## See Also
 
-- [Termbase Basics](basics.md)
-- [Importing Terms](importing.md)
-- [AI Translation Overview](../ai-translation/overview.md)
-- [Prompts](../ai-translation/prompts.md)
+- [Termbase Basics](/workbench/termbases/basics/)
+- [Importing Terms](/workbench/termbases/importing/)
+- [AI Translation Overview](/workbench/ai-translation/overview/)
+- [Prompts](/workbench/ai-translation/prompts/)

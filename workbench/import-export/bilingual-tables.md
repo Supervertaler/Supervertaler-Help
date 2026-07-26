@@ -7,7 +7,7 @@ lays your project out as a side-by-side table — handy for reviewing,
 proofreading, or handing off to someone who doesn't use a CAT tool. Its defining
 feature: it can be edited and **re-imported** to pull the changes straight back
 into your project. (Its plain-text sibling,
-[Re-importable Text](bilingual-text.md), does the same round-trip in an
+[Re-importable Text](/workbench/import-export/bilingual-text/), does the same round-trip in an
 AI-friendly text format.)
 
 ## When to use it
@@ -52,9 +52,9 @@ Re-imports written by Workbench v1.10.182 and earlier had a bug where comments-o
 
 ## Other bilingual tables
 
-To round-trip back into a **CAT tool**, use that tool's own bilingual format (memoQ, CafeTran, Phrase, Trados Bilingual Review) rather than the Supervertaler table — see [CAT Tool Overview](../cat-tools/overview.md).
+To round-trip back into a **CAT tool**, use that tool's own bilingual format (memoQ, CafeTran, Phrase, Trados Bilingual Review) rather than the Supervertaler table — see [CAT Tool Overview](/workbench/cat-tools/overview/).
 
 ## Related
 
-- [Supported File Formats](formats.md)
-- [Exporting Translations](exporting.md)
+- [Supported File Formats](/workbench/import-export/formats/)
+- [Exporting Translations](/workbench/import-export/exporting/)

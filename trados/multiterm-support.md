@@ -5,7 +5,7 @@ title: "MultiTerm Support"
 TermLens automatically detects MultiTerm termbases (`.sdltb` files) attached to your active Trados project and displays their terms alongside your Supervertaler terms.
 
 :::note
-This page covers **Trados Studio 2024**, which uses MultiTerm `.sdltb` termbases. If you are on **Trados Studio 2026**, terminology comes from the new `.ttb` format instead –see [Trados Studio 2026 & .ttb](studio-2026.md).
+This page covers **Trados Studio 2024**, which uses MultiTerm `.sdltb` termbases. If you are on **Trados Studio 2026**, terminology comes from the new `.ttb` format instead –see [Trados Studio 2026 & .ttb](/trados/studio-2026/).
 :::
 
 ### How It Works
@@ -80,7 +80,7 @@ Because the access is read-only, there is no risk of data corruption. TermLens o
 
 ### See Also
 
-* [TermLens](termlens.md)
-* [Termbase Management](termbase-management.md)
-* [TermLens Settings](settings/termlens.md)
-* [Troubleshooting](troubleshooting.md)
+* [TermLens](/trados/termlens/)
+* [Termbase Management](/trados/termbase-management/)
+* [TermLens Settings](/trados/settings/termlens/)
+* [Troubleshooting](/trados/troubleshooting/)

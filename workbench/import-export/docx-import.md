@@ -29,7 +29,7 @@ The document you import becomes the project's **source**. When you save the
 project, Supervertaler copies it into the project's `source/` folder and refers
 to it by a relative path — so this faithful round-trip keeps working even if you
 later move, rename, or delete the original you imported from. See
-[The Project Folder](project-folder.md).
+[The Project Folder](/workbench/import-export/project-folder/).
 :::
 
 ## Tips
@@ -43,5 +43,5 @@ later move, rename, or delete the original you imported from. See
 The Okapi sidecar requires Java – Supervertaler ships a bundled JRE, so this is normally invisible. If the sidecar fails to start (Java missing, port 8090 blocked by another process, …) you'll see an "Okapi sidecar required" dialogue with troubleshooting steps. DOCX import won't fall back silently to a degraded engine.
 
 :::note
-Need OCR? Use [PDF Rescue (OCR)](../tools/pdf-rescue.md) to turn scanned PDFs into editable DOCX before importing.
+Need OCR? Use [PDF Rescue (OCR)](/workbench/tools/pdf-rescue/) to turn scanned PDFs into editable DOCX before importing.
 :::

@@ -11,7 +11,7 @@ The plugin ships with default prompts organised into three categories:
 | **QuickLauncher** | Assess translation, Define, Explain (in general), Explain (within project context), Translate segment using fuzzy matches, Translate selection in context of current project | QuickLauncher menu   |
 
 :::note
-The Default Translation Prompt is a general-purpose starting point. For domain-specific projects, use **[AutoPrompt](../../generate-prompt.md)** to automatically create a comprehensive prompt tailored to your document – or duplicate the default prompt in the Prompt Manager and customise it manually.
+The Default Translation Prompt is a general-purpose starting point. For domain-specific projects, use **[AutoPrompt](/trados/generate-prompt/)** to automatically create a comprehensive prompt tailored to your document – or duplicate the default prompt in the Prompt Manager and customise it manually.
 :::
 
 ### About the Default Proofreading Prompt
@@ -23,7 +23,7 @@ The Default Proofreading Prompt is intentionally short. Most of the structure pr
 * **Source query distinction** – source-side errors (typos, duplications, internal inconsistencies) get prefixed with "Source query:" rather than triggering target changes.
 * **Explicit boundaries** – the AI doesn't re-engineer the source, propose alternative terminology without a citation, flag stylistic preferences, or flag empty target lines.
 
-These behaviours target the false-positive patterns most users encounter: the AI fabricating "term X used elsewhere" claims, second-guessing the source's substantive claims, and treating stylistic preferences as errors. See [AI Proofreader](../../ai-proofreader.md) for the full picture, including the Evidence field on issue cards.
+These behaviours target the false-positive patterns most users encounter: the AI fabricating "term X used elsewhere" claims, second-guessing the source's substantive claims, and treating stylistic preferences as errors. See [AI Proofreader](/trados/ai-proofreader/) for the full picture, including the Evidence field on issue cards.
 
 :::note
 **To customise:** clone the default in the Prompt Manager and edit your copy. Defaults are read-only and get refreshed when the plugin updates – your clone keeps all your changes regardless. When the Prompt Library writes the default to disk, it includes a `default: true` flag in the YAML frontmatter; clones get `default: false` and are never touched by future updates.

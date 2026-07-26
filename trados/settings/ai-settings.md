@@ -173,7 +173,7 @@ When enabled, term definitions, domains, and usage notes from your termbases are
 
 Select which termbases are included in AI prompts. Terminology matches from enabled termbases are injected into the prompt to help the AI use the correct, approved terminology.
 
-For [AutoPrompt](../generate-prompt.md), **TermScan** automatically filters the termbase to only terms that appear in the document's source text, keeping the prompt focused and within token limits.
+For [AutoPrompt](/trados/generate-prompt/), **TermScan** automatically filters the termbase to only terms that appear in the document's source text, keeping the prompt focused and within token limits.
 
 :::caution
 **Only enable termbases you trust.** The AI will follow your termbase entries even when they are wrong. If a termbase contains inaccurate, outdated, or low-quality translations, the AI will be forced to use them – producing worse results than if no termbase were enabled at all. Modern LLMs are remarkably good at choosing correct terminology on their own. When in doubt, disable termbases and add terms incrementally as you review the AI's output.
@@ -188,7 +188,7 @@ These settings apply primarily to the **Supervertaler** chat window and **QuickL
 The behaviour of this checkbox depends on which feature is asking for context:
 
 - **Chat and QuickLauncher (live TM lookups).** When enabled, the AI gets translation memory matches – fuzzy and exact – for the active segment. This gives the AI reference translations from your project TMs to improve consistency.
-- **AutoPrompt (Batch Operations).** When enabled, [AutoPrompt](../generate-prompt.md) samples up to 50 already-translated, human-confirmed segment pairs evenly from the active document and includes them in the meta-prompt as in-project reference translations. This includes 100% / exact matches that have been applied and confirmed, fuzzy-and-edited segments, and segments translated from scratch – any segment with a Translated, Approved, or Signed-off confirmation level qualifies. AutoPrompt does **not** do live TM lookups; it samples confirmed segments straight from the document.
+- **AutoPrompt (Batch Operations).** When enabled, [AutoPrompt](/trados/generate-prompt/) samples up to 50 already-translated, human-confirmed segment pairs evenly from the active document and includes them in the meta-prompt as in-project reference translations. This includes 100% / exact matches that have been applied and confirmed, fuzzy-and-edited segments, and segments translated from scratch – any segment with a Translated, Approved, or Signed-off confirmation level qualifies. AutoPrompt does **not** do live TM lookups; it samples confirmed segments straight from the document.
 - **Other Batch Operations (Translate, Proofread).** Unaffected by this checkbox – they always work segment-by-segment without TM reference pairs, regardless of how it's set.
 
 :::tip
@@ -199,7 +199,7 @@ The behaviour of this checkbox depends on which feature is asking for context:
 
 The number of segments before and after the active segment to include as context. Default: **5** (five segments on each side). Range: 1–20.
 
-This provides the AI with local context around the segment you are working on. It is also used for the `{{SURROUNDING_SEGMENTS}}` variable in [QuickLauncher prompts](prompts/prompt-variables.md).
+This provides the AI with local context around the segment you are working on. It is also used for the `{{SURROUNDING_SEGMENTS}}` variable in [QuickLauncher prompts](/trados/settings/prompts/prompt-variables/).
 
 :::note
 Batch Operations do not use this setting because each batch already contains a group of segments that provide context for each other.
@@ -211,7 +211,7 @@ Batch Operations do not use this setting because each batch already contains a g
 
 #### QuickLauncher prompts go to
 
-Picks where Ctrl+Q [QuickLauncher](../quicklauncher.md) prompts run.
+Picks where Ctrl+Q [QuickLauncher](/trados/quicklauncher/) prompts run.
 
 | Option | Where the prompt and response appear |
 |--------|-------------------------------------|
@@ -220,7 +220,7 @@ Picks where Ctrl+Q [QuickLauncher](../quicklauncher.md) prompts run.
 
 The Workbench-Sidekick option is for users who want the bigger reading area Sidekick provides for long explanations, or who prefer to keep all their AI chat history in one product rather than split between Trados and Workbench.
 
-If the option is set to **Workbench Sidekick** but Workbench isn't running (or the [Supervertaler Bridge](../ai-assistant/supervertaler-bridge.md) isn't reachable for any reason), the QuickLauncher silently falls back to the in-Trados Assistant – a missing Workbench never blocks a prompt.
+If the option is set to **Workbench Sidekick** but Workbench isn't running (or the [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) isn't reachable for any reason), the QuickLauncher silently falls back to the in-Trados Assistant – a missing Workbench never blocks a prompt.
 
 :::note
 This setting only affects QuickLauncher. The in-Trados Assistant chat, Batch Translate, AI Proofreader, and other AI features keep using their own panels regardless.
@@ -228,7 +228,7 @@ This setting only affects QuickLauncher. The in-Trados Assistant chat, Batch Tra
 
 ### SuperMemory context
 
-These two toggles control whether [SuperMemory](../ai-assistant/super-memory.md) knowledge base articles are included in the AI context.
+These two toggles control whether [SuperMemory](/trados/ai-assistant/super-memory/) knowledge base articles are included in the AI context.
 
 #### Include memory bank in AI context
 
@@ -240,7 +240,7 @@ When enabled, the AI loads client profiles, domain knowledge, style guides, and 
 
 #### Use memory bank when generating prompts (AutoPrompt)
 
-When enabled, SuperMemory articles are included in the [AutoPrompt](../generate-prompt.md) meta-prompt so that generated translation prompts reflect your established client conventions, terminology reasoning, and style guides. Only effective when "Include memory bank in AI context" is also enabled.
+When enabled, SuperMemory articles are included in the [AutoPrompt](/trados/generate-prompt/) meta-prompt so that generated translation prompts reflect your established client conventions, terminology reasoning, and style guides. Only effective when "Include memory bank in AI context" is also enabled.
 
 ## Prompt logging
 
@@ -270,7 +270,7 @@ Prompt logging is off by default to keep the Reports tab clean. Enable it when y
 
 ## Batch settings
 
-Configure the **batch size** for the [Batch Translate](batch-translate.md) feature. This determines how many segments are sent to the AI provider in a single request.
+Configure the **batch size** for the [Batch Translate](/trados/batch-translate/) feature. This determines how many segments are sent to the AI provider in a single request.
 
 - A larger batch size is faster but uses more tokens per request
 - A smaller batch size is more granular and easier to review
@@ -279,7 +279,7 @@ Configure the **batch size** for the [Batch Translate](batch-translate.md) featu
 
 ## See Also
 
-- [Prompts](prompts.md)
-- [AI Cost Guide](../ai-cost-guide.md)
-- [TermLens Settings](termlens.md)
+- [Prompts](/trados/settings/prompts/)
+- [AI Cost Guide](/trados/ai-cost-guide/)
+- [TermLens Settings](/trados/settings/termlens/)
 - [Supported LLM Providers (Workbench)](https://docs.supervertaler.com/workbench/ai-translation/providers/)

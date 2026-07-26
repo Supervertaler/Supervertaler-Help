@@ -29,7 +29,7 @@ After installing or updating the plugin, always restart Trados Studio completely
 
 **Solutions:**
 
-1. **Clear the conflicting Trados default** – Trados Studio ships with its own actions bound to these key combinations, and the Trados binding wins. Go to **File → Options → Keyboard Shortcuts**, search for the conflicting Trados action, and delete its binding. The full table of what to delete is in [Keyboard Shortcuts](keyboard-shortcuts.md#first-time-setup-free-up-trados-shortcuts)
+1. **Clear the conflicting Trados default** – Trados Studio ships with its own actions bound to these key combinations, and the Trados binding wins. Go to **File → Options → Keyboard Shortcuts**, search for the conflicting Trados action, and delete its binding. The full table of what to delete is in [Keyboard Shortcuts](/trados/keyboard-shortcuts/#first-time-setup-free-up-trados-shortcuts)
 2. **Repeat after a reinstall** – reinstalling or resetting Trados Studio restores its default bindings, so the shortcuts stop working again until you clear them once more
 
 ---
@@ -67,12 +67,12 @@ If you share the database via a cloud-sync folder, ensure the file is fully sync
 
 **Solutions:**
 
-1. **Check the Read toggle** –open [TermLens Settings](settings/termlens.md) and verify the termbase has **Read** enabled
+1. **Check the Read toggle** –open [TermLens Settings](/trados/settings/termlens/) and verify the termbase has **Read** enabled
 2. **Verify the database path** –ensure the path points to the correct `.db` file
 3. **Press F5** to force a full reload of your Supervertaler termbases from disk (note: F5 does not reload MultiTerm termbases)
 4. **Reload the database** –click the **gear icon** in the TermLens panel to open settings, then close the dialogue. This forces a reload of the termbase data
 5. **Check language pair** –the termbase source and target languages must match the current Trados project languages. Either direction works (the matcher handles inverted-direction termbases automatically), but the language pair itself must match.
-6. **Check for reversed entries** –if a single specific term you know exists is silently not matching while other terms in the same segment do, the entry may be stored in the wrong direction in the database (e.g. Dutch text in the English column). This typically affects entries created or edited under v4.19.24 or earlier in projects whose direction was the inverse of the termbase's. Open the **Termbase Editor** (double-click the termbase in TermLens Settings), find the term, check whether the source and target columns contain text in the expected languages, and use **Reverse source/target** to fix it. See [Termbase Management](termbase-management.md) for details.
+6. **Check for reversed entries** –if a single specific term you know exists is silently not matching while other terms in the same segment do, the entry may be stored in the wrong direction in the database (e.g. Dutch text in the English column). This typically affects entries created or edited under v4.19.24 or earlier in projects whose direction was the inverse of the termbase's. Open the **Termbase Editor** (double-click the termbase in TermLens Settings), find the term, check whether the source and target columns contain text in the expected languages, and use **Reverse source/target** to fix it. See [Termbase Management](/trados/termbase-management/) for details.
 
 ---
 
@@ -91,7 +91,7 @@ If you share the database via a cloud-sync folder, ensure the file is fully sync
 When you add terms in MultiTerm, navigate to a different segment in Trados to trigger the auto-refresh. TermLens checks for file changes on each segment change.
 :::
 
-See [MultiTerm Support](multiterm-support.md) for full details.
+See [MultiTerm Support](/trados/multiterm-support/) for full details.
 
 ---
 
@@ -101,7 +101,7 @@ See [MultiTerm Support](multiterm-support.md) for full details.
 
 **Solutions:**
 
-1. **Verify the API key** –open [AI Settings](settings/ai-settings.md) and confirm the key is entered correctly with no extra spaces
+1. **Verify the API key** –open [AI Settings](/trados/settings/ai-settings/) and confirm the key is entered correctly with no extra spaces
 2. **Check provider endpoint** –ensure the provider's API endpoint is reachable from your network (no firewall or proxy blocking it)
 3. **Ollama users** –make sure the Ollama service is running locally:
    ```bash
@@ -126,7 +126,7 @@ See [MultiTerm Support](multiterm-support.md) for full details.
 3. Update the data folder path in Supervertaler settings, or delete `%AppData%\Supervertaler\config.json` and restart Trados to trigger the first-run setup again
 
 :::note
-See [Installation – Running on a Mac (Parallels)](installation.md#running-on-a-mac-parallels) for the recommended setup.
+See [Installation – Running on a Mac (Parallels)](/trados/installation/#running-on-a-mac-parallels) for the recommended setup.
 :::
 
 ---
@@ -140,7 +140,7 @@ See [Installation – Running on a Mac (Parallels)](installation.md#running-on-a
 - **Large termbases** (50,000+ terms) may take a moment to index when the database is first loaded on startup. This is a one-time cost per session
 - **Close and reopen the editor** if the plugin feels unresponsive after a long session
 - **Disable unused termbases** –uncheck **Read** for termbases you do not need for the current project to reduce the matching workload
-- **Reduce batch size** in [AI Settings](settings/ai-settings.md) if Batch Translate is slow or timing out
+- **Reduce batch size** in [AI Settings](/trados/settings/ai-settings/) if Batch Translate is slow or timing out
 
 ---
 
@@ -154,15 +154,15 @@ See [Installation – Running on a Mac (Parallels)](installation.md#running-on-a
    - Steps to reproduce the problem
    - Any error messages or screenshots
 
-See [Support & Community](support.md) for all the ways to get help.
+See [Support & Community](/trados/support/) for all the ways to get help.
 
 ---
 
 ## See Also
 
-- [Support & Community](support.md)
-- [MultiTerm Support](multiterm-support.md)
-- [TermLens Settings](settings/termlens.md)
-- [AI Settings](settings/ai-settings.md)
-- [Termbase Management](termbase-management.md)
+- [Support & Community](/trados/support/)
+- [MultiTerm Support](/trados/multiterm-support/)
+- [TermLens Settings](/trados/settings/termlens/)
+- [AI Settings](/trados/settings/ai-settings/)
+- [Termbase Management](/trados/termbase-management/)
 - [Common Issues (Workbench)](https://docs.supervertaler.com/workbench/troubleshooting/common-issues/)

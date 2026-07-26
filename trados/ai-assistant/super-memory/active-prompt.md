@@ -3,7 +3,7 @@ title: "Active Prompt"
 description: "Per-project prompt that Quick Add appends terminology to"
 ---
 
-Each Trados project can have an **active prompt** -- the prompt that Quick Add appends terminology to. This is also the prompt that is auto-selected in the [Batch Translate](../../batch-translate.md) dropdown when you open the project.
+Each Trados project can have an **active prompt** -- the prompt that Quick Add appends terminology to. This is also the prompt that is auto-selected in the [Batch Translate](/trados/batch-translate/) dropdown when you open the project.
 
 ## Setting the active prompt
 
@@ -20,12 +20,12 @@ The active prompt works for any prompt regardless of folder or category. Even if
 :::
 
 :::note
-The active prompt is saved [per project](../../settings/project-settings.md). Different Trados projects can have different active prompts.
+The active prompt is saved [per project](/trados/settings/project-settings/). Different Trados projects can have different active prompts.
 :::
 
 ## See Also
 
-* [Quick Add](quick-add.md)
-* [Batch Translate](../../batch-translate.md)
-* [Prompts](../../settings/prompts.md)
-* [Per-Project Settings](../../settings/project-settings.md)
+* [Quick Add](/trados/ai-assistant/super-memory/quick-add/)
+* [Batch Translate](/trados/batch-translate/)
+* [Prompts](/trados/settings/prompts/)
+* [Per-Project Settings](/trados/settings/project-settings/)

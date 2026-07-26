@@ -13,7 +13,7 @@ If AI translation isn’t working, this page helps you diagnose provider/API iss
 
 ## Quick checks
 
-1. Verify your API key in [Setting Up API Keys](../get-started/api-keys.md)
+1. Verify your API key in [Setting Up API Keys](/workbench/get-started/api-keys/)
 2. Confirm you selected a **provider** and **model** in Settings (LLM/AI settings)
 3. Try translating a single short segment (`Ctrl+T`)
 4. Check whether your account has credits/quota

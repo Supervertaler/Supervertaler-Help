@@ -7,9 +7,9 @@ description: ">-"
 
 Knowledge inside SuperMemory is organised into one or more **memory banks** – self-contained folders that each act as an Obsidian-compatible vault. You can keep a single default bank, or several banks side by side (one per client, one per domain, one per language pair) and switch between them in one click from the Supervertaler Assistant toolbar. This page covers both SuperMemory as a system and how to work with the memory banks inside it.
 
-SuperMemory is one of several [context sources](context-awareness.md) the assistant consults when it translates a segment, drafts a prompt, or answers a chat message. It sits alongside termbases, translation memories, document content, and segment metadata – you can enable any combination of the five, and the AI draws from whichever are active in AI Settings.
+SuperMemory is one of several [context sources](/trados/ai-assistant/context-awareness/) the assistant consults when it translates a segment, drafts a prompt, or answers a chat message. It sits alongside termbases, translation memories, document content, and segment metadata – you can enable any combination of the five, and the AI draws from whichever are active in AI Settings.
 
-Each memory bank is stored as interlinked Markdown files on disk – human-readable, portable, and future-proof. You can open and edit a bank in any text editor, version-control it with Git, and sync it between machines with Dropbox or OneDrive. [Obsidian](https://obsidian.md/) is optional but recommended: it gives you a visual knowledge graph, backlink navigation, and the Web Clipper browser extension for clipping web content directly into your bank. See [Obsidian Setup](super-memory/obsidian-setup.md) for installation instructions.
+Each memory bank is stored as interlinked Markdown files on disk – human-readable, portable, and future-proof. You can open and edit a bank in any text editor, version-control it with Git, and sync it between machines with Dropbox or OneDrive. [Obsidian](https://obsidian.md/) is optional but recommended: it gives you a visual knowledge graph, backlink navigation, and the Web Clipper browser extension for clipping web content directly into your bank. See [Obsidian Setup](/trados/ai-assistant/super-memory/obsidian-setup/) for installation instructions.
 
 <figure><img src="/.gitbook/assets/Sv_SuperMemory-Graph.png" alt="Memory bank knowledge graph in Obsidian"><figcaption><p>A memory bank knowledge graph showing interconnected clients, terminology, and domain knowledge</p></figcaption></figure>
 
@@ -27,7 +27,7 @@ Every memory bank has the same seven-folder skeleton. The skeleton is created au
 | `05_INDICES`     | Auto-generated indexes and maps of content                                                            |
 | `06_TEMPLATES`   | Reusable templates for new articles                                                                   |
 
-The assistant loads content from `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, and `04_STYLE` as context before each AI call. `00_INBOX`, `05_INDICES`, and `06_TEMPLATES` are workflow folders – they do not feed the AI directly, they support the processing pipeline. See [AI Integration](super-memory/ai-integration.md) for the full loading algorithm.
+The assistant loads content from `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, and `04_STYLE` as context before each AI call. `00_INBOX`, `05_INDICES`, and `06_TEMPLATES` are workflow folders – they do not feed the AI directly, they support the processing pipeline. See [AI Integration](/trados/ai-assistant/super-memory/ai-integration/) for the full loading algorithm.
 
 ## Creating and switching banks
 
@@ -103,15 +103,15 @@ The shared folder also means you can keep your memory banks in a cloud-synced lo
 Once a bank exists, you fill it with knowledge in one of several ways:
 
 1. **Drop Markdown notes into `00_INBOX`** – client briefs, termbases, feedback notes, style guides, reference articles you have written down as `.md` files. These are compiled by Process Inbox.
-2. **Use** [**Distill**](super-memory/distill.md) for everything that is **not** plain Markdown – TMX translation memories, DOCX style guides, PDF reference documents, XLSX/CSV termbases, MultiTerm termbases. Distill reads each file and writes draft Markdown articles into `00_INBOX/`, ready for Process Inbox to compile.
-3. **Use** [**Quick Add**](super-memory/quick-add.md) (Ctrl+Alt+M) to capture a terminology decision or correction while translating. Quick Add appends a short note to the inbox so you can keep working without context-switching.
-4. **Run** [**Process Inbox**](super-memory/process-inbox.md) periodically. The AI reads every Markdown file in `00_INBOX` and files it into `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, or `04_STYLE` as structured articles, interlinked with backlinks.
-5. **Run** [**Health Check**](super-memory/health-check.md) when the bank starts to feel stale. It scans for conflicting terminology, broken links, stale content, and missing cross-references – and heals what it can.
+2. **Use** [**Distill**](/trados/ai-assistant/super-memory/distill/) for everything that is **not** plain Markdown – TMX translation memories, DOCX style guides, PDF reference documents, XLSX/CSV termbases, MultiTerm termbases. Distill reads each file and writes draft Markdown articles into `00_INBOX/`, ready for Process Inbox to compile.
+3. **Use** [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/) (Ctrl+Alt+M) to capture a terminology decision or correction while translating. Quick Add appends a short note to the inbox so you can keep working without context-switching.
+4. **Run** [**Process Inbox**](/trados/ai-assistant/super-memory/process-inbox/) periodically. The AI reads every Markdown file in `00_INBOX` and files it into `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, or `04_STYLE` as structured articles, interlinked with backlinks.
+5. **Run** [**Health Check**](/trados/ai-assistant/super-memory/health-check/) when the bank starts to feel stale. It scans for conflicting terminology, broken links, stale content, and missing cross-references – and heals what it can.
 
 The result is a knowledge graph that grows with your work and that the AI consults before every translation.
 
 :::note
-**Markdown vs binary files in the inbox.** Process Inbox is a Markdown compiler – it reads `.md` files only. Distill is the feature that reads binary formats (TMX, DOCX, PDF, XLSX, termbases) and turns them into Markdown. If you drop a TMX or PDF in `00_INBOX/` directly, Process Inbox will spot it and tell you to run Distill on it instead, rather than silently ignoring the file. See [Process Inbox](super-memory/process-inbox.md#markdown-only-use-distill-for-everything-else) for the full table.
+**Markdown vs binary files in the inbox.** Process Inbox is a Markdown compiler – it reads `.md` files only. Distill is the feature that reads binary formats (TMX, DOCX, PDF, XLSX, termbases) and turns them into Markdown. If you drop a TMX or PDF in `00_INBOX/` directly, Process Inbox will spot it and tell you to run Distill on it instead, rather than silently ignoring the file. See [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/#markdown-only-use-distill-for-everything-else) for the full table.
 :::
 
 ### Templates and the heal-on-activation prompt
@@ -124,19 +124,19 @@ If you activate an older bank that is missing one of these template files – fo
 
 | Feature                                              | Description                                                          |
 | ---------------------------------------------------- | -------------------------------------------------------------------- |
-| [**Quick Add**](super-memory/quick-add.md)           | Capture terms and corrections while translating (Ctrl+Alt+M)         |
-| [**Process Inbox**](super-memory/process-inbox.md)   | Organise raw material into structured KB articles                    |
-| [**Health Check**](super-memory/health-check.md)     | Scan and repair the knowledge base                                   |
-| [**Distill**](super-memory/distill.md)               | Extract knowledge from translation files (TMX, DOCX, PDF, termbases) |
-| [**Active Prompt**](super-memory/active-prompt.md)   | Per-project prompt that Quick Add appends terminology to             |
-| [**AI Integration**](super-memory/ai-integration.md) | How the memory bank enhances translations and chat                   |
-| [**Obsidian Setup**](super-memory/obsidian-setup.md) | Installing Obsidian and the Web Clipper                              |
+| [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/)           | Capture terms and corrections while translating (Ctrl+Alt+M)         |
+| [**Process Inbox**](/trados/ai-assistant/super-memory/process-inbox/)   | Organise raw material into structured KB articles                    |
+| [**Health Check**](/trados/ai-assistant/super-memory/health-check/)     | Scan and repair the knowledge base                                   |
+| [**Distill**](/trados/ai-assistant/super-memory/distill/)               | Extract knowledge from translation files (TMX, DOCX, PDF, termbases) |
+| [**Active Prompt**](/trados/ai-assistant/super-memory/active-prompt/)   | Per-project prompt that Quick Add appends terminology to             |
+| [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) | How the memory bank enhances translations and chat                   |
+| [**Obsidian Setup**](/trados/ai-assistant/super-memory/obsidian-setup/) | Installing Obsidian and the Web Clipper                              |
 
 ## Related
 
-* [**Context Awareness**](context-awareness.md) – the full menu of context sources the assistant uses, with memory banks as one section among several.
-* [**AI Integration**](super-memory/ai-integration.md) – the loading algorithm, token budget, and article prioritisation when a memory bank is consulted by the AI.
-* [**AI Settings**](../settings/ai-settings.md) – toggles for enabling or disabling memory bank context.
+* [**Context Awareness**](/trados/ai-assistant/context-awareness/) – the full menu of context sources the assistant uses, with memory banks as one section among several.
+* [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) – the loading algorithm, token budget, and article prioritisation when a memory bank is consulted by the AI.
+* [**AI Settings**](/trados/settings/ai-settings/) – toggles for enabling or disabling memory bank context.
 
 ## Learn more
 

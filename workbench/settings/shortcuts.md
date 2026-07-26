@@ -101,7 +101,7 @@ Right-click the Workbench tray icon (the orange **Sv**) for a menu with **Show W
 
 ## Editor shortcuts
 
-The editor (translation grid) has its own set of shortcuts for navigation, match insertion, term operations, and so on. See [Editor Keyboard Shortcuts](../editor/keyboard-shortcuts.md) for the full list.
+The editor (translation grid) has its own set of shortcuts for navigation, match insertion, term operations, and so on. See [Editor Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/) for the full list.
 
 ## Exporting a printable cheatsheet
 
@@ -109,6 +109,6 @@ The settings page has an **Export Cheatsheet (HTML)** button on the right-hand p
 
 ## Related pages
 
-- [Editor Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
-- [Voice Commands & Dictation](../voice/overview.md)
-- [Clipboard Manager](../clipboard/overview.md)
+- [Editor Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)
+- [Voice Commands & Dictation](/workbench/voice/overview/)
+- [Clipboard Manager](/workbench/clipboard/overview/)

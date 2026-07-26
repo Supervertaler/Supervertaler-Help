@@ -32,7 +32,7 @@ When in Proofread mode, the prompt dropdown shows only prompts with the **Proofr
 If no prompt is selected, the AI uses a default proofreading instruction that checks for accuracy, completeness, grammar, and consistency.
 
 :::note
-You can create custom proofreading prompts in the [Prompt Manager](settings/prompts.md). Set the category to **Proofread** so they appear in the dropdown when proofreading.
+You can create custom proofreading prompts in the [Prompt Manager](/trados/settings/prompts/). Set the category to **Proofread** so they appear in the dropdown when proofreading.
 :::
 
 ### Default Proofreading Prompt
@@ -47,7 +47,7 @@ What the default prompt *does* add:
 * **Explicit boundaries.** The AI does not re-engineer the source, propose alternative terminology without a citation, flag stylistic preferences as errors, or flag empty target lines (those mean the segment hasn't been translated yet).
 
 :::note
-**If you want to customise:** clone the default in the [Prompt Manager](settings/prompts.md) and edit your copy. The default itself is read-only and gets refreshed when the plugin updates. Your clone keeps all your changes.
+**If you want to customise:** clone the default in the [Prompt Manager](/trados/settings/prompts/) and edit your copy. The default itself is read-only and gets refreshed when the plugin updates. Your clone keeps all your changes.
 :::
 
 ## Reports Tab
@@ -88,12 +88,12 @@ Check the **"Also add issues as Trados comments"** checkbox in the Batch Operati
 
 Batch Proofread builds a richer context than Batch Translate – it has to, because verifying whether a term is rendered consistently across the document is exactly the kind of question the AI needs the whole document to answer.
 
-* **Full bilingual document context** – when **Include document context** is enabled in [AI Settings](settings/ai-settings.md), every segment in the document is included with both source AND target text, with no truncation. This is what makes target-side consistency verifiable: the AI can check "this term is rendered as X in [SEGMENT 0031] and Y in [SEGMENT 0084]" against the actual document, not against a guess. Segment numbers in the document context match the `[SEGMENT XXXX]` numbers the AI sees in the batch it's reviewing, so citations cross-reference both ways.
+* **Full bilingual document context** – when **Include document context** is enabled in [AI Settings](/trados/settings/ai-settings/), every segment in the document is included with both source AND target text, with no truncation. This is what makes target-side consistency verifiable: the AI can check "this term is rendered as X in [SEGMENT 0031] and Y in [SEGMENT 0084]" against the actual document, not against a guess. Segment numbers in the document context match the `[SEGMENT XXXX]` numbers the AI sees in the batch it's reviewing, so citations cross-reference both ways.
 * **Termbase terms** – terminology from enabled termbases is checked against the translations, including term definitions and domains when that option is enabled. Forbidden terms are flagged with a `⚠️ DO NOT USE` marker so the AI knows to flag them as issues if it sees them in the translation.
 * **Language-specific checks** – Dutch, German, and French targets get auto-included quality checks (compound spelling, dt-errors, de/het articles for Dutch; capitalisation and case system for German; accents and punctuation spacing for French). These come from the hardcoded base and don't need to be in your custom prompt.
 * **Custom prompts** – the selected proofreading prompt provides domain-specific quality checks on top of all of the above.
 
-TM matches and surrounding segments are **not** included in proofreading – these are Chat & QuickLauncher features only. See the [AI Settings](settings/ai-settings.md) page for a full comparison table.
+TM matches and surrounding segments are **not** included in proofreading – these are Chat & QuickLauncher features only. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
 
 :::caution
 **Token cost:** Sending the full bilingual document roughly doubles the context size compared to source-only. For typical patent / legal / technical jobs (under ~500 segments) this is a minor cost increase – usually a few extra cents per batch on Sonnet-class models. For very long documents the cost scales linearly; if you proofread a 5,000-segment book you may want to disable Include document context and rely on per-batch context only.
@@ -101,7 +101,7 @@ TM matches and surrounding segments are **not** included in proofreading – the
 
 ## Clipboard Mode
 
-If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. Supervertaler builds a complete proofreading prompt with both source and target text for each segment and copies it to your clipboard. See [Clipboard Mode](clipboard-mode.md) for full details.
+If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. Supervertaler builds a complete proofreading prompt with both source and target text for each segment and copies it to your clipboard. See [Clipboard Mode](/trados/clipboard-mode/) for full details.
 
 ## Tips
 
@@ -115,7 +115,7 @@ Create custom proofreading prompts tailored to your domain. For example, a medic
 
 ### Review After AI Translation
 
-The AI Proofreader pairs well with [Batch Translate](batch-translate.md). After translating a batch of segments with AI, run the proofreader to catch any issues before final review.
+The AI Proofreader pairs well with [Batch Translate](/trados/batch-translate/). After translating a batch of segments with AI, run the proofreader to catch any issues before final review.
 
 ### Combine with Display Filters
 
@@ -125,8 +125,8 @@ Use Trados display filters to isolate specific segments (e.g., segments containi
 
 ## See Also
 
-* [Clipboard Mode](clipboard-mode.md)
-* [Batch Translate](batch-translate.md)
-* [Prompts](settings/prompts.md)
-* [Supervertaler](ai-assistant.md)
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [Clipboard Mode](/trados/clipboard-mode/)
+* [Batch Translate](/trados/batch-translate/)
+* [Prompts](/trados/settings/prompts/)
+* [Supervertaler](/trados/ai-assistant/)
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

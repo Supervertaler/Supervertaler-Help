@@ -51,7 +51,7 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
-| `Ctrl+Alt+V` | `Control+Option+V` | Toggle [voice commands](voice-commands.md) on/off (same as clicking the 🎤 button in the TermLens header) |
+| `Ctrl+Alt+V` | `Control+Option+V` | Toggle [voice commands](/trados/voice-commands/) on/off (same as clicking the 🎤 button in the TermLens header) |
 
 ## QuickLauncher Shortcuts
 
@@ -130,9 +130,9 @@ Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (tap `Ctrl
 
 ## See Also
 
-- [TermLens](termlens.md)
-- [Supervertaler](ai-assistant.md)
-- [SuperSearch](supersearch.md)
-- [AutoTagger](autotagger.md)
-- [Batch Translate](batch-translate.md)
-- [SuperMemory](ai-assistant/super-memory.md)
+- [TermLens](/trados/termlens/)
+- [Supervertaler](/trados/ai-assistant/)
+- [SuperSearch](/trados/supersearch/)
+- [AutoTagger](/trados/autotagger/)
+- [Batch Translate](/trados/batch-translate/)
+- [SuperMemory](/trados/ai-assistant/super-memory/)

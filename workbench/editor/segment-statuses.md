@@ -103,8 +103,8 @@ If you're translating the interface, two tips for the status labels:
 
 ## Related pages
 
-* [Editing & Confirming](editing-confirming.md)
-* [The Translation Grid](translation-grid.md)
-* [CAT Tool Integration](../cat-tools/overview.md)
-* [Trados Studio Workflow](../cat-tools/trados.md)
-* [memoQ Workflow](../cat-tools/memoq.md)
+* [Editing & Confirming](/workbench/editor/editing-confirming/)
+* [The Translation Grid](/workbench/editor/translation-grid/)
+* [CAT Tool Integration](/workbench/cat-tools/overview/)
+* [Trados Studio Workflow](/workbench/cat-tools/trados/)
+* [memoQ Workflow](/workbench/cat-tools/memoq/)

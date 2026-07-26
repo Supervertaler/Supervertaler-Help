@@ -40,7 +40,7 @@ Older prompts using the `domain` key instead of `category` are still supported f
 
 ### System prompt
 
-The plugin automatically prepends a system prompt to every AI call. This system prompt includes language pair information, termbase terms (based on your [AI Context settings](../ai-settings.md)), and TM matches when enabled. The content you write in a prompt `.md` file is the **user prompt** – it is sent after the system prompt.
+The plugin automatically prepends a system prompt to every AI call. This system prompt includes language pair information, termbase terms (based on your [AI Context settings](/trados/settings/ai-settings/)), and TM matches when enabled. The content you write in a prompt `.md` file is the **user prompt** – it is sent after the system prompt.
 
 ### Creating and editing prompts
 

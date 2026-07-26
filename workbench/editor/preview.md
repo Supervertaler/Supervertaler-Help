@@ -27,4 +27,4 @@ Press **`Ctrl+Alt+P`** from the grid to switch the right panel to the Document P
 The shortcut is configurable under **Settings → Keyboard Shortcuts** (View → "Toggle Document Preview panel").
 :::
 
-See also: [Keyboard Shortcuts](keyboard-shortcuts.md)
+See also: [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)

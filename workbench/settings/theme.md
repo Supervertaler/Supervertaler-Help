@@ -21,5 +21,5 @@ The change takes effect immediately – no restart needed. All panels (grid, com
 
 ## Related pages
 
-- [View Settings](view.md)
-- [Font Customisation](fonts.md)
+- [View Settings](/workbench/settings/view/)
+- [Font Customisation](/workbench/settings/fonts/)

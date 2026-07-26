@@ -2,7 +2,7 @@
 title: "TermPicker"
 ---
 
-**TermPicker** is a modal dialogue that lists all matched termbase terms and non-translatables for the current segment in a tabular, keyboard-navigable grid. It is useful when [TermLens](termlens.md) shows many matches and you want a quick overview without the chip layout – or when you want to compare alternative translations side-by-side before committing.
+**TermPicker** is a modal dialogue that lists all matched termbase terms and non-translatables for the current segment in a tabular, keyboard-navigable grid. It is useful when [TermLens](/workbench/termbases/termlens/) shows many matches and you want a quick overview without the chip layout – or when you want to compare alternative translations side-by-side before committing.
 
 <figure><img src="/.gitbook/assets/Supervertaler-Workbench-TermLens-Term-Picker.png" alt=""><figcaption><p>The TermPicker dialogue floating over the editor for the active segment, listing every termbase + NT match in a sortable grid. Row 3 is expanded (▾) to show a synonym sub-row underneath. The docked TermLens panel on the right shows the same matches as chips.</p></figcaption></figure>
 
@@ -21,7 +21,7 @@ Press **Ctrl+Shift+P** to open TermPicker. It appears as a modal window above th
 
 The shortcut is fully remappable via **Settings → Keyboard Shortcuts** under the `term_picker` action.
 
-> Looking for the lone-Ctrl-tap behaviour? That opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. TermPicker described on this page is the table-based alternative for users who prefer a tabular UI.
+> Looking for the lone-Ctrl-tap behaviour? That opens the [TermLens popup](/workbench/termbases/termlens-popup/) – a more compact in-context view of the same matches. TermPicker described on this page is the table-based alternative for users who prefer a tabular UI.
 
 ### Colour-coded rows
 
@@ -81,7 +81,7 @@ TermPicker remembers your preferred size and column widths between sessions, so 
 
 ### See Also
 
-* [TermLens overview](termlens.md)
-* [TermLens popup](termlens-popup.md)
-* [Termbase Basics](basics.md)
-* [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
+* [TermLens overview](/workbench/termbases/termlens/)
+* [TermLens popup](/workbench/termbases/termlens-popup/)
+* [Termbase Basics](/workbench/termbases/basics/)
+* [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)

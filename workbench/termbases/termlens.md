@@ -53,8 +53,8 @@ In addition to the always-visible panels, two on-demand views show the same matc
 
 | View                                                | Trigger        | Best for                                                                    |
 | --------------------------------------------------- | -------------- | --------------------------------------------------------------------------- |
-| [**TermLens popup**](termlens-popup.md)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with arrow keys, insert with Enter or 1–9. |
-| [**TermPicker**](termpicker.md)                     | **Ctrl+Shift+P** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
+| [**TermLens popup**](/workbench/termbases/termlens-popup/)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with arrow keys, insert with Enter or 1–9. |
+| [**TermPicker**](/workbench/termbases/termpicker/)                     | **Ctrl+Shift+P** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
 
 Both pull from the same data the docked panel uses, so the chips / rows you see are identical – just laid out differently.
 
@@ -82,8 +82,8 @@ A standalone version of TermLens is also available as a plugin for **Trados Stud
 
 ## See Also
 
-- [TermLens popup](termlens-popup.md) – on-demand floating mirror of the panel (Ctrl tap)
-- [TermPicker](termpicker.md) – tabular grid view of the same matches (Ctrl+Shift+P)
-- [Termbase Basics](basics.md)
-- [Term Highlighting](highlighting.md)
-- [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
+- [TermLens popup](/workbench/termbases/termlens-popup/) – on-demand floating mirror of the panel (Ctrl tap)
+- [TermPicker](/workbench/termbases/termpicker/) – tabular grid view of the same matches (Ctrl+Shift+P)
+- [Termbase Basics](/workbench/termbases/basics/)
+- [Term Highlighting](/workbench/termbases/highlighting/)
+- [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)

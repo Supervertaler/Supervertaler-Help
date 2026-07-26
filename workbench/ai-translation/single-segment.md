@@ -17,4 +17,4 @@ You can also trigger this from the menu: **Translate → Translate Current Segme
 ## Tips
 
 - Single-segment mode is great for tricky sentences and high-stakes text.
-- Use [SuperLookup](../superlookup/overview.md) for research before confirming.
+- Use [SuperLookup](/workbench/superlookup/overview/) for research before confirming.

@@ -41,19 +41,19 @@ Settings → **Prompts** → **AutoTagger Instruction**. This editable field tel
 
 ## Tracking cost
 
-AutoTagger's AI calls are logged under their own **"AutoTagger"** task in [Token Usage & Costs](usage-costs.md), with token counts and cost like every other AI call.
+AutoTagger's AI calls are logged under their own **"AutoTagger"** task in [Token Usage & Costs](/trados/usage-costs/), with token counts and cost like every other AI call.
 
 ## Notes
 
 - **v1 is single-segment.** A batch mode may follow.
 - **Shortcut:** Ctrl+Alt+G triggers AutoTagger. The floating TermLens popup keeps its **Ctrl-tap** trigger; you can reassign a key to it in Trados' keyboard settings if you like.
-- AutoTagger mirrors the [AutoTagger feature in Supervertaler Workbench](../workbench/ai-translation/autotagger.md).
+- AutoTagger mirrors the [AutoTagger feature in Supervertaler Workbench](/workbench/ai-translation/autotagger/).
 
 ---
 
 ## See Also
 
-- [Batch Translate](batch-translate.md)
-- [Import/Export](import-export.md)
-- [Token Usage & Costs](usage-costs.md)
-- [Keyboard Shortcuts (Trados)](keyboard-shortcuts.md)
+- [Batch Translate](/trados/batch-translate/)
+- [Import/Export](/trados/import-export/)
+- [Token Usage & Costs](/trados/usage-costs/)
+- [Keyboard Shortcuts (Trados)](/trados/keyboard-shortcuts/)

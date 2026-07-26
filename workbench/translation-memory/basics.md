@@ -99,6 +99,6 @@ one pass, with a per-TM summary of how many were sent to each.
 
 ## See Also
 
-- [Creating & Managing TMs](managing-tms.md)
-- [Importing TMX Files](importing-tmx.md)
-- [Fuzzy Matching](fuzzy-matching.md)
+- [Creating & Managing TMs](/workbench/translation-memory/managing-tms/)
+- [Importing TMX Files](/workbench/translation-memory/importing-tmx/)
+- [Fuzzy Matching](/workbench/translation-memory/fuzzy-matching/)

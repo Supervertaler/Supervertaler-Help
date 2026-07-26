@@ -13,7 +13,7 @@ The **Health Check** button scans the active memory bank for problems and fixes 
 * **Stale content** -- articles not updated in more than four weeks that have newer siblings on related topics are flagged, and when a newer article contradicts an older one the older article is flagged as potentially superseded
 * **Duplicate content** -- overlapping articles that should be merged
 * **Missing cross-references** -- terms or domains that should be linked but aren't
-* **Low confidence** -- articles carrying `confidence: low` in their frontmatter are reported as needing human verification (see [Process Inbox](process-inbox.md#enriched-frontmatter) for the confidence scoring)
+* **Low confidence** -- articles carrying `confidence: low` in their frontmatter are reported as needing human verification (see [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/#enriched-frontmatter) for the confidence scoring)
 * **Missing frontmatter fields** -- articles created before the enriched-frontmatter schema shipped have missing `tldr`, `confidence`, `sources`, etc. filled in automatically by inferring values from the article content and folder location
 * **Index accuracy** -- the `05_INDICES/` master files (master-terminology, client-summary, domain-summary) are refreshed so they reflect the current contents of the bank
 
@@ -40,6 +40,6 @@ When Health Check finishes, a summary bubble always appears at the bottom of the
 
 ## See Also
 
-* [Process Inbox](process-inbox.md)
-* [Distill](distill.md)
-* [SuperMemory](../super-memory.md)
+* [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)
+* [Distill](/trados/ai-assistant/super-memory/distill/)
+* [SuperMemory](/trados/ai-assistant/super-memory/)

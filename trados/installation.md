@@ -9,7 +9,7 @@ title: "Installation"
 Install Supervertaler for Trados from the [RWS App Store](https://appstore.rws.com/plugin/432) – it's the only supported install channel. Every published build is RWS-signed, which avoids the "Unsigned Trados Studio Plug-in Found" warning that would otherwise appear when Trados loads a plugin from a different source.
 
 :::note
-Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – the 2024 build will not load in Studio 2026, and vice versa. See [Trados Studio 2026 & .ttb](studio-2026.md) for details. The installation steps below apply to both; only the version you select in the Plugin Installer differs.
+Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – the 2024 build will not load in Studio 2026, and vice versa. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to both; only the version you select in the Plugin Installer differs.
 :::
 
 You can either install from inside Trados Studio (**Add-Ins > RWS App Store**, search for "Supervertaler", click **Download**) or download the `Supervertaler for Trados.sdlplugin` file from the [App Store website](https://appstore.rws.com/plugin/432) and double-click it. Either path opens the Trados Plugin Installer.
@@ -74,7 +74,7 @@ Both panels are standard Trados dockable panels. You can drag them to any dockin
 
 Trados Studio's own default bindings sit on several of the key combinations Supervertaler uses (`Ctrl+Alt+T`, `Ctrl+Alt+N`, `Ctrl+Alt+G`, `Alt+Up`, `Ctrl+Q`) – and the Trados binding wins, so those Supervertaler shortcuts do nothing until you clear the defaults. This takes two minutes in **File → Options → Keyboard Shortcuts** and only needs doing once per Trados installation.
 
-See [First-time setup: free up Trados shortcuts](keyboard-shortcuts.md#first-time-setup-free-up-trados-shortcuts) for the full table of what to delete.
+See [First-time setup: free up Trados shortcuts](/trados/keyboard-shortcuts/#first-time-setup-free-up-trados-shortcuts) for the full table of what to delete.
 
 #### Running on a Mac (Parallels)
 
@@ -163,4 +163,4 @@ To remove the plugin:
 
 #### Next Steps
 
-* [Getting Started](getting-started.md) – set up your first termbase and API key
+* [Getting Started](/trados/getting-started/) – set up your first termbase and API key

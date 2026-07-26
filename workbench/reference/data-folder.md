@@ -82,4 +82,4 @@ and data are preserved.
 ## Related
 
 - [Supervertaler for Trados — User Data Folder](https://docs.supervertaler.com/trados/data-folder/)
-- [General Settings](../settings/general.md)
+- [General Settings](/workbench/settings/general/)

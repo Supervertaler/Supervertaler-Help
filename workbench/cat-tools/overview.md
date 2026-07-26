@@ -74,7 +74,7 @@ Segment statuses map between tools:
 - **Confirmed** → Trados *Translated* ✓ / memoQ *Confirmed*
 - **Approved** → Trados *Sign-off Approved* / memoQ *Reviewer 2 confirmed*
 
-See [Segment Statuses](../editor/segment-statuses.md) for the full reference.
+See [Segment Statuses](/workbench/editor/segment-statuses/) for the full reference.
 
 ### Round-Trip Compatibility
 
@@ -87,10 +87,10 @@ Files exported from Supervertaler can be imported back into the CAT tool with:
 
 | Scenario | Recommended Workflow |
 |----------|---------------------|
-| **Full project in memoQ** | [memoQ Bilingual DOCX](memoq.md) |
-| **Trados Studio package** | [SDLPPX/SDLRPX](trados.md) |
-| **Phrase/Memsource project** | [Phrase Bilingual DOCX](phrase.md) |
-| **CafeTran external view** | [CafeTran DOCX](cafetran.md) |
+| **Full project in memoQ** | [memoQ Bilingual DOCX](/workbench/cat-tools/memoq/) |
+| **Trados Studio package** | [SDLPPX/SDLRPX](/workbench/cat-tools/trados/) |
+| **Phrase/Memsource project** | [Phrase Bilingual DOCX](/workbench/cat-tools/phrase/) |
+| **CafeTran external view** | [CafeTran DOCX](/workbench/cat-tools/cafetran/) |
 | **Standalone DOCX** | Direct import, no CAT tool needed |
 
 ---

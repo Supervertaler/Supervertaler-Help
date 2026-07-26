@@ -18,8 +18,8 @@ The export offers three formats, matching the Supervertaler Workbench:
 
 | Format | Re-importable | When to use |
 |---|---|---|
-| **Word document (.docx)** | ✅ | The default. A 5-column bilingual table (`#`, source, target, status, notes) the proofreader edits in Word. Identical to the Workbench's [Bilingual Table](../workbench/import-export/bilingual-tables.md), so files move between both products. |
-| **Bilingual Text (AI-friendly) (.txt)** | ✅ | A compact plain-text format — one block per segment — ideal for pasting into ChatGPT / Claude / Gemini or editing in any text editor. Identical to the Workbench's [Bilingual Text](../workbench/import-export/bilingual-text.md). |
+| **Word document (.docx)** | ✅ | The default. A 5-column bilingual table (`#`, source, target, status, notes) the proofreader edits in Word. Identical to the Workbench's [Bilingual Table](/workbench/import-export/bilingual-tables/), so files move between both products. |
+| **Bilingual Text (AI-friendly) (.txt)** | ✅ | A compact plain-text format — one block per segment — ideal for pasting into ChatGPT / Claude / Gemini or editing in any text editor. Identical to the Workbench's [Bilingual Text](/workbench/import-export/bilingual-text/). |
 | **HTML report (.html)** | ❌ | Client-facing read-only report. Cannot be re-imported. |
 
 There's no separate "layout" picker: each format has one shape — DOCX and HTML use the 5-column table, and Bilingual Text uses the bracketed `[SEGMENT NNNN]` blocks below.
@@ -159,5 +159,5 @@ The manifest is what lets re-import find the exact Trados segments even if the p
 
 ## See Also
 
-* [Batch Operations](batch-operations.md) — for AI-driven proofreading directly in Trados
-* [AI Proofreader](ai-proofreader.md) — in-Trados proofreading mode
+* [Batch Operations](/trados/batch-operations/) — for AI-driven proofreading directly in Trados
+* [AI Proofreader](/trados/ai-proofreader/) — in-Trados proofreading mode

@@ -43,14 +43,14 @@ Settings → **System Prompts** → **AutoTagger Instruction**. This editable te
 
 ## Tracking cost
 
-AutoTagger's AI calls are logged under their own **"AutoTagger"** task in [Token Usage & Costs](usage-costs.md) (a bulk pass logs the tag-placement step as AutoTagger). Group the usage table by Task to see them broken out.
+AutoTagger's AI calls are logged under their own **"AutoTagger"** task in [Token Usage & Costs](/workbench/ai-translation/usage-costs/) (a bulk pass logs the tag-placement step as AutoTagger). Group the usage table by Task to see them broken out.
 
 ---
 
 ## See Also
 
-- [FuzzyFixer](fuzzyfixer.md)
-- [Tag Validation](../qa/tag-validation.md)
-- [Batch Translation](batch-translation.md)
-- [Prompts](prompts.md)
-- [Token Usage & Costs](usage-costs.md)
+- [FuzzyFixer](/workbench/ai-translation/fuzzyfixer/)
+- [Tag Validation](/workbench/qa/tag-validation/)
+- [Batch Translation](/workbench/ai-translation/batch-translation/)
+- [Prompts](/workbench/ai-translation/prompts/)
+- [Token Usage & Costs](/workbench/ai-translation/usage-costs/)

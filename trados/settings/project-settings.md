@@ -28,7 +28,7 @@ If no project-specific settings exist yet (first time opening a project), the cu
 | Project termbase (pink highlighting) | Yes | Different project termbase per project |
 | MultiTerm visibility | Yes | Different MultiTerm termbases enabled per project |
 | AI context termbase filters | Yes | Different termbases in AI prompts per project |
-| Active prompt | Yes | Each project remembers its [active prompt](../ai-assistant/super-memory/active-prompt.md) for Quick Add and Batch Translate |
+| Active prompt | Yes | Each project remembers its [active prompt](/trados/ai-assistant/super-memory/active-prompt/) for Quick Add and Batch Translate |
 | API keys and provider settings | No | Shared across all projects |
 | Panel font size | No | UI preference, shared |
 | Term shortcut style | No | UI preference, shared |
@@ -36,7 +36,7 @@ If no project-specific settings exist yet (first time opening a project), the cu
 
 ## Storage location
 
-Per-project settings are stored as individual JSON files inside your [user data folder](../data-folder.md):
+Per-project settings are stored as individual JSON files inside your [user data folder](/trados/data-folder/):
 
 ```
 C:\Users\{you}\Supervertaler\trados\projects\
@@ -58,6 +58,6 @@ Settings that are always global (API keys, font size, shortcut preferences) are 
 
 ## See Also
 
-- [TermLens Settings](termlens.md)
-- [AI Settings](ai-settings.md)
-- [Backup & Restore](backup.md)
+- [TermLens Settings](/trados/settings/termlens/)
+- [AI Settings](/trados/settings/ai-settings/)
+- [Backup & Restore](/trados/settings/backup/)

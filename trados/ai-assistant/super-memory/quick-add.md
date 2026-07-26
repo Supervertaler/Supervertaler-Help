@@ -13,8 +13,8 @@ While translating in Trados, you can instantly capture a term, a translation pai
    * **Source term** – the source-language term (pre-filled from your selection). The label shows your project's source language, e.g. "Source term (Dutch):"
    * **Target term** – the target-language translation (pre-filled from target selection, if any). The label shows your project's target language, e.g. "Target term (English):"
    * **Notes** – optional context, alternatives, or client preferences
-   * **Save as raw note** – when ticked, the entry goes to `00_INBOX/` as a free-form note for the AI to compile via [Process Inbox](process-inbox.md) rather than directly to `02_TERMINOLOGY/` as a structured article. Useful when the knowledge is ambiguous or context-dependent (e.g. "fiche can mean either sheet or plug depending on context")
-   * **Also append to active translation prompt** – when ticked, a row is added to the TERMINOLOGY table in your [active prompt](active-prompt.md) so the translation takes effect immediately (only available in structured article mode, not raw note mode)
+   * **Save as raw note** – when ticked, the entry goes to `00_INBOX/` as a free-form note for the AI to compile via [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/) rather than directly to `02_TERMINOLOGY/` as a structured article. Useful when the knowledge is ambiguous or context-dependent (e.g. "fiche can mean either sheet or plug depending on context")
+   * **Also append to active translation prompt** – when ticked, a row is added to the TERMINOLOGY table in your [active prompt](/trados/ai-assistant/super-memory/active-prompt/) so the translation takes effect immediately (only available in structured article mode, not raw note mode)
 4. Click **Add**
 
 The entry lands in whichever memory bank is currently selected in the toolbar dropdown. To capture into a different bank, switch the dropdown first and then press Ctrl+Alt+M.
@@ -29,7 +29,7 @@ The filename uses the format `source term → target term.md` (e.g. `fiche → p
 
 ### Raw note
 
-When "Save as raw note" is **checked**, Quick Add writes a free-form Markdown note to `00_INBOX/` instead. The note contains whatever you entered in the source, target, and notes fields, timestamped and labelled as a Quick Add capture. Run [Process Inbox](process-inbox.md) to have the AI compile it into one or more structured articles.
+When "Save as raw note" is **checked**, Quick Add writes a free-form Markdown note to `00_INBOX/` instead. The note contains whatever you entered in the source, target, and notes fields, timestamped and labelled as a Quick Add capture. Run [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/) to have the AI compile it into one or more structured articles.
 
 This mode is useful when:
 - The knowledge doesn't fit a clean source → target pair (e.g. a term with multiple context-dependent translations)
@@ -42,6 +42,6 @@ This mode is useful when:
 
 ## See Also
 
-* [Active Prompt](active-prompt.md)
-* [Process Inbox](process-inbox.md)
-* [SuperMemory](../super-memory.md)
+* [Active Prompt](/trados/ai-assistant/super-memory/active-prompt/)
+* [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)
+* [SuperMemory](/trados/ai-assistant/super-memory/)

@@ -2,7 +2,7 @@
 title: "Machine Translation"
 ---
 
-Machine translation is delivered by **QuickTrans** – an always-on-top popup (and dockable panel) with translations from every enabled provider. See [QuickTrans](overview.md) for the full reference.
+Machine translation is delivered by **QuickTrans** – an always-on-top popup (and dockable panel) with translations from every enabled provider. See [QuickTrans](/workbench/quicktrans/overview/) for the full reference.
 
 ## Opening QuickTrans
 

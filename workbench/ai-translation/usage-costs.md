@@ -58,7 +58,7 @@ Costs come from a single price list, `pricing.json`, shared with the Trados plug
 { "models": { "my-university-llama": { "input": 0.0, "output": 0.0 } } }
 ```
 
-Until a rate is set, a custom model's **tokens are still logged**, with the cost marked unknown rather than guessed. Local models ([Ollama](ollama.md)) are priced at `0`.
+Until a rate is set, a custom model's **tokens are still logged**, with the cost marked unknown rather than guessed. Local models ([Ollama](/workbench/ai-translation/ollama/)) are priced at `0`.
 
 ### How accurate are the figures?
 
@@ -75,7 +75,7 @@ For the definitive bill, your **provider's own usage dashboard** is authoritativ
 
 ### See also
 
-* [Batch Translation](batch-translation.md) — the main driver of token usage
-* [Supported LLM Providers](providers.md) — which providers report usage
-* [Using Local LLMs (Ollama)](ollama.md) — free, locally-run models
-* [General Settings](../settings/general.md) — where AI Cost Monitoring lives
+* [Batch Translation](/workbench/ai-translation/batch-translation/) — the main driver of token usage
+* [Supported LLM Providers](/workbench/ai-translation/providers/) — which providers report usage
+* [Using Local LLMs (Ollama)](/workbench/ai-translation/ollama/) — free, locally-run models
+* [General Settings](/workbench/settings/general/) — where AI Cost Monitoring lives

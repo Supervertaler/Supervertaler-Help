@@ -61,10 +61,10 @@ Incognito Mode works with all AI providers, not just Claude. The anonymisation i
 
 * Incognito Mode instructs the AI to anonymise data in its **responses**. It does not prevent data from being sent to the AI provider -- your source text, TM matches, and terminology are still included in the prompt as usual. If you need to prevent data from being sent entirely, disable those context options individually in AI Settings.
 * The AI does its best to catch all identifying information, but it cannot guarantee 100% coverage. Always review responses before sharing publicly.
-* [Studio Tools](studio-tools.md) results (project lists, TM searches, etc.) are also anonymised -- the AI receives the real data from the tools but presents it with placeholder names.
+* [Studio Tools](/trados/ai-assistant/studio-tools/) results (project lists, TM searches, etc.) are also anonymised -- the AI receives the real data from the tools but presents it with placeholder names.
 
 ## See Also
 
-* [Supervertaler](../ai-assistant.md) -- Overview
-* [AI Settings](../settings/ai-settings.md) -- Configure context options and Incognito Mode
-* [Context Awareness](context-awareness.md) -- What context is sent to the AI
+* [Supervertaler](/trados/ai-assistant/) -- Overview
+* [AI Settings](/trados/settings/ai-settings/) -- Configure context options and Incognito Mode
+* [Context Awareness](/trados/ai-assistant/context-awareness/) -- What context is sent to the AI

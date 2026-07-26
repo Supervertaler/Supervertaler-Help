@@ -15,7 +15,7 @@ The fastest way to add a term while translating:
 The term is added instantly to all **write-enabled** termbases. No dialogue, no interruption.
 
 :::note
-Quick-add writes to every termbase that has **Write** enabled in your [TermLens Settings](../settings/termlens.md). If you want to target a specific termbase, use the Add Term Entry dialogue (Ctrl+Alt+T) instead.
+Quick-add writes to every termbase that has **Write** enabled in your [TermLens Settings](/trados/settings/termlens/). If you want to target a specific termbase, use the Add Term Entry dialogue (Ctrl+Alt+T) instead.
 :::
 
 ## Quick-add to project termbase (Alt+Up)
@@ -180,6 +180,6 @@ For adding many non-translatable terms at once (e.g., a list of brand names or p
 
 ## See Also
 
-- [TermPicker](termpicker.md)
-- [Termbase Management](../termbase-management.md)
-- [TermLens Settings](../settings/termlens.md)
+- [TermPicker](/trados/termlens/termpicker/)
+- [Termbase Management](/trados/termbase-management/)
+- [TermLens Settings](/trados/settings/termlens/)

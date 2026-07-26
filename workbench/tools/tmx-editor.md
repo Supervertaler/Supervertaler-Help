@@ -23,7 +23,7 @@ Supervertaler includes a built-in TMX editor for inspecting and editing TMX tran
 1. Open the TMX in **✏️ TMX Editor**.
 2. Fix any obvious formatting issues (wrong language, empty segments, etc.).
 3. Save the TMX.
-4. Import it into your project via [Importing TMX files](../translation-memory/importing-tmx.md).
+4. Import it into your project via [Importing TMX files](/workbench/translation-memory/importing-tmx/).
 
 ### Remove unwanted tags
 
@@ -36,5 +36,5 @@ Cleaning tags can improve matching, but it can also remove important formatting.
 
 ## Related
 
-- [Importing TMX files](../translation-memory/importing-tmx.md)
-- [Translation memory](../translation-memory/basics.md)
+- [Importing TMX files](/workbench/translation-memory/importing-tmx/)
+- [Translation memory](/workbench/translation-memory/basics/)

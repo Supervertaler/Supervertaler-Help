@@ -18,10 +18,10 @@ View settings control how the translation grid and the side panels look while yo
 
 - If tags are hard to see, increase tag colour saturation or switch to **Tag View** (shows placeholder boxes instead of raw tag text).
 - For long sessions, try a slightly larger row height — it reduces eye strain when scanning for specific segments.
-- Dark mode is set in [Theme](theme.md), not here.
+- Dark mode is set in [Theme](/workbench/settings/theme/), not here.
 
 ## Related pages
 
-- [Theme (Light/Dark Mode)](theme.md)
-- [Font Customisation](fonts.md)
-- [Keyboard Shortcuts](shortcuts.md)
+- [Theme (Light/Dark Mode)](/workbench/settings/theme/)
+- [Font Customisation](/workbench/settings/fonts/)
+- [Keyboard Shortcuts](/workbench/settings/shortcuts/)

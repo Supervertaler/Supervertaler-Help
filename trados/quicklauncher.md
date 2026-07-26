@@ -214,7 +214,7 @@ This setting is per-folder, so you can mix styles – for example, keep a large 
 
 ### Setting up QuickLauncher prompts
 
-Set `category: QuickLauncher` in the YAML frontmatter, or place the file in a folder called `QuickLauncher` inside your `prompt_library`. See [Prompts → Marking a prompt as a QuickLauncher shortcut](settings/prompts.md#marking-a-prompt-as-a-quicklauncher-shortcut) for full details.
+Set `category: QuickLauncher` in the YAML frontmatter, or place the file in a folder called `QuickLauncher` inside your `prompt_library`. See [Prompts → Marking a prompt as a QuickLauncher shortcut](/trados/settings/prompts/#marking-a-prompt-as-a-quicklauncher-shortcut) for full details.
 
 ### Shared with Supervertaler Workbench
 
@@ -235,7 +235,7 @@ When to pick which:
 * **Workbench Sidekick** gives you a much larger reading area – useful for prompts whose responses are multi-paragraph explanations, full translation comparisons, or anything you want to read without squinting at the narrow Assistant panel.
 
 :::note
-Workbench must be running for this to work. If it isn't (or the [Supervertaler Bridge](ai-assistant/supervertaler-bridge.md) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
+Workbench must be running for this to work. If it isn't (or the [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
 :::
 
 ### Sending prompts to the clipboard (paste into claude.ai, ChatGPT, etc.)
@@ -292,7 +292,7 @@ default_mode: assistant
 
 ### See Also
 
-* [Text Transforms](text-transforms.md)
-* [Prompts](settings/prompts.md)
-* [Supervertaler](ai-assistant.md)
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [Text Transforms](/trados/text-transforms/)
+* [Prompts](/trados/settings/prompts/)
+* [Supervertaler](/trados/ai-assistant/)
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

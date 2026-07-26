@@ -52,14 +52,14 @@ Settings → **System Prompts** → **FuzzyFixer Instruction**. This editable te
 
 ## Tracking cost
 
-FuzzyFixer's AI calls are logged under their own **"FuzzyFixer"** task in [Token Usage & Costs](usage-costs.md). Group the usage table by Task to see them broken out from ordinary translation.
+FuzzyFixer's AI calls are logged under their own **"FuzzyFixer"** task in [Token Usage & Costs](/workbench/ai-translation/usage-costs/). Group the usage table by Task to see them broken out from ordinary translation.
 
 ---
 
 ## See Also
 
-- [Fuzzy Matching](../translation-memory/fuzzy-matching.md)
-- [AutoTagger](autotagger.md)
-- [Batch Translation](batch-translation.md)
-- [Prompts](prompts.md)
-- [Token Usage & Costs](usage-costs.md)
+- [Fuzzy Matching](/workbench/translation-memory/fuzzy-matching/)
+- [AutoTagger](/workbench/ai-translation/autotagger/)
+- [Batch Translation](/workbench/ai-translation/batch-translation/)
+- [Prompts](/workbench/ai-translation/prompts/)
+- [Token Usage & Costs](/workbench/ai-translation/usage-costs/)

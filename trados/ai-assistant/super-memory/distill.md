@@ -26,7 +26,7 @@ description: "Extract knowledge from translation files using AI"
    * **Distill inbox** – automatically distils all non-Markdown files (TMX, DOCX, PDF, XLSX, etc.) currently sitting in the active memory bank's `00_INBOX` folder. The button shows how many files are available and lists their names. Disabled when the inbox has no distillable files.
    * **Select files…** – opens a file picker to choose files from anywhere on disk.
 3. The AI analyses the content and creates draft articles in the active memory bank's `00_INBOX` folder
-4. Review the draft articles in Obsidian, then click **[Process Inbox](process-inbox.md)** to compile them into the knowledge base
+4. Review the draft articles in Obsidian, then click **[Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)** to compile them into the knowledge base
 
 Distill always writes into the **active** memory bank – the one currently selected in the toolbar dropdown. To distil into a different bank, switch the dropdown first.
 
@@ -36,13 +36,13 @@ Distill always writes into the **active** memory bank – the one currently sele
 
 ### From the termbase list (shortcut)
 
-You can distil a termbase directly from the [termbase settings](../../termbase-management.md) without exporting it first:
+You can distil a termbase directly from the [termbase settings](/trados/termbase-management/) without exporting it first:
 
 1. Open **Settings → TermLens** to see your termbase list
 2. Right-click any Supervertaler or MultiTerm termbase
 3. Select **⚗ Distill into memory bank** from the context menu
 
-The plugin reads all terms from the termbase, formats them as a structured table, and sends them straight to the Distill pipeline. Draft articles appear in the active memory bank's `00_INBOX` folder – review them in Obsidian, then run **[Process Inbox](process-inbox.md)** as usual.
+The plugin reads all terms from the termbase, formats them as a structured table, and sends them straight to the Distill pipeline. Draft articles appear in the active memory bank's `00_INBOX` folder – review them in Obsidian, then run **[Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)** as usual.
 
 :::note
 This shortcut is especially useful for MultiTerm termbases attached to your Trados project. Instead of exporting to a file first, you can distil them in one click.
@@ -82,6 +82,6 @@ A 20-page Word document from a client might produce:
 
 ## See Also
 
-* [Process Inbox](process-inbox.md)
-* [Quick Add](quick-add.md)
-* [AI Settings](../../settings/ai-settings.md)
+* [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)
+* [Quick Add](/trados/ai-assistant/super-memory/quick-add/)
+* [AI Settings](/trados/settings/ai-settings/)

@@ -236,12 +236,12 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 | **Ctrl+Alt+A** (⌘⌥A on macOS) | Toggle Always-On listening |
 | **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) — default, configurable |
 
-Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](../settings/shortcuts.md#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
+Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](/workbench/settings/shortcuts/#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 
 ***
 
 ## Related pages
 
-- [Clipboard Manager](../clipboard/overview.md)
-- [Keyboard Shortcuts](../settings/shortcuts.md)
-- [General Settings](../settings/general.md)
+- [Clipboard Manager](/workbench/clipboard/overview/)
+- [Keyboard Shortcuts](/workbench/settings/shortcuts/)
+- [General Settings](/workbench/settings/general/)

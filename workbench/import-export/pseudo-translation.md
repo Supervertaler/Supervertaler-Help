@@ -80,6 +80,6 @@ keep your working project untouched, run the test on a **copy** of the project.
 
 ## Related
 
-- [Export Verification (Word-Count Check)](export-verification.md)
-- [Exporting Translations](exporting.md)
-- [Re-importable Table (DOCX)](bilingual-tables.md)
+- [Export Verification (Word-Count Check)](/workbench/import-export/export-verification/)
+- [Exporting Translations](/workbench/import-export/exporting/)
+- [Re-importable Table (DOCX)](/workbench/import-export/bilingual-tables/)

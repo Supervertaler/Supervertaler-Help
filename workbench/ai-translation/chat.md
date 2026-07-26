@@ -74,7 +74,7 @@ The chat will infer the domain from the surrounding segments and reply.
 * The bridge listens **only on `127.0.0.1`** (loopback). Other devices on your network can never reach it.
 * Each Trados session gets a **fresh authentication token** – stale tokens from old sessions are useless.
 * The bridge **only starts when you have Assistant access** (paid subscription or trial). Without Assistant access, no bridge is started.
-* You can disable the bridge entirely on the Trados side by editing the plugin's `settings.json` and setting `"sidekickBridgeEnabled": false`. See [Supervertaler Bridge](../../trados/ai-assistant/supervertaler-bridge.md) for details.
+* You can disable the bridge entirely on the Trados side by editing the plugin's `settings.json` and setting `"sidekickBridgeEnabled": false`. See [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) for details.
 
 ## Troubleshooting
 
@@ -98,6 +98,6 @@ The bridge was reachable earlier but is no longer responding. Make sure Trados S
 
 ## Related pages
 
-* [AI Translation Overview](overview.md)
-* [Supervertaler Bridge (Trados side)](../../trados/ai-assistant/supervertaler-bridge.md)
-* [Supervertaler (Trados)](../../trados/ai-assistant.md)
+* [AI Translation Overview](/workbench/ai-translation/overview/)
+* [Supervertaler Bridge (Trados side)](/trados/ai-assistant/supervertaler-bridge/)
+* [Supervertaler (Trados)](/trados/ai-assistant/)

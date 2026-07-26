@@ -45,7 +45,7 @@ Studio 2026 cannot open `.sdltb` files directly; the MultiTerm engine that read 
 Once your termbase is in `.ttb` form, TermLens picks it up automatically. There is no separate step in Supervertaler –convert in Studio, and the terms appear.
 
 :::note
-If you work in both Studio 2024 and Studio 2026, keep using the MultiTerm `.sdltb` build for your 2024 projects. The 2026 build is only for Studio 2026 and its `.ttb` termbases. See [MultiTerm Support](multiterm-support.md) for the 2024 workflow.
+If you work in both Studio 2024 and Studio 2026, keep using the MultiTerm `.sdltb` build for your 2024 projects. The 2026 build is only for Studio 2026 and its `.ttb` termbases. See [MultiTerm Support](/trados/multiterm-support/) for the 2024 workflow.
 :::
 
 ## Technical notes
@@ -55,7 +55,7 @@ If you work in both Studio 2024 and Studio 2026, keep using the MultiTerm `.sdlt
 
 ## See also
 
-* [MultiTerm Support](multiterm-support.md) –the equivalent `.sdltb` workflow in Studio 2024
-* [TermLens](termlens.md)
-* [Installation (Trados)](installation.md)
-* [Troubleshooting](troubleshooting.md)
+* [MultiTerm Support](/trados/multiterm-support/) –the equivalent `.sdltb` workflow in Studio 2024
+* [TermLens](/trados/termlens/)
+* [Installation (Trados)](/trados/installation/)
+* [Troubleshooting](/trados/troubleshooting/)

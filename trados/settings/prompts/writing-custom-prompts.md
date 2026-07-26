@@ -96,7 +96,7 @@ surrounding context. Briefly explain your reasoning.
 
 ### Example QuickLauncher prompt – full-document term consistency check
 
-Uses `{{PROJECT}}` to give the AI the entire source document. Useful for checking whether a key term is used consistently, or for understanding a term's meaning across all its occurrences. Reserve this for important queries – see the token cost note in [Prompt Variables](prompt-variables.md).
+Uses `{{PROJECT}}` to give the AI the entire source document. Useful for checking whether a key term is used consistently, or for understanding a term's meaning across all its occurrences. Reserve this for important queries – see the token cost note in [Prompt Variables](/trados/settings/prompts/prompt-variables/).
 
 ```
 I am translating a {{SOURCE_LANGUAGE}} patent ({{DOCUMENT_NAME}}) into {{TARGET_LANGUAGE}}.

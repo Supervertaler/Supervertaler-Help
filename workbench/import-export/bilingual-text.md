@@ -5,7 +5,7 @@ title: "Supervertaler Re-importable Text (AI-friendly)"
 The **Re-importable Text** round-trip lets you send a whole translation out as a
 plain-text file — for a proofreader or an LLM to edit — and then pull the edits
 straight back into the same project. It's the plain-text sibling of the
-[Re-importable Table (DOCX)](bilingual-tables.md), ported from the Supervertaler
+[Re-importable Table (DOCX)](/workbench/import-export/bilingual-tables/), ported from the Supervertaler
 for Trados plugin. Added in v1.10.231.
 
 :::note
@@ -121,5 +121,5 @@ are skipped — and why. Nothing is applied until you click **Apply changes**.
 
 ## Related
 
-- [Supervertaler Re-importable Table (DOCX)](bilingual-tables.md)
-- [Exporting Translations](exporting.md)
+- [Supervertaler Re-importable Table (DOCX)](/workbench/import-export/bilingual-tables/)
+- [Exporting Translations](/workbench/import-export/exporting/)

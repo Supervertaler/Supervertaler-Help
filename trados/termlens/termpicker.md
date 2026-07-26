@@ -2,7 +2,7 @@
 title: "TermPicker"
 ---
 
-**TermPicker** is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when [TermLens](../termlens.md) shows many matches and you want a quick overview without scrolling.
+**TermPicker** is a compact overlay that shows all matched terms for the current segment in a sortable, keyboard-navigable list. It is useful when [TermLens](/trados/termlens/) shows many matches and you want a quick overview without scrolling.
 
 <figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Term-Picker.png" alt=""><figcaption><p>TermPicker dialogue with all matched terms for the current segment</p></figcaption></figure>
 
@@ -20,7 +20,7 @@ Underneath both: your termbases.
 Press **Ctrl+Shift+P** to open TermPicker. It appears as a floating window above the editor.
 
 :::note
-Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](termlens-popup.md) – a more compact in-context view of the same matches. TermPicker described on this page is the list-based alternative for users who prefer a tabular UI.
+Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](/trados/termlens/termlens-popup/) – a more compact in-context view of the same matches. TermPicker described on this page is the list-based alternative for users who prefer a tabular UI.
 :::
 
 ### Colour-coded rows
@@ -69,7 +69,7 @@ You can insert a term in two ways:
 
 The selected translation is placed at the current cursor position in the target segment.
 
-Like the TermLens chips, the picker displays and inserts terms with the capitalisation of the segment occurrence (first occurrence when a term appears more than once) rather than the stored capitalisation – see [Adapt term capitalisation](../settings/termlens.md#adapt-term-capitalisation).
+Like the TermLens chips, the picker displays and inserts terms with the capitalisation of the segment occurrence (first occurrence when a term appears more than once) rather than the stored capitalisation – see [Adapt term capitalisation](/trados/settings/termlens/#adapt-term-capitalisation).
 
 :::note
 TermPicker shows the same matches as TermLens, but in a flat list format that is easier to scan when there are many results.
@@ -79,6 +79,6 @@ TermPicker shows the same matches as TermLens, but in a flat list format that is
 
 ### See Also
 
-* [Adding & Editing Terms](adding-terms.md)
+* [Adding & Editing Terms](/trados/termlens/adding-terms/)
 * [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/)
-* [Termbase Management](../termbase-management.md)
+* [Termbase Management](/trados/termbase-management/)

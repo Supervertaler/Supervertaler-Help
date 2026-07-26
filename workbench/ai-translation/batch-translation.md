@@ -78,6 +78,6 @@ After batch translation:
 
 ## See Also
 
-- [AI Translation Overview](overview.md)
-- [Creating Prompts](prompts.md)
-- [Single Segment Translation](single-segment.md)
+- [AI Translation Overview](/workbench/ai-translation/overview/)
+- [Creating Prompts](/workbench/ai-translation/prompts/)
+- [Single Segment Translation](/workbench/ai-translation/single-segment/)

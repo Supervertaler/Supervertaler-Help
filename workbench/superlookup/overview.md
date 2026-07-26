@@ -12,7 +12,7 @@ It's a top tab in Workbench (🔍 SuperLookup), alongside Editor, TMs, Termbases
 |-----|----------|-------|
 | From the translation grid | **Ctrl+K** | Selects the 🔍 SuperLookup top tab; selected text is used as the search query automatically |
 | From any application (system-wide) | **Ctrl+Alt+L** | Select any text in any app, press the shortcut, and Workbench opens with the SuperLookup tab forward, text pre-filled, and the search auto-fired. The sub-tab it lands on is configurable – see **Configurable landing tab** below. |
-| From any application (system-wide) | **Ctrl+Alt+Q** | Opens the [QuickTrans always-on-top popup](../quicktrans/overview.md) with parallel translations from every enabled provider. Different from SuperLookup – use SuperLookup for terminology lookup, QuickTrans for fast MT options. |
+| From any application (system-wide) | **Ctrl+Alt+Q** | Opens the [QuickTrans always-on-top popup](/workbench/quicktrans/overview/) with parallel translations from every enabled provider. Different from SuperLookup – use SuperLookup for terminology lookup, QuickTrans for fast MT options. |
 | Via the system tray | Right-click the orange Sv icon → **Open SuperLookup** | Useful when the global hotkey is taken by another app |
 
 ## Configurable landing tab
@@ -68,8 +68,7 @@ Web resource tabs maintain login sessions between searches, so you stay logged i
 
 ## Related pages
 
-- [QuickTrans](../quicktrans/overview.md)
-- [TM Concordance Search](tm-search.md)
-- [Termbase Search](termbase-search.md)
-- [Machine Translation](mt.md)
-- [Web Resources](web-resources.md)
+- [QuickTrans](/workbench/quicktrans/overview/)
+- [TM Concordance Search](/workbench/superlookup/tm-search/)
+- [Termbase Search](/workbench/superlookup/termbase-search/)
+- [Web Resources](/workbench/superlookup/web-resources/)

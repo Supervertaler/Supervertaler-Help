@@ -101,9 +101,9 @@ Go to **Settings → View Settings → Termbase Highlight Style**.
 
 ## See Also
 
-- [Creating Termbases](creating.md)
-- [Importing Terms](importing.md)
-- [Term Highlighting](highlighting.md)
-- [Sending Terms to the AI](ai-injection.md)
-- [TermLens (Inline Terminology)](termlens.md)
-- [Term Extraction](extraction.md)
+- [Creating Termbases](/workbench/termbases/creating/)
+- [Importing Terms](/workbench/termbases/importing/)
+- [Term Highlighting](/workbench/termbases/highlighting/)
+- [Sending Terms to the AI](/workbench/termbases/ai-injection/)
+- [TermLens (Inline Terminology)](/workbench/termbases/termlens/)
+- [Term Extraction](/workbench/termbases/extraction/)

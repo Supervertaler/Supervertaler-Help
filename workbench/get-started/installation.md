@@ -96,7 +96,7 @@ python Supervertaler.py
 ```
 
 :::note
-**Linux Users:** If you experience crashes related to spellcheck or ChromaDB, see [Linux-Specific Issues](../troubleshooting/linux.md).
+**Linux Users:** If you experience crashes related to spellcheck or ChromaDB, see [Linux-Specific Issues](/workbench/troubleshooting/linux/).
 :::
 
 ## Dependencies
@@ -116,6 +116,6 @@ The main dependencies are automatically installed via `requirements.txt`:
 
 After installation:
 
-1. [Set up your API keys](api-keys.md) for AI translation
-2. Follow the [Quick Start Guide](quick-start.md)
-3. Create your [first translation project](first-project.md)
+1. [Set up your API keys](/workbench/get-started/api-keys/) for AI translation
+2. Follow the [Quick Start Guide](/workbench/get-started/quick-start/)
+3. Create your [first translation project](/workbench/get-started/first-project/)

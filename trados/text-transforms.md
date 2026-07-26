@@ -133,6 +133,6 @@ After a transform runs, the cleaned target text is automatically copied to your 
 
 ## See Also
 
-- [QuickLauncher](quicklauncher.md)
-- [Prompts](settings/prompts.md)
-- [Keyboard Shortcuts](keyboard-shortcuts.md)
+- [QuickLauncher](/trados/quicklauncher/)
+- [Prompts](/trados/settings/prompts/)
+- [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

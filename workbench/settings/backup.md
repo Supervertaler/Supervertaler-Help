@@ -45,4 +45,4 @@ Because every save can be a snapshot and old ones are pruned for you, if somethi
 
 ## Related
 
-- [General Settings](general.md)
+- [General Settings](/workbench/settings/general/)

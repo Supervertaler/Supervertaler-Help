@@ -24,4 +24,4 @@ If your text contains formatting or CAT tool tags, instruct the model to preserv
 
 ## Next
 
-- [Prompt Manager](prompt-library.md)
+- [Prompt Manager](/workbench/ai-translation/prompt-library/)

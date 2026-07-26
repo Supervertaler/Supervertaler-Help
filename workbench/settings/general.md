@@ -14,7 +14,7 @@ Open **Settings** from the main toolbar or the **View** menu. Settings are organ
 - **Temperature** – controls how creative vs. literal the AI output is (lower = more consistent)
 - **Max tokens** – upper limit on response length
 
-See [Setting Up API Keys](../get-started/api-keys.md) for step-by-step instructions.
+See [Setting Up API Keys](/workbench/get-started/api-keys/) for step-by-step instructions.
 
 ## Project settings
 
@@ -23,11 +23,11 @@ See [Setting Up API Keys](../get-started/api-keys.md) for step-by-step instructi
 
 ## Voice settings
 
-The [🎤 Voice top tab](../voice/overview.md) contains all voice command and dictation settings (engine, model, sensitivity, push-to-talk mode). They are not duplicated here – open the Voice tab directly to configure them.
+The [🎤 Voice top tab](/workbench/voice/overview/) contains all voice command and dictation settings (engine, model, sensitivity, push-to-talk mode). They are not duplicated here – open the Voice tab directly to configure them.
 
 ## Related pages
 
-- [Setting Up API Keys](../get-started/api-keys.md)
-- [AI Translation Overview](../ai-translation/overview.md)
-- [Theme (Light/Dark Mode)](theme.md)
-- [Keyboard Shortcuts](shortcuts.md)
+- [Setting Up API Keys](/workbench/get-started/api-keys/)
+- [AI Translation Overview](/workbench/ai-translation/overview/)
+- [Theme (Light/Dark Mode)](/workbench/settings/theme/)
+- [Keyboard Shortcuts](/workbench/settings/shortcuts/)

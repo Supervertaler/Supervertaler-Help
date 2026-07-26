@@ -35,7 +35,7 @@ You can configure keys for multiple providers in the same settings panel. Switch
 
 Ollama runs models entirely on your machine. No API key or internet connection is needed.
 
-See [Ollama Setup](../ai-translation/ollama.md) for download and configuration instructions.
+See [Ollama Setup](/workbench/ai-translation/ollama/) for download and configuration instructions.
 
 ## Using OpenRouter (one key for everything)
 
@@ -54,6 +54,6 @@ If you prefer not to manage multiple accounts, OpenRouter lets you access 200+ m
 
 ## Next steps
 
-- [Create your first project](first-project.md)
-- [Supported LLM Providers](../ai-translation/providers.md)
-- [AI Translation Overview](../ai-translation/overview.md)
+- [Create your first project](/workbench/get-started/first-project/)
+- [Supported LLM Providers](/workbench/ai-translation/providers/)
+- [AI Translation Overview](/workbench/ai-translation/overview/)

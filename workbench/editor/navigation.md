@@ -35,11 +35,11 @@ If you want to move between segments regardless of where the cursor is inside th
 
 By default all segments are shown on one page. You can split the project into fixed-size pages with the **Per page** selector (very large projects open paginated automatically).
 
-- See: [Pagination](pagination.md)
+- See: [Pagination](/workbench/editor/pagination/)
 
 ## Tips
 
 - Keep one hand on the keyboard for speed: navigate, edit, confirm, repeat.
 - If you work in a CAT tool daily, customize shortcuts to match your muscle memory.
 
-See also: [Keyboard Shortcuts](keyboard-shortcuts.md)
+See also: [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)

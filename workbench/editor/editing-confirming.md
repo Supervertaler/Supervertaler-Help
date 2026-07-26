@@ -50,7 +50,7 @@ Split and merge are available for documents Supervertaler segments itself — **
 
 ## Related pages
 
-* [Segment Statuses](segment-statuses.md) – full reference for workflow statuses, match origins, and how they map to Trados and memoQ
-* [The Translation Grid](translation-grid.md)
-* [Find & Replace](find-replace.md)
-* [Tag Validation](../qa/tag-validation.md)
+* [Segment Statuses](/workbench/editor/segment-statuses/) – full reference for workflow statuses, match origins, and how they map to Trados and memoQ
+* [The Translation Grid](/workbench/editor/translation-grid/)
+* [Find & Replace](/workbench/editor/find-replace/)
+* [Tag Validation](/workbench/qa/tag-validation/)

@@ -52,5 +52,5 @@ If a bridged TM isn't showing up where you expect, the easiest first checks are:
 
 ## See also
 
-- [Translation Memory Basics](basics.md) – the rest of how TMs work in Workbench.
+- [Translation Memory Basics](/workbench/translation-memory/basics/) – the rest of how TMs work in Workbench.
 - The matching Trados-side help page lives at [Shared TM Bridge with Workbench](/trados/shared-tm-bridge/).

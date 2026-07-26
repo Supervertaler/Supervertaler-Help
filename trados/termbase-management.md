@@ -22,7 +22,7 @@ The `.db` file uses the same Supervertaler SQLite format as the standalone appli
 
 ## MultiTerm termbases
 
-If your Trados project has MultiTerm termbases (`.sdltb` files) attached, they appear automatically at the bottom of the termbase list with a **[MultiTerm]** label and green background. These termbases are read-only in TermLens –to manage their terms, use Trados's built-in MultiTerm interface. See [MultiTerm Support](multiterm-support.md) for full details.
+If your Trados project has MultiTerm termbases (`.sdltb` files) attached, they appear automatically at the bottom of the termbase list with a **[MultiTerm]** label and green background. These termbases are read-only in TermLens –to manage their terms, use Trados's built-in MultiTerm interface. See [MultiTerm Support](/trados/multiterm-support/) for full details.
 
 ## Termbase list
 
@@ -31,7 +31,7 @@ Once a database is loaded, the termbase list shows all Supervertaler termbases i
 | Toggle | Purpose |
 |--------|---------|
 | **Read** | Load terms from this termbase for matching in TermLens |
-| **Write** | New terms added via [quick-add shortcuts](termlens/adding-terms.md) go into this termbase |
+| **Write** | New terms added via [quick-add shortcuts](/trados/termlens/adding-terms/) go into this termbase |
 | **Project** | Designate as the project termbase (terms shown in pink, prioritised in matching) |
 
 :::caution
@@ -146,19 +146,19 @@ This action is mostly for repairing legacy entries created or edited under v4.19
 
 ## Distill into a memory bank
 
-You can extract knowledge from any termbase and add it to a [memory bank](ai-assistant/super-memory.md) using the **Distill** feature:
+You can extract knowledge from any termbase and add it to a [memory bank](/trados/ai-assistant/super-memory/) using the **Distill** feature:
 
 1. Right-click a termbase in the list
 2. Select **⚗ Distill into memory bank**
 
-The AI analyses all terms in the termbase and creates structured articles (terminology decisions, domain knowledge) in the active memory bank's inbox. See [Distill](ai-assistant/super-memory/distill.md) for full details.
+The AI analyses all terms in the termbase and creates structured articles (terminology decisions, domain knowledge) in the active memory bank's inbox. See [Distill](/trados/ai-assistant/super-memory/distill/) for full details.
 
 ---
 
 ## See Also
 
-- [MultiTerm Support](multiterm-support.md)
-- [TermLens Settings](settings/termlens.md)
-- [Adding & Editing Terms](termlens/adding-terms.md)
-- [Distill](ai-assistant/super-memory/distill.md)
+- [MultiTerm Support](/trados/multiterm-support/)
+- [TermLens Settings](/trados/settings/termlens/)
+- [Adding & Editing Terms](/trados/termlens/adding-terms/)
+- [Distill](/trados/ai-assistant/super-memory/distill/)
 - [Termbase Basics (Workbench)](https://docs.supervertaler.com/workbench/termbases/basics/)

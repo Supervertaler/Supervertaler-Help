@@ -24,7 +24,7 @@ On the **TermLens** tab:
 You can add multiple termbases. Designate one as the **Project termbase** to give its terms higher priority (shown in pink).
 
 :::note
-Supervertaler for Trados uses the same `.db` termbase format as Supervertaler Workbench. Any termbase created in either tool works in both. On Windows, both tools can point to the same `.db` file in a shared data folder. On a Mac running Trados via Parallels, the two products use separate filesystems – see [Running on a Mac](installation.md#running-on-a-mac-parallels) for details.
+Supervertaler for Trados uses the same `.db` termbase format as Supervertaler Workbench. Any termbase created in either tool works in both. On Windows, both tools can point to the same `.db` file in a shared data folder. On a Mac running Trados via Parallels, the two products use separate filesystems – see [Running on a Mac](/trados/installation/#running-on-a-mac-parallels) for details.
 :::
 
 ### 3. Configure AI (AI Settings tab)
@@ -36,7 +36,7 @@ On the **AI Settings** tab:
 3. Choose a **model**
 
 :::note
-**Don't have an API key yet?** You can skip this step entirely and use **[Clipboard Mode](clipboard-mode.md)** instead. Clipboard Mode lets you translate and proofread using any web-based AI you already have access to – ChatGPT, Claude, Gemini, or any other LLM chat interface. No API key required. It is the fastest way to start using AI translation in Supervertaler for Trados.
+**Don't have an API key yet?** You can skip this step entirely and use **[Clipboard Mode](/trados/clipboard-mode/)** instead. Clipboard Mode lets you translate and proofread using any web-based AI you already have access to – ChatGPT, Claude, Gemini, or any other LLM chat interface. No API key required. It is the fastest way to start using AI translation in Supervertaler for Trados.
 :::
 
 ### 4. Click OK
@@ -59,7 +59,7 @@ Settings are saved and applied immediately.
 4. Paste it into any web-based AI (ChatGPT, Claude, Gemini, etc.) and send it
 5. Copy the AI's response and click **Paste from Clipboard** – the translations are written back into Trados
 
-See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
+See [Clipboard Mode](/trados/clipboard-mode/) for the full walkthrough.
 
 ### AI Translate (API key required)
 
@@ -78,17 +78,17 @@ See [Clipboard Mode](clipboard-mode.md) for the full walkthrough.
 
 | Feature | Page |
 |---------|------|
-| TermLens terminology display | [TermLens](termlens.md) |
-| AI via clipboard (no API key) | [Clipboard Mode](clipboard-mode.md) |
-| AI chat interface | [Supervertaler](ai-assistant.md) |
-| Bulk AI translation | [Batch Translate](batch-translate.md) |
-| All shortcuts | [Keyboard Shortcuts](keyboard-shortcuts.md) |
+| TermLens terminology display | [TermLens](/trados/termlens/) |
+| AI via clipboard (no API key) | [Clipboard Mode](/trados/clipboard-mode/) |
+| AI chat interface | [Supervertaler](/trados/ai-assistant/) |
+| Bulk AI translation | [Batch Translate](/trados/batch-translate/) |
+| All shortcuts | [Keyboard Shortcuts](/trados/keyboard-shortcuts/) |
 
 ---
 
 ## See Also
 
-- [Installation](installation.md)
-- [Clipboard Mode](clipboard-mode.md)
-- [TermLens](termlens.md)
-- [Supervertaler](ai-assistant.md)
+- [Installation](/trados/installation/)
+- [Clipboard Mode](/trados/clipboard-mode/)
+- [TermLens](/trados/termlens/)
+- [Supervertaler](/trados/ai-assistant/)

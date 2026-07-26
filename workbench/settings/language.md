@@ -165,5 +165,5 @@ Open an issue with the `i18n` label on the [Workbench tracker](https://github.co
 ## See also
 
 - [`translations/TRANSLATING.md`](https://github.com/Supervertaler/Supervertaler-Workbench/blob/main/translations/TRANSLATING.md) – the in-repo contributor guide with extra detail
-- [General Settings](general.md) – the parent Settings tab
+- [General Settings](/workbench/settings/general/) – the parent Settings tab
 - Tracker issues [#178](https://github.com/Supervertaler/Supervertaler-Workbench/issues/178) and [#190](https://github.com/Supervertaler/Supervertaler-Workbench/issues/190) – the original i18n requests

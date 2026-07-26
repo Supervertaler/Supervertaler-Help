@@ -118,7 +118,7 @@ Proofreading comments are **not** exported to the final document. They're a tran
 
 ### The QA menu
 
-AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**), which also hosts **Delete All Proofreading Comments**. See **[AI Proofreading](../qa/proofreading.md)** for how to run a pass. QA is Workbench's home for quality-assurance features — see also [Spellcheck](../qa/spellcheck.md), [Tag Validation](../qa/tag-validation.md) and [Non-Translatables](../qa/non-translatables.md).
+AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**), which also hosts **Delete All Proofreading Comments**. See **[AI Proofreading](/workbench/qa/proofreading/)** for how to run a pass. QA is Workbench's home for quality-assurance features — see also [Spellcheck](/workbench/qa/spellcheck/), [Tag Validation](/workbench/qa/tag-validation/) and [Non-Translatables](/workbench/qa/non-translatables/).
 
 ## Quick reference
 
@@ -137,6 +137,6 @@ AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**),
 
 ## Related
 
-* [Editing & Confirming](editing-confirming.md)
-* [Keyboard Shortcuts (Workbench)](keyboard-shortcuts.md)
-* [Segment Statuses](segment-statuses.md)
+* [Editing & Confirming](/workbench/editor/editing-confirming/)
+* [Keyboard Shortcuts (Workbench)](/workbench/editor/keyboard-shortcuts/)
+* [Segment Statuses](/workbench/editor/segment-statuses/)

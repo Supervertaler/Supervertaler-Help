@@ -76,7 +76,7 @@ Refresh reloads three sources: the unified prompt library (via `UnifiedPromptLib
 
 ### 📌 Personal Snippets
 
-Your own text snippets (e.g. phone numbers, email signatures, boilerplate paragraphs). Snippets are loaded from `.md` files inside your user-data folder – see [Personal Snippets](../../trados/text-transforms.md) for the file format.
+Your own text snippets (e.g. phone numbers, email signatures, boilerplate paragraphs). Snippets are loaded from `.md` files inside your user-data folder – see [Personal Snippets](/trados/text-transforms/) for the file format.
 
 Activating a snippet (click or Enter) copies its body to the clipboard and pastes it into the source app via the same hide-and-paste flow used for clipboard clips.
 
@@ -223,6 +223,6 @@ The full clip history is stored in your user data folder in a shared SQLite data
 
 ## Related pages
 
-* [Voice Commands & Dictation](../voice/overview.md)
-* [Chat (AI conversation panel)](../ai-translation/chat.md)
-* [Keyboard Shortcuts](../settings/shortcuts.md)
+* [Voice Commands & Dictation](/workbench/voice/overview/)
+* [Chat (AI conversation panel)](/workbench/ai-translation/chat/)
+* [Keyboard Shortcuts](/workbench/settings/shortcuts/)

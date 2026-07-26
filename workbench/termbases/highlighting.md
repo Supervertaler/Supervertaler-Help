@@ -12,6 +12,6 @@ When a termbase is active, Supervertaler highlights matching terms in the grid.
 
 ## Tips
 
-- If the highlight is too strong or too subtle, adjust it in [View Settings](../settings/view.md).
+- If the highlight is too strong or too subtle, adjust it in [View Settings](/workbench/settings/view/).
 - Tag highlighting and termbase highlighting are separate: tags are for placeholders/formatting, termbases are for terminology.
-- For a word-by-word terminology view with translations underneath each term, see [TermLens](termlens.md).
+- For a word-by-word terminology view with translations underneath each term, see [TermLens](/workbench/termbases/termlens/).

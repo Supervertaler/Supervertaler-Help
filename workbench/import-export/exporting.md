@@ -14,7 +14,7 @@ When you’re done translating, export in a format that matches your workflow.
 For **Export Translated Document** (and Simple Text), the Save dialog opens in
 your project's `target/` folder by default, so finished translations land
 alongside their sources. You can still browse elsewhere — see
-[The Project Folder](project-folder.md).
+[The Project Folder](/workbench/import-export/project-folder/).
 :::
 
 ## CAT tool round-trips
@@ -39,15 +39,15 @@ Don’t merge or split segments in Supervertaler when you plan to reimport into 
 	- Trados return package (SDLRPX) when you imported SDLPPX
 	- Phrase bilingual DOCX
 	- CafeTran bilingual table DOCX
-- For review-only delivery, consider [Bilingual Tables](bilingual-tables.md).
+- For review-only delivery, consider [Bilingual Tables](/workbench/import-export/bilingual-tables/).
 
 ## Checking the export
 
-After every DOCX export, Supervertaler automatically compares the word count of the exported file against your translated segments and warns you if text looks like it was dropped. See [Export Verification (Word-Count Check)](export-verification.md).
+After every DOCX export, Supervertaler automatically compares the word count of the exported file against your translated segments and warns you if text looks like it was dropped. See [Export Verification (Word-Count Check)](/workbench/import-export/export-verification/).
 
 ## Related pages
 
-- [Supported File Formats](formats.md)
-- [Export Verification (Word-Count Check)](export-verification.md)
-- [Bilingual Tables](bilingual-tables.md)
-- [CAT Tool Overview](../cat-tools/overview.md)
+- [Supported File Formats](/workbench/import-export/formats/)
+- [Export Verification (Word-Count Check)](/workbench/import-export/export-verification/)
+- [Bilingual Tables](/workbench/import-export/bilingual-tables/)
+- [CAT Tool Overview](/workbench/cat-tools/overview/)

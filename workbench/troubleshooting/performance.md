@@ -6,7 +6,7 @@ Supervertaler is designed to stay responsive on large projects, but performance 
 
 ## Tips
 
-- Pick a smaller **Per page** size for very large projects (the grid shows all segments by default; projects over 2000 segments auto-paginate at 500). See [Pagination](../editor/pagination.md)
+- Pick a smaller **Per page** size for very large projects (the grid shows all segments by default; projects over 2000 segments auto-paginate at 500). See [Pagination](/workbench/editor/pagination/)
 - Keep only the needed TMs and termbases enabled
 - If semantic search is enabled, allow indexing to complete
 

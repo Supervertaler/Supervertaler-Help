@@ -65,6 +65,6 @@ The check currently applies to **DOCX exports only**. Other Okapi formats (IDML,
 
 ## Related pages
 
-- [Exporting Translations](exporting.md)
-- [Multi-File Projects](multi-file.md)
-- [Supported File Formats](formats.md)
+- [Exporting Translations](/workbench/import-export/exporting/)
+- [Multi-File Projects](/workbench/import-export/multi-file/)
+- [Supported File Formats](/workbench/import-export/formats/)

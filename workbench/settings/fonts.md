@@ -41,5 +41,5 @@ If you've also customised the grid font size (above), that value still applies o
 
 ## Related pages
 
-- [View Settings](view.md)
-- [Theme (Light/Dark Mode)](theme.md)
+- [View Settings](/workbench/settings/view/)
+- [Theme (Light/Dark Mode)](/workbench/settings/theme/)

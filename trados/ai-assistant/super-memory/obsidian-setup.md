@@ -31,7 +31,7 @@ The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extens
    * **Vault:** select the memory bank vault you want clippings to land in
 5. Optionally add properties: `source_url` = `{{url}}`, `clipped` = `{{date}}`
 
-Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it drops straight into that bank's inbox. Next time you click **[Process Inbox](process-inbox.md)** with that bank active in the toolbar, the AI organises it into structured articles.
+Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it drops straight into that bank's inbox. Next time you click **[Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)** with that bank active in the toolbar, the AI organises it into structured articles.
 
 :::note
 If you keep several memory banks, create one Web Clipper template per bank so you can choose the destination from the clipper dropdown at clip time.
@@ -49,6 +49,6 @@ To install plugins: **Settings → Community plugins → Browse**.
 
 ## See Also
 
-* [SuperMemory](../super-memory.md)
-* [Process Inbox](process-inbox.md)
-* [User Data Folder](../../data-folder.md)
+* [SuperMemory](/trados/ai-assistant/super-memory/)
+* [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)
+* [User Data Folder](/trados/data-folder/)

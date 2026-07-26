@@ -66,13 +66,13 @@ The popup uses the same chip rendering, colour scheme, and metadata indicators a
 | **≡** corner indicator         | Entry has synonyms                               |
 | **+N** badge on chip           | N more cross-termbase entries available          |
 
-See the [TermLens overview](termlens.md) for the full colour key.
+See the [TermLens overview](/workbench/termbases/termlens/) for the full colour key.
 
 ### TermLens popup vs TermPicker
 
 Both show the same matches for the active segment. Pick whichever fits your style:
 
-|          | TermLens popup (Ctrl tap)                                | [TermPicker](termpicker.md) (Ctrl+Shift+P)              |
+|          | TermLens popup (Ctrl tap)                                | [TermPicker](/workbench/termbases/termpicker/) (Ctrl+Shift+P)              |
 | -------- | -------------------------------------------------------- | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word   | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                      | Many matches that benefit from sorting / typing-to-jump |
@@ -83,6 +83,6 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 
 ### See Also
 
-* [TermLens overview](termlens.md)
-* [TermPicker](termpicker.md)
-* [Keyboard Shortcuts](../editor/keyboard-shortcuts.md)
+* [TermLens overview](/workbench/termbases/termlens/)
+* [TermPicker](/workbench/termbases/termpicker/)
+* [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)

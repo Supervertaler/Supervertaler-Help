@@ -42,10 +42,10 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "go to the bottom" | "go to bottom" | Jump to the last segment (Ctrl+End) |
 | "copy source" | "copy from source" | Copy source to target |
 | "clear target" | | Clear the target segment |
-| "term one" … "term nine" | | Insert TermLens match 1–9 (with [capitalisation adaptation](termlens.md#automatic-capitalisation)) |
+| "term one" … "term nine" | | Insert TermLens match 1–9 (with [capitalisation adaptation](/trados/termlens/#automatic-capitalisation)) |
 | "match one" … "match nine" | | Apply Translation Results match 1–9 (Ctrl+1–9) |
-| "term picker" | "pick term" | Open [TermPicker](termlens/termpicker.md) |
-| "term popup" | "show terms" | Open the [TermLens popup](termlens/termlens-popup.md) |
+| "term picker" | "pick term" | Open [TermPicker](/trados/termlens/termpicker/) |
+| "term popup" | "show terms" | Open the [TermLens popup](/trados/termlens/termlens-popup/) |
 | "add term" | "new term" | Quick-add the selection to your write termbases (Alt+Down) |
 | "add project term" | "project term" | Quick-add the selection to the project termbase (Alt+Up) |
 | "translate" | "translate segment" | AI-translate the active segment |
@@ -100,6 +100,6 @@ Default commands added in plugin updates are **merged into your saved set automa
 
 ### See Also
 
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
-* [TermLens](termlens.md)
-* [TermPicker](termlens/termpicker.md)
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)
+* [TermLens](/trados/termlens/)
+* [TermPicker](/trados/termlens/termpicker/)

@@ -3,9 +3,9 @@ title: "AI Integration"
 description: "How SuperMemory is loaded into the AI context – the algorithm, ranking, and token budget"
 ---
 
-This page is the technical deep dive into **how** SuperMemory – Supervertaler's self-organising translation knowledge base system – loads the active memory bank into the AI context. For the broader picture of all context sources, start with [Context Awareness](../context-awareness.md). For what SuperMemory is and how to create and switch memory banks, start with [SuperMemory](../super-memory.md).
+This page is the technical deep dive into **how** SuperMemory – Supervertaler's self-organising translation knowledge base system – loads the active memory bank into the AI context. For the broader picture of all context sources, start with [Context Awareness](/trados/ai-assistant/context-awareness/). For what SuperMemory is and how to create and switch memory banks, start with [SuperMemory](/trados/ai-assistant/super-memory/).
 
-When SuperMemory context is enabled in [AI Settings](../../settings/ai-settings.md), every AI call – chat messages, batch translations, single-segment translations, AutoPrompt runs – triggers a fresh load of the active memory bank before the prompt is sent. The load is deterministic, fast, and scoped to the current project and document.
+When SuperMemory context is enabled in [AI Settings](/trados/settings/ai-settings/), every AI call – chat messages, batch translations, single-segment translations, AutoPrompt runs – triggers a fresh load of the active memory bank before the prompt is sent. The load is deterministic, fast, and scoped to the current project and document.
 
 ## What the AI loads
 
@@ -16,7 +16,7 @@ Before every AI call, Supervertaler reads the active memory bank and loads the m
 3. **Style guide.** The assistant loads the most relevant style guide from `04_STYLE/`, preferring client-specific guides (e.g. `acme-style.md`) over general ones (e.g. `general-en-gb.md`).
 4. **Terminology articles.** The assistant loads term articles from `02_TERMINOLOGY/` that match your client, domain, or language pair. These include not just the approved translations, but also rejected alternatives and the reasoning behind each decision – the kind of context a flat termbase entry does not carry.
 
-Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → Creating and switching banks](../super-memory.md#creating-and-switching-banks) for the switching workflow.
+Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → Creating and switching banks](/trados/ai-assistant/super-memory/#creating-and-switching-banks) for the switching workflow.
 
 Workflow folders – `00_INBOX`, `05_INDICES`, and `06_TEMPLATES` – are **not** loaded into the AI context. `00_INBOX` is a processing queue, `05_INDICES` holds auto-generated maps, and `06_TEMPLATES` holds templates for new articles.
 
@@ -46,7 +46,7 @@ A memory bank does not replace your termbases, translation memories, or document
 
 All four work together. Termbases give the AI the terms; the memory bank tells it *why* those terms were chosen and what to watch out for. A TM gives it previous translations to anchor against; the memory bank tells it which previous translations are from a client with strict style rules and which are from one-off work that can be safely overridden.
 
-For a discussion of when stacking all four sources may or may not be optimal, see the **Composing the context** section of [Context Awareness](../context-awareness.md#composing-the-context).
+For a discussion of when stacking all four sources may or may not be optimal, see the **Composing the context** section of [Context Awareness](/trados/ai-assistant/context-awareness/#composing-the-context).
 
 ## Memory-aware chat
 
@@ -61,7 +61,7 @@ Once memory-bank context is enabled (see below), the chat panel is memory-aware.
 
 ## Enabling and disabling
 
-Memory bank context can be toggled on or off in [AI Settings](../../settings/ai-settings.md):
+Memory bank context can be toggled on or off in [AI Settings](/trados/settings/ai-settings/):
 
 - **Include memory bank in AI context** – enables KB context for translations and chat.
 - **Use memory bank when generating prompts (AutoPrompt)** – enables KB context when AutoPrompt drafts a new translation prompt.
@@ -70,8 +70,8 @@ Both are **off by default** – turn on *Include memory bank in AI context* to a
 
 ## See Also
 
-- [Context Awareness](../context-awareness.md) – The full menu of context sources, including memory banks as one section among several
-- [SuperMemory](../super-memory.md) – What SuperMemory is, what memory banks are, and how to create one
-- [AI Settings](../../settings/ai-settings.md) – Toggles for memory bank context
-- [Supervertaler](../../ai-assistant.md) – Overview of the chat panel
-- [Batch Translate](../../batch-translate.md) – Batch translation with full context
+- [Context Awareness](/trados/ai-assistant/context-awareness/) – The full menu of context sources, including memory banks as one section among several
+- [SuperMemory](/trados/ai-assistant/super-memory/) – What SuperMemory is, what memory banks are, and how to create one
+- [AI Settings](/trados/settings/ai-settings/) – Toggles for memory bank context
+- [Supervertaler](/trados/ai-assistant/) – Overview of the chat panel
+- [Batch Translate](/trados/batch-translate/) – Batch translation with full context

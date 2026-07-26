@@ -138,7 +138,7 @@ Many users start with Clipboard Mode to explore AI translation with zero setup, 
 
 ## Combining with AutoPrompt – the hybrid pattern
 
-[AutoPrompt](generate-prompt.md) **always uses your configured AI provider** to generate the meta-prompt – Clipboard Mode does **not** apply to AutoPrompt, only to the actual Translate / Proofread passes. This is intentional, and it enables a useful hybrid workflow:
+[AutoPrompt](/trados/generate-prompt/) **always uses your configured AI provider** to generate the meta-prompt – Clipboard Mode does **not** apply to AutoPrompt, only to the actual Translate / Proofread passes. This is intentional, and it enables a useful hybrid workflow:
 
 1. Tick **Clipboard Mode**.
 2. Click **AutoPrompt…** – the prompt-generation request still goes through your configured API (a small, one-shot call, even on an Opus-class model this is cheap relative to bulk translation).
@@ -179,8 +179,8 @@ For large documents, use the scope dropdown to work through segments in manageab
 
 ## See Also
 
-* [Batch Translate](batch-translate.md)
-* [AI Proofreader](ai-proofreader.md)
-* [Batch Operations](batch-operations.md)
-* [AI Settings](settings/ai-settings.md)
-* [Prompts](settings/prompts.md)
+* [Batch Translate](/trados/batch-translate/)
+* [AI Proofreader](/trados/ai-proofreader/)
+* [Batch Operations](/trados/batch-operations/)
+* [AI Settings](/trados/settings/ai-settings/)
+* [Prompts](/trados/settings/prompts/)

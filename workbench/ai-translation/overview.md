@@ -17,11 +17,11 @@ Supervertaler integrates with leading AI language models for high-quality transl
 | **Ollama** | TranslateGemma, Qwen 3, Aya Expanse (local, free) |
 | **Custom** | Any OpenAI-compatible endpoint |
 
-See [Supported LLM Providers](providers.md) for setup instructions for each provider.
+See [Supported LLM Providers](/workbench/ai-translation/providers/) for setup instructions for each provider.
 
 ## Quick Start
 
-1. [Set up API keys](../get-started/api-keys.md)
+1. [Set up API keys](/workbench/get-started/api-keys/)
 2. Open a project with segments to translate
 3. Select a segment
 4. Press `Ctrl+T` to translate
@@ -78,7 +78,7 @@ Keep all formatting tags like {1}, <b>, </b> in place.
 Translate naturally while preserving the original meaning.
 ```
 
-See [Creating Prompts](prompts.md) and [Prompt Manager](prompt-library.md) for more.
+See [Creating Prompts](/workbench/ai-translation/prompts/) and [Prompt Manager](/workbench/ai-translation/prompt-library/) for more.
 
 ## Provider Selection
 
@@ -99,7 +99,7 @@ When batch translating, you can choose the provider in the dialog.
 
 1. **Use specific prompts** - Include domain, style, and rules
 2. **Provide context** - Enable "include context" for surrounding segments
-3. **Add termbase terms** - Attach terminology for consistent translations (see [Sending Terms to the AI](../termbases/ai-injection.md))
+3. **Add termbase terms** - Attach terminology for consistent translations (see [Sending Terms to the AI](/workbench/termbases/ai-injection/))
 4. **Post-edit** - AI is great but not perfect; always review
 
 ### Common Issues

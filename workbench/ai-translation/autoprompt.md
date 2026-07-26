@@ -140,6 +140,6 @@ The generated prompt appears in the prompt library tree and is loaded into the *
 
 ## See also
 
-- [Prompt Manager](prompt-library.md) – manage and organise generated prompts
-- [Creating Prompts](prompts.md) – write prompts from scratch
-- [AI Translation Overview](overview.md) – how the Custom Prompt is used during translation
+- [Prompt Manager](/workbench/ai-translation/prompt-library/) – manage and organise generated prompts
+- [Creating Prompts](/workbench/ai-translation/prompts/) – write prompts from scratch
+- [AI Translation Overview](/workbench/ai-translation/overview/) – how the Custom Prompt is used during translation

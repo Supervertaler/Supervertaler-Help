@@ -42,13 +42,13 @@ TM fuzzy matches for the current segment are included, showing the match percent
 
 Matched terms from your active termbases are included with their approved translations and synonyms. Optionally, term definitions, domains, and usage notes are also included, giving the AI deeper understanding of your terminology requirements. Terms marked as non-translatable or forbidden are flagged so the AI can respect those constraints.
 
-Both Supervertaler termbases and MultiTerm .sdltb termbases attached to the Trados project contribute. See [TermLens](../termlens.md) and [MultiTerm Support](../multiterm-support.md) for how those termbases are loaded.
+Both Supervertaler termbases and MultiTerm .sdltb termbases attached to the Trados project contribute. See [TermLens](/trados/termlens/) and [MultiTerm Support](/trados/multiterm-support/) for how those termbases are loaded.
 
 **Toggles:** AI Settings → *Include termbase terms* / *Include term metadata* / per-termbase contribution list.
 
 ### 7. SuperMemory context
 
-[**SuperMemory**](super-memory.md) is Supervertaler's self-organising translation knowledge base system. If a memory bank is active, the assistant loads the most relevant articles from it before every AI call:
+[**SuperMemory**](/trados/ai-assistant/super-memory/) is Supervertaler's self-organising translation knowledge base system. If a memory bank is active, the assistant loads the most relevant articles from it before every AI call:
 
 - the **client profile** matching the current Trados project name, from `01_CLIENTS/`
 - the **domain article** matching the document type the AI just detected, from `03_DOMAINS/`
@@ -57,7 +57,7 @@ Both Supervertaler termbases and MultiTerm .sdltb termbases attached to the Trad
 
 Unlike a termbase – which gives the AI flat pairs of source and target terms – SuperMemory gives it the **reasoning** behind those pairs: the decisions, the caveats, and the client-specific overrides. The two are complementary, not competitive.
 
-Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → AI Integration](super-memory/ai-integration.md) for the full loading algorithm and token budget.
+Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → AI Integration](/trados/ai-assistant/super-memory/ai-integration/) for the full loading algorithm and token budget.
 
 **Toggles:** AI Settings → *Include memory bank context* / *Use memory bank in AutoPrompt*.
 
@@ -65,7 +65,7 @@ Only articles from the **active** memory bank are loaded. If you keep separate b
 
 Files you attach to the chat panel – images (paste, drag-drop, or browse), and documents (DOCX, PDF, PPTX, XLSX, CSV, TMX, SDLXLIFF, TBX, TXT, Markdown, HTML, and more) – are added to the context for that turn. Images are sent through each provider's vision API; documents are text-extracted and appended as prompt context.
 
-Attachments only apply to the turn you attached them on – they do not persist across messages. See [File Attachments](file-attachments.md) for details.
+Attachments only apply to the turn you attached them on – they do not persist across messages. See [File Attachments](/trados/ai-assistant/file-attachments/) for details.
 
 ## Composing the context
 
@@ -97,9 +97,9 @@ You can control exactly what context the assistant receives. In the settings dia
 
 ## See Also
 
-- [Supervertaler](../ai-assistant.md) – Overview
-- [AI Settings](../settings/ai-settings.md) – Configure context options
-- [SuperMemory](super-memory.md) – Supervertaler's self-organising translation knowledge base system
-- [SuperMemory → AI Integration](super-memory/ai-integration.md) – The loading algorithm and token budget for SuperMemory context
-- [File Attachments](file-attachments.md) – Add images and documents to a chat turn
-- [TermLens](../termlens.md) – How termbase terms are matched and loaded
+- [Supervertaler](/trados/ai-assistant/) – Overview
+- [AI Settings](/trados/settings/ai-settings/) – Configure context options
+- [SuperMemory](/trados/ai-assistant/super-memory/) – Supervertaler's self-organising translation knowledge base system
+- [SuperMemory → AI Integration](/trados/ai-assistant/super-memory/ai-integration/) – The loading algorithm and token budget for SuperMemory context
+- [File Attachments](/trados/ai-assistant/file-attachments/) – Add images and documents to a chat turn
+- [TermLens](/trados/termlens/) – How termbase terms are matched and loaded

@@ -22,7 +22,7 @@ With Trados Studio open and a document in the editor, you can ask your AI assist
 * "Draft translations for the untranslated segments and set them to Draft so I can review them."
 * "We agreed *draagarm* = *support arm* – add it to my termbase."
 
-Unlike the [AI-friendly bilingual export](import-export.md) workflow, there is no export/re-import cycle: the AI reads the live document on demand, and changes it makes appear in Studio while you chat.
+Unlike the [AI-friendly bilingual export](/trados/import-export/) workflow, there is no export/re-import cycle: the AI reads the live document on demand, and changes it makes appear in Studio while you chat.
 
 ## What the AI can do
 

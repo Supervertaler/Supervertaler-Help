@@ -57,7 +57,7 @@ After import, you'll see the main window. Along the top are the workspace tabs (
 | ✔ | Confirmed |
 | 🔒 | Locked |
 
-See [Segment Statuses](../editor/segment-statuses.md) for the full list.
+See [Segment Statuses](/workbench/editor/segment-statuses/) for the full list.
 
 ## Translating Your First Segment
 
@@ -93,7 +93,7 @@ See [Segment Statuses](../editor/segment-statuses.md) for the full list.
 2. Choose a name and location
 3. Your project is saved as a folder containing the `.svproj` file, a `source/`
    folder (your original document), and — once you export — a `target/` folder.
-   See [The Project Folder](../import-export/project-folder.md).
+   See [The Project Folder](/workbench/import-export/project-folder/).
 
 :::tip
 **Tip:** Supervertaler auto-saves your work periodically, but it's good practice to save manually before closing. To move a project, move the **whole folder**, not just the `.svproj`.
@@ -133,6 +133,6 @@ Export Translation
 
 Now that you've completed your first project:
 
-- [Learn keyboard shortcuts](../editor/keyboard-shortcuts.md) for faster work
-- [Set up batch translation](../ai-translation/batch-translation.md) for larger documents
-- [Explore CAT tool workflows](../cat-tools/overview.md) if you use professional tools
+- [Learn keyboard shortcuts](/workbench/editor/keyboard-shortcuts/) for faster work
+- [Set up batch translation](/workbench/ai-translation/batch-translation/) for larger documents
+- [Explore CAT tool workflows](/workbench/cat-tools/overview/) if you use professional tools

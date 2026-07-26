@@ -36,11 +36,11 @@ This dramatically reduces the termbase size – for example, a general patent te
 The filtering is case-insensitive and checks all variants of each term (source term, abbreviation forms, and synonyms). Terms that do not appear anywhere in the source text are excluded entirely.
 
 :::caution
-**TermScan filters by content, not by domain.** A patent termbase contains many common technical words – "system", "board", "fan", "screen", "installation" – that will match nearly any engineering document. TermScan will include those entries even though they belong to a completely different translation context, and the AI will be forced to follow them. **Before running AutoPrompt, disable every termbase that does not belong to the current project's domain.** Use [AI Settings](settings/ai-settings.md) → _Termbases included in AI prompts_ to control which termbases contribute to the generated prompt without affecting your TermLens display.
+**TermScan filters by content, not by domain.** A patent termbase contains many common technical words – "system", "board", "fan", "screen", "installation" – that will match nearly any engineering document. TermScan will include those entries even though they belong to a completely different translation context, and the AI will be forced to follow them. **Before running AutoPrompt, disable every termbase that does not belong to the current project's domain.** Use [AI Settings](/trados/settings/ai-settings/) → _Termbases included in AI prompts_ to control which termbases contribute to the generated prompt without affecting your TermLens display.
 :::
 
 :::caution
-**Termbase quality matters.** Only enable termbases in [AI Settings](settings/ai-settings.md) if you are confident they contain accurate, high-quality terminology for your project. A poorly maintained termbase with incorrect or outdated translations will constrain the AI and produce worse results. Modern LLMs – especially Opus-class and GPT-4-class models – are often better at choosing the right translation on their own than when forced to follow a low-quality termbase. When in doubt, disable termbases and let the AI translate freely, then add terms incrementally as you review.
+**Termbase quality matters.** Only enable termbases in [AI Settings](/trados/settings/ai-settings/) if you are confident they contain accurate, high-quality terminology for your project. A poorly maintained termbase with incorrect or outdated translations will constrain the AI and produce worse results. Modern LLMs – especially Opus-class and GPT-4-class models – are often better at choosing the right translation on their own than when forced to follow a low-quality termbase. When in doubt, disable termbases and let the AI translate freely, then add terms incrementally as you review.
 :::
 
 **3. Domain detection**
@@ -153,7 +153,7 @@ After saving the generated prompt, select it from the prompt dropdown on the Bat
 
 **AutoPrompt always uses your configured AI provider**
 
-[Clipboard Mode](clipboard-mode.md) does **not** apply to AutoPrompt – ticking the Clipboard Mode checkbox affects only the actual Translate / Proofread passes, not prompt generation. AutoPrompt always sends the meta-prompt request to whichever provider is selected in [AI Settings](settings/ai-settings.md). This enables a useful pattern: keep Clipboard Mode ticked, click AutoPrompt to generate the prompt via your paid API, then run the bulk Translate via clipboard against a free web-tier model. See [Combining with AutoPrompt – the hybrid pattern](clipboard-mode.md#combining-with-autoprompt--the-hybrid-pattern) for the full workflow.
+[Clipboard Mode](/trados/clipboard-mode/) does **not** apply to AutoPrompt – ticking the Clipboard Mode checkbox affects only the actual Translate / Proofread passes, not prompt generation. AutoPrompt always sends the meta-prompt request to whichever provider is selected in [AI Settings](/trados/settings/ai-settings/). This enables a useful pattern: keep Clipboard Mode ticked, click AutoPrompt to generate the prompt via your paid API, then run the bulk Translate via clipboard against a free web-tier model. See [Combining with AutoPrompt – the hybrid pattern](/trados/clipboard-mode/#combining-with-autoprompt--the-hybrid-pattern) for the full workflow.
 
 **Regenerate when the project changes**
 
@@ -163,7 +163,7 @@ If your project evolves significantly (new terminology, different document secti
 
 #### See Also
 
-* [Batch Translate](batch-translate.md)
-* [Prompts](settings/prompts.md)
-* [Supervertaler](ai-assistant.md)
-* [AI Settings](settings/ai-settings.md)
+* [Batch Translate](/trados/batch-translate/)
+* [Prompts](/trados/settings/prompts/)
+* [Supervertaler](/trados/ai-assistant/)
+* [AI Settings](/trados/settings/ai-settings/)

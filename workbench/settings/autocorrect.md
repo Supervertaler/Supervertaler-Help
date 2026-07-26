@@ -57,6 +57,6 @@ Use the per-rule toggles on the **Settings → ✍️ AutoCorrect** tab. Because
 
 ## See also
 
-- [Settings → General](general.md)
+- [Settings → General](/workbench/settings/general/)
 - Tracking issue: [#213 — Typographic auto-convert / AutoCorrect-while-typing system](https://github.com/Supervertaler/Supervertaler-Workbench/issues/213)
 - Original request: [Discussion #211](https://github.com/orgs/Supervertaler/discussions/211)

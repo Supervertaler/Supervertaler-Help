@@ -122,7 +122,7 @@ Tick it before clicking AutoPrompt to ship the loaded figures alongside the meta
 - **Adds a small extra cost** — roughly $0.05–$0.30 for 10–20 figures with a Sonnet-class model, more with Opus. Negligible vs. the value of a typical project (a €1000 patent will spend less than 0.1% on visual grounding).
 - **Cost-confirmation dialog** pops up before the request so you can back out.
 
-See [AutoPrompt](autoprompt.md) for the full flow and pre-flight gates (vision-model check, missing-figures friendly message, etc.).
+See [AutoPrompt](/workbench/ai-translation/autoprompt/) for the full flow and pre-flight gates (vision-model check, missing-figures friendly message, etc.).
 
 ## Project persistence
 
@@ -130,6 +130,6 @@ The currently-loaded folder path is saved into the `.svproj` file, so reopening 
 
 ## See also
 
-- [Prompt Manager](prompt-library.md) — where Section 4 (Image Context) lives
-- [AutoPrompt](autoprompt.md) — opt-in to ship figures with the meta-prompt
-- [AI Translation Overview](overview.md) — how images flow into per-segment translations
+- [Prompt Manager](/workbench/ai-translation/prompt-library/) — where Section 4 (Image Context) lives
+- [AutoPrompt](/workbench/ai-translation/autoprompt/) — opt-in to ship figures with the meta-prompt
+- [AI Translation Overview](/workbench/ai-translation/overview/) — how images flow into per-segment translations

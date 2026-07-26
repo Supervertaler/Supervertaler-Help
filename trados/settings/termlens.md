@@ -18,12 +18,12 @@ The path to your Supervertaler termbase `.db` file. Click **Browse** to select a
 
 ## Termbase toggles
 
-Each Supervertaler termbase in the database has three toggles. See [Termbase Management](../termbase-management.md) for full details.
+Each Supervertaler termbase in the database has three toggles. See [Termbase Management](/trados/termbase-management/) for full details.
 
 | Toggle | Purpose |
 |--------|---------|
 | **Read** | Load terms for matching –only termbases with Read enabled appear in TermLens |
-| **Write** | Receive new terms added via the [quick-add shortcuts](../termlens/adding-terms.md) |
+| **Write** | Receive new terms added via the [quick-add shortcuts](/trados/termlens/adding-terms/) |
 | **Project** | Mark as the project termbase (shown in pink, prioritised) |
 
 ### Confirm dialog for non-matching termbases
@@ -50,7 +50,7 @@ The **Read** column is intentionally exempt from the dialog – there is no harm
 
 If your Trados project has MultiTerm termbases (`.sdltb` files) attached, they appear at the bottom of the termbase list with a **[MultiTerm]** label and a light green row background. The **Read** toggle controls visibility in TermLens; **Write** and **Project** are always disabled because MultiTerm termbases are read-only.
 
-To add or remove MultiTerm termbases, use Trados Studio's **Project Settings > Language Pairs > Termbases**. See [MultiTerm Support](../multiterm-support.md) for full details.
+To add or remove MultiTerm termbases, use Trados Studio's **Project Settings > Language Pairs > Termbases**. See [MultiTerm Support](/trados/multiterm-support/) for full details.
 
 ## Auto-load on startup
 
@@ -103,13 +103,13 @@ Controls how long the system waits for the next digit in **Sequential** mode (in
 
 Increase the delay if you need more time between keystrokes. Decrease it if you find the pause too long when inserting single-digit terms in segments with 10+ matches. This setting has no effect in Repeated digit mode.
 
-See [Keyboard Shortcuts](../keyboard-shortcuts.md) for the full reference.
+See [Keyboard Shortcuts](/trados/keyboard-shortcuts/) for the full reference.
 
 ---
 
 ## See Also
 
-- [Termbase Management](../termbase-management.md)
-- [MultiTerm Support](../multiterm-support.md)
-- [AI Settings](ai-settings.md)
+- [Termbase Management](/trados/termbase-management/)
+- [MultiTerm Support](/trados/multiterm-support/)
+- [AI Settings](/trados/settings/ai-settings/)
 - [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/)

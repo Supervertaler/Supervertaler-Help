@@ -23,7 +23,7 @@ Live terminology display that shows the source text word by word, with termbase 
 * **Yellow** for non-translatable terms
 * **Green** for MultiTerm termbase matches (`.sdltb` files attached to your Trados project, or `.ttb` termbases in Trados Studio 2026)
 
-Numbered badges let you insert terms with **Alt+1** through **Alt+9**. Project termbases are detected automatically from your Trados project and are read-only. On Trados Studio 2026 these are the new `.ttb` termbases –see [Trados Studio 2026 & .ttb](studio-2026.md).
+Numbered badges let you insert terms with **Alt+1** through **Alt+9**. Project termbases are detected automatically from your Trados project and are read-only. On Trados Studio 2026 these are the new `.ttb` termbases –see [Trados Studio 2026 & .ttb](/trados/studio-2026/).
 
 #### Supervertaler
 
@@ -43,7 +43,7 @@ Create, edit, and import termbases in Supervertaler's `.db` format. Quick-add te
 
 #### SuperMemory
 
-Self-organising, AI-maintained translation knowledge base. Stores client profiles, terminology decisions, domain conventions, and style preferences as interlinked Markdown files. The AI consults the active memory bank automatically when translating. Keep separate banks per client or domain and switch between them from the toolbar dropdown. Quick-add terms and corrections while translating with Ctrl+Alt+M. [Learn more →](ai-assistant/super-memory.md)
+Self-organising, AI-maintained translation knowledge base. Stores client profiles, terminology decisions, domain conventions, and style preferences as interlinked Markdown files. The AI consults the active memory bank automatically when translating. Keep separate banks per client or domain and switch between them from the toolbar dropdown. Quick-add terms and corrections while translating with Ctrl+Alt+M. [Learn more →](/trados/ai-assistant/super-memory/)
 
 ### System Requirements
 
@@ -53,7 +53,7 @@ Self-organising, AI-maintained translation knowledge base. Stores client profile
 | Windows        | 10 or 11            |
 | .NET Framework | 4.8                 |
 
-There are two builds: one for **Trados Studio 2024** (MultiTerm `.sdltb` termbases) and one for **Trados Studio 2026** (`.ttb` termbases). Install the build that matches your Studio version –see [Trados Studio 2026 & .ttb](studio-2026.md).
+There are two builds: one for **Trados Studio 2024** (MultiTerm `.sdltb` termbases) and one for **Trados Studio 2026** (`.ttb` termbases). Install the build that matches your Studio version –see [Trados Studio 2026 & .ttb](/trados/studio-2026/).
 
 ### Shared Termbase Format
 

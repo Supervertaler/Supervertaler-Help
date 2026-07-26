@@ -26,7 +26,7 @@ Three ways to populate Section 2:
 
 - **From the library** — right-click any prompt in Section 5 and choose **⭐ Set as Custom Prompt**, or double-click it. The prompt name shows up next to the ⭐ icon in Section 2.
 - **From an external file** — click **Load External…** in Section 2 and pick any `.md` or `.txt` file from anywhere on your computer. The file stays where it is on disk; Supervertaler just references it.
-- **Have the AI generate one** — click **✨ AutoPrompt** in Section 2. The AI analyses your current document (domain, tone, terminology, confirmed translations) and produces a tailored prompt. See [AutoPrompt](autoprompt.md) for details.
+- **Have the AI generate one** — click **✨ AutoPrompt** in Section 2. The AI analyses your current document (domain, tone, terminology, confirmed translations) and produces a tailored prompt. See [AutoPrompt](/workbench/ai-translation/autoprompt/) for details.
 
 Whichever way you pick, the choice is saved into the `.svproj` immediately, so it survives a restart.
 
@@ -46,6 +46,6 @@ Whichever way you pick, the choice is saved into the `.svproj` immediately, so i
 
 ## See also
 
-- [AutoPrompt](autoprompt.md) — auto-generate a tailored translation prompt from the current document
-- [Creating Prompts](prompts.md) — what makes a good translation prompt when writing one by hand
-- [AI Translation Overview](overview.md) — how the assembled prompt is used during translation
+- [AutoPrompt](/workbench/ai-translation/autoprompt/) — auto-generate a tailored translation prompt from the current document
+- [Creating Prompts](/workbench/ai-translation/prompts/) — what makes a good translation prompt when writing one by hand
+- [AI Translation Overview](/workbench/ai-translation/overview/) — how the assembled prompt is used during translation

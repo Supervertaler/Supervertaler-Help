@@ -56,7 +56,7 @@ OpenRouter adds a 5.5% platform fee on top of the underlying provider's price. F
 
 Run models entirely on your own machine – no API key and no internet required.
 
-See [Ollama Setup](ollama.md) for download and configuration instructions.
+See [Ollama Setup](/workbench/ai-translation/ollama/) for download and configuration instructions.
 
 ## Custom (OpenAI-compatible)
 
@@ -66,6 +66,6 @@ For any provider that exposes an OpenAI-compatible API (Azure OpenAI, together.a
 
 ## Related pages
 
-- [Setting Up API Keys](../get-started/api-keys.md)
-- [Ollama Setup](ollama.md)
-- [AI Translation Overview](overview.md)
+- [Setting Up API Keys](/workbench/get-started/api-keys/)
+- [Ollama Setup](/workbench/ai-translation/ollama/)
+- [AI Translation Overview](/workbench/ai-translation/overview/)

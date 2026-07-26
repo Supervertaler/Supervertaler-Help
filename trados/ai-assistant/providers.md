@@ -39,13 +39,13 @@ Some features are provider-specific:
 
 | Feature | Availability |
 | ------- | ------------ |
-| [Studio Tools](studio-tools.md) | All providers except Ollama |
+| [Studio Tools](/trados/ai-assistant/studio-tools/) | All providers except Ollama |
 | Image attachments | All providers with vision support |
 | Document attachments | All providers |
-| [Memory bank](super-memory/ai-integration.md) context | All providers |
+| [Memory bank](/trados/ai-assistant/super-memory/ai-integration/) context | All providers |
 
 ## See Also
 
-* [Supervertaler](../ai-assistant.md) -- Overview
-* [AI Settings](../settings/ai-settings.md) -- API keys, endpoints, advanced options
-* [AI Cost Guide](../ai-cost-guide.md) -- Token pricing and cost estimates
+* [Supervertaler](/trados/ai-assistant/) -- Overview
+* [AI Settings](/trados/settings/ai-settings/) -- API keys, endpoints, advanced options
+* [AI Cost Guide](/trados/ai-cost-guide/) -- Token pricing and cost estimates

@@ -34,7 +34,7 @@ Designate one termbase as the **Project termbase** in settings to make its terms
 :::
 
 :::tip
-**MultiTerm termbases** attached to your Trados project appear automatically as green chips. They are read-only – to edit MultiTerm terms, use Trados's built-in MultiTerm interface. See [MultiTerm Support](multiterm-support.md) for details.
+**MultiTerm termbases** attached to your Trados project appear automatically as green chips. They are read-only – to edit MultiTerm terms, use Trados's built-in MultiTerm interface. See [MultiTerm Support](/trados/multiterm-support/) for details.
 :::
 
 ### Chip Indicators
@@ -68,7 +68,7 @@ Click any translation shown under a source word. The translation is inserted at 
 
 Displayed and inserted terms follow the capitalisation of the source occurrence in the segment, not the capitalisation stored in the termbase. A term stored as "More preferably" shows and inserts as "more preferably" when the segment contains it lower-case mid-sentence; a lower-case stored term is capitalised when the occurrence starts the sentence; and an ALL-CAPS occurrence (a heading, say) upper-cases the whole term. This applies to every insertion path – chip clicks, Alt+digit shortcuts, the TermLens popup and TermPicker.
 
-The rules are deliberately conservative: acronyms and mixed-case terms (MRI, pH) are never altered, and abbreviation matches keep their stored casing. You can switch the behaviour off with **Adapt term capitalisation to the segment** in [TermLens settings](settings/termlens.md#adapt-term-capitalisation).
+The rules are deliberately conservative: acronyms and mixed-case terms (MRI, pH) are never altered, and abbreviation matches keep their stored casing. You can switch the behaviour off with **Adapt term capitalisation to the segment** in [TermLens settings](/trados/settings/termlens/#adapt-term-capitalisation).
 
 #### Keyboard Shortcuts (Alt+1 through Alt+9)
 
@@ -81,7 +81,7 @@ For terms numbered 10 and above, TermLens supports two shortcut styles (configur
 * **Sequential** (default) – type the term number digit by digit: `Alt+14` inserts term 14
 * **Repeated digit** – press the same digit key multiple times: `Alt+55` inserts term 14 (5th term in the second tier: 9+5)
 
-The badge on each term chip shows exactly which key combination to use. See [Keyboard Shortcuts](keyboard-shortcuts.md) for details on both modes.
+The badge on each term chip shows exactly which key combination to use. See [Keyboard Shortcuts](/trados/keyboard-shortcuts/) for details on both modes.
 
 :::note
 Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** or **TermPicker** to insert them.
@@ -89,11 +89,11 @@ Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** or **TermP
 
 #### TermLens popup (Ctrl tap)
 
-Tap **Ctrl** (press and release without any other key) to open the [**TermLens popup**](termlens/termlens-popup.md) – a borderless floating version of this panel for the active segment. Designed for keyboard-only term selection on small screens where keeping the docked panel always-visible costs too much vertical space. Tap **Ctrl** again to close. Inside, **Right / Down / Tab** cycle the highlighted match, **Enter** inserts and closes, **Escape** dismisses without inserting.
+Tap **Ctrl** (press and release without any other key) to open the [**TermLens popup**](/trados/termlens/termlens-popup/) – a borderless floating version of this panel for the active segment. Designed for keyboard-only term selection on small screens where keeping the docked panel always-visible costs too much vertical space. Tap **Ctrl** again to close. Inside, **Right / Down / Tab** cycle the highlighted match, **Enter** inserts and closes, **Escape** dismisses without inserting.
 
 #### TermPicker (Ctrl+Shift+P)
 
-For segments with many matches and when a sortable list view is preferable, press **Ctrl+Shift+P** to open [**TermPicker**](termlens/termpicker.md). It shows all matched terms in a searchable list and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens – same termbase data, different ergonomics (flat list vs in-context chips).
+For segments with many matches and when a sortable list view is preferable, press **Ctrl+Shift+P** to open [**TermPicker**](/trados/termlens/termpicker/). It shows all matched terms in a searchable list and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens – same termbase data, different ergonomics (flat list vs in-context chips).
 
 <figure><img src="/.gitbook/assets/Sv_Term-Picker.png" alt=""><figcaption></figcaption></figure>
 
@@ -139,8 +139,8 @@ Use the **A+** and **A-** buttons in the TermLens panel header to increase or de
 
 ### See Also
 
-* [Adding & Editing Terms](termlens/adding-terms.md)
-* [TermPicker](termlens/termpicker.md)
-* [MultiTerm Support](multiterm-support.md)
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
-* [Getting Started](getting-started.md)
+* [Adding & Editing Terms](/trados/termlens/adding-terms/)
+* [TermPicker](/trados/termlens/termpicker/)
+* [MultiTerm Support](/trados/multiterm-support/)
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)
+* [Getting Started](/trados/getting-started/)

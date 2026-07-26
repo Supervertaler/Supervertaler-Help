@@ -60,7 +60,7 @@ TM results can be read and copied (via the preview pane) but cannot be navigated
 | ------------------ | ------------------------------------------------------------------------------------------- |
 | **Scope** dropdown | Choose _Source & Target_ (default), _Source only_, or _Target only_                         |
 | **Aa** checkbox    | Case-sensitive search -- when unchecked, "Hello" matches "hello", "HELLO", etc.             |
-| **.\*** checkbox   | Treat the query as a regular expression (see [Regex tips](supersearch.md#regex-tips) below) |
+| **.\*** checkbox   | Treat the query as a regular expression (see [Regex tips](/trados/supersearch/#regex-tips) below) |
 | **Word** checkbox  | Match whole words only -- "cat" won't match "category" or "scatter". Ignored when **.\*** is on |
 
 SuperSearch displays all matching segments in the results grid. The status bar shows the number of results, what was searched (files and/or TMs), and how long the search took.
@@ -181,6 +181,6 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 
 ## See Also
 
-* [Supervertaler](ai-assistant.md) -- AI-powered chat and context
-* [Batch Operations](batch-operations.md) -- Batch translate and proofread
-* [Keyboard Shortcuts](keyboard-shortcuts.md) -- All shortcuts in one place
+* [Supervertaler](/trados/ai-assistant/) -- AI-powered chat and context
+* [Batch Operations](/trados/batch-operations/) -- Batch translate and proofread
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/) -- All shortcuts in one place

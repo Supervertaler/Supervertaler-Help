@@ -7,7 +7,7 @@ The **Supervertaler Bridge** is a pair of small localhost-only HTTP services –
 The two directions are independent and either side can be used without the other:
 
 * **Trados → Workbench (read context).** The Trados plugin exposes the active project's segment, TM matches, termbase hits, and surrounding context so Workbench's floating Sidekick Chat can answer questions about your real Trados work.
-* **Workbench → Trados (route QuickLauncher).** Workbench exposes a single endpoint that lets the Trados plugin push a [QuickLauncher](../quicklauncher.md) prompt into Sidekick Chat – the response then appears in Sidekick instead of in the Trados Assistant.
+* **Workbench → Trados (route QuickLauncher).** Workbench exposes a single endpoint that lets the Trados plugin push a [QuickLauncher](/trados/quicklauncher/) prompt into Sidekick Chat – the response then appears in Sidekick instead of in the Trados Assistant.
 
 The rest of this page covers the Trados-side bridge first (the read direction, which has been around longer), then the Workbench-side bridge (the QuickLauncher-routing direction).
 
@@ -138,7 +138,7 @@ Response on failure (e.g. no active segment):
 
 The Workbench-side bridge is the inverse of the one above: instead of exposing Trados context for Workbench to read, it lets the Trados plugin **push a QuickLauncher prompt into Workbench's Sidekick Chat**. The response then renders in Sidekick instead of in the in-Trados Assistant.
 
-This is the bridge that makes the **QuickLauncher prompts go to: Workbench Sidekick** option in [AI Settings](../settings/ai-settings.md#quicklauncher-prompts-go-to) actually do something.
+This is the bridge that makes the **QuickLauncher prompts go to: Workbench Sidekick** option in [AI Settings](/trados/settings/ai-settings/#quicklauncher-prompts-go-to) actually do something.
 
 ### When it runs
 
@@ -215,7 +215,7 @@ If you've set the QuickLauncher target to Workbench Sidekick but nothing's appea
 
 ## Related pages
 
-* [QuickLauncher](../quicklauncher.md) – the action that drives the Workbench-side bridge
-* [Supervertaler](../ai-assistant.md) – the in-Trados chat that uses the same context fields the Trados-side bridge exposes
+* [QuickLauncher](/trados/quicklauncher/) – the action that drives the Workbench-side bridge
+* [Supervertaler](/trados/ai-assistant/) – the in-Trados chat that uses the same context fields the Trados-side bridge exposes
 * [Chat – Trados-aware mode (Workbench)](https://docs.supervertaler.com/workbench/ai-translation/chat/) – the primary consumer of the Trados-side bridge
-* [User Data Folder](../data-folder.md) – where both handshake files live
+* [User Data Folder](/trados/data-folder/) – where both handshake files live

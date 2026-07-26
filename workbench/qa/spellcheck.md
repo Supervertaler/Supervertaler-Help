@@ -112,7 +112,7 @@ If you need British English but only have US English:
 On Linux, some Hunspell configurations can cause crashes. Try:
 - Installing proper Hunspell dictionaries: `sudo apt install hunspell-<lang>` (e.g., `hunspell-pl` for Polish)
 - Temporarily disabling spellcheck in Settings → View Settings
-- See [Linux-Specific Issues](../troubleshooting/linux.md) for more details
+- See [Linux-Specific Issues](/workbench/troubleshooting/linux/) for more details
 
 ## Technical Details
 

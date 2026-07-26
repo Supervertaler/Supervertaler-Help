@@ -55,8 +55,8 @@ For CAT tool round-trips, always import and export the matching CAT format. Mixi
 
 ## Related pages
 
-- [Importing DOCX Files](docx-import.md)
-- [Importing Text Files](txt-import.md)
-- [Multi-File Projects](multi-file.md)
-- [Exporting Translations](exporting.md)
-- [Bilingual Tables](bilingual-tables.md)
+- [Importing DOCX Files](/workbench/import-export/docx-import/)
+- [Importing Text Files](/workbench/import-export/txt-import/)
+- [Multi-File Projects](/workbench/import-export/multi-file/)
+- [Exporting Translations](/workbench/import-export/exporting/)
+- [Bilingual Tables](/workbench/import-export/bilingual-tables/)

@@ -51,7 +51,7 @@ Right-click any assistant response bubble to access:
 | **Copy**                | Copies the raw Markdown to the clipboard, preserving tables and formatting                                                                                                                                                 |
 | **Apply to target**     | Inserts the plain text (Markdown stripped) into the active target segment                                                                                                                                                  |
 | **Save as Prompt...**   | Saves the response as a reusable prompt template                                                                                                                                                                           |
-| **Save to memory bank** | Saves the question + response as an inbox note in the active memory bank so useful answers are not lost. Run [Process Inbox](ai-assistant/super-memory/process-inbox.md) afterwards to compile it into the knowledge base. |
+| **Save to memory bank** | Saves the question + response as an inbox note in the active memory bank so useful answers are not lost. Run [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/) afterwards to compile it into the knowledge base. |
 
 If you select text within a bubble before right-clicking, **Copy** and **Apply to target** operate on the selection only.
 
@@ -59,16 +59,16 @@ If you select text within a bubble before right-clicking, **Copy** and **Apply t
 
 | Feature                                                    | Description                                                                                           |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| [**Context Awareness**](ai-assistant/context-awareness.md) | Automatic project, segment, terminology, TM, and document context in every request                    |
-| [**File Attachments**](ai-assistant/file-attachments.md)   | Attach images and documents (PDF, DOCX, XLSX, TMX, etc.) for additional context                       |
-| [**Studio Tools**](ai-assistant/studio-tools.md)           | Query your Trados Studio projects, TMs, termbases, and statistics using natural language              |
-| [**Incognito Mode**](ai-assistant/incognito-mode.md)       | Anonymise project names, file paths, and personal data in AI responses for safe sharing               |
-| [**Providers and Models**](ai-assistant/providers.md)      | Supports 7 AI providers including OpenAI, Claude, Gemini, Grok, Mistral, Ollama, and custom endpoints |
-| [**Supervertaler Bridge**](ai-assistant/supervertaler-bridge.md)     | Localhost-only HTTP service that lets Supervertaler Workbench's floating Sidekick Chat read your active Trados project context |
+| [**Context Awareness**](/trados/ai-assistant/context-awareness/) | Automatic project, segment, terminology, TM, and document context in every request                    |
+| [**File Attachments**](/trados/ai-assistant/file-attachments/)   | Attach images and documents (PDF, DOCX, XLSX, TMX, etc.) for additional context                       |
+| [**Studio Tools**](/trados/ai-assistant/studio-tools/)           | Query your Trados Studio projects, TMs, termbases, and statistics using natural language              |
+| [**Incognito Mode**](/trados/ai-assistant/incognito-mode/)       | Anonymise project names, file paths, and personal data in AI responses for safe sharing               |
+| [**Providers and Models**](/trados/ai-assistant/providers/)      | Supports 7 AI providers including OpenAI, Claude, Gemini, Grok, Mistral, Ollama, and custom endpoints |
+| [**Supervertaler Bridge**](/trados/ai-assistant/supervertaler-bridge/)     | Localhost-only HTTP service that lets Supervertaler Workbench's floating Sidekick Chat read your active Trados project context |
 
 ## See Also
 
-* [QuickLauncher](quicklauncher.md) -- One-click prompt shortcuts
-* [Batch Translate](batch-translate.md) -- Translate multiple segments at once
-* [AI Settings](settings/ai-settings.md) -- API keys, model selection, context options
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [QuickLauncher](/trados/quicklauncher/) -- One-click prompt shortcuts
+* [Batch Translate](/trados/batch-translate/) -- Translate multiple segments at once
+* [AI Settings](/trados/settings/ai-settings/) -- API keys, model selection, context options
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

@@ -5,7 +5,7 @@ title: "Batch Translate"
 Batch Translate lets you translate multiple segments at once using AI. It is located in the **Supervertaler Assistant** panel, on the **Batch Operations** tab.
 
 :::note
-The Batch Operations tab also supports **Proofread** mode for AI-powered quality checking. See [AI Proofreader](ai-proofreader.md) for details.
+The Batch Operations tab also supports **Proofread** mode for AI-powered quality checking. See [AI Proofreader](/trados/ai-proofreader/) for details.
 :::
 
 <figure><img src="/.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
@@ -36,7 +36,7 @@ Choose a prompt to guide the AI translation style and domain. The prompt selecto
 * **Default Translation Prompt** – a general-purpose prompt that works well for most content types. Use it as-is or duplicate it in the Prompt Manager and customise it for your domain.
 * **Custom prompts** – your own prompts created in the Prompt Manager
 
-The **active prompt** for the current project is marked with a checkmark in the dropdown. When you open a project that has an active prompt set, it is automatically selected. See [Memory banks – Active Prompt](ai-assistant/super-memory/active-prompt.md) for how to set the active prompt.
+The **active prompt** for the current project is marked with a checkmark in the dropdown. When you open a project that has an active prompt set, it is automatically selected. See [Memory banks – Active Prompt](/trados/ai-assistant/super-memory/active-prompt/) for how to set the active prompt.
 
 :::tip
 **Tip:** If you save a prompt with the same name as your Trados project, the dropdown will auto-select it whenever you open that project. For example, a prompt called "HAYNESPRO" will be auto-selected when working in a project called HAYNESPRO.
@@ -73,13 +73,13 @@ Ctrl+T is also available via right-click in the editor ("Translate active segmen
 
 ### AI Context in Batch Translate
 
-Batch Translate uses several context sources from your [AI Settings](settings/ai-settings.md) to improve translation quality:
+Batch Translate uses several context sources from your [AI Settings](/trados/settings/ai-settings/) to improve translation quality:
 
 * **Document content** – when enabled, all source segments are included in the system prompt so the AI can determine the document type (legal, medical, technical, etc.) and adapt its style accordingly. This is shared across all batches.
 * **Termbase terms** – terminology from enabled termbases is injected into the prompt, including term definitions and domains when that option is enabled.
 * **Custom prompts** – the selected prompt provides domain-specific translation instructions.
 
-TM matches and surrounding segments are **not** included in Batch Translate – these are Chat & QuickLauncher features only. See the [AI Settings](settings/ai-settings.md) page for a full comparison table.
+TM matches and surrounding segments are **not** included in Batch Translate – these are Chat & QuickLauncher features only. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
 
 ### Backup TMX
 
@@ -125,7 +125,7 @@ Backup files are **not deleted automatically**. Tidy up the `batch_backups` fold
 
 ### Clipboard Mode
 
-If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. This replaces the Provider and Translate button with **Copy to Clipboard** and **Paste from Clipboard** buttons. Supervertaler builds a complete, ready-to-use prompt – including your selected prompt, terminology, document context, and numbered bilingual segments – and copies it to your clipboard. See [Clipboard Mode](clipboard-mode.md) for full details.
+If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. This replaces the Provider and Translate button with **Copy to Clipboard** and **Paste from Clipboard** buttons. Supervertaler builds a complete, ready-to-use prompt – including your selected prompt, terminology, document context, and numbered bilingual segments – and copies it to your clipboard. See [Clipboard Mode](/trados/clipboard-mode/) for full details.
 
 ### Tips
 
@@ -135,7 +135,7 @@ Start by translating only the empty segments (scope: **Empty Segments Only**). R
 
 #### Generate a Domain-Specific Prompt Automatically
 
-Click **AutoPrompt…** next to the prompt dropdown. Supervertaler analyses your entire document, detects the domain, and uses AI to generate a comprehensive translation prompt with terminology rules, style guidelines, and anti-truncation controls – all tailored to your specific project. See [AutoPrompt](generate-prompt.md) for details.
+Click **AutoPrompt…** next to the prompt dropdown. Supervertaler analyses your entire document, detects the domain, and uses AI to generate a comprehensive translation prompt with terminology rules, style guidelines, and anti-truncation controls – all tailored to your specific project. See [AutoPrompt](/trados/generate-prompt/) for details.
 
 #### Create Domain-Specific Prompts Manually
 
@@ -157,10 +157,10 @@ AI translation is a first draft. After a batch run:
 
 ### See Also
 
-* [Clipboard Mode](clipboard-mode.md)
-* [AutoPrompt](generate-prompt.md)
-* [AI Proofreader](ai-proofreader.md)
-* [Supervertaler](ai-assistant.md)
-* [TermLens](termlens.md)
-* [SuperMemory](ai-assistant/super-memory.md)
-* [Keyboard Shortcuts](keyboard-shortcuts.md)
+* [Clipboard Mode](/trados/clipboard-mode/)
+* [AutoPrompt](/trados/generate-prompt/)
+* [AI Proofreader](/trados/ai-proofreader/)
+* [Supervertaler](/trados/ai-assistant/)
+* [TermLens](/trados/termlens/)
+* [SuperMemory](/trados/ai-assistant/super-memory/)
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

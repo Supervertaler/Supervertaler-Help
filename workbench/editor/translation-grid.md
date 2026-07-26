@@ -25,7 +25,7 @@ The grid has five columns:
 ## Confirming & status
 
 - Use the **Status** dropdown to set the segment state.
-- Keyboard confirm is supported (see [Editing & Confirming](editing-confirming.md)).
+- Keyboard confirm is supported (see [Editing & Confirming](/workbench/editor/editing-confirming/)).
 
 Common statuses include:
 
@@ -56,11 +56,11 @@ The change applies immediately, no need to reopen the project. Clicking the opti
 
 ## Splitting and merging segments
 
-Right-click in a **Source** cell to **✂ Split segment here** (at the clicked position) or **🔗 Merge with next segment** — Trados/memoQ-style re-segmentation, fully undoable. See [Editing & Confirming](editing-confirming.md#splitting-and-merging-segments) for details and when it's available.
+Right-click in a **Source** cell to **✂ Split segment here** (at the clicked position) or **🔗 Merge with next segment** — Trados/memoQ-style re-segmentation, fully undoable. See [Editing & Confirming](/workbench/editor/editing-confirming/#splitting-and-merging-segments) for details and when it's available.
 
 ## See also
 
-- [Navigation](navigation.md)
-- [Editing & Confirming](editing-confirming.md)
-- [Keyboard Shortcuts](keyboard-shortcuts.md)
-- [Filtering](filtering.md)
+- [Navigation](/workbench/editor/navigation/)
+- [Editing & Confirming](/workbench/editor/editing-confirming/)
+- [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)
+- [Filtering](/workbench/editor/filtering/)

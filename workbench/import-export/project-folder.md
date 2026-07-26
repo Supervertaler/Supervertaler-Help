@@ -56,6 +56,6 @@ reference switches to the portable relative form automatically.
 
 ## Related pages
 
-- [Exporting Translations](exporting.md)
-- [Your First Translation Project](../get-started/first-project.md)
-- [Multi-File Projects](multi-file.md)
+- [Exporting Translations](/workbench/import-export/exporting/)
+- [Your First Translation Project](/workbench/get-started/first-project/)
+- [Multi-File Projects](/workbench/import-export/multi-file/)

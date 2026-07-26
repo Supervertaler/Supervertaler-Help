@@ -64,6 +64,6 @@ Each row reports the number of **segments**, **words**, **characters** (tags exc
 
 ## Related
 
-- [Translation memory](../translation-memory/basics.md)
-- [Fuzzy matching](../translation-memory/fuzzy-matching.md)
-- [Managing TMs](../translation-memory/managing-tms.md)
+- [Translation memory](/workbench/translation-memory/basics/)
+- [Fuzzy matching](/workbench/translation-memory/fuzzy-matching/)
+- [Managing TMs](/workbench/translation-memory/managing-tms/)
