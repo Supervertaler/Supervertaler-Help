@@ -59,6 +59,7 @@ The server exposes these tools to the AI app:
 | `get_comments` | Read the Trados comments in the document |
 | `add_comment` | Add a Trados comment to a segment (flag a source issue, leave a review note) |
 | `update_comment` | Edit an existing Trados comment |
+| `delete_comment` | Remove a Trados comment (or all of a segment's) – destructive, so the AI confirms first *(v18.20.116)* |
 | `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment |
 | `analyze_files` | Run **Analyse Files** – computes the perfect/exact/fuzzy/new/repetition leverage breakdown *(v18.20.106)* |
 | `pretranslate` | Run **Pre-translate Files** – fill untranslated segments with their TM matches |
