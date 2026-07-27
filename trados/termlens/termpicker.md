@@ -17,7 +17,7 @@ Underneath both: your termbases.
 
 ### Opening TermPicker
 
-Press **Ctrl+Shift+P** to open TermPicker. It appears as a floating window above the editor.
+Press **Alt+P** to open TermPicker. It appears as a floating window above the editor, with every synonym group already expanded so you can see all alternatives at a glance.
 
 :::note
 Looking for the memoQ-style Ctrl-tap behaviour? That now opens the [TermLens popup](/trados/termlens/termlens-popup/) – a more compact in-context view of the same matches. TermPicker described on this page is the list-based alternative for users who prefer a tabular UI.

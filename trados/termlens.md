@@ -91,9 +91,9 @@ Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** or **TermP
 
 Tap **Ctrl** (press and release without any other key) to open the [**TermLens popup**](/trados/termlens/termlens-popup/) – a borderless floating version of this panel for the active segment. Designed for keyboard-only term selection on small screens where keeping the docked panel always-visible costs too much vertical space. Tap **Ctrl** again to close. Inside, **Right / Down / Tab** cycle the highlighted match, **Enter** inserts and closes, **Escape** dismisses without inserting.
 
-#### TermPicker (Ctrl+Shift+P)
+#### TermPicker (Alt+P)
 
-For segments with many matches and when a sortable list view is preferable, press **Ctrl+Shift+P** to open [**TermPicker**](/trados/termlens/termpicker/). It shows all matched terms in a searchable list and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens – same termbase data, different ergonomics (flat list vs in-context chips).
+For segments with many matches and when a sortable list view is preferable, press **Alt+P** to open [**TermPicker**](/trados/termlens/termpicker/). It shows all matched terms in a searchable list and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens – same termbase data, different ergonomics (flat list vs in-context chips).
 
 <figure><img src="/.gitbook/assets/Sv_Term-Picker.png" alt=""><figcaption></figcaption></figure>
 
