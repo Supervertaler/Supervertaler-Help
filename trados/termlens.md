@@ -93,7 +93,9 @@ Tap **Ctrl** (press and release without any other key) to open the [**TermLens p
 
 #### TermPicker (Alt+P)
 
-For segments with many matches and when a sortable list view is preferable, press **Alt+P** to open [**TermPicker**](/trados/termlens/termpicker/). It shows all matched terms in a searchable list and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens – same termbase data, different ergonomics (flat list vs in-context chips).
+For segments with many matches and when a sortable list view is preferable, press **Alt+P** to open [**TermPicker**](/trados/termlens/termpicker/). It shows all matched terms in a list – synonyms expanded – and lets you insert any term with a double-click or Enter. TermPicker is a sibling surface to TermLens: same termbase data, different ergonomics (flat list vs in-context chips).
+
+TermPicker is also available as a **dockable pane** (Studio's **View** tab → **TermPicker**), so you can keep the list permanently visible instead of the TermLens panel if that suits you better. Both views are available in both placements – docked or as a popup at the cursor.
 
 <figure><img src="/.gitbook/assets/Sv_Term-Picker.png" alt=""><figcaption></figcaption></figure>
 

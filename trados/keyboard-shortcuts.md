@@ -33,7 +33,7 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 | `Ctrl+Alt+T` | `Control+Option+T` | Add term entry (opens full editor with definition, domain, notes, URL, client, project, and synonyms) |
 | `Ctrl+Alt+N` | `Control+Option+N` | Quick-add non-translatable term |
 | `Ctrl` (tap) | `Control` (tap) | Toggle the floating **TermLens popup** (open / close) |
-| `Alt+P` | `Option+P` | Open **TermPicker** (list-based) |
+| `Alt+P` | `Option+P` | Open **TermPicker** (list-based) – or focus the TermPicker pane when it is docked |
 | `Alt+1` ... `Alt+9` | `Option+1` ... `Option+9` | Insert term 1–9 by badge number |
 
 ## AI Translation
