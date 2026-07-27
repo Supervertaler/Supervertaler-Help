@@ -41,6 +41,10 @@ Each row in TermPicker is colour-coded by termbase type:
 
 This lets you instantly see where each term comes from and how it should be handled.
 
+### The details dot
+
+An **amber dot** in the second column marks terms that carry extra information – a definition, domain, notes or a URL. Press **I** on such a row to see it (see below). Rows without a dot have nothing further to show, so you never have to guess. This mirrors the dot on the [TermLens](/trados/termlens/) chips.
+
 ### Expandable synonyms
 
 Terms with multiple translations open **already expanded**, with their alternatives listed as sub-rows beneath the term, so nothing is hidden behind a marker. Press **Left arrow** to collapse a group (the indicator changes to **▸**) and **Right arrow** to expand it again.
@@ -65,6 +69,22 @@ Navigation wraps around: pressing **Down** on the last row jumps to the first, a
 :::note
 **I** and **E** work the same way here as in the [TermLens popup](/trados/termlens/termlens-popup/). Press **I** again to dismiss the details popup. MultiTerm terms cannot be edited – those termbases are read-only in Supervertaler; edit them in Trados's own MultiTerm interface.
 :::
+
+### Term details (I)
+
+Pressing **I** on a row opens a small window just below it showing everything the termbase holds for that term: its synonyms, definition, domain, notes and URL, for every entry behind the row. Press **I** again – or **Escape** – to dismiss it. It also closes by itself when you move to another row, so it can never describe the wrong term.
+
+### Right-click menu
+
+Right-clicking a row gives you the same three actions as right-clicking a TermLens chip:
+
+| Action | Effect |
+| ------ | ------ |
+| **Edit Term…** | Opens the term editor (also **E**) |
+| **Mark as Non-Translatable** | Flags the term so source = target (or removes the flag) |
+| **Delete Term** | Removes the term from the termbase, after a confirmation |
+
+MultiTerm terms are read-only in Supervertaler, so these actions are greyed out for them – edit those in Trados's own MultiTerm interface.
 
 ### Inserting a term
 
