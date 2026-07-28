@@ -15,7 +15,7 @@ Each memory bank is stored as interlinked Markdown files on disk – human-reada
 
 ## How knowledge is organised
 
-Every memory bank has the same seven-folder skeleton. The skeleton is created automatically when you make a new bank, and it is shared byte-for-byte with the Python Supervertaler – so a bank created in Trados works unchanged in the standalone app and vice versa.
+Every memory bank has the same seven-folder skeleton. The skeleton is created automatically when you make a new bank.
 
 | Folder           | Contents                                                                                              |
 | ---------------- | ----------------------------------------------------------------------------------------------------- |
@@ -92,11 +92,11 @@ Typical layouts:
 * **One bank per domain** – `legal`, `medical`, `technical`, `marketing`.
 * **One bank per language pair** – `nl-en`, `de-en`, `fr-en` if your domains are similar across clients but the style and terminology vary by direction.
 
-## Sharing banks with the Python Supervertaler
+## Working with a bank outside Trados
 
-Memory banks are stored in the **shared Supervertaler data folder** – the same folder the Python Supervertaler uses – so banks created on either side are immediately visible to the other. The folder layout, skeleton, and naming rules are identical byte-for-byte. You can create a bank in the Python assistant, drop files into its inbox from the web clipper, and then switch to it from the Trados plugin; both products will see the same articles.
+SuperMemory is currently a **Supervertaler for Trados** feature: the Trados plugin is the only product that reads a memory bank and feeds it to the AI. Supervertaler Workbench does not use memory banks, and the bank is not yet exposed over the [MCP server](/trados/mcp-server/) either – so an external AI client driving Supervertaler over MCP will not see your bank. Widening this is on the roadmap.
 
-The shared folder also means you can keep your memory banks in a cloud-synced location (OneDrive, Dropbox, iCloud) and have the same banks available on any machine where either product is installed.
+What you can do today rests on the format itself: a memory bank is nothing but a folder of Markdown files. That means you can open, read and edit it in [Obsidian](https://obsidian.md/) or any text editor, search it with ordinary tools, version-control it with Git, and keep it in a cloud-synced location (OneDrive, Dropbox, iCloud) so the same banks follow you between machines. If you run an AI client that can read local folders – for example a filesystem MCP server pointed at your memory banks folder – it can consult your articles directly, whatever CAT tool you happen to have open beside it.
 
 ## Working with a memory bank
 
@@ -140,4 +140,4 @@ If you activate an older bank that is missing one of these template files – fo
 
 ## Learn more
 
-The memory bank design is inspired by Andrej Karpathy's [LLM Knowledge Base](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) architecture. Templates for the seven-folder skeleton are available on [GitHub](https://github.com/Supervertaler/Supervertaler-SuperMemory) (the repository still uses the project's original name).
+The memory bank design is inspired by Andrej Karpathy's [LLM Knowledge Base](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) architecture. You do not need to fetch the seven-folder skeleton from anywhere – the plugin writes it for you whenever you create a new bank.
