@@ -70,6 +70,9 @@ The server exposes these tools to the AI app:
 | `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
 | `get_prompt_context` | Everything the AI needs to write a translation prompt tailored to your open project – source text, domain, terms, TM examples *(v18.20.109)* |
+| `get_supermemory_context` | Your [SuperMemory](/trados/ai-assistant/super-memory/) memory bank for this project – client profile, domain knowledge, style guide and terminology, with the article paths it drew from *(v18.20.146)* |
+| `search_supermemory` | Search your active memory bank by keyword – *"what did I decide about this term, and why?"* *(v18.20.146)* |
+| `list_supermemory_banks` | Your memory banks and which one is active, with article counts *(v18.20.146)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >
@@ -155,6 +158,17 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 ### Resources
 
 * "Which TMs and termbases is this project using?" *(from v18.20.95)*
+
+### Your memory bank *(from v18.20.146)*
+
+Your [SuperMemory](/trados/ai-assistant/super-memory/) memory bank holds the reasoning behind your decisions – why a term was chosen, what a client insists on, what you rejected last time – which is exactly what a TM or termbase cannot tell an AI. From this version the AI can read it over MCP, not just inside the Supervertaler chat panel:
+
+* "Read my memory bank for this project before we start."
+* "What did I decide about *inrichting* for this client, and why?"
+* "Check this translation against my style guide and terminology notes."
+* "Which memory bank are you using?"
+
+The AI cites the articles it drew from by path, so you can open them in Obsidian and check its reasoning. Retrieval is read-only – nothing is written back to the bank over MCP. If you have turned memory-bank context off under Settings → AI Settings, these tools stay quiet too.
 
 ### Your prompt library *(from v18.20.101)*
 

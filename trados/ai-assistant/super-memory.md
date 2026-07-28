@@ -94,9 +94,13 @@ Typical layouts:
 
 ## Working with a bank outside Trados
 
-SuperMemory is currently a **Supervertaler for Trados** feature: the Trados plugin is the only product that reads a memory bank and feeds it to the AI. Supervertaler Workbench does not use memory banks, and the bank is not yet exposed over the [MCP server](/trados/mcp-server/) either – so an external AI client driving Supervertaler over MCP will not see your bank. Widening this is on the roadmap.
+SuperMemory is built into **Supervertaler for Trados**, but your bank is not locked inside it.
 
-What you can do today rests on the format itself: a memory bank is nothing but a folder of Markdown files. That means you can open, read and edit it in [Obsidian](https://obsidian.md/) or any text editor, search it with ordinary tools, version-control it with Git, and keep it in a cloud-synced location (OneDrive, Dropbox, iCloud) so the same banks follow you between machines. If you run an AI client that can read local folders – for example a filesystem MCP server pointed at your memory banks folder – it can consult your articles directly, whatever CAT tool you happen to have open beside it.
+From **v18.20.146** the memory bank is exposed over the [Supervertaler MCP server](/trados/mcp-server/), so any MCP client – Claude Desktop, Claude Code, or anything else that speaks MCP – can read it: `get_supermemory_context` for the whole picture on the current project, `search_supermemory` to look a decision up by keyword, and `list_supermemory_banks` to see which bank is active. Access is read-only, and it respects the memory-bank toggle in AI Settings. Because the AI client sits outside Trados, this works with whatever you happen to have open beside it.
+
+Supervertaler Workbench still does not use memory banks. That remains a genuine gap rather than a setting you have missed.
+
+Beyond that, a memory bank is nothing but a folder of Markdown files. You can open, read and edit it in [Obsidian](https://obsidian.md/) or any text editor, search it with ordinary tools, version-control it with Git, and keep it in a cloud-synced location (OneDrive, Dropbox, iCloud) so the same banks follow you between machines.
 
 ## Working with a memory bank
 
