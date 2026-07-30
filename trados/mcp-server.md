@@ -40,6 +40,7 @@ The server exposes these tools to the AI app:
 | `search_tm` | Search your Supervertaler (Workbench-bridged) translation memories |
 | `lookup_term` | Look up a term in your termbases (exact first, then substring matching) |
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
+| `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
 | `check_tags` | Translated segments with missing or extra inline tags *(v18.20.95)* |
 | `check_terminology` | Translated segments that don't use the termbase's expected translation *(v18.20.95)* |
@@ -156,8 +157,13 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 * "Find all repeated sentences that I translated differently." *(from v18.20.95)*
 * "Check whether I've lost any non-breaking spaces." *(from v18.20.148)*
 * "Put a non-breaking space between every value and its unit." *(from v18.20.148)*
+* "Where does my translation differ from the client's reference TM?" *(from v18.20.148)*
 * "Run all your QA checks and give me a report."
 * "…then align them all to the best version." (pairs with the write tools)
+
+Comparing against the TM is worth a note of its own, because it answers a different question from concordance search. Searching the TM tells you whether a phrase *you already suspect* was translated before – one query at a time, for things you thought to look up. `compare_document_to_tm` goes the other way: it reads the attached TMs once and checks **every** segment whose source appears in them, then reports only where your wording differs. That surfaces the cases you had no reason to check, which is exactly where an established client rendering gets missed.
+
+Two things to keep in mind. A difference is not automatically a mistake – on a real job most of them are deliberate improvements, and an improvement is indistinguishable from an error here, so the assistant is instructed to present the list for you to judge rather than align anything itself. And only segments whose source matches the TM word for word are compared, so a clean result means "nothing contradicts the TM", not "the whole document agrees with it".
 
 Non-breaking spaces deserve a note of their own. They are invisible everywhere – in Studio, in the AI's view of your segments, in any report – so a lost one usually surfaces only when the client rejects the file. That matters if your style guide asks for one between a value and its unit (230 V, 3,5 mm, 50 %) or before a figure reference. `check_nbsp` compares each translated segment against its source and lists the ones that came out with fewer.
 
