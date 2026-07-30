@@ -43,6 +43,7 @@ The server exposes these tools to the AI app:
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
 | `check_tags` | Translated segments with missing or extra inline tags *(v18.20.95)* |
 | `check_terminology` | Translated segments that don't use the termbase's expected translation *(v18.20.95)* |
+| `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
 | `list_resources` | The TMs and termbases attached to your project and Supervertaler setup *(v18.20.95)* |
 | `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
@@ -60,7 +61,7 @@ The server exposes these tools to the AI app:
 | `add_comment` | Add a Trados comment to a segment (flag a source issue, leave a review note) |
 | `update_comment` | Edit an existing Trados comment |
 | `delete_comment` | Remove a Trados comment (or all of a segment's) – destructive, so the AI confirms first *(v18.20.116)* |
-| `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment |
+| `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment – flagged as stale if the AI has unsaved edits *(stale flag v18.20.148)* |
 | `analyze_files` | Run **Analyse Files** – computes the perfect/exact/fuzzy/new/repetition leverage breakdown *(v18.20.106)* |
 | `pretranslate` | Run **Pre-translate Files** – fill untranslated segments with their TM matches |
 | `update_tm` | Run **Update Main Translation Memories** – write confirmed segments to the project TM |
@@ -82,7 +83,8 @@ The server exposes these tools to the AI app:
 
 * Translations written by the AI are set to **Draft** status unless it explicitly sets another status – so you can filter for them in Studio and review everything.
 * **Locked segments are never touched.**
-* Updates are limited to 200 segments per call; larger jobs are processed in reported batches.
+* **Find & replace keeps each segment's confirmation status** *(from v18.20.148)*. Editing a segment's content normally demotes it to Draft, which meant a single consistency sweep over a finished file could quietly leave thousands of segments unconfirmed. The AI can still ask for a specific status when you want one.
+* Updates are limited to 40 segments per call; larger jobs are processed in reported batches. *(Lowered from 200 in v18.20.148: bigger batches could outlast the connection timeout, and because the write had already gone through, the AI couldn't tell success from failure.)*
 * Changes land in the open document but are **not saved automatically** – saving stays your decision. From v18.20.115 the AI can run the save for you (`save_document`, same as Ctrl+S), but only when you ask or approve – *"save and run the analysis"* is one instruction, silent saving is not allowed.
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
 
@@ -152,12 +154,21 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 * "Check my tags – any segments missing formatting?" *(from v18.20.95)*
 * "Check my translated segments against the termbase and list violations." *(from v18.20.95)*
 * "Find all repeated sentences that I translated differently." *(from v18.20.95)*
+* "Check whether I've lost any non-breaking spaces." *(from v18.20.148)*
+* "Put a non-breaking space between every value and its unit." *(from v18.20.148)*
 * "Run all your QA checks and give me a report."
 * "…then align them all to the best version." (pairs with the write tools)
+
+Non-breaking spaces deserve a note of their own. They are invisible everywhere – in Studio, in the AI's view of your segments, in any report – so a lost one usually surfaces only when the client rejects the file. That matters if your style guide asks for one between a value and its unit (230 V, 3,5 mm, 50 %) or before a figure reference. `check_nbsp` compares each translated segment against its source and lists the ones that came out with fewer.
+
+Inserting them used to be the harder half. A non-breaking space typed straight into a tool call does not survive the trip: somewhere between the AI and Trados it is normalised to an ordinary space, and because the write itself succeeds, nothing indicates that the result is wrong. Escape codes don't help either – the AI client decodes them into the character first, and then the same thing happens to it.
+
+From v18.20.148 the AI can write the character as the HTML entity `&nbsp;`, which Supervertaler turns into a real non-breaking space at the Trados end. Plain ASCII travels intact, so nothing en route can mangle it. This works for both writing translations and find & replace, and searching, so *"put a non-breaking space between every value and its unit"* fixes a whole document in one pass – and because find & replace preserves confirmation status, doing that to a finished file leaves it finished. It is deliberately opt-in, so a document that genuinely contains the text `&nbsp;` (an HTML manual, say) is never silently rewritten.
 
 ### Resources
 
 * "Which TMs and termbases is this project using?" *(from v18.20.95)*
+* "Are any of my termbases actually switched on for this project?" *(from v18.20.148)* – termbases are enabled per project, so a project with all of them off looks exactly like one with no terminology at all. The AI is now warned when nothing is read-enabled instead of silently finding no terms.
 
 ### Your memory bank *(from v18.20.146)*
 
