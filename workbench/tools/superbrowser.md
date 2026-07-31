@@ -6,7 +6,6 @@ Superbrowser puts ChatGPT, Claude, and Gemini side by side in one window – thr
 
 Open it from **Tools → 🌐 Superbrowser…**. It opens in its own window, so it can live on a second monitor next to your translation work.
 
-<figure><img src="/.gitbook/assets/Supervertaler-Superbrowser.png" alt="The Superbrowser window with ChatGPT, Claude, and Gemini side by side in three columns, each answering the same question"><figcaption><p>ChatGPT, Claude, and Gemini answering the same question, side by side.</p></figcaption></figure>
 
 ### How it works
 
