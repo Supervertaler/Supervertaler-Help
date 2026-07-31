@@ -183,6 +183,7 @@
 * [PDF Rescue (OCR)](workbench/tools/pdf-rescue.md)
 * [TMX Editor](workbench/tools/tmx-editor.md)
 * [Statistics (Analyse Against TM)](workbench/tools/statistics.md)
+* [Superbrowser (Multi-Chat AI Browser)](workbench/tools/superbrowser.md)
 
 ## 🖥️ CAT Tool Integration
 

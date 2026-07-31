@@ -689,6 +689,10 @@ const sidebar = [
           {
             "label": "Statistics (Analyse Against TM)",
             "link": "/workbench/tools/statistics/"
+          },
+          {
+            "label": "Superbrowser (Multi-Chat AI Browser)",
+            "link": "/workbench/tools/superbrowser/"
           }
         ]
       },
