@@ -58,18 +58,25 @@ During translation:
 * A **real-time log** displays the status of each segment as it is translated
 * The **Stop** button aborts the batch at any time – segments already translated are kept
 
-### Translate Active Segment (Ctrl+T)
+### Translate Active Segment (Alt+T)
 
-Press **Ctrl+T** to translate the active segment instantly. This uses the same provider, model, and prompt as Batch Translate, so you can switch prompts or providers and immediately use them for single segments with Ctrl+T.
+Press **Alt+T** to translate the active segment instantly. This uses the same provider, model, and prompt as Batch Translate, so you can switch prompts or providers and immediately use them for single segments with Alt+T.
 
-Ctrl+T is also available via right-click in the editor ("Translate active segment").
+Alt+T is also available via right-click in the editor ("Translate active segment").
+
+:::note
+Older installs may still have this on `Ctrl+T` – the default moved to `Alt+T` in v18/19.20.119 because `Ctrl+T` collides with a Trados factory shortcut. See [Keyboard shortcuts](/trados/keyboard-shortcuts/) for how to reassign it.
+:::
 
 #### How it works
 
 1. The active segment's source text is sent to the AI provider configured in AI Settings
 2. The selected prompt (from the Batch Translate tab) is applied, along with termbase terms
-3. The translation is written directly into the target cell
-4. Inline tags (bold, italic, field codes, etc.) are preserved in the translation
+3. The same document context and SuperMemory context as a batch run is included *(from v18/19.20.149 – earlier versions sent the segment on its own, which is why single segments used to translate noticeably worse than a batch)*
+4. The translation is written directly into the target cell
+5. Inline tags (bold, italic, field codes, etc.) are preserved in the translation
+
+In short: a single segment now gets everything a batch run gets, minus the other segments – same prompt, same terminology, same document context. On versions before 18/19.20.149, batch translating even small ranges gave better results than going segment by segment; from 18/19.20.149 the two are equivalent.
 
 ### AI Context in Batch Translate
 

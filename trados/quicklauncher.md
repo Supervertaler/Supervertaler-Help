@@ -19,6 +19,15 @@ The menu heading **Supervertaler QuickLauncher** is clickable – click it to op
 
 The expanded prompt appears as a user message bubble in the **Supervertaler** chat panel, and the AI response follows immediately below it. The conversation continues from there – you can ask follow-up questions in the chat input as normal.
 
+### QuickLauncher vs Translate Active Segment (Alt+T)
+
+These are two different pipelines, and the difference matters:
+
+* **Translate active segment (`Alt+T`)** runs through the **Batch Translate pipeline**: it uses the prompt currently selected in the Batch Translate tab, plus the same provider, termbase terms, document context and SuperMemory context as a batch run, and writes the result straight into the target cell. *(Document and SuperMemory context from v18/19.20.149 – before that, single segments were sent without context, which made them translate noticeably worse than a batch.)*
+* **QuickLauncher** runs through the **Assistant chat**: it fills in whichever prompt template you assigned to the slot and shows the answer in the chat panel. What context the AI sees depends entirely on the template – surrounding text only if it contains `{{SURROUNDING_SEGMENTS}}`, the whole document only if it contains `{{PROJECT}}`, and so on (see the variables below).
+
+If your goal is simply *"translate this segment the way a batch would"*, use `Alt+T`. Use QuickLauncher when you want a custom prompt's behaviour – explaining a term, assessing a translation, or translating with special instructions of your own.
+
 ### Keyboard shortcut
 
 | Shortcut (Windows) | Shortcut (Mac) | Action                         |
