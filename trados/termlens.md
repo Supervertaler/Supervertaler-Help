@@ -19,6 +19,8 @@ This gives you an at-a-glance overview of every term in the segment that has a t
 
 Selecting text in the editor's **source segment** highlights the corresponding words in TermLens with a soft yellow band – matched and unmatched words alike. On a long segment this anchors your eye to the part you are actually working on, with the relevant term chips right there. The highlight follows your selection live and clears when you deselect. When the same phrase occurs more than once in a segment, the occurrence nearest your cursor is highlighted.
 
+<figure><img src="/.gitbook/assets/Selection-tracking-in-TermLens.jpg" alt="Selection tracking in TermLens: the phrase 'more particularly' is selected in the editor's source segment, and the same words carry a yellow highlight in the TermLens panel above, with the termbase translation 'meer in het bijzonder' directly underneath"><figcaption><p>Select text in the source segment and TermLens highlights the same words – your eye lands straight on the relevant term chips.</p></figcaption></figure>
+
 Selecting text in the **target segment** works in reverse: the term chips whose translation your selection covers light up, including matches via target synonyms and abbreviations. Only chips can light up from a target selection – the editor provides no word alignment between source and target, so unmatched words have no reliable counterpart to point at. Whichever side you selected last drives the highlight.
 
 <figure><img src="/.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
