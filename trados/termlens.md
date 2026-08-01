@@ -15,6 +15,10 @@ When you select a segment in the Trados editor, TermLens analyses the source tex
 
 This gives you an at-a-glance overview of every term in the segment that has a termbase entry – without hovering or clicking anything.
 
+#### Selection tracking
+
+Selecting text in the editor's **source segment** highlights the corresponding words in TermLens with a soft yellow band – matched and unmatched words alike. On a long segment this anchors your eye to the part you are actually working on, with the relevant term chips right there. The highlight follows your selection live and clears when you deselect. When the same phrase occurs more than once in a segment, the occurrence nearest your cursor is highlighted.
+
 <figure><img src="/.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Colour Coding
