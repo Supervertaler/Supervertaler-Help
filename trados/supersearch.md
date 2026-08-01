@@ -61,7 +61,13 @@ All three kinds of termbase are included, with nothing extra to configure:
 * **MultiTerm** — the `.sdltb` termbases attached to the Trados project
 * **Trados `.ttb`** — the Studio 2026 termbase format
 
-Termbase hits show the **termbase name in green** and its **kind** in the Status column (`Supervertaler`, `MultiTerm` or `TTB`). A termbase that is switched off is still searched, and its hits are marked `(inactive)` — so a term that exists only in a disabled termbase is visible rather than silently missing.
+Terminology is matched **in your project's direction**: a termbase declared the other way round (an EN→NL termbase in an NL→EN project) is oriented before matching, so the **Src** box always means *the language you translate from* — not "whichever column that particular termbase calls source". This is the same treatment TermLens gives your terminology.
+
+Searches read the terminology TermLens already holds in memory, so a termbase search is effectively instant. (Immediately after opening a project TermLens may still be loading, in which case the first search falls back to reading the database and takes longer.)
+
+Only the termbases you have **switched on** are searched — Supervertaler termbases with their **Read** tick set, and MultiTerm/`.ttb` termbases enabled in Trados Project Settings. The Read column is your statement of which terminology applies to the job in hand, so SuperSearch honours it rather than searching everything you own.
+
+Termbase hits show the **termbase name in green** and its **kind** in the Status column (`Supervertaler`, `MultiTerm` or `TTB`).
 
 :::note
 TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, edit it in the termbase.
@@ -80,15 +86,15 @@ SuperSearch displays all matching segments in the results grid. The status bar s
 
 ### Results Grid
 
-Each row shows one matching segment (or, in a TM mode, one TM entry):
+Each row shows one matching segment, one TM entry, or one termbase entry:
 
 | Column      | Description                                                                                       |
 | ----------- | ------------------------------------------------------------------------------------------------- |
-| **File/TM** | The project-file name, or — for TM results — the translation-memory name, shown in blue. Hover for the full path |
-| **#**       | Segment number within the file; for TM results, the concordance match score                      |
+| **Found in** | The project-file name, the translation-memory name (blue), or the termbase name (green). Hover for the full path |
+| **#**       | Segment number within the file; for TM results, the concordance match score; empty for termbase entries |
 | **Source**  | Source text -- matching text is highlighted in yellow                                             |
 | **Target**  | Target text -- matching text is highlighted in yellow                                             |
-| **Status**  | Confirmation status (Not Translated, Draft, Translated, etc.), or "TM" for TM results             |
+| **Status**  | Confirmation status (Not Translated, Draft, Translated, etc.), "TM" for TM results, or the termbase kind (`Supervertaler`, `MultiTerm`, `TTB`) for terminology |
 
 ### Preview Pane
 
@@ -96,27 +102,32 @@ Below the results grid is a preview pane showing the **full source and target te
 
 The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C** to copy, or right-click for a menu with **Copy**, **Select All**, **Copy source**, and **Copy target**. This makes it easy to reuse a previous translation verbatim -- select the target phrase and paste it straight into your active segment.
 
-## File and TM Selection
+## File, TM and Termbase Selection
 
-Two buttons in the search bar let you narrow what SuperSearch looks at — **Files** for the project's SDLXLIFF files, and **TMs** for the project's translation memories. Each button shows how many items are included:
+Three buttons in the search bar let you narrow what SuperSearch looks at — **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, and **TBs** for your termbases *(v18.20.155)*. Each button shows how many items are included:
 
 * **Files (16)** -- all 16 files in the project are included
 * **Files (12/16)** -- 12 out of 16 files are included (4 excluded)
 * **TMs (3)** -- all 3 project TMs are included
 * **TMs (1/3)** -- 1 of 3 TMs is included (2 excluded)
+* **TBs (2)** -- both available termbases are included
 
-Click either button to open its selection dialog:
+Files, TMs and termbases are all discovered when the project opens, so the counts are filled in before your first search.
 
-1. A list shows all the files (or TMs) found in the project, with checkboxes
+Click any button to open its selection dialog:
+
+1. A list shows all the files (or TMs, or termbases) found, with checkboxes
 2. **Check** the items you want to include in the search
 3. **Uncheck** the items you want to exclude
 4. Use **Select All** or **Select None** to quickly toggle everything
 5. Click **OK** to apply
 
-The **Files** filter applies in **Project files** and **Everything** modes; the **TMs** filter applies in **TMs** and **Everything** modes.
+The **Files** filter applies in **Project files** and **Everything** modes; the **TMs** filter applies in **TMs** and **Everything** modes; the **TBs** filter applies in **Termbases** and **Everything** modes.
+
+Termbases are listed as *name (kind)* — for example `BEIJER (Supervertaler)` — so two termbases that share a name remain distinguishable.
 
 :::note
-Both selections persist for the current session. When you switch to a different project, all files and all TMs are included again by default.
+These selections persist for the current session. When you switch to a different project, all files, TMs and termbases are included again by default.
 :::
 
 ## Navigating to a Segment
