@@ -38,7 +38,7 @@ The server exposes these tools to the AI app:
 | `get_project_statistics` | Analysis bands and per-file confirmation statistics – word counts, progress *(v18.20.95)* |
 | `search_studio_tm` | Concordance-search the Trados TMs attached to the project (.sdltm and GroupShare) *(v18.20.95)* |
 | `search_tm` | Search your Supervertaler (Workbench-bridged) translation memories |
-| `lookup_term` | Look up a term in your termbases (exact first, then substring matching) |
+| `lookup_term` | Look up a term in your termbases (exact first – against source and target terms alike – then substring matching); hits report which column matched and are never reoriented *(v18.20.153)* |
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
@@ -51,7 +51,7 @@ The server exposes these tools to the AI app:
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
 | `list_project_templates` | Your Trados project templates *(v18.20.111)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
-| `add_term` | Add a source/target pair to your Write termbases |
+| `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting, and a per-termbase echo of exactly what was stored *(v18.20.153)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match, all other fields preserved *(v18.20.113)* |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
