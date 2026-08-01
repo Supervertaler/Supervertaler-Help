@@ -40,9 +40,10 @@ The **mode** dropdown in the search bar controls where SuperSearch looks:
 
 | Mode              | Searches                                                                                          |
 | ----------------- | ------------------------------------------------------------------------------------------------- |
-| **Project files** | The project's SDLXLIFF files (the default — original SuperSearch behaviour)                       |
-| **Files + TMs**   | The project files _and_ the project's translation memories, merged into one result list          |
-| **TMs only**      | Only the project's translation memories — a concordance search, like Studio's built-in Concordance |
+| **Everything**    | Project files, translation memories _and_ termbases, merged into one result list                  |
+| **Project files** | The project's SDLXLIFF files                                                                       |
+| **TMs**           | Only the project's translation memories — a concordance search, like Studio's built-in Concordance |
+| **Termbases**     | Only your terminology — Supervertaler, MultiTerm (`.sdltb`) and Trados `.ttb` termbases *(v18.20.155)* |
 
 The mode is remembered across sessions until you change it.
 
@@ -50,8 +51,20 @@ Translation-memory results are found via the project's attached file-based TMs (
 
 The TM list is re-checked every time you search, so a TM you attach to the project mid-session is picked up without reopening the project. SuperSearch searches every attached TM regardless of its **Enabled** / **Concordance** state in the project's TM settings — use the **TMs** button (see below) to narrow the list.
 
+### Searching your termbases *(from v18.20.155)*
+
+*"Where does this phrase appear?"* and *"what have I called this term?"* are the same question at different granularities, so SuperSearch answers both. Terminology is searched alongside files and TMs in **Everything**, or on its own in **Termbases**.
+
+All three kinds of termbase are included, with nothing extra to configure:
+
+* **Supervertaler termbases** — every termbase in your shared database
+* **MultiTerm** — the `.sdltb` termbases attached to the Trados project
+* **Trados `.ttb`** — the Studio 2026 termbase format
+
+Termbase hits show the **termbase name in green** and its **kind** in the Status column (`Supervertaler`, `MultiTerm` or `TTB`). A termbase that is switched off is still searched, and its hits are marked `(inactive)` — so a term that exists only in a disabled termbase is visible rather than silently missing.
+
 :::note
-TM results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. In **TMs only** mode the Replace bar is therefore disabled.
+TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, edit it in the termbase.
 :::
 
 ### Search Options
@@ -100,7 +113,7 @@ Click either button to open its selection dialog:
 4. Use **Select All** or **Select None** to quickly toggle everything
 5. Click **OK** to apply
 
-The **Files** filter applies in **Project files** and **Files + TMs** modes; the **TMs** filter applies in **Files + TMs** and **TMs only** modes.
+The **Files** filter applies in **Project files** and **Everything** modes; the **TMs** filter applies in **TMs** and **Everything** modes.
 
 :::note
 Both selections persist for the current session. When you switch to a different project, all files and all TMs are included again by default.
@@ -175,7 +188,7 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 * Use **Source only** scope to find segments where a particular term appears, then check how it was translated across files.
 * Use **Target only** scope with Replace to fix a consistent mistranslation across the entire project.
 * Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories -- useful in large projects where you only want to search a subset.
-* Switch the mode dropdown to **TMs only** to use SuperSearch as a concordance tool, or **Files + TMs** to see project and TM hits side by side.
+* Switch the mode dropdown to **TMs** to use SuperSearch as a concordance tool, **Termbases** to search your terminology, or **Everything** to see project, TM and termbase hits side by side.
 * The status bar shows the number of results, what was searched, and the search time in milliseconds.
 * You can resize columns by dragging the column header borders.
 
