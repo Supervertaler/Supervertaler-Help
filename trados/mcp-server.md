@@ -89,6 +89,15 @@ The server exposes these tools to the AI app:
 * Changes land in the open document but are **not saved automatically** – saving stays your decision. From v18.20.115 the AI can run the save for you (`save_document`, same as Ctrl+S), but only when you ask or approve – *"save and run the analysis"* is one instruction, silent saving is not allowed.
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
 
+### Direction-aware termbase writes *(from v18.20.153)*
+
+Termbases have a declared language direction, and yours don't all point the same way – a main termbase might be en→nl while a project termbase is nl→en. From v18.20.153 `add_term` handles this per termbase:
+
+* **The AI states which language each side of the pair is in** (`sourceLang`/`targetLang`), and every termbase written to stores the pair according to **its own** declared direction. One request fills an en→nl and an nl→en termbase correctly at the same time – each entry the mirror of the other.
+* **Ambiguity refuses instead of guessing.** If the languages can't be established – no document open, or a termbase whose language pair doesn't match – the write is refused with an explanation rather than performed silently. There is deliberately no language detection: technical term pairs are routinely identical in both languages (*radar*, *transponder*), so a detector would guess, and a wrong entry that *looks* fine is worse than a refusal.
+* **The response proves what happened.** Every targeted termbase reports back individually: added (echoing exactly what was stored, in stored order, with a flag when the pair was reoriented), already present, or refused with the reason. `lookup_term` returns entries exactly as stored – never reoriented – and says which column your query matched, so a write can always be independently verified.
+* **Entries can carry their context.** `add_term` accepts a definition, domain and notes alongside the pair, and can be told to write to specific termbases only instead of all Write-enabled ones.
+
 ## Prompt cookbook
 
 You talk to the AI in plain language – there are no commands to memorise. The AI decides which tools to call from what you say. This section lists, per task, the kinds of things you can say, so you know the full range of what's possible. Mix and combine freely ("find X, then fix Y").
@@ -126,6 +135,8 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "That pair is outdated – replace it with the official MDR term in both termbases." *(update, exact-match, audited in chat – from v18.20.113)*
 * "Delete that junk entry the QA keeps flagging." *(Write-enabled termbases only; the AI confirms before deleting – from v18.20.113)*
 * "Only consult my **active** termbases for this lookup." *(restricts to termbases with Read ticked; otherwise inactive hits are flagged – from v18.20.113)*
+* "Add *commandovoering* = *command and control* to my termbases – with the NATO definition and a usage note." *(direction-aware per termbase, with definition/domain/notes – from v18.20.153)*
+* "Add this pair to the BRANTS termbase only." *(write to named termbases instead of all Write-enabled ones – from v18.20.153)*
 
 ### Translation memory
 
