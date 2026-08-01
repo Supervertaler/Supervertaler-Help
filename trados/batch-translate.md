@@ -22,12 +22,17 @@ The Batch Operations tab also supports **Proofread** mode for AI-powered quality
 
 The scope dropdown controls which segments are translated:
 
-| Scope                   | Description                                                            |
-| ----------------------- | ---------------------------------------------------------------------- |
-| **Empty Segments Only** | Translates segments that have no target text                           |
-| **All Segments**        | Translates every segment in the file                                   |
-| **Filtered Segments**   | Translates only the segments currently visible after applying a filter |
-| **Filtered Empty Only** | Translates empty segments within the current filter                    |
+| Scope                        | Description                                                            |
+| ---------------------------- | ---------------------------------------------------------------------- |
+| **Empty Segments Only**      | Translates segments that have no target text                           |
+| **All Segments**             | Translates every segment in the file                                   |
+| **All unfinished segments**  | Translates every segment that isn't Translated, Approved or Signed off – drafts and rejected segments included |
+| **Filtered Segments**        | Translates only the segments currently visible after applying a filter |
+| **Filtered Empty Only**      | Translates empty segments within the current filter                    |
+
+:::note
+**Locked segments are never sent to the AI**, in any scope – batch translation and batch proofreading both skip them, and the segment counters above the Translate button exclude them. *(From v18.20.154; earlier versions incorrectly included locked segments in batch runs.)*
+:::
 
 ### Prompt Selection
 
@@ -49,6 +54,8 @@ For specialised fields (medical, legal, patent, etc.), create a custom prompt wi
 ### Provider and Model
 
 The current AI provider and model are displayed below the prompt selector. Click the provider/model label to open a flyout menu where you can switch models instantly – the same menu available in the Chat tab. Alternatively, open the settings dialogue (gear icon in the TermLens header) and go to the **AI Settings** tab.
+
+Your **custom OpenAI-compatible profiles** (institutional gateways, self-hosted endpoints) appear at the bottom of the same menu under *Custom (OpenAI-compatible)*, each showing its configured model, with the active profile ticked – so switching between custom endpoints is one click, no trip to Settings. *(From v18.20.154.)*
 
 ### Progress and Logging
 
