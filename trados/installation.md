@@ -6,7 +6,7 @@ title: "Installation"
 
 #### Download
 
-Install Supervertaler for Trados from the [RWS App Store](https://appstore.rws.com/plugin/432) – it's the only supported install channel. Every published build is RWS-signed, which avoids the "Unsigned Trados Studio Plug-in Found" warning that would otherwise appear when Trados loads a plugin from a different source.
+**Install Supervertaler for Trados from the [RWS App Store](https://appstore.rws.com/plugin/432).** This is the recommended route for everyone: every published build is RWS-signed, so Trados loads it without the "Unsigned Trados Studio Plug-in Found" warning that appears — *every time Studio starts* — for a plugin installed from anywhere else.
 
 :::note
 Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – the 2024 build will not load in Studio 2026, and vice versa. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to both; only the version you select in the Plugin Installer differs.
@@ -15,7 +15,9 @@ Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and
 You can either install from inside Trados Studio (**Add-Ins > RWS App Store**, search for "Supervertaler", click **Download**) or download the `Supervertaler for Trados.sdlplugin` file from the [App Store website](https://appstore.rws.com/plugin/432) and double-click it. Either path opens the Trados Plugin Installer.
 
 :::note
-The [GitHub repository](https://github.com/Supervertaler/Supervertaler-for-Trados) is for source-code review, release notes, and issue tracking only. GitHub releases no longer include a `.sdlplugin` binary attachment – the App Store is the single source of truth for the plugin binary.
+**Why not GitHub?** Each [GitHub release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases) does carry the same two builds, and they install the same way — but they are **not signed**, so Trados asks you to confirm the plugin at every start. The trade-off is timing: App Store updates go through RWS review and so arrive a little later, while GitHub has the newest build immediately.
+
+Use the App Store unless you specifically want a fix that hasn't cleared review yet. If you do install from GitHub, the repeated warning is expected and harmless — switching to the App Store build stops it.
 :::
 
 #### Install
