@@ -15,9 +15,9 @@ Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and
 You can either install from inside Trados Studio (**Add-Ins > RWS App Store**, search for "Supervertaler", click **Download**) or download the `Supervertaler for Trados.sdlplugin` file from the [App Store website](https://appstore.rws.com/plugin/432) and double-click it. Either path opens the Trados Plugin Installer.
 
 :::note
-**Why not GitHub?** Each [GitHub release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases) does carry the same two builds, and they install the same way — but they are **not signed**, so Trados asks you to confirm the plugin at every start. The trade-off is timing: App Store updates go through RWS review and so arrive a little later, while GitHub has the newest build immediately.
+**What about GitHub?** The [GitHub repository](https://github.com/Supervertaler/Supervertaler-for-Trados) holds the source, the issue tracker and the release notes for every build — but **not the plugin itself**. The App Store is the single publication channel, so every install is signed, and the plugin's built-in update check (which reads the App Store catalogue) can keep you current.
 
-Use the App Store unless you specifically want a fix that hasn't cleared review yet. If you do install from GitHub, the repeated warning is expected and harmless — switching to the App Store build stops it.
+App Store updates go through RWS review, so a brand-new fix can take a day or two to appear there. If you are waiting on a specific fix, email support@supervertaler.com and it can be sent to you directly.
 :::
 
 #### Install
