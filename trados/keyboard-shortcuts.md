@@ -52,7 +52,11 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
-| `Ctrl+Alt+V` | `Control+Option+V` | Toggle [voice commands](/trados/voice-commands/) on/off (same as clicking the 🎤 button in the TermLens header) |
+| `Ctrl+Alt+D` | `Control+Option+D` | Toggle [voice commands](/trados/voice-commands/) on/off (same as clicking the 🎤 button in the TermLens header) |
+
+:::note
+**Why `Ctrl+Alt+D` and not `Ctrl+Alt+V`?** It was `Ctrl+Alt+V` until v18/19.20.157. Supervertaler Workbench uses that combination for its own voice-command push-to-talk, and registers it as a **global** hotkey – one that fires whichever application is in front, Trados included. If you run both, a single press started two listeners; and because the Workbench one is a *hold* while this one is a *toggle*, releasing the key stopped only Workbench's and left this one running with nothing visible having switched it on. If you upgraded and still have it on `Ctrl+Alt+V`, reassign it in **File → Options → Keyboard Shortcuts** – Studio keeps your existing binding across updates.
+:::
 
 ## QuickLauncher Shortcuts
 

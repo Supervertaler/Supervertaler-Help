@@ -9,7 +9,7 @@ Control Trados Studio hands-free with spoken commands: confirm segments, navigat
 Two ways to toggle voice commands:
 
 * Click the **🎤 microphone button** in the TermLens panel header (next to the ↻ refresh button)
-* Press **Ctrl+Alt+V** (also available in the editor right-click menu)
+* Press **Ctrl+Alt+D** (also available in the editor right-click menu)
 
 <figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-commands-button.png" alt="The microphone button in the TermLens header, green while listening"><figcaption>The 🎤 button in the TermLens header – green while listening</figcaption></figure>
 
