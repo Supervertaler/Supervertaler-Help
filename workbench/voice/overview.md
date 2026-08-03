@@ -4,7 +4,7 @@ title: "Voice"
 
 **Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
 
-Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voice** entry, or press **Ctrl+Alt+A** to toggle Always-On listening from anywhere on your computer.
+Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voice** entry, or press **Ctrl+Alt+O** to toggle Always-On listening from anywhere on your computer.
 
 ![](/.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
 
@@ -20,9 +20,9 @@ Always-On runs a continuous microphone stream in the background. When you speak,
 
 **With faster-whisper or OpenAI Whisper API** every utterance is transcribed in full. If it matches a command the action fires; if not (and "Listen for commands only" is off), the transcribed text is typed into whichever window is in the foreground.
 
-**To start:** click **▶ Start Always-On** in the Voice tab, or press **Ctrl+Alt+A** from any application. A red mic icon appears in the system tray while Always-On is active.
+**To start:** click **▶ Start Always-On** in the Voice tab, or press **Ctrl+Alt+O** from any application. A red mic icon appears in the system tray while Always-On is active.
 
-**To stop:** click **⏹ Stop Always-On** or press **Ctrl+Alt+A** again.
+**To stop:** click **⏹ Stop Always-On** or press **Ctrl+Alt+O** again.
 
 **Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
@@ -53,7 +53,7 @@ This is a third mode that sits between the two above:
 
 **Coexistence with the toggle mode:** if Always-On is already running when you press Ctrl+Alt+V, the hotkey is a no-op — it won't restart what's already going, and releasing it won't stop Always-On either (we never touch what we didn't start). So the two modes don't fight each other; you can use whichever feels right for the moment.
 
-**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+A or click ⏹ Stop Always-On — it doesn't auto-stop on key release. Lift to a manual toggle there.
+**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+O or click ⏹ Stop Always-On — it doesn't auto-stop on key release. Lift to a manual toggle there.
 
 ### Pause Always-On for external dictation — v1.10.246
 
@@ -233,10 +233,14 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 
 | Shortcut | Action |
 | --- | --- |
-| **Ctrl+Alt+A** (⌘⌥A on macOS) | Toggle Always-On listening |
+| **Ctrl+Alt+O** (⌘⌥O on macOS) | Toggle Always-On listening |
 | **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) — default, configurable |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](/workbench/settings/shortcuts/#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
+
+:::note
+**Always-On moved from Ctrl+Alt+A to Ctrl+Alt+O in v1.10.368.** Supervertaler for Trados now uses Ctrl+Alt+A for "Add term with abbreviation", and because Always-On is a *global* hotkey it fires whichever application is in front – so a single press in Trados would have triggered both. If you had customised it to Ctrl+Alt+A yourself, it has been returned to the new default; you can set it back, but it will keep clashing while both products are running.
+:::
 
 ***
 

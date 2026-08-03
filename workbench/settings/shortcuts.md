@@ -20,7 +20,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Open SuperLookup | **Ctrl+Alt+L** / **⌘⌥L** | Auto-copies the current selection, then opens Workbench's SuperLookup tab with the text pre-filled and the search auto-fired |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup; auto-copies the selection |
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
-| Voice Always-On (toggle) | **Ctrl+Alt+A** / **⌘⌥A** | Continuous listening on/off |
+| Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Continuous listening on/off |
 
 :::note
 **Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. That window was retired in v1.10.4 and the chord is now unbound by default. The Clipboard Manager, Voice, and SuperLookup tabs are reachable via the dedicated hotkeys above; Chat lives in the AI tab and in Workbench's right panel.
