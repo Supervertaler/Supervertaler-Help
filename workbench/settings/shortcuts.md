@@ -20,6 +20,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Open SuperLookup | **Ctrl+Alt+L** / **⌘⌥L** | Auto-copies the current selection, then opens Workbench's SuperLookup tab with the text pre-filled and the search auto-fired |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup; auto-copies the selection |
 | Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
+| Voice commands push-to-talk | **Ctrl+Alt+V** / **⌘⌥V** | Hold to listen for voice *commands* only – for pairing Workbench's command listener with an external dictation app |
 | Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Continuous listening on/off |
 
 :::note
@@ -27,6 +28,14 @@ The 🌍 actions and their out-of-the-box bindings:
 :::
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
+
+### Running Workbench alongside Supervertaler for Trados
+
+The two products share a number of shortcuts on purpose – `Alt+↓` adds a term in both, `Alt+1`…`Alt+9` inserts term *n* in both, `Ctrl+Alt+T` opens the term dialogue in both. That is safe, because those are ordinary in-app shortcuts: whichever window you are working in is the one that responds.
+
+The **🌍 global hotkeys in the table above are the exception**. They are registered with the operating system, so they fire no matter which application is in front – including while you are in Trados. That is the point of them (you can grab a selection from any app), but it means a global hotkey must not be a key Trados also uses, or one press would do two things at once.
+
+None of them currently clash. If you rebind one, keep it clear of the [Supervertaler for Trados shortcuts](/trados/keyboard-shortcuts/) – and note the symptom to watch for: a *hold*-style hotkey pressed together with a *toggle*-style one leaves the toggle switched on after you let go, with nothing visible having started it.
 
 ## macOS vs Windows: symbols and modifier names
 

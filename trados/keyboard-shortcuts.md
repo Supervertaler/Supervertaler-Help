@@ -24,6 +24,10 @@ Trados Studio ships with its own default bindings on several of the key combinat
 The same applies to any other Supervertaler shortcut that appears dead: search **File → Options → Keyboard Shortcuts** for that key combination and clear the Trados binding. You only need to do this once per Trados installation – but repeat it after reinstalling or resetting Trados Studio.
 :::
 
+:::note
+**Also running Supervertaler Workbench?** The two products share several shortcuts deliberately – `Alt+Down`, `Ctrl+Alt+T`, `Alt+1`…`Alt+9` do the same job in each – and that is safe, because whichever window you are working in responds. The exception is Workbench's handful of **global** hotkeys, which fire whatever application is in front, Trados included. None of them clash with the shortcuts below; see [Workbench global hotkeys](/workbench/settings/shortcuts/) if you rebind one.
+:::
+
 ## Terminology
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
