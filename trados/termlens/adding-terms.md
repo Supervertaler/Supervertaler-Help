@@ -35,6 +35,30 @@ For terms that should remain identical in source and target (brand names, produc
 
 This creates a term entry where source and target are the same. Non-translatable terms appear with a distinct yellow highlight in [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/).
 
+## Add term with abbreviation (Ctrl+Alt+A)
+
+When a segment spells a concept out in full **and** gives its abbreviation, this fills the dialogue in for you. Take a segment like:
+
+> Deze verklaring wordt opgesteld conform de **Sustainable Finance Disclosure Regulation** (**SFDR**, Verordening (EU) 2019/2088).
+
+Press **Ctrl+Alt+A** (or right-click → **Add term with abbreviation (AI)**) and the **Add term entry** dialogue opens with the source term, the target term and both **Abbreviation** fields already filled in. Check them and click **Add**.
+
+1. Optionally select any part of the term you want
+2. Press **Ctrl+Alt+A**
+3. Review the pre-filled dialogue and click **Add**
+
+**Your selection decides which term.** Select any part of a term – or a whole phrase containing it – and that is the term you get, completed to its full extent. The AI works out where the term begins and ends and finds its abbreviation; it will not swap in a different term. With nothing selected, it looks at the whole segment.
+
+:::note
+This handles **only** terms that carry an abbreviation. If the segment has none, the ordinary dialogue opens with your selection instead, exactly as Ctrl+Alt+T would. For terms without an abbreviation, use Alt+Down or Ctrl+Alt+T, which add precisely what you selected.
+:::
+
+:::caution
+Nothing is saved until you click **Add**. Do check the fields – the AI is restricted to copying text that genuinely appears in the segment and can never invent an abbreviation, but it can still pick a wider or narrower span than you had in mind.
+:::
+
+Requires an AI provider configured in [AI Settings](/trados/settings/ai-settings/); it uses whichever provider and model you have selected.
+
 ## Add term entry (Ctrl+Alt+T)
 
 For full control over a new term, press **Ctrl+Alt+T** (or right-click in the editor and choose **Add Term...**). This opens the **Add term entry** dialogue, which lets you fill in all fields before saving:
