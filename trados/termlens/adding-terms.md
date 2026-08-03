@@ -142,7 +142,11 @@ You can specify multiple variants of the same abbreviation by separating them wi
 GC|G.C.|gc|g.c.
 ```
 
-Each variant is indexed and matched independently, so all common forms of the abbreviation are recognised in the source text. The **first variant** is used as the display text and for insertion.
+Each **source** variant is indexed and matched independently, so all common forms of the abbreviation are recognised in the source text. The **first variant** is used as the display text and for insertion.
+
+:::note
+The two sides behave differently, so put your variants in the **Source Abbreviation** field. Every source spelling is matched wherever it appears in the segment, but only the **first** target variant is ever used – it is the form inserted into your translation and named in AI prompts. Additional target variants are stored but have no effect.
+:::
 
 ### How abbreviation matching works
 
