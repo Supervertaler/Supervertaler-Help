@@ -42,9 +42,11 @@ The server exposes these tools to the AI app:
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
-| `check_tags` | Translated segments with missing or extra inline tags *(v18.20.95)* |
-| `check_terminology` | Translated segments that don't use the termbase's expected translation *(v18.20.95)* |
+| `check_tags` | Translated segments with missing or extra inline tags – compares underlying tag ids as well as counts, so two tags sharing one id are caught *(ids from v18.20.157)* |
+| `check_terminology` | Translated segments that don't use the termbase's expected translation – longest-match-wins, ranked by signal rather than raw count, restrictable to a curated termbase *(overhauled v18.20.157)* |
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
+| `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
+| `mark_reviewed` | Record that segments were read source-against-target and deliberately left unchanged – session-scoped, never written to the file *(v18.20.157)* |
 | `list_resources` | The TMs and termbases attached to your project and Supervertaler setup *(v18.20.95)* |
 | `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
