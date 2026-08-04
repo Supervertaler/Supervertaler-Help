@@ -50,6 +50,52 @@ When a list is full, the oldest item is removed to make room.
 
 ***
 
+## Privacy: controlling what gets captured
+
+Because the Clipboard Manager captures *everything* you copy while Workbench is running, it will also capture the username and password you copy out of your password manager, licence keys, and anything else you would rather it did not keep. Since **v1.10.369** there are three controls for this, in **Settings → 📋 Clipboard**. They can be combined, and every one of them saves and takes effect immediately – there is no Save button and no restart.
+
+| Control | What it does |
+| --- | --- |
+| **Capture clipboard history** | Master switch. Off = nothing is captured at all. |
+| **Forget clipboard entries after a set time** | Deletes entries older than the window you set (1 minute – 7 days). |
+| **Never capture from these applications** | Ignores copying while a named application has the focus. Windows only. |
+
+### The master switch
+
+Unticking **Capture clipboard history** stops capture completely. The check happens *before* Workbench reads the clipboard, so the content is never read, never hashed, never displayed and never written to the database – it does not enter Workbench's memory at all.
+
+While capture is off, the Clipboard tab shows a red **⏸ Capture off** badge in its header, so an empty history is never mistaken for a fault.
+
+:::note
+Switching capture off does **not** delete what is already there – existing clips stay in the history and can still be pasted. Use **Clear all** (see [Deleting clips](#deleting-clips)) if you want them gone.
+:::
+
+### Automatic deletion
+
+Tick **Forget clipboard entries after a set time** and choose a window. Entries older than that are **deleted from the database**, not merely hidden from the lists.
+
+The sweep runs about once a minute, and also once when Workbench starts – so if Workbench was closed for three hours with a one-hour window set, the expired clips are gone before the list is ever drawn, rather than appearing briefly and then vanishing.
+
+### Excluding particular applications
+
+Add process names exactly as they appear in Task Manager – `keepass.exe`, `1password.exe`, `bitwarden.exe` and so on. While one of those applications has the focus, copying is ignored entirely.
+
+The **Add common password managers** button fills in a dozen widely used ones in a single click. Matching is case-insensitive and the `.exe` is optional, so `KeePass` and `keepass.exe` both work.
+
+:::caution
+This control is **Windows only** – identifying which application currently has the focus requires the Windows API. On macOS and Linux the list is saved but has no effect; use the master switch or automatic deletion instead. The Settings page says so on those platforms.
+:::
+
+:::note
+**Why isn't the exclusion list filled in by default?** Because exclusions are silent by design. If you copied a URL out of KeePass and it simply never appeared in your history, that would look like a bug rather than a feature. So the list starts empty and the password managers are one click away, chosen deliberately by you.
+:::
+
+### Defaults
+
+Capture is **on**, automatic deletion is **off**, and the exclusion list is **empty**. An installation that never visits this page behaves exactly as it did before v1.10.369.
+
+***
+
 ## Pasting a clip
 
 Click any item in the Text or Images list to paste it. What happens:
@@ -218,6 +264,8 @@ When a column contains no clips, a centred placeholder message is shown:
 ## Persistence
 
 The full clip history is stored in your user data folder in a shared SQLite database. Items are available the next time you open Supervertaler Workbench.
+
+Because the history is written to disk and survives restarts, it is worth deciding what you want captured in the first place – see [Privacy: controlling what gets captured](#privacy-controlling-what-gets-captured).
 
 ***
 
