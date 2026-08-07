@@ -31,6 +31,7 @@ The server exposes these tools to the AI app:
 | Tool | What it does |
 | --- | --- |
 | `help` | A curated menu of what you can ask – shown when you say *"what can I do?"* *(v18.20.106)* |
+| `session_report` | How many bytes of tool results this session has sent the AI, per tool, biggest first – so you can see which tools are filling (and re-billing) the conversation *(v18.20.158)* |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
 | `get_segments` | List segments, with filters (status, contains-text, file) and paging – or fetch exact segments by the grid number(s) you see in Studio (`fromNumber`/`toNumber`) *(grid numbers v18.20.114)* |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
@@ -47,14 +48,15 @@ The server exposes these tools to the AI app:
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
 | `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
 | `mark_reviewed` | Record that segments were read source-against-target and deliberately left unchanged – session-scoped, never written to the file *(v18.20.157)* |
-| `list_resources` | The TMs and termbases attached to your project and Supervertaler setup *(v18.20.95)* |
+| `get_tracked_changes` | The document's tracked changes as (before, after) pairs per segment – how you corrected the drafts – optionally saved into the active SuperMemory bank's inbox for future projects *(v18.20.158)* |
+| `list_resources` | The TMs and termbases attached to your project and Supervertaler setup – per termbase with its Read/Write ticks and whether it is the Project termbase *(roles from v18.20.159)* |
 | `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
 | `list_project_templates` | Your Trados project templates *(v18.20.111)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
-| `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting, and a per-termbase echo of exactly what was stored *(v18.20.153)* |
-| `update_term` | Fix an existing entry in your Write termbases – exact-match, all other fields preserved *(v18.20.113)* |
+| `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
+| `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain – only the fields you name change, everything else is preserved |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
 | `save_document` | Save the open document (Ctrl+S) – only when you ask or approve *(v18.20.115)* |
@@ -62,7 +64,7 @@ The server exposes these tools to the AI app:
 | `find_and_replace` | Find & replace across the target text – tag-safe, with a preview before applying |
 | `get_comments` | Read the Trados comments in the document |
 | `add_comment` | Add a Trados comment to a segment (flag a source issue, leave a review note) |
-| `update_comment` | Edit an existing Trados comment |
+| `update_comment` | Edit an existing Trados comment – its text, its severity, or both *(severity from v18.20.159)* |
 | `delete_comment` | Remove a Trados comment (or all of a segment's) – destructive, so the AI confirms first *(v18.20.116)* |
 | `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment – flagged as stale if the AI has unsaved edits *(stale flag v18.20.148)* |
 | `analyze_files` | Run **Analyse Files** – computes the perfect/exact/fuzzy/new/repetition leverage breakdown *(v18.20.106)* |
@@ -99,6 +101,15 @@ Termbases have a declared language direction, and yours don't all point the same
 * **Ambiguity refuses instead of guessing.** If the languages can't be established – no document open, or a termbase whose language pair doesn't match – the write is refused with an explanation rather than performed silently. There is deliberately no language detection: technical term pairs are routinely identical in both languages (*radar*, *transponder*), so a detector would guess, and a wrong entry that *looks* fine is worse than a refusal.
 * **The response proves what happened.** Every targeted termbase reports back individually: added (echoing exactly what was stored, in stored order, with a flag when the pair was reoriented), already present, or refused with the reason. `lookup_term` returns entries exactly as stored – never reoriented – and says which column your query matched, so a write can always be independently verified.
 * **Entries can carry their context.** `add_term` accepts a definition, domain and notes alongside the pair, and can be told to write to specific termbases only instead of all Write-enabled ones.
+
+### Project vs background termbases *(from v18.20.159)*
+
+A common setup is two Write-enabled termbases with different roles: a large personal **background** termbase that accumulates terminology across all clients, and a per-job **project** termbase (the one with the **Project** tick in the Supervertaler Termbases settings – the same tick that renders its hits pink in TermLens). Before v18.20.159 a plain "add this term" wrote to both, indiscriminately. Now the roles are first-class:
+
+* **The AI can target a role instead of a name.** *"Add this to my project termbase"* writes only to the Project-ticked termbase; *"add this to my background termbase"* writes only to the Write-enabled ones without the tick. Job-specific decisions no longer silently pollute your general glossary. Asking for the project termbase when none is ticked is refused with an explanation, never silently redirected.
+* **Every result names its role.** Each termbase in an `add_term` response reports whether it is `project` or `background`, and `lookup_term` hits carry the flag too – so the AI can weight your curated project decisions above general-glossary entries when they conflict.
+* **Duplicates show what they matched.** When a termbase refuses a pair as already present, the response now includes the existing entry (its id and exact stored pair) instead of a bare "duplicate" – no more guessing what it collided with.
+* **Stale project termbases are flagged.** If the Project-ticked termbase's name shares no word with the open project's name – the classic sign of a tick left over from a previous job – the `add_term` response says so, before weeks of terms land in the wrong client's termbase.
 
 ## Prompt cookbook
 
@@ -139,6 +150,8 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Only consult my **active** termbases for this lookup." *(restricts to termbases with Read ticked; otherwise inactive hits are flagged – from v18.20.113)*
 * "Add *commandovoering* = *command and control* to my termbases – with the NATO definition and a usage note." *(direction-aware per termbase, with definition/domain/notes – from v18.20.153)*
 * "Add this pair to the BRANTS termbase only." *(write to named termbases instead of all Write-enabled ones – from v18.20.153)*
+* "Add this to my **project** termbase only." / "Put that one in my **background** termbase, it's not client-specific." *(role-based targeting via the Project tick – from v18.20.159)*
+* "Extend the usage note on *eenzelfde* with a warning about the split spelling." *(edit an entry's notes, definition or domain in place, without touching the pair – from v18.20.159)*
 
 ### Translation memory
 
