@@ -263,8 +263,20 @@ Everything stays on your computer:
 * Claude Desktop (recommended), or another MCP client that runs local STDIO servers on your own machine. Note that this means a **desktop** app that executes the server locally – the claude.ai *website* and ChatGPT's desktop app cannot reach a local MCP server (see the note at the top of this page).
 * Windows (the MCP server is a self-contained exe; no additional runtimes needed).
 
+## Keeping it up to date
+
+**The MCP server is a separate component and does not update with the plugin.** Updating Supervertaler for Trados through the App Store updates the half that lives inside Studio; the `.mcpb` extension (or the unzipped exe) is installed in your AI app and stays exactly as it was until you replace it. The two halves talking to each other across a version gap is the single most common source of odd behaviour.
+
+After a plugin update that mentions the MCP server in its release notes, reinstall the extension: download the current `.mcpb` from the [latest release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases/latest), install it the same way you did the first time, and restart your AI app. Installing over the existing extension is enough; there is nothing to uninstall first.
+
+A stale MCP server shows up in two recognisable ways:
+
+* **The AI doesn't know about a tool or option the release notes describe.** It fetches the tool list once when it starts, so a tool added since your copy was installed is invisible to it, and a new option on an existing tool is quietly dropped from the call rather than reported as an error.
+* **Errors mentioning a timeout of 30 seconds.** That limit was raised to 5 minutes in v18.20.148, so if you still see it, the component reporting it predates that release.
+
 ## Troubleshooting
 
+* **Restarting after a plugin update** – start Trados Studio *first*, then your AI app. The AI app reads the tool list from Studio at startup, so starting it while Studio is closed leaves it running on its previous copy for the whole session.
 * **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead either **drag the `.mcpb` onto the Extensions page**, or use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Drag-and-drop works once the Extensions page has finished loading – if it's stuck on "Loading extensions…", see the next point first.)
 * **The Extensions page is stuck on "Loading extensions…"** – the page needs to reach Anthropic's extension directory once before it renders; we've seen it hang on the Microsoft Store build of Claude Desktop. Fully quit Claude Desktop (including the system tray icon) and reopen it; check your internet connection. If it keeps hanging, there's a universal fallback that skips the Extensions page entirely: download `Supervertaler-MCP-Server-exe.zip` instead, unzip it somewhere permanent, and use the **Copy config snippet** button in the plugin's Connect dialog to add the server manually to `claude_desktop_config.json` (Claude Desktop → Settings → Developer → Edit Config).
 * **The AI says it can't reach Trados** – make sure Trados Studio is running; from v18.20.112 the connection starts with Studio itself (on 18.20.99–18.20.111 you additionally needed a document open in the editor, and before that a click on the Supervertaler Assistant panel – updating the plugin removes those steps). The Connect dialog's status lines show whether the connection is up. Tools that read the open document still need one open, and will say so.
