@@ -75,7 +75,7 @@ For full control over a new term, press **Ctrl+Alt+T** (or right-click in the ed
 | **Domain** | Subject area (e.g. "Legal", "Patents", "Medical") |
 | **Notes** | Any additional notes for translators. Supports multiple lines with an expand button, like Definition. |
 | **URL** | Optional reference URL (shown as a clickable link in the term popup) |
-| **Client** | Optional client code (e.g. "ACME", "GLOBEX"). Used to filter the SuperMemory knowledge base context to that client's profile when this term is in scope. |
+| **Client** | Optional client code (e.g. "ACME", "GLOBEX"). A label for your own filtering and reporting. It no longer selects SuperMemory content: the bank you pick in the toolbar is what the AI reads. |
 | **Project** | Optional project name (e.g. a job code or client-side project ID). Bookkeeping field for the user's own organisation – not sent to the AI in translation prompts. The Termbase Editor's grid lets you sort and filter by Project. |
 | **Non-translatable** | Check this to mark the term as non-translatable |
 

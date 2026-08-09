@@ -43,7 +43,7 @@ Create, edit, and import termbases in Supervertaler's `.db` format. Quick-add te
 
 #### SuperMemory
 
-Self-organising, AI-maintained translation knowledge base. Stores client profiles, terminology decisions, domain conventions, and style preferences as interlinked Markdown files. The AI consults the active memory bank automatically when translating. Keep separate banks per client or domain and switch between them from the toolbar dropdown. Quick-add terms and corrections while translating with Ctrl+Alt+M. [Learn more →](/trados/ai-assistant/super-memory/)
+The client decisions you cannot look up: which term they insist on, what they rejected last time, how they want things phrased. Each memory bank is three Markdown files you write and edit yourself - a brief, a terminology table, and style rules - plus a shared bank of house defaults that every client bank can override. The AI reads the active bank on every translation. Keep one bank per client or domain and switch from the toolbar dropdown; add a term while translating with Ctrl+Alt+M. [Learn more →](/trados/ai-assistant/super-memory/)
 
 ### System Requirements
 

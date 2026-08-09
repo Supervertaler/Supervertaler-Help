@@ -48,7 +48,7 @@ The server exposes these tools to the AI app:
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
 | `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
 | `mark_reviewed` | Record that segments were read source-against-target and deliberately left unchanged – session-scoped, never written to the file *(v18.20.157)* |
-| `get_tracked_changes` | The document's tracked changes as (before, after) pairs per segment – how you corrected the drafts – optionally saved into the active SuperMemory bank's inbox for future projects *(v18.20.158)* |
+| `get_tracked_changes` | The document's tracked changes as (before, after) pairs per segment – how you corrected the drafts – optionally saved into the active SuperMemory bank's reference folder for future projects *(v18.20.158)* |
 | `list_resources` | The TMs and termbases attached to your project and Supervertaler setup – per termbase with its Read/Write ticks and whether it is the Project termbase *(roles from v18.20.159)* |
 | `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
@@ -76,9 +76,9 @@ The server exposes these tools to the AI app:
 | `get_prompt` | Read the full text of one of your prompts *(v18.20.101)* |
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
 | `get_prompt_context` | Everything the AI needs to write a translation prompt tailored to your open project – source text, domain, terms, TM examples *(v18.20.109)* |
-| `get_supermemory_context` | Your [SuperMemory](/trados/ai-assistant/super-memory/) memory bank for this project – client profile, domain knowledge, style guide and terminology, with the article paths it drew from *(v18.20.146)* |
+| `get_supermemory_context` | The active [SuperMemory](/trados/ai-assistant/super-memory/) bank for this project – its brief, terminology table and style rules, plus the `_shared` bank of house defaults that the client bank overrides *(three-file banks from v18.20.169)* |
 | `search_supermemory` | Search your active memory bank by keyword – *"what did I decide about this term, and why?"* *(v18.20.146)* |
-| `list_supermemory_banks` | Your memory banks and which one is active, with article counts *(v18.20.146)* |
+| `list_supermemory_banks` | Your memory banks and which one is active *(v18.20.146)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >

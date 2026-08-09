@@ -19,7 +19,7 @@ Memory banks store all knowledge as Markdown files, which you can browse and edi
 
 ## Web Clipper
 
-The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extension that lets you clip web pages directly into a memory bank's inbox. Install it for Chrome, Firefox, Safari, or Edge.
+The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extension that lets you clip web pages straight into a memory bank's `reference/` folder. Install it for Chrome, Firefox, Safari, or Edge.
 
 ### Setting up the Web Clipper
 

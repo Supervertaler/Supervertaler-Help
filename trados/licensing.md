@@ -16,7 +16,7 @@ No sign-up or credit card is required to start the trial. The remaining days are
 |---|---------|--------|
 | **Supervertaler for Trados** | €20/month | €200/year |
 
-One plan, all features included: TermLens inline terminology, AI Assistant & Batch Translate, SuperSearch cross-file search & replace, AI-maintained memory banks, Studio Tools, Clipboard Mode, QuickLauncher, Prompt Library, MultiTerm support, Incognito Mode, and all future features.
+One plan, all features included: TermLens inline terminology, AI Assistant & Batch Translate, SuperSearch cross-file search & replace, SuperMemory memory banks, Studio Tools, Clipboard Mode, QuickLauncher, Prompt Library, MultiTerm support, Incognito Mode, and all future features.
 
 :::note
 Annual plans include **2 months free** compared to monthly billing.
