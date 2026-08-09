@@ -144,15 +144,6 @@ This action is mostly for repairing legacy entries created or edited under v4.19
 **Mac users (Parallels):** On a Mac, Supervertaler Workbench runs natively on macOS while the Trados plugin runs inside Parallels (Windows). The two products cannot share the same `.db` file directly because the Trados plugin must store its data on the Windows side (`C:\Users\...`) – not on the Mac-side shared folder (`\\Mac\Home\...`). To keep your termbases in sync, export from one side and import on the other after making changes. This is a limitation of Parallels' virtual network filesystem, not of the termbase format itself.
 :::
 
-## Distill into a memory bank
-
-You can extract knowledge from any termbase and add it to a [memory bank](/trados/ai-assistant/super-memory/) using the **Distill** feature:
-
-1. Right-click a termbase in the list
-2. Select **⚗ Distill into memory bank**
-
-The AI analyses all terms in the termbase and creates structured articles (terminology decisions, domain knowledge) in the active memory bank's inbox. See [Distill](/trados/ai-assistant/super-memory/distill/) for full details.
-
 ---
 
 ## See Also
@@ -160,5 +151,4 @@ The AI analyses all terms in the termbase and creates structured articles (termi
 - [MultiTerm Support](/trados/multiterm-support/)
 - [TermLens Settings](/trados/settings/termlens/)
 - [Adding & Editing Terms](/trados/termlens/adding-terms/)
-- [Distill](/trados/ai-assistant/super-memory/distill/)
 - [Termbase Basics (Workbench)](https://docs.supervertaler.com/workbench/termbases/basics/)

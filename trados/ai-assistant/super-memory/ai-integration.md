@@ -1,77 +1,78 @@
 ---
 title: "AI Integration"
-description: "How SuperMemory is loaded into the AI context – the algorithm, ranking, and token budget"
+description: "What SuperMemory sends to the AI, and in what order"
 ---
 
-This page is the technical deep dive into **how** SuperMemory – Supervertaler's self-organising translation knowledge base system – loads the active memory bank into the AI context. For the broader picture of all context sources, start with [Context Awareness](/trados/ai-assistant/context-awareness/). For what SuperMemory is and how to create and switch memory banks, start with [SuperMemory](/trados/ai-assistant/super-memory/).
+When you translate a segment, run a batch translation, or ask the chat a question, Supervertaler builds the prompt from several context sources. This page covers what SuperMemory contributes.
 
-When SuperMemory context is enabled in [AI Settings](/trados/settings/ai-settings/), every AI call – chat messages, batch translations, single-segment translations, AutoPrompt runs – triggers a fresh load of the active memory bank before the prompt is sent. The load is deterministic, fast, and scoped to the current project and document.
+## What gets sent
 
-## What the AI loads
+Two banks, in this order:
 
-Before every AI call, Supervertaler reads the active memory bank and loads the most relevant articles from it:
+1. **`_shared`** — your house defaults, labelled as such.
+2. **The active bank** — labelled as overriding the defaults above.
 
-1. **Client profile.** The assistant matches your Trados project name against client profile filenames in `01_CLIENTS/`. If your project is called "Acme Legal Contract 2026", it finds the Acme Corporation profile and loads the client's language preferences, terminology decisions, style rules, and project history. The match is a case-insensitive substring search against the filename and the top-level heading of each article.
-2. **Domain article.** The assistant analyses your document to detect the domain (legal, medical, technical, marketing, financial, scientific) and loads the matching article from `03_DOMAINS/` with conventions, common pitfalls, and reference material for that field.
-3. **Style guide.** The assistant loads the most relevant style guide from `04_STYLE/`, preferring client-specific guides (e.g. `acme-style.md`) over general ones (e.g. `general-en-gb.md`).
-4. **Terminology articles.** The assistant loads term articles from `02_TERMINOLOGY/` that match your client, domain, or language pair. These include not just the approved translations, but also rejected alternatives and the reasoning behind each decision – the kind of context a flat termbase entry does not carry.
+Within each, the three files are sent whole: `brief.md`, then `terminology.md`, then `style.md`. There is no selection step and no filtering — whatever is in those files is what the AI sees.
 
-Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → Creating and switching banks](/trados/ai-assistant/super-memory/#creating-and-switching-banks) for the switching workflow.
+`reference/` is never sent. It holds the source material the three files were derived from, and a superseded draft answering as if it were current is precisely the failure it exists to prevent.
 
-Workflow folders – `00_INBOX`, `05_INDICES`, and `06_TEMPLATES` – are **not** loaded into the AI context. `00_INBOX` is a processing queue, `05_INDICES` holds auto-generated maps, and `06_TEMPLATES` holds templates for new articles.
+## Precedence
 
-## Token budget and prioritisation
+The prompt states plainly that the client section overrides the house defaults. That instruction only works because the two layers are kept separate rather than merged, so the AI can tell which rule came from where.
 
-To avoid overloading the AI's context window, memory bank context is allocated a token budget of approximately **4000 tokens** per AI call. This is a soft ceiling – smaller banks will simply fit; larger ones are trimmed.
+In practice: `_shared` might say *voorkeursvorm → preferred embodiment*, and a client bank might insist on *preferred form*. The client wins, and the override belongs in that client's bank — not as an edit to `_shared`, which would change the default for everyone.
 
-When the active bank contains more relevant content than fits in the budget, articles are prioritised in this order:
+## The bank is the selection
 
-1. **Client profile** – highest priority, loaded first. The client profile is often the single most valuable article in the bank because it sets the stage for everything else.
-2. **Domain knowledge** – loaded second, with the strongest match for the detected document type.
-3. **Style guide** – loaded third, preferring client-specific over general.
-4. **Terminology articles** – loaded last, filling whatever budget remains. Articles matching the client take priority over generic ones.
+Earlier versions tried to work out which parts of a bank were relevant: matching your project name against client-profile filenames, detecting the document's domain, preferring one style guide over another, then loading whichever articles scored highest.
 
-If even the client profile exceeds the budget, Supervertaler logs a warning to the chat history and loads a truncated version rather than silently dropping it.
+None of that happens now. **You pick the bank from the toolbar, and its contents are used** — because you already know which client you are working for, and a detection step could only get that wrong. It also means what reaches the AI is exactly what you would see by opening the folder, with nothing silently excluded.
 
-## How memory banks compare with other context sources
+## Token cost
 
-A memory bank does not replace your termbases, translation memories, or document context – it **complements** them, adding a layer of reasoning that flat data sources cannot provide.
+A bank is small enough to send whole. Three files for a single client typically come to a few thousand tokens.
 
-| Context source | What it provides | What the memory bank adds |
+The **☰ Report** button tells you the exact figure for the active bank, including what `_shared` adds. Worth checking if you translate in large batches, where the context is re-sent for every call.
+
+If a bank does grow past the budget, the shared layer is dropped before the client layer — the client bank was chosen deliberately and overrides the defaults anyway — and terminology is dropped last on each, being the densest content and the hardest for a model to guess.
+
+## How SuperMemory compares with other context sources
+
+SuperMemory does not replace your termbases or translation memories — it complements them, adding the reasoning that flat data cannot carry.
+
+| Context source | What it provides | What SuperMemory adds |
 |---|---|---|
-| **Termbases** (Supervertaler + MultiTerm) | Flat term pairs: term A = term B | The *why*: reasoning, rejected alternatives, client-specific overrides |
-| **Translation memories** | Previous translations for style anchoring | Domain conventions and style rules that transcend any single segment |
-| **Document content** | Document type detection | Domain-specific pitfalls and formatting conventions the AI would not otherwise know |
-| **AutoPrompt** | AI-generated translation instructions | Client and domain context for more accurate prompt generation |
+| **Termbases** (Supervertaler + MultiTerm) | Term pairs: A = B | The *why*: reasoning, rejected alternatives, client-specific overrides |
+| **Translation memories** | Previous wordings to anchor style | Rules that hold across segments, and which past work to trust |
+| **Document content** | What this document is | Conventions and pitfalls the AI cannot read off the page |
+| **AutoPrompt** | AI-drafted translation instructions | Client and domain context, so the draft starts from what you actually do |
 
-All four work together. Termbases give the AI the terms; the memory bank tells it *why* those terms were chosen and what to watch out for. A TM gives it previous translations to anchor against; the memory bank tells it which previous translations are from a client with strict style rules and which are from one-off work that can be safely overridden.
-
-For a discussion of when stacking all four sources may or may not be optimal, see the **Composing the context** section of [Context Awareness](/trados/ai-assistant/context-awareness/#composing-the-context).
+For when stacking all of them is or is not optimal, see **Composing the context** in [Context Awareness](/trados/ai-assistant/context-awareness/#composing-the-context).
 
 ## Memory-aware chat
 
-Once memory-bank context is enabled (see below), the chat panel is memory-aware. When you ask the assistant a question about the current segment, it has access to the active memory bank alongside the document context, terminology, and TM matches – so you can ask things like:
+With SuperMemory context enabled, the chat can answer from your own decisions rather than from general knowledge:
 
 - "What register should I use for this client?"
 - "Does this client prefer *whilst* or *while*?"
-- "Has this term come up before in this client's projects?"
-- "What's the usual translation for *furtherance* in this domain, and why?"
+- "What's the usual translation for *furtherance* here, and why?"
 
-…and the answer comes from your actual KB articles, not from generic training data. If the memory bank does not contain the relevant article, the assistant falls back to its general knowledge and says so.
+If the bank does not cover it, the assistant falls back to general knowledge and says so.
+
+Because the banks are also readable over the [MCP server](/trados/mcp-server/), you can ask the same questions from Claude Desktop or Claude Code while Trados is open.
 
 ## Enabling and disabling
 
-Memory bank context can be toggled on or off in [AI Settings](/trados/settings/ai-settings/):
+Toggled in [AI Settings](/trados/settings/ai-settings/):
 
-- **Include memory bank in AI context** – enables KB context for translations and chat.
-- **Use memory bank when generating prompts (AutoPrompt)** – enables KB context when AutoPrompt drafts a new translation prompt.
+- **Include memory bank in AI context** — for translations and chat.
+- **Use memory bank when generating prompts (AutoPrompt)** — when AutoPrompt drafts a translation prompt.
 
-Both are **off by default** – turn on *Include memory bank in AI context* to activate the integration described on this page. Disabling them again does not delete your memory banks – the content stays on disk and can be re-enabled at any time.
+Both are **off by default**. Turning them off does not delete anything — the files stay on disk.
 
 ## See Also
 
-- [Context Awareness](/trados/ai-assistant/context-awareness/) – The full menu of context sources, including memory banks as one section among several
-- [SuperMemory](/trados/ai-assistant/super-memory/) – What SuperMemory is, what memory banks are, and how to create one
-- [AI Settings](/trados/settings/ai-settings/) – Toggles for memory bank context
-- [Supervertaler](/trados/ai-assistant/) – Overview of the chat panel
-- [Batch Translate](/trados/batch-translate/) – Batch translation with full context
+- [SuperMemory](/trados/ai-assistant/super-memory/) — how a bank is structured
+- [Context Awareness](/trados/ai-assistant/context-awareness/) — the full menu of context sources
+- [AI Settings](/trados/settings/ai-settings/) — the toggles
+- [Batch Translate](/trados/batch-translate/) — batch translation with full context

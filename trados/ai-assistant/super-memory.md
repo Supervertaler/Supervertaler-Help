@@ -3,145 +3,133 @@ title: "SuperMemory"
 description: ">-"
 ---
 
-**SuperMemory** is Supervertaler's self-organising translation knowledge base system – a [Karpathy-inspired](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) feature that captures the reasoning behind your translation decisions and makes it available to the AI on every translation. Where a translation memory gives the AI previous wordings and a termbase gives it approved term pairs, SuperMemory gives it the _why_: client preferences, rejected alternatives, domain conventions, style rules, and the accumulated institutional knowledge for each piece of work.
+**SuperMemory** is where you write down the things about a client that you cannot look up: which term they insist on, which wording they rejected last time, how they want dates written, what the previous reviewer changed and why. A translation memory gives the AI your previous wordings and a termbase gives it approved pairs; SuperMemory gives it the *reasoning* — and reasoning is exactly what an AI cannot derive from the source text, so getting it wrong is a real error rather than a stylistic difference.
 
-Knowledge inside SuperMemory is organised into one or more **memory banks** – self-contained folders that each act as an Obsidian-compatible vault. You can keep a single default bank, or several banks side by side (one per client, one per domain, one per language pair) and switch between them in one click from the Supervertaler Assistant toolbar. This page covers both SuperMemory as a system and how to work with the memory banks inside it.
+Knowledge lives in **memory banks**: one folder per client, domain, or job, which you switch between from the Supervertaler Assistant toolbar. SuperMemory is one of several [context sources](/trados/ai-assistant/context-awareness/) the assistant consults, alongside termbases, translation memories, document content and segment metadata.
 
-SuperMemory is one of several [context sources](/trados/ai-assistant/context-awareness/) the assistant consults when it translates a segment, drafts a prompt, or answers a chat message. It sits alongside termbases, translation memories, document content, and segment metadata – you can enable any combination of the five, and the AI draws from whichever are active in AI Settings.
+## A bank is three files
 
-Each memory bank is stored as interlinked Markdown files on disk – human-readable, portable, and future-proof. You can open and edit a bank in any text editor, version-control it with Git, and sync it between machines with Dropbox or OneDrive. [Obsidian](https://obsidian.md/) is optional but recommended: it gives you a visual knowledge graph, backlink navigation, and the Web Clipper browser extension for clipping web content directly into your bank. See [Obsidian Setup](/trados/ai-assistant/super-memory/obsidian-setup/) for installation instructions.
+Every bank contains the same three Markdown files, plus a folder for source material:
 
-<figure><img src="/.gitbook/assets/Sv_SuperMemory-Graph.png" alt="Memory bank knowledge graph in Obsidian"><figcaption><p>A memory bank knowledge graph showing interconnected clients, terminology, and domain knowledge</p></figcaption></figure>
+| File | What goes in it |
+| --- | --- |
+| `brief.md` | Who the client is and anything standing: language pair, register, house preferences, how far to trust the rest |
+| `terminology.md` | Term decisions, **one table**, one row each |
+| `style.md` | Prose rules and approved boilerplate — how things are phrased, rather than which term is used |
+| `reference/` | Source material, unmodified: style guides, PDFs, glossaries. Never sent to the AI |
 
-## How knowledge is organised
+That is the whole structure. You are meant to open these files and edit them by hand — the **📂 Open folder** button in the toolbar is there for exactly that.
 
-Every memory bank has the same seven-folder skeleton. The skeleton is created automatically when you make a new bank.
+### Why terminology is a table
 
-| Folder           | Contents                                                                                              |
-| ---------------- | ----------------------------------------------------------------------------------------------------- |
-| `00_INBOX`       | Raw material – drop zone for unprocessed briefs, feedback notes, termbases, reference articles       |
-| `01_CLIENTS`     | Client profiles: language preferences, style rules, terminology decisions, project history            |
-| `02_TERMINOLOGY` | Term articles with approved translations, rejected alternatives, and the reasoning behind each choice |
-| `03_DOMAINS`     | Domain-specific conventions and common pitfalls (legal, medical, technical, marketing, financial)     |
-| `04_STYLE`       | Style guides, formatting rules, register notes, localisation conventions                              |
-| `05_INDICES`     | Auto-generated indexes and maps of content                                                            |
-| `06_TEMPLATES`   | Reusable templates for new articles                                                                   |
+A table is the format in which a *wrong* entry is findable. You can scan a hundred rows in half a minute and spot the one that says the wrong thing; you cannot do that with a hundred files. Since the only reason to keep notes is that you can check them, the format that makes checking possible is the one that matters.
 
-The assistant loads content from `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, and `04_STYLE` as context before each AI call. `00_INBOX`, `05_INDICES`, and `06_TEMPLATES` are workflow folders – they do not feed the AI directly, they support the processing pipeline. See [AI Integration](/trados/ai-assistant/super-memory/ai-integration/) for the full loading algorithm.
-
-## Creating and switching banks
-
-### Where banks live on disk
-
-All of your memory banks live under a single parent folder – the **memory banks folder** – which defaults to:
-
-```
-C:\Users\{you}\Supervertaler\memory-banks\
+```markdown
+| Source | Target | Scope | Note |
+|---|---|---|---|
+| voorkeursvorm | preferred embodiment | domain | Not "preferred form" — term of art |
+| drager | wearer | project | **Never** "carrier" |
 ```
 
-Each bank is a subfolder with the seven-folder skeleton shown above:
+**Scope** says how far a row travels — `project`, `client`, or `domain`. It doubles as a promotion queue: a row that turns out to hold for a *second* client belongs in the shared bank.
+
+### `reference/` is the audit trail
+
+Everything in the three files is *derived* from something — a style guide, a review round, a conversation. Keeping the original in `reference/` is what lets you check a rule that looks wrong and find out whether it was mis-derived or the source really does say that. Nothing reads this folder automatically, and that is deliberate.
+
+## The `_shared` bank
+
+Alongside whichever bank is active, Supervertaler always loads a bank called **`_shared`**. It holds the defaults that are true of *your* work rather than of any one client: house style, domain conventions, jurisdictional rules.
+
+**Where they disagree, the active bank wins.** That is what a client bank is for — `_shared` says how you normally translate, and the client says how this one insists on it being done. The AI is told which layer is which, so it can apply the override rather than average the two.
+
+A rule earns its place in `_shared` once it has held across more than one client. Until then it stays in the bank where you found it, tagged in the Scope column. Promote by *moving* the row, not copying it, or the two drift apart.
+
+Create `_shared` like any other bank; the leading underscore keeps it at the top of the list and out of the way of client names.
+
+## Banks
+
+### Where they live
 
 ```
-memory-banks\
-├── default\
-│   ├── 00_INBOX\
-│   ├── 01_CLIENTS\
-│   └── …
+D:\Supervertaler\memory-banks\
+├── _shared\          ← always loaded, alongside the active bank
+│   ├── brief.md
+│   ├── terminology.md
+│   └── style.md
 ├── acme-legal\
-│   ├── 00_INBOX\
-│   └── …
+│   ├── brief.md
+│   ├── terminology.md
+│   ├── style.md
+│   └── reference\
 └── pharma\
     └── …
 ```
 
-A fresh install ships with one empty bank named `default`. You can keep that as your only bank, rename it (see below), or add others alongside it.
+### Switching
 
-### Switching banks
+The **Memory Bank** dropdown lists every bank it finds. Switching is immediate — the next chat turn and the next batch translation both use the new bank, no restart, and your chat history is preserved. The choice persists across Trados sessions.
 
-The **Memory Bank** dropdown in the Supervertaler Assistant toolbar lists every bank it finds under the memory banks folder. The one you pick is the **active bank** – the assistant reads from it until you choose another. Switching is immediate: the next chat turn, the next batch translation, and the next Process Inbox run all use the new bank. No restart needed, and your chat history is preserved across the switch.
+### Creating
 
-The active bank persists across Trados sessions. If you close Trados with `acme-legal` selected, it will still be `acme-legal` when you reopen.
+Pick **+ New memory bank…** at the bottom of the dropdown, give it a short name (lowercase letters, digits, hyphens, underscores), and it is created with the three files already in place, each carrying its headings and a line explaining what belongs in it.
 
-### Creating a new bank
+### Renaming and deleting
 
-To create a new bank without leaving the chat panel:
+Not yet available from inside the plugin. Close Trados and rename or delete the folder under `memory-banks\` directly.
 
-1. Click the **Memory Bank** dropdown in the Supervertaler Assistant toolbar.
-2. Scroll to the bottom of the list and choose **+ New memory bank…**
-3. A small dialog appears asking for a short name. Valid names are lowercase letters, digits, hyphens, or underscores – for example, `legal`, `medical`, `acme-corp`, `eu_procurement`. As you type, the dialog shows a live preview of the folder name that will be created.
-4. Click **Create**. The new bank is created on disk with the full seven-folder skeleton, the dropdown refreshes to show it, and the assistant switches to it immediately.
+## Filling a bank
 
-A confirmation banner appears in the chat summarising what was created.
+**Write in it.** Open the folder, edit `brief.md`, add rows to the table. This is the normal way, and there is no processing step between what you write and what the AI reads.
 
-### Renaming and deleting banks
+**[Quick Add](/trados/ai-assistant/super-memory/quick-add/) (Ctrl+Alt+M)** captures a decision without leaving the segment you are on. It appends one row to `terminology.md`.
 
-Renaming and deleting banks from inside the plugin is not yet available. Until those land, you can rename or delete a bank folder directly under `memory-banks\` using File Explorer, with Trados closed. Be sure to update `AiSettings.ActiveMemoryBankName` in your settings file if you rename the active bank, or simply switch to another bank from the toolbar dropdown the next time you open Trados.
+**Drop source material into `reference/`** — a client style guide, a PDF, a glossary. Nothing happens to it automatically. When you want it in the bank, read it and write the parts that matter into the three files, or paste it into the chat and ask the assistant to draft the rows for you to check.
 
-## Why run several banks
+That last point is the design in one line: **the AI proposes, you decide what gets written.**
 
-A single `default` bank is enough if you work with one client or one domain. But most working translators will benefit from splitting their knowledge across several banks – one per major client, or one per domain, or one per language pair – because:
+## The Report button
 
-* **Context stays sharp.** The AI's context window is finite. A focused bank for a single client fits entirely in the prompt; a monolithic bank covering ten clients either exceeds the budget or has to be aggressively pruned before loading, losing detail.
-* **Switching is instant.** When you move from translating a pharma clinical trial to a tech product manual, you want the AI to forget the pharma terminology immediately. Switching banks does that in one click.
-* **Confidentiality is structural.** A bank for Client A physically cannot leak into a translation for Client B because the folders are separate on disk. No accidental cross-contamination.
-* **Backups and syncing are per-client.** You can version-control, archive, or share a single client bank without exposing your other clients' data.
+**☰ Report** tells you what the bank actually contributes: which files exist and how big, how many rows the terminology table has, **how many tokens get added to a prompt**, whether `_shared` is being applied, and warnings for things that are quietly wrong — a missing brief, a terminology file that is still prose rather than a table, files sitting in the bank root that are never sent to the AI.
 
-Typical layouts:
+It reads the files directly, so it is instant and costs nothing.
 
-* **One bank per major client** – `acme-legal`, `novartis`, `eu-commission`, plus a small `default` for one-off work.
-* **One bank per domain** – `legal`, `medical`, `technical`, `marketing`.
-* **One bank per language pair** – `nl-en`, `de-en`, `fr-en` if your domains are similar across clients but the style and terminology vary by direction.
+## Converting a bank from the old layout
+
+Banks created before **v18.20.160** used a different structure: seven numbered folders and one file per fact. Those banks are **not read** by the current version — a bank with no `brief.md`, `terminology.md` or `style.md` contributes nothing to a prompt.
+
+You will not be left guessing: when the active bank is on the old layout, an amber **⚠ Convert this bank** button appears in the toolbar. Converting folds the old articles into the three files and moves the originals to `reference/_legacy`. **Nothing is deleted.**
+
+The conversion copies text across as-is; it does not tidy it up. Expect to read through the result and prune it — particularly the terminology, which arrives as prose and reads far better rewritten as a table. That work is yours on purpose: deciding which of a hundred old decisions still hold is judgement, and a machine that guesses confidently there is how the old system filled up with material nobody could check.
+
+## Why this changed
+
+Earlier versions organised a bank as a self-organising wiki: seven folders, one Markdown article per fact, YAML metadata on each, and AI features (Process Inbox, Distill, Health Check) that filed and maintained it for you.
+
+It did not survive contact with real use. A single bank reached 136 terminology files — for what is a 136-row table — with a 97-file backlog nobody had processed. About 15% of articles had malformed metadata that silently excluded them from the very filtering the folders existed to enable: they were in the bank, and they were not reaching the AI. Nothing about that was visible from the outside, and by then the bank was far past the point where a human could read it and tell.
+
+The lesson was not that automation is bad, but that **knowledge you cannot audit is not knowledge you can rely on**. Three files can be read start to finish in a few minutes. If a rule in there is wrong, you will see it — which is the only mechanism by which it ever gets fixed.
+
+Process Inbox, Distill and Health Check are gone. They existed to manage complexity the new structure does not have.
 
 ## Working with a bank outside Trados
 
-SuperMemory is built into **Supervertaler for Trados**, but your bank is not locked inside it.
+The active bank is exposed over the [Supervertaler MCP server](/trados/mcp-server/), so Claude Desktop, Claude Code or any other MCP client can read it: `get_supermemory_context` for the current picture, `search_supermemory` to look a decision up, `list_supermemory_banks` to see what exists. Access is read-only.
 
-From **v18.20.146** the memory bank is exposed over the [Supervertaler MCP server](/trados/mcp-server/), so any MCP client – Claude Desktop, Claude Code, or anything else that speaks MCP – can read it: `get_supermemory_context` for the whole picture on the current project, `search_supermemory` to look a decision up by keyword, and `list_supermemory_banks` to see which bank is active. Access is read-only, and it respects the memory-bank toggle in AI Settings. Because the AI client sits outside Trados, this works with whatever you happen to have open beside it.
+Beyond that, a bank is a folder of Markdown files. Edit it in any text editor, search it with ordinary tools, version-control it with Git, keep it in a synced folder so it follows you between machines. [Obsidian](https://obsidian.md/) works nicely if you like it, though with three files per bank you no longer need it to find your way around.
 
-Supervertaler Workbench still does not use memory banks. That remains a genuine gap rather than a setting you have missed.
-
-Beyond that, a memory bank is nothing but a folder of Markdown files. You can open, read and edit it in [Obsidian](https://obsidian.md/) or any text editor, search it with ordinary tools, version-control it with Git, and keep it in a cloud-synced location (OneDrive, Dropbox, iCloud) so the same banks follow you between machines.
-
-## Working with a memory bank
-
-Once a bank exists, you fill it with knowledge in one of several ways:
-
-1. **Drop Markdown notes into `00_INBOX`** – client briefs, termbases, feedback notes, style guides, reference articles you have written down as `.md` files. These are compiled by Process Inbox.
-2. **Use** [**Distill**](/trados/ai-assistant/super-memory/distill/) for everything that is **not** plain Markdown – TMX translation memories, DOCX style guides, PDF reference documents, XLSX/CSV termbases, MultiTerm termbases. Distill reads each file and writes draft Markdown articles into `00_INBOX/`, ready for Process Inbox to compile.
-3. **Use** [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/) (Ctrl+Alt+M) to capture a terminology decision or correction while translating. Quick Add appends a short note to the inbox so you can keep working without context-switching.
-4. **Run** [**Process Inbox**](/trados/ai-assistant/super-memory/process-inbox/) periodically. The AI reads every Markdown file in `00_INBOX` and files it into `01_CLIENTS`, `02_TERMINOLOGY`, `03_DOMAINS`, or `04_STYLE` as structured articles, interlinked with backlinks.
-5. **Run** [**Health Check**](/trados/ai-assistant/super-memory/health-check/) when the bank starts to feel stale. It scans for conflicting terminology, broken links, stale content, and missing cross-references – and heals what it can.
-
-The result is a knowledge graph that grows with your work and that the AI consults before every translation.
-
-:::note
-**Markdown vs binary files in the inbox.** Process Inbox is a Markdown compiler – it reads `.md` files only. Distill is the feature that reads binary formats (TMX, DOCX, PDF, XLSX, termbases) and turns them into Markdown. If you drop a TMX or PDF in `00_INBOX/` directly, Process Inbox will spot it and tell you to run Distill on it instead, rather than silently ignoring the file. See [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/#markdown-only-use-distill-for-everything-else) for the full table.
-:::
-
-### Templates and the heal-on-activation prompt
-
-Process Inbox and Health Check are driven by AI prompts that live inside each bank under `06_TEMPLATES/` (`compile.md` and `lint.md` respectively). The plugin ships these template files as built-in defaults, and `+ New memory bank…` writes them automatically into every newly created bank.
-
-If you activate an older bank that is missing one of these template files – for example a bank you created before template bundling shipped, or one where you deleted a template by accident – the plugin shows a one-time _"Missing memory bank templates"_ dialog offering to restore the missing files from the built-in defaults. Click **Yes** and the bank is fixed in place; click **No** and the plugin leaves the bank alone (you can switch away and back to see the prompt again). Existing template files are never overwritten – only missing ones are written – so your per-bank edits are safe.
+Supervertaler Workbench does not use memory banks. That remains a genuine gap rather than a setting you have missed.
 
 ## Features
 
-| Feature                                              | Description                                                          |
-| ---------------------------------------------------- | -------------------------------------------------------------------- |
-| [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/)           | Capture terms and corrections while translating (Ctrl+Alt+M)         |
-| [**Process Inbox**](/trados/ai-assistant/super-memory/process-inbox/)   | Organise raw material into structured KB articles                    |
-| [**Health Check**](/trados/ai-assistant/super-memory/health-check/)     | Scan and repair the knowledge base                                   |
-| [**Distill**](/trados/ai-assistant/super-memory/distill/)               | Extract knowledge from translation files (TMX, DOCX, PDF, termbases) |
-| [**Active Prompt**](/trados/ai-assistant/super-memory/active-prompt/)   | Per-project prompt that Quick Add appends terminology to             |
-| [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) | How the memory bank enhances translations and chat                   |
-| [**Obsidian Setup**](/trados/ai-assistant/super-memory/obsidian-setup/) | Installing Obsidian and the Web Clipper                              |
+| Feature | Description |
+| --- | --- |
+| [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/) | Capture a term decision while translating (Ctrl+Alt+M) |
+| [**Active Prompt**](/trados/ai-assistant/super-memory/active-prompt/) | Per-project prompt that Quick Add can also append terminology to |
+| [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) | What gets sent to the AI, and in what order |
+| [**Obsidian Setup**](/trados/ai-assistant/super-memory/obsidian-setup/) | Optional: installing Obsidian and the Web Clipper |
 
 ## Related
 
-* [**Context Awareness**](/trados/ai-assistant/context-awareness/) – the full menu of context sources the assistant uses, with memory banks as one section among several.
-* [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) – the loading algorithm, token budget, and article prioritisation when a memory bank is consulted by the AI.
-* [**AI Settings**](/trados/settings/ai-settings/) – toggles for enabling or disabling memory bank context.
-
-## Learn more
-
-The memory bank design is inspired by Andrej Karpathy's [LLM Knowledge Base](https://venturebeat.com/data/karpathy-shares-llm-knowledge-base-architecture-that-bypasses-rag-with-an) architecture. You do not need to fetch the seven-folder skeleton from anywhere – the plugin writes it for you whenever you create a new bank.
+* [**Context Awareness**](/trados/ai-assistant/context-awareness/) — the full menu of context sources, with SuperMemory as one of them
+* [**AI Settings**](/trados/settings/ai-settings/) — toggles for enabling or disabling SuperMemory context

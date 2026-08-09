@@ -27,11 +27,11 @@ The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extens
 2. Make sure Obsidian is running with the memory bank you want to clip into open as a vault
 3. Click the Web Clipper icon in your browser toolbar, then the gear icon (settings)
 4. Create a new template (e.g. "memory-bank") and set:
-   * **Note location:** `00_INBOX`
+   * **Note location:** `reference`
    * **Vault:** select the memory bank vault you want clippings to land in
 5. Optionally add properties: `source_url` = `{{url}}`, `clipped` = `{{date}}`
 
-Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it drops straight into that bank's inbox. Next time you click **[Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)** with that bank active in the toolbar, the AI organises it into structured articles.
+Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it lands in that bank's `reference/` folder. Nothing reads it automatically: `reference/` is source material, so when you want it in the bank, read it and write the parts that matter into `brief.md`, `terminology.md` or `style.md`.
 
 :::note
 If you keep several memory banks, create one Web Clipper template per bank so you can choose the destination from the clipper dropdown at clip time.
@@ -50,5 +50,4 @@ To install plugins: **Settings → Community plugins → Browse**.
 ## See Also
 
 * [SuperMemory](/trados/ai-assistant/super-memory/)
-* [Process Inbox](/trados/ai-assistant/super-memory/process-inbox/)
 * [User Data Folder](/trados/data-folder/)

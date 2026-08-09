@@ -48,16 +48,17 @@ Both Supervertaler termbases and MultiTerm .sdltb termbases attached to the Trad
 
 ### 7. SuperMemory context
 
-[**SuperMemory**](/trados/ai-assistant/super-memory/) is Supervertaler's self-organising translation knowledge base system. If a memory bank is active, the assistant loads the most relevant articles from it before every AI call:
+[**SuperMemory**](/trados/ai-assistant/super-memory/) is where you record the things about a client that cannot be looked up. If a bank is active, the assistant sends its three files with every AI call:
 
-- the **client profile** matching the current Trados project name, from `01_CLIENTS/`
-- the **domain article** matching the document type the AI just detected, from `03_DOMAINS/`
-- the most relevant **style guide** from `04_STYLE/`, preferring client-specific guides over general ones
-- matching **terminology articles** from `02_TERMINOLOGY/`, which include not just approved translations but also rejected alternatives and the reasoning behind each decision
+- `brief.md` — who the client is and anything standing
+- `terminology.md` — term decisions, one table
+- `style.md` — prose rules and approved boilerplate
 
-Unlike a termbase – which gives the AI flat pairs of source and target terms – SuperMemory gives it the **reasoning** behind those pairs: the decisions, the caveats, and the client-specific overrides. The two are complementary, not competitive.
+The `_shared` bank is sent alongside as house defaults, and the active bank is marked as overriding it where the two disagree.
 
-Only articles from the **active** memory bank are loaded. If you keep separate banks per client or domain, switch to the relevant one from the Memory Bank dropdown in the toolbar before translating. See [SuperMemory → AI Integration](/trados/ai-assistant/super-memory/ai-integration/) for the full loading algorithm and token budget.
+Unlike a termbase - which gives the AI flat pairs of source and target terms - SuperMemory gives it the **reasoning** behind those pairs: the decisions, the caveats, and the client-specific overrides. The two are complementary, not competitive.
+
+Only the **active** bank is used (plus `_shared`), so switch to the right one from the Memory Bank dropdown before translating. See [SuperMemory → AI Integration](/trados/ai-assistant/super-memory/ai-integration/) for what is sent and what it costs.
 
 **Toggles:** AI Settings → *Include memory bank context* / *Use memory bank in AutoPrompt*.
 
@@ -99,7 +100,7 @@ You can control exactly what context the assistant receives. In the settings dia
 
 - [Supervertaler](/trados/ai-assistant/) – Overview
 - [AI Settings](/trados/settings/ai-settings/) – Configure context options
-- [SuperMemory](/trados/ai-assistant/super-memory/) – Supervertaler's self-organising translation knowledge base system
+- [SuperMemory](/trados/ai-assistant/super-memory/) – the client decisions you record by hand, and the reasoning behind them
 - [SuperMemory → AI Integration](/trados/ai-assistant/super-memory/ai-integration/) – The loading algorithm and token budget for SuperMemory context
 - [File Attachments](/trados/ai-assistant/file-attachments/) – Add images and documents to a chat turn
 - [TermLens](/trados/termlens/) – How termbase terms are matched and loaded
