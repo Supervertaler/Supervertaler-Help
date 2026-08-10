@@ -45,7 +45,9 @@ Alongside whichever bank is active, Supervertaler always loads a bank called **`
 
 A rule earns its place in `_shared` once it has held across more than one client. Until then it stays in the bank where you found it, tagged in the Scope column. Promote by *moving* the row, not copying it, or the two drift apart.
 
-Create `_shared` like any other bank; the leading underscore keeps it at the top of the list and out of the way of client names.
+**Create `_shared` in the file system, not from the dropdown.** The name is reserved, and the *+ New memory bank…* dialog strips leading underscores from whatever you type — so asking it for `_shared` gets you an ordinary bank called `shared`, which does nothing. Instead use **Open folder**, go up one level to `memory-banks\`, create a folder called `_shared`, and put `brief.md`, `terminology.md` and `style.md` in it.
+
+You never have to select `_shared` to use it — it is loaded on top of whichever bank is active. Select it only when you want to edit your defaults.
 
 ## Banks
 

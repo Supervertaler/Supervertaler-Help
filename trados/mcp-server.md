@@ -77,8 +77,8 @@ The server exposes these tools to the AI app:
 | `save_prompt` | Create a new prompt, or update one of your own – built-in defaults are protected *(v18.20.101)* |
 | `get_prompt_context` | Everything the AI needs to write a translation prompt tailored to your open project – source text, domain, terms, TM examples *(v18.20.109)* |
 | `get_supermemory_context` | The active [SuperMemory](/trados/ai-assistant/super-memory/) bank for this project – its brief, terminology table and style rules, plus the `_shared` bank of house defaults that the client bank overrides *(three-file banks from v18.20.169)* |
-| `search_supermemory` | Search your active memory bank by keyword – *"what did I decide about this term, and why?"* *(v18.20.146)* |
-| `list_supermemory_banks` | Your memory banks and which one is active *(v18.20.146)* |
+| `search_supermemory` | Search your active memory bank **and `_shared`** by keyword – *"what did I decide about this term, and why?"*. Each hit says which bank it came from *(v18.20.146; `_shared` included from v18.20.172)* |
+| `list_supermemory_banks` | Your memory banks and which one is active. `_shared` is labelled as the always-loaded layer rather than listed as an ordinary bank *(v18.20.146; roles from v18.20.172)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >
