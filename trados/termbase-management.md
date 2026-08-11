@@ -88,15 +88,54 @@ user interface	gebruikersinterface|gebruikersomgeving	IT
 TSV files exported from Supervertaler (both the Trados plugin and Workbench) can always be reimported without any changes. Files from other tools are also supported as long as they have recognisable column headers.
 :::
 
-## Export to TSV
+## Export
 
 To export all terms from a termbase:
 
 1. Select the termbase in the list
-2. Click **Export to TSV**
-3. Choose a save location
+2. Click **Export**
+3. Pick the format in the save dialog, then choose a location
 
-The exported file uses tab-separated columns with a header row: `Term UUID`, `Source`, `Target`, `Priority`, `Domain`, `Notes`, `Project`, `Client`, `Forbidden`. Synonyms are pipe-delimited and forbidden synonyms are marked with `[!term]`. The file is UTF-8 encoded with BOM for Excel compatibility.
+Three formats, for three different purposes.
+
+### TSV – the one that comes back unchanged
+
+Tab-separated columns with a header row: `Term UUID`, `Source`, `Target`, `Priority`, `Domain`, `Notes`, `Project`, `Client`, `Forbidden`. Synonyms are pipe-delimited and forbidden synonyms are marked with `[!term]`. UTF-8 with BOM, for Excel compatibility.
+
+Use it for a backup, for editing in a spreadsheet, or for moving terms between Supervertaler termbases – it reimports here with nothing lost.
+
+:::note
+Terms whose own text contains a `|` or a `\` are escaped from v18.20.177. A TSV written by an **earlier** build cannot be repaired: in it, a delimiter and a literal pipe are the same character. If you have such a file and the terms matter, re-export it.
+:::
+
+### MultiTerm XML – for Trados
+
+The format MultiTerm and Glossary Converter import. This is how you get terms *out* of Supervertaler and into a Trados termbase:
+
+- **For a `.sdltb`**: convert the XML with Glossary Converter, or import it in MultiTerm.
+- **For a `.ttb`** (Studio 2026): in Studio's **Termbases** view, create a termbase and use **Import Terms**.
+
+Carries source and target terms with their synonyms, plus definition, domain, notes, context, part of speech, URL, client, project and the forbidden flag – more than the TSV export, which has no column for several of those.
+
+### TBX – for everything else
+
+TBX-Basic (ISO 30042), the standard interchange format. MultiTerm reads it and so do most other CAT tools, so it is the better choice if your terminology has to travel beyond Trados.
+
+:::note
+**Supervertaler cannot write a `.sdltb` or `.ttb` directly.** Those are a Microsoft Access database and an undocumented SQLite format respectively; producing one means guessing at a file layout that is not published, and a termbase Studio only half-accepts would be worse than one it refuses outright. Both formats above are documented and Trados imports them, at the cost of one conversion step you perform yourself.
+:::
+
+### What a round trip keeps, and what it doesn't
+
+Terms, synonyms and the descriptive fields survive a full circle out to a Trados termbase and back. The *structure* does not: a MultiTerm entry is concept-oriented and can hold many languages, while a Supervertaler termbase is bilingual rows – so one conversion handles one language pair, and concepts flatten to pairs with any extra terms in a language becoming synonyms.
+
+## Import from a Trados termbase
+
+**Import .sdltb/.ttb…** copies terms *out of* a Trados termbase and *into* a Supervertaler one. You choose the language pair, whether to create a new Supervertaler termbase or add to an existing one, and which of the Trados descriptive fields map to definition, domain, notes and so on.
+
+The Trados termbase is only ever read, never modified.
+
+An AI assistant connected through the [MCP server](/trados/mcp-server/) can do the same in one step with `import_project_termbase`, including a dry run that reports what would be imported before anything is written.
 
 ## Termbase Editor
 
