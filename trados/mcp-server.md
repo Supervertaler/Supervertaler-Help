@@ -58,6 +58,7 @@ The server exposes these tools to the AI app:
 | `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain – only the fields you name change, everything else is preserved |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
+| `import_project_termbase` | Copy the Trados termbase attached to the open project (`.sdltb` / `.ttb`) into a Supervertaler termbase in one step – the same job as the *Import .sdltb/.ttb…* button. Ask for a dry run first and it reports the entry count, language pair and field mapping before writing anything; running it twice adds nothing the second time. An existing destination must be Write-enabled, a new name is created for you, and your Trados termbase is only ever read *(v18.20.175)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
 | `save_document` | Save the open document (Ctrl+S) – only when you ask or approve *(v18.20.115)* |
 | `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
