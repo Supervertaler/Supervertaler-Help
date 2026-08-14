@@ -73,6 +73,41 @@ Termbase hits show the **termbase name in green** and its **kind** in the Status
 TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, edit it in the termbase.
 :::
 
+### Searching the web *(from v18.20.181)*
+
+The one place a translator still had to leave Studio was the web. SuperSearch now covers that too: select a term, press **Alt+W**, and every reference site you have switched on opens with the query and your project's language pair already filled in. There is nothing to type and no language dropdown to set.
+
+You can also right-click in the editor and choose **Search the web**, or use the **🌐** button in the SuperSearch bar.
+
+:::note
+**Alt+W is a second shortcut, not a replacement.** **Alt+S** still searches your files, TMs and termbases into the results grid exactly as before. **Alt+W** is the web half. Both can be rebound in Studio's keyboard shortcut settings.
+:::
+
+#### Choosing which sites to search
+
+Click **Web (n)** in the SuperSearch bar — it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijerterm**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
+
+The other thirty-six cover bilingual dictionaries (Glosbe, WordReference, bab.la), EU and legal terminology (EUR-Lex, EuroTermBank, Juremy, GEMET), encyclopaedic sources (Wikipedia, Wiktionary, Wikidata), English monolingual and writing references (Collins, Merriam-Webster, Oxford Collocations, SkELL, Etymonline), Dutch resources (Woordenlijst, Synoniemen.net, de Financiële Begrippenlijst), medical databases (EMA, EMC) and general search (Google, Google Patents, GitHub Code).
+
+Only five are enabled initially on purpose — forty tabs opening on your first search would be a poor introduction. Tick whichever you actually use.
+
+**Adding your own** takes a name and a URL template: `{query}` for the search term, plus `{sl}` and `{tl}` for the language codes where the site needs them.
+
+#### Where the results open
+
+A checkbox in that same dialog decides. Neither option is a fallback for the other, and both are worth having:
+
+* **In a Supervertaler window** — one window with a tab per site, reused for every search so tabs refresh in place rather than leaving a trail of windows behind. Tabs load only when you click them.
+* **In your own browser** — one new window containing all the tabs, which you close when you are done. Your browser brings your ad blocker and your signed-in sessions with it.
+
+#### Terms taken from the target side
+
+A term selected in the **target** is looked up **in the target language**. Searching a Dutch word in an EN→NL project queries the sites as nl→en, not en→nl — the latter is how you get a screen of nothing and conclude the site is broken.
+
+#### Sites that ask you to prove you are human
+
+Some sites, ProZ.com in particular, block embedded browsers. When that happens the tab shows a banner offering to hand the page to your own browser, where you are usually signed in and pass instantly. It is an offer rather than an automatic jump, so nothing pulls you out of the editor mid-segment — and if the check clears by itself, the page is still there underneath.
+
 ### Search Options
 
 | Option             | Description                                                                                 |
@@ -104,15 +139,16 @@ The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C
 
 ## File, TM and Termbase Selection
 
-Three buttons in the search bar let you narrow what SuperSearch looks at — **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, and **TBs** for your termbases *(v18.20.155)*. Each button shows how many items are included:
+Four buttons in the search bar let you narrow what SuperSearch looks at — **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, **TBs** for your termbases *(v18.20.155)*, and **Web** for reference sites *(v18.20.181)*. Each button shows how many items are included:
 
 * **Files (16)** -- all 16 files in the project are included
 * **Files (12/16)** -- 12 out of 16 files are included (4 excluded)
 * **TMs (3)** -- all 3 project TMs are included
 * **TMs (1/3)** -- 1 of 3 TMs is included (2 excluded)
 * **TBs (2)** -- both available termbases are included
+* **Web (5/41)** -- 5 of the 41 available web resources are switched on
 
-Files, TMs and termbases are all discovered when the project opens, so the counts are filled in before your first search.
+Files, TMs and termbases are all discovered when the project opens, so the counts are filled in before your first search. Web resources are your own standing choice rather than a property of the project, so that count is the same in every job until you change it.
 
 Click any button to open its selection dialog:
 
@@ -186,16 +222,17 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 
 ## Keyboard Shortcuts
 
-| Shortcut                      | Action                                        |
-| ----------------------------- | --------------------------------------------- |
-| **Alt+S**                     | Open SuperSearch (with selected text, if any) |
-| **Enter** (in search box)     | Start search                                  |
-| **Enter** (in results grid)   | Navigate to selected segment                  |
-| **Double-click** (result row) | Navigate to selected segment                  |
+| Shortcut                      | Action                                          |
+| ----------------------------- | ----------------------------------------------- |
+| **Alt+S**                     | Open SuperSearch (with selected text, if any)   |
+| **Alt+W**                     | Search the web for the selected term            |
+| **Enter** (in search box)     | Start search                                    |
+| **Enter** (in results grid)   | Navigate to selected segment                    |
+| **Double-click** (result row) | Navigate to selected segment                    |
 
 ## Tips
 
-* Select a term in the editor and press **Alt+S** to instantly search for it across the entire project.
+* Select a term in the editor and press **Alt+S** to instantly search for it across the entire project — or **Alt+W** to look it up on IATE, Linguee, Reverso and the rest, in your project's language pair.
 * Use **Source only** scope to find segments where a particular term appears, then check how it was translated across files.
 * Use **Target only** scope with Replace to fix a consistent mistranslation across the entire project.
 * Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories -- useful in large projects where you only want to search a subset.
