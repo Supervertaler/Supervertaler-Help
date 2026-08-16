@@ -216,6 +216,8 @@ Your [SuperMemory](/trados/ai-assistant/super-memory/) memory bank holds the rea
 
 The AI cites the articles it drew from by path, so you can open them in Obsidian and check its reasoning. Retrieval is read-only – nothing is written back to the bank over MCP. If you have turned memory-bank context off under Settings → AI Settings, these tools stay quiet too.
 
+A large bank will not fit into one answer, so some of it is left out – and **the AI is now told which files those were** *(from v18.20.183)*. It used to be trimmed silently, which is the worse failure: two of your three articles look exactly like all three, so a rule you had written down could be absent from the answer with nothing to say so. If the AI mentions that something was left out, ask it to read the bank again with a larger budget, or ask about that file by name.
+
 ### Your prompt library *(from v18.20.101)*
 
 The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate (and shared with the Supervertaler Workbench):
