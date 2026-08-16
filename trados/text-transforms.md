@@ -15,7 +15,7 @@ Text transforms are useful for cleaning up invisible or problematic characters i
 ## How it works
 
 1. Navigate to the segment you want to clean
-2. Press **Ctrl+Q** (or right-click → QuickLauncher)
+2. Press **Alt+Q** (or right-click → QuickLauncher)
 3. Open the **Text operations** folder
 4. Click **Strip U+2028** (or another transform)
 

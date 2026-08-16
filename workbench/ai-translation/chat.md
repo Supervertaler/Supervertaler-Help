@@ -41,7 +41,7 @@ This is the same context the in-Trados Supervertaler Assistant chat already uses
 
 ## QuickLauncher prompts from Trados
 
-When **Supervertaler for Trados** is running, you can also send a Trados QuickLauncher prompt (Ctrl+Q from inside Trados Studio) over the bridge to be processed by Workbench's Chat panel instead of the in-Trados Assistant. The Trados plugin builds a redacted *display* version (e.g. `[source document — N segments]` instead of the full project text) for the chat transcript and sends the fully-expanded prompt to the LLM. Workbench pops to the foreground on the Chat tab, the prompt and response render there, and the user can carry on the conversation as a normal Chat session.
+When **Supervertaler for Trados** is running, you can also send a Trados QuickLauncher prompt (Alt+Q from inside Trados Studio) over the bridge to be processed by Workbench's Chat panel instead of the in-Trados Assistant. The Trados plugin builds a redacted *display* version (e.g. `[source document — N segments]` instead of the full project text) for the chat transcript and sends the fully-expanded prompt to the LLM. Workbench pops to the foreground on the Chat tab, the prompt and response render there, and the user can carry on the conversation as a normal Chat session.
 
 This is opt-in on the Trados side – a dropdown in Trados → **Settings → AI Settings → "QuickLauncher prompts go to:"** picks between the in-Trados Assistant (default) and Workbench Chat. Workbench is always ready to receive; nothing in Workbench needs to be configured.
 

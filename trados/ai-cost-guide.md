@@ -93,7 +93,7 @@ Supervertaler includes several safeguards to help you avoid unexpected costs:
 
 #### QuickLauncher prompts are standalone
 
-When you run a prompt from the QuickLauncher menu (Ctrl+Q), only the prompt itself is sent to the AI – **not the chat history**. This means a simple terminology query costs only what it needs to, even if you have a long conversation in the chat window.
+When you run a prompt from the QuickLauncher menu (Alt+Q), only the prompt itself is sent to the AI – **not the chat history**. This means a simple terminology query costs only what it needs to, even if you have a long conversation in the chat window.
 
 #### Chat token budget
 

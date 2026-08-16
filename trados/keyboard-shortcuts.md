@@ -18,7 +18,6 @@ Trados Studio ships with its own default bindings on several of the key combinat
 | `Ctrl+Alt+N` | New Cloud Project | Quick-add non-translatable term |
 | `Ctrl+Alt+G` | Open GroupShare Project | Auto-tag active segment (AutoTagger) |
 | `Alt+Up` | Focus Previous Row | Quick-add term to project termbase |
-| `Ctrl+Q` | View Internally Source | Open QuickLauncher |
 
 :::note
 The same applies to any other Supervertaler shortcut that appears dead: search **File → Options → Keyboard Shortcuts** for that key combination and clear the Trados binding. You only need to do this once per Trados installation – but repeat it after reinstalling or resetting Trados Studio.
@@ -45,10 +44,12 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
-| `Ctrl+Q` | `Control+Q` | Open QuickLauncher prompt menu |
+| `Alt+Q` | `Option+Q` | Open QuickLauncher prompt menu |
 | `Alt+T` | `Option+T` | Translate the active segment (uses Batch Translate settings, incl. document + SuperMemory context from v18/19.20.149) |
 
 :::note
+**QuickLauncher moved from `Ctrl+Q` to `Alt+Q` in v18/19.20.184.** `Ctrl+Q` is a Trados factory default ("View Internally Source") and Trados wins, so QuickLauncher did nothing on a fresh install until you went into Options and cleared that binding – with no error to tell you why. `Alt+Q` is free (Trados puts Quick Add New Term on `Ctrl+Shift+F2`) and fits the `Alt`+letter family the other shortcuts use. If you had already cleared the Trados binding to make `Ctrl+Q` work, that key will now do nothing for QuickLauncher – use `Alt+Q`, or reassign it in **File → Options → Keyboard Shortcuts**.
+
 **Why `Alt+T` and not `Ctrl+T`?** `Ctrl+T` is a Trados factory default ("Apply Translation Result"). Binding *both* to one key made a single press fire both commands, which raced on the same segment and could freeze Studio – so the default moved to the collision-free `Alt+T` (in plugin v18/19.20.119). If you upgraded from an earlier version and still have it on `Ctrl+T`, reassign it to `Alt+T` (or any free key) in **File → Options → Keyboard Shortcuts**; Studio keeps your existing binding across updates.
 :::
 

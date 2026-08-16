@@ -148,7 +148,7 @@ The Trados plugin discovers this handshake the same way Workbench discovers the 
 
 ### What happens on a QuickLauncher click
 
-When you press Ctrl+Q in Trados, pick a prompt, and have **Workbench Sidekick** selected as the target:
+When you press Alt+Q in Trados, pick a prompt, and have **Workbench Sidekick** selected as the target:
 
 1. The Trados plugin expands the prompt's variables (selection, surrounding segments, TM matches, project text, etc.) exactly as it would for the in-Trados Assistant.
 2. It calls Windows' `AllowSetForegroundWindow` with the Workbench PID so Sidekick is allowed to come to the front, then POSTs the expanded prompt to the Workbench bridge.

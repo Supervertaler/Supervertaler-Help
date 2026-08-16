@@ -4,7 +4,7 @@ title: "Quicklauncher Shortcuts"
 
 ### Marking a prompt as a QuickLauncher shortcut
 
-To make a custom prompt appear in the QuickLauncher right-click menu (`Ctrl+Q`), set `category: QuickLauncher` in the YAML frontmatter:
+To make a custom prompt appear in the QuickLauncher right-click menu (`Alt+Q`), set `category: QuickLauncher` in the YAML frontmatter:
 
 ```yaml
 ---
@@ -30,7 +30,7 @@ QuickLauncher prompts are shared with Supervertaler Workbench via the shared pro
 
 ### Keyboard shortcuts for QuickLauncher prompts
 
-You can assign keyboard shortcuts (Ctrl+Alt+1 through Ctrl+Alt+0) to individual QuickLauncher prompts for instant access without opening the Ctrl+Q menu.
+You can assign keyboard shortcuts (Ctrl+Alt+1 through Ctrl+Alt+0) to individual QuickLauncher prompts for instant access without opening the Alt+Q menu.
 
 1. Open **Settings → Prompts**
 2. Select a QuickLauncher prompt in the tree
@@ -39,10 +39,10 @@ You can assign keyboard shortcuts (Ctrl+Alt+1 through Ctrl+Alt+0) to individual 
 
 Each shortcut can only be assigned to one prompt. If you assign a shortcut that is already in use, it is automatically cleared from the other prompt.
 
-Assigned shortcuts are shown next to prompt names in the Ctrl+Q menu and in the Trados keyboard shortcuts settings (File → Options → Keyboard Shortcuts → Supervertaler for Trados).
+Assigned shortcuts are shown next to prompt names in the Alt+Q menu and in the Trados keyboard shortcuts settings (File → Options → Keyboard Shortcuts → Supervertaler for Trados).
 
 ### Reordering prompts
 
-Use the **▲** and **▼** buttons in the toolbar to change the order of prompts within a folder. This is especially useful for QuickLauncher prompts, as the order in the tree determines the order in the Ctrl+Q menu.
+Use the **▲** and **▼** buttons in the toolbar to change the order of prompts within a folder. This is especially useful for QuickLauncher prompts, as the order in the tree determines the order in the Alt+Q menu.
 
 The order is saved in each prompt's YAML frontmatter as a `sort_order` field.

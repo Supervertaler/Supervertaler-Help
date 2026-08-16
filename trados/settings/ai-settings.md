@@ -211,7 +211,7 @@ Batch Operations do not use this setting because each batch already contains a g
 
 #### QuickLauncher prompts go to
 
-Picks where Ctrl+Q [QuickLauncher](/trados/quicklauncher/) prompts run.
+Picks where Alt+Q [QuickLauncher](/trados/quicklauncher/) prompts run.
 
 | Option | Where the prompt and response appear |
 |--------|-------------------------------------|

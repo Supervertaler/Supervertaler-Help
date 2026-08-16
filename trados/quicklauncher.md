@@ -6,7 +6,7 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 
 ### How it works
 
-1. **Right-click** anywhere in the editor (or press `Ctrl+Q`)
+1. **Right-click** anywhere in the editor (or press `Alt+Q`)
 2. Click **QuickLauncher** in the context menu
 3. Select a prompt from the list
 4. The prompt is filled in with the current segment context and submitted to the Supervertaler Assistant chat
@@ -32,10 +32,10 @@ If your goal is simply *"translate this segment the way a batch would"*, use `Al
 
 | Shortcut (Windows) | Shortcut (Mac) | Action                         |
 | ------------------ | -------------- | ------------------------------ |
-| `Ctrl+Q`           | `Control+Q`    | Open QuickLauncher prompt menu |
+| `Alt+Q`            | `Option+Q`     | Open QuickLauncher prompt menu |
 
-:::caution
-Trados Studio assigns `Ctrl+Q` to **View Internally Source** by default. To use `Ctrl+Q` for QuickLauncher, go to **File → Options → Keyboard Shortcuts**, search for **View Internally Source**, and remove or reassign its shortcut.
+:::note
+**Changed in v18/19.20.184: this used to be `Ctrl+Q`.** That collided with Trados's own **View Internally Source**, and Trados wins – so QuickLauncher silently did nothing until you cleared that binding yourself. `Alt+Q` needs no setup. If you had already cleared the Trados binding, `Ctrl+Q` will now do nothing for QuickLauncher; use `Alt+Q` instead, or reassign it under **File → Options → Keyboard Shortcuts**.
 :::
 
 ### Prompt variables
@@ -108,7 +108,7 @@ To keep the chat history readable, the chat bubble shows a compact summary (e.g.
 
 #### Example: explain a selected term
 
-Select a word in the source segment, press `Ctrl+Q`, and choose a prompt like this:
+Select a word in the source segment, press `Alt+Q`, and choose a prompt like this:
 
 ```
 The user is translating from {{SOURCE_LANGUAGE}} to {{TARGET_LANGUAGE}}.
