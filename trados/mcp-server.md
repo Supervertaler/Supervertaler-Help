@@ -4,7 +4,9 @@ title: "Supervertaler MCP Server"
 
 The Supervertaler MCP Server connects **Claude Desktop** directly to your live Trados Studio session. You chat in Claude's own window, and it answers from your real project data: the document open in the editor, your translation memories, and your termbases. It can also make changes for you, always under your supervision.
 
-> **Which AI apps work?** Claude Desktop is fully supported and is the recommended app. Other MCP clients that run **local (STDIO) MCP servers on your own machine** – such as Claude Code – also work. **ChatGPT's desktop app is not supported**: it runs MCP servers in a cloud environment rather than on your computer, so it cannot reach the Supervertaler bridge, which is local to your machine by design (your project never leaves your PC). This is a difference in how the two apps are built, not something the plugin can change.
+> **Which AI apps work?** Any app that can run a **local (STDIO) MCP server on your own machine**. Claude Desktop is the easiest, because the plugin ships a one-click extension for it. **ChatGPT's desktop app works too** *(confirmed August 2026)*, as do Claude Code and other clients with local MCP support — see [Setting it up](#setting-it-up) for each. What cannot work is anything that runs the server in the cloud rather than on your PC, including the claude.ai and chatgpt.com **websites**: the Supervertaler bridge is local by design, so your project never leaves your machine, and a cloud-hosted client has no route to it.
+>
+> *Earlier versions of this page said ChatGPT desktop could not be used. That was true when written and is no longer: the desktop app has since added support for local STDIO servers.*
 
 MCP ([Model Context Protocol](https://modelcontextprotocol.io/)) is the open standard that lets AI applications securely call tools exposed by other programs. The Supervertaler MCP Server is the first MCP server that talks to a **live** Trados Studio editor session – other Trados-related MCP servers work on project files on disk, not the document you are working on.
 
@@ -242,7 +244,37 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 
 1. In Trados Studio, open **Supervertaler Settings → AI Settings** and click **Connect AI assistant…** at the bottom. The dialog shows your current connection status.
 2. **Claude Desktop** (easiest): click **Download extension (.mcpb)** to get `Supervertaler-MCP-Server.mcpb`. Then in Claude Desktop open **Settings → Extensions** and **drag the `.mcpb` file onto the page** – it shows a *"Drag .MCPB or .DXT files here to install"* target. (Prefer a file picker? Scroll to **Advanced settings** and use the **Install extension…** button instead.) Confirm the install. Double-clicking the `.mcpb` only works if your system has associated that file type with Claude Desktop; many don't and will ask which app to use – just cancel and drag-and-drop instead.
-3. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. This works for clients that support local STDIO MCP servers in their normal chat (see the note at the top about ChatGPT).
+3. **ChatGPT desktop** *(Windows)*: ChatGPT desktop can run the server, but it has no drag-and-drop installer, so this is a short manual step. It takes about two minutes.
+
+    **a. Get the server.** In the **Connect AI assistant…** dialog click **Download server (.zip)** (or take `Supervertaler-MCP-Server-exe.zip` from any [GitHub release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases/latest)). Unzip it and move `SupervertalerMcpServer.exe` somewhere **permanent** — for example `C:\Users\<you>\Supervertaler\mcp\`. Do not leave it in Downloads: the path goes into a config file, and moving or clearing the file later breaks the connection.
+
+    **b. Open the config file.** ChatGPT desktop reads its MCP servers from the same file as Codex CLI:
+
+    ```
+    %UserProfile%\.codex\config.toml
+    ```
+
+    Paste that path into File Explorer's address bar to jump straight to the folder. If the file or the `.codex` folder does not exist yet, create them — a config with only the block below in it is perfectly valid.
+
+    **c. Add the server.** Append this to the end of the file, replacing the path with where you actually put the exe:
+
+    ```toml
+    [mcp_servers.supervertaler]
+    type = "stdio"
+    command = 'C:\Users\<you>\Supervertaler\mcp\SupervertalerMcpServer.exe'
+    args = []
+    enabled = true
+    ```
+
+    Use **single quotes** around the path, as shown. In TOML that makes it a literal string, so Windows backslashes are taken exactly as typed. With double quotes you would have to write every backslash twice.
+
+    **d. Restart ChatGPT desktop properly.** Closing the window is not enough — it keeps running in the notification area. Right-click its icon there and quit, then start it again.
+
+    **e. Check it.** With Trados Studio running, ask ChatGPT: *"What Trados project is open?"* It should name your project, and `SupervertalerMcpServer` should appear under **Sources** in the reply.
+
+    > **If nothing happens**, work through these in order: is Trados Studio actually running? Does the path in `config.toml` point at a file that exists? Did you fully quit ChatGPT from the notification area? And is the rest of the file still valid TOML — a stray character anywhere in it can stop *every* server loading, not just this one.
+
+4. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. The snippet is in Claude's JSON format; clients that use a different format need the same two facts — the transport is STDIO, and the command is the path to that exe.
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
 
@@ -261,7 +293,7 @@ Everything stays on your computer:
 ## Requirements
 
 * Supervertaler for Trados with an active licence or trial (the bridge is part of the AI Assistant).
-* Claude Desktop (recommended), or another MCP client that runs local STDIO servers on your own machine. Note that this means a **desktop** app that executes the server locally – the claude.ai *website* and ChatGPT's desktop app cannot reach a local MCP server (see the note at the top of this page).
+* An MCP client that runs local STDIO servers on your own machine: Claude Desktop (recommended, one-click install), ChatGPT desktop, Claude Code, or similar. This means a **desktop** app that executes the server locally — the claude.ai and chatgpt.com *websites* run any server in the cloud and cannot reach a local one.
 * Windows (the MCP server is a self-contained exe; no additional runtimes needed).
 
 ## Keeping it up to date
