@@ -35,7 +35,7 @@ If your goal is simply *"translate this segment the way a batch would"*, use `Al
 | `Alt+Q`            | `Option+Q`     | Open QuickLauncher prompt menu |
 
 :::note
-**Changed in v18/19.20.184: this used to be `Ctrl+Q`.** That collided with Trados's own **View Internally Source**, and Trados wins – so QuickLauncher silently did nothing until you cleared that binding yourself. `Alt+Q` needs no setup. If you had already cleared the Trados binding, `Ctrl+Q` will now do nothing for QuickLauncher; use `Alt+Q` instead, or reassign it under **File → Options → Keyboard Shortcuts**.
+**Changed in v18/19.20.184: this used to be `Ctrl+Q`.** That collided with Trados's own **View Internally Source**, and Trados wins – so QuickLauncher silently did nothing until you cleared that binding yourself. `Alt+Q` needs one small setup step: Trados also assigns it to **Tell me what you want to do** (confirmed in Studio 2024), and Trados wins, so clear that binding in **File → Options → Keyboard Shortcuts** – Tell Me is the ribbon search box at the top right and works fine without a shortcut. If you had already cleared the Trados binding, `Ctrl+Q` will now do nothing for QuickLauncher; use `Alt+Q` instead, or reassign it under **File → Options → Keyboard Shortcuts**.
 :::
 
 ### Prompt variables
