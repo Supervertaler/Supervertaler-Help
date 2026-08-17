@@ -238,6 +238,13 @@ Because the AI has all tools in one conversation, the most powerful prompts comb
 * "Draft the remaining segments, but first build a glossary from the segments I already translated and stick to it."
 * "Review my Draft segments against the source: flag mistranslations, fix typos directly, and list anything you weren't sure about."
 
+Given a long enough task, an assistant will keep going on its own:
+
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_ChatGPT_desktop.jpg" alt="ChatGPT desktop reporting on a finished Trados Studio job: 1,064 of 1,064 segments translated, the entire file proofread including pre-existing translations, no tag, non-breaking-space or consistency errors, Trados verification clean, and the bilingual document saved"><figcaption>ChatGPT desktop asked to carry on unattended, reporting back on a 1,064-segment file it translated, proofread and saved through the MCP server. Everything it did landed in Trados Studio, where it can be reviewed segment by segment like any other work.</figcaption></figure>
+
+Worth knowing before trying it: the assistant writes into your project as it goes, so review the result as you would a colleague's draft – the confirmation status it leaves, and Trados's own verification, are what make that practical. An unattended run also spends tokens without you watching, so set a budget you are comfortable with first.
+
+
 Version tags like *(from v18.20.111)* show the plugin version a capability first shipped in – if the AI doesn't offer it, update the plugin. New tools appear in your AI app automatically after a plugin update; no extension reinstall is needed.
 
 ## Setting it up
