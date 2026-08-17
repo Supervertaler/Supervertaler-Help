@@ -10,7 +10,7 @@ The Supervertaler MCP Server connects **Claude Desktop** directly to your live T
 
 MCP ([Model Context Protocol](https://modelcontextprotocol.io/)) is the open standard that lets AI applications securely call tools exposed by other programs. The Supervertaler MCP Server is the first MCP server that talks to a **live** Trados Studio editor session – other Trados-related MCP servers work on project files on disk, not the document you are working on.
 
-<figure><img src="/.gitbook/assets/Supervertaler_MCP_Server.png" alt="An AI assistant asked to read the project open in Trados Studio and produce an English-Dutch glossary, answering with a term table grounded in the live document and the user's termbase"><figcaption>Asking the AI for a glossary drawn from the live Trados Studio project – it reads the open document and checks the user's termbase, then answers in chat.</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_Server.png" alt="Claude Code asked to read the project open in Trados Studio and produce an English-Dutch glossary, answering with a term table grounded in the live document and the user's termbase"><figcaption><strong>Claude Code.</strong> Asking for a glossary drawn from the live Trados Studio project – it reads the open document and checks the user's termbase, then answers in chat.</figcaption></figure>
 
 ## What you can ask
 
@@ -120,7 +120,7 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 
 > **Not sure where to start? Just ask *"What can I do?"*** (or *"what can you do?"*) and the assistant shows a grouped menu of everything below – so you don't have to read this page first.
 
-<figure><img src="/.gitbook/assets/Supervertaler_MCP_what_can_I_do.png" alt="Claude Desktop showing the answer to 'What can I do?' – a grouped, bulleted menu of example phrasings under headings such as Project &#38; progress, Find &#38; read segments, and Translation memory &#38; terminology"><figcaption>Ask <em>"What can I do?"</em> and the assistant lists what you can ask it, grouped by task.</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_what_can_I_do.png" alt="Claude Desktop showing the answer to 'What can I do?' – a grouped, bulleted menu of example phrasings under headings such as Project &#38; progress, Find &#38; read segments, and Translation memory &#38; terminology"><figcaption><strong>Claude Desktop.</strong> Ask <em>"What can I do?"</em> and the assistant lists what you can ask it, grouped by task.</figcaption></figure>
 
 ### Project status and progress
 
@@ -240,7 +240,7 @@ Because the AI has all tools in one conversation, the most powerful prompts comb
 
 Given a long enough task, an assistant will keep going on its own:
 
-<figure><img src="/.gitbook/assets/Supervertaler_MCP_ChatGPT_desktop.jpg" alt="ChatGPT desktop reporting on a finished Trados Studio job: 1,064 of 1,064 segments translated, the entire file proofread including pre-existing translations, no tag, non-breaking-space or consistency errors, Trados verification clean, and the bilingual document saved"><figcaption>ChatGPT desktop asked to carry on unattended, reporting back on a 1,064-segment file it translated, proofread and saved through the MCP server. Everything it did landed in Trados Studio, where it can be reviewed segment by segment like any other work.</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_ChatGPT_desktop.jpg" alt="ChatGPT desktop reporting on a finished Trados Studio job: 1,064 of 1,064 segments translated, the entire file proofread including pre-existing translations, no tag, non-breaking-space or consistency errors, Trados verification clean, and the bilingual document saved"><figcaption><strong>ChatGPT desktop.</strong> Asked to carry on unattended, reporting back on a 1,064-segment file it translated, proofread and saved through the MCP server. Everything it did landed in Trados Studio, where it can be reviewed segment by segment like any other work.</figcaption></figure>
 
 Worth knowing before trying it: the assistant writes into your project as it goes, so review the result as you would a colleague's draft – the confirmation status it leaves, and Trados's own verification, are what make that practical. An unattended run also spends tokens without you watching, so set a budget you are comfortable with first.
 
