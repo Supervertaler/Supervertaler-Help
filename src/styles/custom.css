@@ -85,6 +85,24 @@
   cursor: zoom-out;
 }
 
+/* ── Inline code inside tables ────────────────────────────────────────
+ *
+ * Reference tables pair a short identifier (a tool name, a setting key)
+ * in column 1 with a sentence of prose in column 2. Because inline code
+ * is allowed to wrap anywhere, the browser computes column 1's minimum
+ * width as a *single character* and hands almost the whole table to the
+ * prose column — so `get_active_project` renders stacked three letters
+ * to a line. Making inline code unbreakable raises that minimum to the
+ * width of the longest identifier, which is what the column then gets.
+ *
+ * Scoped to <code> inside cells, so ordinary prose in a first column is
+ * still free to wrap normally. Starlight already gives tables
+ * `display: block; overflow-x: auto`, so a table that outgrows a narrow
+ * screen scrolls on its own — nothing extra needed here. */
+.sl-markdown-content table :is(th, td) code {
+  white-space: nowrap;
+}
+
 /* ---------------------------------------------------------------------
  * Sidebar nested-list indent guides
  *
