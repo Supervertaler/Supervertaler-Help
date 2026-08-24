@@ -33,7 +33,7 @@ You only need one provider to get started. If you would rather not manage severa
 1. Pick a provider from the table above and follow its link.
 2. Create an account and generate an API key. Most providers require billing details before a key will return anything; the free tiers that do exist are usually rate-limited rather than free-forever.
 3. Copy the key **immediately** – most providers show it only once.
-4. Paste it into the **API key** field below, then use **Test connection** to confirm it works before you rely on it mid-job.
+4. Paste it into the **API key** field below, then use **Test Connection** to confirm it works before you rely on it mid-job.
 
 Keys are stored locally in your Supervertaler data folder and are only ever sent to the provider's own API endpoint. See [Privacy](/trados/privacy/) for what does and does not leave your machine.
 
