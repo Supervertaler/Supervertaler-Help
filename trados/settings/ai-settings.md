@@ -12,20 +12,33 @@ Open the plugin **Settings** dialogue and switch to the **AI** tab.
 
 Choose one of the supported AI providers:
 
-| Provider | Description |
-|----------|-------------|
-| **OpenAI** | GPT-5.5, GPT-5.4 Mini |
-| **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 |
-| **Gemini (Google)** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
-| **Grok (xAI)** | Grok 4.3 |
-| **Mistral AI** | Mistral Large, Mistral Small |
-| **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
-| **[OpenRouter](#openrouter)** | Access 200+ models from all major providers with a single API key |
-| **Ollama (Local)** | Run models locally, no API key required |
-| **Custom (OpenAI-compatible)** | Any provider with an OpenAI-compatible API |
+| Provider | Models | Where to get a key |
+|----------|--------|--------------------|
+| **OpenAI** | GPT-5.5, GPT-5.4 Mini | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
+| **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 | [console.anthropic.com](https://console.anthropic.com) |
+| **Gemini (Google)** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
+| **Mistral AI** | Mistral Large, Mistral Small | [console.mistral.ai](https://console.mistral.ai) |
+| **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash | [platform.deepseek.com](https://platform.deepseek.com) |
+| **[OpenRouter](#openrouter)** | 200+ models from all major providers, one key | [openrouter.ai/keys](https://openrouter.ai/keys) |
+| **Ollama (Local)** | Runs models on your own machine | No key needed |
+| **Custom (OpenAI-compatible)** | Any OpenAI-compatible API | From whoever runs the endpoint |
 
 :::note
-You only need one provider to get started. See [Setting Up API Keys](https://docs.supervertaler.com/workbench/get-started/api-keys/) for instructions on obtaining a key.
+You only need one provider to get started. If you would rather not manage several accounts, **OpenRouter** gives you access to models from all of the above with a single key.
+:::
+
+### Getting your first key
+
+1. Pick a provider from the table above and follow its link.
+2. Create an account and generate an API key. Most providers require billing details before a key will return anything; the free tiers that do exist are usually rate-limited rather than free-forever.
+3. Copy the key **immediately** – most providers show it only once.
+4. Paste it into the **API key** field below, then use **Test connection** to confirm it works before you rely on it mid-job.
+
+Keys are stored locally in your Supervertaler data folder and are only ever sent to the provider's own API endpoint. See [Privacy](/trados/privacy/) for what does and does not leave your machine.
+
+:::caution
+An API key is a billing credential. Anyone who has it can spend money on your account. Do not paste one into a shared prompt, a support ticket, or a screenshot – and if you think one has leaked, revoke it from the provider's console rather than just replacing it here.
 :::
 
 ## API key
@@ -282,4 +295,4 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 - [Prompts](/trados/settings/prompts/)
 - [AI Cost Guide](/trados/ai-cost-guide/)
 - [TermLens Settings](/trados/settings/termlens/)
-- [Supported LLM Providers (Workbench)](https://docs.supervertaler.com/workbench/ai-translation/providers/)
+- [Token Usage & Costs](/trados/usage-costs/)

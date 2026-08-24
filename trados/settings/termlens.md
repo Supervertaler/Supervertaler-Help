@@ -112,4 +112,4 @@ See [Keyboard Shortcuts](/trados/keyboard-shortcuts/) for the full reference.
 - [Termbase Management](/trados/termbase-management/)
 - [MultiTerm Support](/trados/multiterm-support/)
 - [AI Settings](/trados/settings/ai-settings/)
-- [TermLens (Workbench)](https://docs.supervertaler.com/workbench/termbases/termlens/)
+- [TermLens overview](/trados/termlens/)

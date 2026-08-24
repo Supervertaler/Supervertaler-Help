@@ -190,4 +190,4 @@ This action is mostly for repairing legacy entries created or edited under v4.19
 - [MultiTerm Support](/trados/multiterm-support/)
 - [TermLens Settings](/trados/settings/termlens/)
 - [Adding & Editing Terms](/trados/termlens/adding-terms/)
-- [Termbase Basics (Workbench)](https://docs.supervertaler.com/workbench/termbases/basics/)
+- [Data Folder](/trados/data-folder/)

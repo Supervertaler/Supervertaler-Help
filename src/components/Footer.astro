@@ -7,10 +7,31 @@
  * the machine-readable llms.txt endpoints, so human readers can
  * discover what AI agents find automatically at the root URL.
  *
+ * The per-product subset link follows the page you are on, the same way
+ * Sidebar.astro filters the nav tree and Head.astro scopes search: a
+ * /trados/* page offers the Trados subset, a /workbench/* page offers the
+ * Workbench one. Listing both on every page put a product chooser in the
+ * footer of what is now a single-product site.
+ *
  * The llms* files are generated at build time by the starlight-llms-txt
  * plugin configured in astro.config.mjs.
  */
 import Default from '@astrojs/starlight/components/Footer.astro';
+
+const route = Astro.locals.starlightRoute;
+const id: string = route?.entry?.id ?? '';
+
+const TRADOS = { href: '/_llms-txt/supervertaler-for-trados.txt', label: 'Trados only' };
+const WORKBENCH = { href: '/_llms-txt/supervertaler-workbench.txt', label: 'Workbench only' };
+
+let subsets: Array<typeof TRADOS>;
+if (id === 'trados' || id.startsWith('trados/')) {
+  subsets = [TRADOS];
+} else if (id === 'workbench' || id.startsWith('workbench/')) {
+  subsets = [WORKBENCH];
+} else {
+  subsets = [TRADOS, WORKBENCH];
+}
 ---
 
 <Default><slot /></Default>
@@ -19,10 +40,12 @@ import Default from '@astrojs/starlight/components/Footer.astro';
   🤖 These docs are AI-readable: <a href="/llms.txt">llms.txt</a>
   <span class="sv-llms-sep">·</span>
   <a href="/llms-full.txt">full</a>
-  <span class="sv-llms-sep">·</span>
-  <a href="/_llms-txt/supervertaler-for-trados.txt">Trados only</a>
-  <span class="sv-llms-sep">·</span>
-  <a href="/_llms-txt/supervertaler-workbench.txt">Workbench only</a>
+  {subsets.map((s) => (
+    <Fragment>
+      <span class="sv-llms-sep">·</span>
+      <a href={s.href}>{s.label}</a>
+    </Fragment>
+  ))}
 </div>
 
 <style>

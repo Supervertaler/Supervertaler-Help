@@ -165,4 +165,4 @@ See [Support & Community](/trados/support/) for all the ways to get help.
 - [TermLens Settings](/trados/settings/termlens/)
 - [AI Settings](/trados/settings/ai-settings/)
 - [Termbase Management](/trados/termbase-management/)
-- [Common Issues (Workbench)](https://docs.supervertaler.com/workbench/troubleshooting/common-issues/)
+- [Data Folder](/trados/data-folder/)
