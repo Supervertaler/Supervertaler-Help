@@ -21,6 +21,7 @@ export default defineConfig({
       description: 'Help and documentation for Supervertaler for Trados — AI translation, terminology, search and a translation knowledge base inside Trados Studio.',
 
       // Component overrides — see ./src/components/ for the customisations.
+      // Banner:  "no longer actively developed" notice on /workbench/*.
       // Head:    injects per-page Pagefind product filter metadata.
       // Search:  replaces the default Pagefind UI with a custom one that
       //          scopes by current section and groups results by product.
@@ -29,12 +30,15 @@ export default defineConfig({
       //          Workbench).  Landing page and other non-product pages
       //          still see both trees.
       components: {
+        // Banner:  dormancy notice across /workbench/*.
+        Banner: './src/components/Banner.astro',
         Head: './src/components/Head.astro',
         Search: './src/components/Search.astro',
         Sidebar: './src/components/Sidebar.astro',
         SocialIcons: './src/components/SocialIcons.astro',
         // Footer: default footer + a small "AI-readable docs" note
-        // linking the llms.txt endpoints generated at build time.
+        // linking the llms.txt endpoints generated at build time; the
+        // per-product subset link follows the page's own product.
         Footer: './src/components/Footer.astro',
       },
 
