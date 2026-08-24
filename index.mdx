@@ -1,58 +1,50 @@
 ---
 title: Welcome to Supervertaler Docs
-description: Help and documentation for the Supervertaler suite – Trados Studio plugin and Workbench standalone app.
+description: Help and documentation for Supervertaler for Trados – AI translation, terminology, search and a translation knowledge base inside Trados Studio.
 template: splash
 hero:
   tagline: |
-    Supervertaler is a translation suite for professional translators,
-    localisers, and people who work with words. There are two products –
-    pick the one you use below.
+    Supervertaler for Trados brings AI translation, live terminology,
+    cross-file search and a translation knowledge base into Trados Studio.
   actions:
-    - text: 🧩 Open the Trados Plugin docs
+    - text: 🧩 Open the docs
       link: /trados/
       variant: primary
       icon: right-arrow
-    - text: 🖥️ Open the Workbench docs
-      link: /workbench/
-      variant: secondary
-      icon: right-arrow
 ---
+
+{/*
+  `/` redirects to `/trados/` (see public/_redirects), so this page is not
+  normally reached. It is kept deliberately as a fallback: if that rule is
+  ever removed, the docs root renders this instead of 404ing. Keep it
+  accurate for that reason, and do not let it drift back into a product
+  chooser — the site is single-product.
+*/}
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## What each product does
-
 <CardGrid>
   <Card title="🧩 Supervertaler for Trados">
-    A plugin that brings Supervertaler's AI and terminology tools right into [Trados Studio](https://www.trados.com/) (2024+) as dockable panels – so you never leave the CAT tool you already use.
+    A plugin that brings Supervertaler's AI and terminology tools right into [Trados Studio](https://www.trados.com/) (2024 and 2026) as dockable panels – so you never leave the CAT tool you already use.
 
     What it adds:
-    - **TermLens** – live, colour-coded terminology under each source segment, with MultiTerm (`.sdltb` / `.ttb`) support and one-key term insertion (`Alt+1`–`9`)
+    - **TermLens** – live, colour-coded terminology under each source segment, with MultiTerm (`.sdltb` / `.ttb`) support and one-key term insertion (`Alt+0`–`9`)
     - **Supervertaler Assistant** – a Trados-aware AI chat that knows your current segment, terminology, and TM matches; attach files, go incognito, or draw on its **SuperMemory** knowledge base
-    - **SuperSearch** – fast concordance search across your whole project
+    - **SuperSearch** – cross-file search and replace across every file in the project
     - **Batch Translate & AI Proofreader** – run AI over entire files, with a prompt library you can tailor to your domain
     - **QuickLauncher** – one-keystroke prompt actions, hands-free
+    - **MCP Server** – connect Claude Desktop and other AI assistants to the live Studio session
 
-    Source-available, single paid plan. Shares termbases, TMs, and prompts with Supervertaler Workbench.
+    Source-available, single paid plan, 14-day free trial.
 
-    [Open the Trados Plugin docs →](/trados/)
+    [Open the docs →](/trados/)
   </Card>
 
   <Card title="🖥️ Supervertaler Workbench">
-    A free, open-source desktop translation environment (CAT tool) – editor, AI translation, terminology, and translation memory in one place.
+    A free, open-source standalone CAT tool – editor, AI translation, terminology and translation memory in one place, plus tools that work system-wide in any application: a clipboard manager, SuperLookup, QuickTrans, and voice dictation.
 
-    Its real superpower: a set of tools that work **system-wide**, in *any* application, not just inside Supervertaler:
-    - **Clipboard Manager** – `Ctrl+Alt+C`
-    - **SuperLookup** – search termbases, translation memories, and web resources in one place, `Ctrl+Alt+L`
-    - **QuickTrans** – instant translations from several engines at once (AI and classic machine translation like Google Translate), GT4T-style, `Ctrl+Alt+Q`
-    - **Voice dictation & commands** – dictate or drive other programs hands-free, anywhere
+    **No longer actively developed.** It still works and the source is still open, but it is not receiving new features. Its documentation stays online in full.
 
     [Open the Workbench docs →](/workbench/)
   </Card>
 </CardGrid>
-
-## Not sure which one you need?
-
-- If you already pay for **Trados Studio** and want to add AI translation, terminology assistance, and voice commands to it → **Supervertaler for Trados**.
-- If you want a **free, modern translation tool** that doesn't depend on any other CAT software → **Supervertaler Workbench**.
-- If you use **both**, install them side by side – they share AI providers, termbases, TMs, and prompts, so your setup carries across for one coherent workflow.

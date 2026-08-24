@@ -18,7 +18,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Supervertaler Docs',
-      description: 'Help and documentation for the Supervertaler suite — Trados Studio plugin and Workbench standalone app.',
+      description: 'Help and documentation for Supervertaler for Trados — AI translation, terminology, search and a translation knowledge base inside Trados Studio.',
 
       // Component overrides — see ./src/components/ for the customisations.
       // Head:    injects per-page Pagefind product filter metadata.
@@ -56,12 +56,7 @@ export default defineConfig({
       social: [
         {
           icon: 'github',
-          label: 'GitHub: Workbench',
-          href: 'https://github.com/Supervertaler/Supervertaler-Workbench',
-        },
-        {
-          icon: 'github',
-          label: 'GitHub: Trados plugin',
+          label: 'GitHub: Supervertaler for Trados',
           href: 'https://github.com/Supervertaler/Supervertaler-for-Trados',
         },
         {
@@ -82,10 +77,12 @@ export default defineConfig({
       plugins: [
         starlightLlmsTxt({
           details:
-            'Supervertaler is a suite of AI-enhanced translation tools: ' +
-            'a Trados Studio plugin (TermLens terminology, AI assistant, ' +
-            'batch operations, MCP server for Claude Desktop) and the ' +
-            'standalone Workbench CAT tool.',
+            'Supervertaler for Trados is a Trados Studio plugin: TermLens live ' +
+            'terminology, an AI assistant, batch translate and proofread, ' +
+            'SuperSearch cross-file search, the SuperMemory knowledge base, and ' +
+            'an MCP server that connects AI assistants to the live Studio ' +
+            'session. Supervertaler Workbench, a standalone CAT tool, is also ' +
+            'documented here but is no longer actively developed.',
           optionalLinks: [
             {
               label: 'supervertaler.com',
@@ -93,14 +90,20 @@ export default defineConfig({
               description: 'Product website',
             },
             {
-              label: 'GitHub: Workbench',
-              url: 'https://github.com/Supervertaler/Supervertaler-Workbench',
-              description: 'Supervertaler Workbench source and releases',
-            },
-            {
-              label: 'GitHub: Trados plugin',
+              label: 'GitHub: Supervertaler for Trados',
               url: 'https://github.com/Supervertaler/Supervertaler-for-Trados',
               description: 'Supervertaler for Trados issues and releases',
+            },
+            {
+              label: 'RWS AppStore',
+              url: 'https://appstore.rws.com/plugin/432',
+              description: 'Where the plugin is distributed',
+            },
+            {
+              label: 'GitHub: Workbench',
+              url: 'https://github.com/Supervertaler/Supervertaler-Workbench',
+              description:
+                'Supervertaler Workbench source and releases (no longer actively developed)',
             },
           ],
           customSets: [
@@ -113,7 +116,7 @@ export default defineConfig({
             {
               label: 'Supervertaler Workbench',
               description:
-                'Docs for the standalone Workbench app only',
+                'Docs for the standalone Workbench app only (no longer actively developed)',
               paths: ['workbench/**'],
             },
           ],
