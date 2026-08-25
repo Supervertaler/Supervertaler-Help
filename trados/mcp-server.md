@@ -23,6 +23,7 @@ With Trados Studio open and a document in the editor, you can ask your AI assist
 * "What does my termbase say for *sluitkracht*?"
 * "Draft translations for the untranslated segments and set them to Draft so I can review them."
 * "We agreed *draagarm* = *support arm* – add it to my termbase."
+* "Work with the 2026 one." (when you have two versions of Trados Studio open – see [Two Studios open at once](#two-studios-open-at-once-from-v18-20-184))
 
 Unlike the [AI-friendly bilingual export](/trados/import-export/) workflow, there is no export/re-import cycle: the AI reads the live document on demand, and changes it makes appear in Studio while you chat.
 
@@ -100,17 +101,43 @@ The server exposes these tools to the AI app:
 
 ### Two Studios open at once *(from v18.20.184)*
 
-Studio 2024 and Studio 2026 can run side by side, and each has its own connection. The AI can only work in one at a time, so it is told which Studios are open and asks you when it matters.
+Trados Studio 2024 and Trados Studio 2026 can run side by side, each with its own project and its own connection. Two AI apps can then work on **two different projects at the same time** – ChatGPT drafting one job while Claude Desktop drafts the other, in two Studio windows, on one machine.
 
-* **Questions are always answered**, and the reply says which Studio and project it came from – so an answer about the wrong project is obvious rather than silent.
-* **Changes are refused while it is ambiguous.** Anything that edits segments, terms, comments or files stops and lists the running Studios instead of guessing. This is the whole point: writing into the wrong project is the one mistake you cannot see happening.
-* **Say which one you mean** – *"work with the 2026 one"*, or *"use the BRANTS project"* – and editing is enabled again for the rest of the chat. The AI does this with `select_trados_instance`.
-* **The choice follows the project, not the process**, so it survives that Studio being restarted. You do not have to say it again.
-* **Closing one Studio is enough too.** The remaining one becomes unambiguous straight away; nothing needs restarting.
+Each Studio announces itself with its version and the project it has open, so an AI app can tell them apart and say which one it is working in.
 
-If you always want one chat app tied to one Studio, set it once in the app's own MCP configuration instead of saying it each time: add `--instance 2024` (or `2026`, or part of a project name) to the server's `args`, or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE`. A pinned app never asks, and refuses to fall back to a different Studio if the one it wants is not running.
+**Reading is always answered**, and the reply says which Studio and project it came from – so an answer about the wrong project is obvious rather than silent.
 
-> The Connect dialog also warns when a second Studio is running, since there is no way to tell from inside the first one.
+**Changing anything is refused until you say which Studio you mean.** Anything that edits segments, terms, comments or files stops and lists the Studios that are open, instead of picking one. This is the point of the feature: writing into the wrong project is the one mistake you cannot see happening.
+
+**Say which one you want** and editing is enabled again for the rest of the chat:
+
+* *"Work with the 2026 one."*
+* *"Use the BRANTS project."*
+* *"Which Trados instances are running, and which are you using?"* – if you want to see the list first.
+
+The choice follows **the project, not the process**, so it survives that Studio being closed and reopened. You do not have to say it again after a restart. Closing the other Studio works just as well: the remaining one is unambiguous immediately, with nothing to restart.
+
+#### Translating two projects at once
+
+1. Open both Studios, each with its project.
+2. In the first AI app: *"Use the 2024 one"*, then set it going.
+3. In the second AI app: *"Use the 2026 one"*, then set it going.
+
+Each app now edits only its own project and cannot touch the other's document. Both can work at the same time.
+
+One assistant still works in **one** project at a time – this is two conversations running in parallel, not one assistant spanning both.
+
+#### Pinning an app to one Studio permanently
+
+If you always pair the same app with the same Studio, set it once in that app's own MCP configuration instead of saying it each time. Add `--instance` to the server's `args`:
+
+```json
+"args": ["--instance", "2024"]
+```
+
+or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE` to `2024`, `2026`, or part of a project name. A pinned app never asks – and if the Studio it wants is not running, it says so rather than quietly using the other one.
+
+> The Connect dialog warns when a second Studio is running and names its project, since there is no way to tell from inside the first one.
 
 ### Direction-aware termbase writes *(from v18.20.153)*
 
