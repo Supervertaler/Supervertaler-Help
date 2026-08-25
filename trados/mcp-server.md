@@ -23,7 +23,7 @@ With Trados Studio open and a document in the editor, you can ask your AI assist
 * "What does my termbase say for *sluitkracht*?"
 * "Draft translations for the untranslated segments and set them to Draft so I can review them."
 * "We agreed *draagarm* = *support arm* – add it to my termbase."
-* "Work with the 2026 one." (when you have two versions of Trados Studio open – see [Two Studios open at once](#two-studios-open-at-once-from-v18-20-184))
+* "Work with the 2026 one." (when you have two versions of Trados Studio open – see [Two Studios open at once](#two-studios-open-at-once-from-v1820184))
 
 Unlike the [AI-friendly bilingual export](/trados/import-export/) workflow, there is no export/re-import cycle: the AI reads the live document on demand, and changes it makes appear in Studio while you chat.
 
@@ -398,7 +398,7 @@ Good news first: **the list of tools is not baked into it.** The server asks Stu
 * **The AI says it can't reach Trados** – make sure Trados Studio is running; from v18.20.112 the connection starts with Studio itself (on 18.20.99–18.20.111 you additionally needed a document open in the editor, and before that a click on the Supervertaler Assistant panel – updating the plugin removes those steps). The Connect dialog's status lines show whether the connection is up. Tools that read the open document still need one open, and will say so.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
 * **Mistral Vibe CLI shows a permanent "cannot connect" message, but `/mcp` lists the server as enabled** – `/mcp` reports what is *configured*, not what is *connected*, so the two are not in conflict: the banner is right and the server really did fail to start. On Windows the usual cause is the path in `command` being written as a plain string, which Vibe splits with POSIX rules and strips the backslashes from. Put the path in square brackets, or use forward slashes — see step 4 of [Setting it up](#setting-it-up). A second, milder cause is Vibe's 10-second start-up limit expiring while Studio is still busy; raise `startup_timeout_sec`.
-* **The AI refuses to change segments and mentions two instances** – you have both Studio 2024 and Studio 2026 open, and it will not guess which one you mean. Tell it (*"use the 2026 one"*), or close the Studio you are not working in. Reading still works throughout. See [Two Studios open at once](#two-studios-open-at-once-from-v18-20-184).
+* **The AI refuses to change segments and mentions two instances** – you have both Studio 2024 and Studio 2026 open, and it will not guess which one you mean. Tell it (*"use the 2026 one"*), or close the Studio you are not working in. Reading still works throughout. See [Two Studios open at once](#two-studios-open-at-once-from-v1820184).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
 * The bridge writes a diagnostic log to `<your data folder>\trados\runtime\bridge.log`.
 
