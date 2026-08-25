@@ -29,13 +29,13 @@ You need the **Supervertaler for Trados** plugin installed (`v4.20.26` or newer)
 3. The picker dialogue lists every TM you've ticked as Bridge in Workbench, filtered to those whose language pair matches the current project's pair (with loose matching – bare `nl` matches `nl-NL`, `en` matches `en-GB`).
 4. Tick one or more TMs to attach. Click **OK**.
 
-The TM now shows up alongside any SDLTMs you've attached, with its full name (e.g. *Supervertaler TM: BRANTS (URSU-008-BE-EP)*).
+The TM now shows up alongside any SDLTMs you've attached, with its full name (e.g. *Supervertaler TM: Acme (PROJ-001)*).
 
 ## What you get in this release
 
 - **Exact matches (100%)** – pulled into Trados's TM-results pane the same way a regular SDLTM would.
 - **Concordance search** – source-side AND target-side, via the FTS5 index Workbench already maintains. Works in both Trados's built-in Concordance window and the SuperSearch tab.
-- **Multiple TMs attached at once** – the per-hit origin strip identifies which bridged TM produced each match (e.g. *Supervertaler: BRANTS (URSU-008-BE-EP)* vs *Supervertaler: PATENTS*).
+- **Multiple TMs attached at once** – the per-hit origin strip identifies which bridged TM produced each match (e.g. *Supervertaler: Acme (PROJ-001)* vs *Supervertaler: PATENTS*).
 
 ## What's NOT in this release
 

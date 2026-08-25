@@ -112,7 +112,7 @@ Each Studio announces itself with its version and the project it has open, so an
 **Say which one you want** and editing is enabled again for the rest of the chat:
 
 * *"Work with the 2026 one."*
-* *"Use the BRANTS project."*
+* *"Use the Acme project."*
 * *"Which Trados instances are running, and which are you using?"* – if you want to see the list first.
 
 The choice follows **the project, not the process**, so it survives that Studio being closed and reopened. You do not have to say it again after a restart. Closing the other Studio works just as well: the remaining one is unambiguous immediately, with nothing to restart.
@@ -195,7 +195,7 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Delete that junk entry the QA keeps flagging." *(Write-enabled termbases only; the AI confirms before deleting – from v18.20.113)*
 * "Only consult my **active** termbases for this lookup." *(restricts to termbases with Read ticked; otherwise inactive hits are flagged – from v18.20.113)*
 * "Add *commandovoering* = *command and control* to my termbases – with the NATO definition and a usage note." *(direction-aware per termbase, with definition/domain/notes – from v18.20.153)*
-* "Add this pair to the BRANTS termbase only." *(write to named termbases instead of all Write-enabled ones – from v18.20.153)*
+* "Add this pair to the Acme termbase only." *(write to named termbases instead of all Write-enabled ones – from v18.20.153)*
 * "Add this to my **project** termbase only." / "Put that one in my **background** termbase, it's not client-specific." *(role-based targeting via the Project tick – from v18.20.159)*
 * "Extend the usage note on *eenzelfde* with a warning about the split spelling." *(edit an entry's notes, definition or domain in place, without touching the pair – from v18.20.159)*
 

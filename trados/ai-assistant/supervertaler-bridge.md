@@ -89,8 +89,8 @@ Returns a JSON snapshot of the current Trados project state. Authentication via 
 {
   "available": true,
   "project": {
-    "name": "BRANTS-CARG-001",
-    "fileName": "20260331 CARG-003-BE-EP Application as filed.docx",
+    "name": "ACME-PROJ-001",
+    "fileName": "20260101 PROJ-001 Application as filed.docx",
     "sourceLang": "nl-BE",
     "targetLang": "en-US"
   },
