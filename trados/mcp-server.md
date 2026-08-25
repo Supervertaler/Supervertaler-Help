@@ -34,6 +34,8 @@ The server exposes these tools to the AI app:
 | --- | --- |
 | `help` | A curated menu of what you can ask – shown when you say *"what can I do?"* *(v18.20.106)* |
 | `session_report` | How many bytes of tool results this session has sent the AI, per tool, biggest first – so you can see which tools are filling (and re-billing) the conversation *(v18.20.158)* |
+| `list_trados_instances` | Which Trados Studios are running, the project open in each, and which one the AI is talking to – for when you have more than one open *(v18.20.184)* |
+| `select_trados_instance` | Tell the AI which of several running Studios to work with, by Studio version or project name *(v18.20.184)* |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
 | `get_segments` | List segments, with filters (status, contains-text, file) and paging – or fetch exact segments by the grid number(s) you see in Studio (`fromNumber`/`toNumber`) *(grid numbers v18.20.114)* |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
@@ -95,6 +97,20 @@ The server exposes these tools to the AI app:
 * Updates are limited to 40 segments per call; larger jobs are processed in reported batches. *(Lowered from 200 in v18.20.148: bigger batches could outlast the connection timeout, and because the write had already gone through, the AI couldn't tell success from failure.)*
 * Changes land in the open document but are **not saved automatically** – saving stays your decision. From v18.20.115 the AI can run the save for you (`save_document`, same as Ctrl+S), but only when you ask or approve – *"save and run the analysis"* is one instruction, silent saving is not allowed.
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
+
+### Two Studios open at once *(from v18.20.184)*
+
+Studio 2024 and Studio 2026 can run side by side, and each has its own connection. The AI can only work in one at a time, so it is told which Studios are open and asks you when it matters.
+
+* **Questions are always answered**, and the reply says which Studio and project it came from – so an answer about the wrong project is obvious rather than silent.
+* **Changes are refused while it is ambiguous.** Anything that edits segments, terms, comments or files stops and lists the running Studios instead of guessing. This is the whole point: writing into the wrong project is the one mistake you cannot see happening.
+* **Say which one you mean** – *"work with the 2026 one"*, or *"use the BRANTS project"* – and editing is enabled again for the rest of the chat. The AI does this with `select_trados_instance`.
+* **The choice follows the project, not the process**, so it survives that Studio being restarted. You do not have to say it again.
+* **Closing one Studio is enough too.** The remaining one becomes unambiguous straight away; nothing needs restarting.
+
+If you always want one chat app tied to one Studio, set it once in the app's own MCP configuration instead of saying it each time: add `--instance 2024` (or `2026`, or part of a project name) to the server's `args`, or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE`. A pinned app never asks, and refuses to fall back to a different Studio if the one it wants is not running.
+
+> The Connect dialog also warns when a second Studio is running, since there is no way to tell from inside the first one.
 
 ### Direction-aware termbase writes *(from v18.20.153)*
 
@@ -355,6 +371,7 @@ Good news first: **the list of tools is not baked into it.** The server asks Stu
 * **The AI says it can't reach Trados** – make sure Trados Studio is running; from v18.20.112 the connection starts with Studio itself (on 18.20.99–18.20.111 you additionally needed a document open in the editor, and before that a click on the Supervertaler Assistant panel – updating the plugin removes those steps). The Connect dialog's status lines show whether the connection is up. Tools that read the open document still need one open, and will say so.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
 * **Mistral Vibe CLI shows a permanent "cannot connect" message, but `/mcp` lists the server as enabled** – `/mcp` reports what is *configured*, not what is *connected*, so the two are not in conflict: the banner is right and the server really did fail to start. On Windows the usual cause is the path in `command` being written as a plain string, which Vibe splits with POSIX rules and strips the backslashes from. Put the path in square brackets, or use forward slashes — see step 4 of [Setting it up](#setting-it-up). A second, milder cause is Vibe's 10-second start-up limit expiring while Studio is still busy; raise `startup_timeout_sec`.
+* **The AI refuses to change segments and mentions two instances** – you have both Studio 2024 and Studio 2026 open, and it will not guess which one you mean. Tell it (*"use the 2026 one"*), or close the Studio you are not working in. Reading still works throughout. See [Two Studios open at once](#two-studios-open-at-once-from-v18-20-184).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
 * The bridge writes a diagnostic log to `<your data folder>\trados\runtime\bridge.log`.
 
