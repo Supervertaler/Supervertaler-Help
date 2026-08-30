@@ -2,7 +2,7 @@
 title: "Getting Started"
 ---
 
-This walks through a first translation, assuming the add-ins are [installed](installation.md).
+This walks through a first translation, assuming the add-ins are [installed](/memoq/installation/).
 
 ### 1. Set up the translation engine
 
@@ -23,7 +23,7 @@ Press **Test connection**. It translates a short sentence for real, so it exerci
 
 Still in the MT settings resource, go to the **Settings** tab and set **Self-learning MT** to **Supervertaler**.
 
-This is what makes memoQ hand Supervertaler each segment as you confirm it. Without it the engine still translates, but it will not learn from your work. See [Self-learning translation](self-learning.md).
+This is what makes memoQ hand Supervertaler each segment as you confirm it. Without it the engine still translates, but it will not learn from your work. See [Self-learning translation](/memoq/self-learning/).
 
 :::caution
 Changing this takes effect when memoQ next builds a translation engine. Restart memoQ after setting it.
@@ -43,5 +43,5 @@ The effect is most visible on a document with recurring phrasing: settle a term 
 
 ### Next
 
-- [Terminology](terminology.md) — add a glossary, including forbidden terms
-- [Self-learning translation](self-learning.md) — what is remembered, and for how long
+- [Terminology](/memoq/terminology/) — add a glossary, including forbidden terms
+- [Self-learning translation](/memoq/self-learning/) — what is remembered, and for how long

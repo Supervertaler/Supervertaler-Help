@@ -10,9 +10,9 @@ Unlike the Trados plugin, which docks its own panels into the editor, memoQ give
 
 **AI translation.** An LLM machine-translation engine using Anthropic, OpenAI or Google, with your own API key and your own instructions. It works segment by segment as you translate, and in bulk through **Pre-translate**. Inline tags survive the round trip.
 
-**It learns as you work.** Every segment you confirm is remembered, and the most relevant ones are shown to the model when it translates later segments in the same document. Settle on a term once and the rest of the document follows it — no configuration, no retraining, just your own approved choices fed forward. See [Self-learning translation](self-learning.md).
+**It learns as you work.** Every segment you confirm is remembered, and the most relevant ones are shown to the model when it translates later segments in the same document. Settle on a term once and the rest of the document follows it — no configuration, no retraining, just your own approved choices fed forward. See [Self-learning translation](/memoq/self-learning/).
 
-**Your terminology, twice over.** A glossary you point Supervertaler at appears as a memoQ terminology provider — matched terms highlighted in the source, entries listed in Translation results — *and* is sent to the model as required or forbidden terminology. Forbidden terms are enforced, not merely displayed. See [Terminology](terminology.md).
+**Your terminology, twice over.** A glossary you point Supervertaler at appears as a memoQ terminology provider — matched terms highlighted in the source, entries listed in Translation results — *and* is sent to the model as required or forbidden terminology. Forbidden terms are enforced, not merely displayed. See [Terminology](/memoq/terminology/).
 
 ### What it does not do
 
@@ -22,6 +22,6 @@ There is no chat panel, no prompt library window and no document-wide search ins
 
 ### Where to start
 
-- [Installation](installation.md) — putting the add-ins in place
-- [Getting started](getting-started.md) — a first translation
-- [Terminology](terminology.md) — using a glossary
+- [Installation](/memoq/installation/) — putting the add-ins in place
+- [Getting started](/memoq/getting-started/) — a first translation
+- [Terminology](/memoq/terminology/) — using a glossary

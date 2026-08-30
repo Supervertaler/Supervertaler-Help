@@ -41,4 +41,4 @@ That asymmetry is deliberate, and it comes from a real failure. A patent term ba
 
 ### Format
 
-See [Glossary format](glossary-format.md).
+See [Glossary format](/memoq/glossary-format/).

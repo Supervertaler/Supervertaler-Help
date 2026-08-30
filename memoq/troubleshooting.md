@@ -6,7 +6,7 @@ title: "Troubleshooting"
 
 Check `Supervertaler.MemoQ.dll` is in memoQ's `Addins` folder, and that you answered **Yes** to the unsigned-plugin prompt on startup — its default button is *No*.
 
-If memoQ was recently upgraded to a new major version, the add-ins need copying into the new program folder. See [Installation](installation.md).
+If memoQ was recently upgraded to a new major version, the add-ins need copying into the new program folder. See [Installation](/memoq/installation/).
 
 ### It translates, but never learns
 

@@ -47,4 +47,4 @@ If Supervertaler disappears after a memoQ update, this is almost always why.
 
 Close memoQ, delete the two DLLs from the `Addins` folder, and restart.
 
-To remove what Supervertaler has stored on your computer as well, use **Forget stored context** in the plugin's options dialog before uninstalling — see [Self-learning translation](self-learning.md#what-is-stored-and-where).
+To remove what Supervertaler has stored on your computer as well, use **Forget stored context** in the plugin's options dialog before uninstalling — see [Self-learning translation](/memoq/self-learning/#what-is-stored-and-where).
