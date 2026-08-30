@@ -112,6 +112,17 @@ const placeholder = labels?.['search.label'] ?? 'Search';
 </sv-search>
 
 <style is:global>
+  /* Product marks in search badges, group headings and the scope pill.
+     Sized to the surrounding text and nudged onto the baseline so an image
+     sits where the emoji it replaces used to. */
+  .search-product-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    object-fit: contain;
+  }
+
   /* ── sv-search (custom element) — must flex-grow to claim the
         empty header space, otherwise the trigger button inside has
         room to grow but no container to grow into.
@@ -349,10 +360,18 @@ const placeholder = labels?.['search.label'] ?? 'Search';
     text-transform: none;
     white-space: nowrap;
   }
+  /* One rule per product id in src/products.ts. Nothing enforces this pairing,
+     so a new product without a rule here renders an uncoloured badge and looks
+     unlabelled beside the others. */
   .search-result-badge.trados {
     background: rgba(76, 162, 76, 0.12);
     border-color: rgba(76, 162, 76, 0.35);
     color: #6fd06f;
+  }
+  .search-result-badge.memoq {
+    background: rgba(240, 130, 40, 0.12);
+    border-color: rgba(240, 130, 40, 0.35);
+    color: #f0a45c;
   }
   .search-result-badge.workbench {
     background: rgba(96, 144, 232, 0.12);
@@ -374,6 +393,10 @@ const placeholder = labels?.['search.label'] ?? 'Search';
 
 <script>
   import { PRODUCTS, productFor, productByLabel } from '../products';
+
+  // Product labels now carry markup (an <img> for products with their own icon),
+  // so anything rendering them uses innerHTML. The escapeHtml further down in
+  // this script is a hoisted function declaration, so it is usable here.
   /**
    * Wire up the custom search element.
    *
@@ -489,11 +512,21 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       this.onInput();
     }
 
+    /**
+     * A product's mark as HTML: its own icon where one exists, the emoji
+     * otherwise. Group labels in the sidebar cannot use this — Starlight renders
+     * those as plain text — which is why every product still carries an emoji.
+     */
+    private markFor(product: { emoji: string; icon?: string; label: string }): string {
+      if (!product.icon) return product.emoji;
+      return `<img class="search-product-icon" src="${product.icon}" alt="" width="16" height="16" />`;
+    }
+
     private updateScopeUi() {
       const scoped = productByLabel(this.currentScope);
 
       if (scoped) {
-        this.scopeName.textContent = `${scoped.emoji} ${scoped.fullName}`;
+        this.scopeName.innerHTML = `${this.markFor(scoped)} ${escapeHtml(scoped.fullName)}`;
         this.scopeClear.hidden = false;
       } else {
         this.scopeName.textContent = 'All docs';
@@ -589,7 +622,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
         } else {
           container.appendChild(
             this.renderGroup(
-              `${scoped.product.emoji} ${scoped.product.label}`,
+              `${this.markFor(scoped.product)} ${escapeHtml(scoped.product.label)}`,
               scoped.hits,
               scoped.product.id,
               true
@@ -614,7 +647,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
 
         for (const b of lead) {
           order.push({
-            label: `${b.product.emoji} ${b.product.label}`,
+            label: `${this.markFor(b.product)} ${escapeHtml(b.product.label)}`,
             hits: b.hits,
             kind: b.product.id,
             openByDefault: true,
@@ -624,8 +657,8 @@ const placeholder = labels?.['search.label'] ?? 'Search';
         for (const b of rest) {
           order.push({
             label: detected
-              ? `Also from ${b.product.emoji} ${b.product.label}`
-              : `${b.product.emoji} ${b.product.label}`,
+              ? `Also from ${this.markFor(b.product)} ${escapeHtml(b.product.label)}`
+              : `${this.markFor(b.product)} ${escapeHtml(b.product.label)}`,
             hits: b.hits,
             kind: b.product.id,
             openByDefault: !detected,
@@ -688,7 +721,9 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       const excerpt = hit.excerpt || '';
 
       const badgeProduct = PRODUCTS.find((p) => p.id === kind);
-      const badgeText = badgeProduct ? `${badgeProduct.emoji} ${badgeProduct.label}` : '';
+      const badgeText = badgeProduct
+        ? `${this.markFor(badgeProduct)} ${escapeHtml(badgeProduct.label)}`
+        : '';
 
       a.innerHTML = `
         <p class="search-result-title">

@@ -71,22 +71,14 @@
 /workbench/termbases/term-picker/   /workbench/termbases/termpicker/   301
 /trados/termlens/term-picker/       /trados/termlens/termpicker/       301
 
-# ─── 2026-08-24: docs root goes straight to the Trados plugin ─────
-# The landing page was a two-product chooser ("pick the one you use
-# below"), mirroring the old supervertaler.com homepage. The site is
-# now single-product: Supervertaler for Trados is the funded, actively
-# developed one, and Workbench is dormant. A chooser at the root asks
-# every arriving reader to make a decision that no longer exists.
+# ─── 2026-08-24: docs root went straight to the Trados plugin ─────
+# Removed 2026-08-30, on exactly the condition the original note anticipated:
 #
-# Cloudflare applies _redirects before serving a matching asset
-# ("Redirects are always followed, regardless of whether or not an
-# asset matches the incoming request"), so this fires even though
-# index.mdx still builds a page at /. That page is deliberately kept
-# as a fallback: if this rule is ever removed, / renders a landing
-# page instead of 404ing.
+#   "302, not 301: ... this is a strategic direction that could change (e.g.
+#    if a memoQ plugin happens and a product chooser is wanted again)."
 #
-# 302, not 301: a permanent redirect gets cached hard by browsers, and
-# this is a strategic direction that could change (e.g. if a memoQ
-# plugin happens and a product chooser is wanted again). A 302 can be
-# taken back; a 301 sticks in caches we don't control.
-/    /trados/    302
+# A memoQ plugin happened. With two actively developed products the root is a
+# real choice again, so / serves the landing page (index.mdx) and its cards.
+#
+# The 302 is what makes this reversible: had it been a 301 it would still be
+# sitting in readers' browser caches.
