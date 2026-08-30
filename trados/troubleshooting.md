@@ -83,23 +83,28 @@ Only needed if the steps above do not work. Close Studio, then paste each of the
 
 Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026.
 
+Each path is one of the three choices the Trados Plugin Installer offers under "Please select the folder where the plugin will be installed", so if you remember which you picked, start with that one – but check all three, because an earlier install may have used a different one.
+
 **Trados Studio 2024**
 
 ```
-C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\18\Plugins\
-C:\Users\<username>\AppData\Local\Trados\Trados Studio\18\Plugins\
-C:\ProgramData\Trados\Trados Studio\18\Plugins\
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\18\Plugins\   <- "All your domain computers" (the default)
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\18\Plugins\     <- "This computer for me only"
+C:\ProgramData\Trados\Trados Studio\18\Plugins\                        <- "This computer for all users"
 ```
 
 **Trados Studio 2026**
 
 ```
-C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\19\Plugins\
-C:\Users\<username>\AppData\Local\Trados\Trados Studio\19\Plugins\
-C:\ProgramData\Trados\Trados Studio\19\Plugins\
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\19\Plugins\   <- "All your domain computers" (the default)
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\19\Plugins\     <- "This computer for me only"
+C:\ProgramData\Trados\Trados Studio\19\Plugins\                        <- "This computer for all users"
 ```
 
-Inside each one, check both the `Packages` and the `Unpacked` subfolder.
+Inside each one there are two folders that matter, and **both** need clearing:
+
+- `Packages` holds the installed `.sdlplugin` file.
+- `Unpacked` holds the files Studio actually loads, extracted from it. This is the one people miss, and it is the one that blocks a reinstall: Studio will not re-extract over an `Unpacked` folder that is already there.
 
 :::note
 **Two things that catch people out.** `AppData` is hidden by default, so you cannot browse to it – paste the whole path into the File Explorer address bar instead and press Enter.
