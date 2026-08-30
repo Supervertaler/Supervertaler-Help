@@ -18,7 +18,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Supervertaler Docs',
-      description: 'Help and documentation for Supervertaler for Trados — AI translation, terminology, search and a translation knowledge base inside Trados Studio.',
+      description: 'Help and documentation for Supervertaler — AI translation, terminology and search inside Trados Studio and memoQ.',
 
       // Component overrides — see ./src/components/ for the customisations.
       // Banner:  "no longer actively developed" notice on /workbench/*.
@@ -47,7 +47,7 @@ export default defineConfig({
 
       // Sidebar structure imported from ./src/generated/sidebar.js, which
       // is generated from SUMMARY.md by _migrate/generate_sidebar.py.
-      // Two top-level groups (🧩 Trados / 🖥️ Workbench), each with the
+      // One top-level group per product (see src/products.ts), each with the
       // original GitBook section grouping (Get Started, Features,
       // Settings, Reference, etc.) and human-readable labels.
       //
@@ -62,6 +62,11 @@ export default defineConfig({
           icon: 'github',
           label: 'GitHub: Supervertaler for Trados',
           href: 'https://github.com/Supervertaler/Supervertaler-for-Trados',
+        },
+        {
+          icon: 'github',
+          label: 'GitHub: Supervertaler for memoQ',
+          href: 'https://github.com/Supervertaler/Supervertaler-for-memoQ',
         },
         {
           icon: 'external',
@@ -116,6 +121,12 @@ export default defineConfig({
               description:
                 'Docs for the Trados Studio plugin only',
               paths: ['trados/**'],
+            },
+            {
+              label: 'Supervertaler for memoQ',
+              description:
+                'Docs for the memoQ plugin only',
+              paths: ['memoq/**'],
             },
             {
               label: 'Supervertaler Workbench',

@@ -15,7 +15,7 @@
  * section).
  *
  * Detection key: the URL path prefix.  /trados/* → Trados scope;
- * /workbench/* → Workbench scope; anything else → both visible.
+ * any other product prefix likewise; anything else → all trees visible.
  *
  * The sidebar group labels are tagged with the product name (configured
  * in astro.config.mjs), so the filter is a simple "does this top-level
@@ -24,25 +24,21 @@
  */
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Sidebar.astro';
+import { productFor } from '../products';
 
 const route = Astro.locals.starlightRoute;
 const id: string = route?.entry?.id ?? '';
 
-let currentProduct: 'Trados' | 'Workbench' | null = null;
-if (id === 'trados' || id.startsWith('trados/')) {
-  currentProduct = 'Trados';
-} else if (id === 'workbench' || id.startsWith('workbench/')) {
-  currentProduct = 'Workbench';
-}
+const currentProduct = productFor(id);
 
 // Mutate the sidebar in-place on Astro.locals so the Default sidebar
 // component reads the filtered version.  This is safe because each
 // request gets its own `Astro.locals` object.
 if (currentProduct && route?.sidebar) {
-  const product = currentProduct;
+  const name = currentProduct.label;
   route.sidebar = route.sidebar.filter((entry: any) => {
     const label: string = entry?.label ?? '';
-    return label.includes(product);
+    return label.includes(name);
   });
 }
 ---

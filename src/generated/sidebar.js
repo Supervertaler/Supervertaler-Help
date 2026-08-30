@@ -145,18 +145,6 @@ const sidebar = [
                 "link": "/trados/ai-assistant/super-memory/quick-add/"
               },
               {
-                "label": "Process Inbox",
-                "link": "/trados/ai-assistant/super-memory/process-inbox/"
-              },
-              {
-                "label": "Health Check",
-                "link": "/trados/ai-assistant/super-memory/health-check/"
-              },
-              {
-                "label": "Distill",
-                "link": "/trados/ai-assistant/super-memory/distill/"
-              },
-              {
                 "label": "Active Prompt",
                 "link": "/trados/ai-assistant/super-memory/active-prompt/"
               },
@@ -329,6 +317,63 @@ const sidebar = [
           {
             "label": "Privacy Policy",
             "link": "/trados/privacy/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "🟠 Supervertaler for memoQ",
+    "collapsed": false,
+    "items": [
+      {
+        "label": "Get Started (memoQ)",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Supervertaler for memoQ",
+            "link": "/memoq/"
+          },
+          {
+            "label": "Installation",
+            "link": "/memoq/installation/"
+          },
+          {
+            "label": "Getting Started",
+            "link": "/memoq/getting-started/"
+          }
+        ]
+      },
+      {
+        "label": "Features (memoQ)",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Self-learning Translation",
+            "link": "/memoq/self-learning/"
+          },
+          {
+            "label": "Terminology",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/memoq/terminology/"
+              },
+              {
+                "label": "Glossary Format",
+                "link": "/memoq/glossary-format/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Reference (memoQ)",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "Troubleshooting",
+            "link": "/memoq/troubleshooting/"
           }
         ]
       }

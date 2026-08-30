@@ -2,33 +2,32 @@
 /**
  * Custom Banner override for Starlight.
  *
- * Shows a dormancy notice across /workbench/*, keyed on the URL path -
+ * Shows a product's status notice across its whole tree, keyed on the URL path -
  * the same pattern as Sidebar.astro (nav tree), Head.astro (search scope)
  * and Footer.astro (llms.txt subset). One file, rather than adding banner
  * frontmatter to 94 pages and having to remember it on every new one.
  *
- * Any page outside /workbench/* falls through to the default component, so
- * a per-page `banner:` in frontmatter still works everywhere else. A
- * Workbench page that sets its own banner is deliberately overridden: the
- * dormancy notice is the more important of the two.
+ * A page in a product with no notice falls through to the default component, so
+ * a per-page `banner:` in frontmatter still works everywhere else. A page
+ * that sets its own banner inside a product that has one is deliberately
+ * overridden: the status notice is the more important of the two.
+ *
+ * The notices themselves live in ../products.ts.
  *
  * Deliberately amber rather than Starlight's accent colour. This is a
  * status notice, not an announcement, and it should not read as a promo.
  */
 import Default from '@astrojs/starlight/components/Banner.astro';
+import { productFor } from '../products';
 
 const route = Astro.locals.starlightRoute;
 const id: string = route?.entry?.id ?? '';
-const isWorkbench = id === 'workbench' || id.startsWith('workbench/');
+const banner = productFor(id)?.banner ?? null;
 ---
 
 {
-  isWorkbench ? (
-    <div class="sv-dormant-banner">
-      <strong>Supervertaler Workbench is no longer actively developed.</strong> These pages stay
-      online and still describe the last release. Active development is on{' '}
-      <a href="/trados/">Supervertaler for Trados</a>.
-    </div>
+  banner ? (
+    <div class="sv-dormant-banner" set:html={banner} />
   ) : (
     <Default />
   )

@@ -84,6 +84,22 @@
 * [Support & Community](trados/support.md)
 * [Privacy Policy](trados/privacy.md)
 
+## 🟠 Get Started (memoQ)
+
+* [Supervertaler for memoQ](memoq/README.md)
+* [Installation (memoQ)](memoq/installation.md)
+* [Getting Started (memoQ)](memoq/getting-started.md)
+
+## 🟠 Features (memoQ)
+
+* [Self-learning Translation](memoq/self-learning.md)
+* [Terminology](memoq/terminology.md)
+  * [Glossary Format](memoq/glossary-format.md)
+
+## 🟠 Reference (memoQ)
+
+* [Troubleshooting (memoQ)](memoq/troubleshooting.md)
+
 ## 🖥️ Get Started
 
 * [Supervertaler Workbench](workbench/README.md)

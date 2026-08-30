@@ -373,6 +373,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
 </style>
 
 <script>
+  import { PRODUCTS, productFor, productByLabel } from '../products';
   /**
    * Wire up the custom search element.
    *
@@ -396,7 +397,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
     private scopeClear!: HTMLButtonElement;
     private pagefind: any = null;
     private pagefindLoading: Promise<any> | null = null;
-    private currentScope: 'Trados' | 'Workbench' | null = null;
+    private currentScope: string | null = null;
     private activeIndex: number = -1;
     private searchToken: number = 0;
 
@@ -460,11 +461,8 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       return this.pagefindLoading;
     }
 
-    private detectScopeFromUrl(): 'Trados' | 'Workbench' | null {
-      const path = window.location.pathname.toLowerCase();
-      if (path.startsWith('/trados/') || path === '/trados') return 'Trados';
-      if (path.startsWith('/workbench/') || path === '/workbench') return 'Workbench';
-      return null;
+    private detectScopeFromUrl(): string | null {
+      return productFor(window.location.pathname.toLowerCase())?.label ?? null;
     }
 
     private open() {
@@ -492,11 +490,10 @@ const placeholder = labels?.['search.label'] ?? 'Search';
     }
 
     private updateScopeUi() {
-      if (this.currentScope === 'Trados') {
-        this.scopeName.textContent = '🧩 Supervertaler for Trados';
-        this.scopeClear.hidden = false;
-      } else if (this.currentScope === 'Workbench') {
-        this.scopeName.textContent = '🖥️ Supervertaler Workbench';
+      const scoped = productByLabel(this.currentScope);
+
+      if (scoped) {
+        this.scopeName.textContent = `${scoped.emoji} ${scoped.fullName}`;
         this.scopeClear.hidden = false;
       } else {
         this.scopeName.textContent = 'All docs';
@@ -565,56 +562,74 @@ const placeholder = labels?.['search.label'] ?? 'Search';
         return;
       }
 
-      const productOf = (h: any): 'Trados' | 'Workbench' | null => {
+      const productOf = (h: any): string | null => {
         const v = h.filters?.product;
-        if (Array.isArray(v) ? v.includes('Trados') : v === 'Trados') return 'Trados';
-        if (Array.isArray(v) ? v.includes('Workbench') : v === 'Workbench') return 'Workbench';
-        return null;
+        const match = PRODUCTS.find((p) =>
+          Array.isArray(v) ? v.includes(p.label) : v === p.label
+        );
+        return match?.label ?? null;
       };
 
-      const trados = hits.filter((h) => productOf(h) === 'Trados');
-      const workbench = hits.filter((h) => productOf(h) === 'Workbench');
+      // One bucket per product, in the order they are declared, plus whatever
+      // belongs to no product (the landing page and similar).
+      const byProduct = PRODUCTS.map((p) => ({
+        product: p,
+        hits: hits.filter((h) => productOf(h) === p.label),
+      }));
       const other = hits.filter((h) => productOf(h) === null);
 
       const container = document.createElement('div');
 
-      if (this.currentScope === 'Trados') {
-        if (trados.length === 0) {
+      if (this.currentScope) {
+        const scoped = byProduct.find((b) => b.product.label === this.currentScope);
+
+        if (!scoped || scoped.hits.length === 0) {
           container.innerHTML =
-            '<p class="search-no-results">No Trados results. Try clearing scope to search all docs.</p>';
-        } else {
-          container.appendChild(this.renderGroup('🧩 Trados', trados, 'trados', true));
-        }
-      } else if (this.currentScope === 'Workbench') {
-        if (workbench.length === 0) {
-          container.innerHTML =
-            '<p class="search-no-results">No Workbench results. Try clearing scope to search all docs.</p>';
+            `<p class="search-no-results">No ${this.currentScope} results. Try clearing scope to search all docs.</p>`;
         } else {
           container.appendChild(
-            this.renderGroup('🖥️ Workbench', workbench, 'workbench', true)
+            this.renderGroup(
+              `${scoped.product.emoji} ${scoped.product.label}`,
+              scoped.hits,
+              scoped.product.id,
+              true
+            )
           );
         }
       } else {
-        // No scope: prioritise the detected current-section's product first.
+        // No scope: lead with the product whose section the reader is in, then
+        // the rest as "Also from ...", collapsed. On a page belonging to no
+        // product there is nothing to lead with, so everything opens.
         const detected = this.detectScopeFromUrl();
+
         const order: Array<{
           label: string;
           hits: any[];
-          kind: 'trados' | 'workbench' | 'other';
+          kind: string;
           openByDefault: boolean;
         }> = [];
 
-        if (detected === 'Trados') {
-          if (trados.length) order.push({ label: '🧩 Trados', hits: trados, kind: 'trados', openByDefault: true });
-          if (workbench.length) order.push({ label: 'Also from 🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: false });
-        } else if (detected === 'Workbench') {
-          if (workbench.length) order.push({ label: '🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: true });
-          if (trados.length) order.push({ label: 'Also from 🧩 Trados', hits: trados, kind: 'trados', openByDefault: false });
-        } else {
-          // No current section either (e.g. on the landing page) — show both
-          // products fully expanded so the user sees everything.
-          if (trados.length) order.push({ label: '🧩 Trados', hits: trados, kind: 'trados', openByDefault: true });
-          if (workbench.length) order.push({ label: '🖥️ Workbench', hits: workbench, kind: 'workbench', openByDefault: true });
+        const lead = byProduct.filter((b) => b.product.label === detected && b.hits.length);
+        const rest = byProduct.filter((b) => b.product.label !== detected && b.hits.length);
+
+        for (const b of lead) {
+          order.push({
+            label: `${b.product.emoji} ${b.product.label}`,
+            hits: b.hits,
+            kind: b.product.id,
+            openByDefault: true,
+          });
+        }
+
+        for (const b of rest) {
+          order.push({
+            label: detected
+              ? `Also from ${b.product.emoji} ${b.product.label}`
+              : `${b.product.emoji} ${b.product.label}`,
+            hits: b.hits,
+            kind: b.product.id,
+            openByDefault: !detected,
+          });
         }
 
         if (other.length) {
@@ -633,7 +648,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
     private renderGroup(
       label: string,
       hits: any[],
-      kind: 'trados' | 'workbench' | 'other',
+      kind: string,
       openByDefault: boolean
     ): HTMLElement {
       const wrap = document.createElement('section');
@@ -664,7 +679,7 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       return wrap;
     }
 
-    private renderResult(hit: any, kind: 'trados' | 'workbench' | 'other'): HTMLElement {
+    private renderResult(hit: any, kind: string): HTMLElement {
       const a = document.createElement('a');
       a.href = hit.url || '#';
       a.className = 'search-result';
@@ -672,7 +687,8 @@ const placeholder = labels?.['search.label'] ?? 'Search';
       const title = (hit.meta?.title || hit.url || 'Untitled').trim();
       const excerpt = hit.excerpt || '';
 
-      const badgeText = kind === 'trados' ? '🧩 Trados' : kind === 'workbench' ? '🖥️ Workbench' : '';
+      const badgeProduct = PRODUCTS.find((p) => p.id === kind);
+      const badgeText = badgeProduct ? `${badgeProduct.emoji} ${badgeProduct.label}` : '';
 
       a.innerHTML = `
         <p class="search-result-title">

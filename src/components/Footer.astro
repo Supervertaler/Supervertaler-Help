@@ -17,21 +17,19 @@
  * plugin configured in astro.config.mjs.
  */
 import Default from '@astrojs/starlight/components/Footer.astro';
+import { PRODUCTS, productFor } from '../products';
 
 const route = Astro.locals.starlightRoute;
 const id: string = route?.entry?.id ?? '';
 
-const TRADOS = { href: '/_llms-txt/supervertaler-for-trados.txt', label: 'Trados only' };
-const WORKBENCH = { href: '/_llms-txt/supervertaler-workbench.txt', label: 'Workbench only' };
+const current = productFor(id);
 
-let subsets: Array<typeof TRADOS>;
-if (id === 'trados' || id.startsWith('trados/')) {
-  subsets = [TRADOS];
-} else if (id === 'workbench' || id.startsWith('workbench/')) {
-  subsets = [WORKBENCH];
-} else {
-  subsets = [TRADOS, WORKBENCH];
-}
+// On a product page, only that product's subset. On the landing page, all of
+// them — that is the one place a product chooser belongs.
+const subsets = (current ? [current] : PRODUCTS).map((p) => ({
+  href: p.llmsSubset,
+  label: `${p.label} only`,
+}));
 ---
 
 <Default><slot /></Default>

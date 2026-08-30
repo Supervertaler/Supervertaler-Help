@@ -4,8 +4,7 @@
  *
  * Adds a `<meta data-pagefind-filter="product:...">` tag on every page based
  * on the URL path, so the Pagefind search index can scope and group results
- * by which product the page belongs to (Supervertaler for Trados vs
- * Supervertaler Workbench).
+ * by which product the page belongs to (see ../products.ts for the list).
  *
  * The custom Search component (src/components/Search.astro) reads this
  * filter via the Pagefind JS API to:
@@ -18,16 +17,12 @@
  */
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Head.astro';
+import { productFor } from '../products';
 
 const route = Astro.locals.starlightRoute;
 const id = route?.entry?.id ?? '';
 
-let product: 'Trados' | 'Workbench' | null = null;
-if (id === 'trados' || id.startsWith('trados/')) {
-  product = 'Trados';
-} else if (id === 'workbench' || id.startsWith('workbench/')) {
-  product = 'Workbench';
-}
+const product = productFor(id)?.label ?? null;
 ---
 
 <Default {...Astro.props}><slot /></Default>
