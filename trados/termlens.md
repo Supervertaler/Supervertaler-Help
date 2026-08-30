@@ -95,9 +95,9 @@ The badge on each term chip shows exactly which key combination to use. See [Key
 Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** or **TermPicker** to insert them.
 :::
 
-#### TermLens popup (Ctrl tap)
+#### TermLens popup (Alt+L)
 
-Tap **Ctrl** (press and release without any other key) to open the [**TermLens popup**](/trados/termlens/termlens-popup/) – a borderless floating version of this panel for the active segment. Designed for keyboard-only term selection on small screens where keeping the docked panel always-visible costs too much vertical space. Tap **Ctrl** again to close. Inside, **Right / Down / Tab** cycle the highlighted match, **Enter** inserts and closes, **Escape** dismisses without inserting.
+Press **Alt+L** to open the [**TermLens popup**](/trados/termlens/termlens-popup/) – a borderless floating version of this panel for the active segment. Designed for keyboard-only term selection on small screens where keeping the docked panel always-visible costs too much vertical space. Press **Alt+L** again to close. Inside, **Right / Down / Tab** cycle the highlighted match, **Enter** inserts and closes, **Escape** dismisses without inserting.
 
 #### TermPicker (Alt+P)
 

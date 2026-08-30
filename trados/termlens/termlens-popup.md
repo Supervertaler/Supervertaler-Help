@@ -9,19 +9,19 @@ The **TermLens popup** is a borderless floating version of the docked TermLens p
 ### When to use it
 
 * **Small screens / laptops** – keeping the docked TermLens panel always-visible can cost too much vertical space, especially for longer source sentences. The popup gives you the same view on demand and disappears when you're done.
-* **Pure-keyboard workflows** – Ctrl-tap, cycle, Enter, back to typing. No mouse, no menu hunting.
+* **Pure-keyboard workflows** – Alt+L, cycle, Enter, back to typing. No mouse, no menu hunting.
 
 ### Opening and closing
 
 | Key                     | Action                                           |
 | ----------------------- | ------------------------------------------------ |
-| **Ctrl** (tap)          | Toggle the popup (open if closed, close if open) |
+| **Alt+L**               | Toggle the popup (open if closed, close if open) |
 | **Escape**              | Close without inserting                          |
 | Click outside the popup | Close without inserting                          |
 
-The popup has no second default shortcut – the Ctrl-tap is its trigger. (Earlier versions listed **Ctrl+Alt+G** as an alternative; that key now belongs to [AutoTagger](/trados/autotagger/). You can assign your own key to the popup in **File → Options → Keyboard Shortcuts** if you'd like one.)
+You can change the key in **File → Options → Keyboard Shortcuts**. (Earlier versions listed **Ctrl+Alt+G**; that key now belongs to [AutoTagger](/trados/autotagger/).)
 
-A "Ctrl tap" is a press-and-release of the Ctrl key on its own – no other key in between, and held for less than 400 ms. The same memoQ-style trigger that older versions of Supervertaler used to open TermPicker.
+**Was a Ctrl tap until this version.** Pressing and releasing Ctrl on its own used to open the popup – a quick gesture, but not one Studio could tell apart from any other program's Ctrl-modified shortcut once something else had consumed the middle key. The popup opened by itself for anyone running a keyboard tool, a text expander or voice commands alongside Studio. Alt+L is unambiguous. If you preferred the tap, note that Studio remembers per-user shortcuts, so an existing installation keeps whatever you already had bound.
 
 ### Cycling between matches
 
@@ -59,7 +59,7 @@ The popup uses the same chip rendering, colour scheme, and metadata indicators a
 
 Both show the same matches for the active segment. Pick whichever fits your style:
 
-|          | TermLens popup (Ctrl tap)                              | [TermPicker](/trados/termlens/termpicker/) (Alt+P, or docked)              |
+|          | TermLens popup (Alt+L)                                 | [TermPicker](/trados/termlens/termpicker/) (Alt+P, or docked)              |
 | -------- | ------------------------------------------------------ | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                    | Many matches that benefit from sorting / typing-to-jump |

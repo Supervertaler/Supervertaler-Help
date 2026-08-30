@@ -46,7 +46,7 @@ AutoTagger's AI calls are logged under their own **"AutoTagger"** task in [Token
 ## Notes
 
 - **v1 is single-segment.** A batch mode may follow.
-- **Shortcut:** Ctrl+Alt+G triggers AutoTagger. The floating TermLens popup keeps its **Ctrl-tap** trigger; you can reassign a key to it in Trados' keyboard settings if you like.
+- **Shortcut:** Ctrl+Alt+G triggers AutoTagger. The floating TermLens popup opens with **Alt+L**; you can reassign it in Trados' keyboard settings if you like.
 - AutoTagger mirrors the [AutoTagger feature in Supervertaler Workbench](/workbench/ai-translation/autotagger/).
 
 ---
