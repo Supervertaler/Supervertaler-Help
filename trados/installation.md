@@ -35,6 +35,8 @@ App Store updates go through RWS review, so a brand-new fix can take a day or tw
 
 The installer offers three options for where to place the plugin. Each option stores the plugin in a different Windows folder, which determines who can use it and whether it follows you to other computers.
 
+The paths below are for **Trados Studio 2024**. For **Studio 2026** every path is identical except that `\18\` becomes `\19\`.
+
 **"All your domain computers"** (default) : Installs to: `C:\Users\<user>\AppData\Roaming\Trados\Trados Studio\18\Plugins\Packages\` : The Windows **Roaming** profile folder. In environments that sync the Roaming profile across machines – classic Active Directory roaming profiles, FSLogix profile containers, and similar setups – the plugin follows your Windows account from one PC to another. (OneDrive Known Folder Move does **not** sync `AppData\Roaming` by default, so OneDrive on its own is not a roaming mechanism.) On a single-PC personal install without any profile-sync setup, the plugin simply stays on the machine – functionally similar to "This computer for me only", though the folder is still `Roaming` rather than `Local`, which can matter if the machine later joins a profile-sync environment.
 
 **"This computer for me only"** : Installs to: `C:\Users\<user>\AppData\Local\Trados\Trados Studio\18\Plugins\Packages\` : The Windows **Local** profile folder. The plugin stays on this specific machine and is only available to your Windows user account. If another person logs into the same PC with a different Windows account, they will not have the plugin.
@@ -139,11 +141,31 @@ From **v4.19.24** onwards the in-plugin updater is install-scope aware – it wr
 
 If Trados still loads an older version of the plugin after installing a new one, an old copy may be lingering in a different installation location. Check all three plugin folders and remove any old `Supervertaler for Trados.sdlplugin` (in `Packages`) and `Supervertaler.Trados` folder (in `Unpacked`):
 
-| Folder    | Path                                                       |
-| --------- | ---------------------------------------------------------- |
-| Roaming   | `%AppData%\Trados\Trados Studio\18\Plugins\Packages\`      |
-| Local     | `%LocalAppData%\Trados\Trados Studio\18\Plugins\Packages\` |
-| All users | `%ProgramData%\Trados\Trados Studio\18\Plugins\Packages\`  |
+Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026.
+
+**Trados Studio 2024**
+
+```
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\18\Plugins\
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\18\Plugins\
+C:\ProgramData\Trados\Trados Studio\18\Plugins\
+```
+
+**Trados Studio 2026**
+
+```
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\19\Plugins\
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\19\Plugins\
+C:\ProgramData\Trados\Trados Studio\19\Plugins\
+```
+
+Inside each one, check both the `Packages` and the `Unpacked` subfolder.
+
+:::note
+**Two things that catch people out.** `AppData` is hidden by default, so you cannot browse to it – paste the whole path into the File Explorer address bar instead and press Enter.
+
+You may also see these written as `%AppData%` and `%LocalAppData%`. Those are just Windows shortcuts for `C:\Users\<username>\AppData\Roaming` and `C:\Users\<username>\AppData\Local`, and you can paste them into the address bar in place of the first part of the path if you prefer – they save typing your user name.
+:::
 
 :::note
 **Quick way to check:** paste each path into the Windows Run dialogue (`Win+R`) or File Explorer address bar. If the folder exists and contains an old `Supervertaler for Trados.sdlplugin`, delete it. Also check for an `Unpacked\Supervertaler for Trados` folder at the same level and delete it if present.

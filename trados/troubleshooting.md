@@ -23,6 +23,83 @@ After installing or updating the plugin, always restart Trados Studio completely
 
 ---
 
+## The installer finishes, but the plugin never appears
+
+**Symptoms:** You install from the App Store, the Trados Plugin Installer runs through every step and reports success, and then Supervertaler is not in the **View** menu and not in **Plugin Management**. Reinstalling does exactly the same thing. Often the plugin was working before and disappeared on its own.
+
+This is the most common installation problem, and it has one cause far more often than any other.
+
+### First: was Trados Studio really closed?
+
+**The installer fails silently if Studio is running.** Not with an error – it completes normally and reports success, having changed nothing that matters.
+
+Each install location holds the plugin twice: the package, and an **unpacked** folder that Studio loads from and holds open the whole time it is running. An installer that cannot replace the unpacked folder leaves the old one in place, and **Studio will not re-extract into an unpacked folder that already exists**. The result is a successful install that changes nothing – even with the cleanup checkbox ticked, because that cleanup cannot delete files that are in use either.
+
+So:
+
+1. Close Trados Studio – **every** window, not just your project.
+2. Open Task Manager (`Ctrl+Shift+Esc`), look under **Details** for **`SDLTradosStudio.exe`**, and end it if it is still there. Studio can take a few seconds to exit, and can occasionally linger after its windows have closed.
+3. Run the installer again, leaving **"Remove this plugin from all installation folders"** ticked.
+4. Start Studio.
+
+That is the whole fix in most cases.
+
+### Second: is your Studio version greyed out in the installer?
+
+On the installer's first screen, the list of installed Studio versions greys out any version the plugin does not support:
+
+> Studio versions that are not compatible with the plugin will be grayed out.
+
+If **your** Studio version is greyed out and cannot be ticked, you have the wrong build, or a Studio version outside the range this build declares. Check that you downloaded the build matching your Studio – see [Trados Studio 2026 & .ttb](/trados/studio-2026/) – and if it still greys out a supported version, email support@supervertaler.com with the version number from **Help → About**. That is a fault at our end, not yours.
+
+### Third: is it installed but switched off?
+
+Open **Help → Plugin Management** and look for Supervertaler in the list. If it is there but disabled, or shows an error beside it, that is a different problem from a failed install – the entry's error message is the thing to send us.
+
+### Last resort: clean out every copy by hand
+
+Only needed if the steps above do not work. Close Studio, then paste each of these paths into the address bar of a File Explorer window and delete anything with **Supervertaler** in the name – a `.sdlplugin` file in the `Packages` folders, a folder in the `Unpacked` ones.
+
+Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026.
+
+**Trados Studio 2024**
+
+```
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\18\Plugins\
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\18\Plugins\
+C:\ProgramData\Trados\Trados Studio\18\Plugins\
+```
+
+**Trados Studio 2026**
+
+```
+C:\Users\<username>\AppData\Roaming\Trados\Trados Studio\19\Plugins\
+C:\Users\<username>\AppData\Local\Trados\Trados Studio\19\Plugins\
+C:\ProgramData\Trados\Trados Studio\19\Plugins\
+```
+
+Inside each one, check both the `Packages` and the `Unpacked` subfolder.
+
+:::note
+**Two things that catch people out.** `AppData` is hidden by default, so you cannot browse to it – paste the whole path into the File Explorer address bar instead and press Enter.
+
+You may also see these written as `%AppData%` and `%LocalAppData%`. Those are just Windows shortcuts for `C:\Users\<username>\AppData\Roaming` and `C:\Users\<username>\AppData\Local`, and you can paste them into the address bar in place of the first part of the path if you prefer – they save typing your user name.
+:::
+
+Several of these will not exist, or will contain nothing from Supervertaler. That is normal – move on to the next. Delete **every** copy you find, including any that look like the current version: a leftover that looks correct is exactly the kind that wins the race against the new install.
+
+Then start Studio once and close it again, so it writes out a plugin list with nothing from Supervertaler in it, and install once more.
+
+:::note
+Your settings, termbases, prompts, memory banks and licence key live in your Supervertaler data folder, not in these plugin folders. Deleting the plugin from all of them and reinstalling does not touch any of your work – see [Data Folder](/trados/data-folder/).
+:::
+
+:::tip
+Still stuck? Email support@supervertaler.com with your Studio version from **Help → About** and a screenshot of the installer's first screen taken *before* you click Next. Those two things separate every remaining explanation.
+:::
+
+---
+
 ## A keyboard shortcut does nothing
 
 **Symptoms:** A Supervertaler shortcut – e.g. `Alt+T` (translate segment), `Ctrl+Alt+T` (add term), `Ctrl+Alt+N` (non-translatable), `Ctrl+Alt+G` (AutoTagger), `Alt+Up` (quick-add to project termbase) or `Alt+Q` (QuickLauncher) – has no effect in the editor.
