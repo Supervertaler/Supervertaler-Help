@@ -44,15 +44,36 @@ So:
 
 That is the whole fix in most cases.
 
-### Second: is your Studio version greyed out in the installer?
+### Second: is there more than one copy in the Packages folder?
+
+Look in the folder for your Studio version (full paths further down):
+
+```
+...\Trados\Trados Studio\19\Plugins\Packages\
+```
+
+There should be **exactly one** file with Supervertaler in the name. If there are two, that is the problem, and it explains why reinstalling never helps.
+
+Both files declare themselves as the same plugin, so Studio finds two copies of one plugin and loads neither. And because each install only ever replaces the file it is named after, a second install lands beside the first rather than on top of it – the fault repairs itself only if you delete **both** by hand and then install once.
+
+This can happen if the plugin has reached your machine by more than one route: from the App Store, from a file sent to you directly, or from an earlier version whose file was named differently. Delete every Supervertaler file you find there, then install once from the App Store.
+
+### Third: is your Studio version greyed out in the installer?
 
 On the installer's first screen, the list of installed Studio versions greys out any version the plugin does not support:
 
 > Studio versions that are not compatible with the plugin will be grayed out.
 
-If **your** Studio version is greyed out and cannot be ticked, you have the wrong build, or a Studio version outside the range this build declares. Check that you downloaded the build matching your Studio – see [Trados Studio 2026 & .ttb](/trados/studio-2026/) – and if it still greys out a supported version, email support@supervertaler.com with the version number from **Help → About**. That is a fault at our end, not yours.
+**Almost always this means you downloaded the other build.** Supervertaler for Trados ships as two separate downloads, and the App Store page asks which you want:
 
-### Third: is it installed but switched off?
+> Trados Studio - 2026 Release, 19.x
+> Trados Studio 2024, 18.x
+
+The 2024 build greys out Studio 2026, and the 2026 build greys out Studio 2024 – by design, since each is built against its own Studio. If the version you want is greyed out, go back to the [App Store page](https://appstore.rws.com/plugin/432), click **Download**, and pick the other entry from the dropdown.
+
+If you are certain you downloaded the right build and your Studio version is *still* greyed out, email support@supervertaler.com with the version number from **Help → About**. That means your Studio is outside the range this build declares, which is a fault at our end, not yours.
+
+### Fourth: is it installed but switched off?
 
 Open **Help → Plugin Management** and look for Supervertaler in the list. If it is there but disabled, or shows an error beside it, that is a different problem from a failed install – the entry's error message is the thing to send us.
 
