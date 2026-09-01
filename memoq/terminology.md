@@ -31,6 +31,8 @@ The same glossary setting is reachable from the translation engine's options dia
 
 **In the prompt.** Approved terms are sent as the client's preferred wording; forbidden terms as absolute constraints.
 
+**For Claude, if you use the [MCP server](/memoq/mcp-server/).** Every row your cursor lands on is looked up by this plugin whatever MT engine is selected, and Supervertaler remembers each one — so a document you pre-translated with Google or from TM alone still becomes visible to Claude as you walk through it. Claude can also read and add glossary entries directly (*"we agreed* draagarm *=* support arm *— add it"*).
+
 ### Preferred, not mandatory
 
 Approved terms are given to the model as a strong steer it may override when an entry is clearly wrong for the sentence at hand.
