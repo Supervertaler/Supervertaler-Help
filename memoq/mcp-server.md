@@ -51,31 +51,26 @@ Leave it unticked if you use Supervertaler as an ordinary MT engine with no chat
 
 ## Setting it up
 
-The memoQ plugin does not yet ship a one-click Claude Desktop extension. You add one entry to Claude Desktop's configuration by hand.
+**Claude Desktop:** install the extension.
 
-1. Install the [Supervertaler MCP Server](/trados/mcp-server/#setting-it-up) if you have not already — the same `SupervertalerMcpServer.exe` serves both plugins.
-2. Open Claude Desktop's config file: **Settings → Developer → Edit Config** (the file is `C:\Users\<you>\AppData\Roaming\Claude\claude_desktop_config.json`).
-3. Add a server entry that points the exe at memoQ's handshake file:
+1. Download `Supervertaler-for-memoQ-MCP-Server.mcpb` (it ships with the plugin).
+2. In Claude Desktop, open **Settings → Extensions → Advanced settings** and click **Install extension…** (double-clicking the file also works if `.mcpb` is associated with Claude; drag-and-drop does not).
+3. In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine. That creates the engine, which starts the bridge.
+4. In Claude: *"What's in my memoQ project?"* If it answers with your language pair and segment count, you are connected.
+
+If you also use the Trados plugin, both extensions coexist — Claude shows them as two servers — and they are in fact the same server exe: the memoQ one carries a single setting, `SUPERVERTALER_HOST=memoq`, which tells it to look for memoQ's connection instead of Trados's.
+
+**Other MCP clients** (ChatGPT desktop, Claude Code, anything that runs a local STDIO server): unzip the server exe somewhere permanent and register it with that one environment variable set:
 
 ```json
-"mcpServers": {
-  "supervertaler-memoq": {
-    "command": "C:\\path\\to\\SupervertalerMcpServer.exe",
-    "args": [],
-    "env": {
-      "SUPERVERTALER_BRIDGE_FILE": "C:\\Users\\<you>\\Supervertaler\\memoq\\runtime\\bridge.json"
-    }
-  }
+"supervertaler-memoq": {
+  "command": "C:\\path\\to\\SupervertalerMcpServer.exe",
+  "args": [],
+  "env": { "SUPERVERTALER_HOST": "memoq" }
 }
 ```
 
-   The `SUPERVERTALER_BRIDGE_FILE` variable is what makes this a *memoQ* connection: it pins the server to the handshake memoQ's plugin writes, instead of letting it look for Trados. If your Supervertaler data folder is somewhere other than `C:\Users\<you>\Supervertaler`, adjust the path.
-
-4. Quit Claude Desktop fully (from the system tray) and start it again.
-5. In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine. That creates the engine, which starts the bridge and writes the handshake.
-6. In Claude: *"What's in my memoQ project?"* If it answers with your language pair and segment count, you are connected.
-
-If you also use the Trados plugin, both connections coexist: Trados through its extension, memoQ through this entry. Claude shows them as two servers.
+The exe finds memoQ's connection file in your Supervertaler data folder (`C:\Users\<you>\Supervertaler\memoq\runtime\bridge.json`, or wherever you moved that folder). If you ever need to point it somewhere else, `SUPERVERTALER_BRIDGE_FILE` with a full path overrides it.
 
 ## The live document link
 
