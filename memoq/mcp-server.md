@@ -111,7 +111,9 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/) |
 | `update_segments`, `insert_into_active_segment` | ✗ | No write access to the editor — use `stage_translations` + Pre-translate |
 | `search_tm`, `search_studio_tm`, `compare_document_to_tm` | ✗ | memoQ's TMs are not readable by plugins; confirmed pairs are the substitute |
-| `check_numbers`, `check_tags`, `find_inconsistencies`, `run_verification` | soon | The live link now provides the target text these need |
+| `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` | ✓ | QA over the live document, paragraph by paragraph — needs the live link |
+| `find_inconsistencies` | ✓ | Repeated source paragraphs translated differently — needs the live link |
+| `run_verification` | ✗ | memoQ's own QA cannot be run by a plugin; use memoQ's Run QA |
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
 | SuperMemory tools | ✗ | Not yet wired for memoQ |
