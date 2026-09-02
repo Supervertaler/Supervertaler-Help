@@ -30,7 +30,7 @@ Rows Claude has not staged still get a live suggestion from the model as you lan
 
 ## The checkbox
 
-Either in the [prompt editor](/memoq/prompt-editor/), under **Settings**, which needs no project open and no memoQ running, or in memoQ under **Resource console → MT settings → Supervertaler → Configure plugin**:
+Either in the [prompt editor](/memoq/prompt-editor/), on the **Settings** menu, which needs no project open and no memoQ running, or in memoQ under **Resource console → MT settings → Supervertaler → Configure plugin**:
 
 > ☐ **Pre-translate via Claude Desktop (MCP) instead of the API key above**
 > *Pre-translate then only hands the segments to the chat and inserts the translations it sends back; nothing is charged to the API key. Suggestions as you move through segments still use the API key.*

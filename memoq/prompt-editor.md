@@ -62,19 +62,17 @@ Draft it again later in the job and it gets better: by then it can see what you 
 
 An AutoPrompt draft ends with a locked-terms table – a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
 
-Press **Export glossary…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. Answer yes when it asks and that file becomes the active glossary immediately, whether or not memoQ is running.
+Choose **memoQ → Export this prompt’s terms as a glossary** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. Answer yes when it asks and that file becomes the active glossary immediately, whether or not memoQ is running.
 
 The file is plain text – edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
 
 ### Settings
 
-The **Settings** menu holds what does not belong to any one project. At the moment that is **Pre-translate via Claude Desktop (MCP)**, the switch described under [MCP server](/memoq/mcp-server/). It is the same setting as the checkbox in memoQ, so either place changes it and both show the same state.
+**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per batch, and whether termbase hits and surrounding segments are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
 
-### Switching glossary
+**Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself as well, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
-The toolbar button reading **Glossary: ‹file›** names the glossary currently in force, and clicking it picks a different one. It is the same single setting that memoQ’s own two dialogs edit, so changing it here changes it everywhere, and it works with memoQ closed. The button turns red if the file it names has been moved or deleted.
-
-This is the quickest route to that setting. The editor runs on its own, so pinning `C:\Program Files\memoQ\memoQ-12\Addins\Supervertaler.PromptEditor.exe` to your taskbar puts your prompts and your glossary one click away without opening memoQ at all.
+The **API key** is the one setting that stays in memoQ, under Project home → Settings → MT settings → Supervertaler. memoQ stores it encrypted, and a plain text settings file is no place for it.
 
 ## Drafting prompts with Claude
 

@@ -29,7 +29,7 @@ One setting, three consumers: the terminology pane, the prompt sent to the model
 
 - **The engine's options dialog** (Options → Machine translation → Supervertaler → Options) has a *Glossary* row naming the active file with its full path, in red if the file has gone missing. *Change…* opens the same chooser the terminology plugin uses.
 - **Every hit in Translation results** carries the glossary's file name in its grey footer (*Supervertaler · patent eng-dut.txt*).
-- **The [prompt editor](/memoq/prompt-editor/)** names it on a toolbar button that also changes it, and works with memoQ closed.
+- **The [prompt editor](/memoq/prompt-editor/)** names it in its status bar, where clicking it changes it, and works with memoQ closed.
 - **Claude's project report** (`get_project` over the [MCP server](/memoq/mcp-server/)) includes the path under *activeGlossary*.
 
 Exporting a glossary from the [prompt editor](/memoq/prompt-editor/) makes that file the active one immediately; the options dialog and the footer show the new name on the next lookup.
