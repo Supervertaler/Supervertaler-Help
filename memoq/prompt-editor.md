@@ -52,7 +52,7 @@ Before it runs you choose the document (if several are captured), and can add a 
 
 Three things to know:
 
-- **memoQ must be running with a Supervertaler engine active**, and the document must have been captured — one Pre-translate does it (free, with the [Pre-translate-only box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
+- **memoQ must be running with a Supervertaler engine active**, and the document must have been captured — one Pre-translate does it (free, with the [Claude Desktop box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
 - **It uses the provider, model and API key from memoQ's Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
 - **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request. Inline translator comments work as in Trados: a genuinely necessary note appears in the target as a `⟦TC: …⟧` marker for you to find and deal with while reviewing.
 

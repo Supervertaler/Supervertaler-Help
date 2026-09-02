@@ -20,7 +20,7 @@ The other half: a plugin only *sees* what memoQ sends it. Claude cannot read you
 
 With everything set up (below), a chat-driven job looks like this:
 
-1. **Open the project** in memoQ and tick **Pre-translate only captures and delivers staged translations** in Supervertaler's settings (see [The checkbox](#the-checkbox)).
+1. **Open the project** in memoQ and tick **Pre-translate via Claude Desktop (MCP)** in Supervertaler's settings (see [The checkbox](#the-checkbox)).
 2. **Pre-translate** with Supervertaler as the MT engine. It is instant and free: the grid stays empty, but Supervertaler now holds every source segment.
 3. **In Claude Desktop:** *"Read my memoQ project and translate it into Dutch."* Claude reads the segments, checks your glossary, and stages translations. Nothing has changed in memoQ yet.
 4. **Pre-translate again.** The grid fills. Each row is marked `Claude (staged via Supervertaler MCP)` in Translation results.
@@ -32,13 +32,15 @@ Rows Claude has not staged still get a live suggestion from the model as you lan
 
 In **Resource console → MT settings → Supervertaler → Configure plugin**:
 
-> ☐ **Pre-translate only captures and delivers staged translations – never calls the model**
-> *For chat-driven jobs (Claude Desktop via MCP). Segment-by-segment lookups still use the model.*
+> ☐ **Pre-translate via Claude Desktop (MCP) instead of the API key above**
+> *Pre-translate then only hands the segments to the chat and inserts the translations it sends back; nothing is charged to the API key. Suggestions as you move through segments still use the API key.*
+
+Both paths call an AI model. The checkbox decides **which one pays and who drives**: unticked, this plugin translates through the API key you entered; ticked, Pre-translate leaves the translating to the chat app, billed to that subscription.
 
 | | Pre-translate | Landing on a segment |
 |---|---|---|
-| **Unticked** (default) | Translates every segment with the model, through your API key. Staged translations are used first where they exist. | Live suggestion from the model; staged first if present. |
-| **Ticked** | Captures the document and delivers anything staged. Never calls the model. Free. | Unchanged — live suggestion from the model. |
+| **Unticked** (default) | This plugin translates every segment through your API key. Staged translations are used first where they exist. | Live suggestion from the model; staged first if present. |
+| **Ticked** | Hands the segments to the chat and inserts what it sends back. Nothing charged to the API key. | Unchanged — live suggestion from the model. |
 
 Two consequences worth knowing:
 
