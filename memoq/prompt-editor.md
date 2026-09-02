@@ -44,6 +44,20 @@ Prompts use `{{SOURCE_LANGUAGE}}` and `{{TARGET_LANGUAGE}}` rather than naming l
 
 `%USERPROFILE%\Supervertaler\prompt_library\` — one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
 
+## AutoPrompt: drafting a prompt for the open project
+
+Press **Draft for memoQ project…** in the editor's toolbar. Supervertaler reads the document you are translating, your glossary hits in it and anything you have already confirmed, and has the AI write a prompt tailored to that job — domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
+
+Before it runs you choose the document (if several are captured), and can add a briefing — client, audience, style, what to avoid — which the AI treats as authoritative.
+
+Three things to know:
+
+- **memoQ must be running with a Supervertaler engine active**, and the document must have been captured — one Pre-translate does it (free, with the [Pre-translate-only box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
+- **It uses the provider, model and API key from memoQ's Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
+- **The prompt is written for memoQ, not copied from the Trados recipe.** memoQ has no comment channel — everything the model returns lands in the target cell — so translator notes and defect markers are forbidden outright; single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request.
+
+Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
+
 ## Drafting prompts with Claude
 
 If you use the [MCP server](/memoq/mcp-server/), Claude can write into this library: *"Draft a translation prompt for this project and save it."* It reads the captured document, your confirmed segments and your glossary, saves the result as a new prompt, and you pick it from the dropdown. The editor is where you review and tune what it wrote.
