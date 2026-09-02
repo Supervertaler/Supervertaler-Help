@@ -58,6 +58,14 @@ Three things to know:
 
 Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
 
+## Export glossary: the prompt's terms as the project glossary
+
+An AutoPrompt draft ends with a locked-terms table — a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
+
+Press **Export glossary…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. If memoQ is running, it offers to make that the active glossary straight away; otherwise select the file under **Options → Terminology plugins → Supervertaler terms → Options**.
+
+The file is plain text — edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
+
 ## Drafting prompts with Claude
 
 If you use the [MCP server](/memoq/mcp-server/), Claude can write into this library: *"Draft a translation prompt for this project and save it."* It reads the captured document, your confirmed segments and your glossary, saves the result as a new prompt, and you pick it from the dropdown. The editor is where you review and tune what it wrote.
