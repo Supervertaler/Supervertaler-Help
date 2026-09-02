@@ -77,30 +77,46 @@ The memoQ plugin does not yet ship a one-click Claude Desktop extension. You add
 
 If you also use the Trados plugin, both connections coexist: Trados through its extension, memoQ through this entry. Claude shows them as two servers.
 
+## The live document link
+
+memoQ's MT plugin interface never shows a plugin the target text, the row you are on, or even the document's name. memoQ's **Preview SDK** — the interface its own PDF and video preview tools use — shows all three, live. So Supervertaler ships a small preview tool, `Supervertaler.MemoQ.Preview.exe`, which registers with memoQ exactly as the PDF preview does and forwards what memoQ sends it to the plugin.
+
+With it running, Claude sees your document as it actually is: every row's current target, memoQ's own row order, the document's real name, and the row your cursor is on — and it can ask memoQ to **jump to a segment**.
+
+**Setting it up (once):**
+
+1. Run `%LocalAppData%\Supervertaler.memoQ\preview\Supervertaler.MemoQ.Preview.exe` (the plugin's deploy puts it there). A tray icon appears.
+2. In memoQ, accept the **Preview tool connection request** for *Supervertaler*, leaving *Auto-start with memoQ* ticked. From then on memoQ starts the tool itself.
+3. The tray icon reads *memoQ: connected · plugin: connected* once you click into a segment (that is what starts the plugin's bridge).
+
+It appears under **Options → External preview tools** alongside any other preview tools; it can be disabled there like any of them. It draws nothing on screen — it is a link, not a preview.
+
+memoQ lists the rows it has loaded, so on a long document the live view fills in as you scroll through it. Without the tool running, the tools below fall back to what the plugin captured from translation requests, and the two cursor tools say so rather than guessing.
+
 ## What it can and cannot do
 
-Everything the Trados server can do that memoQ *cannot* comes down to one fact: memoQ has no project API, no editor API and no cursor for plugins. The table is the honest map.
+Everything the Trados server can do that memoQ *cannot* comes down to one fact: memoQ has no project API and no editor API for plugins. The live document link recovers the reading half of that; writing into the document still goes through you. The table is the honest map.
 
 | Tool | memoQ | Notes |
 | --- | :---: | --- |
 | `help` | ✓ | A menu of what you can ask, memoQ edition |
-| `get_project` | ✓ | Language pair, client/domain/subject, captured documents, what is staged |
-| `get_segments` | ✓ | The source segments Supervertaler has been shown — the whole document after one Pre-translate |
+| `get_project` | ✓ | Language pair, client/domain/subject, captured and live documents, what is staged |
+| `get_segments` | ✓ | With the live link: rows in memoQ's order with source, **target**, and the active row marked. Without: the source segments captured from translation requests |
+| `get_active_segment` | ✓ | The row your cursor is on, with what is selected — needs the live link |
+| `go_to_segment` | ✓ | Asks memoQ to select a row — needs the live link |
 | `get_confirmed_pairs` | ✓ | Segments you have confirmed, via [Self-learning](/memoq/self-learning/) |
 | `lookup_term` / `add_term` | ✓ | Your Supervertaler [glossary](/memoq/terminology/), not memoQ's term bases |
 | `stage_translations` | ✓ | **The write channel.** Translations wait until you Pre-translate |
 | `get_staged` / `clear_staged` | ✓ | Inspect and reset the staging area |
 | `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/) |
-| `go_to_segment` | ✗ | No cursor control for plugins |
-| `update_segments`, `insert_into_active_segment` | ✗ | No editor access — use `stage_translations` + Pre-translate |
-| `get_active_segment` | ✗ | The plugin is not told which row you are on |
+| `update_segments`, `insert_into_active_segment` | ✗ | No write access to the editor — use `stage_translations` + Pre-translate |
 | `search_tm`, `search_studio_tm`, `compare_document_to_tm` | ✗ | memoQ's TMs are not readable by plugins; confirmed pairs are the substitute |
-| `check_numbers`, `check_tags`, `find_inconsistencies`, `run_verification` | ✗ | Need the target text of every row, which memoQ never sends |
+| `check_numbers`, `check_tags`, `find_inconsistencies`, `run_verification` | soon | The live link now provides the target text these need |
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
 | SuperMemory tools | ✗ | Not yet wired for memoQ |
 
-**Reading is nearly complete; writing goes through you.** In practice the chat-driven workflow above covers most of what people use the Trados server for. What you give up is Claude driving the editor — jumping to segments, editing rows in place, running QA on the target text — and there is no route to those in memoQ's SDK.
+**Reading is complete with the live link; writing goes through you.** What you give up compared with Trados is Claude editing rows in place — and in memoQ the alternative, staging plus one Pre-translate, is a review step rather than a loss.
 
 ## Two channels for seeing the document
 
