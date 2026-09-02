@@ -17,10 +17,10 @@ Click **Configure plugin** and fill in:
 | **API key** | your own key for that provider |
 | **Endpoint** | leave blank unless you are using a local model or a gateway |
 | **Segments per request** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference) |
-| **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own — see [Prompt Library & Editor](/memoq/prompt-editor/) |
-| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop — see [MCP Server](/memoq/mcp-server/) |
+| **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [Prompt Library & Editor](/memoq/prompt-editor/) |
+| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop – see [MCP Server](/memoq/mcp-server/) |
 
-Press **Test connection**. It translates a short sentence for real, so it exercises the key, the model name and the endpoint together — a green result means everything works.
+Press **Test connection**. It translates a short sentence for real, so it exercises the key, the model name and the endpoint together – a green result means everything works.
 
 ### 2. Turn on learning
 
@@ -46,5 +46,5 @@ The effect is most visible on a document with recurring phrasing: settle a term 
 
 ### Next
 
-- [Terminology](/memoq/terminology/) — add a glossary, including forbidden terms
-- [Self-learning translation](/memoq/self-learning/) — what is remembered, and for how long
+- [Terminology](/memoq/terminology/) – add a glossary, including forbidden terms
+- [Self-learning translation](/memoq/self-learning/) – what is remembered, and for how long

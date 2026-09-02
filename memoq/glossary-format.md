@@ -14,12 +14,12 @@ koppelmechanisme	coupling mechanism
 |---|---|
 | 1 | source term |
 | 2 | target term |
-| 3 | *optional* — `forbidden` marks a target that must not be used |
+| 3 | *optional* – `forbidden` marks a target that must not be used |
 
 Blank lines are ignored, and so is any line starting with `#`, so the file can carry comments.
 
 :::caution[Tabs, not spaces]
-Columns must be separated by actual tab characters. This is the commonest reason a glossary loads with no terms. The options dialog reports how many terms it parsed — check that number after choosing a file.
+Columns must be separated by actual tab characters. This is the commonest reason a glossary loads with no terms. The options dialog reports how many terms it parsed – check that number after choosing a file.
 :::
 
 ### Matching
@@ -28,7 +28,7 @@ Matching is case-insensitive and respects word boundaries, so `wire` does not ma
 
 ### Editing while you work
 
-The file is re-read whenever you save it. Keep it open in a text editor beside memoQ, add a term, save, and the next segment sees it — no restart, no reloading the project.
+The file is re-read whenever you save it. Keep it open in a text editor beside memoQ, add a term, save, and the next segment sees it – no restart, no reloading the project.
 
 ### Size
 

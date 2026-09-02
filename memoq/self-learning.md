@@ -18,13 +18,13 @@ Only segments **you confirm**. Not the AI's raw output.
 
 That distinction is deliberate. Feeding a machine its own guesses compounds its mistakes; the value of these examples is precisely that a human approved them.
 
-For each confirmation Supervertaler stores the source text and the target text, and nothing else — no tags, no formatting, no metadata. Re-confirming a segment replaces the earlier version, so your latest decision is the one that counts.
+For each confirmation Supervertaler stores the source text and the target text, and nothing else – no tags, no formatting, no metadata. Re-confirming a segment replaces the earlier version, so your latest decision is the one that counts.
 
 ### How much is sent to the AI
 
 Not all of it. For each new segment, Supervertaler picks the **five** stored pairs sharing the most vocabulary with it. A pair with no words in common is never sent.
 
-So a document with hundreds of confirmed segments still contributes only a few short examples per request — the ones most likely to matter.
+So a document with hundreds of confirmed segments still contributes only a few short examples per request – the ones most likely to matter.
 
 ### What is stored, and where
 
@@ -44,6 +44,6 @@ The plugin's options dialog shows how many documents and how much space are held
 
 ### What it is not
 
-This is not adaptive machine translation in the sense that ModernMT or Lara mean it. No model is trained or fine-tuned, and nothing is sent to Supervertaler — the examples are simply included in the request to the AI provider you chose, alongside the segment.
+This is not adaptive machine translation in the sense that ModernMT or Lara mean it. No model is trained or fine-tuned, and nothing is sent to Supervertaler – the examples are simply included in the request to the AI provider you chose, alongside the segment.
 
 The practical differences: it works within a document rather than across your whole history, it is lost if you clear it, and it is entirely inspectable. Nothing happens that you cannot see in the prompt.

@@ -4,7 +4,7 @@ title: "Troubleshooting"
 
 ### Supervertaler does not appear at all
 
-Check `Supervertaler.MemoQ.dll` is in memoQ's `Addins` folder, and that you answered **Yes** to the unsigned-plugin prompt on startup — its default button is *No*.
+Check `Supervertaler.MemoQ.dll` is in memoQ's `Addins` folder, and that you answered **Yes** to the unsigned-plugin prompt on startup – its default button is *No*.
 
 If memoQ was recently upgraded to a new major version, the add-ins need copying into the new program folder. See [Installation](/memoq/installation/).
 
@@ -19,7 +19,7 @@ Advertising the capability only makes the engine eligible; memoQ does not send c
 Three things must all be true, under **Options → Terminology plugins**:
 
 1. **Perform terminology plugin lookups while working in the translation grid** is ticked
-2. **Supervertaler terms** does not read *Not configured* — i.e. a glossary file is set
+2. **Supervertaler terms** does not read *Not configured* – i.e. a glossary file is set
 3. **Enable plugin** is ticked for it
 
 ### The glossary loads no terms
@@ -34,7 +34,7 @@ Supervertaler writes a diagnostic log to:
 C:\Users\<you>\AppData\Local\Temp\Supervertaler-memoQ.log
 ```
 
-It records what memoQ asked for and what was sent — segment sizes, how many glossary terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
+It records what memoQ asked for and what was sent – segment sizes, how many glossary terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
 
 A typical healthy line:
 

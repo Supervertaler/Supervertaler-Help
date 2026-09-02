@@ -2,7 +2,7 @@
 title: "Prompt Library & Editor"
 ---
 
-Supervertaler for memoQ translates with the instructions you give it. Those instructions can be typed straight into the settings dialog, or chosen from the **shared Supervertaler prompt library** — the same folder of prompts the Trados plugin uses, so a prompt tuned in one tool is available in the other.
+Supervertaler for memoQ translates with the instructions you give it. Those instructions can be typed straight into the settings dialog, or chosen from the **shared Supervertaler prompt library** – the same folder of prompts the Trados plugin uses, so a prompt tuned in one tool is available in the other.
 
 memoQ gives an add-in no window of its own, so the library cannot be a panel inside memoQ. Instead there is a small **Prompt Library editor**, opened from the settings dialog, that runs alongside memoQ.
 
@@ -12,7 +12,7 @@ In **Resource console → MT settings → Supervertaler → Configure plugin**, 
 
 Choose **(instructions below)** instead to type your own; the box becomes editable.
 
-The dropdown stores *which* prompt you chose, not its text. Edit the prompt anywhere — in the editor, in the Trados plugin, in a text editor — and memoQ uses the new version on the next segment.
+The dropdown stores *which* prompt you chose, not its text. Edit the prompt anywhere – in the editor, in the Trados plugin, in a text editor – and memoQ uses the new version on the next segment.
 
 Only prompts in the library's **Translate** folder are offered. Proofreading and QuickLauncher prompts exist for other tasks and would produce commentary where a translation belongs.
 
@@ -28,13 +28,13 @@ Press **Edit…** beside the Prompt dropdown.
 
 Save with **Ctrl+S**. A prompt marked read-only in the library (the built-in defaults) can be read but not overwritten; make a copy under a new name instead.
 
-Any settings the file carries that the editor does not have a field for — tags, favourites, QuickLauncher flags set by the Trados plugin — are preserved untouched on save. The status line under the description says which ones the file has.
+Any settings the file carries that the editor does not have a field for – tags, favourites, QuickLauncher flags set by the Trados plugin – are preserved untouched on save. The status line under the description says which ones the file has.
 
 ### Placeholders
 
 Prompts use `{{SOURCE_LANGUAGE}}` and `{{TARGET_LANGUAGE}}` rather than naming languages, so one prompt serves every language pair. memoQ fills them in per project.
 
-**Insert placeholder** lists the ones memoQ can fill. A placeholder memoQ cannot fill — `{{SOURCE_SEGMENT}}`, say, which only the Trados plugin provides — is shown in red, and the editor warns that it will reach the model as empty text. Do not use those in a prompt meant for memoQ.
+**Insert placeholder** lists the ones memoQ can fill. A placeholder memoQ cannot fill – `{{SOURCE_SEGMENT}}`, say, which only the Trados plugin provides – is shown in red, and the editor warns that it will reach the model as empty text. Do not use those in a prompt meant for memoQ.
 
 ### Which product a prompt is for
 
@@ -42,29 +42,29 @@ Prompts use `{{SOURCE_LANGUAGE}}` and `{{TARGET_LANGUAGE}}` rather than naming l
 
 ## Where the library lives
 
-`C:\Users\<you>\Supervertaler\prompt_library\` — one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
+`C:\Users\<you>\Supervertaler\prompt_library\` – one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
 
 ## AutoPrompt: drafting a prompt for the open project
 
-Press **Draft for memoQ project…** in the editor's toolbar. Supervertaler reads the document you are translating, your glossary hits in it and anything you have already confirmed, and has the AI write a prompt tailored to that job — domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
+Press **Draft for memoQ project…** in the editor's toolbar. Supervertaler reads the document you are translating, your glossary hits in it and anything you have already confirmed, and has the AI write a prompt tailored to that job – domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
 
-Before it runs you choose the document (if several are captured), and can add a briefing — client, audience, style, what to avoid — which the AI treats as authoritative.
+Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative.
 
 Three things to know:
 
-- **memoQ must be running with a Supervertaler engine active**, and the document must have been captured — one Pre-translate does it (free, with the [Claude Desktop box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
+- **memoQ must be running with a Supervertaler engine active**, and the document must have been captured – one Pre-translate does it (free, with the [Claude Desktop box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
 - **It uses the provider, model and API key from memoQ's Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
-- **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request. Inline translator comments work as in Trados, with one difference: a genuinely necessary note appears in the target as a `[[TC: …]]` marker — double square brackets rather than Trados's `⟦ ⟧`, because those glyphs are missing from Tahoma, Verdana and Calibri and show as empty boxes in memoQ's grid. Search for `[[TC:` to find them while reviewing.
+- **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request. Inline translator comments work as in Trados, with one difference: a genuinely necessary note appears in the target as a `[[TC: …]]` marker – double square brackets rather than Trados's `⟦ ⟧`, because those glyphs are missing from Tahoma, Verdana and Calibri and show as empty boxes in memoQ's grid. Search for `[[TC:` to find them while reviewing.
 
 Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
 
 ## Export glossary: the prompt's terms as the project glossary
 
-An AutoPrompt draft ends with a locked-terms table — a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
+An AutoPrompt draft ends with a locked-terms table – a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
 
 Press **Export glossary…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. If memoQ is running, it offers to make that the active glossary straight away; otherwise select the file under **Options → Terminology plugins → Supervertaler terms → Options**.
 
-The file is plain text — edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
+The file is plain text – edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
 
 ## Drafting prompts with Claude
 
