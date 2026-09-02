@@ -66,6 +66,10 @@ Press **Export glossary…** with the prompt open. Supervertaler reads every tab
 
 The file is plain text – edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
 
+### Settings
+
+The **Settings** menu holds what does not belong to any one project. At the moment that is **Pre-translate via Claude Desktop (MCP)**, the switch described under [MCP server](/memoq/mcp-server/). It is the same setting as the checkbox in memoQ, so either place changes it and both show the same state.
+
 ### Switching glossary
 
 The toolbar button reading **Glossary: ‹file›** names the glossary currently in force, and clicking it picks a different one. It is the same single setting that memoQ’s own two dialogs edit, so changing it here changes it everywhere, and it works with memoQ closed. The button turns red if the file it names has been moved or deleted.

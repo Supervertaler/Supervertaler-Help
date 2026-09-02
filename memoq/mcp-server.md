@@ -30,7 +30,7 @@ Rows Claude has not staged still get a live suggestion from the model as you lan
 
 ## The checkbox
 
-In **Resource console → MT settings → Supervertaler → Configure plugin**:
+Either in the [prompt editor](/memoq/prompt-editor/), under **Settings**, which needs no project open and no memoQ running, or in memoQ under **Resource console → MT settings → Supervertaler → Configure plugin**:
 
 > ☐ **Pre-translate via Claude Desktop (MCP) instead of the API key above**
 > *Pre-translate then only hands the segments to the chat and inserts the translations it sends back; nothing is charged to the API key. Suggestions as you move through segments still use the API key.*
@@ -45,6 +45,7 @@ Both paths call an AI model. The checkbox decides **which one pays and who drive
 Two consequences worth knowing:
 
 - **You never have to toggle it mid-job.** Ticked is right for the whole of a chat-driven job: the capture pass is free, the delivery pass is free, and walking the document afterwards still gives you live suggestions for anything Claude did not cover.
+- **It is one switch for the whole installation, not a project setting.** It says how you are working at this moment, so the editor and memoQ show the same state and either can change it.
 - **Staged translations come through in either state.** Ticking the box is never a way to lose Claude's work; unticking it is never a way to block it. It only decides whether *Pre-translate* spends API money on rows nothing was staged for.
 
 Leave it unticked if you use Supervertaler as an ordinary MT engine with no chat involved. That is the default, and it is what most memoQ users will want.
