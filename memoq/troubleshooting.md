@@ -31,7 +31,7 @@ Almost always spaces where tabs should be. The glossary options dialog reports h
 Supervertaler writes a diagnostic log to:
 
 ```
-%TEMP%\Supervertaler-memoQ.log
+C:\Users\<you>\AppData\Local\Temp\Supervertaler-memoQ.log
 ```
 
 It records what memoQ asked for and what was sent — segment sizes, how many glossary terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
