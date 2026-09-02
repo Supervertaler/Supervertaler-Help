@@ -62,9 +62,15 @@ Draft it again later in the job and it gets better: by then it can see what you 
 
 An AutoPrompt draft ends with a locked-terms table – a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
 
-Press **Export glossary…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. If memoQ is running, it offers to make that the active glossary straight away; otherwise select the file under **Options → Terminology plugins → Supervertaler terms → Options**.
+Press **Export glossary…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. Answer yes when it asks and that file becomes the active glossary immediately, whether or not memoQ is running.
 
 The file is plain text – edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
+
+### Switching glossary
+
+The toolbar button reading **Glossary: ‹file›** names the glossary currently in force, and clicking it picks a different one. It is the same single setting that memoQ’s own two dialogs edit, so changing it here changes it everywhere, and it works with memoQ closed. The button turns red if the file it names has been moved or deleted.
+
+This is the quickest route to that setting. The editor runs on its own, so pinning `C:\Program Files\memoQ\memoQ-12\Addins\Supervertaler.PromptEditor.exe` to your taskbar puts your prompts and your glossary one click away without opening memoQ at all.
 
 ## Drafting prompts with Claude
 
