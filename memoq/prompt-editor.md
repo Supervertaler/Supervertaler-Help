@@ -42,7 +42,7 @@ Prompts use `{{SOURCE_LANGUAGE}}` and `{{TARGET_LANGUAGE}}` rather than naming l
 
 ## Where the library lives
 
-`%USERPROFILE%\Supervertaler\prompt_library\` — one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
+`C:\Users\<you>\Supervertaler\prompt_library\` — one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
 
 ## AutoPrompt: drafting a prompt for the open project
 

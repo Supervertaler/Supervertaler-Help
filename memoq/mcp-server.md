@@ -54,7 +54,7 @@ Leave it unticked if you use Supervertaler as an ordinary MT engine with no chat
 The memoQ plugin does not yet ship a one-click Claude Desktop extension. You add one entry to Claude Desktop's configuration by hand.
 
 1. Install the [Supervertaler MCP Server](/trados/mcp-server/#setting-it-up) if you have not already — the same `SupervertalerMcpServer.exe` serves both plugins.
-2. Open Claude Desktop's config file: **Settings → Developer → Edit Config** (it is `%APPDATA%\Claude\claude_desktop_config.json`).
+2. Open Claude Desktop's config file: **Settings → Developer → Edit Config** (the file is `C:\Users\<you>\AppData\Roaming\Claude\claude_desktop_config.json`).
 3. Add a server entry that points the exe at memoQ's handshake file:
 
 ```json
@@ -69,7 +69,7 @@ The memoQ plugin does not yet ship a one-click Claude Desktop extension. You add
 }
 ```
 
-   The `SUPERVERTALER_BRIDGE_FILE` variable is what makes this a *memoQ* connection: it pins the server to the handshake memoQ's plugin writes, instead of letting it look for Trados. If your Supervertaler data folder is somewhere other than `%USERPROFILE%\Supervertaler`, adjust the path.
+   The `SUPERVERTALER_BRIDGE_FILE` variable is what makes this a *memoQ* connection: it pins the server to the handshake memoQ's plugin writes, instead of letting it look for Trados. If your Supervertaler data folder is somewhere other than `C:\Users\<you>\Supervertaler`, adjust the path.
 
 4. Quit Claude Desktop fully (from the system tray) and start it again.
 5. In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine. That creates the engine, which starts the bridge and writes the handshake.
@@ -85,13 +85,13 @@ With it running, Claude sees your document as it actually is: every row's curren
 
 **Setting it up (once):**
 
-1. Run `%LocalAppData%\Supervertaler.memoQ\preview\Supervertaler.MemoQ.Preview.exe` (the plugin's deploy puts it there). A tray icon appears.
+1. Run `C:\Users\<you>\Supervertaler\memoq\preview\Supervertaler.MemoQ.Preview.exe` — inside your Supervertaler data folder, where the plugin's deploy puts it. A tray icon appears.
 2. In memoQ, accept the **Preview tool connection request** for *Supervertaler*, leaving *Auto-start with memoQ* ticked. From then on memoQ starts the tool itself.
 3. The tray icon reads *memoQ: connected · plugin: connected* once you click into a segment (that is what starts the plugin's bridge).
 
 It appears under **Options → External preview tools** alongside any other preview tools; it can be disabled there like any of them. It draws nothing on screen — it is a link, not a preview.
 
-memoQ lists the rows it has loaded, so on a long document the live view fills in as you scroll through it. Without the tool running, the tools below fall back to what the plugin captured from translation requests, and the two cursor tools say so rather than guessing.
+One thing to know: memoQ's Preview SDK works in **paragraphs**, not segments. A paragraph that memoQ splits into three grid rows arrives as one unit with the whole paragraph's source and target. The active-segment tool still reports the exact sentence your cursor is on, and jumps can target a sentence within a paragraph. Without the tool running, the tools below fall back to what the plugin captured from translation requests, and the two cursor tools say so rather than guessing.
 
 ## What it can and cannot do
 

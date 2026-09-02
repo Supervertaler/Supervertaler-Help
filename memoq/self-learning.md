@@ -31,7 +31,7 @@ So a document with hundreds of confirmed segments still contributes only a few s
 Memory is kept per document *and* language pair, and written to:
 
 ```
-%LocalAppData%\Supervertaler.memoQ\document-memory\
+C:\Users\<you>\AppData\Local\Supervertaler.memoQ\document-memory\
 ```
 
 It survives closing memoQ, so picking a job back up the next morning keeps yesterday's decisions. Limits: 500 pairs per document, 200 documents, and anything untouched for 60 days is discarded.
