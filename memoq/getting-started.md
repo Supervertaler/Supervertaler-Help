@@ -14,7 +14,7 @@ Click **Configure plugin** and fill in:
 |---|---|
 | **Provider** | Anthropic, OpenAI or Google |
 | **Model** | e.g. `claude-opus-5` |
-| **API key** | your own key for that provider |
+| **API key** | your own key for that provider. If you run Supervertaler for Trados as well, its key is picked up automatically and you can leave this empty |
 | **Endpoint** | leave blank unless you are using a local model or a gateway |
 | **Segments per request** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference) |
 | **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [Prompt Library & Editor](/memoq/prompt-editor/) |

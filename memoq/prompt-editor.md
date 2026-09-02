@@ -53,7 +53,7 @@ Before it runs you choose the document (if several are captured), and can add a 
 Three things to know:
 
 - **memoQ must be running with a Supervertaler engine active**, and the document must have been captured – one Pre-translate does it (free, with the [Claude Desktop box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
-- **It uses the provider, model and API key from memoQ's Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
+- **It uses the provider, model and API key from your Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
 - **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request. Inline translator comments work as in Trados, with one difference: a genuinely necessary note appears in the target as a `[[TC: …]]` marker – double square brackets rather than Trados's `⟦ ⟧`, because those glyphs are missing from Tahoma, Verdana and Calibri and show as empty boxes in memoQ's grid. Search for `[[TC:` to find them while reviewing.
 
 Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
@@ -72,7 +72,7 @@ The file is plain text – edit it freely; the plugin re-reads it whenever it ch
 
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself as well, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
-The **API key** is the one setting that stays in memoQ, under Project home → Settings → MT settings → Supervertaler. memoQ stores it encrypted, and a plain text settings file is no place for it.
+The **API key** is here too. If you also run Supervertaler for Trados, leave it alone: Trados keeps its keys in the same data folder, this reads them, and the box tells you so. Rotating a key there is then the only change you need to make. Type a key here only to override that, and clear the box to go back to the shared one.
 
 ## Drafting prompts with Claude
 
