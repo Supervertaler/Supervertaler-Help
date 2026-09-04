@@ -105,6 +105,9 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `stage_translations` | ✓ | **The write channel.** Translations wait until you Pre-translate |
 | `get_staged` / `clear_staged` | ✓ | Inspect and reset the staging area |
 | `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/) |
+| `list_supermemory_banks` | ✓ | Your [memory banks](#memory-banks), and how many articles each holds |
+| `get_supermemory_context` | ✓ | One bank’s brief, terminology and style, formatted for the model |
+| `search_supermemory` | ✓ | Full-text search inside a bank |
 | `update_segments`, `insert_into_active_segment` | ✗ | No write access to the editor – use `stage_translations` + Pre-translate |
 | `search_tm`, `search_studio_tm`, `compare_document_to_tm` | ✗ | memoQ's TMs are not readable by plugins; confirmed pairs are the substitute |
 | `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` | ✓ | QA over the live document, paragraph by paragraph – needs the live link. `check_terminology` runs against the active Supervertaler glossary, so give it a project one: [Export glossary](/memoq/prompt-editor/#export-glossary-the-prompts-terms-as-the-project-glossary) from an AutoPrompt draft |
@@ -112,7 +115,6 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `run_verification` | ✗ | memoQ's own QA cannot be run by a plugin; use memoQ's Run QA |
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
-| SuperMemory tools | ✗ | Not yet wired for memoQ |
 
 **Reading is complete with the live link; writing goes through you.** What you give up compared with Trados is Claude editing rows in place – and in memoQ the alternative, staging plus one Pre-translate, is a review step rather than a loss.
 
@@ -124,6 +126,25 @@ Supervertaler captures segments in two ways, and it helps to know which is which
 - **Terminology lookups** – every row your cursor lands on, through the [terminology plugin](/memoq/terminology/), *regardless of which MT engine is selected*. So a document you pre-translated with Google or from TM alone still becomes visible to Claude one visited row at a time. memoQ does not tell the terminology plugin which document a row belongs to, so these land in a per-language-pair bucket rather than under the document.
 
 `get_project` labels each captured document with its origin.
+
+## Memory banks
+
+If you keep [SuperMemory](/trados/ai-assistant/super-memory/) banks – a folder per client, holding the brief, the terminology and the style rules you have settled on with them – Claude can read them here too. They live in one place for every Supervertaler product:
+
+```
+C:\Users\<you>\Supervertaler\memory-banks\
+```
+
+Ask for what you want and Claude picks the tool: *“list my memory banks”*, *“read the Acme bank before you translate this”*, *“search the Acme bank for how we render ‘Vorrichtung’”*.
+
+Four things behave differently from the Trados plugin, and they are worth knowing before you rely on this:
+
+- **No bank is chosen for you.** The Trados plugin has a bank picker and remembers your choice per project; memoQ has nowhere to put one yet, so the bank is named in the request. Claude will ask, or will list them and let you say which.
+- **A name that does not exist is an error**, not a fall back to something else. Falling back would look exactly like success while feeding the model another client’s terminology, and nothing in the answer would say so.
+- **`_shared` is always underneath.** It is not a bank you select: whatever you do select is layered over it, and wins wherever the two disagree.
+- **The answer is trimmed to about 6,000 tokens**, and whatever did not fit is listed under `trimmed` in the reply rather than dropped in silence. A tool result stays in the conversation and is re-sent on every following turn, so it is kept deliberately small – ask for a larger budget, or for one article by name, when you need the rest.
+
+Reading is all this does. Nothing writes into a bank from memoQ; you edit the files yourself, in Obsidian or any text editor.
 
 ## Troubleshooting
 

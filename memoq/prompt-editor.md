@@ -40,6 +40,10 @@ Prompts use `{{SOURCE_LANGUAGE}}` and `{{TARGET_LANGUAGE}}` rather than naming l
 
 **Available in** can be *both*, *trados* or *memoq*. memoQ's dropdown hides prompts marked for Trados only. Leave it on *both* unless a prompt genuinely depends on something one product cannot supply.
 
+A prompt tied to one product says so in its **filename**: `Patent claims EN-NL [memoQ].md`, `Define [Trados].md`. Prompts available to both carry no marker, so the absence of one is itself readable – which is the point, because in Explorer the metadata header is not visible and every prompt otherwise looks alike.
+
+The marker is written from the **Available in** field on every save and stripped again on every read, so it is a label rather than a setting. Renaming the file in Explorer does not change which product a prompt is for, and the next save puts the old marker back: change the field, not the filename. The editor’s tree and the Prompt dropdown show the same thing in words.
+
 ## Where the library lives
 
 `C:\Users\<you>\Supervertaler\prompt_library\` – one Markdown file per prompt, with a small metadata header. **Open folder** in the editor takes you there. The files are plain text; nothing stops you editing them directly, and a folder synced between machines carries the whole library with it.
@@ -50,13 +54,21 @@ Press **AutoPrompt…** in the editor’s toolbar, or choose it from the **memoQ
 
 Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative.
 
+**Preview context…** shows you exactly what will be sent, before anything is sent: the extract from your document, the glossary hits, the segments you have confirmed, the briefing you typed, and the instructions the AI is given about writing a prompt for memoQ. It makes no API call and costs nothing, and the briefing box stays open behind it – so the loop is look, add what is missing, look again, then generate.
+
 Three things to know:
 
 - **memoQ must be running with a Supervertaler engine active**, and the document must have been captured – one Pre-translate does it (free, with the [Claude Desktop box](/memoq/mcp-server/#the-checkbox) ticked). The plugin only sees what memoQ has sent it.
 - **It uses the provider, model and API key from your Supervertaler settings.** Two calls: a short one to classify the document, then a long one to write the prompt. Expect a minute or two.
-- **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request. Inline translator comments work as in Trados, with one difference: a genuinely necessary note appears in the target as a `[[TC: …]]` marker – double square brackets rather than Trados's `⟦ ⟧`, because those glyphs are missing from Tahoma, Verdana and Calibri and show as empty boxes in memoQ's grid. Search for `[[TC:` to find them while reviewing.
+- **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request.
 
 Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
+
+### Translator comments
+
+Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original – a drafted prompt has the AI put it inline at the end of the target as a `[[TC: …]]` marker. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
+
+Nothing extracts these for you, and that is deliberate. You read them in the grid as you review, decide which are worth keeping, turn those into real memoQ comments on the segment, and delete the marker from the text. Search for `[[TC:` to find them all.
 
 ## Export glossary: the prompt's terms as the project glossary
 
@@ -68,11 +80,29 @@ The file is plain text – edit it freely; the plugin re-reads it whenever it ch
 
 ### Settings
 
-**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per batch, and whether termbase hits and surrounding segments are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
+**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per request, and whether termbase hits and surrounding segments are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
+
+The **Model** list is filled from the provider’s own catalogue, so new models appear without an update to Supervertaler: choose the provider and its models are listed under their proper names. The list is fetched once and kept for a day. It stays typeable, so a gateway, a private deployment or a model the provider has not yet published can be entered by hand.
+
+**Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself as well, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
 The **API key** is here too. If you also run Supervertaler for Trados, leave it alone: Trados keeps its keys in the same data folder, this reads them, and the box tells you so. Rotating a key there is then the only change you need to make. Type a key here only to override that, and clear the box to go back to the shared one.
+
+## The Activity window
+
+memoQ’s Pre-translate dialog is modal and says only *Processing*, for as long as the run takes: no engine, no model, no count, and no sign when something is wrong. **memoQ → Activity…**, or **Ctrl+L**, opens a window that shows what Supervertaler is actually doing.
+
+<!-- screenshot: the activity window during a pre-translate run -->
+
+It is a window of its own rather than a panel so that it can sit over memoQ while that dialog holds the screen. Tick **Keep on top** and you can watch a Pre-translate run from the first batch to the last.
+
+What it shows: the engine and model each project starts with, the glossary as it loads and how many terms came out of it, warnings when the selected prompt or glossary faces the opposite language pair, every batch with the segments sent, the segments returned and the glossary terms matched, AutoPrompt drafts, and anything that failed. A batch that comes back short is called out rather than logged flatly, because that is the failure that quietly shifts every translation after it.
+
+**Show everything** un-hides the per-request diagnostics – memoQ’s capability probes, lookup sessions, single-segment translations – which are what you want when something is wrong and noise the rest of the time.
+
+The window reads the plugin’s own log, `C:\Users\<you>\AppData\Local\Supervertaler.memoQ\plugin.log`, rather than being fed by the plugin. So it shows what happened before you opened it, it works whether or not memoQ is running, and closing it costs nothing. Its position and size are remembered.
 
 ## Drafting prompts with Claude
 
