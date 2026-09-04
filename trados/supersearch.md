@@ -69,8 +69,14 @@ Only the termbases you have **switched on** are searched — Supervertaler termb
 
 Termbase hits show the **termbase name in green** and its **kind** in the Status column (`Supervertaler`, `MultiTerm` or `TTB`).
 
+#### Editing a term from the results *(from v18.20.187)*
+
+Right-click a Supervertaler termbase hit and choose **Edit term…** to open it in the **Edit term entry** dialog — the same one TermLens opens from a chip — with the termbase already resolved. Save, and the results refresh to show the corrected term; TermLens picks the change up immediately. Right-clicking selects the row under the pointer, so you need not click it first.
+
+Two kinds of hit cannot be edited here, and the menu says so if you try: **MultiTerm** and `.ttb` entries, which are read-only throughout Supervertaler (edit them in MultiTerm), and hits from a termbase that SuperSearch read straight from the database because TermLens had not finished loading it — open that termbase in the Termbase Editor instead, or search again once TermLens has loaded.
+
 :::note
-TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, edit it in the termbase.
+TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, right-click its row and choose **Edit term…** (see below).
 :::
 
 ### Searching the web *(from v18.20.181)*
