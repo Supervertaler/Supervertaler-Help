@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ai Proofreader"
 ---
 
@@ -69,9 +69,15 @@ Click any issue card to navigate directly to that segment in the Trados editor. 
 
 Each issue card has a checkbox. Tick it to dismiss the issue and remove it from the list. This lets you work through the results one by one, keeping track of which issues you have already addressed. When all issues have been dismissed, the Reports tab shows "All issues addressed – well done!"
 
+### Saving the report (from v18.20.187)
+
+Every completed proofreading run is written to disk automatically, as a Markdown file in `trados\eports` inside your Supervertaler data folder \– one section per segment with the issue, suggestion, evidence, source and target. The footer of the Reports tab names the file (hover it for the full path), and the Batch Operations log shows the path too. So a report that has been cleared, or lost when Studio refreshes the panel, is never gone.
+
+To keep a copy somewhere else \– a client folder, an email attachment \– click **Save report\…** next to **Clear**. It writes the same Markdown to a location of your choice, and it is only enabled while a proofreading report is showing.
+
 ### Clearing Results
 
-Click the **Clear** button at the top of the Reports tab to remove all results and start fresh.
+Click the **Clear** button at the top of the Reports tab to remove all results and start fresh. The automatic copy on disk is unaffected.
 
 ### Run Summary
 

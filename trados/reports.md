@@ -1,4 +1,4 @@
----
+﻿---
 title: "Reports"
 ---
 
@@ -7,6 +7,8 @@ The **Reports** tab in the Supervertaler Assistant panel is where the assistant 
 ## Proofreading results
 
 When you run the **AI Proofreader** (the Proofread mode of [Batch Operations](/trados/batch-operations/)), each issue the AI finds is shown here as a clickable card. See [AI Proofreader](/trados/ai-proofreader/) for the full workflow and what each card contains.
+
+Since v18.20.187 every completed run is also written to `trados\eports` in your data folder as Markdown, and **Save report\…** next to **Clear** writes a copy wherever you choose. The button is enabled only while a proofreading report is showing.
 
 ## AI operation log
 
