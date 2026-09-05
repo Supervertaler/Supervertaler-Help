@@ -1,4 +1,4 @@
----
+﻿---
 title: "Termbase Management"
 ---
 
@@ -54,12 +54,14 @@ You can import terminology from a tab-separated values file:
 1. Select the target termbase in the list
 2. Click **Import from TSV**
 3. Select your `.tsv` file
-4. A confirmation dialog shows the filename, row count, termbase name, and language pair -- check that you are importing into the right termbase
+4. A column-mapping dialog opens (from v18.20.187): one row per column in the file, with a sample of its contents and a dropdown saying which termbase field it goes to. It is pre-filled from the file's headers, so a file exported by Supervertaler needs no changes -- check the row count, termbase name and language pair in the heading, and click **Import**. For a file with no language headers, or with the target column first, set the source and target yourself; any column you do not want goes to *ignore*
 5. A progress bar tracks the import (useful for large termbases with thousands of terms)
+
+If the file's languages are the other way round from the termbase, or are not its pair at all, the dialog says so in a note under the grid. The mapping it suggests already accounts for a reversed file.
 
 **File format:**
 
-The first row must be a header row. Recognised column headers (case-insensitive):
+The first row must be a header row. Headers the dialog recognises on its own (case-insensitive) -- anything else can still be mapped by hand:
 
 | Column | Required | Recognised headers |
 |--------|----------|-------------------|
@@ -68,7 +70,8 @@ The first row must be a header row. Recognised column headers (case-insensitive)
 | Term UUID | No | `Term UUID`, `UUID`, `Term ID`, `ID` |
 | Priority | No | `Priority`, `Prio`, `Rank` |
 | Domain | No | `Domain`, `Subject`, `Field`, `Category` |
-| Notes | No | `Notes`, `Note`, `Definition`, `Comment` |
+| Definition | No | `Definition` |
+| Notes | No | `Notes`, `Note`, `Comment`, `Description` |
 | Project | No | `Project` |
 | Client | No | `Client`, `Customer` |
 | Forbidden | No | `Forbidden`, `Do not use` |
