@@ -59,6 +59,8 @@ You can import terminology from a tab-separated values file:
 
 If the file's languages are the other way round from the termbase, or are not its pair at all, the dialog says so in a note under the grid. The mapping it suggests already accounts for a reversed file.
 
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Import-from-TSV-columns.jpg" alt="The Import from TSV columns dialog: one row per column of the file, showing the header, the values in the first three rows, and an Import as dropdown for each"><figcaption>The column-mapping dialog, here on a Supervertaler export: every column recognised, the two language columns mapped to source and target. Each line is one column of the file; Row 1 to Row 3 show what that column holds.</figcaption></figure>
+
 **File format:**
 
 The first row must be a header row. Headers the dialog recognises on its own (case-insensitive) -- anything else can still be mapped by hand:
