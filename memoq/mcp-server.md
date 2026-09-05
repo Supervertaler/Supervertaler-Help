@@ -104,7 +104,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `lookup_term` / `add_term` | ✓ | Your Supervertaler [glossary](/memoq/terminology/), not memoQ's term bases |
 | `stage_translations` | ✓ | **The write channel.** Translations wait until you Pre-translate |
 | `get_staged` / `clear_staged` | ✓ | Inspect and reset the staging area |
-| `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/) |
+| `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/). A prompt Claude saves is recorded as drafted by the chat and marked for memoQ, so it does not appear in Trados’s list and the runtime treats its terminology the way it treats [AutoPrompt’s](/memoq/prompt-editor/#a-drafted-prompt-is-the-only-source-of-terminology) |
 | `list_supermemory_banks` | ✓ | Your [memory banks](#memory-banks), and how many articles each holds |
 | `get_supermemory_context` | ✓ | One bank’s brief, terminology and style, formatted for the model |
 | `search_supermemory` | ✓ | Full-text search inside a bank |
@@ -141,7 +141,7 @@ Four things behave differently from the Trados plugin, and they are worth knowin
 
 - **Claude is not told which bank is active.** You choose one in the [editor’s context bar](/memoq/prompt-editor/#what-memoq-is-using), and it is remembered per project – but that is what the plugin sends with its own translation requests. Over MCP the bank is named in the request instead, so say which one you mean. Claude will ask, or list them and let you choose.
 - **A name that does not exist is an error**, not a fall back to something else. Falling back would look exactly like success while feeding the model another client’s terminology, and nothing in the answer would say so.
-- **`_shared` is always underneath.** It is not a bank you select: whatever you do select is layered over it, and wins wherever the two disagree.
+- **`_shared` is always underneath, and travels alone.** It is not a bank you select: whatever you do select is layered over it and wins wherever the two disagree – and when you select no client bank, `_shared` still goes on its own. Choosing "no client bank" is not the same as sending nothing.
 - **The answer is trimmed to about 6,000 tokens**, and whatever did not fit is listed under `trimmed` in the reply rather than dropped in silence. A tool result stays in the conversation and is re-sent on every following turn, so it is kept deliberately small – ask for a larger budget, or for one article by name, when you need the rest.
 
 Reading is all this does. Nothing writes into a bank from memoQ; you edit the files yourself, in Obsidian or any text editor.

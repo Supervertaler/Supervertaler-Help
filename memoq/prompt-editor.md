@@ -35,13 +35,19 @@ Any settings the file carries that the editor does not have a field for – tags
 
 ### What memoQ is using
 
-Under the toolbar, three things memoQ will apply to every translation:
+The bar under the toolbar opens with the **memoQ project** these apply to, because everything on it is recorded against a project. When it reads **no project yet**, in red, memoQ has not sent a translation request and the plugin does not know where it is – usually because Supervertaler is not selected as the MT engine in a newly created project. A memory bank chosen at that moment is filed against whichever project came before, silently, so it is worth a glance before changing anything.
 
-**Prompt**, **Glossary** and **Memory bank**. Click any of them to change it. Prompt and Memory bank open a list with a filter box rather than a dropdown menu, because both grow with the work – a prompt library reaches forty entries quickly, and a bank per client does the same. Glossary opens a file dialog, because a glossary is a file and can live anywhere.
+Then three things memoQ will apply to every translation:
+
+**Prompt**, **Glossary** and **Memory bank**. Click any of them to change it. Each opens a list with a filter box rather than a dropdown menu, because all three grow with the work – a prompt library reaches forty entries quickly, and a bank per client does the same. All three can also be set to nothing: the glossary list has a **(none)** row, and a **Browse…** row at the end for a glossary that lives outside the glossaries folder.
 
 These are the choices that change between jobs, which is why they are here rather than in Translation settings: they are what the model knows before it is shown a segment. Each is also the same setting memoQ’s own dialog shows, so either place can change it.
 
-The memory bank is remembered **per project**. Choose one while working on a job and it comes back when you return to that job – and a project you have never chosen one for uses *no* bank rather than inheriting the last one, because a bank carries one client’s terminology and the wrong one is worse than none. See [Memory banks](/memoq/mcp-server/#memory-banks) for where they live.
+The memory bank is remembered **per project**. Choose one while working on a job and it comes back when you return to that job – and a project you have never chosen one for does *not* inherit the last one, because a bank carries one client’s terminology and the wrong one is worse than none.
+
+What such a project gets instead is the row called **(no client bank – shared defaults only)**. Your `_shared` bank still travels: it is where the material that applies to every job regardless of client lives, so it is never switched off by not choosing a client. See [Memory banks](/memoq/mcp-server/#memory-banks) for where they live.
+
+A bank is sent whole with **every** translation request, up to about 32,000 tokens, and to AutoPrompt up to 40,000. Anything that does not fit is dropped by priority and named in the [Activity window](#the-activity-window) rather than lost quietly – if you see a file listed there, that is the budget, not a fault. The cost of carrying it is small because the same text is sent every time and providers cache it: on one 370-segment run the bank and prompt together came to 45,870 tokens, and caching turned roughly $10 into roughly $4.
 
 ### Placeholders
 
@@ -65,7 +71,9 @@ The marker is written from the **Available in** field on every save and stripped
 
 Press **AutoPrompt…** in the editor’s toolbar, or choose it from the **memoQ** menu. Supervertaler reads the document you are translating, your glossary hits in it and anything you have already confirmed, and has the AI write a prompt tailored to that job – domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
 
-Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative.
+Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative. The briefing is the one input nothing else supplies: the filing route, a discrepancy you already know about, anything true of this job that is not in the document or the memory bank.
+
+The two checkboxes grey out when they have nothing to offer – no glossary is active, or nothing has been confirmed in this document yet – and say which it is, rather than sitting there ticked and doing nothing.
 
 **Preview context…** shows you exactly what will be sent, before anything is sent: the extract from your document, the glossary hits, the segments you have confirmed, the briefing you typed, and the instructions the AI is given about writing a prompt for memoQ. It makes no API call and costs nothing, and the briefing box stays open behind it – so the loop is look, add what is missing, look again, then generate.
 
@@ -76,6 +84,18 @@ Three things to know:
 - **The prompt is written for memoQ, not copied from the Trados recipe.** Single-segment lookups are handled as well as batches; tag markers must be reproduced exactly; translations you have confirmed outrank the prompt's own glossary; and it is kept to 1,500–3,000 words because memoQ re-sends the whole prompt with every ten-segment request.
 
 Draft it again later in the job and it gets better: by then it can see what you have confirmed, which is stronger evidence of how you want *this* document translated than the source text alone.
+
+### A drafted prompt is the only source of terminology
+
+A prompt AutoPrompt wrote ends in a locked-terms table chosen for this document. So while one is selected, **the glossary’s preferred renderings are not sent to the model as well** – two lists of terminology that were never written to agree, with nothing saying which wins, is a worse position than one list.
+
+**Forbidden terms still go.** A preferred rendering is advice, and two sources of advice can contradict each other confusingly; "never use this word" is a constraint, and there are few of them. So they travel whatever prompt is selected.
+
+Nothing else about the glossary changes: it still drives the terminology pane, the QA check and AutoPrompt’s own reading of the document. Only the per-request injection stops, and the [Activity window](#the-activity-window) says so once per prompt.
+
+The consequence worth remembering: a term you forbid **after** a prompt was drafted is enforced immediately, but a preferred rendering you add afterwards is not – draft the prompt again to take it in. **Export glossary** is the other half of that loop: derive the glossary *from* the prompt and the two cannot contradict each other in the first place.
+
+Prompts saved from the chat over [MCP](/memoq/mcp-server/) count as drafted too, and are marked for the product you were connected to.
 
 ### Translator comments
 
@@ -112,6 +132,12 @@ memoQ’s Pre-translate dialog is modal and says only *Processing*, for as long 
 It is a window of its own rather than a panel so that it can sit over memoQ while that dialog holds the screen. Tick **Keep on top** and you can watch a Pre-translate run from the first batch to the last.
 
 What it shows: the engine and model each project starts with, the glossary as it loads and how many terms came out of it, warnings when the selected prompt or glossary faces the opposite language pair, every batch with the segments sent, the segments returned and the glossary terms matched, AutoPrompt drafts, and anything that failed. A batch that comes back short is called out rather than logged flatly, because that is the failure that quietly shifts every translation after it.
+
+Three lines are worth knowing by sight:
+
+- **Bank** – which memory bank a project switched to, and once per job how much of it is being sent. If it ends with a file listed as *not sent*, that is the budget trimming by priority, not a fault.
+- **Terminology** – said once when a drafted prompt is holding the glossary back, so a quiet change to what reaches the model is never silent.
+- **The token count on each batch** – `tokens: in 1,041 (cache write 45,870) out 1,233`. The prompt and the bank are identical on every request of a run, so providers cache them: the first batch writes, the rest read at a tenth of the rate. If *cached* never appears across a long run, something is re-sending the block at full price.
 
 **Show everything** un-hides the per-request diagnostics – memoQ’s capability probes, lookup sessions, single-segment translations – which are what you want when something is wrong and noise the rest of the time.
 
