@@ -71,9 +71,14 @@ Each issue card has a checkbox. Tick it to dismiss the issue and remove it from 
 
 ### Saving the report (from v18.20.187)
 
-Every completed proofreading run is written to disk automatically, as a Markdown file in `trados\eports` inside your Supervertaler data folder \– one section per segment with the issue, suggestion, evidence, source and target. The footer of the Reports tab names the file (hover it for the full path), and the Batch Operations log shows the path too. So a report that has been cleared, or lost when Studio refreshes the panel, is never gone.
+Every completed proofreading run is written to disk automatically, as a Markdown file in `trados\
+eports` inside your Supervertaler data folder – one section per segment with the issue, suggestion, evidence, source and target. The footer of the Reports tab names the file (hover it for the full path), and the Batch Operations log shows the path too. So a report that has been cleared, or lost when Studio refreshes the panel, is never gone.
 
-To keep a copy somewhere else \– a client folder, an email attachment \– click **Save report\…** next to **Clear**. It writes the same Markdown to a location of your choice, and it is only enabled while a proofreading report is showing.
+To keep a copy somewhere else – a client folder, an email attachment – click **Save report…** next to **Clear**. It writes the same Markdown to a location of your choice, and it is only enabled while a proofreading report is showing.
+
+### The report stays until you are finished (from v18.20.187)
+
+The report also stays in the Reports tab until you clear it. Close Studio and reopen the document, or switch to another document and back, and the report is put back as you left it: the issues you had ticked off stay ticked off, and clicking a card still takes you to the segment. A report is only ever restored for the document it was made on. Press **Clear** when you are done with it.
 
 ### Clearing Results
 
