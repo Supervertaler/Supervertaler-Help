@@ -139,7 +139,7 @@ Ask for what you want and Claude picks the tool: *“list my memory banks”*, *
 
 Four things behave differently from the Trados plugin, and they are worth knowing before you rely on this:
 
-- **No bank is chosen for you.** The Trados plugin has a bank picker and remembers your choice per project; memoQ has nowhere to put one yet, so the bank is named in the request. Claude will ask, or will list them and let you say which.
+- **Claude is not told which bank is active.** You choose one in the [editor’s context bar](/memoq/prompt-editor/#what-memoq-is-using), and it is remembered per project – but that is what the plugin sends with its own translation requests. Over MCP the bank is named in the request instead, so say which one you mean. Claude will ask, or list them and let you choose.
 - **A name that does not exist is an error**, not a fall back to something else. Falling back would look exactly like success while feeding the model another client’s terminology, and nothing in the answer would say so.
 - **`_shared` is always underneath.** It is not a bank you select: whatever you do select is layered over it, and wins wherever the two disagree.
 - **The answer is trimmed to about 6,000 tokens**, and whatever did not fit is listed under `trimmed` in the reply rather than dropped in silence. A tool result stays in the conversation and is re-sent on every following turn, so it is kept deliberately small – ask for a larger budget, or for one article by name, when you need the rest.

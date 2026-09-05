@@ -24,11 +24,24 @@ Press **Edit…** beside the Prompt dropdown.
 
 - **Left:** the library as a tree, folders and prompts. Select one to open it.
 - **Right:** name, description, which product it is for, sort order, and the prompt text with Markdown headings and `{{PLACEHOLDERS}}` highlighted.
-- **Toolbar:** New prompt, New folder, Delete, Save, Insert placeholder, Reload from disk, Open folder.
+- **Toolbar, left:** New, Save, Placeholder, AutoPrompt.
+- **Toolbar, right:** whether Pre-translate goes to Claude Desktop, the [Activity window](#the-activity-window), and Translation settings. Everything else is on the **File**, **memoQ**, **Settings** and **Help** menus.
+
+The **Claude Desktop** button on the right is a switch, not a command, and its caption says which mode is *on* rather than what pressing it would do. It decides whether Pre-translate spends your API key or hands the segments to the chat, so it is worth a glance before a long run. It is the same setting as **Settings → Pre-translate via Claude Desktop**, and as the checkbox in memoQ’s own dialog – change it anywhere and all three follow.
 
 Save with **Ctrl+S**. A prompt marked read-only in the library (the built-in defaults) can be read but not overwritten; make a copy under a new name instead.
 
 Any settings the file carries that the editor does not have a field for – tags, favourites, QuickLauncher flags set by the Trados plugin – are preserved untouched on save. The status line under the description says which ones the file has.
+
+### What memoQ is using
+
+Under the toolbar, three things memoQ will apply to every translation:
+
+**Prompt**, **Glossary** and **Memory bank**. Click any of them to change it. Prompt and Memory bank open a list with a filter box rather than a dropdown menu, because both grow with the work – a prompt library reaches forty entries quickly, and a bank per client does the same. Glossary opens a file dialog, because a glossary is a file and can live anywhere.
+
+These are the choices that change between jobs, which is why they are here rather than in Translation settings: they are what the model knows before it is shown a segment. Each is also the same setting memoQ’s own dialog shows, so either place can change it.
+
+The memory bank is remembered **per project**. Choose one while working on a job and it comes back when you return to that job – and a project you have never chosen one for uses *no* bank rather than inheriting the last one, because a bank carries one client’s terminology and the wrong one is worse than none. See [Memory banks](/memoq/mcp-server/#memory-banks) for where they live.
 
 ### Placeholders
 
@@ -86,7 +99,7 @@ The **Model** list is filled from the provider’s own catalogue, so new models 
 
 **Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
-**Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself as well, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
+**Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself, and on the right of the toolbar, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
 The **API key** is here too. If you also run Supervertaler for Trados, leave it alone: Trados keeps its keys in the same data folder, this reads them, and the box tells you so. Rotating a key there is then the only change you need to make. Type a key here only to override that, and clear the box to go back to the shared one.
 
