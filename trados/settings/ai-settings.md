@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ai Settings"
 ---
 
@@ -48,6 +48,12 @@ Enter the API key for your selected provider. The key is stored locally and neve
 ## Model selection
 
 A dropdown showing a curated list of recommended models for the selected provider.
+
+### Fetching the provider's own list (from v18.20.187)
+
+Click **Models…** beside the dropdown to ask the provider for its current model list, using the API key in the box (it need not be saved yet). Every provider publishes one – Anthropic, OpenAI, Gemini, Mistral, DeepSeek, xAI, OpenRouter, Ollama and custom OpenAI-compatible endpoints. Models not in the built-in list are added to the dropdown with the provider's own name for them, remembered across restarts, and shown in the Batch Operations and chat model menus as well. The status line says how many models the provider listed and how many were new. Built-in entries keep their descriptions; fetched ones show when they were fetched.
+
+This is the way to use a model released after your plugin build – fetch, pick it, OK.
 
 ### Model ID
 
