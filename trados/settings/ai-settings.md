@@ -14,9 +14,9 @@ Choose one of the supported AI providers:
 
 | Provider | Models | Where to get a key |
 |----------|--------|--------------------|
-| **OpenAI** | GPT-5.5, GPT-5.4 Mini | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
-| **Claude (Anthropic)** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 | [console.anthropic.com](https://console.anthropic.com) |
-| **Gemini (Google)** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| **OpenAI** | GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.4 Mini | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
+| **Claude (Anthropic)** | Claude Sonnet 5, Claude Haiku 4.5, Claude Opus 5, Claude Fable 5.1 | [console.anthropic.com](https://console.anthropic.com) |
+| **Gemini (Google)** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 3.1 Pro (Preview) | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
 | **Mistral AI** | Mistral Large, Mistral Small | [console.mistral.ai](https://console.mistral.ai) |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash | [platform.deepseek.com](https://platform.deepseek.com) |
