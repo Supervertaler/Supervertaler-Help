@@ -33,6 +33,10 @@ The preview works in both **API mode** and **Clipboard Mode** without switching,
 
 Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) translates the first segments of the document with three models under exactly these batch settings and has a judge compare them blind, with a recommendation for this project. Nothing is written to the document. See [SuperBench](/trados/superbench/).
 
+### List numbering as structure context
+
+Word's claim numbers, lettered steps and bullets are not segment text, so by default the AI never sees them. With **Send list numbering to the AI as structure context** ticked in [AI Settings](/trados/settings/ai-settings/#send-list-numbering-to-the-ai-as-structure-context-from-v1820188) (from v18.20.188), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
+
 ### AutoPrompt
 
 The Batch Operations tab also includes an **[AutoPrompt](/trados/generate-prompt/)** link that uses AI to create a comprehensive, domain-specific translation prompt based on your project's content, terminology, and TM data.

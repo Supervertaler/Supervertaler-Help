@@ -192,6 +192,18 @@ Increase this for very large documents where you want the AI to see more content
 This setting is only available when **Include full document content** is enabled.
 :::
 
+#### Send list numbering to the AI as structure context (from v18.20.188)
+
+Word numbers claims, letters steps and bullets lists as paragraph properties, not as text. The segment grid never contains the `a)` or the `9.`, and until this setting neither did anything the AI received. On a patent, that means the model reads six unlettered steps and can conclude the source forgot to letter them – on a real document it translated "steps a. to f." faithfully and then flagged it as a possible source defect, a note that would have reached the client.
+
+With this ticked, Batch Translate, Translate Segment, Clipboard Mode and SuperBench prefix the first segment of every numbered paragraph with the marker Word renders, inside a sentinel: `[#e)]het fixeren…`, `[#9.]Werkwijze…`, `[#•]een behuizing…`. A rule in the plugin's own preamble tells the model that this is structure – use it to resolve cross-references and keep list items parallel, never translate it, never include it in the output. The rule ships with every request, including prompts you wrote yourself and AutoPrompt's, because it lives in the plugin and not in a prompt template. **Preview prompt** shows exactly what goes out.
+
+The markers come from the original Word file that Studio keeps inside the sdlxliff, and are computed for the whole document at once, so a list that restarts at claim 11 reads `11.` and lettered steps that continue from one claim into the next keep counting – exactly as Word shows them. The batch log says how many markers were found and how many segments in the run carry one.
+
+Two safety nets: anything the model echoes back in a target is removed before the segment is written and logged in the batch log, and the TMX backup records the segment as Studio has it, without the sentinel. Files that are not Word documents, and Word files without any lists, get a one-line fallback rule instead: the numbering exists, is not in the text, and its absence is not a defect.
+
+Off by default in this version. It is worth turning on for anything with numbered claims or lettered steps; check the batch log the first few runs for lines saying a marker was echoed and removed, which tell you how well the model you use obeys the rule.
+
 #### Include term definitions and domains
 
 When enabled, term definitions, domains, and usage notes from your termbases are included alongside matched terminology in the AI prompt. This gives the AI deeper understanding of your terminology – for example, knowing that a term belongs to the legal domain or has a specific definition helps the AI use it correctly in both chat responses and batch translations.
