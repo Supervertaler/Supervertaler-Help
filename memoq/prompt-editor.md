@@ -129,7 +129,23 @@ memoQ’s own **Configure plugin** dialog has the same three controls, reading a
 
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself, and on the right of the toolbar, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
-The **API key** is here too. If you also run Supervertaler for Trados, leave it alone: Trados keeps its keys in the same data folder, this reads them, and the box tells you so. Rotating a key there is then the only change you need to make. Type a key here only to override that, and clear the box to go back to the shared one.
+### API keys live in one file
+
+Every Supervertaler product reads the same file:
+
+```
+C:\Users\<you>\Supervertaler\settings\api-keys.json
+```
+
+One key per provider, plain text, editable in Notepad. A key pasted here works in Supervertaler for Trados and Supervertaler Sidekick as well, and rotating one means changing one line in one place. Before this file existed there were three dialogs in three products each keeping their own, which is how an hour goes missing to a key for one service pasted into another’s box.
+
+Keys are stored under the provider ids `claude`, `openai` and `gemini`. Sidekick keeps its machine-translation keys in the same file under their own names – note that `google` there is Google Translate, not Gemini.
+
+Plain text is deliberate, and the same choice Supervertaler for Trados has always made: a key that can be rotated by pasting a line into a text file is a key that actually gets rotated, and anyone who can read that file can already read everything else in your profile.
+
+The **API key** box shows the key for the provider you have selected and writes back to that file. If you had a key configured before the file existed – in memoQ’s own settings, or in Trados’s – it is copied in the first time Supervertaler needs it, so there is nothing to do.
+
+If you paste a key that plainly belongs to another service, the line under the box says so as you type: *This is an OpenAI key, not an Anthropic one.* That is worth more than the provider’s own answer, which is that the key is incorrect.
 
 ## The Activity window
 
