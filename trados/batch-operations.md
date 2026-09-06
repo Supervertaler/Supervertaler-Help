@@ -1,4 +1,4 @@
----
+﻿---
 title: "Batch Operations"
 ---
 
@@ -29,6 +29,10 @@ This is useful for:
 
 The preview works in both **API mode** and **Clipboard Mode** without switching, and is available for both Translate and Proofread.
 
+### SuperBench
+
+Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) translates the first segments of the document with three models under exactly these batch settings and has a judge compare them blind, with a recommendation for this project. Nothing is written to the document. See [SuperBench](/trados/superbench/).
+
 ### AutoPrompt
 
 The Batch Operations tab also includes an **[AutoPrompt](/trados/generate-prompt/)** link that uses AI to create a comprehensive, domain-specific translation prompt based on your project's content, terminology, and TM data.
@@ -36,6 +40,7 @@ The Batch Operations tab also includes an **[AutoPrompt](/trados/generate-prompt
 ## See Also
 
 * [Clipboard Mode](/trados/clipboard-mode/)
+* [SuperBench](/trados/superbench/)
 * [AutoPrompt](/trados/generate-prompt/)
 * [Prompts](/trados/settings/prompts/)
 * [AI Settings](/trados/settings/ai-settings/)
