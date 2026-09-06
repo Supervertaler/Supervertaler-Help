@@ -43,7 +43,13 @@ An API key is a billing credential. Anyone who has it can spend money on your ac
 
 ## API key
 
-Enter the API key for your selected provider. The key is stored locally and never sent anywhere except to the provider's API endpoint.
+Enter the provider's API key here. **Test Connection** checks it with a small call.
+
+### One key file for every product (from v18.20.187)
+
+Keys are kept in one file shared by Supervertaler for Trados, Supervertaler for memoQ and Supervertaler Sidekick: `settings\api-keys.json` in your Supervertaler data folder, one line per provider, in plain text. Whatever you type here is written to that file, and the other products read it, so a key pasted once works everywhere. The file is filled from the plugin's existing keys the first time it is missing, so nothing needs retyping after the update. You can also edit it in Notepad.
+
+The key box says so when a key plainly belongs to another service. Each provider's keys have a recognisable start: Anthropic `sk-ant-`, OpenAI `sk-` or `sk-proj-`, Gemini `AIza`, xAI `xai-`, OpenRouter `sk-or-`.
 
 ## Model selection
 
