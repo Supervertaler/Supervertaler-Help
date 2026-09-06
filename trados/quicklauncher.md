@@ -1,4 +1,4 @@
----
+﻿---
 title: "QuickLauncher"
 ---
 
@@ -253,20 +253,21 @@ Each QuickLauncher prompt can be configured to offer a **Copy to clipboard** des
 
 A common workflow: keep an ongoing project on claude.ai for the document you're translating (with your style guide and reference material attached), and use a QuickLauncher prompt to send the active segment, surrounding context, and TM matches to that project with one keystroke.
 
-#### Enabling clipboard mode for a prompt
+#### Choosing what a menu entry does (from v18.20.187)
 
-1. Open **Settings → Prompts** and double-click the QuickLauncher prompt you want to configure (or create a new one)
-2. In the Prompt Editor, find the **Mode** row
-3. Tick **Copy to clipboard** alongside (or instead of) **Send to Assistant**
-4. If both are ticked, pick which one should be the **Default** from the dropdown
-5. Click **Save**
+1. Open **Settings → Library** and double-click the QuickLauncher prompt you want to configure (or create a new one in the QuickLauncher folder)
+2. In the Prompt Editor, set **When run** to one of:
+   * **Send to the AI Assistant** – the expanded prompt goes to the Assistant panel (the default)
+   * **Copy to the clipboard** – it goes to the Windows clipboard instead
+   * **Ask me each time** – the entry becomes a submenu offering both
+3. Click **OK**
 
-<figure><img src="/.gitbook/assets/Supervertaler-QuickLauncher-mode-row.png" alt="The Mode row in the Prompt Editor, showing Send to Assistant and Copy to clipboard checkboxes plus a Default dropdown"><figcaption><p>The Mode row in the Prompt Editor.</p></figcaption></figure>
+The editor asks nothing else about the menu: a prompt is in the QuickLauncher menu because it lives in the QuickLauncher folder. To keep a built-in entry out of the menu without deleting it, right-click it in the Library tab and choose **Hide from QuickLauncher menu**.
 
 #### How it appears in the menu
 
-* **One mode ticked** – the prompt appears as a flat menu item, exactly as before. Clicking it fires that single mode.
-* **Both modes ticked** – the prompt appears as a **cascading submenu**. The default mode is shown first; hover or press the right arrow to reveal both options.
+* **Send** or **Copy** – the prompt appears as a flat menu item. Clicking it does that one thing.
+* **Ask me each time** – the prompt appears as a **cascading submenu**, Send first; hover or press the right arrow to reveal both options.
 
 The submenu items have mnemonic keys, so once a prompt is highlighted you can press:
 
