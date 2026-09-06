@@ -117,9 +117,11 @@ The file is plain text – edit it freely; the plugin re-reads it whenever it ch
 
 The **Model** list is short on purpose: three to five models per provider, each with a line saying what it is for. A provider’s own catalogue runs to thirty or forty entries – image models, speech models, dated snapshots of the same model – and a list like that is one nobody in a hurry can choose from. A model that has been superseded is removed rather than annotated, so what is left is what is worth using today.
 
-**Models…** asks the provider for its full list, using the API key below. **Show all models** then shows everything it returned under the short list, which is where to look for a model released after your copy of Supervertaler was built. The fetched list is remembered, and so is the tick, so this is a decision you make once. The line under the button says when the list was last fetched and how much of it is beyond the short list.
+**Fetch list** asks the provider for its full list, using the API key below. **Show all models** then shows everything it returned under the short list, which is where to look for a model released after your copy of Supervertaler was built. The fetched list is remembered, and so is the tick, so this is a decision you make once. The line under the button says when the list was last fetched and how much of it is beyond the short list.
 
 The box stays typeable throughout, so a gateway, a private deployment or a model that appears in neither list can be entered by hand – and a model already saved in your settings keeps working whether or not it is in the list on screen.
+
+Changing the provider changes three things together: the model list, the model itself – to that provider’s first recommendation, since a model belonging to another provider can only fail – and the API key, which is re-read for the provider you have just chosen. A key you type here is remembered per provider while the window is open.
 
 memoQ’s own **Configure plugin** dialog has the same three controls, reading and writing the same settings, so it does not matter which one you use.
 

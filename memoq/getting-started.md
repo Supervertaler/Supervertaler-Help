@@ -13,7 +13,7 @@ Click **Configure plugin** and fill in:
 | | |
 |---|---|
 | **Provider** | Anthropic, OpenAI or Google |
-| **Model** | a short list of the models worth recommending for that provider, with a line on each saying what it is for. **Models…** asks the provider for its full catalogue and **Show all models** adds it underneath – that is where to look for a model released after your copy of Supervertaler was built. The box also takes anything typed, for a gateway or a local model |
+| **Model** | a short list of the models worth recommending for that provider, with a line on each saying what it is for. **Fetch list** asks the provider for its full catalogue and **Show all models** adds it underneath – that is where to look for a model released after your copy of Supervertaler was built. The box also takes anything typed, for a gateway or a local model |
 | **API key** | your own key for that provider. If you run Supervertaler for Trados as well, its key is picked up automatically and you can leave this empty |
 | **Endpoint** | leave blank unless you are using a local model or a gateway |
 | **Segments per request** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference) |
