@@ -13,6 +13,8 @@ Which model should you use for this project? SuperBench answers that with eviden
 4. The judge reads the source and the three translations **blind** – labelled A, B and C in a shuffled order, so no brand name colours the verdict – together with the same approved terms and instructions, and writes a short report: a ranked verdict, the significant errors per candidate with segment numbers, how each handled terminology and tags, and a recommendation for this project.
 5. The translations appear side by side above the report, with each model's cost and time. The whole thing is saved as Markdown in `trados\reports` inside your data folder, and **Save report…** writes a copy wherever you like.
 
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-SuperBench.jpg" alt="The SuperBench window after a run: three model slots and a judge at the top, the source and three translations side by side in a table, and the judge's report below with its legend"><figcaption>A finished run on the inline-formatting test document: Claude Opus 5, GPT-5.6 Sol and Gemini 3.1 Pro side by side, judged by Claude Fable 5.1. The legend above the report maps the judge's letters to the models.</figcaption></figure>
+
 ## Running it
 
 1. Open the document and set up the Batch Operations tab as you would for a real run: the prompt, and the termbases ticked for AI on the Termbases tab.
