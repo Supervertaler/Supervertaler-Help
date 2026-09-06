@@ -121,6 +121,8 @@ The **Model** list is short on purpose: three to five models per provider, each 
 
 The box stays typeable throughout, so a gateway, a private deployment or a model that appears in neither list can be entered by hand – and a model already saved in your settings keeps working whether or not it is in the list on screen.
 
+memoQ’s own **Configure plugin** dialog has the same three controls, reading and writing the same settings, so it does not matter which one you use.
+
 **Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself, and on the right of the toolbar, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
