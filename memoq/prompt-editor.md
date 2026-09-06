@@ -115,7 +115,11 @@ The file is plain text – edit it freely; the plugin re-reads it whenever it ch
 
 **Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per request, and whether termbase hits and surrounding segments are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
 
-The **Model** list is filled from the provider’s own catalogue, so new models appear without an update to Supervertaler: choose the provider and its models are listed under their proper names. The list is fetched once and kept for a day. It stays typeable, so a gateway, a private deployment or a model the provider has not yet published can be entered by hand.
+The **Model** list is short on purpose: three to five models per provider, each with a line saying what it is for. A provider’s own catalogue runs to thirty or forty entries – image models, speech models, dated snapshots of the same model – and a list like that is one nobody in a hurry can choose from. A model that has been superseded is removed rather than annotated, so what is left is what is worth using today.
+
+**Models…** asks the provider for its full list, using the API key below. **Show all models** then shows everything it returned under the short list, which is where to look for a model released after your copy of Supervertaler was built. The fetched list is remembered, and so is the tick, so this is a decision you make once. The line under the button says when the list was last fetched and how much of it is beyond the short list.
+
+The box stays typeable throughout, so a gateway, a private deployment or a model that appears in neither list can be entered by hand – and a model already saved in your settings keeps working whether or not it is in the list on screen.
 
 **Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
