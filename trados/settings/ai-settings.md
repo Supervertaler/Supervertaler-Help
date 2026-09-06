@@ -59,9 +59,9 @@ A dropdown showing a curated list of recommended models for the selected provide
 
 By default the dropdown is a short list: the few models worth recommending for translation work, each with a one-line verdict. It is kept current with every release, and a model that has been superseded is removed from it rather than left in with a warning.
 
-Tick **Show all models** beside the dropdown to see everything the provider offers as well. Click **Models…** to ask the provider for its current list, using the API key in the box (it need not be saved yet) – Anthropic, OpenAI, Gemini, Mistral, DeepSeek, xAI, OpenRouter, Ollama and custom OpenAI-compatible endpoints all publish one. Fetching switches **Show all models** on. Models not in the short list appear with the provider's own name for them; dated snapshots and models that are not for translating text (speech, image, transcription, embeddings) are left out. The fetched list and the tick box are remembered across restarts, and the Batch Operations and chat model menus follow them.
+Tick **Show all models** beside the dropdown to see everything the provider offers as well. Click **Fetch list** to ask the provider for its current list, using the API key in the box (it need not be saved yet) – Anthropic, OpenAI, Gemini, Mistral, DeepSeek, xAI, OpenRouter, Ollama and custom OpenAI-compatible endpoints all publish one. Fetching switches **Show all models** on. Models not in the short list appear with the provider's own name for them; dated snapshots and models that are not for translating text (speech, image, transcription, embeddings) are left out. The fetched list and the tick box are remembered across restarts, and the Batch Operations and chat model menus follow them.
 
-This is the way to use a model released after your plugin build: click **Models…**, pick it, OK.
+This is the way to use a model released after your plugin build: click **Fetch list**, pick it, OK.
 
 ### Model ID
 
