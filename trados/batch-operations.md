@@ -39,7 +39,7 @@ Word's claim numbers, lettered steps and bullets are not segment text, so the AI
 
 ### Images (from v18.20.189)
 
-A patent's drawings are not in the file you translate: they sit in a separate "figures as filed" document beside the project, and what each one shows exists only as pixels. The **▣ Images…** link opens a panel for that pipeline:
+The images that belong to a document are often not in the file you translate – a manual's diagrams in a separate file, a patent's drawings in a "figures as filed" document beside the project – and what each one shows exists only as pixels. The **▣ Images…** link opens a panel for that pipeline:
 
 * **Folder** – the reference images folder for this project, remembered per Trados project. **Browse…** to set it.
 * **Found** – the Word documents beside the project, how many images each holds, how many carry a figure label, and how the labels were established (paired by position and checked, taken from nearby text, or withheld when they could not be verified).
