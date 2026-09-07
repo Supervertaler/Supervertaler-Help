@@ -26,13 +26,24 @@ Three things must all be true, under **Options → Terminology plugins**:
 
 Almost always spaces where tabs should be. The glossary options dialog reports how many terms it parsed; if that reads zero with a file selected, open the file in an editor with whitespace visible and check the separators.
 
+### The panel names the wrong project, or nothing reaches the model
+
+The plugin learns which project is open only when memoQ sends it a translation request – an add-in cannot ask. Until the first request of a session, the prompt editor’s panel still names the last project memoQ *did* ask about, and a memory bank chosen at that moment is recorded against that earlier project.
+
+If clicking into a segment does not update the panel, memoQ is not calling the engine at all. Open **Project home → Settings → MT settings** and look for the line **“MT plugins are currently disabled.”** A project checked out from a memoQ server can have MT plugins switched off by the project manager, and there is no client-side setting that overrides it. The terminology provider still works in such a project, because it is not an MT plugin; translation through Supervertaler does not, in any mode, and neither does staging from Claude Desktop, which enters the grid through the same engine. Ask the project manager to allow MT plugins, or take the document out through a bilingual export.
+
+If you chose a memory bank while the panel was stale, open the bank chooser again once the right project is shown – that records the choice against the right project – and check the previous project’s row in `C:\Users\<you>\AppData\Local\Supervertaler.memoQ\memory-bank-projects.txt`, one project GUID per line, in case it now names a bank it should not.
+
 ### The log
 
-Supervertaler writes a diagnostic log to:
+The **Activity** window in the prompt editor (**memoQ → Activity**, or Ctrl+L) shows the same log live. On disk it is:
 
 ```
-C:\Users\<you>\AppData\Local\Temp\Supervertaler-memoQ.log
+C:\Users\<you>\AppData\Local\Supervertaler.memoQ\plugin.log
 ```
+
+with a fallback at `C:\Users\<you>\AppData\Local\Temp\Supervertaler-memoQ.log` if that folder cannot be written.
+
 
 It records what memoQ asked for and what was sent – segment sizes, how many glossary terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
 
