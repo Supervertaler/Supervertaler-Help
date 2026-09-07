@@ -43,16 +43,17 @@ Technical documents – patents, manuals, specifications – point at parts of a
 
 ### Images (from v18.20.189)
 
-The AI sees the text of the documents you translate, not the pictures in them. The **▣ Images…** link opens a panel that takes the images out of the project's source documents and gives the AI a description of each:
+The AI sees the text of your documents, not the pictures in them. The **▣ Images…** link opens a panel that fixes that in two steps, and it tells you at each step what will happen and what it costs.
 
-* **Folder** – the reference images folder for this project, remembered per Trados project. **Browse…** to set it.
-* **Source documents** – the Word documents in the project (the source-language files in Studio's Files view; reference files are skipped), how many images each holds, how many carry a figure label, and how the labels were established (paired by position and checked, taken from nearby text, or withheld when they could not be verified). Nothing outside the project is scanned; if the drawings are in a separate document, add it to the project.
-* **Extract images to folder** – writes the images into the folder, named for their figures (`Figure 01.png`, zero-padded so they sort). Free, no AI call. Re-running overwrites.
-* **Analyse with AI** – shows each image to the AI together with what the document says about it, compares the reference signs it reads against the signs the text cites, and writes the result to `figures.md` in the active memory bank. Costs one AI request per image; the button says how many and to which provider before you click. Asks before replacing an existing `figures.md`, and refuses to start a second run while one is going.
-* **Write figures.md** – writes the inventory from the document's own text alone, without looking at the drawings. Free. Useful before any AI pass, and the column that needs a model to look at the drawings is named as missing rather than left to look complete.
-* The last line says when `figures.md` was last written, how many figures it holds and whether the AI has looked at them yet. It sits at the memory bank's root, so it is read into every prompt.
+**Your documents** – the Word documents in the project (the source-language files in Studio's Files view; reference files are skipped), how many images each holds and how many carry a figure label. Nothing outside the project is scanned; if the pictures are in a separate document, add it to the project.
 
-Buttons that cannot run yet say why: no folder set, no images found, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers in the text** stays a separate link above, because it is a check on the text, not part of this pipeline.
+**Step 1 – Extract images to a folder…** The first time, it asks where to put the images; a new, empty folder next to the job is fine, and the choice is remembered for this project. Then it copies the images out of the documents into that folder, named after their figure numbers (`Figure 01.png`, `Figure 02.png`…). Free, no AI. If you already keep the images in a folder of your own, use **Already have the images in a folder? Choose it…** instead, and later **Change…** to switch folder or **Open folder** to look at them.
+
+**Step 2 – Describe images with AI.** Shows each image to the AI together with what the document says about it, and saves a description of each – what it shows, which figure it is, which parts and numbers appear in it – as `figures.md` in the active memory bank. That file is read by the AI with every request from then on, so it knows what your images mean in this document. One AI request per image; the button says how many and to which provider before you click. It asks before replacing descriptions that already exist. **Describe from the text only** is the free alternative: only what the document itself says about each figure, without looking at the images. Use one or the other.
+
+**Result** – whether the descriptions exist yet, when they were saved, how many figures, and whether they came from the AI or from the text alone.
+
+Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers in the text** stays a separate link above, because it is a check on the text, not part of this pipeline.
 
 ### AutoPrompt
 
