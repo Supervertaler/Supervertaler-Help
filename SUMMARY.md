@@ -1,4 +1,4 @@
-# Table of contents
+﻿# Table of contents
 
 * [Welcome to Supervertaler Docs!](README.md)
 
@@ -58,7 +58,6 @@
 
 * [Supervertaler MCP Server](trados/mcp-server.md)
 * [Supervertaler Bridge](trados/ai-assistant/supervertaler-bridge.md)
-* [Shared TM Bridge with Workbench](trados/shared-tm-bridge.md)
 
 ## 🧩 Settings
 
@@ -141,7 +140,6 @@
 * [Creating & Managing TMs](workbench/translation-memory/managing-tms.md)
 * [Importing TMX Files](workbench/translation-memory/importing-tmx.md)
 * [Attaching a Trados TM (.sdltm)](workbench/translation-memory/trados-sdltm.md)
-* [Shared TM Bridge with Trados](workbench/translation-memory/shared-tm-bridge.md)
 * [Fuzzy Matching](workbench/translation-memory/fuzzy-matching.md)
 
 ## 🖥️ Termbases

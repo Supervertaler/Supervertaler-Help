@@ -1,4 +1,4 @@
----
+﻿---
 title: "Supervertaler MCP Server"
 ---
 
@@ -43,7 +43,6 @@ The server exposes these tools to the AI app:
 | `get_active_segment` | The segment you are editing right now, with TM matches and termbase hits |
 | `get_project_statistics` | Analysis bands and per-file confirmation statistics – word counts, progress *(v18.20.95)* |
 | `search_studio_tm` | Concordance-search the Trados TMs attached to the project (.sdltm and GroupShare) *(v18.20.95)* |
-| `search_tm` | Search your Supervertaler (Workbench-bridged) translation memories |
 | `lookup_term` | Look up a term in your termbases (exact first – against source and target terms alike – then substring matching); hits report which column matched and are never reoriented *(v18.20.153)* |
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
@@ -263,7 +262,7 @@ A large bank will not fit into one answer, so some of it is left out – and **t
 
 ### Your prompt library *(from v18.20.101)*
 
-The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate (and shared with the Supervertaler Workbench):
+The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate (and shared with Supervertaler for memoQ):
 
 * "List my prompts." / "Show me the prompts in my Translate folder."
 * "Show me my Default Translation Prompt."

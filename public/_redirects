@@ -1,4 +1,4 @@
-# Cloudflare Pages redirect rules.
+﻿# Cloudflare Pages redirect rules.
 #
 # Format: <from> <to> <status>
 # See https://developers.cloudflare.com/pages/configuration/redirects/
@@ -82,3 +82,9 @@
 #
 # The 302 is what makes this reversible: had it been a 301 it would still be
 # sitting in readers' browser caches.
+
+# ─── 2026-09-07: Shared TM Bridge retired (Trados #78) ───────────────────
+# The Workbench TM bridge left the plugin in 18.20.189; its MCP counterpart
+# (search_tm) went with it. Studio TMs are searched with search_studio_tm.
+/trados/shared-tm-bridge/                        /trados/mcp-server/                       301
+/workbench/translation-memory/shared-tm-bridge/  /workbench/translation-memory/basics/     301

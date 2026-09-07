@@ -225,62 +225,10 @@ This setting is per-folder, so you can mix styles – for example, keep a large 
 
 Set `category: QuickLauncher` in the YAML frontmatter, or place the file in a folder called `QuickLauncher` inside your `prompt_library`. See [Prompts → Marking a prompt as a QuickLauncher shortcut](/trados/settings/prompts/#marking-a-prompt-as-a-quicklauncher-shortcut) for full details.
 
-### Shared with Supervertaler Workbench
+### Shared with Supervertaler for memoQ
 
-QuickLauncher prompts live in the shared `prompt_library` folder used by both Supervertaler for Trados and Supervertaler Workbench. Any prompt you create in one application is immediately available in the other.
+QuickLauncher prompts live in the shared `prompt_library` folder used by both Supervertaler for Trados and Supervertaler for memoQ. Any prompt you create in one application is immediately available in the other.
 
-### Routing prompts to Workbench Sidekick
-
-By default, a QuickLauncher prompt's response appears in the in-Trados **Supervertaler** chat panel. You can also have it land in **Supervertaler Workbench's Sidekick Chat** instead.
-
-Open **Settings → AI Settings** and find the **QuickLauncher prompts go to:** dropdown. Pick:
-
-* **In-Trados AI Assistant** (default) – existing behaviour, prompt and response stay in the Trados Assistant chat.
-* **Workbench Sidekick** – the prompt is sent to Supervertaler Workbench over a localhost bridge. The Sidekick window pops forward, maximises to the screen it's on, switches to the Chat tab, and runs the prompt there.
-
-When to pick which:
-
-* **In-Trados Assistant** keeps everything in one window and is the right choice if you want chat history to stay alongside the segment you're translating.
-* **Workbench Sidekick** gives you a much larger reading area – useful for prompts whose responses are multi-paragraph explanations, full translation comparisons, or anything you want to read without squinting at the narrow Assistant panel.
-
-:::note
-Workbench must be running for this to work. If it isn't (or the [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) is unreachable), the QuickLauncher silently falls back to the in-Trados Assistant – your prompt is never lost.
-:::
-
-### Sending prompts to the clipboard (paste into claude.ai, ChatGPT, etc.)
-
-Each QuickLauncher prompt can be configured to offer a **Copy to clipboard** destination alongside the usual **Send to Assistant** behaviour. This is useful when you want to paste the fully-expanded prompt – with all `{{SOURCE_SEGMENT}}`, `{{PROJECT}}`, `{{TM_MATCHES}}` etc. already filled in – into an external chat such as a [claude.ai project](https://claude.ai/), ChatGPT, or Gemini.
-
-A common workflow: keep an ongoing project on claude.ai for the document you're translating (with your style guide and reference material attached), and use a QuickLauncher prompt to send the active segment, surrounding context, and TM matches to that project with one keystroke.
-
-#### Choosing what a menu entry does (from v18.20.187)
-
-1. Open **Settings → Library** and double-click the QuickLauncher prompt you want to configure (or create a new one in the QuickLauncher folder)
-2. In the Prompt Editor, set **When run** to one of:
-   * **Send to the AI Assistant** – the expanded prompt goes to the Assistant panel (the default)
-   * **Copy to the clipboard** – it goes to the Windows clipboard instead
-   * **Ask me each time** – the entry becomes a submenu offering both
-3. Click **OK**
-
-The editor asks nothing else about the menu: a prompt is in the QuickLauncher menu because it lives in the QuickLauncher folder. To keep a built-in entry out of the menu without deleting it, right-click it in the Library tab and choose **Hide from QuickLauncher menu**.
-
-#### How it appears in the menu
-
-* **Send** or **Copy** – the prompt appears as a flat menu item. Clicking it does that one thing.
-* **Ask me each time** – the prompt appears as a **cascading submenu**, Send first; hover or press the right arrow to reveal both options.
-
-The submenu items have mnemonic keys, so once a prompt is highlighted you can press:
-
-* `S` – **Send to Supervertaler**
-* `C` – **Copy prompt to clipboard**
-
-#### What happens when you pick clipboard
-
-The plugin expands every `{{VARIABLE}}` against the current segment, project, and TM context (exactly as it would for the Assistant), then writes the resulting plain text to the Windows clipboard. The menu closes silently – there's no confirmation toast. Switch to your browser tab and press `Ctrl+V` to paste.
-
-:::note
-Clipboard mode and the **QuickLauncher prompts go to:** routing setting (above) are independent. Routing only controls where the **Send to Assistant** mode lands – clipboard mode always copies locally, regardless of whether the global routing is set to In-Trados Assistant or Workbench Sidekick.
-:::
 
 #### YAML reference
 

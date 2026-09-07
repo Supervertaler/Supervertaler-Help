@@ -1,4 +1,4 @@
----
+﻿---
 title: "Supervertaler Assistant"
 ---
 
@@ -64,7 +64,7 @@ If you select text within a bubble before right-clicking, **Copy** and **Apply t
 | [**Studio Tools**](/trados/ai-assistant/studio-tools/)           | Query your Trados Studio projects, TMs, termbases, and statistics using natural language              |
 | [**Incognito Mode**](/trados/ai-assistant/incognito-mode/)       | Anonymise project names, file paths, and personal data in AI responses for safe sharing               |
 | [**Providers and Models**](/trados/ai-assistant/providers/)      | Supports 7 AI providers including OpenAI, Claude, Gemini, Grok, Mistral, Ollama, and custom endpoints |
-| [**Supervertaler Bridge**](/trados/ai-assistant/supervertaler-bridge/)     | Localhost-only HTTP service that lets Supervertaler Workbench's floating Sidekick Chat read your active Trados project context |
+| [**Supervertaler Bridge**](/trados/ai-assistant/supervertaler-bridge/)     | Localhost-only HTTP service behind the [MCP Server](/trados/mcp-server/): how Claude Desktop and other AI apps read and write your live Trados project |
 
 ## See Also
 
