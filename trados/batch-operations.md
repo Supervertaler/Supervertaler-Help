@@ -37,6 +37,10 @@ Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) transla
 
 Word's claim numbers, lettered steps and bullets are not segment text, so the AI used to never see them. Since v18.20.188 (always on from v18.20.189; see [AI Settings](/trados/settings/ai-settings/#list-numbering-as-structure-context-from-v1820188-always-on-from-v1820189)), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
 
+### Reference numbers in the text
+
+Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **№ Reference numbers in the text** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
+
 ### Images (from v18.20.189)
 
 The images that belong to a document are often not in the file you translate – a manual's diagrams in a separate file, a patent's drawings in a "figures as filed" document beside the project – and what each one shows exists only as pixels. The **▣ Images…** link opens a panel for that pipeline:
@@ -48,7 +52,7 @@ The images that belong to a document are often not in the file you translate –
 * **Write figures.md** – writes the inventory from the document's own text alone, without looking at the drawings. Free. Useful before any AI pass, and the column that needs a model to look at the drawings is named as missing rather than left to look complete.
 * The last line says when `figures.md` was last written, how many figures it holds and whether the AI has looked at them yet. It sits at the memory bank's root, so it is read into every prompt.
 
-Buttons that cannot run yet say why: no folder set, no images found, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numerals** stays a separate link above, because it is a check on the text, not part of this pipeline.
+Buttons that cannot run yet say why: no folder set, no images found, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers in the text** stays a separate link above, because it is a check on the text, not part of this pipeline.
 
 ### AutoPrompt
 
