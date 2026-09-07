@@ -45,6 +45,13 @@ Technical documents – patents, manuals, specifications – point at parts of a
 
 The AI sees the text of your documents, not the pictures in them. The **▣ Images…** link opens a panel that fixes that in two steps, and it tells you at each step what will happen and what it costs.
 
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Images.png" alt="The Batch Operations tab with the Images link marked 1, and the Images panel open beside it with Step 1 marked 2 and Step 2 marked 3"><figcaption>Three clicks: the Images link (1), Extract images to a folder (2), Describe images with AI (3).</figcaption></figure>
+
+<div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
+<figure style="flex:1 1 300px;margin:0"><img src="/.gitbook/assets/Supervertaler-for-Trados-Images-word.png" alt="A Word document with a photo of a lifeboat captioned Figure 1 (lifeboat)"><figcaption>What is in the document: a picture the AI cannot see.</figcaption></figure>
+<figure style="flex:1 1 300px;margin:0"><img src="/.gitbook/assets/Supervertaler-for-Trados-Images-figures-md.png" alt="The figures.md file: a table with the figure, its file, what the document says, what the figure shows, and the signs on it"><figcaption>What Step 2 writes: the description the AI reads with every request.</figcaption></figure>
+</div>
+
 **Your documents** – a summary line and a scrollable list of every Word document in the project (the source-language files in Studio's Files view; reference files are skipped): how many images each holds and how many carry a figure label, the documents with images first. Nothing outside the project is scanned; if the pictures are in a separate document, add it to the project.
 
 **Step 1 – Extract images to a folder…** The first time, it asks where to put the images; a new, empty folder next to the job is fine, and the choice is remembered for this project. Then it copies the images out of the documents into that folder, named after their figure numbers (`Figure 01.png`, `Figure 02.png`…). Free, no AI. If you already keep the images in a folder of your own, use **Already have the images in a folder? Choose it…** instead, and later **Change…** to switch folder or **Open folder** to look at them.
