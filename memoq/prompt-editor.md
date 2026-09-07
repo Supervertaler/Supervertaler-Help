@@ -103,13 +103,35 @@ The letters on the steps of a claim – a), b), c) – are not text. Word genera
 
 With the [live document link](/memoq/mcp-server/#the-live-document-link) connected, the plugin knows which file memoQ imported, reads the numbering out of it – counted over the whole document, exactly as Word renders it, restarts and all – and sends each paragraph’s marker in front of its first segment as `[#e)]`. The prompt tells the model this is structure: use it to resolve cross-references and keep list items parallel, never translate it, never reproduce it. Every reply is checked before it reaches the document, and an echoed marker is removed, with a line in the [Activity window](#the-activity-window) saying so – that line is your evidence, per model, that the rule is being obeyed.
 
-There is no switch for it. Without the live link, or for a document with no lists, the model is instead told that numbering is supplied by the document and not to flag its absence. The Activity window says which of the two happened, once per document.
+There is no switch for it. Without the live link, or for a document with no lists, the model is instead told that numbering is supplied by the document and not to flag its absence. The Activity window says which of the two happened, once per document. On a project checked out from a server the file memoQ names is on the project manager's machine, not yours; locate it once in the [Images panel](#where-the-documents-come-from) and the numbering is read from your copy.
 
 ### Translator comments
 
 Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original – a drafted prompt has the AI put it inline at the end of the target as a `[[TC: …]]` marker. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
 
 Nothing extracts these for you, and that is deliberate. You read them in the grid as you review, decide which are worth keeping, turn those into real memoQ comments on the segment, and delete the marker from the text. Search for `[[TC:` to find them all.
+
+## Images: what the figures show
+
+The model sees a document's text and not its pictures. A claim that names *part 12* is translated by a model that has never seen part 12, and a figure's caption is often the only description of it anywhere in the text. **Images…** on the toolbar (also **memoQ → Images…**) is the panel that closes that gap, in two steps.
+
+**Step 1 – Extract images** copies every image out of the documents into the active memory bank's `figures\` folder, named after their figure numbers – `Figure 01.png`, `Figure 02.png` – so a folder of drawings reads like the document. Free, no AI. The panel says how the labels were arrived at: paired by position and checked, taken from nearby text, or withheld when it could not tell.
+
+**Step 2 – Describe images with AI** shows each image to the model, together with what the text says about it, and saves the descriptions as `figures.md` in the memory bank – one paid request per image, and the panel states the count and the provider before you click. Every prompt reads that file from then on, so read it first: a wrong caption would be invisible and everywhere. Reference signs the model reads in a drawing that appear nowhere in the text are listed at the end, because that is a defect worth raising with the client before filing. **Describe from the text only** is the free alternative – what the document itself says about each figure, without looking at the images – and either replaces the other, after asking.
+
+The images folder is not chosen: it is inside the memory bank, because that is where `figures.md` goes and the two belong together. With the shared bank or no bank active, the Result line offers to create a bank named after the memoQ project and switch to it.
+
+### Where the documents come from
+
+memoQ never keeps the original file in its project folder – a local project stores the filename as an empty placeholder, a project checked out from a server stores only memoQ's own data – so the panel works from the file memoQ imported, wherever that was:
+
+- On a **local project**, the [live document link](/memoq/mcp-server/#the-live-document-link) reports the path memoQ imported each document from, and the panel finds the file there without any setting.
+- On a **server project**, memoQ records the path the file had on the project manager's machine, which does not exist on yours. The panel lists those documents as *not on this computer* and offers **Locate the original document…** – point it at the copy you were sent, once, and it is remembered for that document in `C:\Users\<you>\AppData\Local\Supervertaler.memoQ\document-files.txt`. Locating a document here also switches on [list numbering](#list-numbering-reaches-the-model-as-structure) for it.
+- **Add a document file…** is for a Word file memoQ has said nothing about at all. Its images are read from the file directly; the file is remembered for the active memory bank.
+
+The live link connects whether or not MT plugins are enabled for the project, so the panel lists the documents of a server project even when nothing else in Supervertaler can reach it.
+
+**Document images report** at the bottom writes a Markdown listing of every image in every document – label, size, caption, the text around it – into the memory bank and opens it. No AI call.
 
 ## Export glossary: the prompt's terms as the project glossary
 
