@@ -43,10 +43,10 @@ Technical documents – patents, manuals, specifications – point at parts of a
 
 ### Images (from v18.20.189)
 
-The images that belong to a document are often not in the file you translate – a manual's diagrams in a separate file, a patent's drawings in a "figures as filed" document beside the project – and what each one shows exists only as pixels. The **▣ Images…** link opens a panel for that pipeline:
+The AI sees the text of the documents you translate, not the pictures in them. The **▣ Images…** link opens a panel that takes the images out of the project's source documents and gives the AI a description of each:
 
 * **Folder** – the reference images folder for this project, remembered per Trados project. **Browse…** to set it.
-* **Found** – the Word documents beside the project, how many images each holds, how many carry a figure label, and how the labels were established (paired by position and checked, taken from nearby text, or withheld when they could not be verified).
+* **Source documents** – the Word documents in the project (the source-language files in Studio's Files view; reference files are skipped), how many images each holds, how many carry a figure label, and how the labels were established (paired by position and checked, taken from nearby text, or withheld when they could not be verified). Nothing outside the project is scanned; if the drawings are in a separate document, add it to the project.
 * **Extract images to folder** – writes the images into the folder, named for their figures (`Figure 01.png`, zero-padded so they sort). Free, no AI call. Re-running overwrites.
 * **Analyse with AI** – shows each image to the AI together with what the document says about it, compares the reference signs it reads against the signs the text cites, and writes the result to `figures.md` in the active memory bank. Costs one AI request per image; the button says how many and to which provider before you click. Asks before replacing an existing `figures.md`, and refuses to start a second run while one is going.
 * **Write figures.md** – writes the inventory from the document's own text alone, without looking at the drawings. Free. Useful before any AI pass, and the column that needs a model to look at the drawings is named as missing rather than left to look complete.
