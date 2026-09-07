@@ -35,7 +35,7 @@ Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) transla
 
 ### List numbering as structure context
 
-Word's claim numbers, lettered steps and bullets are not segment text, so by default the AI never sees them. With **Send list numbering to the AI as structure context** ticked in [AI Settings](/trados/settings/ai-settings/#send-list-numbering-to-the-ai-as-structure-context-from-v1820188) (from v18.20.188), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
+Word's claim numbers, lettered steps and bullets are not segment text, so the AI used to never see them. Since v18.20.188 (always on from v18.20.189; see [AI Settings](/trados/settings/ai-settings/#list-numbering-as-structure-context-from-v1820188-always-on-from-v1820189)), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
 
 ### AutoPrompt
 
