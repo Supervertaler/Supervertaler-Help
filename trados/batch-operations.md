@@ -37,6 +37,19 @@ Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) transla
 
 Word's claim numbers, lettered steps and bullets are not segment text, so the AI used to never see them. Since v18.20.188 (always on from v18.20.189; see [AI Settings](/trados/settings/ai-settings/#list-numbering-as-structure-context-from-v1820188-always-on-from-v1820189)), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
 
+### Images (from v18.20.189)
+
+A patent's drawings are not in the file you translate: they sit in a separate "figures as filed" document beside the project, and what each one shows exists only as pixels. The **▣ Images…** link opens a panel for that pipeline:
+
+* **Folder** – the reference images folder for this project, remembered per Trados project. **Browse…** to set it.
+* **Found** – the Word documents beside the project, how many images each holds, how many carry a figure label, and how the labels were established (paired by position and checked, taken from nearby text, or withheld when they could not be verified).
+* **Extract images to folder** – writes the images into the folder, named for their figures (`Figure 01.png`, zero-padded so they sort). Free, no AI call. Re-running overwrites.
+* **Analyse with AI** – shows each image to the AI together with what the document says about it, compares the reference signs it reads against the signs the text cites, and writes the result to `figures.md` in the active memory bank. Costs one AI request per image; the button says how many and to which provider before you click. Asks before replacing an existing `figures.md`, and refuses to start a second run while one is going.
+* **Write figures.md** – writes the inventory from the document's own text alone, without looking at the drawings. Free. Useful before any AI pass, and the column that needs a model to look at the drawings is named as missing rather than left to look complete.
+* The last line says when `figures.md` was last written, how many figures it holds and whether the AI has looked at them yet. It sits at the memory bank's root, so it is read into every prompt.
+
+Buttons that cannot run yet say why: no folder set, no images found, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numerals** stays a separate link above, because it is a check on the text, not part of this pipeline.
+
 ### AutoPrompt
 
 The Batch Operations tab also includes an **[AutoPrompt](/trados/generate-prompt/)** link that uses AI to create a comprehensive, domain-specific translation prompt based on your project's content, terminology, and TM data.
