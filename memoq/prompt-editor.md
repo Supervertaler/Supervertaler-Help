@@ -97,6 +97,14 @@ The consequence worth remembering: a term you forbid **after** a prompt was draf
 
 Prompts saved from the chat over [MCP](/memoq/mcp-server/) count as drafted too, and are marked for the product you were connected to.
 
+### List numbering reaches the model as structure
+
+The letters on the steps of a claim – a), b), c) – are not text. Word generates them from the paragraph’s list settings, so memoQ’s grid does not contain them and neither does anything the plugin is sent. Shown six unlabelled sentences followed by *steps a. to f.*, a model will flag the reference as a possible source defect, and it will do so on every lettered list in every document.
+
+With the [live document link](/memoq/mcp-server/#the-live-document-link) connected, the plugin knows which file memoQ imported, reads the numbering out of it – counted over the whole document, exactly as Word renders it, restarts and all – and sends each paragraph’s marker in front of its first segment as `[#e)]`. The prompt tells the model this is structure: use it to resolve cross-references and keep list items parallel, never translate it, never reproduce it. Every reply is checked before it reaches the document, and an echoed marker is removed, with a line in the [Activity window](#the-activity-window) saying so – that line is your evidence, per model, that the rule is being obeyed.
+
+There is no switch for it. Without the live link, or for a document with no lists, the model is instead told that numbering is supplied by the document and not to flag its absence. The Activity window says which of the two happened, once per document.
+
 ### Translator comments
 
 Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original – a drafted prompt has the AI put it inline at the end of the target as a `[[TC: …]]` marker. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
