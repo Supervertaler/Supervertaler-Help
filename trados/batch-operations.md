@@ -37,9 +37,9 @@ Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) transla
 
 Word's claim numbers, lettered steps and bullets are not segment text, so the AI used to never see them. Since v18.20.188 (always on from v18.20.189; see [AI Settings](/trados/settings/ai-settings/#list-numbering-as-structure-context-from-v1820188-always-on-from-v1820189)), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
 
-### Numbers in brackets
+### Reference numbers
 
-Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **# Numbers in brackets, like (12)** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
+Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **(12) Reference numbers** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
 
 ### Images (from v18.20.189)
 
@@ -62,7 +62,7 @@ The AI sees the text of your documents, not the pictures in them. The **▣ Imag
 
 The descriptions are saved in the active memory bank, and that must be a bank of this project's own: the shared bank is read by every project, so the panel refuses to write there and instead offers **Create memory bank “<project name>” for this project and switch to it**, one click. If you already keep a bank for the project, pick it on the Chat tab first.
 
-Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Numbers in brackets** stays a separate link above, because it is a check on the text, not part of this pipeline.
+Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers** stays a separate link above, because it is a check on the text, not part of this pipeline.
 
 ### AutoPrompt
 
