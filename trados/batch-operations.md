@@ -41,11 +41,11 @@ Word's claim numbers, lettered steps and bullets are not segment text, so the AI
 
 Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **Reference numbers - like "(12)"** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
 
-### Images (from v18.20.189)
+### FigureLens (from v18.20.189)
 
-The AI sees the text of your documents, not the pictures in them. The **▣ Images…** link opens a panel that fixes that in two steps, and it tells you at each step what will happen and what it costs.
+The AI sees the text of your documents, not the pictures in them. **FigureLens** fixes that in two steps, and it tells you at each step what will happen and what it costs. The **FigureLens…** link opens it.
 
-<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Images.jpg" alt="The Batch Operations tab with the Images link marked 1, and the Images panel open beside it with Step 1 marked 2 and Step 2 marked 3"><figcaption>Three clicks: the Images link (1), Extract images to a folder (2), Describe images with AI (3).</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Images.jpg" alt="The Batch Operations tab with the FigureLens link marked 1, and the FigureLens panel open beside it with Step 1 marked 2 and Step 2 marked 3"><figcaption>Three clicks: the FigureLens link (1), Extract images to a folder (2), Describe images with AI (3).</figcaption></figure>
 
 <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
 <figure style="flex:1 1 300px;margin:0"><img src="/.gitbook/assets/Supervertaler-for-Trados-Images-word.jpg" alt="A Word document with a photo of a lifeboat captioned Figure 1 (lifeboat)"><figcaption>What is in the document: a picture the AI cannot see.</figcaption></figure>
