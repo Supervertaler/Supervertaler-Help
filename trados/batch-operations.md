@@ -37,9 +37,9 @@ Next to Preview prompt, the **⚖ SuperBench…** link (from v18.20.187) transla
 
 Word's claim numbers, lettered steps and bullets are not segment text, so the AI used to never see them. Since v18.20.188 (always on from v18.20.189; see [AI Settings](/trados/settings/ai-settings/#list-numbering-as-structure-context-from-v1820188-always-on-from-v1820189)), Batch Translate prefixes the first segment of each numbered paragraph with its marker inside a sentinel – `[#e)]`, `[#9.]` – and tells the model it is structure, never to be reproduced. The log reports how many markers were found, and any marker the model echoes back is removed before the target is written. Preview prompt shows the markers as they will be sent.
 
-### Reference numbers in the text
+### Numbers in brackets
 
-Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **№ Reference numbers in the text** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
+Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **# Numbers in brackets, like (12)** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
 
 ### Images (from v18.20.189)
 
@@ -52,7 +52,7 @@ The AI sees the text of your documents, not the pictures in them. The **▣ Imag
 <figure style="flex:1 1 300px;margin:0"><img src="/.gitbook/assets/Supervertaler-for-Trados-Images-figures-md.jpg" alt="The figures.md file: a table with the figure, its file, what the document says, what the figure shows, and the signs on it"><figcaption>What Step 2 writes: the description the AI reads with every request.</figcaption></figure>
 </div>
 
-**Your documents** – a summary line and a scrollable list of every Word document in the project (the source-language files in Studio's Files view; reference files are skipped): how many images each holds and how many carry a figure label, the documents with images first. Nothing outside the project is scanned; if the pictures are in a separate document, add it to the project.
+**Your documents** – a summary line and a two-column table of every Word document in the project, name in one column and what was found in it in the other (the source-language files in Studio's Files view; reference files are skipped): how many images each holds and how many carry a figure label, the documents with images first, then those with none in grey, then any that could not be read in red. Nothing outside the project is scanned; if the pictures are in a separate document, add it to the project.
 
 **Step 1 – Extract images to a folder…** The first time, it asks where to put the images; a new, empty folder next to the job is fine, and the choice is remembered for this project. Then it copies the images out of the documents into that folder, named after their figure numbers (`Figure 01.png`, `Figure 02.png`…). If more than one document has images, each gets its own sub-folder inside it, so two documents' `Figure 01` cannot overwrite each other. Drawings held as vector images (EMF or WMF, which is what a drawing placed from CAD usually is) are rendered to PNG on the way out, because no AI can read a metafile. Free, no AI. If you already keep the images in a folder of your own, use **Already have the images in a folder? Choose it…** instead, and later **Change…** to switch folder or **Open folder** to look at them.
 
@@ -62,7 +62,7 @@ The AI sees the text of your documents, not the pictures in them. The **▣ Imag
 
 The descriptions are saved in the active memory bank, and that must be a bank of this project's own: the shared bank is read by every project, so the panel refuses to write there and instead offers **Create memory bank “<project name>” for this project and switch to it**, one click. If you already keep a bank for the project, pick it on the Chat tab first.
 
-Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers in the text** stays a separate link above, because it is a check on the text, not part of this pipeline.
+Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Numbers in brackets** stays a separate link above, because it is a check on the text, not part of this pipeline.
 
 ### AutoPrompt
 
