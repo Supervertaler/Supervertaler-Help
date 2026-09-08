@@ -39,7 +39,7 @@ Word's claim numbers, lettered steps and bullets are not segment text, so the AI
 
 ### Reference numbers
 
-Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **(12) Reference numbers** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
+Technical documents – patents, manuals, specifications – point at parts of a drawing with numbers in brackets: "the valve (12) is connected to the pipe (3a)". The **Reference numbers - like "(12)"** link lists every such number in the open document, how often it is used, and the sentence that first mentions it. It also names any number the sequence skips – a document citing (1) to (4), (6) and (7) is told that (5) is cited nowhere, which usually means a part was renumbered or dropped while the document was drafted. It reads the whole document regardless of the Scope setting, makes no AI call, and opens the list in the Chat tab. A document without such numbers simply says so. Useful for spotting a number that is cited once and never explained, or a part that changes number halfway through.
 
 ### Images (from v18.20.189)
 
