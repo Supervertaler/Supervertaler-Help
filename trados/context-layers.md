@@ -17,14 +17,14 @@ This page is the single place that lists every layer. Each section is a short ov
 | 2 | Current segment | Trados | always |
 | 3 | Surrounding segments | Trados | always |
 | 4 | Full document content | Trados | yes |
-| 5 | Translation memory matches | your TMs | yes |
+| 5 | A translation memory match | your TMs | yes, outside batch |
 | 6 | Termbase terms | your termbases | yes |
 | 7 | SuperMemory | what you have recorded about the client | yes, when a bank is active |
 | 8 | List numbering | the Word file inside the sdlxliff | yes, from v18.20.189 |
 | 9 | Figure descriptions | the images in your documents | after two clicks in FigureLens |
 | 10 | Attached files | you, per chat turn | when you attach something |
 
-Layers 1 to 8 need no work from you at all. Layer 9 is two clicks per project. Layer 10 is deliberate.
+Layers 1 to 8 need no work from you at all (layer 5 only where Studio has already put a TM hit in the segment). Layer 9 is two clicks per project. Layer 10 is deliberate.
 
 ### 1. Project and file information
 
@@ -46,9 +46,14 @@ Very long documents are truncated to a configured maximum (default 500 segments)
 
 **Toggle:** AI Settings → *Include full document content*.
 
-### 5. Translation memory matches
+### 5. A translation memory match
 
-Fuzzy matches for the current segment, with their percentage, source and target. Reference material from your own past work, so the AI can stay consistent with how you rendered a similar phrase last time.
+Where Studio has already put a TM hit in the segment – a pre-translated or auto-propagated row – its source, its target and its match percentage go to the AI as reference material from your own past work, so it can stay consistent with how you rendered that phrase last time.
+
+Two limits worth knowing, because they are easy to assume away:
+
+- It is the **one** match Studio left on the segment, not a search of your TMs for the best few. A segment with no TM origin contributes nothing here.
+- It applies to **Chat, QuickLauncher and AutoPrompt**. Batch Translate does not send it; there, consistency with your past work comes from the termbase, SuperMemory and the document itself.
 
 **Toggle:** AI Settings → *Include TM matches*.
 
