@@ -50,6 +50,8 @@ memoQ can forward the best fuzzy match for a segment to an MT engine, and when y
 
 Set it in memoQ under **Edit machine translation settings → Send best fuzzy TM match to → Supervertaler**. It is deliberately *not* governed by the document-context toggle: a match you went out of your way to route here should not disappear because you turned off surrounding context.
 
+Two things to know about its shape. It is **one** match per segment – memoQ forwards the single best one, which is what its own setting says – rather than a set to choose among. And memoQ hands over the two segments without a match rate, so the prompt cannot tell the model *how* close the match is; it is described as the closest approved rendering, and the model judges the difference from the text itself. The match is forwarded for every segment memoQ asks about, batches included.
+
 ### 5. Whether the row was rejected
 
 memoQ tells the plugin each row's translation state. When you have rejected a previous translation of a segment, the prompt says so and instructs the model to reconsider the terminology, structure and register rather than paraphrase what you refused. No setting; it simply happens on a row you marked rejected.
