@@ -91,6 +91,7 @@
 
 ## 🟠 Features (memoQ)
 
+* [Context Layers](memoq/context-layers.md)
 * [Self-learning Translation](memoq/self-learning.md)
 * [Terminology](memoq/terminology.md)
   * [Glossary Format](memoq/glossary-format.md)

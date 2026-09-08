@@ -345,6 +345,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "Context Layers",
+            "link": "/memoq/context-layers/"
+          },
+          {
             "label": "Self-learning Translation",
             "link": "/memoq/self-learning/"
           },
