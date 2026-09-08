@@ -103,7 +103,7 @@ The letters on the steps of a claim – a), b), c) – are not text. Word genera
 
 With the [live document link](/memoq/mcp-server/#the-live-document-link) connected, the plugin knows which file memoQ imported, reads the numbering out of it – counted over the whole document, exactly as Word renders it, restarts and all – and sends each paragraph’s marker in front of its first segment as `[#e)]`. The prompt tells the model this is structure: use it to resolve cross-references and keep list items parallel, never translate it, never reproduce it. Every reply is checked before it reaches the document, and an echoed marker is removed, with a line in the [Activity window](#the-activity-window) saying so – that line is your evidence, per model, that the rule is being obeyed.
 
-There is no switch for it. Without the live link, or for a document with no lists, the model is instead told that numbering is supplied by the document and not to flag its absence. The Activity window says which of the two happened, once per document. On a project checked out from a server the file memoQ names is on the project manager's machine, not yours; locate it once in the [Images panel](#where-the-documents-come-from) and the numbering is read from your copy.
+There is no switch for it. Without the live link, or for a document with no lists, the model is instead told that numbering is supplied by the document and not to flag its absence. The Activity window says which of the two happened, once per document. On a project checked out from a server the file memoQ names is on the project manager's machine, not yours; locate it once in [FigureLens](#where-the-documents-come-from) and the numbering is read from your copy.
 
 ### Translator comments
 
@@ -111,9 +111,9 @@ Where a note is genuinely necessary – an ambiguity in the source, a term that 
 
 Nothing extracts these for you, and that is deliberate. You read them in the grid as you review, decide which are worth keeping, turn those into real memoQ comments on the segment, and delete the marker from the text. Search for `[[TC:` to find them all.
 
-## Images: what the figures show
+## FigureLens: what the figures show
 
-The model sees a document's text and not its pictures. A claim that names *part 12* is translated by a model that has never seen part 12, and a figure's caption is often the only description of it anywhere in the text. **Images…** on the toolbar (also **memoQ → Images…**) is the panel that closes that gap, in two steps.
+The model sees a document's text and not its pictures. A claim that names *part 12* is translated by a model that has never seen part 12, and a figure's caption is often the only description of it anywhere in the text. **FigureLens…** on the toolbar (also **memoQ → FigureLens…**) is the panel that closes that gap, in two steps. It is named for what it does beside [TermLens](/memoq/terminology/): that one shows the model the terms in a segment, this one shows it the pictures.
 
 **Step 1 – Extract images** copies every image out of the documents into the active memory bank's `figures\` folder, named after their figure numbers – `Figure 01.png`, `Figure 02.png` – so a folder of drawings reads like the document. Free, no AI. The panel says how the labels were arrived at: paired by position and checked, taken from nearby text, or withheld when it could not tell.
 
