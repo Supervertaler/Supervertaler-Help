@@ -129,7 +129,7 @@ memoQ never keeps the original file in its project folder – a local project st
 - On a **server project**, memoQ records the path the file had on the project manager's machine, which does not exist on yours. The panel lists those documents as *not on this computer* and offers **Locate the original document…** – point it at the copy you were sent, once, and it is remembered for that document in `C:\Users\<you>\AppData\Local\Supervertaler.memoQ\document-files.txt`. Locating a document here also switches on [list numbering](#list-numbering-reaches-the-model-as-structure) for it.
 - **Add a document file…** is for a Word file memoQ has said nothing about at all. Its images are read from the file directly; the file is remembered for the active memory bank.
 
-The live link connects whether or not MT plugins are enabled for the project, so the panel lists the documents of a server project even when nothing else in Supervertaler can reach it.
+Supervertaler finds the project folder by asking memoQ where it keeps its projects – the custom folder set under **Options → Locations → Projects**, the default `C:\Users\<you>\Documents\My memoQ projects` when you have not set one, and memoQ's own register of every project, which names each one's actual folder. Moving your projects folder therefore needs nothing here, and projects left behind in the old location are still found.
 
 **Document images report** at the bottom writes a Markdown listing of every image in every document – label, size, caption, the text around it – into the memory bank and opens it. No AI call.
 
