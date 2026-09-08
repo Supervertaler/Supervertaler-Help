@@ -154,7 +154,7 @@ OpenRouter adds a **5.5% platform fee** on top of the underlying provider's toke
 OpenRouter also offers some **free models** (marked with "Free" in the dropdown). These have no API cost at all – they are rate-limited but perfectly usable for testing or light workloads.
 :::
 
-## AI context options
+## Context layer options
 
 These options control what additional context is included in AI prompts. The settings are split into two groups depending on which features they apply to.
 
@@ -170,7 +170,7 @@ These options control what additional context is included in AI prompts. The set
 | Include TM matches | Yes | AutoPrompt only |
 | Surrounding segments | Yes | No |
 
-### AI context (Batch operations, Chat and QuickLauncher)
+### Context layers (Batch operations, Chat and QuickLauncher)
 
 These settings apply to **all** AI features – Chat, QuickLauncher, Batch Translate, and Batch Proofread.
 
@@ -218,7 +218,7 @@ For [AutoPrompt](/trados/generate-prompt/), **TermScan** automatically filters t
 **Only enable termbases you trust.** The AI will follow your termbase entries even when they are wrong. If a termbase contains inaccurate, outdated, or low-quality translations, the AI will be forced to use them – producing worse results than if no termbase were enabled at all. Modern LLMs are remarkably good at choosing correct terminology on their own. When in doubt, disable termbases and add terms incrementally as you review the AI's output.
 :::
 
-### AI context (mostly Chat and QuickLauncher)
+### Context layers (mostly Chat and QuickLauncher)
 
 These settings apply primarily to the **Supervertaler** chat window and **QuickLauncher** prompts. The exception is **Include TM matches**, which also feeds AutoPrompt – see the per-setting notes below.
 

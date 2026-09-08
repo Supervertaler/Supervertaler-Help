@@ -43,7 +43,7 @@ Some data is left untouched because it carries no identifying information:
 
 1. Open **Settings** (gear icon in the Assistant toolbar)
 2. Go to the **AI Settings** tab
-3. Scroll down to **AI context (Chat and QuickLauncher)**
+3. Scroll down to **Context layers (Chat and QuickLauncher)**
 4. Tick **Incognito mode**
 5. Click **OK**
 
