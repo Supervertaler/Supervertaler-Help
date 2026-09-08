@@ -67,4 +67,4 @@ Incognito Mode works with all AI providers, not just Claude. The anonymisation i
 
 * [Supervertaler](/trados/ai-assistant/) -- Overview
 * [AI Settings](/trados/settings/ai-settings/) -- Configure context options and Incognito Mode
-* [Context Awareness](/trados/ai-assistant/context-awareness/) -- What context is sent to the AI
+* [Context layers](/trados/context-layers/) -- What context is sent to the AI

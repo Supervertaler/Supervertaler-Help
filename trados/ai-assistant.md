@@ -59,7 +59,7 @@ If you select text within a bubble before right-clicking, **Copy** and **Apply t
 
 | Feature                                                    | Description                                                                                           |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| [**Context Awareness**](/trados/ai-assistant/context-awareness/) | Automatic project, segment, terminology, TM, and document context in every request                    |
+| [**Context layers**](/trados/context-layers/) | The ten layers of context sent with every request – project, segment, TM, terminology, SuperMemory, list numbering, figures |
 | [**File Attachments**](/trados/ai-assistant/file-attachments/)   | Attach images and documents (PDF, DOCX, XLSX, TMX, etc.) for additional context                       |
 | [**Studio Tools**](/trados/ai-assistant/studio-tools/)           | Query your Trados Studio projects, TMs, termbases, and statistics using natural language              |
 | [**Incognito Mode**](/trados/ai-assistant/incognito-mode/)       | Anonymise project names, file paths, and personal data in AI responses for safe sharing               |

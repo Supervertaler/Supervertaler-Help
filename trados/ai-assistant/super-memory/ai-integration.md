@@ -47,7 +47,7 @@ SuperMemory does not replace your termbases or translation memories — it compl
 | **Document content** | What this document is | Conventions and pitfalls the AI cannot read off the page |
 | **AutoPrompt** | AI-drafted translation instructions | Client and domain context, so the draft starts from what you actually do |
 
-For when stacking all of them is or is not optimal, see **Composing the context** in [Context Awareness](/trados/ai-assistant/context-awareness/#composing-the-context).
+For when stacking all of them is or is not optimal, see **Stacking the layers** in [Context layers](/trados/context-layers/#stacking-the-layers).
 
 ## Memory-aware chat
 
@@ -73,6 +73,6 @@ Both are **off by default**. Turning them off does not delete anything — the f
 ## See Also
 
 - [SuperMemory](/trados/ai-assistant/super-memory/) — how a bank is structured
-- [Context Awareness](/trados/ai-assistant/context-awareness/) — the full menu of context sources
+- [Context layers](/trados/context-layers/) — the full menu of context sources
 - [AI Settings](/trados/settings/ai-settings/) — the toggles
 - [Batch Translate](/trados/batch-translate/) — batch translation with full context

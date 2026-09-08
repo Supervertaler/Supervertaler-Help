@@ -48,4 +48,4 @@ Up to **5 documents** per message, **20 MB** maximum per file. Very large docume
 ## See Also
 
 * [Supervertaler](/trados/ai-assistant/) -- Overview
-* [Context Awareness](/trados/ai-assistant/context-awareness/) -- What context is sent automatically
+* [Context layers](/trados/context-layers/) -- What context is sent automatically

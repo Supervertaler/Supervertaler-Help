@@ -23,6 +23,7 @@
 ## 🧩 Supervertaler Assistant
 
 * [Overview](trados/ai-assistant.md)
+* [Context layers](trados/context-layers.md)
 * [Chat](trados/ai-assistant/chat.md)
   * [File Attachments](trados/ai-assistant/file-attachments.md)
   * [Studio Tools](trados/ai-assistant/studio-tools.md)
@@ -39,7 +40,6 @@
   * [AI Integration](trados/ai-assistant/super-memory/ai-integration.md)
   * [Obsidian Setup](trados/ai-assistant/super-memory/obsidian-setup.md)
 * [How the assistant works](trados/ai-assistant/how-it-works.md)
-  * [Context Awareness](trados/ai-assistant/context-awareness.md)
   * [Providers and Models](trados/ai-assistant/providers.md)
   * [Incognito Mode](trados/ai-assistant/incognito-mode.md)
 

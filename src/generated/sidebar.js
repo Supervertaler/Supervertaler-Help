@@ -84,6 +84,10 @@ const sidebar = [
             "link": "/trados/ai-assistant/"
           },
           {
+            "label": "Context layers",
+            "link": "/trados/context-layers/"
+          },
+          {
             "label": "Chat",
             "items": [
               {
@@ -166,10 +170,6 @@ const sidebar = [
                 "link": "/trados/ai-assistant/how-it-works/"
               },
               {
-                "label": "Context Awareness",
-                "link": "/trados/ai-assistant/context-awareness/"
-              },
-              {
                 "label": "Providers and Models",
                 "link": "/trados/ai-assistant/providers/"
               },
@@ -224,10 +224,6 @@ const sidebar = [
           {
             "label": "Supervertaler Bridge",
             "link": "/trados/ai-assistant/supervertaler-bridge/"
-          },
-          {
-            "label": "Shared TM Bridge with Workbench",
-            "link": "/trados/shared-tm-bridge/"
           }
         ]
       },
@@ -529,10 +525,6 @@ const sidebar = [
           {
             "label": "Attaching a Trados TM (.sdltm)",
             "link": "/workbench/translation-memory/trados-sdltm/"
-          },
-          {
-            "label": "Shared TM Bridge with Trados",
-            "link": "/workbench/translation-memory/shared-tm-bridge/"
           },
           {
             "label": "Fuzzy Matching",

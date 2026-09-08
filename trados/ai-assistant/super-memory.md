@@ -5,7 +5,7 @@ description: ">-"
 
 **SuperMemory** is where you write down the things about a client that you cannot look up: which term they insist on, which wording they rejected last time, how they want dates written, what the previous reviewer changed and why. A translation memory gives the AI your previous wordings and a termbase gives it approved pairs; SuperMemory gives it the *reasoning* — and reasoning is exactly what an AI cannot derive from the source text, so getting it wrong is a real error rather than a stylistic difference.
 
-Knowledge lives in **memory banks**: one folder per client, domain, or job, which you switch between from the Supervertaler Assistant toolbar. SuperMemory is one of several [context sources](/trados/ai-assistant/context-awareness/) the assistant consults, alongside termbases, translation memories, document content and segment metadata.
+Knowledge lives in **memory banks**: one folder per client, domain, or job, which you switch between from the Supervertaler Assistant toolbar. SuperMemory is one of several [context layers](/trados/context-layers/) the assistant consults, alongside termbases, translation memories, document content and segment metadata.
 
 ## A bank is three files
 
@@ -133,5 +133,5 @@ Supervertaler Workbench does not use memory banks. That remains a genuine gap ra
 
 ## Related
 
-* [**Context Awareness**](/trados/ai-assistant/context-awareness/) — the full menu of context sources, with SuperMemory as one of them
+* [**Context layers**](/trados/context-layers/) — the full menu of context sources, with SuperMemory as one of them
 * [**AI Settings**](/trados/settings/ai-settings/) — toggles for enabling or disabling SuperMemory context

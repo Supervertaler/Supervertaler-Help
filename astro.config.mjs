@@ -15,6 +15,13 @@ export default defineConfig({
   // Update if the chosen subdomain changes.
   site: 'https://docs.supervertaler.com',
 
+  // Retired URLs.  Context Awareness became Context layers and moved to the
+  // top level of the Trados tree in September 2026; the old path was linked
+  // from several pages and is in the index, so it redirects rather than 404s.
+  redirects: {
+    '/trados/ai-assistant/context-awareness/': '/trados/context-layers/',
+  },
+
   integrations: [
     starlight({
       title: 'Supervertaler Docs',
