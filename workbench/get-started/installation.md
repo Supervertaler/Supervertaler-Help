@@ -36,14 +36,14 @@ python Supervertaler.py
 
 The macOS install method depends on your Mac's processor.
 
-### Apple Silicon (M1, M2, M3, M4) — Download Release
+### Apple Silicon (M1, M2, M3, M4) – Download Release
 
 1. Go to [GitHub Releases](https://github.com/Supervertaler/Supervertaler-Workbench/releases)
 2. Download the latest `.dmg` file
 3. Open the `.dmg` and drag **Supervertaler** to your Applications folder
 4. Launch from Spotlight or Launchpad
 
-### Intel Macs — Install via pip
+### Intel Macs – Install via pip
 
 The published macOS `.dmg` is built for Apple Silicon only and will not run on Intel hardware. Intel Mac users need to install via pip and provide a system Java for the Okapi sidecar (which handles Word, Excel, HTML and other office-document imports).
 

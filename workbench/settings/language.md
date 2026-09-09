@@ -82,10 +82,10 @@ A `.xlf` file has one entry per translatable string. Each entry looks like this:
 
 What each piece means:
 
-- **`<source>`** — the original English string. Never edit this.
-- **`<target>`** — your translation. Set the `state` attribute to `translated` (or `signed-off` / `final`) when you're happy with it. Targets left as `state="needs-translation"` are skipped at runtime – Workbench shows the English source instead.
-- **`<context-group>`** — where the string appears in the UI. The `x-qt-context` value tells you the dialog/class; the `sourcefile` and `linenumber` are pointers into the source code (rarely needed for translation, but handy for troubleshooting).
-- **`&amp;`** — XML-escaped `&`. The character marks the **next letter as a keyboard mnemonic** – `&Edit` becomes underlined **E**dit, activated by **Alt+E**. Translations should preserve mnemonics, often by putting them in parentheses (`编辑(&amp;E)` for Chinese).
+- **`<source>`** – the original English string. Never edit this.
+- **`<target>`** – your translation. Set the `state` attribute to `translated` (or `signed-off` / `final`) when you're happy with it. Targets left as `state="needs-translation"` are skipped at runtime – Workbench shows the English source instead.
+- **`<context-group>`** – where the string appears in the UI. The `x-qt-context` value tells you the dialog/class; the `sourcefile` and `linenumber` are pointers into the source code (rarely needed for translation, but handy for troubleshooting).
+- **`&amp;`** – XML-escaped `&`. The character marks the **next letter as a keyboard mnemonic** – `&Edit` becomes underlined **E**dit, activated by **Alt+E**. Translations should preserve mnemonics, often by putting them in parentheses (`编辑(&amp;E)` for Chinese).
 
 ## How to contribute a translation
 

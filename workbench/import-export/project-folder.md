@@ -2,7 +2,7 @@
 title: "The Project Folder"
 ---
 
-A Supervertaler project isn't just the `.svproj` file — it's a **folder** that
+A Supervertaler project isn't just the `.svproj` file – it's a **folder** that
 holds the project file together with the documents it works on. Keeping
 everything in one folder means a project is self-contained: you can move,
 rename, zip or email the folder and it still opens and exports correctly.
@@ -11,7 +11,7 @@ rename, zip or email the folder and it still opens and exports correctly.
 **New Project** has a "📁 Create a dedicated folder for this project" checkbox
 (on by default). When it's on, the first save tucks the `.svproj` into its own
 folder as shown below. Turn it off to save the `.svproj` flat, wherever you
-choose — the folder layout is never forced, so you can keep your own naming or
+choose – the folder layout is never forced, so you can keep your own naming or
 nest a project inside a larger job folder.
 :::
 
@@ -24,22 +24,22 @@ My Project/
 └─ target/               ← the translated documents you export
 ```
 
-- **`source/`** — when you **save** a project, its original document is copied
+- **`source/`** – when you **save** a project, its original document is copied
   here, and the project remembers it by a path *relative* to the folder. That's
   what makes the project portable: it no longer depends on the document staying
   at the exact location you first imported it from. Move or rename the original
   afterwards and your export still works.
-- **`target/`** — when you run **Project → Export → Export Translated Document**
+- **`target/`** – when you run **Project → Export → Export Translated Document**
   (or Simple Text), the Save dialog opens here by default, so your finished
   translations land next to their sources. You can still browse somewhere else;
   this is only the default.
 
 ## Why this matters
 
-- **Portability** — hand the whole folder to a colleague, or move it between
+- **Portability** – hand the whole folder to a colleague, or move it between
   machines, and the structure-preserving export keeps working. Nothing points at
   a file that only exists on your computer.
-- **No accidental cross-wiring** — because the source is stored relative to the
+- **No accidental cross-wiring** – because the source is stored relative to the
   project folder, a project can never end up bound to an unrelated document.
 
 :::tip
@@ -49,7 +49,7 @@ move or copy the **whole folder**, not just the `.svproj` on its own.
 
 ## Existing projects
 
-Projects created before this layout existed still work — they reference their
+Projects created before this layout existed still work – they reference their
 source by an absolute path, and Supervertaler resolves it as before. The next
 time you **save** such a project, its source is copied into `source/` and the
 reference switches to the portable relative form automatically.

@@ -106,7 +106,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 
 | Shortcut | Action |
 |----------|--------|
-| `Ctrl+Shift+Space` | Voice dictation / push-to-talk (default — configurable) |
+| `Ctrl+Shift+Space` | Voice dictation / push-to-talk (default – configurable) |
 | `Ctrl+Alt+O` | Toggle Always-On listening |
 
 ---

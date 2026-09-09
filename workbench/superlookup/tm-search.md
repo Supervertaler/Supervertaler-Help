@@ -7,7 +7,7 @@ SuperLookup’s **TMs** tab lets you do fast concordance searches in your Transl
 ## Open it
 
 - **In Supervertaler:** press `Ctrl+K` (opens SuperLookup with the current selection, if any).
-- **From any application:** press `Ctrl+Alt+L` — a true system-wide hotkey (registered natively on Windows; no AutoHotkey required).
+- **From any application:** press `Ctrl+Alt+L` – a true system-wide hotkey (registered natively on Windows; no AutoHotkey required).
 
 ## How to search
 

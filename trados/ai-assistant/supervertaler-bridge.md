@@ -22,7 +22,7 @@ This is the same context the in-Trados Supervertaler Assistant chat uses for its
 
 The bridge is started automatically when **both** of these are true:
 
-1. You have **Assistant access** — a paid subscription or an active trial. Users without Assistant access never start the bridge.
+1. You have **Assistant access** – a paid subscription or an active trial. Users without Assistant access never start the bridge.
 2. You have **opened the Supervertaler Assistant panel** at least once in this Trados session. The panel is lazy – Trados doesn't initialise it until you activate it.
 
 On start it writes a handshake file, `~/Supervertaler/trados/runtime/bridge.json`, holding the port, the token and the Trados process id; the MCP server reads that file to find the running Studio. The bridge is stopped when Trados Studio exits. If Trados crashes or is force-killed, the next start detects the stale handshake and replaces it with a fresh one.
@@ -33,7 +33,7 @@ There is no switch to turn the bridge off. Until v18.20.188 a hidden `sidekickBr
 
 The bridge is designed to be safe for everyday use:
 
-- **Loopback-only.** The HTTP listener binds exclusively to `127.0.0.1`. Other devices on your network — even on the same Wi-Fi — can never reach it. There is a defence-in-depth check that rejects any non-loopback `RemoteEndPoint` even if the binding ever drifts.
+- **Loopback-only.** The HTTP listener binds exclusively to `127.0.0.1`. Other devices on your network – even on the same Wi-Fi – can never reach it. There is a defence-in-depth check that rejects any non-loopback `RemoteEndPoint` even if the binding ever drifts.
 - **Per-session authentication token.** A fresh GUID is generated every time the bridge starts. Clients must present it as a `Bearer` token. Stale tokens from previous sessions are useless.
 - **Random high port.** The bridge picks a random port in the 49152–65535 range to avoid collisions with other local services.
 - **No external network access.** The bridge only listens; it never reaches out to any external service.
@@ -42,8 +42,8 @@ The bridge is designed to be safe for everyday use:
 
 The bridge writes a diagnostic log to two locations on every start:
 
-- `~/Supervertaler/trados/runtime/bridge.log` — under your Supervertaler user-data folder
-- `%TEMP%\Supervertaler-bridge.log` — guaranteed-writable fallback
+- `~/Supervertaler/trados/runtime/bridge.log` – under your Supervertaler user-data folder
+- `%TEMP%\Supervertaler-bridge.log` – guaranteed-writable fallback
 
 The log is truncated on every plugin start, so it always reflects the current Trados session. The first lines record the resolved data-folder path so you can see exactly where the plugin is looking.
 

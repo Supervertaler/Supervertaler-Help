@@ -2,12 +2,12 @@
 title: "AI Proofreading"
 ---
 
-**AI Proofreading** asks an LLM to review your finished translation for accuracy, completeness, terminology and style, and records what it finds as **proofreading comments** on each segment. It's a translator-side review pass — nothing is changed automatically; you read the feedback and decide what to act on.
+**AI Proofreading** asks an LLM to review your finished translation for accuracy, completeness, terminology and style, and records what it finds as **proofreading comments** on each segment. It's a translator-side review pass – nothing is changed automatically; you read the feedback and decide what to act on.
 
 Proofreading lives under the top-level **QA** menu:
 
-* **QA ▸ Proofreading ▸ Proofread Translation…** — run a proofreading pass.
-* **QA ▸ Proofreading ▸ Delete All Proofreading Comments** — clear every proofreading comment in the project.
+* **QA ▸ Proofreading ▸ Proofread Translation…** – run a proofreading pass.
+* **QA ▸ Proofreading ▸ Delete All Proofreading Comments** – clear every proofreading comment in the project.
 
 ## Running a proofreading pass
 
@@ -24,23 +24,23 @@ Open **QA ▸ Proofreading ▸ Proofread Translation…**. The dialog has three 
 
 ### 2. Which model
 
-Proofreading uses your **currently-active AI provider and model** (set in **AI Settings**) — the dialog shows which one, e.g. `📊 Using: Openai (gpt-5.5)`. To proofread with a *different* model, switch the active provider in AI Settings and run the pass again (see [Multiple models](#multiple-models) below).
+Proofreading uses your **currently-active AI provider and model** (set in **AI Settings**) – the dialog shows which one, e.g. `📊 Using: Openai (gpt-5.5)`. To proofread with a *different* model, switch the active provider in AI Settings and run the pass again (see [Multiple models](#multiple-models) below).
 
 ### 3. Which prompt
 
 * **Default (built-in)** runs the standard four-point check:
-  1. **Accuracy** — does the target correctly convey the source meaning?
-  2. **Completeness** — is anything missing or added?
-  3. **Terminology** — are technical terms correct and consistent?
-  4. **Grammar & Style** — is the text natural and error-free?
-* Or pick a **custom proofreading prompt** from the dropdown — any prompt you've saved under the **Bulk Operations/** folder of your [Prompt Library](/workbench/ai-translation/prompt-library/) appears here.
+  1. **Accuracy** – does the target correctly convey the source meaning?
+  2. **Completeness** – is anything missing or added?
+  3. **Terminology** – are technical terms correct and consistent?
+  4. **Grammar & Style** – is the text natural and error-free?
+* Or pick a **custom proofreading prompt** from the dropdown – any prompt you've saved under the **Bulk Operations/** folder of your [Prompt Library](/workbench/ai-translation/prompt-library/) appears here.
 * Or **type a one-off prompt** straight into the box.
 
 Click **Proofread** to start. A progress dialog shows how many segments have been checked, how many issues were found, and how many came back clean; you can cancel partway through.
 
 ## Where the results appear
 
-Findings land in the **✅ Proofreading** sub-tab of the **💬 Comments** panel — an all-project list of every proofreading comment, one entry per (segment, model). See [Comments → Proofreading comments](/workbench/editor/comments/#proofreading-comments) for the full rundown. In short:
+Findings land in the **✅ Proofreading** sub-tab of the **💬 Comments** panel – an all-project list of every proofreading comment, one entry per (segment, model). See [Comments → Proofreading comments](/workbench/editor/comments/#proofreading-comments) for the full rundown. In short:
 
 * Each entry has a clickable **Segment #N · model** header that jumps to the segment.
 * Selecting a segment in the grid **scrolls and highlights** the list to that segment's comments.
@@ -53,13 +53,13 @@ Results are stored **keyed by model**, so passes with different models *accumula
 
 ## Good to know
 
-* **Proofreading comments are ephemeral review notes.** They're stored in the `.svproj` project file but are **not exported** to your final document or bilingual tables — unlike [segment comments](/workbench/editor/comments/), which do export as Word comments. Deleting them is safe: another proofreading pass regenerates them.
-* Proofreading is **read-only feedback** — it never edits your target text for you.
+* **Proofreading comments are ephemeral review notes.** They're stored in the `.svproj` project file but are **not exported** to your final document or bilingual tables – unlike [segment comments](/workbench/editor/comments/), which do export as Word comments. Deleting them is safe: another proofreading pass regenerates them.
+* Proofreading is **read-only feedback** – it never edits your target text for you.
 * Cost scales with scope and model. Proofreading every segment with a premium model on a large project is a real API spend; the **Confirmed only** default keeps a first pass focused. See [Usage & Costs](/workbench/ai-translation/usage-costs/).
 
 ## Related
 
-* [Comments](/workbench/editor/comments/) — where proofreading comments are listed and managed
+* [Comments](/workbench/editor/comments/) – where proofreading comments are listed and managed
 * [Spellcheck](/workbench/qa/spellcheck/) · [Tag Validation](/workbench/qa/tag-validation/) · [Non-Translatables](/workbench/qa/non-translatables/)
-* [Prompt Library](/workbench/ai-translation/prompt-library/) — save custom proofreading prompts
+* [Prompt Library](/workbench/ai-translation/prompt-library/) – save custom proofreading prompts
 * [Usage & Costs](/workbench/ai-translation/usage-costs/)

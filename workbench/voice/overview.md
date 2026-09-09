@@ -36,42 +36,42 @@ Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macO
 - **Toggle** (default) – press once to start, press again to stop
 - **Hold-to-talk** – hold the key to record, release to stop. _Note: hold-to-talk only works if you rebind dictation to a non-global (in-app) key. The default global hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
 
-### Push-to-Talk for commands (Ctrl+Alt+V) — v1.10.193
+### Push-to-Talk for commands (Ctrl+Alt+V) – v1.10.193
 
 Press and **hold** **Ctrl+Alt+V** (the default; configurable in **Settings → Keyboard Shortcuts**) to temporarily activate the command listener for the duration of the hold. Release the key to stop it again. Works globally, from any application.
 
 This is a third mode that sits between the two above:
 
-- Always-On is the **toggle** version of command listening — mic open continuously, listens for commands all day.
-- Command Push-to-Talk is the **hold** version — mic open only while you hold the chord, so the rest of the time the microphone is genuinely free for other applications.
+- Always-On is the **toggle** version of command listening – mic open continuously, listens for commands all day.
+- Command Push-to-Talk is the **hold** version – mic open only while you hold the chord, so the rest of the time the microphone is genuinely free for other applications.
 
 **When to use this mode:**
 
 - You also use an external dictation app (Wispr Flow, Dragon, macOS Dictation, etc.) for running-text dictation and don't want Supervertaler's always-on mic competing for the audio stream.
-- You only need voice commands occasionally — pressing a hotkey when you want to issue one is less intrusive than leaving the mic open all day.
+- You only need voice commands occasionally – pressing a hotkey when you want to issue one is less intrusive than leaving the mic open all day.
 - You're on a laptop battery-conscious about the always-on Vosk model running 24/7.
 
-**Coexistence with the toggle mode:** if Always-On is already running when you press Ctrl+Alt+V, the hotkey is a no-op — it won't restart what's already going, and releasing it won't stop Always-On either (we never touch what we didn't start). So the two modes don't fight each other; you can use whichever feels right for the moment.
+**Coexistence with the toggle mode:** if Always-On is already running when you press Ctrl+Alt+V, the hotkey is a no-op – it won't restart what's already going, and releasing it won't stop Always-On either (we never touch what we didn't start). So the two modes don't fight each other; you can use whichever feels right for the moment.
 
-**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+O or click ⏹ Stop Always-On — it doesn't auto-stop on key release. Lift to a manual toggle there.
+**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+O or click ⏹ Stop Always-On – it doesn't auto-stop on key release. Lift to a manual toggle there.
 
-### Pause Always-On for external dictation — v1.10.246
+### Pause Always-On for external dictation – v1.10.246
 
-The opposite trade-off to Command Push-to-Talk: keep Always-On running **permanently**, but have it step off the microphone for the moments you're dictating into an **external** tool (Wispr Flow, Dragon, macOS Dictation, …). You bind one of *your* keys — the same key you press to start your external dictation — and Always-On pauses while it's engaged, then resumes. So your voice commands stay available all day, and the two never fight over the mic.
+The opposite trade-off to Command Push-to-Talk: keep Always-On running **permanently**, but have it step off the microphone for the moments you're dictating into an **external** tool (Wispr Flow, Dragon, macOS Dictation, …). You bind one of *your* keys – the same key you press to start your external dictation – and Always-On pauses while it's engaged, then resumes. So your voice commands stay available all day, and the two never fight over the mic.
 
-The key is **recorded, not typed**, so it works with keys you can't express as text — including media keys like **fast-forward**, which many people use to trigger their dictation tool.
+The key is **recorded, not typed**, so it works with keys you can't express as text – including media keys like **fast-forward**, which many people use to trigger their dictation tool.
 
-**To set it up** — Voice tab → **⏸️ Pause Always-On for external dictation**:
+**To set it up** – Voice tab → **⏸️ Pause Always-On for external dictation**:
 
 1. Click **Record key**, then press the key you use for your external dictation tool. The label shows what was captured (e.g. *Media Next / Fast-Forward*).
 2. Choose a **mode**:
-   - **Hold** _(default)_ — Always-On pauses only while you hold the key and resumes the instant you release it. Pair this with **hold-to-talk** tools like Wispr Flow: hold your key → speak → release, and Always-On is live again.
-   - **Toggle** — press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
+   - **Hold** _(default)_ – Always-On pauses only while you hold the key and resumes the instant you release it. Pair this with **hold-to-talk** tools like Wispr Flow: hold your key → speak → release, and Always-On is live again.
+   - **Toggle** – press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
 
-It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* — your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
+It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* – your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
 
 :::note
-**Which to use — this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.
+**Which to use – this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.
 :::
 
 ***
@@ -234,7 +234,7 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 | Shortcut | Action |
 | --- | --- |
 | **Ctrl+Alt+O** (⌘⌥O on macOS) | Toggle Always-On listening |
-| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) — default, configurable |
+| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) – default, configurable |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](/workbench/settings/shortcuts/#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 

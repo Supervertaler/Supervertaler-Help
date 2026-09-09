@@ -56,7 +56,7 @@ The change applies immediately, no need to reopen the project. Clicking the opti
 
 ## Splitting and merging segments
 
-Right-click in a **Source** cell to **✂ Split segment here** (at the clicked position) or **🔗 Merge with next segment** — Trados/memoQ-style re-segmentation, fully undoable. See [Editing & Confirming](/workbench/editor/editing-confirming/#splitting-and-merging-segments) for details and when it's available.
+Right-click in a **Source** cell to **✂ Split segment here** (at the clicked position) or **🔗 Merge with next segment** – Trados/memoQ-style re-segmentation, fully undoable. See [Editing & Confirming](/workbench/editor/editing-confirming/#splitting-and-merging-segments) for details and when it's available.
 
 ## See also
 

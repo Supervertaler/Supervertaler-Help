@@ -11,11 +11,11 @@ Automatically saves the current project at a regular interval to guard against c
 - **Enable automatic backups** – turn the timer on or off.
 - **Backup interval** – how often to save, in minutes (default **5**, range 1–60).
 
-Each run saves the project file and exports a `<project>_backup.tmx` alongside it. This **overwrites** the working files in place — it keeps the latest state current, but it is not a history you can step back through. For that, use timestamped backups below.
+Each run saves the project file and exports a `<project>_backup.tmx` alongside it. This **overwrites** the working files in place – it keeps the latest state current, but it is not a history you can step back through. For that, use timestamped backups below.
 
 ## Timestamped project backups (every N saves)
 
-Keeps **immutable, dated snapshots** of the project file (`.svproj`) so you can roll back to an earlier state — like a lightweight version history.
+Keeps **immutable, dated snapshots** of the project file (`.svproj`) so you can roll back to an earlier state – like a lightweight version history.
 
 - **Keep timestamped project backups** – enable or disable the feature.
 - **Back up every N saves** – how often a snapshot is taken, counted in save operations (default **1** = every save). Both manual saves (Ctrl+S) and the timed auto-backup above count toward N.
@@ -30,7 +30,7 @@ Snapshots are written to a dedicated folder under your user-data location:
 Use the **Open folder…** button on the Backup tab to jump straight there.
 
 :::note
-Taking a snapshot just copies the project file you already saved, so it adds no noticeable delay — backing up on every save is fine even on large projects.
+Taking a snapshot just copies the project file you already saved, so it adds no noticeable delay – backing up on every save is fine even on large projects.
 :::
 
 ### Restoring a backup

@@ -13,7 +13,7 @@ When you’re done translating, export in a format that matches your workflow.
 :::tip
 For **Export Translated Document** (and Simple Text), the Save dialog opens in
 your project's `target/` folder by default, so finished translations land
-alongside their sources. You can still browse elsewhere — see
+alongside their sources. You can still browse elsewhere – see
 [The Project Folder](/workbench/import-export/project-folder/).
 :::
 

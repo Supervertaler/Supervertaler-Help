@@ -8,7 +8,7 @@ By default Workbench shows **all** segments on a single page. You can split a pr
 
 New projects open with every segment shown. With recent performance work this is comfortable well into the thousands of segments.
 
-The one exception is very large projects: a document with **more than 2000 segments** opens paginated at **500 per page** so the initial layout stays snappy. You can switch it back to **All** (or any other size) at any time with the **Per page** selector — your choice sticks for the rest of the session.
+The one exception is very large projects: a document with **more than 2000 segments** opens paginated at **500 per page** so the initial layout stays snappy. You can switch it back to **All** (or any other size) at any time with the **Per page** selector – your choice sticks for the rest of the session.
 
 ## Why you might still page
 

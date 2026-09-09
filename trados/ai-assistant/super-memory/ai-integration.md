@@ -9,10 +9,10 @@ When you translate a segment, run a batch translation, or ask the chat a questio
 
 Two banks, in this order:
 
-1. **`_shared`** — your house defaults, labelled as such.
-2. **The active bank** — labelled as overriding the defaults above.
+1. **`_shared`** – your house defaults, labelled as such.
+2. **The active bank** – labelled as overriding the defaults above.
 
-Within each, the three files are sent whole: `brief.md`, then `terminology.md`, then `style.md`. There is no selection step and no filtering — whatever is in those files is what the AI sees.
+Within each, the three files are sent whole: `brief.md`, then `terminology.md`, then `style.md`. There is no selection step and no filtering – whatever is in those files is what the AI sees.
 
 `reference/` is never sent. It holds the source material the three files were derived from, and a superseded draft answering as if it were current is precisely the failure it exists to prevent.
 
@@ -20,13 +20,13 @@ Within each, the three files are sent whole: `brief.md`, then `terminology.md`, 
 
 The prompt states plainly that the client section overrides the house defaults. That instruction only works because the two layers are kept separate rather than merged, so the AI can tell which rule came from where.
 
-In practice: `_shared` might say *voorkeursvorm → preferred embodiment*, and a client bank might insist on *preferred form*. The client wins, and the override belongs in that client's bank — not as an edit to `_shared`, which would change the default for everyone.
+In practice: `_shared` might say *voorkeursvorm → preferred embodiment*, and a client bank might insist on *preferred form*. The client wins, and the override belongs in that client's bank – not as an edit to `_shared`, which would change the default for everyone.
 
 ## The bank is the selection
 
 Earlier versions tried to work out which parts of a bank were relevant: matching your project name against client-profile filenames, detecting the document's domain, preferring one style guide over another, then loading whichever articles scored highest.
 
-None of that happens now. **You pick the bank from the toolbar, and its contents are used** — because you already know which client you are working for, and a detection step could only get that wrong. It also means what reaches the AI is exactly what you would see by opening the folder, with nothing silently excluded.
+None of that happens now. **You pick the bank from the toolbar, and its contents are used** – because you already know which client you are working for, and a detection step could only get that wrong. It also means what reaches the AI is exactly what you would see by opening the folder, with nothing silently excluded.
 
 ## Token cost
 
@@ -34,11 +34,11 @@ A bank is small enough to send whole. Three files for a single client typically 
 
 The **☰ Report** button tells you the exact figure for the active bank, including what `_shared` adds. Worth checking if you translate in large batches, where the context is re-sent for every call.
 
-If a bank does grow past the budget, the shared layer is dropped before the client layer — the client bank was chosen deliberately and overrides the defaults anyway — and terminology is dropped last on each, being the densest content and the hardest for a model to guess.
+If a bank does grow past the budget, the shared layer is dropped before the client layer – the client bank was chosen deliberately and overrides the defaults anyway – and terminology is dropped last on each, being the densest content and the hardest for a model to guess.
 
 ## How SuperMemory compares with other context sources
 
-SuperMemory does not replace your termbases or translation memories — it complements them, adding the reasoning that flat data cannot carry.
+SuperMemory does not replace your termbases or translation memories – it complements them, adding the reasoning that flat data cannot carry.
 
 | Context source | What it provides | What SuperMemory adds |
 |---|---|---|
@@ -65,14 +65,14 @@ Because the banks are also readable over the [MCP server](/trados/mcp-server/), 
 
 Toggled in [AI Settings](/trados/settings/ai-settings/):
 
-- **Include memory bank in AI context** — for translations and chat.
-- **Use memory bank when generating prompts (AutoPrompt)** — when AutoPrompt drafts a translation prompt.
+- **Include memory bank in AI context** – for translations and chat.
+- **Use memory bank when generating prompts (AutoPrompt)** – when AutoPrompt drafts a translation prompt.
 
-Both are **off by default**. Turning them off does not delete anything — the files stay on disk.
+Both are **off by default**. Turning them off does not delete anything – the files stay on disk.
 
 ## See Also
 
-- [SuperMemory](/trados/ai-assistant/super-memory/) — how a bank is structured
-- [Context layers](/trados/context-layers/) — the full menu of context sources
-- [AI Settings](/trados/settings/ai-settings/) — the toggles
-- [Batch Translate](/trados/batch-translate/) — batch translation with full context
+- [SuperMemory](/trados/ai-assistant/super-memory/) – how a bank is structured
+- [Context layers](/trados/context-layers/) – the full menu of context sources
+- [AI Settings](/trados/settings/ai-settings/) – the toggles
+- [Batch Translate](/trados/batch-translate/) – batch translation with full context

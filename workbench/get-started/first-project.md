@@ -92,7 +92,7 @@ See [Segment Statuses](/workbench/editor/segment-statuses/) for the full list.
 1. Press `Ctrl+S`
 2. Choose a name and location
 3. Your project is saved as a folder containing the `.svproj` file, a `source/`
-   folder (your original document), and — once you export — a `target/` folder.
+   folder (your original document), and – once you export – a `target/` folder.
    See [The Project Folder](/workbench/import-export/project-folder/).
 
 :::tip

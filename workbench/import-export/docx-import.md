@@ -27,7 +27,7 @@ When you later export back to DOCX, Supervertaler reconstructs the original docu
 :::note
 The document you import becomes the project's **source**. When you save the
 project, Supervertaler copies it into the project's `source/` folder and refers
-to it by a relative path — so this faithful round-trip keeps working even if you
+to it by a relative path – so this faithful round-trip keeps working even if you
 later move, rename, or delete the original you imported from. See
 [The Project Folder](/workbench/import-export/project-folder/).
 :::

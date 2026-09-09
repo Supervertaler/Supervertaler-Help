@@ -80,12 +80,12 @@ Supervertaler's statuses map cleanly to Trados Studio and memoQ. When you import
 :::
 
 :::note
-**A note on localised (translated) UIs.** When Supervertaler's interface is shown in another language, the status *names* you see in the status column are **display labels only** — the underlying status is an internal value, and import/export mapping to Trados Studio and memoQ is keyed on that internal value, **not** on the visible text. So a confirmed segment shown as "Bevestigd" in Dutch, "Confirmed" in English, or any other localisation still maps to Trados "Translated" / memoQ "Confirmed" on export. Localising the labels never changes the data or the round-trip.
+**A note on localised (translated) UIs.** When Supervertaler's interface is shown in another language, the status *names* you see in the status column are **display labels only** – the underlying status is an internal value, and import/export mapping to Trados Studio and memoQ is keyed on that internal value, **not** on the visible text. So a confirmed segment shown as "Bevestigd" in Dutch, "Confirmed" in English, or any other localisation still maps to Trados "Translated" / memoQ "Confirmed" on export. Localising the labels never changes the data or the round-trip.
 
 If you're translating the interface, two tips for the status labels:
 
 - **Mirror what the user's other CAT tools call these states in the same language.** Trados Studio and memoQ ship localised UIs; aligning your status terms with theirs means the user sees consistent vocabulary everywhere. Inventing new terms is what causes confusion, not localising itself.
-- **Leave the match-origin shorthand untranslated** — `PM`, `CM`, `TM 100%`, `TM Fuzzy`, `MT`, and the percentages are industry-universal across tools and languages (and the PM/CM badges deliberately mirror Trados).
+- **Leave the match-origin shorthand untranslated** – `PM`, `CM`, `TM 100%`, `TM Fuzzy`, `MT`, and the percentages are industry-universal across tools and languages (and the PM/CM badges deliberately mirror Trados).
 :::
 
 ### Match origins

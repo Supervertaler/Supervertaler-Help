@@ -62,7 +62,7 @@ Supervertaler/
 The **prompt library** and **resources** folders are shared between both
 programs. A prompt you create or edit in Workbench is immediately available in
 the Trados plugin, and vice versa. The SQLite database (`supervertaler.db`)
-holds your termbases and translation memories — Workbench has full read-write
+holds your termbases and translation memories – Workbench has full read-write
 access to it.
 
 ### Program-specific folders
@@ -76,10 +76,10 @@ other. Workbench's `workbench/` subfolder holds your `settings/` (including
 ## Automatic migration
 
 If you're updating from an older version, Workbench reorganises the folder
-automatically on its next startup. No manual action is required — your settings
+automatically on its next startup. No manual action is required – your settings
 and data are preserved.
 
 ## Related
 
-- [Supervertaler for Trados — User Data Folder](https://docs.supervertaler.com/trados/data-folder/)
+- [Supervertaler for Trados – User Data Folder](https://docs.supervertaler.com/trados/data-folder/)
 - [General Settings](/workbench/settings/general/)

@@ -5,7 +5,7 @@ Step-by-step setup for publishing this site at **`docs.supervertaler.com`** on C
 ## 0. Prerequisites
 
 - A Cloudflare account.  Sign up free at <https://dash.cloudflare.com/sign-up> if you don't have one.
-- DNS for `supervertaler.com` must be managed by Cloudflare (Cloudflare nameservers).  If it's currently elsewhere (Namecheap, GoDaddy, etc.) you'll need to migrate the domain to Cloudflare DNS first — Cloudflare's onboarding walks you through it; it's a 5-minute change at your domain registrar.
+- DNS for `supervertaler.com` must be managed by Cloudflare (Cloudflare nameservers).  If it's currently elsewhere (Namecheap, GoDaddy, etc.) you'll need to migrate the domain to Cloudflare DNS first – Cloudflare's onboarding walks you through it; it's a 5-minute change at your domain registrar.
 
 ## 1. Create the Pages project
 
@@ -23,11 +23,11 @@ Set the project up exactly as below:
 |---|---|
 | **Project name** | `supervertaler-help` (becomes the default `*.pages.dev` subdomain) |
 | **Production branch** | `main` |
-| **Framework preset** | **Astro** (Cloudflare auto-detects from `package.json`; selecting this fills the next two fields automatically — confirm the values match below) |
+| **Framework preset** | **Astro** (Cloudflare auto-detects from `package.json`; selecting this fills the next two fields automatically – confirm the values match below) |
 | **Build command** | `npm run build` |
 | **Build output directory** | `dist` |
-| **Root directory** | *(leave blank — uses repo root)* |
-| **Node version** | `22.12.0` or later — set via env var (see below).  The pinned Astro 5 in `package.json` works on 22.11+ too, but newer Node is recommended. |
+| **Root directory** | *(leave blank – uses repo root)* |
+| **Node version** | `22.12.0` or later – set via env var (see below).  The pinned Astro 5 in `package.json` works on 22.11+ too, but newer Node is recommended. |
 
 ### Environment variables
 
@@ -41,7 +41,7 @@ Click **Save and Deploy**.  Cloudflare runs `npm install && npm run build` and p
 
 ## 3. Verify the first deploy works
 
-Once the build finishes (green checkmark in the Cloudflare dashboard), open the assigned `*.pages.dev` URL — something like `https://supervertaler-help.pages.dev/`.
+Once the build finishes (green checkmark in the Cloudflare dashboard), open the assigned `*.pages.dev` URL – something like `https://supervertaler-help.pages.dev/`.
 
 Sanity-check:
 
@@ -52,7 +52,7 @@ Sanity-check:
 - [ ] One or two pages with images render with the images visible (not broken).
 - [ ] Hint callouts render as styled boxes, not as literal `:::note` text.
 
-If any of those fail, the Cloudflare build log shows what went wrong — open the deploy in the dashboard and scroll the build output.
+If any of those fail, the Cloudflare build log shows what went wrong – open the deploy in the dashboard and scroll the build output.
 
 ## 4. Attach the custom domain `docs.supervertaler.com`
 
@@ -86,9 +86,9 @@ After cloning the repo on any machine:
 ```bash
 cd Supervertaler-Help
 npm install
-npm run dev       # http://localhost:4321/ — hot-reloads on file changes
+npm run dev       # http://localhost:4321/ – hot-reloads on file changes
 npm run build     # static build into dist/
 npm run preview   # serves the built dist/ at http://localhost:4321/
 ```
 
-Editing any `.md` file under `trados/` or `workbench/` triggers a live reload in `npm run dev`.  No build step needed during writing — push when ready and Cloudflare rebuilds automatically.
+Editing any `.md` file under `trados/` or `workbench/` triggers a live reload in `npm run dev`.  No build step needed during writing – push when ready and Cloudflare rebuilds automatically.

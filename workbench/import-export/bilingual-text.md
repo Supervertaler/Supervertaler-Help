@@ -3,7 +3,7 @@ title: "Supervertaler Re-importable Text (AI-friendly)"
 ---
 
 The **Re-importable Text** round-trip lets you send a whole translation out as a
-plain-text file — for a proofreader or an LLM to edit — and then pull the edits
+plain-text file – for a proofreader or an LLM to edit – and then pull the edits
 straight back into the same project. It's the plain-text sibling of the
 [Re-importable Table (DOCX)](/workbench/import-export/bilingual-tables/), ported from the Supervertaler
 for Trados plugin. Added in v1.10.231.
@@ -11,7 +11,7 @@ for Trados plugin. Added in v1.10.231.
 :::note
 **Why "Text" and not "Markdown"?** The file is deliberately plain text. Its
 segment blocks rely on line breaks being preserved, and a Markdown renderer
-collapses single line breaks — which would scramble the structure. AI agents
+collapses single line breaks – which would scramble the structure. AI agents
 read the raw characters when you paste a file into a chat, so plain text is both
 safe and maximally readable.
 :::
@@ -23,8 +23,8 @@ safe and maximally readable.
 You'll get a small options dialog (include locked segments; which statuses to
 include), then a save dialog. Two files are written side by side:
 
-- `MyProject_bilingual.txt` — the editable text file.
-- `MyProject_bilingual.txt.svexport.json` — a **sidecar** that records, per
+- `MyProject_bilingual.txt` – the editable text file.
+- `MyProject_bilingual.txt.svexport.json` – a **sidecar** that records, per
   segment, a stable id, a source hash, and the status. Keep the two files
   together; the sidecar is what makes a safe re-import possible.
 
@@ -39,14 +39,14 @@ Status: Confirmed
 Comment: Verify the shade of "brown"
 ```
 
-- The `EN:` line is the **source** — leave it alone. It stays on **one line**, and
+- The `EN:` line is the **source** – leave it alone. It stays on **one line**, and
   a `[newline]` in it marks where the original source broke across two lines (e.g.
   a subtitle cue). The source is read-only and never written back to your project,
-  so these tokens are just there to show its structure — handy for spotting a
+  so these tokens are just there to show its structure – handy for spotting a
   target that's missing a break the source has.
-- The `NL:` line is the **target** — edit it freely, but **keep it on one line**.
-  Where the target needs a hard line break — for example to split a subtitle
-  across two lines — write the literal token `[newline]`:
+- The `NL:` line is the **target** – edit it freely, but **keep it on one line**.
+  Where the target needs a hard line break – for example to split a subtitle
+  across two lines – write the literal token `[newline]`:
 
   ```
   NL: Welkom bij dit webinar[newline]over de waardeketenanalyse
@@ -54,17 +54,17 @@ Comment: Verify the shade of "brown"
 
   On re-import `[newline]` is turned back into a real line break, so the two-line
   layout is preserved on export. *(Introduced in v1.10.255; files exported before
-  that — with the target genuinely wrapped over several lines — still re-import
+  that – with the target genuinely wrapped over several lines – still re-import
   unchanged.)*
 - The `Comment:` line is always present (blank when the segment has no comment)
-  so you can see the field exists. **Edit it, fill the blank one, or clear it** —
+  so you can see the field exists. **Edit it, fill the blank one, or clear it** – 
   the change re-imports into the segment's comments. It too may span several lines.
-- `<b>…</b>`, `<i>…</i>`, `<u>…</u>` are **cosmetic formatting** — add or remove
+- `<b>…</b>`, `<i>…</i>`, `<u>…</u>` are **cosmetic formatting** – add or remove
   them as you like.
-- `{1}`, `[1}`, `<92>` and similar are **structural tags** — keep them; dropping
+- `{1}`, `[1}`, `<92>` and similar are **structural tags** – keep them; dropping
   one will flag the segment on re-import (see below).
 
-A real file looks like this — note the single-line sources and the `[newline]`
+A real file looks like this – note the single-line sources and the `[newline]`
 token marking where each target splits across two lines:
 
 ![A Supervertaler Re-importable Text file: the header lists the project details and the editing rules, the NL: source lines each sit on one line, and two EN: targets show the [newline] token highlighted where a subtitle is split across two lines.](/.gitbook/assets/SUPERVERTALER-RE-IMPORTABLE-TEXT-newlines.png)
@@ -85,13 +85,13 @@ agent from accidentally reflowing them.
 
 Pick the edited `.txt` (its sidecar is found automatically). A preview dialog
 shows how many segments will be updated, how many are unchanged, and how many
-are skipped — and why. Nothing is applied until you click **Apply changes**.
+are skipped – and why. Nothing is applied until you click **Apply changes**.
 
 ### Safety guards
 
-- **Source-tamper detection** — if a segment's source line was changed, that
+- **Source-tamper detection** – if a segment's source line was changed, that
   segment is skipped (its hash no longer matches the sidecar).
-- **Structural-tag integrity** — if the edited target dropped a required tag,
+- **Structural-tag integrity** – if the edited target dropped a required tag,
   the segment is flagged. With **"Refuse to apply edits that drop required
   tags"** ticked (the default), such segments are skipped; untick it to apply
   them anyway. Cosmetic `<b>`/`<i>`/`<u>` changes never trip this.
@@ -101,13 +101,13 @@ are skipped — and why. Nothing is applied until you click **Apply changes**.
 
 - If you (or the AI) deliberately change a `Status:` line to a different value,
   that status is applied.
-- Otherwise, any segment whose target you edited is marked **Draft** — a
+- Otherwise, any segment whose target you edited is marked **Draft** – a
   translated-but-unconfirmed state, ready for you to review and confirm.
 
 ### Comments
 
 - Existing segment comments are written out as a `Comment:` line. Edit it, add a
-  new one to a segment that had none, or delete it — the change re-imports into
+  new one to a segment that had none, or delete it – the change re-imports into
   the segment's comments. A comment-only edit (target left alone) is applied on
   its own and shows up in the import preview.
 
@@ -115,7 +115,7 @@ are skipped — and why. Nothing is applied until you click **Apply changes**.
 
 - Export reads **live grid state**, so in-progress edits are included even if
   the segment isn't confirmed.
-- If the sidecar is missing, you can still re-import — segments are then matched
+- If the sidecar is missing, you can still re-import – segments are then matched
   by position only, and source-tamper detection is unavailable. You'll be warned
   first.
 

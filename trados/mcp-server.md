@@ -4,7 +4,7 @@ title: "Supervertaler MCP Server"
 
 The Supervertaler MCP Server connects **Claude Desktop** directly to your live Trados Studio session. You chat in Claude's own window, and it answers from your real project data: the document open in the editor, your translation memories, and your termbases. It can also make changes for you, always under your supervision.
 
-> **Which AI apps work?** Any app that can run a **local (STDIO) MCP server on your own machine**. Claude Desktop is the easiest, because the plugin ships a one-click extension for it. **ChatGPT's desktop app works too** *(confirmed August 2026)*, as do Claude Code and **Mistral Vibe CLI** *(confirmed August 2026)* — see [Setting it up](#setting-it-up) for each. What cannot work is anything that runs the server in the cloud rather than on your PC. That rules out the claude.ai and chatgpt.com **websites**, and also Mistral's **Vibe web app**, whose custom MCP connectors accept only a remote `https://` URL. The Supervertaler bridge is local by design, so your project never leaves your machine, and a cloud-hosted client has no route to it.
+> **Which AI apps work?** Any app that can run a **local (STDIO) MCP server on your own machine**. Claude Desktop is the easiest, because the plugin ships a one-click extension for it. **ChatGPT's desktop app works too** *(confirmed August 2026)*, as do Claude Code and **Mistral Vibe CLI** *(confirmed August 2026)* – see [Setting it up](#setting-it-up) for each. What cannot work is anything that runs the server in the cloud rather than on your PC. That rules out the claude.ai and chatgpt.com **websites**, and also Mistral's **Vibe web app**, whose custom MCP connectors accept only a remote `https://` URL. The Supervertaler bridge is local by design, so your project never leaves your machine, and a cloud-hosted client has no route to it.
 >
 > *Earlier versions of this page said ChatGPT desktop could not be used. That was true when written and is no longer: the desktop app has since added support for local STDIO servers.*
 
@@ -297,7 +297,7 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 2. **Claude Desktop** (easiest): click **Download extension (.mcpb)** to get `Supervertaler-MCP-Server.mcpb`. Then in Claude Desktop open **Settings → Extensions** and **drag the `.mcpb` file onto the page** – it shows a *"Drag .MCPB or .DXT files here to install"* target. (Prefer a file picker? Scroll to **Advanced settings** and use the **Install extension…** button instead.) Confirm the install. Double-clicking the `.mcpb` only works if your system has associated that file type with Claude Desktop; many don't and will ask which app to use – just cancel and drag-and-drop instead.
 3. **ChatGPT desktop** *(Windows)*: ChatGPT desktop can run the server, but it has no drag-and-drop installer, so this is a short manual step. It takes about two minutes.
 
-    **a. Get the server.** In the **Connect AI assistant…** dialog click **Download server (.zip)** (or take `Supervertaler-MCP-Server-exe.zip` from any [GitHub release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases/latest)). Unzip it and move `SupervertalerMcpServer.exe` somewhere **permanent** — for example `C:\Users\<you>\Supervertaler\mcp\`. Do not leave it in Downloads: the path goes into a config file, and moving or clearing the file later breaks the connection.
+    **a. Get the server.** In the **Connect AI assistant…** dialog click **Download server (.zip)** (or take `Supervertaler-MCP-Server-exe.zip` from any [GitHub release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases/latest)). Unzip it and move `SupervertalerMcpServer.exe` somewhere **permanent** – for example `C:\Users\<you>\Supervertaler\mcp\`. Do not leave it in Downloads: the path goes into a config file, and moving or clearing the file later breaks the connection.
 
     **b. Open the config file.** ChatGPT desktop reads its MCP servers from the same file as Codex CLI:
 
@@ -305,7 +305,7 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
     %UserProfile%\.codex\config.toml
     ```
 
-    Paste that path into File Explorer's address bar to jump straight to the folder. If the file or the `.codex` folder does not exist yet, create them — a config with only the block below in it is perfectly valid.
+    Paste that path into File Explorer's address bar to jump straight to the folder. If the file or the `.codex` folder does not exist yet, create them – a config with only the block below in it is perfectly valid.
 
     **c. Add the server.** Append this to the end of the file, replacing the path with where you actually put the exe:
 
@@ -319,15 +319,15 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 
     Use **single quotes** around the path, as shown. In TOML that makes it a literal string, so Windows backslashes are taken exactly as typed. With double quotes you would have to write every backslash twice.
 
-    **d. Restart ChatGPT desktop properly.** Closing the window is not enough — it keeps running in the notification area. Right-click its icon there and quit, then start it again.
+    **d. Restart ChatGPT desktop properly.** Closing the window is not enough – it keeps running in the notification area. Right-click its icon there and quit, then start it again.
 
     **e. Check it.** With Trados Studio running, ask ChatGPT: *"What Trados project is open?"* It should name your project, and `SupervertalerMcpServer` should appear under **Sources** in the reply.
 
-    > **If nothing happens**, work through these in order: is Trados Studio actually running? Does the path in `config.toml` point at a file that exists? Did you fully quit ChatGPT from the notification area? And is the rest of the file still valid TOML — a stray character anywhere in it can stop *every* server loading, not just this one.
+    > **If nothing happens**, work through these in order: is Trados Studio actually running? Does the path in `config.toml` point at a file that exists? Did you fully quit ChatGPT from the notification area? And is the rest of the file still valid TOML – a stray character anywhere in it can stop *every* server loading, not just this one.
 
-4. **Mistral Vibe CLI** *(Windows)*: Vibe is Mistral's terminal coding agent — the CLI half of the product that used to be called le Chat. It runs local STDIO servers, so it can drive Trados just as Claude Code does. Worth knowing about if you need an EU-based, GDPR-compliant provider, or want to work on Mistral's free tier. You chat in a terminal window rather than a polished desktop app; there is no Mistral desktop client, and Vibe's *web* connectors are remote-only, so the CLI (or Vibe inside VS Code, JetBrains or Zed) is the only route to a local server.
+4. **Mistral Vibe CLI** *(Windows)*: Vibe is Mistral's terminal coding agent – the CLI half of the product that used to be called le Chat. It runs local STDIO servers, so it can drive Trados just as Claude Code does. Worth knowing about if you need an EU-based, GDPR-compliant provider, or want to work on Mistral's free tier. You chat in a terminal window rather than a polished desktop app; there is no Mistral desktop client, and Vibe's *web* connectors are remote-only, so the CLI (or Vibe inside VS Code, JetBrains or Zed) is the only route to a local server.
 
-    **a. Get the server.** Exactly as in step 3a above — **Download server (.zip)**, unzip it, and put `SupervertalerMcpServer.exe` somewhere permanent.
+    **a. Get the server.** Exactly as in step 3a above – **Download server (.zip)**, unzip it, and put `SupervertalerMcpServer.exe` somewhere permanent.
 
     **b. Add it to `config.toml`.** Vibe keeps its settings in:
 
@@ -347,9 +347,9 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
     tool_timeout_sec = 300.0
     ```
 
-    Note the shape of `command`: **square brackets around a single-quoted path**. This one detail is what most Windows setups get wrong, and it fails in a confusing way — see the box below. Note also the double square brackets on `[[mcp_servers]]`; Vibe's server list is a TOML array of tables, not a single table like ChatGPT's.
+    Note the shape of `command`: **square brackets around a single-quoted path**. This one detail is what most Windows setups get wrong, and it fails in a confusing way – see the box below. Note also the double square brackets on `[[mcp_servers]]`; Vibe's server list is a TOML array of tables, not a single table like ChatGPT's.
 
-    > **Why the brackets matter.** If you give `command` as a plain string, Vibe splits it with POSIX shell rules, which treat `\` as an escape character — so `C:\Users\you\...` silently becomes `C:Usersyou...`, a path that doesn't exist. The server then never starts, and Vibe shows a connection error that does not go away. Wrapping the path in `[ ]` makes it a ready-made argument list that skips the splitting entirely. Writing the path with forward slashes (`C:/Users/you/...`) works too, and Windows accepts it.
+    > **Why the brackets matter.** If you give `command` as a plain string, Vibe splits it with POSIX shell rules, which treat `\` as an escape character – so `C:\Users\you\...` silently becomes `C:Usersyou...`, a path that doesn't exist. The server then never starts, and Vibe shows a connection error that does not go away. Wrapping the path in `[ ]` makes it a ready-made argument list that skips the splitting entirely. Writing the path with forward slashes (`C:/Users/you/...`) works too, and Windows accepts it.
     >
     > The same applies to `vibe mcp add … --command …`, which stores the path as a string: on Windows, prefer editing `config.toml` by hand.
 
@@ -357,7 +357,7 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 
     **d. Check it.** Start Trados Studio **first**, then run `vibe` and type `/mcp` (or `/connectors`). Your server should be listed; `/mcp supervertaler` lists the tools it exposes. Then ask: *"What Trados project is open?"*
 
-5. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. The snippet is in Claude's JSON format; clients that use a different format need the same two facts — the transport is STDIO, and the command is the path to that exe.
+5. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. The snippet is in Claude's JSON format; clients that use a different format need the same two facts – the transport is STDIO, and the command is the path to that exe.
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
 
@@ -376,7 +376,7 @@ Everything stays on your computer:
 ## Requirements
 
 * Supervertaler for Trados with an active licence or trial (the bridge is part of the AI Assistant).
-* An MCP client that runs local STDIO servers on your own machine: Claude Desktop (recommended, one-click install), ChatGPT desktop, Claude Code, Mistral Vibe CLI, or similar. This means an app that executes the server **on your PC** — the claude.ai and chatgpt.com *websites*, and Mistral's Vibe web app, all run servers in the cloud and cannot reach a local one.
+* An MCP client that runs local STDIO servers on your own machine: Claude Desktop (recommended, one-click install), ChatGPT desktop, Claude Code, Mistral Vibe CLI, or similar. This means an app that executes the server **on your PC** – the claude.ai and chatgpt.com *websites*, and Mistral's Vibe web app, all run servers in the cloud and cannot reach a local one.
 * Windows (the MCP server is a self-contained exe; no additional runtimes needed).
 
 ## Keeping it up to date
@@ -385,18 +385,18 @@ Everything stays on your computer:
 
 After a plugin update that mentions the MCP server in its release notes, reinstall the extension: download the current `.mcpb` from the [latest release](https://github.com/Supervertaler/Supervertaler-for-Trados/releases/latest), install it the same way you did the first time, and restart your AI app. Installing over the existing extension is enough; there is nothing to uninstall first.
 
-Good news first: **the list of tools is not baked into it.** The server asks Studio for the current tool list every time it starts, so tools and options added by a plugin update work with an older server — provided Studio was running when your AI app started. What *is* fixed at install time is the server's own behaviour, and the one symptom worth recognising is:
+Good news first: **the list of tools is not baked into it.** The server asks Studio for the current tool list every time it starts, so tools and options added by a plugin update work with an older server – provided Studio was running when your AI app started. What *is* fixed at install time is the server's own behaviour, and the one symptom worth recognising is:
 
 * **Errors mentioning a timeout of 30 seconds.** That limit was raised to 5 minutes in v18.20.148, so if you still see it, the installed server predates that release and should be replaced.
 
 ## Troubleshooting
 
-* **The AI doesn't know about a tool or option the release notes describe** – this is almost never a stale download. The tool list is read from Studio once, when your AI app starts, and kept for that whole session, so an option added by a plugin update is missing simply because the AI app was already running (or started while Studio was closed) — a new option is then dropped from the call silently rather than reported as an error. The fix is order, not reinstallation: **start Trados Studio first, then start (or fully restart) your AI app.**
+* **The AI doesn't know about a tool or option the release notes describe** – this is almost never a stale download. The tool list is read from Studio once, when your AI app starts, and kept for that whole session, so an option added by a plugin update is missing simply because the AI app was already running (or started while Studio was closed) – a new option is then dropped from the call silently rather than reported as an error. The fix is order, not reinstallation: **start Trados Studio first, then start (or fully restart) your AI app.**
 * **Double-clicking the `.mcpb` file asks which app to open it with** – your system has no `.mcpb` association. Cancel the dialog and instead either **drag the `.mcpb` onto the Extensions page**, or use Claude Desktop's **Settings → Extensions → Advanced settings → Install extension…** button. (Drag-and-drop works once the Extensions page has finished loading – if it's stuck on "Loading extensions…", see the next point first.)
 * **The Extensions page is stuck on "Loading extensions…"** – the page needs to reach Anthropic's extension directory once before it renders; we've seen it hang on the Microsoft Store build of Claude Desktop. Fully quit Claude Desktop (including the system tray icon) and reopen it; check your internet connection. If it keeps hanging, there's a universal fallback that skips the Extensions page entirely: download `Supervertaler-MCP-Server-exe.zip` instead, unzip it somewhere permanent, and use the **Copy config snippet** button in the plugin's Connect dialog to add the server manually to `claude_desktop_config.json` (Claude Desktop → Settings → Developer → Edit Config).
 * **The AI says it can't reach Trados** – make sure Trados Studio is running; from v18.20.112 the connection starts with Studio itself (on 18.20.99–18.20.111 you additionally needed a document open in the editor, and before that a click on the Supervertaler Assistant panel – updating the plugin removes those steps). The Connect dialog's status lines show whether the connection is up. Tools that read the open document still need one open, and will say so.
 * **Tools appear twice in Claude Desktop** – you have both the extension and a manual config entry; remove one (see above).
-* **Mistral Vibe CLI shows a permanent "cannot connect" message, but `/mcp` lists the server as enabled** – `/mcp` reports what is *configured*, not what is *connected*, so the two are not in conflict: the banner is right and the server really did fail to start. On Windows the usual cause is the path in `command` being written as a plain string, which Vibe splits with POSIX rules and strips the backslashes from. Put the path in square brackets, or use forward slashes — see step 4 of [Setting it up](#setting-it-up). A second, milder cause is Vibe's 10-second start-up limit expiring while Studio is still busy; raise `startup_timeout_sec`.
+* **Mistral Vibe CLI shows a permanent "cannot connect" message, but `/mcp` lists the server as enabled** – `/mcp` reports what is *configured*, not what is *connected*, so the two are not in conflict: the banner is right and the server really did fail to start. On Windows the usual cause is the path in `command` being written as a plain string, which Vibe splits with POSIX rules and strips the backslashes from. Put the path in square brackets, or use forward slashes – see step 4 of [Setting it up](#setting-it-up). A second, milder cause is Vibe's 10-second start-up limit expiring while Studio is still busy; raise `startup_timeout_sec`.
 * **The AI refuses to change segments and mentions two instances** – you have both Studio 2024 and Studio 2026 open, and it will not guess which one you mean. Tell it (*"use the 2026 one"*), or close the Studio you are not working in. Reading still works throughout. See [Two Studios open at once](#two-studios-open-at-once-from-v1820184).
 * **Term lookups return nothing** – check that your termbase/database path is set correctly in the Supervertaler settings (the same path TermLens uses).
 * The bridge writes a diagnostic log to `<your data folder>\trados\runtime\bridge.log`.

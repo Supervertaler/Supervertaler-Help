@@ -52,7 +52,7 @@ If your proxy exposes several engines as "models", set **Model / engine** to the
 | `microsoft_builtin` | Reliable; good Dutch. |
 | `modernmt_builtin` | Reliable. |
 | `lingvanex_builtin` | Works; quality varies. |
-| `deepl_builtin` | Free DeepL — excellent quality **when available**, but the free endpoint rate-limits aggressively (HTTP 429), so it may intermittently fall back to another engine. |
+| `deepl_builtin` | Free DeepL – excellent quality **when available**, but the free endpoint rate-limits aggressively (HTTP 429), so it may intermittently fall back to another engine. |
 
 China-focused engines (`sogou`, `transmart`, `niutrans`) and the patent engine `cnpat` are not recommended for Dutch ↔ English.
 

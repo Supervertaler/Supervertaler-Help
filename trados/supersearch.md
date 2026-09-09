@@ -42,14 +42,14 @@ The **mode** dropdown in the search bar controls where SuperSearch looks:
 | ----------------- | ------------------------------------------------------------------------------------------------- |
 | **Everything**    | Project files, translation memories _and_ termbases, merged into one result list                  |
 | **Project files** | The project's SDLXLIFF files                                                                       |
-| **TMs**           | Only the project's translation memories — a concordance search, like Studio's built-in Concordance |
-| **Termbases**     | Only your terminology — Supervertaler, MultiTerm (`.sdltb`) and Trados `.ttb` termbases *(v18.20.155)* |
+| **TMs**           | Only the project's translation memories – a concordance search, like Studio's built-in Concordance |
+| **Termbases**     | Only your terminology – Supervertaler, MultiTerm (`.sdltb`) and Trados `.ttb` termbases *(v18.20.155)* |
 
 The mode is remembered across sessions until you change it.
 
-Translation-memory results are found via the project's attached file-based TMs (`.sdltm`) — read from the project settings and the project's `Tm` folder. Server-based (GroupShare) TMs are not searched. TM hits obey the same **Aa**, **.\***, and **Word** options as file results, and the **Scope** dropdown maps to source-side / target-side concordance.
+Translation-memory results are found via the project's attached file-based TMs (`.sdltm`) – read from the project settings and the project's `Tm` folder. Server-based (GroupShare) TMs are not searched. TM hits obey the same **Aa**, **.\***, and **Word** options as file results, and the **Scope** dropdown maps to source-side / target-side concordance.
 
-The TM list is re-checked every time you search, so a TM you attach to the project mid-session is picked up without reopening the project. SuperSearch searches every attached TM regardless of its **Enabled** / **Concordance** state in the project's TM settings — use the **TMs** button (see below) to narrow the list.
+The TM list is re-checked every time you search, so a TM you attach to the project mid-session is picked up without reopening the project. SuperSearch searches every attached TM regardless of its **Enabled** / **Concordance** state in the project's TM settings – use the **TMs** button (see below) to narrow the list.
 
 ### Searching your termbases *(from v18.20.155)*
 
@@ -57,26 +57,26 @@ The TM list is re-checked every time you search, so a TM you attach to the proje
 
 All three kinds of termbase are included, with nothing extra to configure:
 
-* **Supervertaler termbases** — every termbase in your shared database
-* **MultiTerm** — the `.sdltb` termbases attached to the Trados project
-* **Trados `.ttb`** — the Studio 2026 termbase format
+* **Supervertaler termbases** – every termbase in your shared database
+* **MultiTerm** – the `.sdltb` termbases attached to the Trados project
+* **Trados `.ttb`** – the Studio 2026 termbase format
 
-Terminology is matched **in your project's direction**: a termbase declared the other way round (an EN→NL termbase in an NL→EN project) is oriented before matching, so the **Src** box always means *the language you translate from* — not "whichever column that particular termbase calls source". This is the same treatment TermLens gives your terminology.
+Terminology is matched **in your project's direction**: a termbase declared the other way round (an EN→NL termbase in an NL→EN project) is oriented before matching, so the **Src** box always means *the language you translate from* – not "whichever column that particular termbase calls source". This is the same treatment TermLens gives your terminology.
 
 Searches read the terminology TermLens already holds in memory, so a termbase search is effectively instant. (Immediately after opening a project TermLens may still be loading, in which case the first search falls back to reading the database and takes longer.)
 
-Only the termbases you have **switched on** are searched — Supervertaler termbases with their **Read** tick set, and MultiTerm/`.ttb` termbases enabled in Trados Project Settings. The Read column is your statement of which terminology applies to the job in hand, so SuperSearch honours it rather than searching everything you own.
+Only the termbases you have **switched on** are searched – Supervertaler termbases with their **Read** tick set, and MultiTerm/`.ttb` termbases enabled in Trados Project Settings. The Read column is your statement of which terminology applies to the job in hand, so SuperSearch honours it rather than searching everything you own.
 
 Termbase hits show the **termbase name in green** and its **kind** in the Status column (`Supervertaler`, `MultiTerm` or `TTB`).
 
 #### Editing a term from the results *(from v18.20.187)*
 
-Right-click a Supervertaler termbase hit and choose **Edit term…** to open it in the **Edit term entry** dialog — the same one TermLens opens from a chip — with the termbase already resolved. Save, and the results refresh to show the corrected term; TermLens picks the change up immediately. Right-clicking selects the row under the pointer, so you need not click it first.
+Right-click a Supervertaler termbase hit and choose **Edit term…** to open it in the **Edit term entry** dialog – the same one TermLens opens from a chip – with the termbase already resolved. Save, and the results refresh to show the corrected term; TermLens picks the change up immediately. Right-clicking selects the row under the pointer, so you need not click it first.
 
-Two kinds of hit cannot be edited here, and the menu says so if you try: **MultiTerm** and `.ttb` entries, which are read-only throughout Supervertaler (edit them in MultiTerm), and hits from a termbase that SuperSearch read straight from the database because TermLens had not finished loading it — open that termbase in the Termbase Editor instead, or search again once TermLens has loaded.
+Two kinds of hit cannot be edited here, and the menu says so if you try: **MultiTerm** and `.ttb` entries, which are read-only throughout Supervertaler (edit them in MultiTerm), and hits from a termbase that SuperSearch read straight from the database because TermLens had not finished loading it – open that termbase in the Termbase Editor instead, or search again once TermLens has loaded.
 
 :::note
-TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced — they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, right-click its row and choose **Edit term…** (see below).
+TM and termbase results can be read and copied (via the preview pane) but cannot be navigated to or replaced – they are reference material, not document segments. The Replace bar is therefore disabled in **TMs** and **Termbases** mode. To change a term, right-click its row and choose **Edit term…** (see below).
 :::
 
 ### Searching the web *(from v18.20.181)*
@@ -91,11 +91,11 @@ You can also right-click in the editor and choose **Search the web**, or use the
 
 #### Choosing which sites to search
 
-Click **Web (n)** in the SuperSearch bar — it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijerterm**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
+Click **Web (n)** in the SuperSearch bar – it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijerterm**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
 
 The other thirty-six cover bilingual dictionaries (Glosbe, WordReference, bab.la), EU and legal terminology (EUR-Lex, EuroTermBank, Juremy, GEMET), encyclopaedic sources (Wikipedia, Wiktionary, Wikidata), English monolingual and writing references (Collins, Merriam-Webster, Oxford Collocations, SkELL, Etymonline), Dutch resources (Woordenlijst, Synoniemen.net, de Financiële Begrippenlijst), medical databases (EMA, EMC) and general search (Google, Google Patents, GitHub Code).
 
-Only five are enabled initially on purpose — forty tabs opening on your first search would be a poor introduction. Tick whichever you actually use.
+Only five are enabled initially on purpose – forty tabs opening on your first search would be a poor introduction. Tick whichever you actually use.
 
 **Adding your own** takes a name and a URL template: `{query}` for the search term, plus `{sl}` and `{tl}` for the language codes where the site needs them.
 
@@ -103,16 +103,16 @@ Only five are enabled initially on purpose — forty tabs opening on your first 
 
 A checkbox in that same dialog decides. Neither option is a fallback for the other, and both are worth having:
 
-* **In a Supervertaler window** — one window with a tab per site, reused for every search so tabs refresh in place rather than leaving a trail of windows behind. Tabs load only when you click them.
-* **In your own browser** — one new window containing all the tabs, which you close when you are done. Your browser brings your ad blocker and your signed-in sessions with it.
+* **In a Supervertaler window** – one window with a tab per site, reused for every search so tabs refresh in place rather than leaving a trail of windows behind. Tabs load only when you click them.
+* **In your own browser** – one new window containing all the tabs, which you close when you are done. Your browser brings your ad blocker and your signed-in sessions with it.
 
 #### Terms taken from the target side
 
-A term selected in the **target** is looked up **in the target language**. Searching a Dutch word in an EN→NL project queries the sites as nl→en, not en→nl — the latter is how you get a screen of nothing and conclude the site is broken.
+A term selected in the **target** is looked up **in the target language**. Searching a Dutch word in an EN→NL project queries the sites as nl→en, not en→nl – the latter is how you get a screen of nothing and conclude the site is broken.
 
 #### Sites that ask you to prove you are human
 
-Some sites, ProZ.com in particular, block embedded browsers. When that happens the tab shows a banner offering to hand the page to your own browser, where you are usually signed in and pass instantly. It is an offer rather than an automatic jump, so nothing pulls you out of the editor mid-segment — and if the check clears by itself, the page is still there underneath.
+Some sites, ProZ.com in particular, block embedded browsers. When that happens the tab shows a banner offering to hand the page to your own browser, where you are usually signed in and pass instantly. It is an offer rather than an automatic jump, so nothing pulls you out of the editor mid-segment – and if the check clears by itself, the page is still there underneath.
 
 ### Search Options
 
@@ -145,7 +145,7 @@ The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C
 
 ## File, TM and Termbase Selection
 
-Four buttons in the search bar let you narrow what SuperSearch looks at — **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, **TBs** for your termbases *(v18.20.155)*, and **Web** for reference sites *(v18.20.181)*. Each button shows how many items are included:
+Four buttons in the search bar let you narrow what SuperSearch looks at – **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, **TBs** for your termbases *(v18.20.155)*, and **Web** for reference sites *(v18.20.181)*. Each button shows how many items are included:
 
 * **Files (16)** -- all 16 files in the project are included
 * **Files (12/16)** -- 12 out of 16 files are included (4 excluded)
@@ -166,7 +166,7 @@ Click any button to open its selection dialog:
 
 The **Files** filter applies in **Project files** and **Everything** modes; the **TMs** filter applies in **TMs** and **Everything** modes; the **TBs** filter applies in **Termbases** and **Everything** modes.
 
-Termbases are listed as *name (kind)* — for example `BEIJER (Supervertaler)` — so two termbases that share a name remain distinguishable.
+Termbases are listed as *name (kind)* – for example `BEIJER (Supervertaler)` – so two termbases that share a name remain distinguishable.
 
 :::note
 These selections persist for the current session. When you switch to a different project, all files, TMs and termbases are included again by default.
@@ -178,7 +178,7 @@ These selections persist for the current session. When you switch to a different
 
 * If the segment is in the **currently active file**, Trados navigates to it directly.
 * If the segment is in a **different file**, SuperSearch attempts to switch to that file and navigate to the segment. If the file is not loaded in the editor, you may need to open it first.
-* **TM results** can't be navigated to — they aren't document segments. Double-clicking a TM row just reminds you to use the preview pane to copy the text.
+* **TM results** can't be navigated to – they aren't document segments. Double-clicking a TM row just reminds you to use the preview pane to copy the text.
 
 ## Find & Replace
 
@@ -238,7 +238,7 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 
 ## Tips
 
-* Select a term in the editor and press **Alt+S** to instantly search for it across the entire project — or **Alt+W** to look it up on IATE, Linguee, Reverso and the rest, in your project's language pair.
+* Select a term in the editor and press **Alt+S** to instantly search for it across the entire project – or **Alt+W** to look it up on IATE, Linguee, Reverso and the rest, in your project's language pair.
 * Use **Source only** scope to find segments where a particular term appears, then check how it was translated across files.
 * Use **Target only** scope with Replace to fix a consistent mistranslation across the entire project.
 * Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories -- useful in large projects where you only want to search a subset.

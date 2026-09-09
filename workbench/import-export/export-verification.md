@@ -30,7 +30,7 @@ If a file falls short, you’ll see a **Possible Missing Text in Export** dialog
 or, when text looks lost:
 
 ```
-⚠️ Possible dropped text in export: Manual.docx has only 85% of the expected words — review before delivery.
+⚠️ Possible dropped text in export: Manual.docx has only 85% of the expected words – review before delivery.
 ```
 
 When you see the warning, open the file and check it before delivering.

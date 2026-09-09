@@ -17,7 +17,7 @@ The change takes effect immediately – no restart needed. All panels (grid, com
 ## Tips
 
 - If any UI element looks visually wrong after switching (rare Qt repaint quirk), try switching to a different tab and back, or restarting the app
-- Dark mode does not affect PDF Rescue's OCR output or exported DOCX files — those are document colours, not UI colours
+- Dark mode does not affect PDF Rescue's OCR output or exported DOCX files – those are document colours, not UI colours
 
 ## Related pages
 

@@ -65,7 +65,7 @@ Three mutually exclusive modes (radio buttons):
 
 ### Auto-adjust case
 
-When replacing, adjusts the replacement to match the case pattern of each match — ALL CAPS → uppercased, all lower → lowercased, Title Case → title-cased. It has no effect when **Case sensitive** is on, and is ignored in **Regex** mode.
+When replacing, adjusts the replacement to match the case pattern of each match – ALL CAPS → uppercased, all lower → lowercased, Title Case → title-cased. It has no effect when **Case sensitive** is on, and is ignored in **Regex** mode.
 
 ### Search in
 
@@ -91,7 +91,7 @@ Tick **Regex** to treat the Find field as a regular expression (Python `re` synt
 - **Backreferences in Replace:** capture groups in the pattern can be reused in the Replace field as `\1`, `\2`, … (or `\g<name>` for named groups). For example, Find `"([^"]+)"` and Replace `«\1»` turns `"events"` into `«events»`.
 - **Case sensitive** still applies (off = the whole pattern matches case-insensitively).
 - While Regex is on, the **Match** modes and **Auto-adjust case** don't apply and are greyed out.
-- **Invalid patterns are caught:** an unbalanced pattern (e.g. `(`) or a bad backreference (e.g. `\9` with no matching group) shows a clear error and changes nothing — it never crashes or partially replaces.
+- **Invalid patterns are caught:** an unbalanced pattern (e.g. `(`) or a bad backreference (e.g. `\9` with no matching group) shows a clear error and changes nothing – it never crashes or partially replaces.
 
 :::tip
 A few handy patterns: `\s+` (runs of whitespace), ` {2,}` (two or more spaces), `\b(\w+)\s+\1\b` (doubled words like "the the"), ` +$` (trailing spaces).
@@ -119,7 +119,7 @@ Save and reuse multiple find/replace operations as a set.
 ### Adding Operations to a Set
 
 1. Enter your Find and Replace terms
-2. Set your options (Match mode, Case sensitive, Regex, Search in) — these are all saved with the operation
+2. Set your options (Match mode, Case sensitive, Regex, Search in) – these are all saved with the operation
 3. Click **➕ Add Current to Set**
 4. The operation is saved to the active set
 
@@ -141,7 +141,7 @@ The **Match** column shows each operation's mode, or **Regex** when the operatio
 4. See how many replacements were made
 
 :::caution
-**An empty "Replace with" deletes matches.** An operation with a blank Replace field replaces every match with nothing — i.e. it deletes the matched text. If a set contains any such operation, Run All lists them and defaults the confirmation button to **No**, so you don't wipe text by accident.
+**An empty "Replace with" deletes matches.** An operation with a blank Replace field replaces every match with nothing – i.e. it deletes the matched text. If a set contains any such operation, Run All lists them and defaults the confirmation button to **No**, so you don't wipe text by accident.
 :::
 
 ### Importing & exporting sets
