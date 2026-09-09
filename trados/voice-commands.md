@@ -34,7 +34,7 @@ If the TermLens panel isn't open, a small floating status strip appears instead 
 Everything works out of the box – no configuration needed. Most commands also respond to an alias, so you can use whichever phrasing comes naturally:
 
 | Say | Or | Action |
-| --- | – | ------ |
+| --- | --- | ------ |
 | "confirm" | "confirm segment" | Confirm segment and move to next unconfirmed |
 | "next segment" | "go down" | Move to the next segment (without confirming) |
 | "previous segment" | "go up" | Move to the previous segment |
