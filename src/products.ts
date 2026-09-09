@@ -52,6 +52,7 @@ export const PRODUCTS: Product[] = [
     label: 'Trados',
     fullName: 'Supervertaler for Trados',
     emoji: '🧩',
+    icon: '/product-icons/sv-trados.svg',
     llmsSubset: '/_llms-txt/supervertaler-for-trados.txt',
   },
   {
@@ -59,7 +60,7 @@ export const PRODUCTS: Product[] = [
     label: 'memoQ',
     fullName: 'Supervertaler for memoQ',
     emoji: '🟠',
-    icon: '/product-icons/memoq.png',
+    icon: '/product-icons/sv-memoq.svg',
     llmsSubset: '/_llms-txt/supervertaler-for-memoq.txt',
     banner:
       '<strong>Supervertaler for memoQ is in early development.</strong> ' +

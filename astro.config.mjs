@@ -27,6 +27,15 @@ export default defineConfig({
       title: 'Supervertaler Docs',
       description: 'Help and documentation for Supervertaler – AI translation, terminology and search inside Trados Studio and memoQ.',
 
+      // Starlight links /favicon.svg by itself; these are the fallbacks for
+      // browsers that do not take an SVG favicon, and for iOS. All three
+      // files are the product site's, copied in - see its tools/make-icons.py,
+      // which is where the mark is generated.
+      head: [
+        { tag: 'link', attrs: { rel: 'icon', href: '/favicon.ico', sizes: '32x32' } },
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' } },
+      ],
+
       // Component overrides — see ./src/components/ for the customisations.
       // Banner:  "no longer actively developed" notice on /workbench/*.
       // Head:    injects per-page Pagefind product filter metadata.
