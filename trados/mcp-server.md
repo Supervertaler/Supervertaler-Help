@@ -16,6 +16,8 @@ MCP ([Model Context Protocol](https://modelcontextprotocol.io/)) is the open sta
 
 <figure><img src="/.gitbook/assets/Supervertaler_MCP_Server.png" alt="Claude Code asked to read the project open in Trados Studio and produce an English-Dutch glossary, answering with a term table grounded in the live document and the user's termbase"><figcaption><strong>Claude Code.</strong> Asking for a glossary drawn from the live Trados Studio project – it reads the open document and checks the user's termbase, then answers in chat.</figcaption></figure>
 
+<figure><img src="/.gitbook/assets/Supervertaler_MCP_Server_Android.png" alt="Claude's Android app showing the first segment of a Trados project translated into Dutch and written back to the grid as Draft" width="320"><figcaption><strong>And from a phone.</strong> The same project, asked from Claude's Android app: the conversation is attached to Claude Desktop on the PC, where the MCP server runs, so the tools reach Trados Studio exactly as they do on the desktop. Studio stays where it is; you do not.</figcaption></figure>
+
 ## What you can ask
 
 With Trados Studio open and a document in the editor, you can ask your AI assistant things like:
