@@ -54,7 +54,7 @@ You can import terminology from a tab-separated values file:
 1. Select the target termbase in the list
 2. Click **Import from TSV**
 3. Select your `.tsv` file
-4. A column-mapping dialog opens (from v18.20.187): one row per column in the file, with a sample of its contents and a dropdown saying which termbase field it goes to. It is pre-filled from the file's headers, so a file exported by Supervertaler needs no changes -- check the row count, termbase name and language pair in the heading, and click **Import**. For a file with no language headers, or with the target column first, set the source and target yourself; any column you do not want goes to *ignore*
+4. A column-mapping dialog opens (from v18.20.187): one row per column in the file, with a sample of its contents and a dropdown saying which termbase field it goes to. It is pre-filled from the file's headers, so a file exported by Supervertaler needs no changes – check the row count, termbase name and language pair in the heading, and click **Import**. For a file with no language headers, or with the target column first, set the source and target yourself; any column you do not want goes to *ignore*
 5. A progress bar tracks the import (useful for large termbases with thousands of terms)
 
 If the file's languages are the other way round from the termbase, or are not its pair at all, the dialog says so in a note under the grid. The mapping it suggests already accounts for a reversed file.
@@ -63,7 +63,7 @@ If the file's languages are the other way round from the termbase, or are not it
 
 **File format:**
 
-The first row must be a header row. Headers the dialog recognises on its own (case-insensitive) -- anything else can still be mapped by hand:
+The first row must be a header row. Headers the dialog recognises on its own (case-insensitive) – anything else can still be mapped by hand:
 
 | Column | Required | Recognised headers |
 |--------|----------|-------------------|

@@ -2,10 +2,10 @@
 title: "Studio Tools"
 ---
 
-Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler Assistant chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates -- and it will look up the answer for you.
+Studio Tools lets you query your Trados Studio installation using natural language in the Supervertaler Assistant chat. Instead of navigating through menus and dialogs, you can simply ask the assistant about your projects, translation memories, termbases, and project templates – and it will look up the answer for you.
 
 :::tip
-Studio Tools works with all major AI providers: **Claude**, **OpenAI**, **Gemini**, **Grok**, and **Mistral**. Only Ollama (local models) does not support tool use and will work as before -- plain chat without Trados queries.
+Studio Tools works with all major AI providers: **Claude**, **OpenAI**, **Gemini**, **Grok**, and **Mistral**. Only Ollama (local models) does not support tool use and will work as before – plain chat without Trados queries.
 :::
 
 :::caution
@@ -18,7 +18,7 @@ When you send a message in the Supervertaler, the AI automatically decides wheth
 
 You do not need to use any special syntax or commands. Just ask your question naturally.
 
-While a tool is running, the thinking indicator shows what is happening -- for example, "Checking Trados projects..." or "Searching translation memory...".
+While a tool is running, the thinking indicator shows what is happening – for example, "Checking Trados projects..." or "Searching translation memory...".
 
 ## Available Tools
 
@@ -27,7 +27,7 @@ While a tool is running, the thinking indicator shows what is happening -- for e
 | **List Projects** | Lists all projects registered in Trados Studio with their name, status, and creation date. Supports filtering by status (in progress, completed, archived) |
 | **Get Project Details** | Shows detailed information about a specific project, including source and target languages, files, and folder path |
 | **Project Statistics** | Shows word count and analysis statistics for a project, broken down by match category (perfect, context, exact, fuzzy, new, repetitions) |
-| **File Status** | Shows the confirmation status of all files in a project -- how many segments are not started, draft, translated, approved, or signed off |
+| **File Status** | Shows the confirmation status of all files in a project – how many segments are not started, draft, translated, approved, or signed off |
 | **Project Termbases** | Lists termbases attached to a project, with their file paths, enabled/disabled state, and language index mappings |
 | **TM Info** | Shows detailed information about a specific translation memory, including language pair, segment count, file size, and creation date |
 | **Search TM** | Searches a translation memory for segments containing specific text. Returns matching source/target pairs so you can see how something was translated before |
@@ -108,5 +108,5 @@ Studio Tools currently provides **read-only** access to your Trados data. It can
 
 ## See Also
 
-* [Supervertaler](/trados/ai-assistant/) -- The chat interface where Studio Tools is available
-* [AI Settings](/trados/settings/ai-settings/) -- Configure your AI provider
+* [Supervertaler](/trados/ai-assistant/) – The chat interface where Studio Tools is available
+* [AI Settings](/trados/settings/ai-settings/) – Configure your AI provider

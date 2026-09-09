@@ -3,7 +3,7 @@ title: "Active Prompt"
 description: "Per-project prompt that Quick Add appends terminology to"
 ---
 
-Each Trados project can have an **active prompt** -- the prompt that Quick Add appends terminology to. This is also the prompt that is auto-selected in the [Batch Translate](/trados/batch-translate/) dropdown when you open the project.
+Each Trados project can have an **active prompt** – the prompt that Quick Add appends terminology to. This is also the prompt that is auto-selected in the [Batch Translate](/trados/batch-translate/) dropdown when you open the project.
 
 ## Setting the active prompt
 

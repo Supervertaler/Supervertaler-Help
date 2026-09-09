@@ -6,7 +6,7 @@ The Supervertaler Assistant supports attaching both images and documents to your
 
 ## Images
 
-Attach images for visual context -- for example, a screenshot of the source document layout, a reference image, or a table that is hard to describe in text. Images are sent to the AI using each provider's native vision API.
+Attach images for visual context – for example, a screenshot of the source document layout, a reference image, or a table that is hard to describe in text. Images are sent to the AI using each provider's native vision API.
 
 | Method        | How                                                 |
 | ------------- | --------------------------------------------------- |
@@ -18,7 +18,7 @@ Supported image formats: PNG, JPEG, GIF, WebP, BMP. Up to **5 images** per messa
 
 ## Documents
 
-Attach documents to provide the AI with additional reference material -- for example, a client style guide, a termbase in spreadsheet form, a reference PDF, or a translation memory export. The text content is automatically extracted from the document and included in your message as context.
+Attach documents to provide the AI with additional reference material – for example, a client style guide, a termbase in spreadsheet form, a reference PDF, or a translation memory export. The text content is automatically extracted from the document and included in your message as context.
 
 | Method        | How                                                    |
 | ------------- | ------------------------------------------------------ |
@@ -38,7 +38,7 @@ The chat bubble shows a compact summary (file name and size) instead of the full
 | Text and markup    | TXT, Markdown, HTML, JSON, XML     |
 
 :::note
-Up to **5 documents** per message, **20 MB** maximum per file. Very large documents are automatically truncated to avoid exceeding AI context limits. Legacy binary formats (DOC, XLS, PPT) use best-effort text extraction -- for best results, save as the modern format (DOCX, XLSX, PPTX) first.
+Up to **5 documents** per message, **20 MB** maximum per file. Very large documents are automatically truncated to avoid exceeding AI context limits. Legacy binary formats (DOC, XLS, PPT) use best-effort text extraction – for best results, save as the modern format (DOCX, XLSX, PPTX) first.
 :::
 
 :::tip
@@ -47,5 +47,5 @@ Up to **5 documents** per message, **20 MB** maximum per file. Very large docume
 
 ## See Also
 
-* [Supervertaler](/trados/ai-assistant/) -- Overview
-* [Context layers](/trados/context-layers/) -- What context is sent automatically
+* [Supervertaler](/trados/ai-assistant/) – Overview
+* [Context layers](/trados/context-layers/) – What context is sent automatically

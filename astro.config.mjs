@@ -25,7 +25,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Supervertaler Docs',
-      description: 'Help and documentation for Supervertaler — AI translation, terminology and search inside Trados Studio and memoQ.',
+      description: 'Help and documentation for Supervertaler – AI translation, terminology and search inside Trados Studio and memoQ.',
 
       // Component overrides — see ./src/components/ for the customisations.
       // Banner:  "no longer actively developed" notice on /workbench/*.

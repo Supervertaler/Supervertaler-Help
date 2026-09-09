@@ -2,7 +2,7 @@
 title: "Incognito Mode"
 ---
 
-Incognito Mode tells the AI to **anonymise all personal and project data** in its responses. When enabled, project names, file paths, TM names, user names, and other identifying information are automatically replaced with plausible placeholders -- so you can share your screen, record videos, or post screenshots without worrying about exposing confidential client data.
+Incognito Mode tells the AI to **anonymise all personal and project data** in its responses. When enabled, project names, file paths, TM names, user names, and other identifying information are automatically replaced with plausible placeholders – so you can share your screen, record videos, or post screenshots without worrying about exposing confidential client data.
 
 🕵️ Think of it as a privacy filter for your AI chat.
 
@@ -50,7 +50,7 @@ Some data is left untouched because it carries no identifying information:
 The setting takes effect immediately on your next message. Toggle it off when you no longer need anonymisation.
 
 :::tip
-**Tip:** The setting persists across Trados sessions, so remember to toggle it off when you are done sharing. You do not want anonymised data in your regular workflow -- it can make the AI's answers less specific.
+**Tip:** The setting persists across Trados sessions, so remember to toggle it off when you are done sharing. You do not want anonymised data in your regular workflow – it can make the AI's answers less specific.
 :::
 
 :::note
@@ -59,12 +59,12 @@ Incognito Mode works with all AI providers, not just Claude. The anonymisation i
 
 ## Limitations
 
-* Incognito Mode instructs the AI to anonymise data in its **responses**. It does not prevent data from being sent to the AI provider -- your source text, TM matches, and terminology are still included in the prompt as usual. If you need to prevent data from being sent entirely, disable those context options individually in AI Settings.
+* Incognito Mode instructs the AI to anonymise data in its **responses**. It does not prevent data from being sent to the AI provider – your source text, TM matches, and terminology are still included in the prompt as usual. If you need to prevent data from being sent entirely, disable those context options individually in AI Settings.
 * The AI does its best to catch all identifying information, but it cannot guarantee 100% coverage. Always review responses before sharing publicly.
-* [Studio Tools](/trados/ai-assistant/studio-tools/) results (project lists, TM searches, etc.) are also anonymised -- the AI receives the real data from the tools but presents it with placeholder names.
+* [Studio Tools](/trados/ai-assistant/studio-tools/) results (project lists, TM searches, etc.) are also anonymised – the AI receives the real data from the tools but presents it with placeholder names.
 
 ## See Also
 
-* [Supervertaler](/trados/ai-assistant/) -- Overview
-* [AI Settings](/trados/settings/ai-settings/) -- Configure context options and Incognito Mode
-* [Context layers](/trados/context-layers/) -- What context is sent to the AI
+* [Supervertaler](/trados/ai-assistant/) – Overview
+* [AI Settings](/trados/settings/ai-settings/) – Configure context options and Incognito Mode
+* [Context layers](/trados/context-layers/) – What context is sent to the AI

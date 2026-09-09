@@ -39,7 +39,7 @@ The conversation is saved automatically after every message and restored the nex
 To clear the history, click the **Clear** button in the chat toolbar.
 
 :::note
-Chat history is stored in `~/Supervertaler/trados/chat_history.json`. It is a single global history -- not per project or per file.
+Chat history is stored in `~/Supervertaler/trados/chat_history.json`. It is a single global history – not per project or per file.
 :::
 
 ### Right-Click Menu
@@ -68,7 +68,7 @@ If you select text within a bubble before right-clicking, **Copy** and **Apply t
 
 ## See Also
 
-* [QuickLauncher](/trados/quicklauncher/) -- One-click prompt shortcuts
-* [Batch Translate](/trados/batch-translate/) -- Translate multiple segments at once
-* [AI Settings](/trados/settings/ai-settings/) -- API keys, model selection, context options
+* [QuickLauncher](/trados/quicklauncher/) – One-click prompt shortcuts
+* [Batch Translate](/trados/batch-translate/) – Translate multiple segments at once
+* [AI Settings](/trados/settings/ai-settings/) – API keys, model selection, context options
 * [Keyboard Shortcuts](/trados/keyboard-shortcuts/)

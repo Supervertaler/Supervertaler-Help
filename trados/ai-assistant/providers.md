@@ -8,8 +8,8 @@ The Supervertaler Assistant supports multiple AI providers. You only need one to
 
 The current provider and model are shown in the status area at the bottom of the chat panel. You can switch models in two ways:
 
-* **Quick switch** -- click the provider/model label directly. A dropdown menu appears with all available models grouped by provider. The current model is marked with a tick. Select a different model to switch instantly.
-* **Settings** -- open the settings dialogue (gear icon) and switch to the **AI Settings** tab for full configuration including API keys, endpoints, and advanced options.
+* **Quick switch** – click the provider/model label directly. A dropdown menu appears with all available models grouped by provider. The current model is marked with a tick. Select a different model to switch instantly.
+* **Settings** – open the settings dialogue (gear icon) and switch to the **AI Settings** tab for full configuration including API keys, endpoints, and advanced options.
 
 ## Supported Providers
 
@@ -46,6 +46,6 @@ Some features are provider-specific:
 
 ## See Also
 
-* [Supervertaler](/trados/ai-assistant/) -- Overview
-* [AI Settings](/trados/settings/ai-settings/) -- API keys, endpoints, advanced options
-* [AI Cost Guide](/trados/ai-cost-guide/) -- Token pricing and cost estimates
+* [Supervertaler](/trados/ai-assistant/) – Overview
+* [AI Settings](/trados/settings/ai-settings/) – API keys, endpoints, advanced options
+* [AI Cost Guide](/trados/ai-cost-guide/) – Token pricing and cost estimates

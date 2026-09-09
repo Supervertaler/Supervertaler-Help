@@ -2,7 +2,7 @@
 title: "SuperSearch"
 ---
 
-SuperSearch is a cross-file search and replace tool that lets you find text across **all SDLXLIFF files** in your Trados project -- not just the file you currently have open -- and, optionally, across the project's **translation memories** as well. It lives in its own dockable panel, so you can keep it visible while you translate.
+SuperSearch is a cross-file search and replace tool that lets you find text across **all SDLXLIFF files** in your Trados project – not just the file you currently have open – and, optionally, across the project's **translation memories** as well. It lives in its own dockable panel, so you can keep it visible while you translate.
 
 Matching text is highlighted in yellow in the results grid, making it easy to spot exactly where the search term appears in each segment.
 
@@ -18,7 +18,7 @@ There are three ways to open SuperSearch:
 | **Right-click** | Right-click in the editor and choose **SuperSearch** from the context menu |
 | **Keyboard**    | Press **Alt+S**                                                            |
 
-The panel docks at the bottom of the editor by default, but you can drag it anywhere -- left, right, floating, or even to a second monitor. Trados remembers the position between sessions.
+The panel docks at the bottom of the editor by default, but you can drag it anywhere – left, right, floating, or even to a second monitor. Trados remembers the position between sessions.
 
 :::note
 **Prefer fewer panels?** You can host SuperSearch as a tab inside the Supervertaler Assistant panel instead of its own dockable panel. Go to **Settings > General > Panels** and tick **Show SuperSearch as a tab in the Supervertaler Assistant panel**, then restart Trados Studio. This requires a Supervertaler licence; without one, SuperSearch stays in its own panel.
@@ -119,9 +119,9 @@ Some sites, ProZ.com in particular, block embedded browsers. When that happens t
 | Option             | Description                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------- |
 | **Scope** dropdown | Choose _Source & Target_ (default), _Source only_, or _Target only_                         |
-| **Aa** checkbox    | Case-sensitive search -- when unchecked, "Hello" matches "hello", "HELLO", etc.             |
+| **Aa** checkbox    | Case-sensitive search – when unchecked, "Hello" matches "hello", "HELLO", etc.             |
 | **.\*** checkbox   | Treat the query as a regular expression (see [Regex tips](/trados/supersearch/#regex-tips) below) |
-| **Word** checkbox  | Match whole words only -- "cat" won't match "category" or "scatter". Ignored when **.\*** is on |
+| **Word** checkbox  | Match whole words only – "cat" won't match "category" or "scatter". Ignored when **.\*** is on |
 
 SuperSearch displays all matching segments in the results grid. The status bar shows the number of results, what was searched (files and/or TMs), and how long the search took.
 
@@ -133,26 +133,26 @@ Each row shows one matching segment, one TM entry, or one termbase entry:
 | ----------- | ------------------------------------------------------------------------------------------------- |
 | **Found in** | The project-file name, the translation-memory name (blue), or the termbase name (green). Hover for the full path |
 | **#**       | Segment number within the file; for TM results, the concordance match score; empty for termbase entries |
-| **Source**  | Source text -- matching text is highlighted in yellow                                             |
-| **Target**  | Target text -- matching text is highlighted in yellow                                             |
+| **Source**  | Source text – matching text is highlighted in yellow                                             |
+| **Target**  | Target text – matching text is highlighted in yellow                                             |
 | **Status**  | Confirmation status (Not Translated, Draft, Translated, etc.), "TM" for TM results, or the termbase kind (`Supervertaler`, `MultiTerm`, `TTB`) for terminology |
 
 ### Preview Pane
 
 Below the results grid is a preview pane showing the **full source and target text** of the selected result, side by side, with the match highlighted in yellow. This is handy when a segment is too long to read in its grid row. Click any result row to update the preview, and drag the splitter bar between the grid and the preview pane to resize it.
 
-The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C** to copy, or right-click for a menu with **Copy**, **Select All**, **Copy source**, and **Copy target**. This makes it easy to reuse a previous translation verbatim -- select the target phrase and paste it straight into your active segment.
+The text in both preview boxes is **selectable**: drag to select, press **Ctrl+C** to copy, or right-click for a menu with **Copy**, **Select All**, **Copy source**, and **Copy target**. This makes it easy to reuse a previous translation verbatim – select the target phrase and paste it straight into your active segment.
 
 ## File, TM and Termbase Selection
 
 Four buttons in the search bar let you narrow what SuperSearch looks at – **Files** for the project's SDLXLIFF files, **TMs** for the project's translation memories, **TBs** for your termbases *(v18.20.155)*, and **Web** for reference sites *(v18.20.181)*. Each button shows how many items are included:
 
-* **Files (16)** -- all 16 files in the project are included
-* **Files (12/16)** -- 12 out of 16 files are included (4 excluded)
-* **TMs (3)** -- all 3 project TMs are included
-* **TMs (1/3)** -- 1 of 3 TMs is included (2 excluded)
-* **TBs (2)** -- both available termbases are included
-* **Web (5/41)** -- 5 of the 41 available web resources are switched on
+* **Files (16)** – all 16 files in the project are included
+* **Files (12/16)** – 12 out of 16 files are included (4 excluded)
+* **TMs (3)** – all 3 project TMs are included
+* **TMs (1/3)** – 1 of 3 TMs is included (2 excluded)
+* **TBs (2)** – both available termbases are included
+* **Web (5/41)** – 5 of the 41 available web resources are switched on
 
 Files, TMs and termbases are all discovered when the project opens, so the counts are filled in before your first search. Web resources are your own standing choice rather than a property of the project, so that count is the same in every job until you change it.
 
@@ -182,11 +182,11 @@ These selections persist for the current session. When you switch to a different
 
 ## Find & Replace
 
-Tick the **Replace** checkbox to reveal the replace bar. Replace always operates on **target text only** -- source text is never modified.
+Tick the **Replace** checkbox to reveal the replace bar. Replace always operates on **target text only** – source text is never modified.
 
 | Action          | Description                                                                                                                             |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Replace**     | Replaces the match in the currently selected result. The segment must be in the active file -- double-click it first to navigate there. |
+| **Replace**     | Replaces the match in the currently selected result. The segment must be in the active file – double-click it first to navigate there. |
 | **Replace All** | Replaces all target matches across all files. A confirmation dialog shows how many segments in how many files will be affected.         |
 
 ### How Replace All works
@@ -241,13 +241,13 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 * Select a term in the editor and press **Alt+S** to instantly search for it across the entire project – or **Alt+W** to look it up on IATE, Linguee, Reverso and the rest, in your project's language pair.
 * Use **Source only** scope to find segments where a particular term appears, then check how it was translated across files.
 * Use **Target only** scope with Replace to fix a consistent mistranslation across the entire project.
-* Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories -- useful in large projects where you only want to search a subset.
+* Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories – useful in large projects where you only want to search a subset.
 * Switch the mode dropdown to **TMs** to use SuperSearch as a concordance tool, **Termbases** to search your terminology, or **Everything** to see project, TM and termbase hits side by side.
 * The status bar shows the number of results, what was searched, and the search time in milliseconds.
 * You can resize columns by dragging the column header borders.
 
 ## See Also
 
-* [Supervertaler](/trados/ai-assistant/) -- AI-powered chat and context
-* [Batch Operations](/trados/batch-operations/) -- Batch translate and proofread
-* [Keyboard Shortcuts](/trados/keyboard-shortcuts/) -- All shortcuts in one place
+* [Supervertaler](/trados/ai-assistant/) – AI-powered chat and context
+* [Batch Operations](/trados/batch-operations/) – Batch translate and proofread
+* [Keyboard Shortcuts](/trados/keyboard-shortcuts/) – All shortcuts in one place

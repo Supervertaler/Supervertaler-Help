@@ -3,19 +3,19 @@ title: "Obsidian Setup"
 description: "Setting up Obsidian for your memory banks"
 ---
 
-Memory banks store all knowledge as Markdown files, which you can browse and edit with any text editor. For the best experience, we recommend [Obsidian](https://obsidian.md/) -- a free knowledge-base app that visualises the links between your articles as an interactive graph.
+Memory banks store all knowledge as Markdown files, which you can browse and edit with any text editor. For the best experience, we recommend [Obsidian](https://obsidian.md/) – a free knowledge-base app that visualises the links between your articles as an interactive graph.
 
 ## Installing Obsidian
 
 1. Download Obsidian from [https://obsidian.md/download](https://obsidian.md/download) (available for Windows, Mac, and Linux)
-2.  Install and open it -- choose **Open folder as vault** and select one of your memory bank folders, for example:
+2.  Install and open it – choose **Open folder as vault** and select one of your memory bank folders, for example:
 
     ```
     C:\Users\{you}\Supervertaler\memory-banks\default\
     ```
 
     If you keep several banks side by side, you can open each one as its own Obsidian vault and switch between them from Obsidian's vault switcher.
-3. The free version of Obsidian includes everything you need -- no subscription required. (The paid Sync and Publish add-ons are not needed.)
+3. The free version of Obsidian includes everything you need – no subscription required. (The paid Sync and Publish add-ons are not needed.)
 
 ## Web Clipper
 
@@ -31,7 +31,7 @@ The [Obsidian Web Clipper](https://obsidian.md/clipper) is a free browser extens
    * **Vault:** select the memory bank vault you want clippings to land in
 5. Optionally add properties: `source_url` = `{{url}}`, `clipped` = `{{date}}`
 
-Now when you find a useful reference -- a client style guide, a terminology resource, a domain article -- click the clipper, hit save, and it lands in that bank's `reference/` folder. Nothing reads it automatically: `reference/` is source material, so when you want it in the bank, read it and write the parts that matter into `brief.md`, `terminology.md` or `style.md`.
+Now when you find a useful reference – a client style guide, a terminology resource, a domain article – click the clipper, hit save, and it lands in that bank's `reference/` folder. Nothing reads it automatically: `reference/` is source material, so when you want it in the bank, read it and write the parts that matter into `brief.md`, `terminology.md` or `style.md`.
 
 :::note
 If you keep several memory banks, create one Web Clipper template per bank so you can choose the destination from the clipper dropdown at clip time.
@@ -41,9 +41,9 @@ If you keep several memory banks, create one Web Clipper template per bank so yo
 
 These free Obsidian community plugins enhance the memory bank experience:
 
-* **Dataview** -- query your vault like a database (e.g. list all terminology articles for a specific client)
-* **Calendar** -- visualise when articles were created or modified
-* **Graph Analysis** -- enhanced graph view with clustering and statistics
+* **Dataview** – query your vault like a database (e.g. list all terminology articles for a specific client)
+* **Calendar** – visualise when articles were created or modified
+* **Graph Analysis** – enhanced graph view with clustering and statistics
 
 To install plugins: **Settings → Community plugins → Browse**.
 
