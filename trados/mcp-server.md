@@ -10,6 +10,10 @@ The Supervertaler MCP Server connects **Claude Desktop** directly to your live T
 
 MCP ([Model Context Protocol](https://modelcontextprotocol.io/)) is the open standard that lets AI applications securely call tools exposed by other programs. The Supervertaler MCP Server is the first MCP server that talks to a **live** Trados Studio editor session – other Trados-related MCP servers work on project files on disk, not the document you are working on.
 
+**Prefer to watch?** The [MCP Server screencast](https://www.youtube.com/watch?v=hKQ62_IU0fk) (9 min) shows it in use: Trados Studio 2026 driven from Claude's chat window.
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/hKQ62_IU0fk" title="Supervertaler MCP Server – controlling Trados Studio 2026 from Claude Chat" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <figure><img src="/.gitbook/assets/Supervertaler_MCP_Server.png" alt="Claude Code asked to read the project open in Trados Studio and produce an English-Dutch glossary, answering with a term table grounded in the live document and the user's termbase"><figcaption><strong>Claude Code.</strong> Asking for a glossary drawn from the live Trados Studio project – it reads the open document and checks the user's termbase, then answers in chat.</figcaption></figure>
 
 ## What you can ask
