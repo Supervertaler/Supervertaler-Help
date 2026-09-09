@@ -135,3 +135,27 @@
   /* warm gray that reads as a real line against the dark backdrop. */
   border-inline-start-color: #3a3f47;
 }
+
+/* ---------------------------------------------------------------
+ * Product marks on the landing cards
+ *
+ * Starlight's Card renders its title first and everything else into
+ * a .body below it, so a mark placed in the MDX lands between the
+ * title and the first paragraph, where it reads as a stray blob.
+ * Floating it instead indented only the first line, which looked
+ * like the mark had been dropped into the middle of the sentence.
+ *
+ * Lifting it into the card's top-right corner leaves the text
+ * completely alone. top/right are relative to the padding box, so
+ * this does not depend on knowing Starlight's card padding.
+ * --------------------------------------------------------------- */
+.sl-markdown-content .card {
+  position: relative;
+}
+
+.sl-markdown-content .card .body > .product-mark {
+  position: absolute;
+  top: 0.15rem;
+  right: 0;
+  margin: 0;
+}
