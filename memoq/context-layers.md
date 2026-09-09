@@ -114,7 +114,7 @@ None of these can be unlocked by a setting on your side. They are consequences o
 
 The default composition – everything above except the ones that need a click – is a strong baseline and the one to start from.
 
-More context is not automatically better. The context window is finite, and a mature memory bank plus a rich glossary can push a prompt into the tens of thousands of tokens. The cost is smaller than it looks, because the stable half of every request is identical from batch to batch and is cached: on one 370-segment run, caching turned roughly $10 into roughly $4. But token count is not the only cost — three overlapping sources describing the same term can contradict each other, and the model then has to reconcile them on the fly.
+More context is not automatically better. The context window is finite, and a mature memory bank plus a rich glossary can push a prompt into the tens of thousands of tokens. The cost is smaller than it looks, because the stable half of every request is identical from batch to batch and is cached: on one 370-segment run, caching turned roughly $10 into roughly $4. But token count is not the only cost – three overlapping sources describing the same term can contradict each other, and the model then has to reconcile them on the fly.
 
 The layers that describe the **document** rather than the **client** – 5, 8 and 9 – are cheap, never contradict each other, and there is no case yet found where switching one off improved a translation.
 
