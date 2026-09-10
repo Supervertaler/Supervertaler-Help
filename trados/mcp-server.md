@@ -142,6 +142,35 @@ If you always pair the same app with the same Studio, set it once in that app's 
 
 or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE` to `2024`, `2026`, or part of a project name. A pinned app never asks – and if the Studio it wants is not running, it says so rather than quietly using the other one.
 
+#### Two chats in the same app – read this before switching windows
+
+The recipe above uses **two different AI apps** for a reason. One app runs **one** Supervertaler server, and *"Use the 2026 one"* is remembered **by that server** – not by the chat you said it in. So if you open two Claude Desktop chats, tell one *"use 2026"* and the other *"use 2024"*, and then switch between them, **both are now pointed at whichever Studio you named last.** Switching windows does not switch Studios, and the refusal above will not catch it: it only fires when *nothing* has been chosen, not when the choice is stale. This is exactly how a translation could land in the wrong project.
+
+Two ways to make two chats safe:
+
+**A. Re-say it every turn – no setup, one rule to keep.** Put one line in each chat's project instructions (in Claude Desktop, *Projects → Project instructions*):
+
+> Before any Trados action, call `select_trados_instance("2026")` – never assume the selection persists.
+
+and `"2024"` in the other. Every turn re-points the shared server before it touches anything. Fine for one person working in one window at a time, which is what this is; a turn that forgets the rule is the only risk.
+
+**B. Two servers, each pinned – no rule to keep.** Keep the extension for one Studio and add a **second** server for the other, pinned with `--instance` and given a distinct name, in `%APPDATA%\Claude\claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "supervertaler-2024": {
+      "command": "C:\\Users\\<you>\\Supervertaler\\mcp\\SupervertalerMcpServer.exe",
+      "args": ["--instance", "2024"]
+    }
+  }
+}
+```
+
+Then each chat's project instructions say which server to use – *"Use only the `supervertaler-2024` tools"* in one, the extension's in the other. Neither process can ever see the other Studio, so nothing can go wrong between windows. The cost is that every tool now appears twice in every chat, prefixed by server name. That is the same doubling the Connect dialog warns about when an extension and a manual entry are both installed by accident – here it is the point.
+
+If you do this regularly, use B. It turns a discipline into a guarantee.
+
 > The Connect dialog warns when a second Studio is running and names its project, since there is no way to tell from inside the first one.
 
 ### Direction-aware termbase writes *(from v18.20.153)*
