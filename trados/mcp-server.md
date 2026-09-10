@@ -4,7 +4,7 @@ title: "Supervertaler MCP Server"
 
 The Supervertaler MCP Server connects **Claude Desktop** directly to your live Trados Studio session. You chat in Claude's own window, and it answers from your real project data: the document open in the editor, your translation memories, and your termbases. It can also make changes for you, always under your supervision.
 
-> **Which AI apps work?** Any app that can run a **local (STDIO) MCP server on your own machine**. Claude Desktop is the easiest, because the plugin ships a one-click extension for it. **ChatGPT's desktop app works too** *(confirmed August 2026)*, as do Claude Code and **Mistral Vibe CLI** *(confirmed August 2026)* – see [Setting it up](#setting-it-up) for each. What cannot work is anything that runs the server in the cloud rather than on your PC. That rules out the claude.ai and chatgpt.com **websites**, and also Mistral's **Vibe web app**, whose custom MCP connectors accept only a remote `https://` URL. The Supervertaler bridge is local by design, so your project never leaves your machine, and a cloud-hosted client has no route to it.
+> **Which AI apps work?** Any app that can run a **local (STDIO) MCP server on your own machine**. Claude Desktop is the easiest, because the plugin ships a one-click extension for it. **ChatGPT's desktop app works too** *(confirmed August 2026)*, as do **Google Antigravity** *(confirmed September 2026)*, Claude Code, Gemini CLI and **Mistral Vibe CLI** *(confirmed August 2026)* – see [Setting it up](#setting-it-up) for each. Antigravity is the Google-side equivalent of Claude Desktop, and the way to drive Trados from Gemini. What cannot work is anything that runs the server in the cloud rather than on your PC. That rules out the claude.ai and chatgpt.com **websites**, and also Mistral's **Vibe web app**, whose custom MCP connectors accept only a remote `https://` URL. The Supervertaler bridge is local by design, so your project never leaves your machine, and a cloud-hosted client has no route to it.
 >
 > *Earlier versions of this page said ChatGPT desktop could not be used. That was true when written and is no longer: the desktop app has since added support for local STDIO servers.*
 
@@ -363,7 +363,94 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 
     **d. Check it.** Start Trados Studio **first**, then run `vibe` and type `/mcp` (or `/connectors`). Your server should be listed; `/mcp supervertaler` lists the tools it exposes. Then ask: *"What Trados project is open?"*
 
-5. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. The snippet is in Claude's JSON format; clients that use a different format need the same two facts – the transport is STDIO, and the command is the path to that exe.
+5. **Google Antigravity** *(confirmed September 2026)*: Antigravity is Google's agentic desktop app – the Google-side counterpart to Claude Desktop and ChatGPT desktop, and the route to driving Trados from Gemini with a real interface rather than a terminal.
+
+    > **Not Gemini Code Assist in VS Code.** Google has retired the free Gemini Code Assist tier for individuals in the VS Code extension. Signing in now returns *"This client is no longer supported for Gemini Code Assist for individuals"* and points you at Antigravity. Don't spend time on that route.
+
+    **a. Get Antigravity.** Download it from [antigravity.google/download](https://antigravity.google/download) and sign in with a **personal Google account**. A paid Google **Workspace** account – your own domain – is refused: Google restricts the free tier to consumer accounts, and a Workspace sign-in fails with a licence error. (During onboarding you're offered "Build with Google" plugins for Firebase, Flutter, Maps and so on. None are relevant to translation work; leave them all unticked, as each adds its own tools alongside Supervertaler's.)
+
+    **b. Get the server.** Exactly as in step 3a – **Download server (.zip)**, unzip it, and put `SupervertalerMcpServer.exe` somewhere permanent.
+
+    **c. Add the server.** Open **Settings → Customizations**, scroll to **Installed MCP Servers**, and click **Add MCP**. Or edit the config file directly – **Open MCP Config** in that same panel takes you to it:
+
+    ```
+    %UserProfile%\.gemini\config\mcp_config.json
+    ```
+
+    ```json
+    {
+      "mcpServers": {
+        "supervertaler": {
+          "command": "C:\\Users\\<you>\\Supervertaler\\mcp\\SupervertalerMcpServer.exe",
+          "args": []
+        }
+      }
+    }
+    ```
+
+    JSON requires every backslash to be doubled, as shown – or write the path with forward slashes, which Windows also accepts. Quit Antigravity completely afterwards and start it again; the file is read at startup.
+
+    **d. Check it.** **Settings → Customizations → Installed MCP Servers** should list `supervertaler` with a green dot and a tool count – *"51 tools enabled"* at the time of writing, more as the plugin gains tools. Expand it to see the tool names. Then, with Trados Studio running, ask: *"What Trados project is open?"*
+
+    > **Don't test it by asking the AI to list its MCP tools.** It will tell you, confidently, that it has none – even with every tool connected and working. Models are unreliable about their own toolset. Trust the Settings panel and a real question instead.
+
+    **e. Teach it to use the tools.** This step matters more here than with any other client. Antigravity's agent has a shell and a file browser, and left to itself it will try to answer Trados questions by digging through `projects.xml` and your project folder – slowly, and from stale data, because neither reflects what Studio currently has open. Give it a standing instruction. Create this file:
+
+    ```
+    %UserProfile%\.gemini\config\skills\supervertaler-trados\SKILL.md
+    ```
+
+    ````markdown
+    ---
+    name: supervertaler-trados
+    description: Work with the Trados Studio project the user has open, through the
+      Supervertaler MCP server - segments, terminology, translation memories, comments
+      and QA. Use for any question about the active Trados project and for any request
+      to translate, review, edit, confirm or comment on segments in Studio.
+    ---
+
+    # Supervertaler for Trados
+
+    The `supervertaler` MCP server talks to the user's running Trados Studio and is
+    the ONLY correct way to read or change its state. Start with
+    `get_active_project`; if it is unavailable, STOP and say the server is not
+    connected.
+
+    ## Never read Trados state from the shell or the filesystem
+
+    - `projects.xml` lists projects that exist, NOT the one currently open.
+    - The `.sdlxliff` on disk is the last SAVED state, not what is in the editor.
+
+    Use `get_active_project`, `get_segments`, `get_active_segment`,
+    `get_project_statistics`, `lookup_term`, `search_studio_tm` and the `check_*`
+    tools instead. If more than one Studio is running, call `list_trados_instances`
+    and ask which project is meant.
+
+    ## Ask before writing
+
+    `update_segments`, `find_and_replace`, `pretranslate`, `save_document`,
+    `export_target`, `update_tm`, the comment tools and the term tools all change
+    the user's work. Never call them except to carry out a change the user has
+    asked for. Everything else only reads.
+
+    When writing segments: address them by the ids from `get_segments`, pass back
+    each segment's `fp` fingerprint so the write is checked against the row you
+    read, and copy inline tags from the SOURCE field. Cite the segment `number`
+    the user sees in Studio's grid, and never invent one.
+
+    ## Never write into the project's Studio folder
+
+    That folder holds the `.sdlxliff` files Studio has open. Never create, edit,
+    move or delete anything under it, and never fix a translation by editing a
+    file there - segment changes go through `update_segments`. Reading other files
+    in the project folder (the source document, a PDF, reference material) is fine.
+    ````
+
+    It appears under **Settings → Customizations**, tagged `Global`, and applies to every project on the machine. That last rule also gives you a soft guard on your Studio folder: not enforced by the server, but applied at the layer that was doing the exploring.
+
+    > **Gemini CLI** (terminal, no interface) reads a *different* file. Register the server with `gemini mcp add supervertaler --scope user "C:\Users\<you>\Supervertaler\mcp\SupervertalerMcpServer.exe"`, which writes to `%UserProfile%\.gemini\settings.json`. Watch for its folder-trust gate: in a folder you haven't trusted it disables every MCP server – including user-scope ones – and says so when you run `gemini mcp list`.
+
+6. **Other MCP clients (Claude Code, etc.)**: click **Copy config snippet** and paste it into the app's MCP configuration, adjusting the path to where you saved `SupervertalerMcpServer.exe`. The snippet is in Claude's JSON format; clients that use a different format need the same two facts – the transport is STDIO, and the command is the path to that exe.
 
 Then open a project document in the Trados editor, and ask your AI app: *"What's the status of my Trados project?"*
 
@@ -382,7 +469,7 @@ Everything stays on your computer:
 ## Requirements
 
 * Supervertaler for Trados with an active licence or trial (the bridge is part of the AI Assistant).
-* An MCP client that runs local STDIO servers on your own machine: Claude Desktop (recommended, one-click install), ChatGPT desktop, Claude Code, Mistral Vibe CLI, or similar. This means an app that executes the server **on your PC** – the claude.ai and chatgpt.com *websites*, and Mistral's Vibe web app, all run servers in the cloud and cannot reach a local one.
+* An MCP client that runs local STDIO servers on your own machine: Claude Desktop (recommended, one-click install), ChatGPT desktop, Google Antigravity, Claude Code, Gemini CLI, Mistral Vibe CLI, or similar. This means an app that executes the server **on your PC** – the claude.ai and chatgpt.com *websites*, and Mistral's Vibe web app, all run servers in the cloud and cannot reach a local one.
 * Windows (the MCP server is a self-contained exe; no additional runtimes needed).
 
 ## Keeping it up to date
