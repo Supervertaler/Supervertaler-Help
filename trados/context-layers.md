@@ -17,7 +17,7 @@ This page is the single place that lists every layer. Each section is a short ov
 | 2 | Current segment | Trados | always |
 | 3 | Surrounding segments | Trados | always |
 | 4 | Full document content | Trados | yes |
-| 5 | A translation memory match | your TMs | yes, outside batch |
+| 5 | A translation memory match | your TMs | yes |
 | 6 | Termbase terms | your termbases | yes |
 | 7 | SuperMemory | what you have recorded about the client | yes, when a bank is active |
 | 8 | List numbering | the Word file inside the sdlxliff | yes, from v18.20.189 |
@@ -48,14 +48,14 @@ Very long documents are truncated to a configured maximum (default 500 segments)
 
 ### 5. A translation memory match
 
-Where Studio has already put a TM hit in the segment – a pre-translated or auto-propagated row – its source, its target and its match percentage go to the AI as reference material from your own past work, so it can stay consistent with how you rendered that phrase last time.
+Where Studio has already put a TM hit in the segment – a pre-translated or auto-propagated row – that translation goes to the AI as work you have already approved, so it is followed rather than quietly rewritten.
 
 Two limits worth knowing, because they are easy to assume away:
 
-- It is the **one** match Studio left on the segment, not a search of your TMs for the best few. A segment with no TM origin contributes nothing here.
-- It applies to **Chat, QuickLauncher and AutoPrompt**. Batch Translate does not send it; there, consistency with your past work comes from the termbase, SuperMemory and the document itself.
+- It is the match **Studio left on the segment**, not a search of your TMs for the best few. A segment with no TM origin contributes nothing here, so pre-translating before a batch run is what gives this layer anything to say.
+- **Batch Translate sends exact matches only.** Studio records how close a match is but not the source it was made for, so a fuzzy could only be offered as a translation of a sentence the model cannot read – unable to tell which words differ, and most misleading precisely where a memory has been padded with near-misses to manufacture matches. At 100% the match's source *is* the segment's source, so nothing is hidden. Chat, QuickLauncher and AutoPrompt still send whatever match is on the segment, with its percentage.
 
-**Toggle:** AI Settings → *Include TM matches*.
+**Toggles:** **Send 100% TM matches to the AI** on the Batch Operations tab, for a job whose memory you do not trust; AI Settings → *Include TM matches* for the rest.
 
 ### 6. Termbase terms
 
