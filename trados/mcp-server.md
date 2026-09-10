@@ -146,15 +146,15 @@ or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE` to `2024`, `2026
 
 The recipe above uses **two different AI apps** for a reason. One app runs **one** Supervertaler server, and *"Use the 2026 one"* is remembered **by that server** – not by the chat you said it in. So if you open two Claude Desktop chats, tell one *"use 2026"* and the other *"use 2024"*, and then switch between them, **both are now pointed at whichever Studio you named last.** Switching windows does not switch Studios, and the refusal above will not catch it: it only fires when *nothing* has been chosen, not when the choice is stale. This is exactly how a translation could land in the wrong project.
 
-Two ways to make two chats safe:
+**Give each chat one line that names its Studio, and it can never write into the other's project.** In Claude Desktop, *Projects → Project instructions*, put in the 2026 chat's project:
 
-**A. Re-say it every turn – no setup, one rule to keep.** Put one line in each chat's project instructions (in Claude Desktop, *Projects → Project instructions*):
+> This project works only with Trados Studio 2026. Pass `instance: "2026"` on every Supervertaler tool call that changes anything.
 
-> Before any Trados action, call `select_trados_instance("2026")` – never assume the selection persists.
+and `"2024"` in the other. From v18.20.190 every editing tool takes an optional `instance` – `"2024"`, `"2026"`, or part of the project name – and the server checks it against the Studio the call would actually reach. A translation, comment or term meant for 2026 that would land in 2024 is **refused before anything is written**, and named: *"this call says it is for 2026, but no running Studio matches"* or a route straight to the right one. The shared selection no longer matters, because the call carries its own answer. This is the reliable way, and it needs no second server and no file to edit.
 
-and `"2024"` in the other. Every turn re-points the shared server before it touches anything. Fine for one person working in one window at a time, which is what this is; a turn that forgets the rule is the only risk.
+Every write also now **says which Studio and project it landed in**, in its reply, so even without the `instance` line a translation that went to the wrong place is visible at once rather than discovered later.
 
-**B. Two servers, each pinned – no rule to keep.** Keep the extension for one Studio and add a **second** server for the other, pinned with `--instance` and given a distinct name, in `%APPDATA%\Claude\claude_desktop_config.json`:
+**If you would rather it be impossible than declared** – a second server, pinned, so the two can never even see each other. Keep the extension for one Studio and add a second server for the other in `%APPDATA%\Claude\claude_desktop_config.json`:
 
 ```json
 {
@@ -167,9 +167,7 @@ and `"2024"` in the other. Every turn re-points the shared server before it touc
 }
 ```
 
-Then each chat's project instructions say which server to use – *"Use only the `supervertaler-2024` tools"* in one, the extension's in the other. Neither process can ever see the other Studio, so nothing can go wrong between windows. The cost is that every tool now appears twice in every chat, prefixed by server name. That is the same doubling the Connect dialog warns about when an extension and a manual entry are both installed by accident – here it is the point.
-
-If you do this regularly, use B. It turns a discipline into a guarantee.
+Each chat's instructions then name the server to use. Every tool appears twice, prefixed by server name; here that is the point, not a mistake. For most people the `instance` line above is simpler and just as safe.
 
 > The Connect dialog warns when a second Studio is running and names its project, since there is no way to tell from inside the first one.
 
