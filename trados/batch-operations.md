@@ -45,7 +45,9 @@ Technical documents – patents, manuals, specifications – point at parts of a
 
 The AI sees the text of your documents, not the pictures in them. **FigureLens** fixes that in two steps, and it tells you at each step what will happen and what it costs. The **FigureLens…** link opens it.
 
-<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-Images.jpg" alt="The Batch Operations tab with the FigureLens link marked 1, and the FigureLens panel open beside it with Step 1 marked 2 and Step 2 marked 3"><figcaption>Three clicks: the FigureLens link (1), Extract images to a folder (2), Describe images with AI (3).</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-FigureLens-1.jpg" alt="The Batch Operations tab of the Supervertaler Assistant, with the FigureLens link near the bottom marked 1"><figcaption>Click 1: the <strong>FigureLens…</strong> link, under Batch Operations.</figcaption></figure>
+
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados-FigureLens-2-3.jpg" alt="The FigureLens panel listing one document with one image, Step 1 Extract images to a folder marked 2, and Step 2 Describe images with AI marked 3"><figcaption>Clicks 2 and 3, in the panel that opens: <strong>Extract images to a folder</strong> (free, no AI), then <strong>Describe images with AI</strong> – one AI request per image. <strong>Describe from the text only</strong> is the free alternative to that second button, not a third step.</figcaption></figure>
 
 <div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap">
 <figure style="flex:1 1 300px;margin:0"><img src="/.gitbook/assets/Supervertaler-for-Trados-Images-word.jpg" alt="A Word document with a photo of a lifeboat captioned Figure 1 (lifeboat)"><figcaption>What is in the document: a picture the AI cannot see.</figcaption></figure>
