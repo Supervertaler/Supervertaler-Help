@@ -421,59 +421,17 @@ Version tags like *(from v18.20.111)* show the plugin version a capability first
 
     > **Don't test it by asking the AI to list its MCP tools.** It will tell you, confidently, that it has none – even with every tool connected and working. Models are unreliable about their own toolset. Trust the Settings panel and a real question instead.
 
-    **e. Teach it to use the tools.** This step matters more here than with any other client. Antigravity's agent has a shell and a file browser, and left to itself it will try to answer Trados questions by digging through `projects.xml` and your project folder – slowly, and from stale data, because neither reflects what Studio currently has open. Give it a standing instruction. Create this file:
+    **e. Teach it to use the tools.** This step matters more here than with any other client. Antigravity's agent has a shell and a file browser, and left to itself it will try to answer Trados questions by digging through `projects.xml` and your project folder – slowly, and from stale data, because neither reflects what Studio currently has open. On one 675-segment project that meant eight minutes, thirteen shell commands and no answer; the same question with the tools named took fourteen seconds.
+
+    Supervertaler ships the instruction file that fixes this. In Trados, open **Supervertaler Settings → AI Settings → Connect AI assistant…**, scroll to **Google Antigravity**, and click **Install Antigravity skill**. It writes:
 
     ```
     %UserProfile%\.gemini\config\skills\supervertaler-trados\SKILL.md
     ```
 
-    ````markdown
-    ---
-    name: supervertaler-trados
-    description: Work with the Trados Studio project the user has open, through the
-      Supervertaler MCP server - segments, terminology, translation memories, comments
-      and QA. Use for any question about the active Trados project and for any request
-      to translate, review, edit, confirm or comment on segments in Studio.
-    ---
+    Then restart Antigravity and check **Settings → Customizations** – it appears as `supervertaler-trados`, tagged `Global`. Start a **new conversation**; one already running keeps the instructions it began with. The Gemini CLI reads the same folder, so it is covered by the same click.
 
-    # Supervertaler for Trados
-
-    The `supervertaler` MCP server talks to the user's running Trados Studio and is
-    the ONLY correct way to read or change its state. Start with
-    `get_active_project`; if it is unavailable, STOP and say the server is not
-    connected.
-
-    ## Never read Trados state from the shell or the filesystem
-
-    - `projects.xml` lists projects that exist, NOT the one currently open.
-    - The `.sdlxliff` on disk is the last SAVED state, not what is in the editor.
-
-    Use `get_active_project`, `get_segments`, `get_active_segment`,
-    `get_project_statistics`, `lookup_term`, `search_studio_tm` and the `check_*`
-    tools instead. If more than one Studio is running, call `list_trados_instances`
-    and ask which project is meant.
-
-    ## Ask before writing
-
-    `update_segments`, `find_and_replace`, `pretranslate`, `save_document`,
-    `export_target`, `update_tm`, the comment tools and the term tools all change
-    the user's work. Never call them except to carry out a change the user has
-    asked for. Everything else only reads.
-
-    When writing segments: address them by the ids from `get_segments`, pass back
-    each segment's `fp` fingerprint so the write is checked against the row you
-    read, and copy inline tags from the SOURCE field. Cite the segment `number`
-    the user sees in Studio's grid, and never invent one.
-
-    ## Never write into the project's Studio folder
-
-    That folder holds the `.sdlxliff` files Studio has open. Never create, edit,
-    move or delete anything under it, and never fix a translation by editing a
-    file there - segment changes go through `update_segments`. Reading other files
-    in the project folder (the source document, a PDF, reference material) is fine.
-    ````
-
-    It appears under **Settings → Customizations**, tagged `Global`, and applies to every project on the machine. That last rule also gives you a soft guard on your Studio folder: not enforced by the server, but applied at the layer that was doing the exploring.
+    The skill tells the agent to load your recorded decisions first, then run the `check_*` tools, then read the bilingual text – and not to write scripts to do any of it. Because it ships with the plugin it stays current: it names specific tools and rules, and a copy pasted by hand would slowly start describing a toolset that no longer matches. If you have edited your own copy, the button backs it up before replacing it.
 
     > **Gemini CLI** (terminal, no interface) reads a *different* file. Register the server with `gemini mcp add supervertaler --scope user "C:\Users\<you>\Supervertaler\mcp\SupervertalerMcpServer.exe"`, which writes to `%UserProfile%\.gemini\settings.json`. Watch for its folder-trust gate: in a folder you haven't trusted it disables every MCP server – including user-scope ones – and says so when you run `gemini mcp list`.
 
