@@ -27,7 +27,7 @@ Three commands, all on by default:
 | Say | Or | Action |
 | --- | --- | ------ |
 | "select …" | "choose …" | Select those words in the target segment |
-| "select source …" | "source …" | Select those words in the **source** segment (off by default – see below) |
+| "select source …" | "source select …" | Select those words in the **source** segment (off by default – see below) |
 | "delete that" | "delete this", "remove that" | Delete whatever is selected |
 | "undo that" | "scratch that", "undo" | Undo the last change (Ctrl+Z) |
 
@@ -68,7 +68,7 @@ A word with no recognisable part at all – a foreign loanword, typically – st
 
 ### Handing over to a dictation tool
 
-Two commands: **"dictate"** starts your dictation tool and stands aside while you talk; **"stop now"** takes it back. They are separate on purpose – saying either one twice is harmless, whereas a single toggle would silently start dictation when you meant to stop it. Both ship **switched off**, because it drives a tool most installations do not have – switch it on in Voice command settings once you have done the setup below.
+Two commands: **"dictate"** starts your dictation tool and stands aside while you talk; **"stop now"** takes it back. They are separate on purpose – saying either one twice is harmless, whereas a single toggle would silently start dictation when you meant to stop it. Both ship **switched off**, because they drive a tool most installations do not have – switch them on in Voice command settings once you have done the setup below.
 
 While dictation is running, Supervertaler ignores every command except the way back out (and "stop listening", which always works). This is the part a general-purpose macro tool cannot do: because it was *your command* that started the dictation, Supervertaler knows you are in it, and a translation containing the word "confirm" cannot fire a command into your document mid-sentence.
 
