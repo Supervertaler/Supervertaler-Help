@@ -27,6 +27,7 @@ Three commands, all on by default:
 | Say | Or | Action |
 | --- | --- | ------ |
 | "select …" | "choose …" | Select those words in the target segment |
+| "select source …" | "source …" | Select those words in the **source** segment (off by default – see below) |
 | "delete that" | "delete this", "remove that" | Delete whatever is selected |
 | "undo that" | "scratch that", "undo" | Undo the last change (Ctrl+Z) |
 
@@ -44,6 +45,26 @@ If a phrase cannot be selected, the status strip says why rather than doing noth
 :::note
 "delete that" removes the space before the deleted words as well, where that is unambiguous, so deleting a word from the middle of a sentence does not leave a double space behind.
 :::
+
+### Selecting in the source
+
+`select source …` does the same thing in the **source** segment – useful for looking a term up, running a concordance, or adding a source/target pair to a termbase without touching the keyboard:
+
+**"select source cockpitdisplay"** → **"select cockpit display"** → **"add term"**
+
+It is **off by default**, because the source is usually in another language and needs a voice model for it. Tick **`select source {phrase}`** in Voice command settings; the first time you use it, the model for your project's source language downloads in the background (~40 MB, once) and the status strip tells you when it is ready.
+
+:::note
+Source selection is **read-only**. "delete that" refuses a source selection, and so does starting dictation – deleting source text would damage the segment, its translation-memory match and the document's alignment. Everything genuinely useful on a source selection (lookup, concordance, add a term) reads rather than writes.
+:::
+
+#### Long compounds
+
+In Dutch, German and other compounding languages, the word you want is often one the recogniser has never seen: languages like these build words on demand, so no dictionary contains them all. `beschermingsperiode` and `infraroodtouchscreens` are not in any Vosk Dutch model, large or small – this is a property of the language, not a limitation to be fixed with a bigger download.
+
+Supervertaler works around it by offering the recogniser the *parts* of every long word in the segment, and accepting any part as naming the whole word. So **"select source bescherming"** selects `beschermingsperiode`, and saying the compound naturally works too, because whichever part is heard is enough.
+
+A word with no recognisable part at all – a foreign loanword, typically – still cannot be selected. Name a neighbouring word instead.
 
 ### Handing over to a dictation tool
 
@@ -82,6 +103,7 @@ If step 3 comes out wrong, **"undo that"** puts it back.
 * **The stop phrase must be distinct from your prose.** It is a word your dictation tool is listening for, so choosing a word you dictate often will bite you.
 * **A word buried in an earlier word, at the very end of a segment, cannot be selected.** There is nothing after it to tell the two apart. Say two words instead.
 * **Selection follows the active segment.** Move to another segment and the vocabulary changes with it.
+* **A word the recogniser has never seen cannot be selected**, and nor can a compound none of whose parts it knows. Name a word next to it instead.
 * **The status strip is the feedback channel.** Keep the TermLens panel open, or use the floating strip, so you can see what was heard and what happened.
 
 ### See Also
