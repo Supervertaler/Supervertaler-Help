@@ -2,6 +2,10 @@
 title: "Dictation"
 ---
 
+:::note
+This page builds on **[Voice Commands](/trados/voice-commands/)** – start there for turning voice on, the microphone button, the full command list and how to customise commands.
+:::
+
 Voice commands drive Trados Studio. A dictation tool writes your translation. This page is about the seam between the two – selecting words you have just dictated, replacing them, and handing the microphone back and forth without touching the keyboard.
 
 Everything here works with any dictation tool. [Wispr Flow](https://wisprflow.ai/) is the one the feature was built and tested against, so it is used for the worked example, but Dragon, Windows Voice Access and the rest follow the same three setup steps.
