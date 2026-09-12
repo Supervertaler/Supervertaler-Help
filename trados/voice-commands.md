@@ -4,6 +4,10 @@ title: "Voice Commands"
 
 Control Trados Studio hands-free with spoken commands: confirm segments, navigate, insert TermLens matches, apply translation results, add terms and more – without touching your keyboard. Designed to pair with dictation tools such as Wispr Flow or Dragon: they type your translation, Supervertaler handles the commands.
 
+:::note
+Selecting and replacing words you have just dictated – and handing the microphone to a dictation tool and back – has a page of its own: **[Dictation](/trados/voice-commands/dictation/)**.
+:::
+
 ### Starting and stopping
 
 Two ways to toggle voice commands:
@@ -35,6 +39,10 @@ Everything works out of the box – no configuration needed. Most commands also 
 
 | Say | Or | Action |
 | --- | --- | ------ |
+| "select …" | "choose …" | Select those words in the target – see [Dictation](/trados/voice-commands/dictation/) |
+| "delete that" | "delete this", "remove that" | Delete whatever is selected in the target |
+| "undo that" | "scratch that", "undo" | Undo the last change (Ctrl+Z) |
+| "dictate" | "stop now" | Hand over to an external dictation tool and take it back (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
 | "confirm" | "confirm segment" | Confirm segment and move to next unconfirmed |
 | "next segment" | "go down" | Move to the next segment (without confirming) |
 | "previous segment" | "go up" | Move to the previous segment |
@@ -82,7 +90,9 @@ Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **V
 * Edit spoken phrases and add aliases
 * Add your own commands, mapped to either:
   * a **keystroke** chord sent to Studio (e.g. `ctrl+enter`, `alt+up`, `f3`) – any Studio or Supervertaler shortcut works
-  * an **internal** plugin action: `insert_term_1`…`insert_term_9`, `term_picker`, `termlens_popup`, `navigate_next`, `navigate_previous`, `stop_listening`
+  * an **internal** plugin action: `insert_term_1`…`insert_term_9`, `term_picker`, `termlens_popup`, `navigate_next`, `navigate_previous`, `stop_listening`, `select_phrase`, `delete_selection`, `dictate_toggle`
+
+A phrase containing `{phrase}` – as in `select {phrase}` – takes the words you say after it as its argument, rather than matching exactly. Only `select_phrase` uses this.
 
 :::note
 The recogniser only listens for the phrases in your command list, so keep phrases short and distinct from each other. After saving, the recogniser updates immediately – no restart needed.
@@ -100,6 +110,7 @@ Default commands added in plugin updates are **merged into your saved set automa
 
 ### See Also
 
+* [Dictation](/trados/voice-commands/dictation/)
 * [Keyboard Shortcuts](/trados/keyboard-shortcuts/)
 * [TermLens](/trados/termlens/)
 * [TermPicker](/trados/termlens/termpicker/)
