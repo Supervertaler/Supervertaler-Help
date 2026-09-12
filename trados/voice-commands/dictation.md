@@ -68,7 +68,7 @@ A word with no recognisable part at all – a foreign loanword, typically – st
 
 ### Handing over to a dictation tool
 
-The **"dictate"** command starts your dictation tool, stands aside while you talk, and stops it when you say "dictate" again. It ships **switched off**, because it drives a tool most installations do not have – switch it on in Voice command settings once you have done the setup below.
+Two commands: **"dictate"** starts your dictation tool and stands aside while you talk; **"stop now"** takes it back. They are separate on purpose – saying either one twice is harmless, whereas a single toggle would silently start dictation when you meant to stop it. Both ship **switched off**, because it drives a tool most installations do not have – switch it on in Voice command settings once you have done the setup below.
 
 While dictation is running, Supervertaler ignores every command except the way back out (and "stop listening", which always works). This is the part a general-purpose macro tool cannot do: because it was *your command* that started the dictation, Supervertaler knows you are in it, and a translation containing the word "confirm" cannot fire a command into your document mid-sentence.
 
@@ -76,15 +76,15 @@ While dictation is running, Supervertaler ignores every command except the way b
 
 **1. Give the dictation tool a hands-free shortcut.** The "dictate" command is shipped expecting **Ctrl+Win+Space**, which is one of Wispr Flow's own hands-free defaults, so there is usually nothing to change. Push-to-talk will not do – it needs a key held down, and the point here is not to touch the keyboard.
 
-**2. Teach it to write a marker for your stop phrase.** When you say "dictate" to stop, the dictation tool is still listening, so the word lands in your text. Rather than trying to guess and delete it, have the tool write a fixed marker instead:
+**2. Teach it to write a marker for your stop phrase.** When you say "stop now", the dictation tool is still listening, so the word lands in your text. Rather than trying to guess and delete it, have the tool write a fixed marker instead:
 
-* In Wispr Flow, open **Dictionary** and add an entry mapping **dictate** to **ZZEND**.
+* In Wispr Flow, open **Dictionary** and add an entry mapping **stop now** to **ZZEND**.
 
-Supervertaler waits for `ZZEND` to appear and removes it, along with the space before it. A marker is used rather than an empty replacement for two reasons: most tools will not map a phrase to nothing, and a marker is far more reliable – spoken, your stop word arrives formatted, capitalised and punctuated (`. Dictate.`), and every one of those variants collapses into one fixed string you can search for.
+Supervertaler waits for `ZZEND` to appear and removes it, along with the space before it. A marker is used rather than an empty replacement for two reasons: most tools will not map a phrase to nothing, and a marker is far more reliable – spoken, your stop word arrives formatted, capitalised and punctuated (`. Stop now.`), and every one of those variants collapses into one fixed string you can search for.
 
-**3. Switch the command on.** Right-click the 🎤 button → **Voice command settings** → tick **dictate**.
+**3. Switch both commands on.** Right-click the 🎤 button → **Voice command settings** → tick **dictate** and **stop now**.
 
-If your tool uses a different shortcut, or a different marker, edit the command's action rather than any settings screen: it reads `dictate_toggle:ctrl+win+space:ZZEND` – trigger first, marker second. `dictate_toggle:middleclick` is accepted for a tool that listens for a middle click.
+If your tool uses a different shortcut, or a different marker, edit the command's action rather than any settings screen: it reads `dictate_on:ctrl+win+space:ZZEND` on the start command and `dictate_off:ctrl+win+space:ZZEND` on the stop command – trigger first, marker second. `middleclick` is accepted as a trigger for a tool that listens for a middle click.
 
 ### Putting it together
 
@@ -93,7 +93,7 @@ A correction, hands-free, start to finish:
 1. **"select the duty cycle"** – the words highlight in the target
 2. **"dictate"** – your dictation tool starts listening
 3. *"the duty factor"* – it types over the selection
-4. **"dictate"** – it stops, the marker is cleaned up
+4. **"stop now"** – it stops, the marker is cleaned up
 5. **"confirm"** – segment confirmed, on to the next
 
 If step 3 comes out wrong, **"undo that"** puts it back.
