@@ -95,8 +95,20 @@ Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **V
 A phrase containing `{phrase}` – as in `select {phrase}` – takes the words you say after it as its argument, rather than matching exactly. Only `select_phrase` uses this.
 
 :::note
-The recogniser only listens for the phrases in your command list, so keep phrases short and distinct from each other. After saving, the recogniser updates immediately – no restart needed.
+After saving, the recogniser updates immediately – no restart needed.
 :::
+
+#### Choosing words for a command
+
+The recogniser works from a closed vocabulary: your command phrases, plus the words of the segment you are in. It has no option to return nothing, so it always picks the best match from that list – which means **every word you add competes for that sound in every segment**, including against the words of your own translation.
+
+The number of commands barely matters: a long list of distinctive phrases costs nothing. What costs you is a single command built from a short, everyday word.
+
+* **Prefer distinctive words.** "insert tracked change" is free. A command called "to" or "for" is expensive, because it competes with those words wherever they appear in your text.
+* **Untick what you do not use.** Disabled commands are removed from the vocabulary entirely, so turning off the "term …" or "match …" numbers you never reach makes the rest more reliable.
+* **Watch for one word that will not select.** If [selecting](/trados/voice-commands/dictation/) a particular word keeps failing, the cause is usually a command phrase that sounds like it.
+
+Homophones are the trap, not spelling. The built-in "term eight" and "match eight" commands put *eight* into the vocabulary of every segment, and *eight* sounds exactly like the article *a* – so for a while, "select a further" could not be made to work at all. Supervertaler now resolves the number words that have common homophones (*a/eight*, *to/two*, *for/four*, *one/won*) back to the word your segment actually contains, but a custom command can reintroduce the problem with a different word.
 
 Commands are stored in `trados/settings/voice_commands.json` in your Supervertaler data folder, in the same format as Supervertaler Workbench's voice commands – so you can exchange command sets between the two products.
 
