@@ -22,7 +22,7 @@ It is free and open source, and it needs no account. The source is at [github.co
 
 **AI actions.** Any prompt over the selection: translate, proofread, rephrase, summarise, expand, localise, explain. Every prompt is yours to edit. See [AI actions](/sidekick/ai-actions/).
 
-**Web and local searches.** Select a term, pick a source – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once in a fresh browser window. Every source follows the language pair you set, so one entry serves every direction, and language packs add the dictionaries that belong to each language. See [Web and local searches](/sidekick/searches/).
+**Web and local searches.** Select a term, pick a source – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once in a fresh browser window. Every source follows the language pair you set, so one entry serves every direction, and a language pack adds everything for your pair in one click. See [Web and local searches](/sidekick/searches/).
 
 **Snippets, bookmarks and text conversions.** Boilerplate, standard replies, special characters and regex patterns inserted at the cursor; sites and folders you keep reopening; upper, lower, title and sentence case, curly quotes, brackets, HTML bold. See [Snippets, bookmarks and conversions](/sidekick/library/).
 
@@ -32,7 +32,7 @@ It is free and open source, and it needs no account. The source is at [github.co
 
 ### Who it is for
 
-Anyone who translates and would rather not leave the window they are working in. Set your language pair once and the searches, the batch lookup and QuickTrans all follow it. The sources that belong to one language – Dutch and English so far – come as language packs that switch on with the pair; every source is one editable entry, and a pack for another language is one small file.
+Anyone who translates and would rather not leave the window they are working in. Set your language pair once and the searches, the batch lookup and QuickTrans all follow it. The sources for your pair come as a language pack, one click to install – Dutch ⇄ English so far; every source is one editable entry, and a pack for another pair is one small file.
 
 Sidekick is built in [AutoHotkey v2](https://www.autohotkey.com/docs/v2/). Nothing personal lives in the program: your snippets, bookmarks, prompts and keys stay in a data folder on your own machine.
 

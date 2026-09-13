@@ -39,7 +39,7 @@ Most sites take the two-letter codes. Reverso and Linguee want names, Juremy wan
 
 The selection is percent-encoded before it is substituted, so terms containing `&`, `?`, `+` or accented characters work. Any site whose search results have their own URL can be a source, and a key in [Keyboard shortcuts](/sidekick/keyboard-shortcuts/) makes the lookup one keystroke from anywhere.
 
-**Sites with no code in the URL.** Van Dale names its dictionaries `gne` and `gen`; JurLex has session ids. There is no placeholder for those, so such an entry carries one address per pair instead, under `by_pair` (this is how the Dutch pack defines them):
+**Sites with no code in the URL.** Some sites bake the pair into an opaque id – Van Dale, for example, names its Dutch–English and English–Dutch dictionaries `gne` and `gen`. There is no placeholder for those, so such an entry carries one address per direction instead, under `by_pair`:
 
 ```json
 {
@@ -64,13 +64,13 @@ The window opens in your default browser. Chrome, Edge, Brave and the other Chro
 
 ### Language packs
 
-The pair-agnostic sources above serve every language. What differs per language is the rest: Van Dale, Woordenlijst and JurLex for Dutch; Merriam-Webster, Collins and OneLook for English; Duden for German and Larousse for French once someone writes those packs. Those come as **language packs** – one per language, not per pair – and a pack's sources appear on the menu under **Language packs** whenever its language is the source or the target of the current pair.
+A **language pack** is everything for one language pair, both directions: the bilingual sites, the monolingual dictionaries on either side, and a MultiSearch that opens them all at once. A Dutch and English translator installs **Dutch ⇄ English** and has the lot; a Dutch and German translator installs **Dutch ⇄ German** and nothing else. Installed packs appear on the menu under **Language pack**, and only the pack for the pair you are working in is shown, so a translator with several installed sees the right one after switching the pair.
 
-Until you choose otherwise, the packs for the two languages of your pair are on. **Settings → Language packs…** lists every pack Sidekick ships and lets you tick the ones you want; a German-to-English translator ticks German and English, a French-to-German one ticks French and German. Switch the pair to French → Dutch and the German sources step aside for the Dutch ones.
+**Settings → Language packs…** lists the packs Sidekick ships, one checkbox each. Until you save that dialog, the pack for your current pair is installed automatically if there is one, so a fresh install with Dutch → English gets Dutch ⇄ English without being asked.
 
-Pack entries are never written into your menu, so removing a pack is one untick, and the Library Editor only ever shows your own entries. A source that exists for one pair only – Van Dale's Dutch–English dictionary – is hidden when the pair is anything else.
+Pack entries are never written into your menu, so removing a pack is one untick, and the Library Editor only ever shows your own entries.
 
-Sidekick ships Dutch and English today. A pack is a small JSON file in the `packs\` folder of the Sidekick folder, in exactly the format of a search entry, so adding a language is a matter of writing one – and contributing it back on GitHub so the next translator in that language starts with it.
+Sidekick ships Dutch ⇄ English today, with thirteen sources: a MultiSearch over the pair, Beijerterm, Mijnwoordenboek, Woordenlijst, Synoniemen.net, Encyclo, Merriam-Webster, Cambridge, Collins, OneLook, Thesaurus.com, Wordnik and Ludwig. A pack is a small JSON file in the `packs\` folder of the Sidekick folder, in exactly the format of a search entry, so a pack for another pair is a matter of writing one – and contributing it back on GitHub so the next translator in that pair starts with it.
 
 ### Local searches
 
@@ -80,4 +80,4 @@ Sidekick ships Dutch and English today. A pack is a small JSON file in the `pack
 
 ### Other language pairs
 
-Every source is pair-aware, so a German-to-English translator sets the pair once and the starter sources just work – IATE, Linguee, ProZ, Reverso, Juremy, BabelNet, Wikipedia and Wiktionary all cover it. The language-specific sources come from [language packs](#language-packs); Dutch and English exist, and more are welcome.
+Every source is pair-aware, so a German-to-English translator sets the pair once and the starter sources just work – IATE, Linguee, ProZ, Reverso, Juremy, BabelNet, Wikipedia and Wiktionary all cover it. The pair's own sources come from a [language pack](#language-packs); Dutch ⇄ English exists, and more are welcome.

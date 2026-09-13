@@ -13,7 +13,7 @@ Sidekick keeps everything in two places: its own folder, and the key file it sha
 | `data.example\` | the starter set, copied into `data\` on first run |
 | `settings.ini` | your settings; created from `settings.example.ini` |
 | `settings.example.ini` | the documented template – every setting, with a comment saying what it does |
-| `packs\` | the language packs, one JSON file per language – see [Searches](/sidekick/searches/#language-packs) |
+| `packs\` | the language packs, one JSON file per language pair – see [Searches](/sidekick/searches/#language-packs) |
 
 Inside `data\`:
 
@@ -36,7 +36,7 @@ Open it in any editor, or reach the parts that have a window through the menu:
 | `[AI]` | provider, model and effort for AI actions | – |
 | `[Keys]` | API keys (see below) | **Settings → AI providers & keys…** |
 | `[QuickTrans]` | which engines, which models, whether AI is fetched automatically, and the language pair (`SourceLang`, `TargetLang`) | **Settings → AI providers & keys…**, **Settings → Language pair…** |
-| `[Packs]` | which language packs are on the menu (`Installed=nl\|en`); absent means the two languages of the pair | **Settings → Language packs…** |
+| `[Packs]` | which language packs are installed (`Installed=nl-en`); absent means the pack for the current pair | **Settings → Language packs…** |
 | `[Clipboard]` | capture on/off, size, expiry, excluded programs | **Settings → Pause / resume clipboard capture** |
 | `[Window]` | the main window's size and position, written automatically | – |
 
