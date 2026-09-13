@@ -85,6 +85,11 @@ export default defineConfig({
           href: 'https://github.com/Supervertaler/Supervertaler-for-memoQ',
         },
         {
+          icon: 'github',
+          label: 'GitHub: Supervertaler Sidekick',
+          href: 'https://github.com/Supervertaler/Supervertaler-Sidekick',
+        },
+        {
           icon: 'external',
           label: 'supervertaler.com',
           href: 'https://supervertaler.com',
@@ -106,8 +111,13 @@ export default defineConfig({
             'terminology, an AI assistant, batch translate and proofread, ' +
             'SuperSearch cross-file search, the SuperMemory knowledge base, and ' +
             'an MCP server that connects AI assistants to the live Studio ' +
-            'session. Supervertaler Workbench, a standalone CAT tool, is also ' +
-            'documented here but is no longer actively developed.',
+            'session. Supervertaler for memoQ is a memoQ plugin with a ' +
+            'self-learning AI translation engine and glossary enforcement. ' +
+            'Supervertaler Sidekick is a free system-wide toolbox for ' +
+            'translators: clipboard history, snippets, text expansion, ' +
+            'multi-engine translation, AI actions and terminology searches ' +
+            'over any application. Supervertaler Workbench, a standalone CAT ' +
+            'tool, is also documented here but is no longer actively developed.',
           optionalLinks: [
             {
               label: 'supervertaler.com',
@@ -123,6 +133,11 @@ export default defineConfig({
               label: 'RWS AppStore',
               url: 'https://appstore.rws.com/plugin/432',
               description: 'Where the plugin is distributed',
+            },
+            {
+              label: 'GitHub: Supervertaler Sidekick',
+              url: 'https://github.com/Supervertaler/Supervertaler-Sidekick',
+              description: 'Supervertaler Sidekick source and releases',
             },
             {
               label: 'GitHub: Workbench',
@@ -143,6 +158,12 @@ export default defineConfig({
               description:
                 'Docs for the memoQ plugin only',
               paths: ['memoq/**'],
+            },
+            {
+              label: 'Supervertaler Sidekick',
+              description:
+                'Docs for the Sidekick system-wide toolbox only',
+              paths: ['sidekick/**'],
             },
             {
               label: 'Supervertaler Workbench',

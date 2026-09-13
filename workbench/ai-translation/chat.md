@@ -10,7 +10,7 @@ This is especially useful on small laptop screens where there's not enough room 
 
 ## How it works
 
-Supervertaler for Trados runs a tiny localhost-only HTTP service called the **Supervertaler Bridge** while the AI Assistant panel is active. (The name is historical – it predates the Sidekick retirement in Workbench v1.10.4 and is kept stable because the Trados-side C# class looks up the bridge by that name.) Workbench's Chat panel detects the bridge automatically and uses it to fetch the current Trados project state on every message you send.
+Supervertaler for Trados runs a tiny localhost-only HTTP service called the **Supervertaler Bridge** while the AI Assistant panel is active. Workbench's Chat panel detects the bridge automatically and uses it to fetch the current Trados project state on every message you send.
 
 Nothing leaves your computer – the bridge listens only on `127.0.0.1`, requires a per-session authentication token, and is never reachable from outside the machine.
 
@@ -74,7 +74,7 @@ The chat will infer the domain from the surrounding segments and reply.
 * The bridge listens **only on `127.0.0.1`** (loopback). Other devices on your network can never reach it.
 * Each Trados session gets a **fresh authentication token** – stale tokens from old sessions are useless.
 * The bridge **only starts when you have Assistant access** (paid subscription or trial). Without Assistant access, no bridge is started.
-* You can disable the bridge entirely on the Trados side by editing the plugin's `settings.json` and setting `"sidekickBridgeEnabled": false`. See [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) for details.
+* There is no switch to turn the bridge off on the Trados side. See [Supervertaler Bridge](/trados/ai-assistant/supervertaler-bridge/) for details.
 
 ## Troubleshooting
 

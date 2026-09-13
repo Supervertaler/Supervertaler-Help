@@ -23,10 +23,6 @@ The 🌍 actions and their out-of-the-box bindings:
 | Voice commands push-to-talk | **Ctrl+Alt+V** / **⌘⌥V** | Hold to listen for voice *commands* only – for pairing Workbench's command listener with an external dictation app |
 | Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Continuous listening on/off |
 
-:::note
-**Ctrl+Alt+K** used to summon a floating Supervertaler Sidekick window through v1.10.3. That window was retired in v1.10.4 and the chord is now unbound by default. The Clipboard Manager, Voice, and SuperLookup tabs are reachable via the dedicated hotkeys above; Chat lives in the AI tab and in Workbench's right panel.
-:::
-
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 
 ### Running Workbench alongside Supervertaler for Trados

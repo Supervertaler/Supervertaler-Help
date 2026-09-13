@@ -20,7 +20,7 @@
  * `label.includes(product.label)`.
  */
 
-export type ProductId = 'trados' | 'memoq' | 'workbench';
+export type ProductId = 'trados' | 'memoq' | 'sidekick' | 'workbench';
 
 export interface Product {
   id: ProductId;
@@ -66,6 +66,14 @@ export const PRODUCTS: Product[] = [
       '<strong>Supervertaler for memoQ is in early development.</strong> ' +
       'These pages describe what works today and will change as it does. ' +
       'The stable product is <a href="/trados/">Supervertaler for Trados</a>.',
+  },
+  {
+    id: 'sidekick',
+    label: 'Sidekick',
+    fullName: 'Supervertaler Sidekick',
+    emoji: '🧰',
+    icon: '/product-icons/sv-sidekick.svg',
+    llmsSubset: '/_llms-txt/supervertaler-sidekick.txt',
   },
   {
     id: 'workbench',

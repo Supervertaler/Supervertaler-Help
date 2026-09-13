@@ -1,11 +1,11 @@
 ---
 title: Welcome to Supervertaler Docs
-description: Help and documentation for Supervertaler for Trados – AI translation, terminology, search and a translation knowledge base inside Trados Studio.
+description: Help and documentation for Supervertaler – AI translation inside Trados Studio and memoQ, and Supervertaler Sidekick, the free system-wide toolbox for translators.
 template: splash
 hero:
   tagline: |
-    Supervertaler for Trados brings AI translation, live terminology,
-    cross-file search and a translation knowledge base into Trados Studio.
+    AI translation inside Trados Studio and memoQ, and a free system-wide
+    toolbox that works over whatever application you are in.
   actions:
     - text: 🧩 Open the docs
       link: /trados/
@@ -14,11 +14,9 @@ hero:
 ---
 
 {/*
-  `/` redirects to `/trados/` (see public/_redirects), so this page is not
-  normally reached. It is kept deliberately as a fallback: if that rule is
-  ever removed, the docs root renders this instead of 404ing. Keep it
-  accurate for that reason, and do not let it drift back into a product
-  chooser — the site is single-product.
+  The docs root: one card per product, in the order they matter. Workbench
+  stays last and short – it is no longer developed and should not draw the
+  eye away from the three active products.
 */}
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
@@ -54,6 +52,22 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
     **In early development.**
 
     [Open the memoQ docs →](/memoq/)
+  </Card>
+
+  <Card title="Supervertaler Sidekick">
+    <img src="/product-icons/sv-sidekick.svg" alt="" width="30" height="30" class="product-mark" />
+
+    The system-wide toolbox for translators. Select text in any Windows application – a CAT tool, a browser, a PDF, an email – and act on it without leaving.
+
+    - **Clipboard history** that survives restarts, pasted straight back where you were
+    - **QuickTrans** – the selection translated by several MT engines and LLMs at once
+    - **AI actions** – any prompt over the selection: translate, proofread, rephrase, summarise
+    - **Terminology searches** – IATE, Linguee, Van Dale, Wiktionary and more, or a whole batch at once
+    - **Snippets, text expansion and conversions** – boilerplate, abbreviations, case and quote changes
+
+    **Free and open source.**
+
+    [Open the Sidekick docs →](/sidekick/)
   </Card>
 
   <Card title="Supervertaler Workbench">

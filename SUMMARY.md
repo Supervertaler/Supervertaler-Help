@@ -101,6 +101,26 @@
 
 * [Troubleshooting (memoQ)](memoq/troubleshooting.md)
 
+## 🧰 Get Started (Sidekick)
+
+* [Supervertaler Sidekick](sidekick/README.md)
+* [Installation (Sidekick)](sidekick/installation.md)
+* [The window and the palette](sidekick/window.md)
+
+## 🧰 Features (Sidekick)
+
+* [Clipboard history](sidekick/clipboard.md)
+* [QuickTrans (Sidekick)](sidekick/quicktrans.md)
+* [AI actions](sidekick/ai-actions.md)
+* [Web and local searches](sidekick/searches.md)
+* [Snippets, bookmarks and conversions](sidekick/library.md)
+* [Text expansion](sidekick/text-expansion.md)
+
+## 🧰 Reference (Sidekick)
+
+* [Keyboard Shortcuts (Sidekick)](sidekick/keyboard-shortcuts.md)
+* [Settings and files](sidekick/settings.md)
+
 ## 🖥️ Get Started
 
 * [Supervertaler Workbench](workbench/README.md)

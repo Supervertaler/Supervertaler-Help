@@ -11,7 +11,7 @@ SUMMARY.md is the GitBook-canonical navigation file, with the structure:
     ## 🖥️ <Section Name>              <- section header (Workbench)
     ...
 
-Sections are tagged by product emoji: 🧩 Trados, 🟠 memoQ, 🖥️ Workbench.
+Sections are tagged by product emoji: 🧩 Trados, 🟠 memoQ, 🧰 Sidekick, 🖥️ Workbench.
 
 We emit a Starlight sidebar config:
 
@@ -60,17 +60,17 @@ OUTPUT_PATH = REPO_ROOT / "src" / "generated" / "sidebar.js"
 # Strip product-disambiguation suffixes added by an earlier migration so the
 # clean label appears in the Starlight sidebar.  The parent group already
 # tells you which product you're in; the per-link suffix would be redundant.
-LABEL_SUFFIX_RE = re.compile(r"\s*\((Trados|memoQ|Workbench)\)\s*$")
+LABEL_SUFFIX_RE = re.compile(r"\s*\((Trados|memoQ|Sidekick|Workbench)\)\s*$")
 
 # Lines like "* [Label](path.md)" or "  * [Label](path)" — with optional indent.
 ITEM_RE = re.compile(r"^(\s*)\*\s*\[([^\]]+)\]\(([^)]+)\)\s*$")
 
 # One emoji per product, matching src/products.ts — the emoji in a SUMMARY.md
 # section header is what assigns that section to a product.
-EMOJI_TO_PRODUCT = {"🧩": "Trados", "🟠": "memoQ", "🖥️": "Workbench"}
+EMOJI_TO_PRODUCT = {"🧩": "Trados", "🟠": "memoQ", "🧰": "Sidekick", "🖥️": "Workbench"}
 
 # Section headers: "## 🧩 Foo", "## 🟠 Bar", "## 🖥️ Baz".
-SECTION_RE = re.compile(r"^##\s*(🧩|🟠|🖥️)\s*(.+?)\s*$")
+SECTION_RE = re.compile(r"^##\s*(🧩|🟠|🧰|🖥️)\s*(.+?)\s*$")
 
 
 def clean_label(label: str) -> str:
@@ -210,6 +210,7 @@ def build_sidebar(sections: List[Dict]) -> List[Dict]:
     """Group sections into two top-level products with nested section folders."""
     trados_sections = [s for s in sections if s["product"] == "Trados"]
     memoq_sections = [s for s in sections if s["product"] == "memoQ"]
+    sidekick_sections = [s for s in sections if s["product"] == "Sidekick"]
     workbench_sections = [s for s in sections if s["product"] == "Workbench"]
 
     def section_to_group(sec: Dict) -> Dict:
@@ -229,6 +230,11 @@ def build_sidebar(sections: List[Dict]) -> List[Dict]:
             "label": "🟠 Supervertaler for memoQ",
             "collapsed": False,
             "items": [section_to_group(s) for s in memoq_sections],
+        },
+        {
+            "label": "🧰 Supervertaler Sidekick",
+            "collapsed": False,
+            "items": [section_to_group(s) for s in sidekick_sections],
         },
         {
             "label": "🖥️ Supervertaler Workbench",
@@ -263,9 +269,10 @@ def main() -> int:
 
     n_trados = sum(1 for s in sections if s["product"] == "Trados")
     n_memoq = sum(1 for s in sections if s["product"] == "memoQ")
+    n_sidekick = sum(1 for s in sections if s["product"] == "Sidekick")
     n_workbench = sum(1 for s in sections if s["product"] == "Workbench")
     print(f"Parsed {len(sections)} sections from SUMMARY.md "
-          f"({n_trados} Trados, {n_memoq} memoQ, {n_workbench} Workbench).")
+          f"({n_trados} Trados, {n_memoq} memoQ, {n_sidekick} Sidekick, {n_workbench} Workbench).")
     print(f"Wrote {OUTPUT_PATH.relative_to(REPO_ROOT)}.")
     return 0
 

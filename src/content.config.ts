@@ -24,7 +24,7 @@ export const collections = {
   docs: defineCollection({
     loader: glob({
       pattern: [
-        '{trados,memoq,workbench}/**/*.{md,mdx}',
+        '{trados,memoq,sidekick,workbench}/**/*.{md,mdx}',
         'index.mdx',
       ],
       base: './',
