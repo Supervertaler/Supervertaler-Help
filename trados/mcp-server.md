@@ -73,8 +73,8 @@ The server exposes these tools to the AI app:
 | `save_document` | Save the open document (Ctrl+S) – only when you ask or approve *(v18.20.115)* |
 | `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
 | `find_and_replace` | Find & replace across the target text – tag-safe, with a preview before applying |
-| `get_comments` | Read the Trados comments in the document |
-| `add_comment` | Add a Trados comment to a segment (flag a source issue, leave a review note) |
+| `get_comments` | Read the Trados comments on a segment – author, date, severity, text, and *(from v18.20.191)* which side each is on, whether it covers the whole segment or a range, and for a range the exact words |
+| `add_comment` | Add a Trados comment to a segment, or *(from v18.20.191)* to a **range of words** inside its target – give `on: "the words"` and the note sits exactly where it belongs, as with the editor's Add Comment on a selection |
 | `update_comment` | Edit an existing Trados comment – its text, its severity, or both *(severity from v18.20.159)* |
 | `delete_comment` | Remove a Trados comment (or all of a segment's) – destructive, so the AI confirms first *(v18.20.116)* |
 | `run_verification` | Run Studio's Verify Files (QA Checker) and return the findings per segment – flagged as stale if the AI has unsaved edits *(stale flag v18.20.148)* |
