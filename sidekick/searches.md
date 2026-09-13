@@ -56,7 +56,7 @@ When the current pair is not in the list, the entry says so rather than opening 
 
 ### MultiSearch – a batch at once
 
-**MultiSearch** opens a whole set of sources in one go, each in its own tab of a fresh browser window, for the current pair. Read down the tabs, close the window, done. The starter batch is eleven sources: Google Patents, IATE, ProZ, Beijerterm, Reverso, Juremy, Linguee, Wikipedia, Wiktionary, AcronymFinder and BabelNet.
+**MultiSearch** opens a whole set of sources in one go, each in its own tab of a fresh browser window, for the current pair. Read down the tabs, close the window, done. The starter batch, at the top of Web searches, is eleven sources: Google Patents, IATE, ProZ, Beijerterm, Reverso, Juremy, Linguee, Wikipedia, Wiktionary, AcronymFinder and BabelNet. A language pack brings its own batch for its pair.
 
 It is an entry of kind **multisearch** in the Library Editor: one address per line, the same placeholders. Make as many batches as you like – one for legal, one for engineering – and give each a key.
 
@@ -64,7 +64,7 @@ The window opens in your default browser. Chrome, Edge, Brave and the other Chro
 
 ### Language packs
 
-A **language pack** is everything for one language pair, both directions: the bilingual sites, the monolingual dictionaries on either side, and a MultiSearch that opens them all at once. A Dutch and English translator installs **Dutch ⇄ English** and has the lot; a Dutch and German translator installs **Dutch ⇄ German** and nothing else. Installed packs appear on the menu under **Language pack**, and only the pack for the pair you are working in is shown, so a translator with several installed sees the right one after switching the pair.
+A **language pack** is everything for one language pair, both directions: the bilingual sites, the monolingual dictionaries on either side, and a MultiSearch that opens them all at once. A Dutch and English translator installs **Dutch ⇄ English** and has the lot; a Dutch and German translator installs **Dutch ⇄ German** and nothing else. The installed pack for the pair you are working in appears as one folder at the top of **Web searches**, named after the pair – "Dutch ⇄ English (language pack)" – so a translator with several installed sees the right one after switching the pair.
 
 **Settings → Language packs…** lists the packs Sidekick ships, one checkbox each. Until you save that dialog, the pack for your current pair is installed automatically if there is one, so a fresh install with Dutch → English gets Dutch ⇄ English without being asked.
 
