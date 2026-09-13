@@ -51,4 +51,4 @@ What the menu contains is entirely yours to change – see [Snippets, bookmarks 
 - **Text conversions** – case, quotes, brackets, soft hyphens, HTML bold
 - **Local searches** – the desktop, and a terminology tool if you have one
 - **Web searches** – terminology sources one at a time, or a whole batch
-- **Settings** – the Library Editor, keyboard shortcuts, text expansions, AI providers and keys, pausing clipboard capture, and reloading
+- **Settings** – the language pair, the Library Editor, keyboard shortcuts, text expansions, AI providers and keys, pausing clipboard capture, and reloading

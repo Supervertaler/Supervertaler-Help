@@ -8,6 +8,8 @@ Select text in any Windows application – a CAT tool, a browser, a PDF, an emai
 
 It is free and open source, and it needs no account. The source is at [github.com/Supervertaler/Supervertaler-Sidekick](https://github.com/Supervertaler/Supervertaler-Sidekick).
 
+![Sidekick's QuickTrans tab over a technical text in Trados Studio: six engines answering at once, the menu tree beside them](/.gitbook/assets/Supervertaler-Sidekick-in-Trados.png)
+
 ### What it does
 
 **One window.** `` ` `` opens your clipboard history and the menu side by side. Arrow keys cross between them, folders open and close, and typing filters both panes at once. See [The window and the palette](/sidekick/window/).
@@ -20,7 +22,7 @@ It is free and open source, and it needs no account. The source is at [github.co
 
 **AI actions.** Any prompt over the selection: translate, proofread, rephrase, summarise, expand, localise, explain. Every prompt is yours to edit. See [AI actions](/sidekick/ai-actions/).
 
-**Web and local searches.** Select a term, pick a source – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once. Plus Google and a desktop search. See [Web and local searches](/sidekick/searches/).
+**Web and local searches.** Select a term, pick a source – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once in a fresh browser window. Every source follows the language pair you set, so one entry serves every direction. See [Web and local searches](/sidekick/searches/).
 
 **Snippets, bookmarks and text conversions.** Boilerplate, standard replies, special characters and regex patterns inserted at the cursor; sites and folders you keep reopening; upper, lower, title and sentence case, curly quotes, brackets, HTML bold. See [Snippets, bookmarks and conversions](/sidekick/library/).
 
@@ -30,7 +32,7 @@ It is free and open source, and it needs no account. The source is at [github.co
 
 ### Who it is for
 
-Anyone who translates and would rather not leave the window they are working in. The searches that ship today are strongest for Dutch and English, because that is the pair Sidekick grew up with; every source is one editable entry, so adding your own languages takes a minute. Search packages for other language pairs are planned.
+Anyone who translates and would rather not leave the window they are working in. Set your language pair once and the searches, the batch lookup and QuickTrans all follow it. A couple of the starter sources are Dutch-only dictionaries, because that is the pair Sidekick grew up with; every source is one editable entry, and packages of sources for other language pairs are planned.
 
 Sidekick is built in [AutoHotkey v2](https://www.autohotkey.com/docs/v2/). Nothing personal lives in the program: your snippets, bookmarks, prompts and keys stay in a data folder on your own machine.
 

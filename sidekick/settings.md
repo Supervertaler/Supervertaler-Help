@@ -34,7 +34,7 @@ Open it in any editor, or reach the parts that have a window through the menu:
 | `[Hotkeys]` | the built-in shortcuts | **Settings → Keyboard shortcuts…** |
 | `[AI]` | provider, model and effort for AI actions | – |
 | `[Keys]` | API keys (see below) | **Settings → AI providers & keys…** |
-| `[QuickTrans]` | which engines, which models, default languages, whether AI is fetched automatically | **Settings → AI providers & keys…** |
+| `[QuickTrans]` | which engines, which models, whether AI is fetched automatically, and the language pair (`SourceLang`, `TargetLang`) | **Settings → AI providers & keys…**, **Settings → Language pair…** |
 | `[Clipboard]` | capture on/off, size, expiry, excluded programs | **Settings → Pause / resume clipboard capture** |
 | `[Window]` | the main window's size and position, written automatically | – |
 

@@ -6,6 +6,8 @@ QuickTrans translates the selection with several engines at once and shows the a
 
 It is a tab of the main [window](/sidekick/window/), so the menu stays beside the translations: translate something, insert it, then run a menu action without changing windows.
 
+![The QuickTrans tab: the source text, From and To, and six translations stacked beneath](/.gitbook/assets/Supervertaler-Sidekick-QuickTrans.png)
+
 ### Engines
 
 Machine translation: **MyMemory**, **Google**, **Microsoft**, **ModernMT** and **DeepL**.
@@ -24,7 +26,7 @@ Every engine is asked at the same time, and each answer appears as it lands, so 
 | `Ctrl+C` | copy the selected translation |
 | `Esc` | close |
 
-The language pair is set in the tab for the session; the defaults come from `SourceLang` and `TargetLang` under `[QuickTrans]` in `settings.ini`.
+The **From** and **To** dropdowns set the language pair for the whole program – the [searches](/sidekick/searches/#the-language-pair) read it too – and the choice is remembered in `settings.ini`. The ⇄ button swaps the direction.
 
 ### Machine translation first, AI when you ask
 

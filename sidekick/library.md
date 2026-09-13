@@ -30,7 +30,8 @@ Each entry has a kind that decides what it does with the selection:
 | `keys` | sends a key combination, e.g. `^+*` |
 | `url` | opens a web address |
 | `run` | launches a file or folder |
-| `search` | looks the selection up at a URL, with `{q}` replaced by it – see [Searches](/sidekick/searches/) |
+| `search` | looks the selection up at a URL, with `{q}` replaced by it and `{sl}`/`{tl}` by the language pair – see [Searches](/sidekick/searches/) |
+| `multisearch` | opens several search URLs at once in a new browser window – see [Searches](/sidekick/searches/#multisearch--a-batch-at-once) |
 | `ai` | runs an AI prompt over the selection – see [AI actions](/sidekick/ai-actions/) |
 | `action` | calls a built-in function, such as a case conversion |
 | `submenu` | holds other entries |
