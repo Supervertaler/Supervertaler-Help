@@ -2,7 +2,7 @@
 title: "Web and local searches"
 ---
 
-Select a term, open the menu, pick a source: the term is looked up there in your browser, in the language pair you are working in. That is a search entry, and the starter menu has twenty of them – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, FELOnline, AcronymFinder, Oxford, Microsoft Terminology, Wikipedia, Wiktionary, Google Patents and Google itself.
+Select a term, open the menu, pick a source: the term is looked up there in your browser, in the language pair you are working in. That is a search entry. The starter menu has the sources that work for any language – IATE, Juremy, Linguee, ProZ, Reverso, BabelNet, AcronymFinder, Microsoft Terminology, Wikipedia, Wiktionary, Google Patents and Google itself – and [language packs](#language-packs) add the ones that belong to one language.
 
 ### The language pair
 
@@ -39,7 +39,7 @@ Most sites take the two-letter codes. Reverso and Linguee want names, Juremy wan
 
 The selection is percent-encoded before it is substituted, so terms containing `&`, `?`, `+` or accented characters work. Any site whose search results have their own URL can be a source, and a key in [Keyboard shortcuts](/sidekick/keyboard-shortcuts/) makes the lookup one keystroke from anywhere.
 
-**Sites with no code in the URL.** Van Dale names its dictionaries `gne` and `gen`; JurLex has session ids. There is no placeholder for those, so such an entry carries one address per pair instead, under `by_pair` in `menu.json`:
+**Sites with no code in the URL.** Van Dale names its dictionaries `gne` and `gen`; JurLex has session ids. There is no placeholder for those, so such an entry carries one address per pair instead, under `by_pair` (this is how the Dutch pack defines them):
 
 ```json
 {
@@ -62,6 +62,16 @@ It is an entry of kind **multisearch** in the Library Editor: one address per li
 
 The window opens in your default browser. Chrome, Edge, Brave and the other Chromium browsers open the whole batch in one new window; Firefox opens the first in a new window and the rest as tabs in it. Anything else gets the tabs in the current window.
 
+### Language packs
+
+The pair-agnostic sources above serve every language. What differs per language is the rest: Van Dale, Woordenlijst and JurLex for Dutch; Merriam-Webster, Collins and OneLook for English; Duden for German and Larousse for French once someone writes those packs. Those come as **language packs** – one per language, not per pair – and a pack's sources appear on the menu under **Language packs** whenever its language is the source or the target of the current pair.
+
+Until you choose otherwise, the packs for the two languages of your pair are on. **Settings → Language packs…** lists every pack Sidekick ships and lets you tick the ones you want; a German-to-English translator ticks German and English, a French-to-German one ticks French and German. Switch the pair to French → Dutch and the German sources step aside for the Dutch ones.
+
+Pack entries are never written into your menu, so removing a pack is one untick, and the Library Editor only ever shows your own entries. A source that exists for one pair only – Van Dale's Dutch–English dictionary – is hidden when the pair is anything else.
+
+Sidekick ships Dutch and English today. A pack is a small JSON file in the `packs\` folder of the Sidekick folder, in exactly the format of a search entry, so adding a language is a matter of writing one – and contributing it back on GitHub so the next translator in that language starts with it.
+
 ### Local searches
 
 - **Google the selection** – `Ctrl+/`
@@ -70,4 +80,4 @@ The window opens in your default browser. Chrome, Edge, Brave and the other Chro
 
 ### Other language pairs
 
-Every source is pair-aware, so a German-to-English translator sets the pair once and the starter sources just work – IATE, Linguee, ProZ, Reverso, Juremy, BabelNet, Wikipedia and Wiktionary all cover it. The two Dutch-only dictionaries stay put and say so when asked. Ready-made packages of the sites translators in a given pair actually use are planned, so a new install starts with the right list rather than someone else's.
+Every source is pair-aware, so a German-to-English translator sets the pair once and the starter sources just work – IATE, Linguee, ProZ, Reverso, Juremy, BabelNet, Wikipedia and Wiktionary all cover it. The language-specific sources come from [language packs](#language-packs); Dutch and English exist, and more are welcome.
