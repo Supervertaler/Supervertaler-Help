@@ -3,7 +3,7 @@ title: "Dictation"
 ---
 
 :::note
-This page builds on **[Voice Commands](/trados/voice-commands/)** – start there for turning voice on, the microphone button, the full command list and how to customise commands.
+This page builds on **[SuperVoice](/trados/voice-commands/)** – start there for turning voice on, the microphone button, the full command list and how to customise commands.
 :::
 
 Voice commands drive Trados Studio. A dictation tool writes your translation. This page is about the seam between the two – selecting words you have just dictated, replacing them, and handing the microphone back and forth without touching the keyboard.
@@ -38,7 +38,7 @@ A few things worth knowing, because they explain what you will see:
 * **Dropped words are tolerated.** Unstressed function words often do not survive recognition – "comprises at most" comes back as "comprises most". The selection widens to the segment's own text, so you still get *comprises at most*.
 * **Whole words only.** Saying "select the" selects the standalone *the*, never the three letters inside *further*.
 * **Say it again for the next one.** Where a phrase occurs more than once, the first is selected and the status strip says **2 of 4 – say again for the next**. Repeating the same phrase steps to the next occurrence, and wraps round at the end. Naming more words works too.
-* **It only searches the target.** Source text, other segments and the termbase are not candidates.
+* **"select" searches the target; "select source" searches the source.** Other segments and the termbase are never candidates.
 
 If a phrase cannot be selected, the status strip says why rather than doing nothing – `no "confirm" in this segment`, or `"the" is inside another word – say more words`. A selection in a place you did not name would be worse than none, because "delete that" would act on it.
 
@@ -52,7 +52,7 @@ If a phrase cannot be selected, the status strip says why rather than doing noth
 
 **"select source cockpitdisplay"** → **"select cockpit display"** → **"add term"**
 
-It is **off by default**, because the source is usually in another language and needs a voice model for it. Tick **`select source {phrase}`** in Voice command settings; the first time you use it, the model for your project's source language downloads in the background (~40 MB, once) and the status strip tells you when it is ready.
+It is **off by default**, because the source is usually in another language and needs a voice model for it. Tick **`select source {phrase}`** in SuperVoice settings; the first time you use it, the model for your project's source language downloads in the background (~40 MB, once) and the status strip tells you when it is ready.
 
 :::note
 Source selection is **read-only**. "delete that" refuses a source selection, and so does starting dictation – deleting source text would damage the segment, its translation-memory match and the document's alignment. Everything genuinely useful on a source selection (lookup, concordance, add a term) reads rather than writes.
@@ -68,7 +68,7 @@ A word with no recognisable part at all – a foreign loanword, typically – st
 
 ### Handing over to a dictation tool
 
-Two commands: **"dictate"** starts your dictation tool and stands aside while you talk; **"stop now"** takes it back. They are separate on purpose – saying either one twice is harmless, whereas a single toggle would silently start dictation when you meant to stop it. Both ship **switched off**, because they drive a tool most installations do not have – switch them on in Voice command settings once you have done the setup below.
+Two commands: **"dictate"** starts your dictation tool and stands aside while you talk; **"stop now"** takes it back. They are separate on purpose – saying either one twice is harmless, whereas a single toggle would silently start dictation when you meant to stop it. Both ship **switched off**, because they drive a tool most installations do not have – switch them on in SuperVoice settings once you have done the setup below.
 
 While dictation is running, Supervertaler ignores every command except the way back out (and "stop listening", which always works). This is the part a general-purpose macro tool cannot do: because it was *your command* that started the dictation, Supervertaler knows you are in it, and a translation containing the word "confirm" cannot fire a command into your document mid-sentence.
 
@@ -82,7 +82,7 @@ While dictation is running, Supervertaler ignores every command except the way b
 
 Supervertaler waits for `ZZEND` to appear and removes it, along with the space before it. A marker is used rather than an empty replacement for two reasons: most tools will not map a phrase to nothing, and a marker is far more reliable – spoken, your stop word arrives formatted, capitalised and punctuated (`. Stop now.`), and every one of those variants collapses into one fixed string you can search for.
 
-**3. Switch both commands on.** Right-click the 🎤 button → **Voice command settings** → tick **dictate** and **stop now**.
+**3. Switch both commands on.** Right-click the 🎤 button → **SuperVoice settings** → tick **dictate** and **stop now**.
 
 If your tool uses a different shortcut, or a different marker, edit the command's action rather than any settings screen: it reads `dictate_on:ctrl+win+space:ZZEND` on the start command and `dictate_off:ctrl+win+space:ZZEND` on the stop command – trigger first, marker second. `middleclick` is accepted as a trigger for a tool that listens for a middle click.
 
@@ -108,6 +108,6 @@ If step 3 comes out wrong, **"undo that"** puts it back.
 
 ### See Also
 
-* [Voice Commands](/trados/voice-commands/)
+* [SuperVoice](/trados/voice-commands/)
 * [Keyboard Shortcuts](/trados/keyboard-shortcuts/)
 * [TermLens](/trados/termlens/)

@@ -1,8 +1,8 @@
 ---
-title: "Voice Commands"
+title: "SuperVoice"
 ---
 
-Control Trados Studio hands-free with spoken commands: confirm segments, navigate, insert TermLens matches, apply translation results, add terms and more – without touching your keyboard. Designed to pair with dictation tools such as Wispr Flow or Dragon: they type your translation, Supervertaler handles the commands.
+**SuperVoice** is voice control for Trados Studio – spoken commands, hands-free selection, and a hand-off to your dictation tool. Control Trados Studio hands-free with spoken commands: confirm segments, navigate, insert TermLens matches, apply translation results, add terms and more – without touching your keyboard. Designed to pair with dictation tools such as Wispr Flow or Dragon: they type your translation, Supervertaler handles the commands.
 
 :::note
 Selecting and replacing words you have just dictated – and handing the microphone to a dictation tool and back – has a page of its own: **[Dictation](/trados/voice-commands/dictation/)**.
@@ -42,7 +42,9 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "select …" | "choose …" | Select those words in the target – see [Dictation](/trados/voice-commands/dictation/) |
 | "delete that" | "delete this", "remove that" | Delete whatever is selected in the target |
 | "undo that" | "scratch that", "undo" | Undo the last change (Ctrl+Z) |
-| "dictate" | "stop now" | Hand over to an external dictation tool and take it back (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
+| "select source …" | "source select …" | Select those words in the **source** segment (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
+| "dictate" | "start dictating" | Hand over to an external dictation tool (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
+| "stop now" | "stop dictating" | Take dictation back (**off by default**) |
 | "confirm" | "confirm segment" | Confirm segment and move to next unconfirmed |
 | "next segment" | "go down" | Move to the next segment (without confirming) |
 | "previous segment" | "go up" | Move to the previous segment |
@@ -82,17 +84,17 @@ From then on, "zoom in" and "zoom out" control the editor font size hands-free. 
 
 ### Customising commands
 
-Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **Voice command settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
+Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **SuperVoice settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
 
-<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-command-settings.png" alt="The Voice command settings dialog with the full command grid"><figcaption>Voice command settings – every phrase, alias and action is editable</figcaption></figure>
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-command-settings.png" alt="The SuperVoice settings dialog with the full command grid"><figcaption>SuperVoice settings – every phrase, alias and action is editable</figcaption></figure>
 
 * Enable/disable individual commands
 * Edit spoken phrases and add aliases
 * Add your own commands, mapped to either:
   * a **keystroke** chord sent to Studio (e.g. `ctrl+enter`, `alt+up`, `f3`) – any Studio or Supervertaler shortcut works
-  * an **internal** plugin action: `insert_term_1`…`insert_term_9`, `term_picker`, `termlens_popup`, `navigate_next`, `navigate_previous`, `stop_listening`, `select_phrase`, `delete_selection`, `dictate_toggle`
+  * an **internal** plugin action: `insert_term_1`…`insert_term_9`, `term_picker`, `termlens_popup`, `navigate_next`, `navigate_previous`, `stop_listening`, `select_phrase`, `select_source_phrase`, `delete_selection`, `dictate_on`, `dictate_off`
 
-A phrase containing `{phrase}` – as in `select {phrase}` – takes the words you say after it as its argument, rather than matching exactly. Only `select_phrase` uses this.
+A phrase containing `{phrase}` – as in `select {phrase}` – takes the words you say after it as its argument, rather than matching exactly. Only `select_phrase` and `select_source_phrase` use this.
 
 :::note
 After saving, the recogniser updates immediately – no restart needed.
