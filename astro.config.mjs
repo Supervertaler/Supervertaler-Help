@@ -20,6 +20,10 @@ export default defineConfig({
   // from several pages and is in the index, so it redirects rather than 404s.
   redirects: {
     '/trados/ai-assistant/context-awareness/': '/trados/context-layers/',
+    // SuperVoice was two pages - commands, and a "Dictation" page that had
+    // grown to hold selection and numbers as well. One page now (2026-09-17);
+    // the old address is linked from the 18.20.191 release notes.
+    '/trados/voice-commands/dictation/': '/trados/voice-commands/',
   },
 
   integrations: [

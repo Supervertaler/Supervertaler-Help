@@ -50,7 +50,6 @@
 ## 🧩 More Tools
 
 * [SuperVoice](trados/voice-commands.md)
-  * [Dictation](trados/voice-commands/dictation.md)
 * [AutoTagger](trados/autotagger.md)
 * [QuickLauncher](trados/quicklauncher.md)
 * [Text Transforms](trados/text-transforms.md)
