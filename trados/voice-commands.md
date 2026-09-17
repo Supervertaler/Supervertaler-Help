@@ -78,6 +78,7 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "go to the bottom" | "go to bottom" | Jump to the last segment (Ctrl+End) |
 | "copy source" | "copy from source" | Copy source to target |
 | "select all" | "select everything" | Select all the text in the active segment (Ctrl+A) |
+| "press enter" | "hit enter" | Press Enter – the default button of an open dialog |
 | "clear target" | | Clear the target segment |
 | "select …" | "choose …" | **Beta, off by default.** Select those words in the target – see [Selecting words](#selecting-words-by-saying-them) |
 | "select source …" | "source select …" | **Beta, off by default.** Select those words in the **source** segment |
