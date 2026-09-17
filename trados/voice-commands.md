@@ -8,10 +8,24 @@ title: "SuperVoice"
 Selecting and replacing words you have just dictated – and handing the microphone to a dictation tool and back – has a page of its own: **[Dictation](/trados/voice-commands/dictation/)**.
 :::
 
+### The SuperVoice pane
+
+**View > SuperVoice** opens SuperVoice's own dockable pane: the microphone button, its state, and a list of what has been heard – newest at the top, each utterance beside what happened to it.
+
+| Row colour | Meaning |
+| ---------- | ------- |
+| **Green** | A command ran, or words were selected |
+| **Amber** | Understood but declined, with the reason – an ambiguous phrase, a word inside another word |
+| **Red** | A command that tried and failed |
+| **Grey** | Ordinary speech that matched no command – not an error |
+
+The pane opens on the right beside Translation Results, as a tab. That suits how it is used: the microphone's state is already visible all the time in the TermLens header, and the pane holds the *history*, which you look at when something did not do what you expected. Drag it anywhere and Studio remembers. Sized to a few rows it always shows the last thing that happened; make it taller to see more.
+
 ### Starting and stopping
 
-Two ways to toggle voice commands:
+Three ways to toggle voice commands:
 
+* Click the **🎤 microphone button** in the SuperVoice pane
 * Click the **🎤 microphone button** in the TermLens panel header (next to the ↻ refresh button)
 * Press **Ctrl+Alt+D** (also available in the editor right-click menu)
 
@@ -25,13 +39,13 @@ The microphone button shows the state at a glance:
 | **Orange** | Starting (or downloading the voice runtime on first use) |
 | **Green** | Listening |
 
-Each command you speak flashes briefly in the TermLens status label (e.g. `🎤 "confirm"`), so you always know what was heard.
+Each command you speak flashes briefly in the TermLens status label (e.g. `🎤 "confirm"`), and is kept in the SuperVoice pane.
 
 :::note
 **First activation** downloads the offline voice engine and a small English model (~50 MB, one-time) – progress is shown in the status label. Every later activation is instant.
 :::
 
-If the TermLens panel isn't open, a small floating status strip appears instead (bottom-right). You can drag it anywhere – the position is remembered.
+If neither the SuperVoice pane nor the TermLens panel is open, a small floating status strip appears instead (bottom-right). You can drag it anywhere – the position is remembered. It does not appear while the SuperVoice pane is open.
 
 ### Default commands
 
@@ -51,6 +65,7 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "go to the top" | "go to top" | Jump to the first segment (Ctrl+Home) |
 | "go to the bottom" | "go to bottom" | Jump to the last segment (Ctrl+End) |
 | "copy source" | "copy from source" | Copy source to target |
+| "select all" | "select everything" | Select all the text in the active segment (Ctrl+A) |
 | "clear target" | | Clear the target segment |
 | "term one" … "term nine" | | Insert TermLens match 1–9 (with [capitalisation adaptation](/trados/termlens/#automatic-capitalisation)) |
 | "match one" … "match nine" | | Apply Translation Results match 1–9 (Ctrl+1–9) |
@@ -81,10 +96,11 @@ From then on, "zoom in" and "zoom out" control the editor font size hands-free. 
 * **Fully offline** – recognition runs locally on your machine (Vosk engine); no audio is ever sent anywhere.
 * **Grammar-constrained** – the recogniser listens *only* for your command phrases, which is what makes commands fast and reliable. Normal speech and dictation are ignored.
 * **Foreground guard** – commands only execute while Trados Studio is the active window. Speaking in another app can't trigger anything ("stop listening" is the one exception – it always works).
+* **Editor guard** – a keystroke command spoken while the cursor is in one of Supervertaler's own text boxes (the Assistant's chat box, say) is refused, and the SuperVoice pane says *put the cursor in the editor*. Studio's own boxes are not gated: Studio dispatches its shortcuts application-wide, so "confirm" with the cursor in Concordance search confirms the segment, exactly as pressing Ctrl+Enter there would.
 
 ### Customising commands
 
-Right-click the 🎤 button (or click ⚙ on the floating strip) to open the **SuperVoice settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
+Click ⚙ in the SuperVoice pane, or right-click the 🎤 button in the TermLens header, to open the **SuperVoice settings** dialog (also reachable via the **?** in its title bar and **F1** for this help page):
 
 <figure><img src="/.gitbook/assets/Supervertaler-for-Trados_Voice-command-settings.png" alt="The SuperVoice settings dialog with the full command grid"><figcaption>SuperVoice settings – every phrase, alias and action is editable</figcaption></figure>
 

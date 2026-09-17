@@ -37,10 +37,10 @@ A few things worth knowing, because they explain what you will see:
 
 * **Dropped words are tolerated.** Unstressed function words often do not survive recognition – "comprises at most" comes back as "comprises most". The selection widens to the segment's own text, so you still get *comprises at most*.
 * **Whole words only.** Saying "select the" selects the standalone *the*, never the three letters inside *further*.
-* **Say it again for the next one.** Where a phrase occurs more than once, the first is selected and the status strip says **2 of 4 – say again for the next**. Repeating the same phrase steps to the next occurrence, and wraps round at the end. Naming more words works too.
+* **Say it again for the next one.** Where a phrase occurs more than once, the first is selected and the SuperVoice pane says **2 of 4 – say again for the next**. Repeating the same phrase steps to the next occurrence, and wraps round at the end. Naming more words works too.
 * **"select" searches the target; "select source" searches the source.** Other segments and the termbase are never candidates.
 
-If a phrase cannot be selected, the status strip says why rather than doing nothing – `no "confirm" in this segment`, or `"the" is inside another word – say more words`. A selection in a place you did not name would be worse than none, because "delete that" would act on it.
+If a phrase cannot be selected, the SuperVoice pane says why rather than doing nothing – `no "confirm" in this segment`, or `"the" is inside another word – say more words`. A selection in a place you did not name would be worse than none, because "delete that" would act on it.
 
 :::note
 "delete that" removes the space before the deleted words as well, where that is unambiguous, so deleting a word from the middle of a sentence does not leave a double space behind.
@@ -104,7 +104,7 @@ If step 3 comes out wrong, **"undo that"** puts it back.
 * **A word buried in an earlier word, at the very end of a segment, cannot be selected.** There is nothing after it to tell the two apart. Say two words instead.
 * **Selection follows the active segment.** Move to another segment and the vocabulary changes with it.
 * **A word the recogniser has never seen cannot be selected**, and nor can a compound none of whose parts it knows. Name a word next to it instead.
-* **The status strip is the feedback channel.** Keep the TermLens panel open, or use the floating strip, so you can see what was heard and what happened.
+* **The SuperVoice pane is the feedback channel.** Open it (View > SuperVoice) and keep it where you can see it: every utterance is listed with what happened to it, so a selection that went to the wrong place, or was declined, is a thing you can read rather than guess at.
 
 ### See Also
 
