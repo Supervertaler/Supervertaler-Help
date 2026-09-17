@@ -149,6 +149,8 @@ The words the voice model cannot hear are, in a technical text, most of the ones
 2. Say **"select 12"** to select word 12, or **"select 12 to 14"** for the span from 12 to 14 – it keeps whatever lies between. The popup closes.
 3. **"cancel"**, **"escape"**, the Escape key, or the × closes it without selecting.
 
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_SuperVoice-select-by-number.jpg" alt="The number popup over the editor: the target segment as a sentence, each word followed by a small number"><figcaption>"numbers" – the segment as it reads, with a number after every word</figcaption></figure>
+
 The popup also opens **by itself** when a selection fails because the word is not in the model's vocabulary – the pane says *"…" cannot be heard*, and the numbers appear with that reason as their title. Say the number. (It does not open while you are dictating, or while Studio is not the active window.)
 
 **Yellow means: say the number. Everything else: say the word or the number, as you like.** Either way the popup closes once the selection lands.
