@@ -21,10 +21,18 @@
  * in astro.config.mjs), so the filter is a simple "does this top-level
  * group's label contain the current product's name?" check.  Avoids any
  * dependency on internal Starlight data structures.
+ *
+ * Product marks (2026-09-17): the generated labels carry each product's
+ * emoji ("🧩 Supervertaler for Trados") because SUMMARY.md is parsed by
+ * emoji.  The sidebar shows the product's own mark instead - the Sv
+ * circle from /product-icons/ - so the emoji is stripped from the label
+ * here and the mark is drawn by CSS (src/styles/custom.css, ".sv-sidebar")
+ * off the data-product attribute on the wrapper: one product on a
+ * product page, all four in SUMMARY order on the landing page.
  */
 import type { Props } from '@astrojs/starlight/props';
 import Default from '@astrojs/starlight/components/Sidebar.astro';
-import { productFor } from '../products';
+import { productFor, PRODUCTS } from '../products';
 
 const route = Astro.locals.starlightRoute;
 const id: string = route?.entry?.id ?? '';
@@ -41,6 +49,24 @@ if (currentProduct && route?.sidebar) {
     return label.includes(name);
   });
 }
+
+// After filtering (the filter matches on the name, not the emoji): drop
+// the emoji from every top-level label.  The mark takes its place in CSS.
+if (route?.sidebar) {
+  for (const entry of route.sidebar as any[]) {
+    if (typeof entry?.label !== 'string') continue;
+    for (const p of PRODUCTS) {
+      if (p.emoji && entry.label.startsWith(p.emoji)) {
+        entry.label = entry.label.slice(p.emoji.length).trim();
+        break;
+      }
+    }
+  }
+}
+
+const scope = currentProduct?.id ?? 'all';
 ---
 
-<Default {...Astro.props} />
+<div class="sv-sidebar" data-product={scope}>
+  <Default {...Astro.props} />
+</div>

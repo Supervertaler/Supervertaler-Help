@@ -80,6 +80,7 @@ export const PRODUCTS: Product[] = [
     label: 'Workbench',
     fullName: 'Supervertaler Workbench',
     emoji: '🖥️',
+    icon: '/product-icons/sv-workbench.svg',
     llmsSubset: '/_llms-txt/supervertaler-workbench.txt',
     banner:
       '<strong>Supervertaler Workbench is no longer actively developed.</strong> ' +

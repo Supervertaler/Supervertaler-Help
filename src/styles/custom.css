@@ -149,22 +149,17 @@
  * The offsets are relative to the padding box, so this does not
  * depend on knowing Starlight's card padding.
  * --------------------------------------------------------------- */
-.sl-markdown-content .card {
-  position: relative;
-}
-
-.sl-markdown-content .card .title {
-  padding-inline-start: 38px;
-}
-
-.sl-markdown-content .card .body > .product-mark {
-  position: absolute;
-  top: 0;
-  inset-inline-start: 0;
-  margin: 0;
-  /* The title's line box is 30px at Starlight's h4 size, so a 30px mark
-     sits on it without nudging. */
-  line-height: 30px;
+/* The product mark sits INSIDE the card title, right before the name
+   (2026-09-17). It used to be absolutely positioned at the card's corner,
+   which with a centred title put it nowhere near the heading. The Card
+   component renders its title with set:html, so the <img> travels in the
+   title string from index.mdx. */
+.sl-markdown-content .card .title .product-mark {
+  display: inline-block;
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+  margin-inline-end: 0.35em;
 }
 
 /* Figure captions (2026-09-17). Pages use <figure><img><figcaption>, and
@@ -187,4 +182,36 @@
   line-height: 1.4;
   color: var(--sl-color-gray-3);
   font-style: italic;
+}
+
+
+/* Sidebar product marks (2026-09-17). The generated group labels carry the
+   product emoji; Sidebar.astro strips it and tags the tree with the product
+   id, and the Sv circle is drawn here instead. One product on a product
+   page; all four, in SUMMARY.md order, on the landing page. */
+.sv-sidebar .top-level > li > details > summary .large::before {
+  content: '';
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  margin-inline-end: 0.4em;
+  vertical-align: -0.18em;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.sv-sidebar[data-product="trados"] .top-level > li > details > summary .large::before,
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(1) > details > summary .large::before {
+  background-image: url('/product-icons/sv-trados.svg');
+}
+.sv-sidebar[data-product="memoq"] .top-level > li > details > summary .large::before,
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(2) > details > summary .large::before {
+  background-image: url('/product-icons/sv-memoq.svg');
+}
+.sv-sidebar[data-product="sidekick"] .top-level > li > details > summary .large::before,
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(3) > details > summary .large::before {
+  background-image: url('/product-icons/sv-sidekick.svg');
+}
+.sv-sidebar[data-product="workbench"] .top-level > li > details > summary .large::before,
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(4) > details > summary .large::before {
+  background-image: url('/product-icons/sv-workbench.svg');
 }
