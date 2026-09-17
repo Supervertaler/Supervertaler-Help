@@ -8,9 +8,15 @@ title: "SuperVoice"
 Selecting and replacing words you have just dictated – and handing the microphone to a dictation tool and back – has a page of its own: **[Dictation](/trados/voice-commands/dictation/)**.
 :::
 
+:::note[Commands are spoken in English]
+Whatever languages your project is in, the commands themselves are English – "confirm", "select twelve", "source numbers" – and the recogniser is an English one. That is deliberate: one command language means one reliable command vocabulary, and the phrases are short and few. You can rename any command in SuperVoice settings, but the words you choose still have to be ones an English recogniser can hear. Command sets in other languages may follow if users ask for them.
+:::
+
 ### The SuperVoice pane
 
 **View > SuperVoice** opens SuperVoice's own dockable pane: the microphone button, its state, and a list of what has been heard – newest at the top, each utterance beside what happened to it.
+
+<figure><img src="/.gitbook/assets/Supervertaler-for-Trados_SuperVoice-pane.jpg" alt="The SuperVoice pane: microphone, state, and a list of utterances with what happened to each – selections in green, refusals in amber, ordinary speech in grey"><figcaption>The SuperVoice pane – what was heard, and what happened to it</figcaption></figure>
 
 | Row colour | Meaning |
 | ---------- | ------- |
