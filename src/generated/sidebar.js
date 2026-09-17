@@ -196,17 +196,8 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
-            "label": "Voice Commands",
-            "items": [
-              {
-                "label": "Overview",
-                "link": "/trados/voice-commands/"
-              },
-              {
-                "label": "Dictation",
-                "link": "/trados/voice-commands/dictation/"
-              }
-            ]
+            "label": "SuperVoice",
+            "link": "/trados/voice-commands/"
           },
           {
             "label": "AutoTagger",

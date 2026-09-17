@@ -10,6 +10,10 @@ title: "SuperVoice"
 
 What SuperVoice does *not* do is write your translation. That is what a dictation tool is for – [Wispr Flow](https://wisprflow.ai/), Dragon, Windows Voice Access – and SuperVoice is built to work alongside one: it selects, deletes, undoes, hands over, takes back, and gets out of the way.
 
+**Two minutes of it in use:**
+
+<div style="position:relative;width:100%;max-width:800px;aspect-ratio:16/9;margin:1rem 0"><iframe src="https://www.youtube.com/embed/bsNljeAqtrU" title="SuperVoice in use" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
 :::note[Commands are spoken in English]
 Whatever languages your project is in, the commands themselves are English – "confirm", "select twelve", "source numbers" – and the recogniser is an English one. That is deliberate: one command language means one reliable command vocabulary, and the phrases are short and few. You can rename any command in SuperVoice settings, but the words you choose still have to be ones an English recogniser can hear. Command sets in other languages may follow if users ask for them.
 :::
