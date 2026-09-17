@@ -2,7 +2,7 @@
 title: "SuperVoice"
 ---
 
-**SuperVoice** is voice control for Trados Studio – spoken commands, hands-free selection, and a hand-off to your dictation tool. Control Trados Studio hands-free with spoken commands: confirm segments, navigate, insert TermLens matches, apply translation results, add terms and more – without touching your keyboard. Designed to pair with dictation tools such as Wispr Flow or Dragon: they type your translation, Supervertaler handles the commands.
+**SuperVoice** is voice control for Trados Studio – spoken commands, hands-free selection (beta), and a hand-off to your dictation tool. Control Trados Studio hands-free with spoken commands: confirm segments, navigate, insert TermLens matches, apply translation results, add terms and more – without touching your keyboard. Designed to pair with dictation tools such as Wispr Flow or Dragon: they type your translation, Supervertaler handles the commands.
 
 :::note
 Selecting and replacing words you have just dictated – and handing the microphone to a dictation tool and back – has a page of its own: **[Dictation](/trados/voice-commands/dictation/)**.
@@ -53,10 +53,10 @@ Everything works out of the box – no configuration needed. Most commands also 
 
 | Say | Or | Action |
 | --- | --- | ------ |
-| "select …" | "choose …" | Select those words in the target – see [Dictation](/trados/voice-commands/dictation/) |
+| "select …" | "choose …" | **Beta, off by default.** Select those words in the target – see [Dictation](/trados/voice-commands/dictation/) |
 | "delete that" | "delete this", "remove that" | Delete whatever is selected in the target |
 | "undo that" | "scratch that", "undo" | Undo the last change (Ctrl+Z) |
-| "select source …" | "source select …" | Select those words in the **source** segment (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
+| "select source …" | "source select …" | **Beta, off by default.** Select those words in the **source** segment – see [Dictation](/trados/voice-commands/dictation/) |
 | "dictate" | "start dictating" | Hand over to an external dictation tool (**off by default** – see [Dictation](/trados/voice-commands/dictation/)) |
 | "stop now" | "stop dictating" | Take dictation back (**off by default**) |
 | "confirm" | "confirm segment" | Confirm segment and move to next unconfirmed |

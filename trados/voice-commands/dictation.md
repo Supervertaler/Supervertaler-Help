@@ -8,6 +8,12 @@ This page builds on **[SuperVoice](/trados/voice-commands/)** – start there fo
 
 Voice commands drive Trados Studio. A dictation tool writes your translation. This page is about the seam between the two – selecting words you have just dictated, replacing them, and handing the microphone back and forth without touching the keyboard.
 
+:::caution[Selecting by voice is in beta]
+**Selection works for everyday words and fails for most technical ones, and that is a property of the voice models, not a bug we can patch.** The recogniser runs on a small offline model that knows roughly 150,000 English words and 100,000 Dutch ones – and a specialised text is full of words that are not among them. Measured on a real patent (September 2026): the English model could not hear **24% of the distinct words** in the target, rising to **34% of words of seven letters or more** – the technical vocabulary. The Dutch model could not hear 39% and 47% of the source. The single most frequent word in that document was one of them.
+
+A word the model does not know cannot be selected by saying it, in any language. So: `select {phrase}` and `select source {phrase}` ship **switched off**; turn them on in SuperVoice settings to try them. Selecting by *number* – say the number of the word rather than the word – is the planned way to select the words the model cannot hear, and is not yet built.
+:::
+
 Everything here works with any dictation tool. [Wispr Flow](https://wisprflow.ai/) is the one the feature was built and tested against, so it is used for the worked example, but Dragon, Windows Voice Access and the rest follow the same three setup steps.
 
 ### Why two tools at all
