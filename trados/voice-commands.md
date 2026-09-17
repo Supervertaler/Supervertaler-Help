@@ -66,6 +66,8 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "go to the bottom" | "go to bottom" | Jump to the last segment (Ctrl+End) |
 | "copy source" | "copy from source" | Copy source to target |
 | "select all" | "select everything" | Select all the text in the active segment (Ctrl+A) |
+| "numbers" | "show numbers", "number words" | Number the words of the target, then say **"select 12"** or **"select 12 to 14"** – see [Select by number](/trados/voice-commands/dictation/#select-by-number) |
+| "source numbers" | "number source words" | The same for the **source** segment |
 | "clear target" | | Clear the target segment |
 | "term one" … "term nine" | | Insert TermLens match 1–9 (with [capitalisation adaptation](/trados/termlens/#automatic-capitalisation)) |
 | "match one" … "match nine" | | Apply Translation Results match 1–9 (Ctrl+1–9) |

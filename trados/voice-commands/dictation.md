@@ -11,7 +11,7 @@ Voice commands drive Trados Studio. A dictation tool writes your translation. Th
 :::caution[Selecting by voice is in beta]
 **Selection works for everyday words and fails for most technical ones, and that is a property of the voice models, not a bug we can patch.** The recogniser runs on a small offline model that knows roughly 150,000 English words and 100,000 Dutch ones – and a specialised text is full of words that are not among them. Measured on a real patent (September 2026): the English model could not hear **24% of the distinct words** in the target, rising to **34% of words of seven letters or more** – the technical vocabulary. The Dutch model could not hear 39% and 47% of the source. The single most frequent word in that document was one of them.
 
-A word the model does not know cannot be selected by saying it, in any language. So: `select {phrase}` and `select source {phrase}` ship **switched off**; turn them on in SuperVoice settings to try them. Selecting by *number* – say the number of the word rather than the word – is the planned way to select the words the model cannot hear, and is not yet built.
+A word the model does not know cannot be selected by saying it, in any language. So: `select {phrase}` and `select source {phrase}` ship **switched off**; turn them on in SuperVoice settings to try them. For the words the model cannot hear, **[select by number](#select-by-number)** – it cannot mishear a word it was never asked to hear.
 :::
 
 Everything here works with any dictation tool. [Wispr Flow](https://wisprflow.ai/) is the one the feature was built and tested against, so it is used for the worked example, but Dragon, Windows Voice Access and the rest follow the same three setup steps.
@@ -111,6 +111,18 @@ If step 3 comes out wrong, **"undo that"** puts it back.
 * **Selection follows the active segment.** Move to another segment and the vocabulary changes with it.
 * **A word the recogniser has never seen cannot be selected**, and nor can a compound none of whose parts it knows. Name a word next to it instead.
 * **The SuperVoice pane is the feedback channel.** Open it (View > SuperVoice) and keep it where you can see it: every utterance is listed with what happened to it, so a selection that went to the wrong place, or was declined, is a thing you can read rather than guess at.
+
+### Select by number
+
+The words the voice model cannot hear are, in a technical text, most of the ones you want. For those you say a **number** instead of the word:
+
+1. Say **"numbers"**. A small popup numbers every word of the target segment – a hyphenated compound counts as one word – and marks in yellow the words the model cannot hear. **"source numbers"** does the same for the source.
+2. Say **"select 12"** to select word 12, or **"select 12 to 14"** for the span from 12 to 14 – it keeps whatever lies between. The popup closes.
+3. **"cancel"** closes it without selecting.
+
+The popup also opens **by itself** when a selection fails because the word is not in the model's vocabulary – the SuperVoice row says *"…" cannot be heard*, and the numbers appear with that reason as their title. Say the number.
+
+The popup never takes focus, so the caret stays in the editor. The number words are only in the recogniser's vocabulary while it is open. If "to" is heard as "two" – "seven two nine" – it still reads as 7 to 9. Words are numbered past 99, but only 1–99 can be said.
 
 ### See Also
 
