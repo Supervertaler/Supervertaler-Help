@@ -22,7 +22,7 @@ With everything set up (below), a chat-driven job looks like this:
 
 1. **Open the project** in memoQ and tick **Pre-translate via Claude Desktop (MCP)** in Supervertaler's settings (see [The checkbox](#the-checkbox)).
 2. **Pre-translate** with Supervertaler as the MT engine. It is instant and free: the grid stays empty, but Supervertaler now holds every source segment.
-3. **In Claude Desktop:** *"Read my memoQ project and translate it into Dutch."* Claude reads the segments, checks your glossary, and stages translations. Nothing has changed in memoQ yet.
+3. **In Claude Desktop:** *"Read my memoQ project and translate it into Dutch."* Claude reads the segments, checks your termbases, and stages translations. Nothing has changed in memoQ yet.
 4. **Pre-translate again.** The grid fills. Each row is marked `Claude (staged via Supervertaler MCP)` in Translation results.
 5. **Confirm as you go.** If [Self-learning](/memoq/self-learning/) is on, each confirmation is visible to Claude too – *"what have I confirmed so far?"* – so a mid-job conversation about terminology is grounded in your actual choices.
 
@@ -101,7 +101,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_active_segment` | ✓ | The row your cursor is on, with what is selected – needs the live link |
 | `go_to_segment` | ✓ | Asks memoQ to select a row – needs the live link |
 | `get_confirmed_pairs` | ✓ | Segments you have confirmed, via [Self-learning](/memoq/self-learning/) |
-| `lookup_term` / `add_term` | ✓ | Your Supervertaler [glossary](/memoq/terminology/), not memoQ's term bases |
+| `lookup_term` / `add_term` | ✓ | Your Supervertaler [termbases](/memoq/terminology/), not memoQ's term bases. `add_term` writes to the project termbase |
 | `stage_translations` | ✓ | **The write channel.** Translations wait until you Pre-translate |
 | `get_staged` / `clear_staged` | ✓ | Inspect and reset the staging area |
 | `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/). A prompt Claude saves is recorded as drafted by the chat and marked for memoQ, so it does not appear in Trados’s list and the runtime treats its terminology the way it treats [AutoPrompt’s](/memoq/prompt-editor/#a-drafted-prompt-is-the-only-source-of-terminology) |
@@ -110,7 +110,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `search_supermemory` | ✓ | Full-text search inside a bank |
 | `update_segments`, `insert_into_active_segment` | ✗ | No write access to the editor – use `stage_translations` + Pre-translate |
 | `search_tm`, `search_studio_tm`, `compare_document_to_tm` | ✗ | memoQ's TMs are not readable by plugins; confirmed pairs are the substitute |
-| `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` | ✓ | QA over the live document, paragraph by paragraph – needs the live link. `check_terminology` runs against the active Supervertaler glossary, so give it a project one: [Export glossary](/memoq/prompt-editor/#export-glossary-the-prompts-terms-as-the-project-glossary) from an AutoPrompt draft |
+| `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` | ✓ | QA over the live document, paragraph by paragraph – needs the live link. `check_terminology` runs against the termbases ticked Read, so give it a project one: [Termbase from this prompt's terms](/memoq/prompt-editor/#termbase-from-this-prompts-terms) from an AutoPrompt draft |
 | `find_inconsistencies` | ✓ | Repeated source paragraphs translated differently – needs the live link |
 | `run_verification` | ✗ | memoQ's own QA cannot be run by a plugin; use memoQ's Run QA |
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |

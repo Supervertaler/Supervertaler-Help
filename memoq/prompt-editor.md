@@ -37,9 +37,11 @@ Any settings the file carries that the editor does not have a field for – tags
 
 The bar under the toolbar opens with the **memoQ project** these apply to, because everything on it is recorded against a project. When it reads **no project yet**, in red, memoQ has not sent a translation request and the plugin does not know where it is – usually because Supervertaler is not selected as the MT engine in a newly created project. A memory bank chosen at that moment is filed against whichever project came before, silently, so it is worth a glance before changing anything.
 
-Then three things memoQ will apply to every translation:
+Then four things memoQ will apply to every translation:
 
-**Prompt**, **Glossary** and **Memory bank**. Click any of them to change it. Each opens a list with a filter box rather than a dropdown menu, because all three grow with the work – a prompt library reaches forty entries quickly, and a bank per client does the same. All three can also be set to nothing: the glossary list has a **(none)** row, and a **Browse…** row at the end for a glossary that lives outside the glossaries folder.
+**Model**, **Prompt** and **Bank**. Click any of them to change it. Each opens a list with a filter box rather than a dropdown menu, because they grow with the work – a prompt library reaches forty entries quickly, and a bank per client does the same. The bank can also be set to nothing.
+
+**Termbases** is the fourth row, and it is a summary rather than a picker: *BRANTS (project) + BEIJER · 1 of 2 to the model* – which termbases are ticked for this project, which of them is the project's, and how many reach the model. A termbase selection is a set, and a dropdown cannot hold one; clicking the row opens the [Termbases window](/memoq/terminology/#the-termbases-window), which can. It reads *none* in grey when terminology is off.
 
 These are the choices that change between jobs, which is why they are here rather than in Translation settings: they are what the model knows before it is shown a segment. Each is also the same setting memoQ’s own dialog shows, so either place can change it.
 
@@ -69,13 +71,13 @@ The marker is written from the **Available in** field on every save and stripped
 
 ## AutoPrompt: drafting a prompt for the open project
 
-Press **AutoPrompt…** in the editor’s toolbar, or choose it from the **memoQ** menu. Supervertaler reads the document you are translating, your glossary hits in it and anything you have already confirmed, and has the AI write a prompt tailored to that job – domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
+Press **AutoPrompt…** in the editor’s toolbar, or choose it from the **memoQ** menu. Supervertaler reads the document you are translating, the termbase hits in it (from termbases ticked AI) and anything you have already confirmed, and has the AI write a prompt tailored to that job – domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
 
 Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative. The briefing is the one input nothing else supplies: the filing route, a discrepancy you already know about, anything true of this job that is not in the document or the memory bank.
 
-The two checkboxes grey out when they have nothing to offer – no glossary is active, or nothing has been confirmed in this document yet – and say which it is, rather than sitting there ticked and doing nothing.
+The two checkboxes grey out when they have nothing to offer – no termbase is ticked AI for this project, or nothing has been confirmed in this document yet – and say which it is, rather than sitting there ticked and doing nothing.
 
-**Preview context…** shows you exactly what will be sent, before anything is sent: the extract from your document, the glossary hits, the segments you have confirmed, the briefing you typed, and the instructions the AI is given about writing a prompt for memoQ. It makes no API call and costs nothing, and the briefing box stays open behind it – so the loop is look, add what is missing, look again, then generate.
+**Preview context…** shows you exactly what will be sent, before anything is sent: the extract from your document, the termbase hits, the segments you have confirmed, the briefing you typed, and the instructions the AI is given about writing a prompt for memoQ. It makes no API call and costs nothing, and the briefing box stays open behind it – so the loop is look, add what is missing, look again, then generate.
 
 Three things to know:
 
@@ -87,13 +89,13 @@ Draft it again later in the job and it gets better: by then it can see what you 
 
 ### A drafted prompt is the only source of terminology
 
-A prompt AutoPrompt wrote ends in a locked-terms table chosen for this document. So while one is selected, **the glossary’s preferred renderings are not sent to the model as well** – two lists of terminology that were never written to agree, with nothing saying which wins, is a worse position than one list.
+A prompt AutoPrompt wrote ends in a locked-terms table chosen for this document. So while one is selected, **the termbases' preferred renderings are not sent to the model as well** – two lists of terminology that were never written to agree, with nothing saying which wins, is a worse position than one list.
 
 **Forbidden terms still go.** A preferred rendering is advice, and two sources of advice can contradict each other confusingly; "never use this word" is a constraint, and there are few of them. So they travel whatever prompt is selected.
 
-Nothing else about the glossary changes: it still drives the terminology pane, the QA check and AutoPrompt’s own reading of the document. Only the per-request injection stops, and the [Activity window](#the-activity-window) says so once per prompt.
+Nothing else about the termbases changes: they still drive the terminology pane, the QA check and AutoPrompt’s own reading of the document. Only the per-request injection stops, and the [Activity window](#the-activity-window) says so once per prompt.
 
-The consequence worth remembering: a term you forbid **after** a prompt was drafted is enforced immediately, but a preferred rendering you add afterwards is not – draft the prompt again to take it in. **Export glossary** is the other half of that loop: derive the glossary *from* the prompt and the two cannot contradict each other in the first place.
+The consequence worth remembering: a term you forbid **after** a prompt was drafted is enforced immediately, but a preferred rendering you add afterwards is not – draft the prompt again to take it in. **Termbase from this prompt's terms** is the other half of that loop: derive the project termbase *from* the prompt and the two cannot contradict each other in the first place.
 
 Prompts saved from the chat over [MCP](/memoq/mcp-server/) count as drafted too, and are marked for the product you were connected to.
 
@@ -133,13 +135,13 @@ Supervertaler finds the project folder by asking memoQ where it keeps its projec
 
 **Document images report** at the bottom writes a Markdown listing of every image in every document – label, size, caption, the text around it – into the memory bank and opens it. No AI call.
 
-## Export glossary: the prompt's terms as the project glossary
+## Termbase from this prompt's terms
 
-An AutoPrompt draft ends with a locked-terms table – a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general glossary flags *application → aanvrage* in every paragraph of a software patent, a project glossary knows better.
+An AutoPrompt draft ends with a locked-terms table – a dozen or so renderings chosen for this document. That table is exactly what the [terminology plugin](/memoq/terminology/) and the `check_terminology` QA tool should work from: a general termbase flags *application → aanvrage* in every paragraph of a software text, a project termbase knows better.
 
-Choose **memoQ → Export this prompt’s terms as a glossary** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and writes a tab-separated glossary file to `C:\Users\<you>\Supervertaler\memoq\glossaries\<prompt name>.txt`. Answer yes when it asks and that file becomes the active glossary immediately, whether or not memoQ is running.
+Choose **memoQ → Termbase from this prompt's terms…** with the prompt open. Supervertaler reads every table in it that names a source and a target column, turns notes of the form *never "apparatus"* into forbidden entries, and makes a termbase named after the prompt – or adds to it if one exists, skipping pairs already there – and ticks it Read and Project for the current memoQ project. A row that lists alternates, *regenereren / regeneratie | regenerate / regeneration*, becomes one pair per alternate. It works whether or not memoQ is running; memoQ picks the change up within a few seconds.
 
-The file is plain text – edit it freely; the plugin re-reads it whenever it changes. Any prompt with a table laid out the same way works, not only AutoPrompt's.
+Any prompt with a table laid out the same way works, not only AutoPrompt's. Correcting the result afterwards is what the Terms window is for; rows the prompt no longer has are not removed, since they may have been corrected by hand.
 
 ### Settings
 
@@ -185,12 +187,12 @@ memoQ’s Pre-translate dialog is modal and says only *Processing*, for as long 
 
 It is a window of its own rather than a panel so that it can sit over memoQ while that dialog holds the screen. Tick **Keep on top** and you can watch a Pre-translate run from the first batch to the last.
 
-What it shows: the engine and model each project starts with, the glossary as it loads and how many terms came out of it, warnings when the selected prompt or glossary faces the opposite language pair, every batch with the segments sent, the segments returned and the glossary terms matched, AutoPrompt drafts, and anything that failed. A batch that comes back short is called out rather than logged flatly, because that is the failure that quietly shifts every translation after it.
+What it shows: the engine and model each project starts with, the termbases as they load and how many terms came out of them, a warning when the selected prompt faces the opposite language pair, every batch with the segments sent, the segments returned and the terms matched, AutoPrompt drafts, and anything that failed. A batch that comes back short is called out rather than logged flatly, because that is the failure that quietly shifts every translation after it.
 
 Three lines are worth knowing by sight:
 
 - **Bank** – which memory bank a project switched to, and once per job how much of it is being sent. If it ends with a file listed as *not sent*, that is the budget trimming by priority, not a fault.
-- **Terminology** – said once when a drafted prompt is holding the glossary back, so a quiet change to what reaches the model is never silent.
+- **Terminology** – said once when a drafted prompt is holding the termbases' preferred renderings back, so a quiet change to what reaches the model is never silent.
 - **The token count on each batch** – `tokens: in 1,041 (cache write 45,870) out 1,233`. The prompt and the bank are identical on every request of a run, so providers cache them: the first batch writes, the rest read at a tenth of the rate. If *cached* never appears across a long run, something is re-sending the block at full price.
 
 **Show everything** un-hides the per-request diagnostics – memoQ’s capability probes, lookup sessions, single-segment translations – which are what you want when something is wrong and noise the rest of the time.
@@ -199,4 +201,4 @@ The window reads the plugin’s own log, `C:\Users\<you>\AppData\Local\Supervert
 
 ## Drafting prompts with Claude
 
-If you use the [MCP server](/memoq/mcp-server/), Claude can write into this library: *"Draft a translation prompt for this project and save it."* It reads the captured document, your confirmed segments and your glossary, saves the result as a new prompt, and you pick it from the dropdown. The editor is where you review and tune what it wrote.
+If you use the [MCP server](/memoq/mcp-server/), Claude can write into this library: *"Draft a translation prompt for this project and save it."* It reads the captured document, your confirmed segments and your termbases, saves the result as a new prompt, and you pick it from the dropdown. The editor is where you review and tune what it wrote.

@@ -19,12 +19,16 @@ Advertising the capability only makes the engine eligible; memoQ does not send c
 Three things must all be true, under **Options → Terminology plugins**:
 
 1. **Perform terminology plugin lookups while working in the translation grid** is ticked
-2. **Supervertaler terms** does not read *Not configured* – i.e. a glossary file is set
+2. **Supervertaler terms** does not read *Not configured* – i.e. at least one termbase is ticked Read for the project in the [Termbases window](/memoq/terminology/#the-termbases-window)
 3. **Enable plugin** is ticked for it
 
-### The glossary loads no terms
+### A termbase gives no hits
 
-Almost always spaces where tabs should be. The glossary options dialog reports how many terms it parsed; if that reads zero with a file selected, open the file in an editor with whitespace visible and check the separators.
+Check its languages in the Termbases window. A termbase stored the other way round from the project is turned automatically, but one in an unrelated pair – German → English on a Dutch job – is read as stored and simply matches nothing. Then check the Read tick is set for *this* project: the window names the project it applies to at the top, and in a new project the ticks are filed against it only after memoQ has sent a first segment.
+
+### An imported file produced no terms
+
+Almost always the delimiter: a file whose header row uses tabs but whose rows use spaces, or the reverse. Open it with whitespace visible. The import dialog reports how many rows it read; if that is zero the file is being read as one column.
 
 ### The panel names the wrong project, or nothing reaches the model
 
@@ -47,7 +51,7 @@ C:\Users\<you>\AppData\Local\Supervertaler.memoQ\plugin.log
 with a fallback at `C:\Users\<you>\AppData\Local\Temp\Supervertaler-memoQ.log` if that folder cannot be written.
 
 
-It records what memoQ asked for and what was sent – segment sizes, how many glossary terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
+It records what memoQ asked for and what was sent – segment sizes, how many terms matched, how many remembered segments were used, and any errors. It does not contain the text of your translations.
 
 A typical healthy line:
 
@@ -55,4 +59,4 @@ A typical healthy line:
 translate: 199 src chars, 0 tag(s) -> 239 target chars, 0 tag(s) | recall: used 2 of 7 held | terms: 7
 ```
 
-meaning: a 199-character segment; two remembered segments and seven glossary terms sent with it; a 239-character translation returned.
+meaning: a 199-character segment; two remembered segments and seven terms sent with it; a 239-character translation returned.

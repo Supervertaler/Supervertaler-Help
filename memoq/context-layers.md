@@ -18,7 +18,7 @@ This page is the single place that lists every layer. Supervertaler for Trados h
 | 3 | Segments you have confirmed | your own confirmed rows | one setting, once |
 | 4 | The closest translation memory match | your TMs, routed by you | one setting, once |
 | 5 | Whether the row was rejected | memoQ | no |
-| 6 | Glossary terms and forbidden terms | your glossary | a glossary |
+| 6 | Termbase terms and forbidden terms | your termbases | a termbase ticked AI |
 | 7 | SuperMemory memory banks | what you have recorded about the client | a bank per client |
 | 8 | List numbering | the original Word file | the live document link |
 | 9 | Figure descriptions | the images in your documents | two clicks in FigureLens |
@@ -56,13 +56,13 @@ Two things to know about its shape. It is **one** match per segment – memoQ fo
 
 memoQ tells the plugin each row's translation state. When you have rejected a previous translation of a segment, the prompt says so and instructs the model to reconsider the terminology, structure and register rather than paraphrase what you refused. No setting; it simply happens on a row you marked rejected.
 
-### 6. Glossary terms and forbidden terms
+### 6. Termbase terms and forbidden terms
 
 Terms matched in the segment, with their approved renderings, and any terms marked forbidden. Forbidden terms are enforced rather than merely displayed.
 
-Worth being precise about the source, because the setting's wording is optimistic: these come from **Supervertaler's own glossary** – the tab-separated file the [terminology plugin](/memoq/terminology/) reads – not from memoQ's term bases. memoQ passes termbase hits to an MT plugin only through the rich lookup channel it reserves for its own engine, so a third-party plugin never receives them. Your memoQ term bases still work normally in the grid; they just do not reach the model. [Export glossary](/memoq/prompt-editor/#export-glossary-the-prompts-terms-as-the-project-glossary) is the bridge: it turns a drafted prompt's locked terms into a glossary Supervertaler does read.
+Worth being precise about the source, because the setting's wording is optimistic: these come from **Supervertaler's own termbases** – those ticked AI for the project in the [Termbases window](/memoq/terminology/#the-termbases-window) – not from memoQ's term bases. memoQ passes term base hits to an MT plugin only through the rich lookup channel it reserves for its own engine, so a third-party plugin never receives them (memoQ has said a new endpoint will change that around the start of 2027). Your memoQ term bases still work normally in the grid; they just do not reach the model. [Termbase from this prompt's terms](/memoq/prompt-editor/#termbase-from-this-prompts-terms) is the bridge: it turns a drafted prompt's locked terms into the project termbase.
 
-While an AutoPrompt-drafted prompt is selected, its own locked-terms table is the authority and the glossary's preferred renderings are held back – forbidden terms always travel.
+While an AutoPrompt-drafted prompt is selected, its own locked-terms table is the authority and the termbases' preferred renderings are held back – forbidden terms always travel.
 
 **Toggle:** Translation settings → *Send memoQ's termbase hits and forbidden terms to the model*.
 
@@ -70,7 +70,7 @@ While an AutoPrompt-drafted prompt is selected, its own locked-terms table is th
 
 A bank of Markdown articles – `brief.md`, `terminology.md`, `style.md`, and any others you add – goes out with every request, up to about 32,000 tokens, and to AutoPrompt up to 40,000.
 
-Where a glossary gives the model flat pairs of terms, a memory bank gives it the **reasoning**: the decisions, the caveats, the client-specific overrides. The `_shared` bank travels alongside as house defaults.
+Where a termbase gives the model flat pairs of terms, a memory bank gives it the **reasoning**: the decisions, the caveats, the client-specific overrides. The `_shared` bank travels alongside as house defaults.
 
 Banks are remembered per memoQ project, and a project you have never chosen one for uses none rather than inheriting the last – a bank carries one client's terminology, and the wrong one is worse than none. See [Memory banks](/memoq/mcp-server/#memory-banks).
 
@@ -114,7 +114,7 @@ None of these can be unlocked by a setting on your side. They are consequences o
 
 The default composition – everything above except the ones that need a click – is a strong baseline and the one to start from.
 
-More context is not automatically better. The context window is finite, and a mature memory bank plus a rich glossary can push a prompt into the tens of thousands of tokens. The cost is smaller than it looks, because the stable half of every request is identical from batch to batch and is cached: on one 370-segment run, caching turned roughly $10 into roughly $4. But token count is not the only cost – three overlapping sources describing the same term can contradict each other, and the model then has to reconcile them on the fly.
+More context is not automatically better. The context window is finite, and a mature memory bank plus a large termbase ticked AI can push a prompt into the tens of thousands of tokens. The cost is smaller than it looks, because the stable half of every request is identical from batch to batch and is cached: on one 370-segment run, caching turned roughly $10 into roughly $4. But token count is not the only cost – three overlapping sources describing the same term can contradict each other, and the model then has to reconcile them on the fly.
 
 The layers that describe the **document** rather than the **client** – 5, 8 and 9 – are cheap, never contradict each other, and there is no case yet found where switching one off improved a translation.
 
@@ -128,6 +128,6 @@ AutoPrompt's **Preview context…** button shows exactly what would be sent befo
 
 - [Prompt library and editor](/memoq/prompt-editor/) – AutoPrompt, FigureLens, list numbering, the settings
 - [Self-learning](/memoq/self-learning/) – how confirmed segments are captured and fed back
-- [Terminology](/memoq/terminology/) – the glossary the model reads
+- [Terminology](/memoq/terminology/) – the termbases the model reads
 - [MCP server and the live document link](/memoq/mcp-server/) – memory banks, and the channel layers 8 to 10 depend on
 - [Context layers in Supervertaler for Trados](/trados/context-layers/) – the same idea, a different host

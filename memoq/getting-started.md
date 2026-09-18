@@ -46,5 +46,5 @@ The effect is most visible on a document with recurring phrasing: settle a term 
 
 ### Next
 
-- [Terminology](/memoq/terminology/) – add a glossary, including forbidden terms
+- [Terminology](/memoq/terminology/) – termbases, including forbidden terms
 - [Self-learning translation](/memoq/self-learning/) – what is remembered, and for how long
