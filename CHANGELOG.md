@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 The documentation at [docs.supervertaler.com](https://docs.supervertaler.com).
 Cloudflare Pages builds on every push to `main`, so there are no releases and no
@@ -7,6 +7,10 @@ version numbers – the headings are dates.
 This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
+
+## 2026-09-19
+
+- **memoQ: adding a term from the grid is a keyboard shortcut now.** Alt+Up, twice – once on the word, once on its translation – the same key Supervertaler for Trados uses. The Terminology page leads with it: that the order does not matter, what the note by the cursor is for, that a half-finished pair is forgotten after two minutes, where the off switch is, and that the shortcut is live only while memoQ is in front, so Alt+Up still opens the parent folder in Explorer. The right-click route through Translation results is kept as the other way in, with the reason it is not the first one offered.
 
 ## 2026-09-18
 

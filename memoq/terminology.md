@@ -1,4 +1,4 @@
----
+﻿---
 title: "Terminology"
 ---
 
@@ -72,14 +72,17 @@ That is all: a terminology plugin applies to every project, and does not appear 
 
 ### Adding a term without leaving the grid
 
-memoQ's **Add Term** button on the ribbon works with memoQ's own term bases only – a terminology plugin is not among the choices it offers. The door memoQ does open for a plugin is in the Translation results pane:
+Select a word, press **Alt+Up**, select its translation, press **Alt+Up** again. A small dialog opens with both halves filled in, a Forbidden tick and a note, naming the project termbase it is going into. Press **Add**, and the term is in the grid and the pane within a few seconds – and in Supervertaler for Trados and Workbench at once.
 
-1. Select the source word in the source cell and its translation in the target cell.
-2. In **Translation results**, right-click any Supervertaler hit and choose **Add Selection As Alternative**.
+It is the same key Supervertaler for Trados uses for the same thing, and it does not mind which order you work in: a word selected in the target cell is recognised as the translation, so you may catch the English first and the Dutch after. After the first press a small note by the cursor shows what was caught and asks for the other half; it takes the focus from nothing, so you can carry on selecting. A second press on the same side replaces that half rather than pairing a word with itself.
 
-A small Supervertaler dialog opens with both selections filled in, a Forbidden tick and a note, and names the project termbase it is going into. Press **Add**, and the term is in the grid and the pane within a few seconds – and in Supervertaler for Trados and Workbench at once. If the project termbase runs the other way round from your project, the pair is turned to fit it. The hit you right-clicked is only the way in: the pair that is added is what you selected, whatever the hit was.
+The shortcut is live only while memoQ is the window in front. Everywhere else – Explorer, where Alt+Up is the parent folder – it is the key it has always been. Switch it off in the [prompt editor](/memoq/prompt-editor/) under **Settings → Alt+Up adds a term in memoQ**, which takes effect at once; the same tick is in memoQ’s own Supervertaler settings dialog.
 
-Nothing is ticked Project? The dialog says so and where to fix it, rather than guessing at a background termbase.
+If the pair is left half-finished it is forgotten after two minutes, and changing project drops it too, so a word caught in one job can never be written to another job's termbase.
+
+**The other way in.** memoQ's own **Add Term** button on the ribbon, and its Ctrl+E shortcut, work with memoQ's term bases only – a terminology plugin is not among the choices they offer. The one door memoQ opens for a plugin is in the Translation results pane: select both words, right-click any Supervertaler hit, and choose **Add Selection As Alternative**. It ends in the same dialog and the same termbase. The hit you right-click is only the way in; what is added is what you selected.
+
+If the project termbase runs the other way round from your project, the pair is turned to fit it. Nothing ticked Project? The dialog says so and where to fix it, rather than guessing at a background termbase.
 
 ### Preferred, not mandatory
 
