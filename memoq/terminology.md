@@ -72,7 +72,7 @@ That is all: a terminology plugin applies to every project, and does not appear 
 
 ### Adding a term without leaving the grid
 
-Select a word, press **Alt+Up**, select its translation, press **Alt+Up** again. A small dialog opens with both halves filled in, a Forbidden tick and a note, naming the project termbase it is going into. Press **Add**, and the term is in the grid and the pane within a few seconds – and in Supervertaler for Trados and Workbench at once.
+Select a word, press **Alt+Up**, select its translation, press **Alt+Up** again. A small dialog opens with both halves filled in, a Forbidden tick and a note, naming the project termbase it is going into. Press **Add**, and the term is in the termbase at once – and in Supervertaler for Trados and Workbench with it. It shows in the grid and the pane the next time you move onto the segment: memoQ asks a terminology plugin about a segment once and keeps the answer, and gives a plugin no way to say the answer has changed. The dialog is your confirmation that it went in.
 
 It is the same key Supervertaler for Trados uses for the same thing, and it does not mind which order you work in: a word selected in the target cell is recognised as the translation, so you may catch the English first and the Dutch after. After the first press a small note by the cursor shows what was caught and asks for the other half; it takes the focus from nothing, so you can carry on selecting. A second press on the same side replaces that half rather than pairing a word with itself.
 
