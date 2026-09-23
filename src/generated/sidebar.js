@@ -337,6 +337,10 @@ const sidebar = [
           {
             "label": "Getting Started",
             "link": "/memoq/getting-started/"
+          },
+          {
+            "label": "Licensing",
+            "link": "/memoq/licensing/"
           }
         ]
       },
@@ -351,6 +355,14 @@ const sidebar = [
           {
             "label": "Self-learning Translation",
             "link": "/memoq/self-learning/"
+          },
+          {
+            "label": "The Supervertaler Editor",
+            "link": "/memoq/prompt-editor/"
+          },
+          {
+            "label": "AI Assistants (Claude Desktop, ChatGPT)",
+            "link": "/memoq/mcp-server/"
           },
           {
             "label": "Terminology",

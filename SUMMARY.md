@@ -88,11 +88,14 @@
 * [Supervertaler for memoQ](memoq/README.md)
 * [Installation (memoQ)](memoq/installation.md)
 * [Getting Started (memoQ)](memoq/getting-started.md)
+* [Licensing (memoQ)](memoq/licensing.md)
 
 ## 🟠 Features (memoQ)
 
 * [Context Layers](memoq/context-layers.md)
 * [Self-learning Translation](memoq/self-learning.md)
+* [The Supervertaler Editor](memoq/prompt-editor.md)
+* [AI Assistants (Claude Desktop, ChatGPT)](memoq/mcp-server.md)
 * [Terminology](memoq/terminology.md)
   * [Glossary Format](memoq/glossary-format.md)
 

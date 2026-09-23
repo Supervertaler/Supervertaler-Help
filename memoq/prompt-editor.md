@@ -1,10 +1,12 @@
 ---
-title: "Prompt Library & Editor"
+title: "The Supervertaler Editor"
 ---
 
-Supervertaler for memoQ translates with the instructions you give it. Those instructions can be typed straight into the settings dialog, or chosen from the **shared Supervertaler prompt library** – the same folder of prompts the Trados plugin uses, so a prompt tuned in one tool is available in the other.
+memoQ gives an add-in no window of its own, so everything Supervertaler needs a window for lives in one that runs alongside memoQ: the **Supervertaler editor**. Open it from the Start menu – it is called **Supervertaler for memoQ** there – or with **Edit…** in memoQ's own Supervertaler options dialog.
 
-memoQ gives an add-in no window of its own, so the library cannot be a panel inside memoQ. Instead there is a small **Prompt Library editor**, opened from the settings dialog, that runs alongside memoQ.
+It is where you choose what memoQ uses for each job (model, prompt, memory bank, termbases), edit the **shared Supervertaler prompt library** – the same folder of prompts the Trados plugin uses, so a prompt tuned in one tool is available in the other – draft prompts with [AutoPrompt](#autoprompt-drafting-a-prompt-for-the-open-project), describe a document's figures with [FigureLens](#figurelens), watch what the plugin is doing in the [Activity window](#the-activity-window), connect [AI assistants](/memoq/mcp-server/#setting-it-up) and manage your [licence](/memoq/licensing/).
+
+Instructions can also be typed straight into memoQ's settings dialog instead of coming from the library.
 
 ## Choosing a prompt
 
@@ -18,14 +20,14 @@ Only prompts in the library's **Translate** folder are offered. Proofreading and
 
 ## The editor
 
-Press **Edit…** beside the Prompt dropdown.
+Open **Supervertaler for memoQ** from the Start menu, or press **Edit…** beside the Prompt dropdown in memoQ's options dialog.
 
 <!-- screenshot: the editor with the tree on the left, a prompt open on the right -->
 
 - **Left:** the library as a tree, folders and prompts. Select one to open it.
 - **Right:** name, description, which product it is for, sort order, and the prompt text with Markdown headings and `{{PLACEHOLDERS}}` highlighted.
 - **Toolbar, left:** New, Save, Placeholder, AutoPrompt.
-- **Toolbar, right:** whether Pre-translate goes to Claude Desktop, the [Activity window](#the-activity-window), and Translation settings. Everything else is on the **File**, **memoQ**, **Settings** and **Help** menus.
+- **Toolbar, right:** whether Pre-translate goes to Claude Desktop, and the [Activity window](#the-activity-window). Everything else is on the menus: **File** for the library, **memoQ** for the open job, **Settings** for [Translation settings](#settings) and [Connect AI assistant](/memoq/mcp-server/#setting-it-up), and **Help** for this documentation and your [licence](/memoq/licensing/).
 
 The **Claude Desktop** button on the right is a switch, not a command, and its caption says which mode is *on* rather than what pressing it would do. It decides whether Pre-translate spends your API key or hands the segments to the chat, so it is worth a glance before a long run. It is the same setting as **Settings → Pre-translate via Claude Desktop**, and as the checkbox in memoQ’s own dialog – change it anywhere and all three follow.
 
@@ -113,7 +115,7 @@ Where a note is genuinely necessary – an ambiguity in the source, a term that 
 
 Nothing extracts these for you, and that is deliberate. You read them in the grid as you review, decide which are worth keeping, turn those into real memoQ comments on the segment, and delete the marker from the text. Search for `[[TC:` to find them all.
 
-## FigureLens: what the figures show
+## FigureLens
 
 The model sees a document's text and not its pictures. A claim that names *part 12* is translated by a model that has never seen part 12, and a figure's caption is often the only description of it anywhere in the text. **FigureLens…** on the toolbar (also **memoQ → FigureLens…**) is the panel that closes that gap, in two steps. It is named for what it does beside [TermLens](/memoq/terminology/): that one shows the model the terms in a segment, this one shows it the pictures.
 

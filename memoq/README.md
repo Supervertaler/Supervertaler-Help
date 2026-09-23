@@ -14,20 +14,23 @@ Unlike the Trados plugin, which docks its own panels into the editor, memoQ give
 
 **Your terminology, twice over.** Your Supervertaler termbases – shared with Supervertaler for Trados, or made in memoQ from scratch – appear as a memoQ terminology provider, matched terms highlighted in the source and entries listed in Translation results, *and* the ones you tick for it are sent to the model as required or forbidden terminology. Forbidden terms are enforced, not merely displayed. See [Terminology](/memoq/terminology/).
 
-**Translate with Claude Desktop.** Through the [Supervertaler MCP Server](/memoq/mcp-server/), Claude reads the document you are translating, your confirmed segments and your termbases, and stages translations that flow into the grid when you press Pre-translate. Tokens are billed to your Claude subscription rather than an API key, and every write into your document goes through your own hands. See [MCP Server](/memoq/mcp-server/).
+**Translate with Claude Desktop or ChatGPT.** Connect an [AI assistant](/memoq/mcp-server/) with one button in the editor, and it reads the document you are translating, your confirmed segments and your termbases, and stages translations that flow into the grid when you press Pre-translate. Tokens are billed to your Claude or ChatGPT subscription rather than an API key, and every write into your document goes through your own hands.
 
-**A prompt library, shared with Trados.** Translation instructions come from the same library the Trados plugin uses, chosen from a dropdown and edited in a small companion [editor](/memoq/prompt-editor/). Claude can draft prompts into it too.
+**A companion editor.** Translation instructions come from the same prompt library the Trados plugin uses, chosen and edited in the [Supervertaler editor](/memoq/prompt-editor/) – which is also where you pick the memory bank and termbases for a job, draft a prompt with AutoPrompt and watch what the plugin is doing.
+
+**One licence for both products.** The Supervertaler licence covers Supervertaler for Trados and Supervertaler for memoQ, with a 14-day free trial. See [Licensing](/memoq/licensing/).
 
 ### What it does not do
 
 memoQ does not let a plugin read its own term bases or translation memories, so terms defined in a memoQ term base are not visible to the AI. Supervertaler reads its own termbases instead, which it also displays alongside memoQ's own term base hits.
 
-There is no chat panel, no document-wide search and no cursor control inside memoQ: a plugin can answer when asked for a translation, and that is all. The chat lives in Claude Desktop; the prompt library lives in its own editor; and Claude's translations reach the grid only when you Pre-translate. [MCP Server → What it can and cannot do](/memoq/mcp-server/#what-it-can-and-cannot-do) has the full comparison with the Trados plugin.
+There is no chat panel and no document-wide search inside memoQ: a plugin can answer when asked for a translation, and that is all. The chat lives in Claude Desktop or ChatGPT; the prompt library lives in its own editor; and an assistant's translations reach the grid only when you Pre-translate. [AI assistants → What it can and cannot do](/memoq/mcp-server/#what-it-can-and-cannot-do) has the full comparison with the Trados plugin.
 
 ### Where to start
 
-- [Installation](/memoq/installation/) – putting the add-ins in place
+- [Installation](/memoq/installation/) – the installer, and switching it on in memoQ
 - [Getting started](/memoq/getting-started/) – a first translation
+- [Licensing](/memoq/licensing/) – the trial, and one licence for both products
 - [Terminology](/memoq/terminology/) – termbases, shared with Supervertaler for Trados
-- [MCP Server](/memoq/mcp-server/) – translating with Claude Desktop
-- [Prompt Library & Editor](/memoq/prompt-editor/) – choosing and writing instructions
+- [AI assistants](/memoq/mcp-server/) – translating with Claude Desktop or ChatGPT
+- [The Supervertaler editor](/memoq/prompt-editor/) – prompts, memory banks, AutoPrompt and FigureLens

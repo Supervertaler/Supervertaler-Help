@@ -2,29 +2,29 @@
 title: "Getting Started"
 ---
 
-This walks through a first translation, assuming the add-ins are [installed](/memoq/installation/).
+This walks through a first translation, assuming Supervertaler is [installed and switched on in memoQ](/memoq/installation/#switching-it-on-in-memoq).
 
-### 1. Set up the translation engine
+### 1. Choose a provider and model
 
-Open the **Resource console** → **MT settings**. Create or edit an MT settings resource, and on the **Services** tab tick **Supervertaler**.
+Open **Supervertaler for memoQ** from the Start menu and choose **Settings → Translation settings…**. memoQ's own dialog holds the same settings – **Configure plugin** on Supervertaler in an MT settings resource – and either place can change them; both read and write the same file.
 
-Click **Configure plugin** and fill in:
+Fill in:
 
 | | |
 |---|---|
 | **Provider** | Anthropic, OpenAI or Google |
 | **Model** | a short list of the models worth recommending for that provider, with a line on each saying what it is for. **Fetch list** asks the provider for its full catalogue and **Show all models** adds it underneath – that is where to look for a model released after your copy of Supervertaler was built. The box also takes anything typed, for a gateway or a local model |
-| **API key** | your own key for that provider. All Supervertaler products share one key file at `C:\Users\<you>\Supervertaler\settings\api-keys.json`, so a key you have already set in Supervertaler for Trados or Sidekick is picked up here and you can leave this empty – see [Prompt Library & Editor](/memoq/prompt-editor/#api-keys-live-in-one-file) |
+| **API key** | your own key for that provider. All Supervertaler products share one key file at `C:\Users\<you>\Supervertaler\settings\api-keys.json`, so a key you have already set in Supervertaler for Trados or Sidekick is picked up here and you can leave this empty – see [The Supervertaler editor](/memoq/prompt-editor/#api-keys-live-in-one-file) |
 | **Endpoint** | leave blank unless you are using a local model or a gateway |
 | **Segments per request** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference) |
-| **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [Prompt Library & Editor](/memoq/prompt-editor/) |
-| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop – see [MCP Server](/memoq/mcp-server/). Also in the prompt editor under Settings |
+| **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [The Supervertaler editor](/memoq/prompt-editor/). The editor chooses it from the panel at the top left |
+| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop or ChatGPT – see [AI assistants](/memoq/mcp-server/). Also the switch at the top right of the editor |
 
-Press **Test connection**. It translates a short sentence for real, so it exercises the key, the model name and the endpoint together – a green result means everything works.
+In memoQ's dialog, **Test connection** translates a short sentence for real, so it exercises the key, the model name and the endpoint together – a green result means everything works.
 
 ### 2. Turn on learning
 
-Still in the MT settings resource, go to the **Settings** tab and set **Self-learning MT** to **Supervertaler**.
+In memoQ, open the MT settings resource Supervertaler is ticked in – **Options → Default resources → MT settings**, or **Project home → Settings → MT settings** for a project you already have – and on its **Settings** tab set **Self-learning MT** to **Supervertaler**.
 
 This is what makes memoQ hand Supervertaler each segment as you confirm it. Without it the engine still translates, but it will not learn from your work. See [Self-learning translation](/memoq/self-learning/).
 

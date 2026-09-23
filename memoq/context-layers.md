@@ -84,7 +84,7 @@ On by default, with no switch – but it needs the [live document link](/memoq/m
 
 ### 9. Figure descriptions
 
-The AI reads your text and cannot see your pictures. [**FigureLens**](/memoq/prompt-editor/#figurelens-what-the-figures-show) closes that gap: it takes the images out of your documents into the memory bank's `figures\` folder, shows each one to the AI together with what the document says about it, and saves a description – what it shows, which figure it is, which reference signs appear on it – as `figures.md` in the bank.
+The AI reads your text and cannot see your pictures. [**FigureLens**](/memoq/prompt-editor/#figurelens) closes that gap: it takes the images out of your documents into the memory bank's `figures\` folder, shows each one to the AI together with what the document says about it, and saves a description – what it shows, which figure it is, which reference signs appear on it – as `figures.md` in the bank.
 
 From then on it rides along with layer 7 and is read with every request, so the model knows that the *valve (12)* in the sentence is the thing at the top right of Figure 3. Vector drawings – EMF and WMF, which is what a drawing placed from CAD usually is – are rendered to PNG on the way out, because no AI can read a metafile.
 

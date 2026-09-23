@@ -1,8 +1,10 @@
 ---
-title: "MCP Server (Claude Desktop)"
+title: "AI Assistants (Claude Desktop, ChatGPT)"
 ---
 
-Supervertaler for memoQ can connect **Claude Desktop** – or any AI app that runs a local MCP server – to your live memoQ project. You chat in Claude's window; Claude reads the document you are translating, your confirmed segments and your glossary, and translates for you. The tokens are billed to your Claude subscription, not to an API key.
+Supervertaler for memoQ can connect **Claude Desktop** or **ChatGPT desktop** – or any AI app that runs a local MCP server – to your live memoQ project. You chat in the assistant's window; it reads the document you are translating, your confirmed segments and your termbases, and translates for you. The tokens are billed to your Claude or ChatGPT subscription, not to an API key.
+
+Setting either one up is a button in the editor: see [Setting it up](#setting-it-up).
 
 It is the same [Supervertaler MCP Server](/trados/mcp-server/) the Trados plugin uses. What differs is what memoQ lets a plugin do – which is a good deal less than Trados – so read [What it can and cannot do](#what-it-can-and-cannot-do) before you expect Trados behaviour.
 
@@ -22,7 +24,7 @@ With everything set up (below), a chat-driven job looks like this:
 
 1. **Open the project** in memoQ and tick **Pre-translate via Claude Desktop (MCP)** in Supervertaler's settings (see [The checkbox](#the-checkbox)).
 2. **Pre-translate** with Supervertaler as the MT engine. It is instant and free: the grid stays empty, but Supervertaler now holds every source segment.
-3. **In Claude Desktop:** *"Read my memoQ project and translate it into Dutch."* Claude reads the segments, checks your termbases, and stages translations. Nothing has changed in memoQ yet.
+3. **In Claude Desktop or ChatGPT:** *"Read my memoQ project and translate it into Dutch."* The assistant reads the segments, checks your termbases, and stages translations. Nothing has changed in memoQ yet.
 4. **Pre-translate again.** The grid fills. Each row is marked `Claude (staged via Supervertaler MCP)` in Translation results.
 5. **Confirm as you go.** If [Self-learning](/memoq/self-learning/) is on, each confirmation is visible to Claude too – *"what have I confirmed so far?"* – so a mid-job conversation about terminology is grounded in your actual choices.
 
@@ -52,36 +54,54 @@ Leave it unticked if you use Supervertaler as an ordinary MT engine with no chat
 
 ## Setting it up
 
-**Claude Desktop:** install the extension.
+Open **Supervertaler for memoQ** from the Start menu and choose **Settings → Connect AI assistant…**. Set up either assistant, or both.
 
-1. Download `Supervertaler-for-memoQ-MCP-Server.mcpb` (it ships with the plugin).
-2. In Claude Desktop, open **Settings → Extensions → Advanced settings** and click **Install extension…** (double-clicking the file also works if `.mcpb` is associated with Claude; drag-and-drop does not).
-3. In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine. That creates the engine, which starts the bridge.
-4. In Claude: *"What's in my memoQ project?"* If it answers with your language pair and segment count, you are connected.
+### ChatGPT desktop
 
-If you also use the Trados plugin, both extensions coexist – Claude shows them as two servers – and they are in fact the same server exe: the memoQ one carries a single setting, `SUPERVERTALER_HOST=memoq`, which tells it to look for memoQ's connection instead of Trados's.
+Press **Set up ChatGPT desktop**. Supervertaler fetches the server ChatGPT needs, keeps it in your Supervertaler folder, and adds one entry to ChatGPT's own settings file – leaving everything else in that file alone, and keeping a dated copy of it first. Restart ChatGPT desktop afterwards.
 
-**Other MCP clients** (ChatGPT desktop, Claude Code, anything that runs a local STDIO server): unzip the server exe somewhere permanent and register it with that one environment variable set:
+The same entry is read by Codex CLI and the Codex extension for VS Code, since they share ChatGPT's settings file. If you also use Supervertaler for Trados, the two register side by side and each reaches its own CAT tool.
+
+### Claude Desktop
+
+Claude Desktop installs extensions from inside its own settings, so this is two steps rather than one:
+
+1. Press **Show me the extension**. It opens the folder with `Supervertaler-for-memoQ-MCP-Server.mcpb` selected and puts the file's location on the clipboard. Nothing is downloaded: the installer put it there.
+2. In Claude Desktop, open **Settings → Extensions → Advanced settings → Install extension…** and paste the location when it asks for a file.
+
+Double-clicking the `.mcpb` file works on some computers and not on others, for reasons inside Windows rather than Supervertaler; the route above works everywhere. Dragging the file onto Claude does not work.
+
+If you also use the Trados plugin, both extensions coexist – Claude shows them as two servers – and they are in fact the same server: the memoQ one carries a single setting, `SUPERVERTALER_HOST=memoq`, which tells it to look for memoQ's connection instead of Trados's.
+
+### Checking it works
+
+In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine – that is what starts the plugin's side of the connection. Then ask the assistant: *"What's in my memoQ project?"* If it answers with your language pair and segment count, you are connected.
+
+### Other MCP clients
+
+Claude Code, or anything else that runs a local STDIO server: set up ChatGPT desktop once as above, which puts the server at `C:\Users\<you>\Supervertaler\memoq\mcp\SupervertalerMcpServer.exe`, and register that with the one environment variable set:
 
 ```json
 "supervertaler-memoq": {
-  "command": "C:\\path\\to\\SupervertalerMcpServer.exe",
+  "command": "C:\\Users\\<you>\\Supervertaler\\memoq\\mcp\\SupervertalerMcpServer.exe",
   "args": [],
   "env": { "SUPERVERTALER_HOST": "memoq" }
 }
 ```
 
-The exe finds memoQ's connection file in your Supervertaler data folder (`C:\Users\<you>\Supervertaler\memoq\runtime\bridge.json`, or wherever you moved that folder). If you ever need to point it somewhere else, `SUPERVERTALER_BRIDGE_FILE` with a full path overrides it.
+The server finds memoQ's connection file in your Supervertaler data folder (`C:\Users\<you>\Supervertaler\memoq\runtime\bridge.json`, or wherever you moved that folder). If you ever need to point it somewhere else, `SUPERVERTALER_BRIDGE_FILE` with a full path overrides it.
 
 ## The live document link
 
 memoQ's MT plugin interface never shows a plugin the target text, the row you are on, or even the document's name. memoQ's **Preview SDK** – the interface its own PDF and video preview tools use – shows all three, live. So Supervertaler ships a small preview tool, `Supervertaler.MemoQ.Preview.exe`, which registers with memoQ exactly as the PDF preview does and forwards what memoQ sends it to the plugin.
 
+It needs memoQ's own **PDF Preview tool** installed – a free download from memoQ – because that is where the interface it talks to lives, and Supervertaler ships none of memoQ's code. The installer tells you at the end if it is missing. Nothing else in Supervertaler needs it.
+
 With it running, Claude sees your document as it actually is: every row's current target, memoQ's own row order, the document's real name, and the row your cursor is on – and it can ask memoQ to **jump to a segment**.
 
 **Setting it up (once):**
 
-1. Run `C:\Users\<you>\Supervertaler\memoq\preview\Supervertaler.MemoQ.Preview.exe` – inside your Supervertaler data folder, where the plugin's deploy puts it. A tray icon appears.
+1. With memoQ running, start `C:\Program Files\Supervertaler for memoQ\Supervertaler.MemoQ.Preview.exe`, where the installer put it. A tray icon appears.
 2. In memoQ, accept the **Preview tool connection request** for *Supervertaler*, leaving *Auto-start with memoQ* ticked. From then on memoQ starts the tool itself.
 3. The tray icon reads *memoQ: connected · plugin: connected* once you click into a segment (that is what starts the plugin's bridge).
 

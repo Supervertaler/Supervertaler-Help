@@ -8,6 +8,15 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-23
+
+- **memoQ: ready for the installer.** *Installation* is rewritten around it: what it puts where, the two settings that switch Supervertaler on inside memoQ, updating, reinstalling after a memoQ upgrade, installing by hand from the zip, and uninstalling from Windows Settings. It used to describe copying two DLLs into Program Files.
+- **memoQ: a Licensing page.** The 14-day trial, one licence for Trados and memoQ, where the key goes, two computers with both plugins counting once, what pauses when a licence lapses (only AI translation) and the two different fixes for the two ways it lapses.
+- **memoQ: the AI assistants page covers ChatGPT desktop**, and is renamed *AI Assistants (Claude Desktop, ChatGPT)*. Setting up is now the editor's **Connect AI assistant** window – a button for ChatGPT, and for Claude Desktop a button that shows the extension the installer put in place. The live document link names memoQ's PDF Preview tool as its prerequisite and the folder the installer uses.
+- **memoQ: the editor page is *The Supervertaler Editor*.** It opened with "Prompt Library & Editor", which confused anyone who arrived from the editor's own Help menu, since the window does a good deal more than prompts. It now says how to open it from the Start menu and what it is for. The FigureLens section's address is `#figurelens`, which the editor's FigureLens help link has always pointed at.
+- **memoQ: the sidebar lists the editor, the AI assistants and Licensing.** The first two pages existed but were reachable only through links.
+- Getting started, the memoQ overview and Troubleshooting follow the above, including an entry for "AI translation is paused".
+
 ## 2026-09-19
 
 - **memoQ: adding a term from the grid is a keyboard shortcut now.** Alt+Up, twice – once on the word, once on its translation – the same key Supervertaler for Trados uses. The Terminology page leads with it: that the order does not matter, what the note by the cursor is for, that a half-finished pair is forgotten after two minutes, where the off switch is, and that the shortcut is live only while memoQ is in front, so Alt+Up still opens the parent folder in Explorer. The right-click route through Translation results is kept as the other way in, with the reason it is not the first one offered.
