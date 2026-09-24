@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-09-24
 
+- **memoQ: a large memory bank sends only what the job needs.** The editor page explains the selection, what always goes, and where the file listing each job's selection is.
 - **memoQ: the memory bank can be switched off**, under Translation settings, and single rows are cached like Pre-translate. The editor page says both, and what *not sent* on the Bank row means.
 - **memoQ: what the model may send back.** The editor page describes the built-in output contract – translation only, and anything worth flagging in one `[[TC: …]]` marker at the end, written to the client – the check every reply now passes before it reaches the grid, what happens to a reply that fails it twice, and that rows with nothing to translate are copied rather than sent. The Activity window's new Rows and Reply lines are explained, and Troubleshooting has an entry for a row left empty with "Supervertaler left this segment for you".
 
