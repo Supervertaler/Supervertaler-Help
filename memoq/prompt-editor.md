@@ -55,6 +55,16 @@ A bank is sent whole with **every** translation request, up to about 32,000 toke
 
 **A large bank sends only what the job needs.** Once your banks together pass about 8,000 tokens, each job gets a selection instead of everything: only the terminology rows whose term occurs in the document (in either column, whichever way the table was written), and – if it is still too big – the notes the model judges relevant after reading the start of the document, asked once per job. The brief and the style rules always go. It happens by itself; there is nothing to set. The **Bank** row's tooltip says when it is happening and names a file under `D:\Supervertaler\memoq\bank-extracts\` listing what was sent and what was left out, which is the place to look if a translation seems to have missed something you wrote down.
 
+**Notes for the assistants only.** Some notes are about how to work a job – what to check before delivery, how to verify a termbase – and help an AI assistant rather than a sentence being translated. Put this at the very top of such a note:
+
+```
+---
+audience: assistant
+---
+```
+
+It is then left out of every translation request (the translation engine and AutoPrompt), while Claude Desktop and ChatGPT still read it through the Supervertaler tools. A note without it is sent as always, and the job's selection file lists anything left out this way.
+
 You can switch the bank off altogether: **Settings → Translation settings → Send the memory bank to the model**. Off, nothing from any bank – the client's or `_shared` – goes to the model, for translation or AutoPrompt, and the **Bank** row reads *not sent*. The bank chosen for each project is kept for when you switch it back on.
 
 ### Placeholders

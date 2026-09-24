@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-09-24
 
+- **memoQ: notes for the assistants only.** The editor page explains `audience: assistant`, which keeps a memory bank note out of translation while the AI assistants still read it.
 - **memoQ: the live document link starts by itself** the first time memoQ loads Supervertaler; the AI assistants page no longer tells you to run it from Program Files.
 - **memoQ: a large memory bank sends only what the job needs.** The editor page explains the selection, what always goes, and where the file listing each job's selection is.
 - **memoQ: the memory bank can be switched off**, under Translation settings, and single rows are cached like Pre-translate. The editor page says both, and what *not sent* on the Bank row means.
