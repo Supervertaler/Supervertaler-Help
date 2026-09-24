@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-24
+
+- **memoQ: what the model may send back.** The editor page describes the built-in output contract – translation only, and anything worth flagging in one `[[TC: …]]` marker at the end, written to the client – the check every reply now passes before it reaches the grid, what happens to a reply that fails it twice, and that rows with nothing to translate are copied rather than sent. The Activity window's new Rows and Reply lines are explained, and Troubleshooting has an entry for a row left empty with "Supervertaler left this segment for you".
+
 ## 2026-09-23
 
 - **memoQ: ready for the installer.** *Installation* is rewritten around it: what it puts where, the two settings that switch Supervertaler on inside memoQ, updating, reinstalling after a memoQ upgrade, installing by hand from the zip, and uninstalling from Windows Settings. It used to describe copying two DLLs into Program Files.

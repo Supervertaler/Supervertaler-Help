@@ -111,7 +111,15 @@ There is no switch for it. Without the live link, or for a document with no list
 
 ### Translator comments
 
-Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original – a drafted prompt has the AI put it inline at the end of the target as a `[[TC: …]]` marker. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
+Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original, a deliberate departure from a translation memory match – the AI puts it inline at the end of the target as a `[[TC: …]]` marker: one per segment at most, short, and written as your comment to the client. This is built in, not something a prompt has to ask for: every request ends with a fixed **output contract** that says so, whichever prompt is selected. A prompt can add to it – its own examples of good comments, a language other than English for them – but cannot switch it off by accident. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
+
+### What the model may send back
+
+The same contract says the reply is the translation and nothing else, and every reply is checked before it reaches the grid. One that carries commentary anywhere but a single trailing `[[TC: …]]` – a note after the translation, the model explaining its own choices, markdown or a line break the source does not have, a second marker – is asked for once more with the contract restated. If the second reply does the same, **nothing is written**: the row is left for you, and memoQ shows under it why, together with what the model sent, so you can still use the translation part if it was sound. Each retry and refusal appears in the [Activity window](#the-activity-window).
+
+Tags that differ from the source are reported there too, but never refused: a translation that drops a formatting tag is often right, and a row left empty for it would cost more than it saves.
+
+A row whose source has nothing to translate – only a placeholder tag, spaces or punctuation – is not sent to the model at all. Its source is copied into the target, tags intact.
 
 Nothing extracts these for you, and that is deliberate. You read them in the grid as you review, decide which are worth keeping, turn those into real memoQ comments on the segment, and delete the marker from the text. Search for `[[TC:` to find them all.
 
@@ -191,10 +199,12 @@ It is a window of its own rather than a panel so that it can sit over memoQ whil
 
 What it shows: the engine and model each project starts with, the termbases as they load and how many terms came out of them, a warning when the selected prompt faces the opposite language pair, every batch with the segments sent, the segments returned and the terms matched, AutoPrompt drafts, and anything that failed. A batch that comes back short is called out rather than logged flatly, because that is the failure that quietly shifts every translation after it.
 
-Three lines are worth knowing by sight:
+Five lines are worth knowing by sight:
 
 - **Bank** – which memory bank a project switched to, and once per job how much of it is being sent. If it ends with a file listed as *not sent*, that is the budget trimming by priority, not a fault.
 - **Terminology** – said once when a drafted prompt is holding the termbases' preferred renderings back, so a quiet change to what reaches the model is never silent.
+- **Rows** – after each Pre-translate call, where its rows came from: how many were staged by an assistant, how many the model wrote, how many were copied because there was nothing to translate, and how many were left for you. Staged and model-written rows look the same in the grid; this is where the difference shows, and the totals line adds them up over the run.
+- **Reply** – a reply that broke the [output contract](#what-the-model-may-send-back): asked for again, refused, or served with tags that differ from the source.
 - **The token count on each batch** – `tokens: in 1,041 (cache write 45,870) out 1,233`. The prompt and the bank are identical on every request of a run, so providers cache them: the first batch writes, the rest read at a tenth of the rate. If *cached* never appears across a long run, something is re-sending the block at full price.
 
 **Show everything** un-hides the per-request diagnostics – memoQ’s capability probes, lookup sessions, single-segment translations – which are what you want when something is wrong and noise the rest of the time.

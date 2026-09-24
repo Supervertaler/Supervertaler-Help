@@ -8,6 +8,12 @@ Installing is not enough on its own: memoQ uses a new add-in only once it is swi
 
 If memoQ was recently upgraded to a new major version, it installed into a new program folder without the add-ins. Run the Supervertaler installer again; it installs into the newest memoQ it finds. See [Installation](/memoq/installation/#after-a-memoq-upgrade).
 
+### A row was left empty with "Supervertaler left this segment for you"
+
+The model's reply for that row contained something other than the translation – a note, an explanation, markdown – and did again when asked a second time, so it was not written into your document. The message under the row quotes what the model sent; if the translation part is sound, copy it in and delete the rest. See [What the model may send back](/memoq/prompt-editor/#what-the-model-may-send-back).
+
+If it happens often with one prompt, the prompt is probably asking for explanations. Look for lines like "add a brief explanation" and replace them with an instruction to use a `[[TC: …]]` marker.
+
 ### "AI translation is paused"
 
 The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
