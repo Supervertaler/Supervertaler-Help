@@ -51,7 +51,9 @@ The memory bank is remembered **per project**. Choose one while working on a job
 
 What such a project gets instead is the row called **(no client bank – shared defaults only)**. Your `_shared` bank still travels: it is where the material that applies to every job regardless of client lives, so it is never switched off by not choosing a client. See [Memory banks](/memoq/mcp-server/#memory-banks) for where they live.
 
-A bank is sent whole with **every** translation request, up to about 32,000 tokens, and to AutoPrompt up to 40,000. Anything that does not fit is dropped by priority and named in the [Activity window](#the-activity-window) rather than lost quietly – if you see a file listed there, that is the budget, not a fault. The cost of carrying it is small because the same text is sent every time and providers cache it: on one 370-segment run the bank and prompt together came to 45,870 tokens, and caching turned roughly $10 into roughly $4.
+A bank is sent whole with **every** translation request, up to about 32,000 tokens, and to AutoPrompt up to 40,000. Anything that does not fit is dropped by priority and named in the [Activity window](#the-activity-window) rather than lost quietly – if you see a file listed there, that is the budget, not a fault. The cost of carrying it is small because the same text is sent every time and providers cache it: on one 370-segment run the bank and prompt together came to 45,870 tokens, and caching turned roughly $10 into roughly $4 – for Pre-translate and, since September 2026, for the single rows memoQ asks about as you move through the grid.
+
+You can switch the bank off altogether: **Settings → Translation settings → Send the memory bank to the model**. Off, nothing from any bank – the client's or `_shared` – goes to the model, for translation or AutoPrompt, and the **Bank** row reads *not sent*. The bank chosen for each project is kept for when you switch it back on.
 
 ### Placeholders
 
@@ -155,7 +157,7 @@ Any prompt with a table laid out the same way works, not only AutoPrompt's. Corr
 
 ### Settings
 
-**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per request, and whether termbase hits and surrounding segments are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
+**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per request, and whether termbase hits, surrounding segments and the memory bank are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
 
 The **Model** list is short on purpose: three to five models per provider, each with a line saying what it is for. A provider’s own catalogue runs to thirty or forty entries – image models, speech models, dated snapshots of the same model – and a list like that is one nobody in a hurry can choose from. A model that has been superseded is removed rather than annotated, so what is left is what is worth using today.
 
