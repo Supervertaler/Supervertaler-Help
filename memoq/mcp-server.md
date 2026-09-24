@@ -99,11 +99,12 @@ It needs memoQ's own **PDF Preview tool** installed – a free download from mem
 
 With it running, Claude sees your document as it actually is: every row's current target, memoQ's own row order, the document's real name, and the row your cursor is on – and it can ask memoQ to **jump to a segment**.
 
-**Setting it up (once):**
+**Setting it up (once):** there is nothing to start by hand. The first time memoQ loads Supervertaler after installing, Supervertaler starts the link itself, as long as memoQ's PDF Preview tool is installed. A tray icon appears, and:
 
-1. With memoQ running, start `C:\Program Files\Supervertaler for memoQ\Supervertaler.MemoQ.Preview.exe`, where the installer put it. A tray icon appears.
-2. In memoQ, accept the **Preview tool connection request** for *Supervertaler*, leaving *Auto-start with memoQ* ticked. From then on memoQ starts the tool itself.
-3. The tray icon reads *memoQ: connected · plugin: connected* once you click into a segment (that is what starts the plugin's bridge).
+1. memoQ asks, once, whether to accept the **Preview tool connection request** for *Supervertaler*. Accept it, leaving *Auto-start with memoQ* ticked. From then on memoQ starts the tool itself.
+2. The tray icon reads *memoQ: connected · plugin: connected* once you click into a segment (that is what starts the plugin's bridge).
+
+Supervertaler starts it only that once, so if you decline the request you are not asked again at every start. To set it up later – or if you installed the PDF Preview tool afterwards and the link has not appeared – start `C:\Program Files\Supervertaler for memoQ\Supervertaler.MemoQ.Preview.exe` once yourself with memoQ running.
 
 It appears under **Options → External preview tools** alongside any other preview tools; it can be disabled there like any of them. It draws nothing on screen – it is a link, not a preview.
 
