@@ -31,7 +31,7 @@ Open **Supervertaler for memoQ** from the Start menu, or press **Edit…** besid
 
 The **Claude Desktop** button on the right is a switch, not a command, and its caption says which mode is *on* rather than what pressing it would do. It decides whether Pre-translate spends your API key or hands the segments to the chat, so it is worth a glance before a long run. It is the same setting as **Settings → Pre-translate via Claude Desktop**, and as the checkbox in memoQ’s own dialog – change it anywhere and all three follow.
 
-Save with **Ctrl+S**. A prompt marked read-only in the library (the built-in defaults) can be read but not overwritten; make a copy under a new name instead.
+Save with **Ctrl+S**. A built-in prompt – the Default Translation Prompt, say – is never saved over: your changes are saved as a prompt of your own, named "… (my version)" unless you gave it a new name, and it becomes the active prompt if the original was. The built-in one stays as it shipped, so an update to it can never overwrite your work.
 
 Any settings the file carries that the editor does not have a field for – tags, favourites, QuickLauncher flags set by the Trados plugin – are preserved untouched on save. The status line under the description says which ones the file has.
 
