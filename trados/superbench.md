@@ -36,3 +36,5 @@ A judge is a model too. Treat the report as a well-informed second opinion: read
 ## Cost
 
 Three batches of twenty segments plus one judge call costs a few cents with the default models; the estimate is shown before you run, and the actual cost per model is in the report. Every call is logged like any other AI call, so it appears in the Reports tab and the usage ledger.
+
+A model that is not in the price list (a custom endpoint, or an OpenRouter model outside the built-in list) is counted at the dearest rates in the list, from v18/19.20.198: the estimate then reads **"up to"**, and so does that model's cost in the report. Before, such a model was left out of the estimate and showed no cost at all.

@@ -86,6 +86,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](/trados/usage-costs/)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 * **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](/trados/usage-costs/#monthly-budget).
+* **Keep going when translating segment by segment** – from v18/19.20.198, Translate active segment (Alt+T) sends the same shared prompt every time, so a provider that caches prompts charges about a tenth for it from the second segment on, if each segment follows within five minutes. A pause longer than that means the next segment pays full price again. See [Translate Active Segment](/trados/batch-translate/#translate-active-segment-altt).
 
 ### Built-in cost protection
 

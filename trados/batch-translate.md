@@ -89,6 +89,10 @@ Older installs may still have this on `Ctrl+T` – the default moved to `Alt+T` 
 
 In short: a single segment now gets everything a batch run gets, minus the other segments – same prompt, same terminology, same document context. On versions before 18/19.20.149, batch translating even small ranges gave better results than going segment by segment; from 18/19.20.149 the two are equivalent.
 
+**Cost when you go segment by segment** *(from v18/19.20.198)*. Everything that is the same for every segment – the instructions, the SuperMemory context and the document content – is sent identically each time, and only the segment and its own termbase terms change. Providers that cache prompts therefore store that shared part on the first segment and read it back on the next ones: on Claude, from the second segment on, it costs about a tenth of its normal price, as long as each segment follows the last within five minutes. On a typical job that makes every segment after the first roughly ten times cheaper than the first. Before 20.198 the segment's terms sat in the middle of the shared part, so it was never reused.
+
+**What the Batch Translate log shows for Alt+T** *(from v18/19.20.198)*. How many of your AI-enabled termbase terms occur in the segment and go with it, and a warning when terms are loaded but no termbase has its **AI** column ticked in Settings → Termbases – in that case no terms are sent at all. A request that fails is reported there and, if you log AI calls to the [Reports](/trados/reports/) tab, recorded there too.
+
 ### AI Context in Batch Translate
 
 Batch Translate uses several context sources from your [AI Settings](/trados/settings/ai-settings/) to improve translation quality:

@@ -34,7 +34,7 @@ A few things worth knowing:
 
 * **Every flow is covered** – Translate, Batch Translate, Quick Launcher, AutoPrompt, Proofread and Chat. A batch run is recorded as **one** line (the whole job), not one line per segment.
 * **`source`** is `actual` when the figures are the real token counts reported by the provider's API, or `estimated` when they fall back to the chars/4 heuristic (see [Estimates vs actual cost](/trados/ai-cost-guide/#estimates-vs-actual-cost)). Cache reads/writes are broken out (`in_cache_read` / `in_cache_write`).
-* **`cost_known`** is `false` when the model isn't in the price list – the **tokens are still logged**, the cost just shows as unknown until you add a rate (see [Custom and self-hosted models](#custom-and-self-hosted-models)).
+* **`cost_known`** is `false` when the model isn't in the price list – the **tokens are still logged**, with `cost_usd` at 0 until you add a rate (see [Custom and self-hosted models](#custom-and-self-hosted-models)). The Reports tab shows such a call as **"up to $X"** from v18/19.20.198 (and as "unknown" before).
 * It's **on by default**. Turn it off any time in **Settings → AI Settings → "Keep a persistent token-usage log"**.
 
 ### The Usage & Costs report
@@ -78,6 +78,8 @@ Costs are computed from a single price list, **`pricing.json`**, shared with Sup
    ```
 
 3. Restart Supervertaler. Its cost now appears in the log and report; until then, its **tokens are still logged** with the cost marked unknown.
+
+Until a model has a rate, the Reports tab and SuperBench show the most it can have cost (from v18/19.20.198): **"up to $X"**, the tokens used priced at the dearest rates in the list. That is a true upper bound for any model priced no higher than the dearest one listed – for a dearer one, add its rate. The usage log and the Usage & Costs report still count it as 0 with `cost_known` false, so those figures stay limited to real prices, and the monthly budget does not see it.
 
 Local models (Ollama) are priced at `0` – their token counts are still recorded, which is useful for capacity planning.
 
