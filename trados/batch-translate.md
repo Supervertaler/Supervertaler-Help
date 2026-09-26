@@ -71,6 +71,10 @@ Press **Alt+T** to translate the active segment instantly. This uses the same pr
 
 Alt+T is also available via right-click in the editor ("Translate active segment").
 
+:::caution[Alt+T does nothing?]
+Trados also puts one of its own commands on `Alt+T` (**Toggle between Source and Target in Translation Results View**), and the Trados binding wins. Clear it once in **File → Options → Keyboard Shortcuts** and `Alt+T` works. See [Keyboard shortcuts](/trados/keyboard-shortcuts/#first-time-setup-free-up-trados-shortcuts).
+:::
+
 :::note
 Older installs may still have this on `Ctrl+T` – the default moved to `Alt+T` in v18/19.20.119 because `Ctrl+T` collides with a Trados factory shortcut. See [Keyboard shortcuts](/trados/keyboard-shortcuts/) for how to reassign it.
 :::
