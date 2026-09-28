@@ -104,6 +104,27 @@ Batch Translate uses several context sources from your [AI Settings](/trados/set
 
 TM matches and surrounding segments are **not** included in Batch Translate – these are Chat & QuickLauncher features only. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
 
+### What the AI may send back
+
+*(From v18/19.20.198.)* Every translation request ends with a fixed **output contract**, whichever prompt is selected: the reply is the translation and nothing else – no preamble, no notes, no explanations, no alternatives, no markdown, every tag kept. A prompt can add to it but cannot switch it off by accident, because it comes last, after the prompt, the terminology, SuperMemory and the document. **Preview prompt** shows it at the end of the system prompt. Supervertaler for memoQ sends the same contract, so a prompt written for one product reads correctly in the other.
+
+Every reply is checked against it before anything is written. A reply that carries more than the translation – a note after it, the model explaining its own choices, a remark about the translation memory, markdown or a line break the source does not have, a second `[[TC: …]]` marker – is asked for once more, with the contract restated. If the second answer does the same, **nothing is written**: the segment is left empty, and the Batch Translate log names it and gives the reason. **Retry segments left empty** does not send it a third time. An empty segment costs you one segment to translate yourself; a note in the target could reach your client. The same check applies to Translate active segment (Alt+T).
+
+The check looks for signs of commentary that the source itself does not have, so a source that really does contain a label such as "Note:" or markdown is translated as usual. One case can still be refused wrongly: text written in the first person, such as a declaration ("I have translated…"), translated into English. If the log gives *the model writing about its own choices* for a segment like that, translate it by hand.
+
+#### Translator comments
+
+Where a note is genuinely needed – a defect in the source, a real ambiguity, a deliberate departure from a translation memory match or the termbase – the contract gives the AI one place for it: a single `[[TC: …]]` marker at the very end of that segment's translation, 5 to 20 words, written as your comment to the client, in English unless your prompt says otherwise. For example: `[[TC: "100 000 miljoen euro" means EUR 100 billion. Please check.]]`
+
+Where it ends up is your choice, in **Settings → AI Settings → Add the AI's [[TC: …]] notes as Trados comments**:
+
+* **Unticked (the default):** the marker stays at the end of the target, where you see it while you review. Decide whether it is worth keeping, add it as a Trados comment on the words it is about, and delete it from the target before you confirm the segment. Search the target for `[[TC:` to find them all.
+* **Ticked:** the marker is taken out of the target and added to the segment as a Trados comment. If Studio refuses the comment, the marker is written at the end of the target instead, so no flag is lost.
+
+This applies to Batch Translate, Translate active segment (Alt+T) and [Paste from Clipboard](/trados/clipboard-mode/#what-is-checked-when-you-paste).
+
+The **Default Translation Prompt** used to tell the AI it could "add a brief explanation in parentheses" when a term had no established equivalent, which a model can take as licence to explain itself in the target. From 20.198 it asks for a `[[TC: …]]` marker instead. Your copy is updated automatically unless you have edited it; an edited copy is left alone.
+
 ### Backup TMX
 
 The **Auto-backup translations to TMX** checkbox is ticked by default. When enabled, Supervertaler writes every translated segment to a TMX file as it arrives from the AI. If Trados crashes mid-run, you can recover the completed translations without re-running the batch.

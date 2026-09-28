@@ -10,6 +10,8 @@ guesswork.
 
 ## 2026-09-28
 
+- **Trados: what the AI may send back** (from v18/19.20.198). Batch Translate has a new section on the output contract every translation request now ends with, the check each reply passes before it is written, what happens to a reply that fails it twice, and the one case the check can refuse wrongly. *Translator comments* explains `[[TC: …]]` and the choice between keeping it in the target (the default) and a Trados comment; AI Settings documents the new checkbox. Clipboard Mode says what is checked on paste and why such a segment is left out. The AI Proofreader page describes the fixed answer format and how a source query is now written.
+- **Trados: a broken path on the AI Proofreader page.** `trados\reports` had its `\r` turned into a line break, as on the Reports page before.
 - **Trados: a large memory bank sends only what each document needs** (from v18/19.20.198). SuperMemory's AI Integration page explains the selection, what always goes, what it costs, and the `trados\bank-extracts\` file listing what each document got; Batch Translate, Reports, Context layers and the data folder page point to it.
 - **Trados: notes for the assistants only.** The SuperMemory pages explain `audience: assistant`, which keeps a memory bank note out of translation while the chat and the MCP tools still read it (from v18/19.20.198).
 - **Trados: extra files in a bank are read.** The SuperMemory page no longer implies a bank is only its three files, and the Report button's description drops the warning that such files are never sent – untrue since v18/19.20.183.

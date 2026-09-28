@@ -297,6 +297,15 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 - A larger batch size is faster but uses more tokens per request
 - A smaller batch size is more granular and easier to review
 
+### Add the AI's [[TC: …]] notes as Trados comments (from v18/19.20.198)
+
+When the AI needs to flag something in a segment – a defect in the source, a real ambiguity, a deliberate departure from the TM or the termbase – it adds one short note at the end of that segment's translation, written as your comment to the client: `[[TC: …]]`. See [Translator comments](/trados/batch-translate/#translator-comments).
+
+- **Unticked (the default):** the note stays at the end of the target, where you see it while you review. Remove it before you confirm the segment, or turn it into a comment yourself.
+- **Ticked:** the note is taken out of the target and added to the segment as a Trados comment instead.
+
+Applies to Batch Translate, Translate active segment (Alt+T) and Paste from Clipboard.
+
 ---
 
 ## See Also

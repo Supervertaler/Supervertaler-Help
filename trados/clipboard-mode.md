@@ -104,6 +104,14 @@ The AI is instructed to preserve these placeholders exactly as they appear. When
 If a tag is missing or malformed in the AI's response, Supervertaler reports a warning but still writes the translation. Check the log for any tag validation messages.
 :::
 
+## What is checked when you paste
+
+*(From v18/19.20.198.)* The copied instructions tell the AI to return each translation and nothing else, with one exception: where something must be brought to your attention – a defect in the source, a real ambiguity – it may end that segment's translation with a single `[[TC: …]]` marker, 5 to 20 words written as your comment to the client.
+
+When you click **Paste from Clipboard**, each translation is checked the way an API run checks it (see [What the AI may send back](/trados/batch-translate/#what-the-ai-may-send-back)). A translation that carries more than that – a note after it, the model explaining its own choices, markdown or a line break the source does not have – is **not imported**: its segment is left as it was, and the log names it by the number the AI chat shows, with the reason. Nobody can be asked again from here, so ask the AI for those segments again, or translate them by hand. The summary line counts them as *not imported*.
+
+A `[[TC: …]]` marker is kept at the end of the target, or added as a Trados comment if you have ticked **Add the AI's [[TC: …]] notes as Trados comments** in [AI Settings](/trados/settings/ai-settings/).
+
 ## Choosing an AI Model
 
 Any web-based LLM with a chat interface works with Clipboard Mode. Some recommendations:
@@ -161,7 +169,7 @@ Since you are not paying per token in Clipboard Mode, there is no cost differenc
 
 ### Check the Response Format
 
-Before clicking Paste from Clipboard, glance at the AI's response to make sure it followed the numbered bilingual format. Most modern LLMs handle this correctly, but if the format is off, you can ask the AI to reformat its response.
+Before clicking Paste from Clipboard, glance at the AI's response to make sure it followed the numbered bilingual format. Most modern LLMs handle this correctly, but if the format is off, you can ask the AI to reformat its response. Segments the paste leaves out because their translation carried a note are named in the log; see [What is checked when you paste](#what-is-checked-when-you-paste).
 
 ### Combine with Terminology
 

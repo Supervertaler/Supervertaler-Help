@@ -50,6 +50,12 @@ What the default prompt *does* add:
 **If you want to customise:** clone the default in the [Prompt Manager](/trados/settings/prompts/) and edit your copy. The default itself is read-only and gets refreshed when the plugin updates. Your clone keeps all your changes.
 :::
 
+### The answer format is fixed *(from v18/19.20.198)*
+
+The format every verdict must follow – `[SEGMENT 0001] OK`, or `ISSUE` followed by the **Issue:**, **Evidence:** and **Suggestion:** lines – is now stated once, in a fixed **output contract** at the very end of the instructions, after your prompt and the document. A custom proofreading prompt can add checks of its own but cannot change the format by accident, which is what the Reports tab reads. **Preview prompt** shows it.
+
+The contract also sets how a **source query** is written. When the problem is in the source rather than the translation – a typo, a missing word, a contradiction – the Issue line starts with *Source query:* and the rest is written as your comment to the client: 5 to 20 words, stating the problem and the fix, with no reasoning, ready to pass on as it stands. The Suggestion line says whether the translation needs to change. It is the same register as the `[[TC: …]]` comments [Batch Translate](/trados/batch-translate/#translator-comments) writes.
+
 ## Reports Tab
 
 Proofreading results appear in the **Reports** tab of the Supervertaler Assistant panel. Each issue is shown as a clickable card containing:
@@ -71,8 +77,7 @@ Each issue card has a checkbox. Tick it to dismiss the issue and remove it from 
 
 ### Saving the report (from v18.20.187)
 
-Every completed proofreading run is written to disk automatically, as a Markdown file in `trados\
-eports` inside your Supervertaler data folder – one section per segment with the issue, suggestion, evidence, source and target. The footer of the Reports tab names the file (hover it for the full path), and the Batch Operations log shows the path too. So a report that has been cleared, or lost when Studio refreshes the panel, is never gone.
+Every completed proofreading run is written to disk automatically, as a Markdown file in `trados\reports` inside your Supervertaler data folder – one section per segment with the issue, suggestion, evidence, source and target. The footer of the Reports tab names the file (hover it for the full path), and the Batch Operations log shows the path too. So a report that has been cleared, or lost when Studio refreshes the panel, is never gone.
 
 To keep a copy somewhere else – a client folder, an email attachment – click **Save report…** next to **Clear**. It writes the same Markdown to a location of your choice, and it is only enabled while a proofreading report is showing.
 
