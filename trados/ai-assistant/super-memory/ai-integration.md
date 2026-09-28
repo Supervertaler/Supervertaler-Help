@@ -22,7 +22,8 @@ Within each, the three files are sent: `brief.md`, then `terminology.md`, then `
 
 * **Terminology:** only the table rows whose term occurs in the document. Both columns are checked, so a Dutch–English table still serves an English–Dutch job.
 * **Other notes:** your AI model is shown the start of the document and asked, once, which of the bank's other notes (such as `figures.md`) matter for it.
-* **Always sent:** the brief and the style guide, of both the active bank and `_shared`.
+* **Your house defaults, rule by rule:** in the same question, each rule of `_shared/style.md` – each section that starts with a `## ` heading – is offered on its own, and so is each section of `_shared/terminology.md` that holds no table. A rule written for another language direction or another kind of document is left out: nl→en patent boilerplate stays out of an en→nl software job. The model sees each rule's heading and its first lines, so a **Scope:** line near the top, such as *Scope: all Dutch→English patent work* or *Scope: all work, any direction*, is what it goes by. When unsure, it keeps the rule. A section holding a terminology table is never offered: its rows are already kept or dropped by the document itself.
+* **Always sent:** the brief and style guide of the active bank, and `_shared/brief.md`.
 
 The selection is kept for that document until you change a file in the bank, so every request of the job carries exactly the same text, and a provider that caches prompts keeps charging the cached rate. Opening a document sends nothing to the model; the selection is made only when you translate. If the question fails or times out, every note is sent, as it would be without selection. A bank of 8,000 tokens or less is sent whole, as before, and costs no extra request.
 
@@ -33,6 +34,7 @@ SuperMemory: sending 12,910 tokens of the bank's 15,723 tokens, selected for thi
   Left out as notes for the assistants only (audience: assistant): _shared/method.md.
   Terminology (_shared/terminology.md): 0 of 34 rows occur in this document.
   Articles: 0 of 1 chosen as relevant to this document by claude-opus-5-5; left out: figures.md.
+  House rules (_shared/style.md): 12 of 20 chosen as applying to this document by claude-opus-5-5; left out: 3. Comprising boilerplate; …
   What was sent, and why: …\trados\bank-extracts\report.docx - 8fa68730.md
 ```
 
@@ -60,7 +62,7 @@ In practice: `_shared` might say *voorkeursvorm → preferred embodiment*, and a
 
 Earlier versions tried to work out which parts of a bank were relevant: matching your project name against client-profile filenames, detecting the document's domain, preferring one style guide over another, then loading whichever articles scored highest.
 
-None of that happens now. **You pick the bank from the toolbar, and its contents are used** – because you already know which client you are working for, and a detection step could only get that wrong. It also means what reaches the AI is what you would see by opening the folder. The one exception, a large bank narrowed for each document, never touches the brief or the style guide and writes down everything it leaves out (see [above](#a-large-bank-sends-only-what-each-document-needs)).
+None of that happens now. **You pick the bank from the toolbar, and its contents are used** – because you already know which client you are working for, and a detection step could only get that wrong. It also means what reaches the AI is what you would see by opening the folder. The one exception, a large bank narrowed for each document, never touches the active bank's brief or style guide and writes down everything it leaves out (see [above](#a-large-bank-sends-only-what-each-document-needs)).
 
 ## Token cost
 
