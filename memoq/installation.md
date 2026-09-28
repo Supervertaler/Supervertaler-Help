@@ -4,7 +4,7 @@ title: "Installation"
 
 ### Requirements
 
-- **memoQ 12** – translator pro or project manager edition
+- **memoQ 12** – translator pro or project manager edition. Earlier versions have not been tested.
 - An API key for Anthropic, OpenAI or Google, or Claude Desktop or ChatGPT desktop if you would rather [translate through an assistant](/memoq/mcp-server/)
 - Administrator rights on the computer, once, while installing
 - *Optional:* memoQ's free **PDF Preview tool**, which the [live document link](/memoq/mcp-server/#the-live-document-link) needs. Everything else works without it.
@@ -13,7 +13,7 @@ A 14-day free trial starts by itself the first time Supervertaler runs. See [Lic
 
 ### Installing
 
-1. **Download the installer** from [supervertaler.com/memoq](https://supervertaler.com/memoq/).
+1. **Download the installer**: [supervertaler.com/download/memoq](https://supervertaler.com/download/memoq) starts the download of the latest version.
 2. **Close memoQ.** memoQ keeps its add-ins open while it runs, so they cannot be replaced underneath it. The installer checks and says so if memoQ is still open.
 3. **Run the installer.** Windows asks for administrator rights, because memoQ keeps its add-ins under Program Files. The installer finds memoQ by itself; there is nothing to choose.
 
