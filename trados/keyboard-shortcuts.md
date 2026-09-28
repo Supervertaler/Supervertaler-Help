@@ -136,7 +136,7 @@ In both modes, when a segment has 9 or fewer matches, pressing Alt+N inserts imm
 :::
 
 :::note
-Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (tap `Ctrl`) or **TermPicker** (`Alt+P`) to insert them.
+Terms beyond 45 have no keyboard shortcut. Use the **TermLens popup** (`Alt+L`) or **TermPicker** (`Alt+P`) to insert them.
 :::
 
 ---

@@ -96,6 +96,8 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "add project term" | "project term" | Quick-add the selection to the project termbase (Alt+Up) |
 | "translate" | "translate segment" | AI-translate the active segment |
 | "concordance" | "search memory" | Concordance search on the selection (F3) |
+| "super search" | | [SuperSearch](/trados/supersearch/) the selection across the project's files (Alt+S). Say it naturally as "SuperSearch"; the voice model hears it as two words *(from v18/19.20.198)* |
+| "web search" | "search the web" | Open the selection in your enabled SuperSearch web resources (Alt+W) *(from v18/19.20.198)* |
 | "zoom in" | "bigger font" | Increase the editor font size (see setup below) |
 | "zoom out" | "smaller font" | Decrease the editor font size (see setup below) |
 | "escape" | "close window" | Close the focused popup or dialog (and the number popup) |
