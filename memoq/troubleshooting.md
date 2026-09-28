@@ -14,6 +14,8 @@ The model's reply for that row contained something other than the translation �
 
 If it happens often with one prompt, the prompt is probably asking for explanations. Look for lines like "add a brief explanation" and replace them with an instruction to use a `[[TC: …]]` marker.
 
+The check looks for signs of commentary that the source itself does not have, so text written in the first person is translated as usual: *Ik verklaar dat ik dit document heb vertaald* can become *I declare that I have translated this document*, because the source has its own word for "I" and the translation adds no sentence to it. One case can still be refused wrongly: a source that leaves the pronoun out, as Spanish and Italian can (*He traducido…*, *Ho tradotto…*), translated into English. If a row like that is left empty, translate it by hand.
+
 ### "AI translation is paused"
 
 The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
