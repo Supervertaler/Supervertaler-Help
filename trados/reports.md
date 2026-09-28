@@ -18,4 +18,5 @@ From v18/19.20.198:
 
 * **A request that fails is recorded too.** It shows as **ERROR**, and opening it shows the provider's message – an overloaded server, an invalid key, a model name the provider does not recognise. Before, a Batch Translate or Translate active segment request that failed left no entry at all, and the reason appeared only in the Batch Translate log.
 * **A one-segment request shows what it sent besides the system prompt:** the segment and the termbase terms that went with it.
+* **A memory bank selection has an entry of its own**, named **Memory bank selection**: the one small request per document that picks which notes of a large bank go with it. See [SuperMemory – AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
 * **A model that is not in the price list shows "up to $X"** instead of "unknown": the tokens used, priced at the dearest rates in the list. See [Usage costs](/trados/usage-costs/#custom-and-self-hosted-models).

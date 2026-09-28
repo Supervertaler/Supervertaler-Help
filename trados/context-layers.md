@@ -75,6 +75,8 @@ Both Supervertaler termbases and MultiTerm `.sdltb` termbases attached to the pr
 
 The `_shared` bank is sent alongside as house defaults, and the active bank is marked as overriding it where the two disagree.
 
+From v18/19.20.198, a translation leaves out any note marked for the assistants only, and a bank that comes to more than about 8,000 tokens with `_shared` is narrowed to the part each document needs, with a file recording what was left out. See [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
+
 Where a termbase gives the AI flat pairs of terms, SuperMemory gives it the **reasoning** behind them: the decisions, the caveats, the client-specific overrides. Only the active bank is used (plus `_shared`), so switch to the right one before translating.
 
 **Toggles:** AI Settings → *Include memory bank context* / *Use memory bank in AutoPrompt*.

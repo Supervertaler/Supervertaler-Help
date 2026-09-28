@@ -49,7 +49,8 @@ Supervertaler/
     │   ├── license.json
     │   └── chat_history.json
     ├── projects/
-    └── batch_backups/
+    ├── batch_backups/
+    └── bank-extracts/
 ```
 
 ### Shared resources
@@ -61,6 +62,8 @@ The **prompt library** and **resources** folders are shared between both program
 Each program stores its own settings, projects, and runtime data in a dedicated subfolder (`workbench/` or `trados/`). This keeps configuration separate so the two programs never interfere with each other.
 
 The `trados/batch_backups/` folder contains automatic TMX backup files created during Batch Translate runs. One file is written per run, named by timestamp and project name. These files are not deleted automatically – you can remove old ones manually once your project is safely delivered, or keep them as a translation archive for use in other CAT tools. See [Batch Translate – Backup TMX](/trados/batch-translate/#backup-tmx) for details.
+
+The `trados/bank-extracts/` folder (from v18/19.20.198) holds one Markdown file per translated document whose memory bank was large enough to be narrowed: what was sent from your banks, what was left out and why. It is there for you to read – editing it changes nothing. The newest 200 are kept, and a file not rewritten for 90 days is removed. See [SuperMemory – AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
 
 ## Automatic Migration
 

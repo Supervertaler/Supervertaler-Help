@@ -8,6 +8,12 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-28
+
+- **Trados: a large memory bank sends only what each document needs** (from v18/19.20.198). SuperMemory's AI Integration page explains the selection, what always goes, what it costs, and the `trados\bank-extracts\` file listing what each document got; Batch Translate, Reports, Context layers and the data folder page point to it.
+- **Trados: notes for the assistants only.** The SuperMemory pages explain `audience: assistant`, which keeps a memory bank note out of translation while the chat and the MCP tools still read it (from v18/19.20.198).
+- **Trados: extra files in a bank are read.** The SuperMemory page no longer implies a bank is only its three files, and the Report button's description drops the warning that such files are never sent – untrue since v18/19.20.183.
+
 ## 2026-09-24
 
 - **memoQ: notes for the assistants only.** The editor page explains `audience: assistant`, which keeps a memory bank note out of translation while the AI assistants still read it.

@@ -100,6 +100,7 @@ Batch Translate uses several context sources from your [AI Settings](/trados/set
 * **Document content** – when enabled, all source segments are included in the system prompt so the AI can determine the document type (legal, medical, technical, etc.) and adapt its style accordingly. This is shared across all batches.
 * **Termbase terms** – terminology from enabled termbases is injected into the prompt, including term definitions and domains when that option is enabled.
 * **Custom prompts** – the selected prompt provides domain-specific translation instructions.
+* **SuperMemory** – when enabled, the active memory bank and `_shared`. From v18/19.20.198 a large bank is narrowed to the part the document needs, the first time you translate it, and the log says what was sent and names a file listing what was left out. See [SuperMemory – AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
 
 TM matches and surrounding segments are **not** included in Batch Translate – these are Chat & QuickLauncher features only. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
 

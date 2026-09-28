@@ -20,6 +20,20 @@ Every bank contains the same three Markdown files, plus a folder for source mate
 
 That is the whole structure. You are meant to open these files and edit them by hand – the **📂 Open folder** button in the toolbar is there for exactly that.
 
+Any other Markdown file you put at the top of a bank – `figures.md`, say – is read too, under its own filename (from v18/19.20.183).
+
+### Notes for the assistants only
+
+*From v18/19.20.198.* A note about how to work a job rather than how to translate it – what to check before delivery, how to verify a termbase – can be kept out of translation. Put this at the very top of the file:
+
+```
+---
+audience: assistant
+---
+```
+
+The AI Assistant chat and the AI tools connected through the MCP server still read it; Batch Translate, Translate active segment, Preview prompt, SuperBench and AutoPrompt leave it out. See [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#notes-for-the-assistants-only).
+
 ### Why terminology is a table
 
 A table is the format in which a *wrong* entry is findable. You can scan a hundred rows in half a minute and spot the one that says the wrong thing; you cannot do that with a hundred files. Since the only reason to keep notes is that you can check them, the format that makes checking possible is the one that matters.
@@ -92,7 +106,9 @@ That last point is the design in one line: **the AI proposes, you decide what ge
 
 ## The Report button
 
-**☰ Report** tells you what the bank actually contributes: which files exist and how big, how many rows the terminology table has, **how many tokens get added to a prompt**, whether `_shared` is being applied, and warnings for things that are quietly wrong – a missing brief, a terminology file that is still prose rather than a table, files sitting in the bank root that are never sent to the AI.
+**☰ Report** tells you what the bank actually contributes: which files exist and how big, how many rows the terminology table has, **how many tokens get added to a prompt**, whether `_shared` is being applied, and warnings for things that are quietly wrong – a missing brief, a terminology file that is still prose rather than a table.
+
+From v18/19.20.198 the figure is what a *translation* sends. For a bank over about 8,000 tokens it is the most a translation can send, because each document then gets only the part it needs (see [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs)). Notes marked for the assistants only are listed separately, as kept for the chat and the MCP tools. Other files at the top of the bank are listed as read. (Before v18/19.20.198 the report said such files were never sent to the AI. That had stopped being true in v18/19.20.183.)
 
 It reads the files directly, so it is instant and costs nothing.
 
