@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-09-28
 
+- **Trados: the running AI cost.** The Reports page describes the new line under the tab's header - this session's and today's AI cost - what it counts, where today's figure comes from, and what "up to" means (from v18/19.20.198).
 - **Trados: Claude Sonnet 5.5.** The AI Settings provider table lists the Claude short list as it now is: Sonnet 5.5 (the default), Opus 5.5 and Fable 5.1 (from v18/19.20.198).
 - **Trados: what the AI may send back** (from v18/19.20.198). Batch Translate has a new section on the output contract every translation request now ends with, the check each reply passes before it is written, what happens to a reply that fails it twice, and the one case the check can refuse wrongly. *Translator comments* explains `[[TC: …]]` and the choice between keeping it in the target (the default) and a Trados comment; AI Settings documents the new checkbox. Clipboard Mode says what is checked on paste and why such a segment is left out. The AI Proofreader page describes the fixed answer format and how a source query is now written.
 - **Trados: house defaults are judged rule by rule** (from v18/19.20.198). SuperMemory's AI Integration page explains that each rule of `_shared/style.md`, and each terminology section without a table, is now part of the once-per-document selection, and that a rule's **Scope:** line is what decides it. The brief and style guide of the active bank still always go.
