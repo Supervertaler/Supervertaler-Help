@@ -12,14 +12,28 @@ Solutions to common issues with the Supervertaler for Trados plugin.
 
 **Solutions:**
 
-1. **Check Trados version** –the plugin requires **Trados Studio 2024** or later
-2. **Verify .NET Framework** –ensure **.NET Framework 4.8** is installed on your system
-3. **Reinstall the plugin** –remove the plugin via **Trados Plugin Management**, restart Trados, then install it again
-4. **Check for errors** –open **Trados Plugin Management** and look for error messages next to the Supervertaler plugin entry
+1. **Check Trados version** – the plugin requires **Trados Studio 2024** or later
+2. **Verify .NET Framework** – ensure **.NET Framework 4.8** is installed on your system
+3. **Reinstall the plugin** – remove the plugin via **Trados Plugin Management**, restart Trados, then install it again
+4. **Check for errors** – open **Trados Plugin Management** and look for error messages next to the Supervertaler plugin entry
 
 :::note
 After installing or updating the plugin, always restart Trados Studio completely (close all windows, not just the project).
 :::
+
+---
+
+## Trados stops at "Start extensions are being executed..."
+
+**Symptoms:** Straight after you install Supervertaler, Trados Studio's startup screen stays on **Start extensions are being executed...** and goes no further.
+
+**Cause:** The first time it starts, Supervertaler asks where to keep its data, and it asks while Trados is still showing its startup screen. Before v18/19.20.198 that question could open *behind* the startup screen, with no taskbar button, so Trados looked stuck when it was really waiting for your answer.
+
+**Solutions:**
+
+1. **Press Enter.** The hidden window normally has the keyboard, so Enter accepts the suggested data folder and Trados carries on.
+2. If nothing happens, end Trados Studio in Task Manager, start it again, and press Enter once the startup screen shows that message.
+3. **Update Supervertaler.** From v18/19.20.198 the question always opens in front of the startup screen, with a taskbar button, and so do the other two messages Supervertaler can show at that point.
 
 ---
 
