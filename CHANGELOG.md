@@ -12,9 +12,6 @@ guesswork.
 
 - **memoQ: house rules are judged rule by rule.** The editor page no longer says the style rules always go. The client bank's brief, style guide and domain notes do; each house rule in `_shared` is judged in the job's one question by its **Scope:** line, and everything goes when the question cannot be asked (from v0.1.0). The bank-extracts path is now given as `C:\Users\<you>\Supervertaler\…`, not the author's own drive.
 - **memoQ: installing from the direct download.** Step 1 of the installation page links `supervertaler.com/download/memoq`, which now starts the download of the latest installer. The requirements say that versions of memoQ before 12 have not been tested.
-
-## 2026-09-29
-
 - **Trados: what the usage statistics ping sends.** The Usage Statistics page listed five items, and the notice in the plugin four, but the ping also sends the product, whether Windows runs in a virtual machine, the processor architecture, the Windows display scaling and text size, and the Supervertaler UI scale. The page now lists every item, says why the scaling figures are collected, and shows the notice as it reads from v18/19.20.198, no longer cut off at the bottom.
 
 ## 2026-09-28
