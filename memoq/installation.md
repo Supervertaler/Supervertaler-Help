@@ -44,7 +44,14 @@ Supervertaler is not yet signed by memoQ. Signing is a process memoQ runs with a
 
 ### Updating
 
-Close memoQ and run the new installer. It replaces the files in place; your settings, prompts, termbases, memory banks and licence are kept, because none of them live in the program folders.
+From version 0.1.2, Supervertaler tells you when a new version is out. Once a day it asks GitHub for the latest version, and when there is a newer one:
+
+- **the Supervertaler editor** offers it as it opens: **What's new** opens the release notes, **Download and install** does the rest, **Skip this version** stops it being offered until the next one, and **Later** asks again tomorrow. **Help → Check for updates** asks at any time, and offers a skipped version too;
+- **in memoQ**, the line under Supervertaler's hits in Translation results says that a new version is available, for anyone who never opens the editor.
+
+**Download and install** downloads the installer, checks that it is exactly the file GitHub published – its size and its checksum – and runs it, then closes the editor so its own file can be replaced. Close memoQ first; the editor says so if it is still open.
+
+To update by hand, close memoQ and run the new installer from [supervertaler.com/download/memoq](https://supervertaler.com/download/memoq). Either way it replaces the files in place; your settings, prompts, termbases, memory banks and licence are kept, because none of them live in the program folders.
 
 ### After a memoQ upgrade
 

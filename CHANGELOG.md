@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## memoQ 0.1.2 (date on release)
+
+- **memoQ: updates.** The installation page's *Updating* section describes the daily check for a new version, the editor's offer and **Help → Check for updates**, the notice under Supervertaler's hits in memoQ, and what **Download and install** checks before it runs the installer (from v0.1.2).
+
 ## 2026-09-29
 
 - **memoQ: anonymous usage statistics and trial registration** (from v0.1.1). The editor page describes the new *Send anonymous usage statistics* setting and the question the editor asks once; the licensing page says what the trial registration sends and why.
