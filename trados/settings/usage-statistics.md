@@ -11,10 +11,17 @@ Supervertaler for Trados sends one anonymous, lightweight ping to the developer 
 * **Default-on, opt-out** – on first launch after install or update, an informational dialogue (shown above) tells you exactly what is collected and gives you a one-click **Turn it off** button. You don't have to do anything to keep it enabled – the dialogue's default action (the bold **Keep it on** button, Enter, Esc, or the X-close) all keep it enabled. Your choice is remembered, and the dialogue isn't shown again.
 * **Minimal data** – a single lightweight ping is sent once per session on plugin startup. The only data included is:
   * A random anonymous ID (a UUID generated locally on your machine – not tied to any account, machine, or identity)
-  * Plugin version (e.g. 4.19.108)
+  * The product it comes from (Supervertaler for Trados)
+  * Plugin version (e.g. 18.20.198)
   * OS version (e.g. Windows 11)
   * Trados Studio version
   * System locale (e.g. en-GB)
+  * Whether Windows runs in a virtual machine, and which kind (Parallels, VMware, VirtualBox or Hyper-V); Parallels usually means a Mac
+  * The processor architecture Trados runs as (x86 for Trados Studio 2024, amd64 or arm64 for Trados Studio 2026)
+  * Your Windows display scaling and Windows text size (e.g. 150% and 100%)
+  * The Supervertaler **UI scale** setting (e.g. 100%)
+
+  Before v18/19.20.198 the dialogue listed only the first few of these, although the ping already sent them all. It now lists every one.
 * **Country detection** – the hosting provider (Cloudflare) determines your country from the network connection. No IP addresses are stored.
 * **Silent failure** – if the ping fails (no internet, firewall, etc.), nothing happens. No retries, no queuing, no error messages.
 * **First-party only** – data is sent to a Supervertaler-operated Cloudflare Worker endpoint. No third-party trackers, no Google Analytics, no advertising platforms.
@@ -47,6 +54,7 @@ As a solo developer, usage statistics provide invaluable insight into:
 * Which Trados Studio versions to prioritise for testing and compatibility
 * Which OS versions and locales are most common
 * Whether users run Trados on a Mac (via Parallels) or natively on Windows
+* How many users run large display scaling or text size, so the panels are laid out to work with it
 
 This information directly informs development priorities and compatibility testing.
 
