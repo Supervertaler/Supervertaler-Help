@@ -4,7 +4,7 @@ title: "Installation"
 
 ### Requirements
 
-- **memoQ 12** – translator pro or project manager edition. Earlier versions have not been tested.
+- **memoQ 11 or 12** – translator pro or project manager edition. Earlier versions have not been tested, and the installer leaves them alone.
 - An API key for Anthropic, OpenAI or Google, or Claude Desktop or ChatGPT desktop if you would rather [translate through an assistant](/memoq/mcp-server/)
 - Administrator rights on the computer, once, while installing
 - *Optional:* memoQ's free **PDF Preview tool**, which the [live document link](/memoq/mcp-server/#the-live-document-link) needs. Everything else works without it.
@@ -15,7 +15,7 @@ A 14-day free trial starts by itself the first time Supervertaler runs. See [Lic
 
 1. **Download the installer**: [supervertaler.com/download/memoq](https://supervertaler.com/download/memoq) starts the download of the latest version.
 2. **Close memoQ.** memoQ keeps its add-ins open while it runs, so they cannot be replaced underneath it. The installer checks and says so if memoQ is still open.
-3. **Run the installer.** Windows asks for administrator rights, because memoQ keeps its add-ins under Program Files. The installer finds memoQ by itself; there is nothing to choose.
+3. **Run the installer.** Windows asks for administrator rights, because memoQ keeps its add-ins under Program Files. The installer finds memoQ by itself; there is nothing to choose. If you have more than one version – memoQ 11 and memoQ 12, say – it installs into each of them.
 
 What it puts where:
 
@@ -55,11 +55,13 @@ To update by hand, close memoQ and run the new installer from [supervertaler.com
 
 ### After a memoQ upgrade
 
-memoQ's program folder carries its version number (`memoQ-12`, `memoQ-13`, …), and a major upgrade installs into a **new** folder, without the add-ins. If Supervertaler disappears after a memoQ upgrade, this is almost always why: run the Supervertaler installer again. It always installs into the newest memoQ it finds.
+memoQ's program folder carries its version number (`memoQ-12`, `memoQ-13`, …), and a major upgrade installs into a **new** folder, without the add-ins. If Supervertaler disappears after a memoQ upgrade, this is almost always why: run the Supervertaler installer again. It installs into every memoQ it finds, from memoQ 11 up.
 
 ### Installing by hand
 
 For an IT department that deploys centrally, or if the installer cannot run: the download is also available as a zip that holds the installer and the loose files. Copy `Supervertaler.MemoQ.dll`, `Supervertaler.MemoQ.Terms.dll` and `Supervertaler.PromptEditor.exe` into memoQ's `Addins` folder, then switch it on as above.
+
+For **memoQ 11**, also copy the contents of the zip's `for-memoQ-11` folder into the same `Addins` folder, keeping its `runtimes` subfolder as it is. memoQ 11 does not include the database library Supervertaler's termbases use, and these are the official builds of it; memoQ 12 has its own and needs none of them. The one in `runtimes\win-x64\native` must stay there: memoQ tries to load every `.dll` directly in `Addins` as an add-in, and that one is not.
 
 Installed this way there is no Start menu entry and no Claude Desktop extension beside the editor; [AI assistants](/memoq/mcp-server/#setting-it-up) explains the alternative.
 

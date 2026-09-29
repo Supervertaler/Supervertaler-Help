@@ -6,7 +6,7 @@ title: "Troubleshooting"
 
 Installing is not enough on its own: memoQ uses a new add-in only once it is switched on – see [Switching it on in memoQ](/memoq/installation/#switching-it-on-in-memoq). Check too that you answered **Yes** to the unsigned-plugin prompt on startup – its default button is *No*.
 
-If memoQ was recently upgraded to a new major version, it installed into a new program folder without the add-ins. Run the Supervertaler installer again; it installs into the newest memoQ it finds. See [Installation](/memoq/installation/#after-a-memoq-upgrade).
+If memoQ was recently upgraded to a new major version, it installed into a new program folder without the add-ins. Run the Supervertaler installer again; it installs into every memoQ it finds, from memoQ 11 up. See [Installation](/memoq/installation/#after-a-memoq-upgrade).
 
 ### A row was left empty with "Supervertaler left this segment for you"
 

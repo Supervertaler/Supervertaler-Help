@@ -2,7 +2,7 @@
 title: "Supervertaler for memoQ"
 ---
 
-Supervertaler for memoQ brings AI translation and your own terminology into **memoQ 12**, as two add-ins that work together.
+Supervertaler for memoQ brings AI translation and your own terminology into **memoQ 11 and 12**, as two add-ins that work together.
 
 Unlike the Trados plugin, which docks its own panels into the editor, memoQ gives an add-in no window of its own. Supervertaler therefore works through memoQ's existing surfaces – the machine-translation engine and the terminology pane – rather than adding new ones. In practice that turns out to suit it: the results appear exactly where you already look for them.
 
