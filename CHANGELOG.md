@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-29 (with memoQ 0.1.1)
+
+- **memoQ: anonymous usage statistics and trial registration** (from v0.1.1). The editor page describes the new *Send anonymous usage statistics* setting and the question the editor asks once; the licensing page says what the trial registration sends and why.
+
 ## 2026-09-29
 
 - **memoQ: house rules are judged rule by rule.** The editor page no longer says the style rules always go. The client bank's brief, style guide and domain notes do; each house rule in `_shared` is judged in the job's one question by its **Scope:** line, and everything goes when the question cannot be asked (from v0.1.0). The bank-extracts path is now given as `C:\Users\<you>\Supervertaler\…`, not the author's own drive.

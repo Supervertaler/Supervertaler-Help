@@ -183,6 +183,8 @@ memoQ’s own **Configure plugin** dialog has the same three controls, reading a
 
 **Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
+**Send anonymous usage statistics when memoQ starts** (from version 0.1.1) is your answer to the question the editor asks the first time it opens. If it is ticked, memoQ sends one small message each time it starts: a random ID, the plugin version, the Windows and memoQ versions and your system language – never your documents, translations, terminology or file names. Nothing is sent unless you tick it. See the [privacy policy](https://supervertaler.com/privacy/#memoq).
+
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself, and on the right of the toolbar, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
 ### API keys live in one file

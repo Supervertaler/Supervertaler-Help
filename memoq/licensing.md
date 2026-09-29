@@ -57,4 +57,6 @@ Payment details and cancellation are handled by Lemon Squeezy, through the link 
 
 ## Privacy
 
-The licence check sends your licence key and an anonymous machine identifier to Lemon Squeezy, the payment provider, and nothing else – no translation content, file names or project details. See the [privacy policy](https://supervertaler.com/privacy/#memoq).
+The licence check sends your licence key and an anonymous machine identifier to Lemon Squeezy, the payment provider, and nothing else – no translation content, file names or project details.
+
+During the free trial, memoQ also registers the trial with Supervertaler's licence server each time it starts (from version 0.1.1): the same anonymous machine identifier, the plugin and memoQ versions, your system language and the trial's start date and status. It gives the trial one reliable start date, as Supervertaler for Trados does, and it never slows memoQ down; without a connection the trial works exactly the same. See the [privacy policy](https://supervertaler.com/privacy/#memoq).
