@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## memoQ 0.1.3 (date on release)
+
+- **memoQ 11 is supported.** The memoQ front page, the installation page's requirements and install steps, *After a memoQ upgrade* and troubleshooting say memoQ 11 and 12, and that the installer installs into every memoQ it finds from 11 up. *Installing by hand* explains the zip's `for-memoQ-11` folder, and why its native file must stay in its subfolder (from v0.1.3).
+
 ## 2026-09-29
 
 - **memoQ: updates.** The installation page's *Updating* section describes the daily check for a new version, the editor's offer and **Help → Check for updates**, the notice under Supervertaler's hits in memoQ, and what **Download and install** checks before it runs the installer (from v0.1.2).
