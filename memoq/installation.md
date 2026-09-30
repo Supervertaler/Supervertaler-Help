@@ -51,7 +51,7 @@ From version 0.1.2, Supervertaler tells you when a new version is out. Once a da
 
 **Download and install** downloads the installer, checks that it is exactly the file GitHub published – its size and its checksum – and runs it, then closes the editor so its own file can be replaced. Close memoQ first; the editor says so if it is still open.
 
-Versions 0.1.0 and 0.1.1 have no update check, so they are never told. If **Help** in your editor has no **Check for updates**, download the latest installer once as below; from then on you will be told.
+The version you have is in the editor's title bar – "Supervertaler for memoQ – v0.1.5" – from version 0.1.5 on. Versions 0.1.0 and 0.1.1 have no update check, so they are never told. If **Help** in your editor has no **Check for updates**, download the latest installer once as below; from then on you will be told.
 
 To update by hand, close memoQ and run the new installer from [supervertaler.com/download/memoq](https://supervertaler.com/download/memoq). Either way it replaces the files in place; your settings, prompts, termbases, memory banks and licence are kept, because none of them live in the program folders.
 

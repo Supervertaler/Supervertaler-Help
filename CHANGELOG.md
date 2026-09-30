@@ -56,6 +56,10 @@ guesswork.
   - the TermLens page still called Alt+0 a Compare Panel key and linked the old stand-alone TermLens plugin;
   - *Setting Up API Keys* described a Test Connection button and a Grok provider that Workbench doesn't have.
 
+## 2026-09-30
+
+- **memoQ: which version you have.** The *Updating* section says the version is in the editor's title bar, from v0.1.5.
+
 ## 2026-09-29
 
 - **memoQ: updating from 0.1.0 or 0.1.1.** The *Updating* section says those versions have no update check, and how to tell (no *Check for updates* under Help), so nobody waits for an offer that cannot come. *Later* is described as it behaves – offered again the next time the editor opens, not "tomorrow".
