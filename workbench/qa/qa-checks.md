@@ -85,7 +85,7 @@ Tick **Tags & codes match the source** (it is on by default) to also compare eac
 It covers the usual inline tags (`<b>`, `</b>`, `<1>`, `[2}`, `{2]` and so on) and also your own inline codes: the placeholders such as `{playerName}` or `%s` that you describe under [Settings → 🏷️ Inline Codes](/workbench/settings/inline-codes/). Tags are counted, so a tag that appears twice in the source but only once in the translation is reported too. Segments with no translation yet are skipped.
 
 :::note
-The check recognises tags in angle brackets (`<b>`, `</1>`, `<x id="3"/>`) and memoQ's bracket tags (`[2}`, `{2]`). Numbered placeholders in curly brackets, such as Phrase's `{1}`, and short self-closing tags such as `<2/>` are included only when one of your inline code patterns matches them. The ready-made **{placeholder}** pattern under **➕ Common patterns** covers `{1}`.
+The check recognises tags in angle brackets – including self-closing ones such as the `<2/>` of Trados and SDLXLIFF imports, `<br/>` and memoQ's `<mq:ch …/>` (from v1.10.373) – and memoQ's bracket tags (`[2}`, `{2]`). Numbered placeholders in curly brackets, such as Phrase's `{1}`, are included only when one of your inline code patterns matches them. The ready-made **{placeholder}** pattern under **➕ Common patterns** covers `{1}`.
 :::
 
 You don't need any saved checks for this: if you have no QA check sets yet, **▶ Run** runs the tag and code check on its own. Untick the box when you only want your saved checks.

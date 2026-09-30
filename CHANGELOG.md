@@ -8,6 +8,18 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-30 – Workbench v1.10.373
+
+- **Workbench: the features of v1.10.373.**
+  - **Tag protection:** *Editing & Confirming* has a new *Tags are protected* section, and the Inline Codes page describes its switch.
+  - **Languages:** the Polish interface is complete, 1,286 strings.
+  - **Projects:** safe saving with `.svproj.bak` and opening a damaged project; source files from other CAT tools are bundled into `source/`.
+  - **Glossaries:** synonym chips in TermLens and the Synonyms column in the terms table.
+  - **QuickTrans:** the **Δ** difference marking.
+  - **Shortcuts:** Import Document moved to **Ctrl+Shift+O**, and Ctrl+O opens a project again.
+  - **QA:** the tag check now recognises self-closing tags such as `<2/>`.
+  - **Speed:** the Preview is built when it is shown, and there are notes on large projects under Performance.
+
 ## 2026-09-30
 
 - **Workbench is in active development again.** The banner on every Workbench page said it was no longer developed; it is gone. The docs home page lists Workbench with the other products instead of as a footnote, and its card says development has resumed.

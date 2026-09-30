@@ -12,7 +12,7 @@ This page covers:
 - How to contribute a translation
 
 :::note
-**Current scope.** About 1,100 strings can be translated: the **menu bar**, the **toolbar**, most **Settings** pages, and many dialog titles and buttons. Message boxes, error messages and some labels are not yet prepared for translation, so they stay in English in every language for now. The first pass (v1.10.208) covered only the menu bar and Settings tab labels, around 180 strings.
+**Current scope.** 1,286 strings can be translated: every menu and menu item, the **toolbar**, the **Settings** pages, and most dialog titles, buttons and options. Message boxes, error messages and some labels are not yet prepared for translation, so they stay in English in every language for now. The first pass (v1.10.208) covered only the menu bar and Settings tab labels, around 180 strings.
 :::
 
 ## Available languages
@@ -21,7 +21,10 @@ This page covers:
 | --- | --- |
 | **Chinese (Simplified)** – `zh_CN` | Complete |
 | **Chinese (Traditional)** – `zh_TW` | Complete |
-| **Dutch** – `nl` | Partial – about a third of the strings; the rest show in English |
+| **Polish** – `pl` | Complete (new in v1.10.373) |
+| **Dutch** – `nl` | Partial – about a quarter of the strings; the rest show in English |
+
+The Polish translation follows one glossary of CAT terms (*pamięć tłumaczeń*, *baza terminologiczna*, *dopasowanie rozmyte*, *znacznik*, …). It was made with AI and checked mechanically – every menu accelerator, placeholder, tag and shortcut survived – but has not yet been reviewed by a native speaker, so corrections are very welcome.
 
 Every other language shows the English interface until someone contributes a translation – see [How to contribute a translation](#how-to-contribute-a-translation).
 

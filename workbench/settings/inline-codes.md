@@ -6,6 +6,10 @@ Software strings and game files are full of placeholders and bits of markup that
 
 **Settings → 🏷️ Inline Codes** lets you describe them with regular expressions (from v1.10.372). Anything that matches is then treated like an inline tag.
 
+## Tag protection
+
+The **Tag protection** group at the top of the page has one switch, **Protect tags and codes in the target – treat each one as a single unit** (on by default, from v1.10.373). It applies to every inline tag in the target, not only your codes: the cursor steps over a tag, Backspace or Delete next to a tag removes it whole, and typing or pasting over part of a tag replaces the whole tag. See [Tags are protected](/workbench/editor/editing-confirming/#tags-are-protected). Untick it to edit tags character by character.
+
 ## What Supervertaler does with codes
 
 - **The grid** colours codes like tags, in both the source and the target.

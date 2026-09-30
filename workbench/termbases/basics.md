@@ -69,6 +69,8 @@ The two quick-add shortcuts follow the same split: **Alt+Up** adds the selected 
 
 Each change is saved as soon as you leave the cell.
 
+The **Synonyms** column (from v1.10.373) lists each term's source and target synonyms, for example `MEKO → MEKO`. Synonyms are added and edited in the term entry editor – for example right-click the term in TermLens → **Edit**. TermLens shows a source synonym where it occurs in a segment – see [TermLens](/workbench/termbases/termlens/#synonyms-get-their-own-chip).
+
 ### From Selection
 
 1. Select the term in the source cell

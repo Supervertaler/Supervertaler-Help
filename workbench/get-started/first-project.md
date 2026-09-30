@@ -12,7 +12,7 @@ Want to look around first? **Help → 🎓 Open Sample Project** opens a small r
 
 ### Option 1: Import a Document
 
-1. Go to **Project → Import → Import Document…** (`Ctrl+O`)
+1. Go to **Project → Import → Import Document…** (`Ctrl+Shift+O`)
 2. Select your Word document
 3. Choose the source language (e.g., "English")
 4. Choose the target language (e.g., "Dutch")

@@ -11,6 +11,10 @@ The **Document Preview** is a reading view of your translation as a finished doc
 - **Status at a glance.** Confirmed segments read clean; unconfirmed ones carry a faint amber tint.
 - **The current segment** is highlighted in light blue over its exact text, and the preview follows along as you move through the grid.
 
+:::note
+The preview is built when you open the **📄 Preview** tab or the pop-out window, not while it is hidden behind another tab (from v1.10.373). On a very large project the first view can take a moment; after that it only rebuilds when something has changed.
+:::
+
 ## Click to navigate
 
 Click any sentence in the preview to jump the grid straight to that segment – a quick way to move around a long document by reading rather than scrolling.
