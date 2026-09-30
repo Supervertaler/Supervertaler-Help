@@ -41,7 +41,7 @@ export default defineConfig({
       ],
 
       // Component overrides — see ./src/components/ for the customisations.
-      // Banner:  "no longer actively developed" notice on /workbench/*.
+      // Banner:  a product's status notice (see src/products.ts).
       // Head:    injects per-page Pagefind product filter metadata.
       // Search:  replaces the default Pagefind UI with a custom one that
       //          scopes by current section and groups results by product.
@@ -50,7 +50,7 @@ export default defineConfig({
       //          Workbench).  Landing page and other non-product pages
       //          still see both trees.
       components: {
-        // Banner:  dormancy notice across /workbench/*.
+        // Banner:  a product's status notice across its pages.
         Banner: './src/components/Banner.astro',
         Head: './src/components/Head.astro',
         Search: './src/components/Search.astro',
@@ -120,8 +120,9 @@ export default defineConfig({
             'Supervertaler Sidekick is a free system-wide toolbox for ' +
             'translators: clipboard history, snippets, text expansion, ' +
             'multi-engine translation, AI actions and terminology searches ' +
-            'over any application. Supervertaler Workbench, a standalone CAT ' +
-            'tool, is also documented here but is no longer actively developed.',
+            'over any application. Supervertaler Workbench is a free, ' +
+            'open-source standalone CAT tool with AI translation, translation ' +
+            'memory, terminology and QA.',
           optionalLinks: [
             {
               label: 'supervertaler.com',
@@ -147,7 +148,7 @@ export default defineConfig({
               label: 'GitHub: Workbench',
               url: 'https://github.com/Supervertaler/Supervertaler-Workbench',
               description:
-                'Supervertaler Workbench source and releases (no longer actively developed)',
+                'Supervertaler Workbench source and releases',
             },
           ],
           customSets: [
@@ -172,7 +173,7 @@ export default defineConfig({
             {
               label: 'Supervertaler Workbench',
               description:
-                'Docs for the standalone Workbench app only (no longer actively developed)',
+                'Docs for the standalone Workbench app only',
               paths: ['workbench/**'],
             },
           ],

@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-09-30
 
+- **Workbench is in active development again.** The banner on every Workbench page said it was no longer developed; it is gone. The docs home page lists Workbench with the other products instead of as a footnote, and its card says development has resumed.
 - **Workbench: the pages catch up with v1.10.370–v1.10.372.** They were last updated for v1.10.369, and the three releases since changed a good deal.
 - **Workbench: five new pages.**
   - *Segmentation Rules* – your own break and no-break rules, SRX import and export, and which imports use them.

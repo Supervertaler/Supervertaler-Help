@@ -4,7 +4,7 @@ description: Help and documentation for the Supervertaler suite.
 
 # Welcome to Supervertaler Docs!
 
-Supervertaler is a set of tools for professional translators, localisers and people who work with words. Three are in active development:
+Supervertaler is a set of tools for professional translators, localisers and people who work with words:
 
 #### 🧩 Supervertaler for Trados
 
@@ -24,12 +24,17 @@ The system-wide toolbox for translators. Select text in any Windows application 
 
 [Open the Sidekick docs →](sidekick/)
 
+#### 🖥️ Supervertaler Workbench
+
+A standalone CAT tool of its own: editor, AI translation, translation memory, terminology and QA in one place, plus a clipboard manager, SuperLookup, QuickTrans and voice dictation that work in any application. Runs on Windows, macOS and Linux. Free and open source.
+
+[Open the Workbench docs →](workbench/)
+
 ***
 
 **Not sure which one you need?**
 
 * If you translate in Trados Studio or memoQ and want AI translation that reads the whole document → **Supervertaler for Trados** or **Supervertaler for memoQ**. One licence covers both.
 * If you want clipboard history, quick translations, AI prompts and terminology lookups that work everywhere, in any CAT tool or none → **Supervertaler Sidekick**. It costs nothing, so there is no reason not to run it alongside the plugins.
+* If you would rather have a CAT tool of your own than a plugin → **Supervertaler Workbench**, free and open source.
 * They share one API key file, so a key set in one is picked up by the others.
-
-Supervertaler Workbench, a standalone CAT tool, is no longer actively developed. [Its documentation](workbench/) stays online.
