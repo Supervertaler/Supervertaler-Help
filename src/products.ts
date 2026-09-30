@@ -82,10 +82,6 @@ export const PRODUCTS: Product[] = [
     emoji: '🖥️',
     icon: '/product-icons/sv-workbench.svg',
     llmsSubset: '/_llms-txt/supervertaler-workbench.txt',
-    banner:
-      '<strong>Supervertaler Workbench is no longer actively developed.</strong> ' +
-      'These pages stay online and still describe the last release. ' +
-      'Active development is on <a href="/trados/">Supervertaler for Trados</a>.',
   },
 ];
 

@@ -27,6 +27,25 @@ This page covers common problems when importing or exporting files.
 - Re-export from memoQ as **Bilingual DOCX** in a **two-column table** format.
 - Open the DOCX in Word and confirm it really contains a Source/Target table.
 
+## Import fails with “No module named 'PySide6'”
+
+**Cause:** a memoQ bilingual DOCX or memoQ XLIFF file whose language pair couldn’t be read from the file. Supervertaler is meant to ask you for the pair then, but before v1.10.372 that prompt couldn’t open and the import stopped with this error.
+
+**Fix:** update to v1.10.372 or later. The **Confirm language pair** prompt then opens, and you pick the source and target language yourself.
+
+## The project was created with the wrong language pair
+
+**Symptom:** the grid looks fine, but no TM matches ever appear, although the TM itself looks complete.
+
+**Cause:** older versions guessed the language pair of some bilingual files without telling you. Most notably, **every CafeTran project was created as English → Dutch** before v1.10.372, whatever its real languages.
+
+**Fix:**
+
+- Update. Since v1.10.372, the Trados bilingual review DOCX, CafeTran and Déjà Vu X3 imports show the language pair they found for you to confirm, and the memoQ imports ask when they can’t read it from the file. See [CAT Tool Integration Overview](/workbench/cat-tools/overview/#the-language-pair).
+- Import the file again and choose the right languages. If you’ve already translated in the old project, export the bilingual file first and import that one, so your translations come along.
+
+More on this in [TM Matches Not Appearing](/workbench/troubleshooting/tm-matches/#2-does-the-project-have-the-right-language-pair).
+
 ## Trados SDLPPX fails to extract
 
 **Common causes:**
@@ -66,6 +85,18 @@ This page covers common problems when importing or exporting files.
 
 - Use **Project → Export → 🔗 Relocate Source Folder** and point it to the new location.
 - If the original source is gone, re-import the project from the correct source.
+
+## “Possible Missing Text in Export” warning
+
+**Cause:** the exported file contains noticeably fewer words than your segments. This check runs after exporting DOCX, PPTX, XLSX, IDML, HTML, XLIFF and PO files.
+
+**Fix:** open the exported file and check it before delivering. If the difference is expected, the check can be tuned or switched off. See [Export Verification (Word-Count Check)](/workbench/import-export/export-verification/).
+
+## “Failed to create TM metadata” when importing a TMX
+
+**Cause:** in versions before v1.10.372, importing a TMX under a TM name that was already taken (for example the same file a second time) ended with this error.
+
+**Fix:** update, or choose a different name. Current versions suggest a free name and tell you if the one you type is taken. See [Importing TMX Files](/workbench/translation-memory/importing-tmx/).
 
 ## Exported file has no translations
 

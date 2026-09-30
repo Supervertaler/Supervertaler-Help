@@ -19,6 +19,16 @@ Click any sentence in the preview to jump the grid straight to that segment – 
 
 Click **⧉ Pop out** at the top of the Preview tab to open the preview in a separate, resizable window – ideal for a second monitor. The pop-out window stays fully live: it tracks your edits, follows the current segment, and click-to-navigate still works. Close it to return to just the docked panel.
 
+## Make the text larger or smaller
+
+The bar at the top of the preview has three buttons for the text size (from v1.10.372):
+
+- **A−** makes the text smaller, **A+** makes it larger.
+- The percentage between them shows the current size; click it to go back to **100%**.
+- **Ctrl + mouse wheel** over the preview zooms in and out as well.
+
+The size runs from 60% to 250%, and headings and body text are scaled together. It applies to the docked Preview tab and the pop-out window alike, and it is remembered, so the preview opens at the same size next time.
+
 ## Toggle with a keyboard shortcut
 
 Press **`Ctrl+Alt+P`** from the grid to switch the right panel to the Document Preview, then press it again to jump straight back to whatever tab you had open before (usually the Match Panel).

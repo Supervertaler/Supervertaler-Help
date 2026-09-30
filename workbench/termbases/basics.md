@@ -25,10 +25,11 @@ A termbase is a database of terms with their translations:
 
 ### Automatic Highlighting
 
-Terms from active termbases are highlighted in the source text:
-- Green background by default
+Terms from termbases with **Read** ticked are highlighted in the source text:
+- Semibold green text by default (a pastel green background or a dotted underline are the alternatives)
 - Hover to see the translation
-- Higher priority = darker shade
+- Terms from the project termbase are a darker green than those from background termbases
+- Forbidden terms are marked differently (dark red text in the default style)
 
 ### Multiple Termbases
 
@@ -37,65 +38,74 @@ Maintain separate termbases for:
 - Different domains (legal, medical, IT)
 - Different projects
 
-### Priority Levels
+### Project and Background Termbases
 
-Assign priority (1-10) to terms:
-- Priority 1 (highest): Must be used
-- Priority 5: Standard terms
-- Priority 10: Optional/suggestions
+Each project has one **Project termbase** – the highest-priority one, marked **📌 Project** and shown in pink in the Termbases tab and in TermLens. Tick the **Project** column in the **🏷️ Termbases** tab to make a termbase the project termbase. All other termbases with **Read** ticked are **Background** termbases.
 
-### Forbidden Terms
+The two quick-add shortcuts follow the same split: **Alt+Up** adds the selected term pair to the project termbase, **Alt+Down** to the first background termbase with **Write** ticked.
 
-Mark terms as "forbidden" to flag text that should NOT be translated or should be avoided.
+### Forbidden and Non-Translatable Terms
+
+- Tick **Forbidden** on a term to flag a translation that must **not** be used. Forbidden terms are marked in the grid and in TermLens, and the AI is told not to use them.
+- To keep a word untranslated (a brand or product name, say), tick **Non-translatable (keep source text in target)** in the term entry editor instead, or use **🚫 Add to Non-Translatables** (**Ctrl+Alt+N**) from the right-click menu.
 
 ## Creating Your First Termbase
 
-1. Go to the **Termbases** tab
-2. Click **+ Create Termbase**
+1. Go to the **🏷️ Termbases** tab
+2. Click **+ Create New**
 3. Enter a name (e.g., "Client ABC Terminology")
-4. Choose source and target languages
-5. Click **Create**
+4. Enter the source and target language codes (e.g. `en`, `nl`)
+5. Choose the scope: **Global (all projects)** or **Project-specific**
+6. Click **Create**
 
 ## Adding Terms
 
 ### Manually
 
-1. Click on your termbase
-2. Click **+ Add Term**
-3. Enter source term, target term
-4. Optionally add domain, notes, priority
-5. Click **Save**
+1. Click on your termbase in the list
+2. Click **+ Add Term** – a new, empty row appears in the terms table
+3. Type the source term and target term
+4. Optionally fill in Domain, Notes, Project and Client, or tick Forbidden
+
+Each change is saved as soon as you leave the cell.
 
 ### From Selection
 
-1. Select text in the source column
-2. Right-click → **Add to Termbase**
-3. Enter the target translation
-4. Choose which termbase to add to
+1. Select the term in the source cell
+2. Select its translation in the target cell
+3. Right-click → **📖 Add to Termbase** (or press **Ctrl+Alt+T**)
+4. In the dialog, choose which termbase(s) to add to and add any details
+
+See [Creating Termbases](/workbench/termbases/creating/) for the quick-add shortcuts.
 
 ### Import from File
 
-1. Go to the **Termbases** tab
-2. Click **Import**
-3. Select a TSV file (tab-separated: source, target, domain, notes)
-4. Watch the progress dialog
+1. Go to the **🏷️ Termbases** tab and select the termbase to import into
+2. Click **📥 Import**
+3. Select a TSV file (tab-separated, with a header row – see [Importing Terms](/workbench/termbases/importing/))
+4. Choose whether duplicates are skipped or updated
+5. Watch the progress dialog
 
 ## Termbase Settings
 
 ### Activation
 
-Termbases must be activated to show matches:
+Termbases must be activated to show matches. Each termbase has a row of tick boxes in the **🏷️ Termbases** tab:
 - ✅ **Read**: Terms are highlighted and shown in lookups
 - ✅ **Write**: New terms can be added during translation
+- ✅ **Project**: This is the project termbase (see above)
+- ✅ **AI**: Matching terms are sent to the AI – see [Sending Terms to the AI](/workbench/termbases/ai-injection/)
+- ✅ **🎤 Voice**: The termbase's target terms help voice dictation recognise your terminology – see [Voice](/workbench/voice/overview/)
+- ✅ **🔍 SuperLookup**: The termbase is searched by SuperLookup
 
 ### Highlight Style
 
 Choose how terms appear in the grid:
-- **Background**: Green background shading
-- **Dotted Underline**: Subtle underline
-- **Semibold**: Bold text
+- **Semibold Text** (default): Slightly bolder text in a green tint
+- **Background Color**: Pastel green background
+- **Dotted Underline**: Subtle dotted line below the term, in a colour you choose
 
-Go to **Settings → View Settings → Termbase Highlight Style**.
+Go to **Settings → 🔍 View Settings → 🏷️ Termbase Highlight Style**.
 
 ---
 

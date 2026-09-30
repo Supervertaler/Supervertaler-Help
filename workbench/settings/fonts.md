@@ -8,7 +8,7 @@ Font settings control the typeface and size used in the translation grid and the
 
 - **Font family** – any font installed on your system; the dropdown shows available fonts
 - **Font size** – point size for the grid; companion tabs use the same family at their own size
-- **Global UI font scale** – a single slider that scales every UI element (menus, tabs, settings, Chat panel, Clipboard history, SuperLookup, status bar) at once
+- **Global UI font scale** – a single setting that scales every UI element (menus, tabs, settings, Chat panel, Clipboard history, SuperLookup, status bar) at once
 
 ## Choosing a font
 
@@ -18,9 +18,9 @@ Font settings control the typeface and size used in the translation grid and the
 
 ## Global UI font scale (Retina / high-DPI displays)
 
-Settings → AI Settings → **🖥️ Global UI Font Scale** holds a single slider (50%–200%, default 100%) that scales the entire application UI – not just the grid. Useful when you find Qt's defaults uncomfortably small on a MacBook Retina screen, a 4K monitor, or any high-DPI display.
+**Settings → 🔍 View Settings → 🖥️ Global UI Font Scale** holds a single **UI Font Scale** box (50%–200%, default 100%) that scales the entire application UI – not just the grid. Useful when you find Qt's defaults uncomfortably small on a MacBook Retina screen, a 4K monitor, or any high-DPI display.
 
-The slider covers:
+The scale covers:
 
 - The grid (segment numbers, type column, source and target text)
 - Companion tabs (Clipboard 3-column tree, SuperLookup web resources, Voice command table, Chat panel)
@@ -28,7 +28,7 @@ The slider covers:
 - Tabs, settings panels, AI tools, status bar, menus
 - Termbase and TM panes
 
-Apply the change with the **Apply** button next to the slider; most areas update immediately. Lazy-constructed widgets (Clipboard, SuperLookup, Voice) pick up the new size when they are next opened, so switch away from a companion tab and back once after changing the slider.
+A new value is applied a moment after you change it, because the page saves itself; the **Apply** button next to the box applies it straight away. Most areas update immediately. Lazy-constructed widgets (Clipboard, SuperLookup, Voice) pick up the new size when they are next opened, so switch away from a companion tab and back once after changing the scale.
 
 If you've also customised the grid font size (above), that value still applies on top of the scale – so a 12 pt grid font at 150% renders at 18 pt. Grid zoom (Ctrl+= / Ctrl+-) continues to work at any scale.
 
@@ -36,8 +36,8 @@ If you've also customised the grid font size (above), that value still applies o
 
 - Font changes apply immediately in the grid – no restart needed
 - If glyphs for a specific language appear as boxes, install a font with full Unicode coverage for that script (Noto Sans is a good all-rounder)
-- On a 4K or Retina display, try 125% or 150% UI scale before reaching for individual font-size sliders – it keeps every panel proportional
-- The QuickTrans popup's header controls (🔍 Run in SuperLookup, ⚙ Settings) deliberately don't scale with the slider, because they live in fixed-size buttons and scaling the glyph alone would overflow them
+- On a 4K or Retina display, try 125% or 150% UI scale before reaching for individual font-size settings – it keeps every panel proportional
+- The QuickTrans popup's buttons on the **Source** row (↻ Re-translate, 🔍 Run in SuperLookup, ⚙️ Settings) deliberately don't scale with this setting, because they live in fixed-size buttons and scaling the glyph alone would overflow them
 
 ## Related pages
 

@@ -7,7 +7,7 @@ Supervertaler's Find & Replace feature helps you quickly find text and make cons
 ## Opening Find & Replace
 
 - Press `Ctrl+F` or `Ctrl+H`
-- Or go to **Edit → Find & Replace**
+- Or go to **Edit → Find…** or **Edit → Replace…** (both open the same dialog)
 
 ## Dialog layout
 
@@ -84,6 +84,20 @@ When a replacement changes a target segment that was **Confirmed**, **Proofread*
 
 This applies to **Replace this**, **Replace all** and **F&R Sets** batch runs. Only segments whose text actually changes are affected, and replacing in the source column never changes a status. The setting is remembered between sessions, and `Ctrl+Z` restores the original text and status together.
 
+### Also in writable TMs
+
+Tick **Also in writable TMs** and **Replace all** makes the same change in your translation memories as well as in the project (from v1.10.372). This is handy after you have changed a term throughout a project: the old wording then stops coming back as TM matches.
+
+- Only the TMs this project **writes** to are changed – the ones with **Write** ticked in the project's TM list. Read-only TMs are never touched.
+- Only **Replace all** does this. **Replace this** changes the project only.
+- The TMs are changed using the same options as the project: **Match**, **Case sensitive**, **Auto-adjust case** and **Regex**. TM translations are changed when **Target** is ticked; TM source text only when **Source** is ticked and **Allow Replace in Source Text** is on in **Settings → ⚙️ General**.
+- Nothing happens blindly. The confirmation says how many TM entries will change and in which TMs, and shows a few examples. If there are no matches left in the project itself, **Replace all** still offers to change the TMs.
+- If a change makes a TM entry identical to one that is already in the same TM, the two are merged, and the summary says so.
+
+:::caution
+TM changes **cannot be undone with Ctrl+Z**. That's why the option is unticked every time you open the dialog. Before a big change, you may want to back up your TMs with **File → Export → 📦 Back Up All TMs & Termbases…**.
+:::
+
 ## Regular expressions
 
 Tick **Regex** to treat the Find field as a regular expression (Python `re` syntax).
@@ -111,22 +125,23 @@ Save and reuse multiple find/replace operations as a set.
 
 ### Creating a Set
 
-1. Expand the **📁 F&R Sets** panel
-2. Click **➕ New Set**
+1. Expand the **F&R Sets** panel at the bottom of the dialog
+2. Click **+ New Set**
 3. Give your set a name (e.g., "Client Style Guide")
-4. The set appears in the dropdown
+4. The set appears in the list of sets
 
 ### Adding Operations to a Set
 
 1. Enter your Find and Replace terms
 2. Set your options (Match mode, Case sensitive, Regex, Search in) – these are all saved with the operation
-3. Click **➕ Add Current to Set**
+3. Click **+ Add Current to Set**
 4. The operation is saved to the active set
 
 ### Managing Operations
 
 In the F&R Sets panel:
 - **✓ (Enabled) column** – tick to include an operation when you click **Run All**; untick to skip it. (Hover for a reminder.)
+- **QA column** – tick to turn the operation into a find-only **QA check**. It then never replaces anything, and **QA → 🔎 Run QA Checks…** lists its matches instead. See [QA Checks](/workbench/qa/qa-checks/).
 - **Edit** – double-click an operation to load it back into the Find/Replace fields.
 - **🗑 Delete Operation** – removes the selected operation from the set.
 - **🗑 Delete Set** – removes the selected set entirely.
@@ -140,8 +155,10 @@ The **Match** column shows each operation's mode, or **Regex** when the operatio
 3. Each enabled operation runs in turn; regex operations (shown as "Regex" in the Match column) run with backreferences
 4. See how many replacements were made
 
+Operations with **QA** ticked are always skipped by **Run All**, even when they are enabled.
+
 :::caution
-**An empty "Replace with" deletes matches.** An operation with a blank Replace field replaces every match with nothing – i.e. it deletes the matched text. If a set contains any such operation, Run All lists them and defaults the confirmation button to **No**, so you don't wipe text by accident.
+**An empty "Replace with" deletes matches.** An operation with a blank Replace field replaces every match with nothing – i.e. it deletes the matched text. If a set contains any such operation, Run All lists them and defaults the confirmation button to **No**, so you don't wipe text by accident. If you only want to *find* something, tick **QA** for that operation instead.
 :::
 
 ### Importing & exporting sets
@@ -180,5 +197,5 @@ Clean up common MT artifacts:
 :::
 
 :::note
-**Undo Support:** All replacements can be undone with `Ctrl+Z` (within the same session).
+**Undo Support:** All replacements in the project can be undone with `Ctrl+Z` (within the same session). Changes made in your TMs with **Also in writable TMs** are the exception.
 :::

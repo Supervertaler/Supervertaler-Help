@@ -5,12 +5,12 @@ title: "Term Extraction"
 **Term extraction** sends your project's source text to your configured AI model and returns a proposed **bilingual project glossary** – source terms paired with translations – which you review, edit, and turn into a project termbase in one step.
 
 :::note
-**Requires Workbench v1.10.357 or later.** Earlier versions used a mechanical frequency-based extractor (monolingual, no translations); it has been retired. Extraction now uses the same AI provider and model as your translations, configured under **AI → Settings**.
+**Requires Workbench v1.10.357 or later.** Earlier versions used a mechanical frequency-based extractor (monolingual, no translations); it has been retired. Extraction now uses the same AI provider and model as your translations, configured under **Settings → 🤖 AI Settings**.
 :::
 
 ### Opening the extraction dialogue
 
-Go to the **Termbases** tab and click **🔍 Extract Terms** in the button bar beneath the termbase list, next to **+ Create New**.
+Go to the **🏷️ Termbases** tab and click **🔍 Extract Terms** in the button bar beneath the termbase list, next to **+ Create New**.
 
 Extraction reads the source segments of the open project, so open a project first – clicking with none open just tells you to.
 

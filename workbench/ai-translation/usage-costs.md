@@ -4,6 +4,8 @@ title: "Token Usage & Costs"
 
 Supervertaler Workbench keeps a persistent log of the AI tokens and cost of every operation, plus a built-in **Usage & Costs** report to total and export it. Use it to answer *"how much did this project cost?"*, *"how many tokens did we use this month?"*, or *"what should I bill this client for AI?"* – across every provider, including local and custom models.
 
+You can also see [what one project has cost so far](#the-cost-of-one-project), get [an estimate before a batch run](#an-estimate-before-you-start), and [show costs in euros](#showing-costs-in-euros).
+
 The log uses the **same format as the Supervertaler for Trados plugin**, so if you use both, their logs merge into a single analysis.
 
 :::note
@@ -39,16 +41,44 @@ Open **Tools → 💰 Token Usage & Costs…**. The window totals your usage and
 
 Each row shows calls, input/output tokens, cost, and a **% actual** column (the share backed by provider-reported figures rather than estimates). The footer shows the range total and your month-to-date spend against your budget.
 
+### Showing costs in euros
+
+The report has a **Show costs in:** switch with **USD** and **EUR**. Choose **EUR** and a **1 USD =** box appears next to it with the exchange rate. Supervertaler doesn't look the rate up online, so set it to your bank's or card's rate.
+
+Your choice is remembered, and it also applies to [Project Information](#the-cost-of-one-project) and the [Batch Translate estimate](#an-estimate-before-you-start). The price list and the exported ledger stay in US dollars, as in Supervertaler for Trados.
+
 ### Exporting
 
 **Export CSV…** and **Export Excel…** write the detailed ledger (one row per call) for the selected range – ready for invoicing or analysis.
+
+### The cost of one project
+
+**Project → 📋 Project Info…** opens the **Project Information** window. Its **AI & Prompts** section shows:
+
+* **AI Model** – the model the project is being translated with, and its provider. For a custom OpenAI-compatible endpoint it also names the active profile. It always matches the model shown in the status bar.
+* **AI cost so far** – what the project has cost in AI: the total, the number of AI calls, and the tokens in and out. If some calls used a model that isn't in the price list, it says how many.
+* **Estimated cost to AI-translate the rest** – an estimate for the segments that are still empty, with your current model. A local (Ollama) model shows as free; a model that isn't in the price list shows as unknown.
+
+The figures come from the usage log and are matched on the project name. Calls made while the log was switched off aren't counted.
+
+Every AI call made while a project is open counts towards that project: batch translation, but also **Ctrl+T**, the [Chat](/workbench/ai-translation/chat/) assistant and [AutoTagger](/workbench/ai-translation/autotagger/). (Before v1.10.372 only batch translation recorded its project, so the others were listed under "(none)" when you grouped the report by Project.)
+
+### An estimate before you start
+
+The **Batch Translate** dialog shows what the run is likely to cost before you click **Start Translation**, for example:
+
+```
+💰 Estimated cost: ~$0.42 · ~120,000 tokens in / ~35,000 out in 12 call(s)
+```
+
+The estimate is worked out the way the batch will actually be sent: with your current prompt and glossary, your batch size, and the same price list as the usage log. When your prompt is long enough for the provider to cache it, batches 2 onwards are priced at the cheaper cached rate, as they will be billed. Token counts are estimated at about 4 characters per token, so treat the figure as a guide; the real cost of each call is logged as usual. See [Batch Translation](/workbench/ai-translation/batch-translation/#the-cost-estimate) for details.
 
 ### Settings & budget
 
 **Settings → AI Settings → AI Cost Monitoring** has:
 
 * **Keep a persistent token-usage log** – the on/off switch.
-* **Monthly budget (USD)** – a soft monthly limit (cents allowed; `0` disables). Once this month's logged spend reaches it, starting a batch translation shows a warn-and-continue prompt. It is advisory and **never blocks**.
+* **Monthly budget (USD)** – a soft monthly limit (cents allowed; `0` disables). It is always entered in US dollars, even when you show costs in euros. Once this month's logged spend reaches it, starting a batch translation shows a warn-and-continue prompt. It is advisory and **never blocks**.
 
 ### Pricing custom / self-hosted models
 
@@ -58,7 +88,7 @@ Costs come from a single price list, `pricing.json`, shared with the Trados plug
 { "models": { "my-university-llama": { "input": 0.0, "output": 0.0 } } }
 ```
 
-Until a rate is set, a custom model's **tokens are still logged**, with the cost marked unknown rather than guessed. Local models ([Ollama](/workbench/ai-translation/ollama/)) are priced at `0`.
+Until a rate is set, a custom model's **tokens are still logged**, with the cost marked unknown rather than guessed. The Batch Translate estimate and Project Information say "unknown" for such a model too, rather than pretending it is free. Local models ([Ollama](/workbench/ai-translation/ollama/)) are priced at `0`.
 
 ### How accurate are the figures?
 
@@ -78,4 +108,4 @@ For the definitive bill, your **provider's own usage dashboard** is authoritativ
 * [Batch Translation](/workbench/ai-translation/batch-translation/) – the main driver of token usage
 * [Supported LLM Providers](/workbench/ai-translation/providers/) – which providers report usage
 * [Using Local LLMs (Ollama)](/workbench/ai-translation/ollama/) – free, locally-run models
-* [General Settings](/workbench/settings/general/) – where AI Cost Monitoring lives
+* [General Settings](/workbench/settings/general/) – the Settings tabs, including AI Settings, where AI Cost Monitoring lives

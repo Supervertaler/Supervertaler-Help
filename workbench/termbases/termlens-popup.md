@@ -29,7 +29,7 @@ When the popup opens, the first chip has a thin blue ring around it – that is 
 | Key                            | Action                                             |
 | ------------------------------ | -------------------------------------------------- |
 | **Right** / **Down** / **Tab** | Move the current-chip highlight to the next chip   |
-| **Left** / **Up**              | Move it to the previous chip                       |
+| **Left** / **Up** / **Shift+Tab** | Move it to the previous chip                    |
 
 Cycling wraps: from the last chip, Right takes you back to the first.
 
@@ -74,8 +74,8 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 
 |          | TermLens popup (Ctrl tap)                                | [TermPicker](/workbench/termbases/termpicker/) (Ctrl+Shift+P)              |
 | -------- | -------------------------------------------------------- | ------------------------------------------------------- |
-| Layout   | Source segment with chips underneath each matched word   | Sortable, scrollable table                              |
-| Best for | Skimming matches in segment context                      | Many matches that benefit from sorting / typing-to-jump |
+| Layout   | Source segment with chips underneath each matched word   | Numbered, scrollable table                              |
+| Best for | Skimming matches in segment context                      | Many matches, picked by number                          |
 | Keyboard | Arrow / Tab cycles a highlighted chip                    | 0–9 jumps directly; Up / Down navigate                  |
 | Modality | Modeless – Esc / mouse move / click outside to dismiss   | Modal – Esc or Cancel to close                          |
 

@@ -23,18 +23,19 @@ By default, Ctrl+Alt+L lands on the **Termbases** sub-tab. You can change this i
 
 ### TM Matches
 
-Search your Translation Memories for similar text:
-- Fuzzy matching with percentage scores
-- Horizontal (table) or vertical (list) view toggle
-- Source TM column shows which TM the match came from
-- Search direction: Both, Source only, or Target only
+Search your Translation Memories for entries that contain your search text (concordance):
+- Horizontal (table) or vertical (list) view toggle, with a **Text size** box beside it
+- The TM column shows which TM each hit came from
+- **💾 Export Results…** saves the hits to Excel or CSV
+
+See [TM Search (Concordance)](/workbench/superlookup/tm-search/).
 
 ### Termbase Matches
 
 Search your termbases:
 - Shows Source, Target, Domain, Notes columns
 - Right-click to "Edit in Termbase"
-- Direction and language filters (Both / Source / Target + From/To)
+- Language filters (From/To)
 
 ### Machine Translation
 
@@ -46,15 +47,13 @@ Configure providers in **Settings → MT Settings**.
 
 ### Web Resources
 
-Quick access to online reference sites: IATE, Linguee, ProZ.com, Reverso Context, Wikipedia, Wiktionary, Google, Google Patents, Juremy, AcronymFinder, BabelNet, and more.
+Quick access to online reference sites: IATE, Linguee, ProZ.com, Reverso Context, Wikipedia, Wiktionary, Google, Google Patents, Juremy, AcronymFinder, BabelNet, and more. You can also [add sites of your own](/workbench/superlookup/web-resources/#add-your-own-resources) with **⚙ Custom Resources…**.
 
 Web resource tabs maintain login sessions between searches, so you stay logged in to sites like ProZ.com.
 
 ## Search controls
 
-**Language filters** – use the **From** and **To** dropdowns to filter by language pair. Auto-populated from your TMs and termbases.
-
-**Search direction** – **Both** searches source and target columns; **Source** and **Target** restrict to one side.
+**Language filters** – use the **From** and **To** dropdowns to filter by language pair. Auto-populated from your TMs and termbases. SuperLookup always searches both the source and the target side.
 
 **Search box** – type a query and press Enter (or click 🔍). When Ctrl+K or Ctrl+Alt+L opens SuperLookup, the selected text is placed in the search box and the search runs immediately.
 

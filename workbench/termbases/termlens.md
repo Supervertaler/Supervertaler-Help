@@ -38,7 +38,7 @@ Each matched term in TermLens is assigned a numbered badge. Press **Alt+1** to i
 
 **Double-tap** for terms 10 and above: press **Alt+1, Alt+1** quickly to insert term 11, **Alt+2, Alt+2** for term 22, etc.
 
-> **Note:** Alt+0 is reserved for the Compare Panel. TermLens numbering starts at 1.
+> **Note:** TermLens numbering starts at 1. **Alt+0** inserts the TM match shown in the Match Panel's **✅ TM Target** box.
 
 ### Right-click menu
 
@@ -72,11 +72,11 @@ You can customise the TermLens font independently from the grid font:
 - TermLens respects termbase activation – only terms from activated termbases are shown.
 - If you have many termbases, designate one as the **Project termbase** (shown in pink) to make its terms stand out.
 
-## TermLens for Trados
+## TermLens in Trados Studio
 
-A standalone version of TermLens is also available as a plugin for **Trados Studio 2024+**. It reads the same SQLite termbase format used by Supervertaler and displays terminology matches directly inside the Trados editor.
+TermLens is also part of **Supervertaler for Trados**, where it shows terminology matches directly inside the Trados editor. It reads the same SQLite termbase format, so a termbase made in Workbench works there too.
 
-→ [TermLens for Trados on GitHub](https://github.com/michaelbeijer/TermLens)
+→ [TermLens in Supervertaler for Trados](/trados/termlens/)
 
 ---
 

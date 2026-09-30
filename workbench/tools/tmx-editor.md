@@ -6,15 +6,16 @@ Supervertaler includes a built-in TMX editor for inspecting and editing TMX tran
 
 ## Where to find it
 
-- Open the **Tools menu** at the top of the window → **✏️ TMX Editor**. The editor opens in its own window.
+- Open the **Tools menu** at the top of the window → **✏️ TMX Editor…**. The editor opens in its own window.
 
 ## What you can do
 
-- Open, edit, and save TMX files.
+- Create, open, edit, and save TMX files (**📁 New**, **📂 Open**, **💾 Save**, **💾 Save As...**).
+- Add and delete translation units (**➕ Add TU**, **❌ Delete**).
 - Search and filter by source/target text.
-- Edit TMX header metadata.
-- Run basic validation and view statistics.
-- Perform bulk operations (for example: delete entries, copy source → target).
+- Edit TMX header metadata (**ℹ️ Header**).
+- Run basic validation (**✓ Validate**) and view statistics (**📊 Stats**).
+- Strip tags from every translation unit at once (**🧹 Clean Tags**).
 
 ## Common workflows
 
@@ -27,7 +28,13 @@ Supervertaler includes a built-in TMX editor for inspecting and editing TMX tran
 
 ### Remove unwanted tags
 
-If you’re trying to simplify a TMX that contains formatting or CAT-tool tags, you can remove them before importing.
+If you’re trying to simplify a TMX that contains formatting or CAT-tool tags, you can remove them before importing:
+
+1. Click **🧹 Clean Tags**.
+2. Tick the kinds of tag to remove – or use **Select All**, **Select None** or **Select Formatting Only**.
+3. Choose whether tags are removed completely or replaced with a space, and whether to clean the source, the target or both.
+4. **👁️ Preview** summarises your choices; **🧹 Clean Tags** applies them to all translation units.
+5. Save the TMX.
 
 :::note
 TMX is just XML – some tags are real inline markup (TMX/XLIFF-style), others are literal text like `&lt;b&gt;...&lt;/b&gt;`.

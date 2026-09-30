@@ -8,15 +8,16 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 
 **Supervertaler Workbench** integrates AI-powered translation with traditional CAT tool workflows. It runs on Windows, macOS, and Linux.
 
-- **Translate with AI** – GPT-4, Claude, Gemini, or local models via Ollama
+- **Translate with AI** – OpenAI, Claude, Gemini, or local models via Ollama
 - **Work with CAT tools** – import/export files from memoQ, Trados, Phrase, CafeTran
 - **Translation Memory** – fuzzy matching, TMX import, concordance search
 - **Terminology** – termbases, automatic term highlighting, TermLens
+- **Your own rules** – [segmentation rules](/workbench/settings/segmentation-rules/) and [inline codes](/workbench/settings/inline-codes/) (placeholders such as `{name}` or `%s` treated like tags)
 - **Companion tabs** – Chat (AI conversation), SuperLookup, Clipboard manager, Voice
 - **Voice** – always-on voice commands and push-to-talk dictation for any application
 - **SuperLookup** – system-wide translation lookup (TM, termbase, MT, web)
 - **QuickTrans Popup** – always-on-top popup with simultaneous translations from every enabled provider
-- **Quality Assurance** – spellcheck, tag validation, non-translatables
+- **Quality Assurance** – [QA checks](/workbench/qa/qa-checks/), [LanguageTool](/workbench/qa/languagetool/), spellcheck, tag validation, non-translatables
 
 | Requirement | Details |
 |-------------|---------|
@@ -25,7 +26,7 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 | **License** | Free and open source (MIT) |
 | **Source** | [github.com/Supervertaler/Supervertaler-Workbench](https://github.com/Supervertaler/Supervertaler-Workbench) |
 
-Start here: [Quick Start Guide](/workbench/get-started/quick-start/)
+Start here: [Quick Start Guide](/workbench/get-started/quick-start/) – or open **Help → 🎓 Open Sample Project** to try everything on a small ready-made project.
 
 ---
 

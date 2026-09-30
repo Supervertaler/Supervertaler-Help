@@ -19,7 +19,7 @@ The 🌍 actions and their out-of-the-box bindings:
 | Open Clipboard | **Ctrl+Alt+C** (Win/Linux) / **⌘⌥C** (macOS) | Auto-copies the current selection, then opens Workbench's Clipboard tab |
 | Open SuperLookup | **Ctrl+Alt+L** / **⌘⌥L** | Auto-copies the current selection, then opens Workbench's SuperLookup tab with the text pre-filled and the search auto-fired |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup; auto-copies the selection |
-| Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Toggles recording; a "🎤 Listening…" toast confirms the mic is live |
+| Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Hold to record, release to stop (the default; press again to stop in toggle mode, and on macOS and Linux); a "🎤 Listening…" toast confirms the mic is live |
 | Voice commands push-to-talk | **Ctrl+Alt+V** / **⌘⌥V** | Hold to listen for voice *commands* only – for pairing Workbench's command listener with an external dictation app |
 | Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Continuous listening on/off |
 
@@ -76,6 +76,8 @@ The Status indicator on the right-hand side of Settings → Keyboard Shortcuts s
 **Windows**
 
 Global hotkeys are registered via the native `RegisterHotKey` API, which consumes the keystroke at the OS level. The combination is reserved for Supervertaler whenever it's running. If another app has already claimed the same combination, Supervertaler logs a `failed_hotkeys` warning and that one combination won't fire – re-bind to something free in Settings → Keyboard Shortcuts.
+
+Windows passes the **AltGr** key on as Ctrl+Alt, so a Ctrl+Alt hotkey could swallow the character AltGr types: no **ł** (AltGr+L) on a Polish keyboard, no **@** (AltGr+Q) on a German one. Since v1.10.372, when a Ctrl+Alt hotkey fires while the right Alt key is held and your keyboard layout types a character with that key, the character is typed and the hotkey is not run. **Left Ctrl + left Alt** still runs the hotkey, and so does AltGr on a layout such as English (US), where AltGr+key types nothing.
 
 **Linux**
 

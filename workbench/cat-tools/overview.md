@@ -8,10 +8,11 @@ Supervertaler is designed to work alongside professional CAT (Computer-Assisted 
 
 | CAT Tool | Import Format | Export Format |
 |----------|--------------|---------------|
-| **memoQ** | Bilingual DOCX, XLIFF | Bilingual DOCX |
+| **memoQ** | Bilingual DOCX or RTF, XLIFF | Bilingual DOCX or RTF, XLIFF |
 | **Trados Studio** | SDLPPX packages | SDLRPX return packages |
 | **Phrase (Memsource)** | Bilingual DOCX | Bilingual DOCX |
 | **CafeTran Espresso** | Bilingual table DOCX | Bilingual table DOCX |
+| **Déjà Vu X3** | Bilingual RTF | Bilingual RTF |
 
 ## Why Use Supervertaler with CAT Tools?
 
@@ -75,6 +76,28 @@ Segment statuses map between tools:
 - **Approved** → Trados *Sign-off Approved* / memoQ *Reviewer 2 confirmed*
 
 See [Segment Statuses](/workbench/editor/segment-statuses/) for the full reference.
+
+### The language pair
+
+Every project has a source and a target language, and TM matches are looked up
+for exactly that pair – a project with the wrong pair finds no TM matches at all,
+even though the TM looks fine. How Supervertaler gets the pair depends on the
+file you import:
+
+| Import | Language pair |
+|--------|---------------|
+| **Trados** package (SDLPPX) or SDLXLIFF | Read from the file. |
+| **memoQ** bilingual DOCX, RTF or XLIFF | Read from the table's column headers (DOCX), its header row (RTF) or the file itself (XLIFF). In the DOCX headers, codes such as `IT` or `it-IT`, names in other languages such as *Italiano*, and regional forms such as *English (United Kingdom)* are all understood. If the pair can't be read, the **Confirm language pair** prompt asks you. |
+| **Phrase** bilingual DOCX | Read from the file; the **Select Languages** dialog opens pre-filled for you to confirm. |
+| **Trados** bilingual review DOCX | The file has no language header, but Word stores a language on the source text and on the target text. The **Select Languages** dialog opens pre-filled from those ("Auto-detected from file: German → French. Confirm or change below."). If both columns carry the same language, nothing is assumed. |
+| **CafeTran** bilingual DOCX | The **Confirm language pair** prompt opens, pre-filled the same way from the Word languages of the two columns, or from the column headers if they are language codes. |
+| **Déjà Vu X3** bilingual RTF | The **Confirm language pair** prompt shows the pair Supervertaler worked out from the language codes in the file. If you correct it, the export tags the translations with the corrected language too. |
+
+The pre-filled and confirmed pairs for Trados review DOCX, CafeTran and Déjà Vu
+X3 files are new in v1.10.372. Before that, CafeTran projects were always
+created as English → Dutch, and Déjà Vu projects fell back to Dutch → Spanish
+when no languages were found. If an older project of yours gets no TM matches,
+see [TM Matches Not Appearing](/workbench/troubleshooting/tm-matches/#2-does-the-project-have-the-right-language-pair).
 
 ### Round-Trip Compatibility
 

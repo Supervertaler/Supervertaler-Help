@@ -4,7 +4,7 @@ title: "Voice"
 
 **Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
 
-Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voice** entry, or press **Ctrl+Alt+O** to toggle Always-On listening from anywhere on your computer.
+Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **🎤 Open Voice** entry, or press **Ctrl+Alt+O** to toggle Always-On listening from anywhere on your computer.
 
 ![](/.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
 
@@ -14,27 +14,29 @@ Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **Open Voic
 
 ### Always-On listening
 
-Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to the active recognition engine.
+Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to **Vosk**, the offline speech recogniser Always-On uses.
 
-**With the Vosk engine** _(default)_ the recogniser only emits text for phrases in your command list – anything else is silently dropped as `[unk]`. So Vosk Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions.
+Vosk only emits text for phrases in your command list – anything else is silently dropped as `[unk]`. So Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions. Running text is dictated with push-to-talk (below), not with Always-On.
 
-**With faster-whisper or OpenAI Whisper API** every utterance is transcribed in full. If it matches a command the action fires; if not (and "Listen for commands only" is off), the transcribed text is typed into whichever window is in the foreground.
+**To start:** click **▶️ Start Always-On** in the Voice tab, or press **Ctrl+Alt+O** from any application.
 
-**To start:** click **▶ Start Always-On** in the Voice tab, or press **Ctrl+Alt+O** from any application. A red mic icon appears in the system tray while Always-On is active.
+**To stop:** click **⏹️ Stop Always-On** or press **Ctrl+Alt+O** again.
 
-**To stop:** click **⏹ Stop Always-On** or press **Ctrl+Alt+O** again.
+Voice also keeps a microphone icon in the system tray: grey while Always-On is off, red while it is listening. Click the icon to start or stop Always-On; right-click it for **▶ Start Always-On** and **🎤 Open Voice**.
 
 **Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
 
 ### Push-to-Talk dictation (Ctrl+Shift+Space)
 
-Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the trigger again (in toggle mode). The transcribed text is then typed at the cursor position.
+Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the hotkey again (in toggle mode). The speech is transcribed on your own computer with faster-whisper, and the text is typed at the cursor position.
 
 **Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, Voice pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
 
-**Push-to-talk modes** (configurable in the Push-to-Talk settings):
-- **Toggle** (default) – press once to start, press again to stop
-- **Hold-to-talk** – hold the key to record, release to stop. _Note: hold-to-talk only works if you rebind dictation to a non-global (in-app) key. The default global hotkey always uses Toggle mode (Windows can't reliably deliver key-up events across processes for global hotkeys)._
+**Push-to-talk modes** (the **Mode** dropdown in the **🗣️ Dictation (push-to-talk)** group):
+- **Hold-to-talk** (default, recommended) – hold the hotkey to record, release to stop
+- **Toggle** – press once to start, press again to stop
+
+_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. On macOS and Linux, releasing the global hotkey isn't detected yet: press it again to stop, or let the maximum recording duration end the recording._
 
 ### Push-to-Talk for commands (Ctrl+Alt+V) – v1.10.193
 
@@ -63,7 +65,7 @@ The key is **recorded, not typed**, so it works with keys you can't express as t
 
 **To set it up** – Voice tab → **⏸️ Pause Always-On for external dictation**:
 
-1. Click **Record key**, then press the key you use for your external dictation tool. The label shows what was captured (e.g. *Media Next / Fast-Forward*).
+1. Click **⏺ Record key**, then press the key you use for your external dictation tool. The label shows what was captured (e.g. *Media Next / Fast-Forward*).
 2. Choose a **mode**:
    - **Hold** _(default)_ – Always-On pauses only while you hold the key and resumes the instant you release it. Pair this with **hold-to-talk** tools like Wispr Flow: hold your key → speak → release, and Always-On is live again.
    - **Toggle** – press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
@@ -105,11 +107,11 @@ Disabled commands are greyed out and are skipped during recognition. Their setti
 
 Double-click any row to open the Edit Voice Command dialog. You can change the phrase, aliases, action type, and action value.
 
-You can also use the **Edit** button in the toolbar above the table.
+You can also select a row and click the **✏️ Edit** button below the table.
 
 ### Adding a command
 
-Click **+ Add** above the table. Choose a command type:
+Click **➕ Add** below the table. Choose a command type:
 
 - **Command** – calls an internal Workbench action (confirm segment, next segment, etc.)
 - **Keystroke** – sends a key combination to the active window. Click into the **Keystroke** field and press the keys you want to send (e.g. press Ctrl+Enter); the field shows the platform-native symbols (⌘⇧⌥⌃ on macOS, Ctrl+Shift+Alt elsewhere) so you don't have to translate between platforms.
@@ -124,51 +126,48 @@ The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below
 
 ### Removing a command
 
-Select the row and click **Remove**, or select multiple rows and remove them together.
+Select the row and click **🗑️ Remove**, or select multiple rows and remove them together. **🔄 Reset** restores the default command list.
 
 ### Edits take effect immediately under Vosk
 
-When the Always-On engine is **Vosk**, adding / editing / removing / disabling a command immediately rebuilds Vosk's recogniser grammar in the background – you don't have to stop and restart Always-On to "teach" Vosk a new phrase. The status bar briefly shows `🔄 Vosk grammar refreshed (N phrases)` to confirm the swap took effect. The next utterance you speak will use the new grammar.
+Adding / editing / removing / disabling a command immediately rebuilds Vosk's recogniser grammar in the background – you don't have to stop and restart Always-On to "teach" Vosk a new phrase. The status bar briefly shows `🔄 Vosk grammar refreshed (N phrases)` to confirm the swap took effect. The next utterance you speak will use the new grammar.
 
 ***
 
 ## Settings
 
-### Always-On engine
+All Voice settings are in the left half of the **🎤 Voice** tab, from top to bottom:
 
-The dropdown in the Always-On section picks which speech-recognition backend listens for commands.
+### Microphone
 
-| Engine | Best for | Speed | Cost | Internet |
-| --- | --- | --- | --- | --- |
-| **Vosk** _(default, recommended)_ | Commands only – your phrase list, ignores everything else | Instant (~30 ms) | Free | No |
-| **faster-whisper** | Commands + dictation of running text from one continuous mic stream | ~1–3 s | Free | No |
-| **OpenAI Whisper API** | Same as faster-whisper but offloaded to OpenAI's servers | ~0.5–2 s | $0.006 / minute of audio | Yes (API key) |
+The **Microphone** dropdown picks the input device for both Always-On and push-to-talk. **System default** follows whatever microphone your operating system has selected. If a chosen microphone is unplugged, Voice falls back to the system default. The choice is saved as soon as you make it.
 
-**Vosk** is the default for new installs. It's purpose-built for fixed-vocabulary command recognition: pass it your active phrase list, and it biases the recogniser toward those phrases while silently dropping anything else as `[unk]`. That makes it both faster *and* more accurate for commands than any Whisper variant – and you can leave Always-On running all day for $0 in API fees and near-zero CPU load.
+### 🎤 Voice commands (Always-On listening)
 
-**faster-whisper** runs the same Whisper models OpenAI ships, but on a CTranslate2 C++ engine – roughly 4× faster than the original `openai-whisper` package on CPU, with much lower RAM. Choose this if you want **continuous dictation of running text** in always-on mode (every utterance gets transcribed in full, then either typed if it doesn't match a command, or fires the matched command).
+- **▶️ Start Always-On** / **⏹️ Stop Always-On**, with a status line (**⚪ Not active**, **🟢 Listening for speech…**, **🔴 Recording…**, **⏳ Processing…**).
+- **Mic sensitivity** – the amplitude threshold used to detect speech onset:
+  - **Low (noisy)** – raises the threshold; ignores quiet background sounds but may miss soft speech
+  - **Medium (normal)** – default; works well in a typical home office
+  - **High (quiet)** – lowers the threshold; captures quiet voices but may trigger on background noise
+- **Push-to-talk hotkey** – shows the Command Push-to-Talk chord (**Ctrl+Alt+V** by default). Click **Change in Settings → Keyboard Shortcuts** to rebind it.
 
-**OpenAI Whisper API** sends each utterance to OpenAI's hosted `whisper-1` model. Slightly faster end-to-end than running faster-whisper locally on most laptops, but each minute of audio costs about $0.006 – so leaving it on all day adds up. Requires an OpenAI API key in **Settings → AI Settings**.
+There is no engine choice here: Always-On always uses **Vosk** – offline, free and with almost no CPU load, which makes it both faster and more accurate for commands than a Whisper model. The first time you start Always-On, the small English Vosk model (~40 MB) auto-downloads to `vosk-models/` in your data folder. Same for the small Dutch model when your project's target language is Dutch. Models are cached after the first download.
 
-The first time you start Always-On with Vosk, the small English model (~40 MB) auto-downloads to `<data folder>/vosk-models/`. Same for the small Dutch model when your project's target language is Dutch. Models are cached forever after the first download.
+### ⏸️ Pause Always-On for external dictation
 
-### Push-to-talk dictation engine
+See [Pause Always-On for external dictation](#pause-always-on-for-external-dictation--v110246) above.
 
-The **Dictation engine** dropdown in the Push-to-Talk Mode group controls what handles your push-to-talk dictation hotkey (**Ctrl+Shift+Space** by default). This is independent of the Always-On engine, because the two paths have different needs:
+### 🗣️ Dictation (push-to-talk)
 
-| Setting | What runs when you trigger push-to-talk dictation |
+Push-to-talk dictation always uses **faster-whisper**, which runs OpenAI's Whisper speech models on your own computer (offline, free).
+
+| Setting | What it does |
 | --- | --- |
-| **Same as Always-On** _(default)_ | Auto-routes: Vosk or faster-whisper Always-On → faster-whisper push-to-talk; OpenAI API Always-On → OpenAI API push-to-talk |
-| **faster-whisper (offline)** | Always faster-whisper, regardless of Always-On engine |
-| **OpenAI Whisper API (online, fast)** | Always the API, regardless of Always-On engine. Useful pairing: Vosk for free continuous commands + OpenAI API for fast running-text dictation. |
-
-The "ℹ️ Push-to-talk will use: ..." indicator below the dropdown shows the *resolved* engine (after auto-routing) so you always know which backend will run.
-
-**Why isn't Vosk an option here?** Vosk's grammar mode is built for fixed phrases, not free-form transcription. Pressing Ctrl+Shift+Space produces running text, which Whisper handles vastly better. So push-to-talk silently falls through to a Whisper engine even when Always-On is set to Vosk.
-
-### faster-whisper model
-
-The Whisper model size dropdown applies whenever a Whisper engine is active – that's faster-whisper for either Always-On or push-to-talk, *or* the OpenAI API. (The API ignores this setting and always uses `whisper-1` server-side.) Larger models are more accurate but slower and need more RAM.
+| **Hotkey** | Shows the dictation hotkey (**Ctrl+Shift+Space** by default). Click **Change in Settings → Keyboard Shortcuts** to rebind it – any key works, for example numpad **+** for one-finger dictation. |
+| **Mode** | **Hold-to-talk** (default) or **Toggle** – see [Push-to-Talk dictation](#push-to-talk-dictation-ctrlshiftspace) above. |
+| **Model** | The Whisper model size. Larger models are more accurate but slower to load and transcribe, and need more RAM. |
+| **Max** | The longest single recording, from 3 to 60 seconds (default 10). Speech beyond the limit is cut off and transcribed up to that point. |
+| **Language** | **Auto (use project target language)** (default) uses the project's target language. **Auto-detect (Whisper picks per utterance)** lets Whisper work out the language each time – handy if you dictate in more than one language, but it needs about a second of speech to be reliable. Or pick a language explicitly. |
 
 | Model | Download size | Notes |
 | --- | --- | --- |
@@ -178,38 +177,31 @@ The Whisper model size dropdown applies whenever a Whisper engine is active – 
 | medium | ~1.5 GB | High accuracy |
 | large | ~2.9 GB | Best accuracy, slow on CPU |
 
-### Mic sensitivity
+### 📚 Dictation vocabulary
 
-Controls the amplitude threshold used to detect speech onset.
+Helps Whisper spell brand names and technical terms correctly. Common ones (Supervertaler, Trados, memoQ, OpenAI and so on) are built in.
 
-- **Low (noisy)** – raises the threshold; ignores quiet background sounds but may miss soft speech
-- **Medium (normal)** – default; works well in a typical home office
-- **High (quiet)** – lowers the threshold; captures quiet voices but may trigger on background noise
+- **Custom dictionary** – your own terms, separated by commas or new lines: client names, product names, jargon.
+- **Also bias from your termbases (target-language terms)** – adds the target-language terms of every termbase you have ticked in the **🎤 Voice** column of the **🏷️ Termbases** tab (up to 200 terms per dictation). No termbase is ticked by default; ticking this box takes you to the Termbases tab so you can choose.
+- **Replacements** – fixes for words Whisper keeps getting wrong: enter what it hears under **Heard** and what you meant under **Meant**. Use **➕ Add row** and **➖ Remove selected** to edit the list.
 
-### Listen for commands only
+### ⌨️ AutoHotkey Integration
 
-_Whisper engines only._ The checkbox is hidden when the Always-On engine is **Vosk**, because Vosk's grammar mode already drops non-command speech at the recogniser level – the setting would be a structural no-op there.
+See [AutoHotkey integration](#autohotkey-integration) below.
 
-For **faster-whisper** and the **OpenAI Whisper API**: when checked, Always-On fires voice commands but discards any speech that doesn't match a command – it is not typed. Use this if you only want voice control with a Whisper engine, not dictation. When unchecked, unmatched speech is transcribed and typed at the cursor position.
+### Saving
 
-### Maximum recording duration
-
-Sets the upper limit (in seconds) for a single voice clip. Speech that exceeds this length is cut and transcribed up to the limit. Useful to prevent long silences from being held open indefinitely.
-
-### Language
-
-- **Auto** – uses the project's target language as the transcription hint
-- Explicit language – forces Whisper to transcribe in the selected language, which improves accuracy when the target language differs from the source
+The microphone, mic sensitivity, push-to-talk mode and pause-hotkey settings are saved as soon as you change them. The Whisper model, maximum duration, language and dictation vocabulary are saved when you click **💾 Save Voice Settings** at the bottom of the panel.
 
 ***
 
 ## AutoHotkey integration
 
-AutoHotkey v2 must be installed for AHK-type commands to work. Supervertaler checks for it automatically and shows the path in the AutoHotkey section of the Voice settings panel.
+AutoHotkey v2 must be installed for AHK-type commands to work. Supervertaler checks for it automatically and shows the result in the **⌨️ AutoHotkey Integration** group of the Voice tab.
 
-To verify: the status line shows either the AHK path (green) or "AutoHotkey v2 not found" (orange).
+To verify: the status line in the **⌨️ AutoHotkey Integration** group shows either **✅ AutoHotkey detected** or **⚠️ AutoHotkey not found**.
 
-Click **Open scripts folder** to open the folder where standalone AHK script files are stored.
+Click **📂 Open Scripts Folder** to open the folder where standalone AHK script files are stored.
 
 ***
 
@@ -234,9 +226,12 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 | Shortcut | Action |
 | --- | --- |
 | **Ctrl+Alt+O** (⌘⌥O on macOS) | Toggle Always-On listening |
-| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk (one utterance) – default, configurable |
+| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk dictation (one utterance) – default, configurable |
+| **Ctrl+Alt+V** (⌘⌥V on macOS) | Command Push-to-Talk – hold to listen for voice commands |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](/workbench/settings/shortcuts/#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
+
+On Windows, AltGr counts as Ctrl+Alt. Since v1.10.372, if AltGr+O or AltGr+V types a character on your keyboard layout, you get the character rather than the Voice hotkey – use the left Ctrl and left Alt keys for the hotkeys.
 
 :::note
 **Always-On moved from Ctrl+Alt+A to Ctrl+Alt+O in v1.10.368.** Supervertaler for Trados now uses Ctrl+Alt+A for "Add term with abbreviation", and because Always-On is a *global* hotkey it fires whichever application is in front – so a single press in Trados would have triggered both. If you had customised it to Ctrl+Alt+A yourself, it has been returned to the new default; you can set it back, but it will keep clashing while both products are running.

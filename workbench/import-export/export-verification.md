@@ -2,22 +2,28 @@
 title: "Export Verification (Word-Count Check)"
 ---
 
-Whenever you export a translated **DOCX**, Supervertaler runs an automatic safeguard that checks whether any text was lost on the way out of the document. It is a safety net against the rare case where the round-trip drops content that is present and confirmed in the grid.
+Whenever you export a translated document, Supervertaler runs an automatic safeguard that checks whether any text was lost on the way out. It is a safety net against the rare case where the round-trip drops content that is present and confirmed in the grid. It started with Word files and, since v1.10.372, covers every format the Okapi merge writes back: **DOCX, PPTX, XLSX, IDML, HTML, XLIFF and PO**.
 
 ## What it does
 
 After writing the file, Supervertaler:
 
 1. Counts the words it **expected** to write – the target text of every segment, falling back to the source text for any untranslated segment.
-2. Counts the words **actually present** in the exported DOCX (document body, headers, footers, and foot/endnotes).
+2. Counts the words **actually present** in the exported file – in a DOCX, for example, the document body, headers, footers, and foot/endnotes.
 3. Compares the two. If the exported file contains noticeably fewer words than expected, it shows a warning.
 
 Tags, numbers, and punctuation are counted the same way on both sides, so a genuine loss of text shows up as a clear shortfall while incidental formatting differences stay within tolerance.
 
+Each format is counted generously, so that a clean export is never flagged:
+
+- In **HTML**, text in `alt` and `title` attributes (and similar attributes that get translated) counts.
+- An **untranslated XLIFF or PO unit** counts its source text, just as an untranslated segment does on the expected side.
+
 ## When it runs
 
-- Automatically, on **every DOCX export** – single-file and multi-file, whether the file is built through the Okapi merge or the standard exporter.
-- Multi-file projects produce a **single combined warning** listing each affected file, rather than one dialog per file.
+- Automatically, after **Project → Export → Export Translated Document…** for DOCX, PowerPoint (PPTX), Excel (XLSX), InDesign (IDML), HTML, XLIFF and gettext PO files – whether the file is built through the Okapi merge or the standard DOCX exporter.
+- On **multi-file** DOCX exports too. These produce a **single combined warning** listing each affected file, rather than one dialog per file.
+- Other exports, such as plain text and the CAT-tool bilingual formats, aren't checked: a format Supervertaler can't count is skipped rather than guessed at.
 
 ## The warning
 
@@ -58,10 +64,6 @@ The check is configured in your `settings.json` file, under an `"export"` sectio
 ```
 
 If your documents legitimately differ a lot from the segment word count – for example they contain many numbers, or comments that aren’t part of the translation – you may prefer to lower the threshold slightly to avoid false alarms.
-
-:::caution
-The check currently applies to **DOCX exports only**. Other Okapi formats (IDML, HTML, XLIFF, PPTX, XLSX, PO) are not yet verified this way.
-:::
 
 ## Related pages
 

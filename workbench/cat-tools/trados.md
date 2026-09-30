@@ -39,7 +39,7 @@ The best way to work with Trados Studio is using **project packages** (SDLPPX fi
 1. Navigate through segments
 2. Use AI translation (`Ctrl+T`) or translate manually
 3. Confirm each segment (`Ctrl+Enter`)
-4. Tags appear as `<1>`, `</1>` - keep them in your translation
+4. Tags appear as `<1>`, `</1>` – keep them in your translation
 
 ### Trados Tag Format
 
@@ -88,13 +88,27 @@ Trados Bilingual Review DOCX is designed for **review only**, not translation:
    - Edit → Task → Copy source to target (batch task)
 2. **Export**: Project → Export → Trados Studio → Bilingual Review - Translated (DOCX)
 3. **In Word**: Delete all target text (cells remain, but empty)
-4. **Import to Supervertaler**: Project → Import → Trados Studio → Bilingual Review (DOCX)
+4. **Import to Supervertaler**: Project → Import → Trados Studio → Bilingual Review (DOCX), and confirm the language pair (see below)
 5. **Translate** and export
 6. **Re-import to Trados**: Merge into project
 
 :::caution
 This workaround is tedious. Use SDLPPX packages whenever your client provides them.
 :::
+
+### The language pair
+
+A bilingual review DOCX has no language header, but Word stores a language on
+the source text and on the target text. Since v1.10.372, the **Select Languages**
+dialog opens pre-filled from those, with a note such as "Auto-detected from
+file: German → French. Confirm or change below." Check it before you click
+**OK**: TM matches are looked up for this pair. If only one side can be read,
+that side is filled in and you pick the other. If both columns carry the same
+language (usually a file with one proofing language throughout), Supervertaler
+doesn't guess: the dialog says it couldn't detect the pair, and you pick it.
+
+SDLPPX packages and SDLXLIFF files declare their languages, so there is nothing
+to choose there.
 
 ---
 

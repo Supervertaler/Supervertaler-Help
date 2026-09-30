@@ -2,7 +2,7 @@
 title: "Theme"
 ---
 
-Supervertaler supports light and dark themes. Switch between them in **Settings → Theme** or via the toolbar theme toggle.
+Supervertaler supports light and dark themes. Switch between them in **View → 🎨 Theme Editor…**: choose a theme under **Theme** and click **✓ Apply**.
 
 ## Why use Dark Mode
 
@@ -13,6 +13,8 @@ Supervertaler supports light and dark themes. Switch between them in **Settings 
 ## Switching themes
 
 The change takes effect immediately – no restart needed. All panels (grid, companion tabs, dialogs, popups) switch at once.
+
+Since v1.10.372, a dark theme (such as **Dark**) also adjusts the panels and boxes that have colours of their own, chosen for a light background – for example the Clipboard Manager columns and the info boxes in the TMs, Termbases and SuperLookup tabs. White and pale backgrounds become dark, tinted ones become a dark shade of the same colour, and dark text becomes light. Strong colours, such as the orange, blue and green buttons, stay as they are. Switching back to a light theme restores the original colours.
 
 ## Tips
 

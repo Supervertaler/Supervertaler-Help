@@ -30,7 +30,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | `Shift+Enter` | Insert line break inside a cell |
 | `Tab` | Cycle between the source and target cells |
 | `Ctrl+Tab` | Insert a literal tab character |
-| `Ctrl+,` | Insert next tag / wrap selection with a tag pair (when available) |
+| `Ctrl+,` | Insert the next tag or [inline code](/workbench/settings/inline-codes/) from the source that the target is still missing / wrap selection with a tag pair (when available) |
 | `Ctrl+Shift+S` | Copy source text to target |
 | `Ctrl+M` | Add a comment to the selected source/target text (or a segment-level comment if nothing is selected) |
 | `Alt+D` | Add the word at the cursor to the custom dictionary |
@@ -90,6 +90,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | Shortcut | Action |
 |----------|--------|
 | `Ctrl+S` | Save project |
+| `Ctrl+Shift+V` | Update the project from pasted [bilingual text](/workbench/import-export/bilingual-text/) (AI-friendly format) |
 | `Ctrl+O` | Open project |
 | `Alt+F4` | Quit the application |
 

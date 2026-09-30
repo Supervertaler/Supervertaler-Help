@@ -41,7 +41,7 @@ If you plan to reimport into a CAT tool, do not merge/split content across segme
 
 ## Visual cues
 
-- **Tags** (CAT tool placeholders and formatting markers) are highlighted to make them hard to miss.
+- **Tags** (CAT tool placeholders and formatting markers) are highlighted to make them hard to miss. Placeholders you describe under **Settings → 🏷️ Inline Codes**, such as `{playerName}` or `%s`, are coloured the same way (see [Inline Codes](/workbench/settings/inline-codes/)).
 - **Spellcheck** (if enabled) underlines misspelled target words.
 - **Termbase matches** can be highlighted in the source.
 

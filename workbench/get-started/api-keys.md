@@ -11,7 +11,6 @@ To use AI translation you need an API key from at least one provider. Enter your
 | **OpenAI** | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
 | **Anthropic (Claude)** | [console.anthropic.com](https://console.anthropic.com) |
 | **Google (Gemini)** | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
-| **Grok (xAI)** | [console.x.ai](https://console.x.ai) |
 | **Mistral AI** | [console.mistral.ai](https://console.mistral.ai) |
 | **DeepSeek** | [platform.deepseek.com](https://platform.deepseek.com) |
 | **OpenRouter** (200+ models, one key) | [openrouter.ai/keys](https://openrouter.ai/keys) |
@@ -19,11 +18,11 @@ To use AI translation you need an API key from at least one provider. Enter your
 
 ## Entering a key
 
-1. Open **Settings → AI Settings**
-2. Select your provider from the **Provider** dropdown
-3. Paste your API key into the **API Key** field
-4. Click **Test Connection** to verify
-5. Save settings
+1. Open **Settings → 🤖 AI Settings**
+2. Choose your provider under **🤖 LLM Provider Selection**, and its model under **📦 Model Selection**
+3. Paste your API key into the provider's field under **🔑 LLM API Keys** (click **Show** to check what you pasted)
+
+There is no Save button: like every [Settings page](/workbench/settings/general/), AI Settings saves itself a moment after you make a change, and "✓ Settings saved" appears in the status bar. To check that the key works, translate a segment with **Ctrl+T** – the sample project under **Help → 🎓 Open Sample Project** is handy for this.
 
 Keys are stored locally and are only sent to the provider's own API endpoint.
 

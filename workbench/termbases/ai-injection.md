@@ -6,11 +6,11 @@ Supervertaler can send your termbase entries to the AI as reference during trans
 
 ## How to enable it
 
-Each termbase in the **Termbase Manager** has an **AI** checkbox (the orange/purple tick), separate from the Read/Write activation checkboxes.
+Each termbase in the **🏷️ Termbases** tab has an **AI** checkbox (the orange tick), separate from the Read/Write activation checkboxes.
 
-1. Open the **Termbases** tab.
+1. Open the **🏷️ Termbases** tab.
 2. Find the termbase whose terms you want the AI to use.
-3. Tick its **AI** checkbox.
+3. Tick its **AI** checkbox, and confirm with **Yes**.
 
 That's the only setup step. From then on, matching terms are automatically included in every translation prompt for the current project.
 
@@ -48,9 +48,13 @@ If you mark a term as **forbidden** in the termbase, the AI is explicitly told *
 
 ## Tips
 
-- **Keep AI-enabled termbases focused.** Very large termbases trigger a warning, because sending a lot of terminology can dilute translation quality. Thanks to per-segment filtering this rarely bites in practice, but a tight, curated glossary gives the best results.
+- **Keep AI-enabled termbases focused.** Ticking **AI** on a termbase with more than 50 terms shows a **Large termbase** warning, because sending a lot of terminology can dilute translation quality. Thanks to per-segment filtering this rarely bites in practice, but a tight, curated glossary gives the best results.
 - **Works everywhere.** Term injection applies to single-segment translation, batch translation, and keyboard-shortcut translation alike.
 - **Combine with TM.** Fuzzy TM matches are injected alongside termbase terms, so the AI gets both your approved terminology and your existing translations as reference.
+
+## In the Chat panel
+
+The **AI** checkbox is about translation prompts. The **💬 Chat** panel has its own switch: the **📚 Termbases** context chip. Since v1.10.372 it sends the terms from the project's termbases that occur in the document (up to 150), with forbidden and non-translatable terms marked. See [Chat](/workbench/ai-translation/chat/).
 
 ## See Also
 

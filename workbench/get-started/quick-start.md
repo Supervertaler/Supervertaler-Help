@@ -14,6 +14,19 @@ Launch the application by running `Supervertaler.exe` (Windows) or `python Super
 If you want to use AI translation, set up your API keys first: [Setting Up API Keys](/workbench/get-started/api-keys/).
 :::
 
+## Try the sample project (optional)
+
+To see what Supervertaler does before you import a file of your own, choose **Help → 🎓 Open Sample Project**. It opens a small English → Dutch project – the quick start guide for a pump, 14 segments – with its own TM and glossary. It shows:
+
+- glossary terms highlighted in the grid and listed in TermLens, including a forbidden term next to the preferred one and a non-translatable brand name;
+- a 100% TM match, and several fuzzy matches with the differences highlighted in the match panel;
+- segments that are already confirmed next to untranslated ones;
+- an inline tag to insert with **Ctrl+,**.
+
+A short note lists what to try. Segment 4 is selected to begin with: the match panel shows a fuzzy match, and TermLens shows the glossary terms in it.
+
+The sample TM (**Sample TM (Supervertaler)**) and glossary (**Sample glossary (Supervertaler)**) appear in the **TMs** and **Termbases** tabs. They are created the first time you open the sample and reused afterwards, and they are switched on only for the sample project. Nothing else in your data is changed. If the project you have open has unsaved changes, Supervertaler asks whether to save them first. The sample isn't saved anywhere unless you press **Ctrl+S**.
+
 ## Step 2: Import a Document
 
 1. Go to **Project → Import**
@@ -74,7 +87,7 @@ If AI translation isn't available yet, double-check provider setup in [Setting U
 
 ## Step 5: Save Your Project
 
-1. Press `Ctrl+S` or go to **Project → Save Project**
+1. Press `Ctrl+S` or go to **Project → Save**
 2. Choose a location and filename
 3. Projects are saved as `.svproj` files
 

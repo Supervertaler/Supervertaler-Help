@@ -4,7 +4,7 @@ title: "Importing DOCX Files"
 
 Use DOCX import for normal Word documents (not CAT tool bilingual formats).
 
-DOCX import is handled by the bundled **Okapi sidecar** – an industry-standard localisation library that runs as a small background service. This gives you SRX-based segmentation, proper paragraph and table detection, and a faithful round-trip on export.
+DOCX import is handled by the bundled **Okapi sidecar** – an industry-standard localisation library that runs as a small background service. This gives you SRX-based segmentation, proper paragraph and table detection, and a faithful round-trip on export. Okapi splits DOCX files with its own rules; your rules in [Settings → 📏 Segmentation Rules](/workbench/settings/segmentation-rules/) apply only to text Supervertaler splits itself, such as plain-text imports.
 
 ## Import steps
 

@@ -757,8 +757,16 @@ const sidebar = [
             "link": "/workbench/qa/proofreading/"
           },
           {
+            "label": "QA Checks",
+            "link": "/workbench/qa/qa-checks/"
+          },
+          {
             "label": "Spellcheck",
             "link": "/workbench/qa/spellcheck/"
+          },
+          {
+            "label": "Check with LanguageTool",
+            "link": "/workbench/qa/languagetool/"
           },
           {
             "label": "Tag Validation",
@@ -868,6 +876,14 @@ const sidebar = [
             "link": "/workbench/settings/termbase-settings/"
           },
           {
+            "label": "Segmentation Rules",
+            "link": "/workbench/settings/segmentation-rules/"
+          },
+          {
+            "label": "Inline Codes",
+            "link": "/workbench/settings/inline-codes/"
+          },
+          {
             "label": "Language (UI Translation)",
             "link": "/workbench/settings/language/"
           },
@@ -896,6 +912,10 @@ const sidebar = [
           {
             "label": "Common Issues",
             "link": "/workbench/troubleshooting/common-issues/"
+          },
+          {
+            "label": "TM Matches Not Appearing",
+            "link": "/workbench/troubleshooting/tm-matches/"
           },
           {
             "label": "API Connection Problems",

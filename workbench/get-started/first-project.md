@@ -4,6 +4,10 @@ title: "Your First Translation Project"
 
 Let's walk through creating a complete translation project from start to finish.
 
+:::tip
+Want to look around first? **Help → 🎓 Open Sample Project** opens a small ready-made project with its own TM and glossary – see [Try the sample project](/workbench/get-started/quick-start/#try-the-sample-project-optional).
+:::
+
 ## Creating a New Project
 
 ### Option 1: Import a Document
@@ -20,7 +24,7 @@ Your document is now segmented and ready for translation.
 
 1. Go to **Project → Import → Text / Markdown File (TXT, MD)…**
 2. Select your `.txt` file
-3. Each line becomes a separate segment
+3. Each line becomes a separate segment. Tick **Split lines into sentences** to split long lines into sentences as well; where they are split is set in [**Settings → 📏 Segmentation Rules**](/workbench/settings/segmentation-rules/).
 
 ### Option 3: Multi-File Project
 
@@ -78,14 +82,19 @@ See [Segment Statuses](/workbench/editor/segment-statuses/) for the full list.
 ### Add a Translation Memory
 
 1. Go to the **TMs** tab
-2. Click **+ Create TM** or **Import TMX**
-3. Your TM will automatically provide matches
+2. Click **+ Create New TM** or **📥 Import TMX**
+3. Make sure **Read** is ticked for the TM so the project uses it for matches, and **Write** if new translations should be saved into it
+
+:::note
+Importing a document switches every TM and termbase off for the new project, so that a new job doesn't inherit the last one's resources. If the match panel stays empty, check the **Read** box first – and see [TM Matches Not Appearing](/workbench/troubleshooting/tm-matches/) if that isn't it.
+:::
 
 ### Add a Termbase
 
 1. Go to the **Termbases** tab
-2. Click **+ Create Termbase**
+2. Click **+ Create New**
 3. Add terms manually or import from TSV
+4. Make sure **Read** is ticked so the project uses it
 
 ## Saving Your Project
 

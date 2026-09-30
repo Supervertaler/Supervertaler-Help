@@ -1,5 +1,5 @@
 ---
-title: "Pdf Rescue"
+title: "PDF Rescue"
 ---
 
 ## Overview
@@ -33,60 +33,60 @@ Have you ever received a PDF translation job where:
 ## ✨ Key Features
 
 ### 1. 📄 **One-Click PDF Import**
-- **No external tools needed** - Import PDFs directly
-- **Automatic page extraction** - Each page saved as high-quality PNG (2x resolution)
-- **Persistent storage** - Images saved next to source PDF in `{filename}_images/` folder
-- **Client-ready** - Images can be delivered to end clients if needed
+- **No external tools needed** – Import PDFs directly
+- **Automatic page extraction** – Each page saved as high-quality PNG (2x resolution)
+- **Persistent storage** – Images saved next to source PDF in `{filename}_images/` folder
+- **Client-ready** – Images can be delivered to end clients if needed
 
 ### 2. 🧠 **Smart AI-Powered OCR**
-- **Vision-capable LLM OCR** - High accuracy OCR
-- **Context-aware** - Understands document structure and formatting
-- **Intelligent cleanup** - Fixes line breaks, spacing, and formatting issues
-- **Redaction handling** - Inserts descriptive placeholders like `[naam]`, `[bedrag]` in document language
-- **Stamps & signatures** - Detects and describes non-text elements: `[stempel]`, `[handtekening]`
+- **Vision-capable LLM OCR** – High accuracy OCR
+- **Context-aware** – Understands document structure and formatting
+- **Intelligent cleanup** – Fixes line breaks, spacing, and formatting issues
+- **Redaction handling** – Inserts descriptive placeholders like `[naam]`, `[bedrag]` in document language
+- **Stamps & signatures** – Detects and describes non-text elements: `[stempel]`, `[handtekening]`
 
 ### 3. 🎨 **Optional Formatting Preservation**
-- **Markdown-based** - Uses `**bold**`, `*italic*`, `__underline__`
-- **Toggle on/off** - User-controlled via checkbox
-- **Clean output** - Markdown converted to proper formatting in DOCX export
-- **Visual preview** - See formatting markers before export
+- **Markdown-based** – Uses `**bold**`, `*italic*`, `__underline__`
+- **Toggle on/off** – User-controlled via checkbox
+- **Clean output** – Markdown converted to proper formatting in DOCX export
+- **Visual preview** – See formatting markers before export
 
 ### 4. 📊 **Batch Processing**
-- **Process selected** - Work on individual images
-- **Process all** - Batch process entire document
-- **Progress tracking** - Visual progress bar and status updates
-- **Skip processed** - Already-processed images are skipped (unless re-selected)
+- **Process selected** – Work on individual images
+- **Process all** – Batch process entire document
+- **Progress tracking** – Visual progress bar and status updates
+- **Skip processed** – Already-processed images are skipped (unless re-selected)
 
 ### 5. 📝 **Comprehensive Logging**
-- **Activity log integration** - All operations logged with timestamps
-- **PDF import progress** - Each page extraction logged
-- **OCR processing** - Per-image processing logged
-- **DOCX export** - Export operations tracked
+- **Activity log integration** – All operations logged with timestamps
+- **PDF import progress** – Each page extraction logged
+- **OCR processing** – Per-image processing logged
+- **DOCX export** – Export operations tracked
 
 ### 6. 👁️ **Full Transparency**
-- **"Show Prompt" button** - View exact instructions sent to AI
-- **Configuration display** - See model, formatting settings, max tokens
-- **No black boxes** - Complete visibility into AI processing
+- **"Show Prompt" button** – View exact instructions sent to AI
+- **Configuration display** – See model, formatting settings, max tokens
+- **No black boxes** – Complete visibility into AI processing
 
 ### 7. 📊 **Professional Session Reports**
-- **Markdown format** - Clean, readable documentation
-- **Complete configuration** - All settings recorded
-- **Processing summary** - Table of all images and status
-- **Full extracted text** - All OCR results included
-- **Statistics** - Character/word counts and averages
-- **Supervertaler branding** - Professional client-ready reports
+- **Markdown format** – Clean, readable documentation
+- **Complete configuration** – All settings recorded
+- **Processing summary** – Table of all images and status
+- **Full extracted text** – All OCR results included
+- **Statistics** – Character/word counts and averages
+- **Supervertaler branding** – Professional client-ready reports
 
 ### 8. 💾 **Flexible Export Options**
-- **DOCX export** - Formatted Word documents with optional bold/italic/underline
-- **Copy to clipboard** - Quick text extraction
-- **Session reports** - Professional MD documentation
+- **Markdown + Word export** – One click writes a Markdown file, a formatted Word document (with optional bold/italic/underline) and a session report
+- **Copy to clipboard** – Quick text extraction
+- **Session reports** – Professional MD documentation
 
 ### 9. 🚀 **Standalone Mode**
 
-Can run independently outside Supervertaler:
+If you run Supervertaler from source, PDF Rescue can also run on its own, outside Supervertaler:
 
 ```bash
-python modules/pdf_rescue.py
+python modules/pdf_rescue_Qt.py
 ```
 
 Full-featured standalone application with all capabilities.
@@ -97,11 +97,11 @@ Full-featured standalone application with all capabilities.
 
 ### Quick Start (5 Steps)
 
-1. **Open PDF Rescue** - Open the **Tools menu** at the top of the window → **🔍 PDF Rescue**. The tool opens in its own window.
-2. **Import PDF** - Click "📄 PDF" button, select your badly-formatted PDF
-3. **Check formatting option** - Leave "Preserve formatting" checked (default)
-4. **Process** - Click "⚡ Process ALL" to OCR all pages
-5. **Export** - Click "💾 Save DOCX" to create Word document
+1. **Open PDF Rescue** – Open the **Tools menu** at the top of the window → **📄 PDF Rescue…**. The tool opens in its own window.
+2. **Import PDF** – Click "📄 Import PDF", select your badly-formatted PDF
+3. **Check formatting option** – Leave "Preserve formatting" checked (default)
+4. **Process** – Click "⚡ Process ALL" to OCR all pages
+5. **Export** – Click "💾 Export Markdown & Word" to create the Word document
 
 **That's it!** You now have a clean, editable Word document ready for translation.
 
@@ -113,7 +113,7 @@ Full-featured standalone application with all capabilities.
 
 **Method 1: Direct PDF Import** (Recommended)
 ```
-Click: 📄 PDF button
+Click: 📄 Import PDF
 → Select PDF file
 → Automatic page extraction to {filename}_images/ folder
 → All pages added to processing queue
@@ -121,7 +121,7 @@ Click: 📄 PDF button
 
 **Method 2: Manual Image Import**
 ```
-Click: 📁 Add Files → Select individual images
+Click: ➕ Add Image Files → Select individual images
 OR
 Click: 📂 Folder → Select folder with images
 ```
@@ -132,13 +132,15 @@ Click: 📂 Folder → Select folder with images
 
 #### Step 2: Configure Settings
 
-**Model Selection** (vision-capable models, grouped by provider):
-- **OpenAI**: `gpt-5.5` (Recommended - flagship), `gpt-5.4-mini` (budget option)
-- **Claude**: `claude-sonnet-4-6`, `claude-haiku-4-5-20251001`, `claude-opus-4-8`
+**Model Selection** (the **AI Model** dropdown; vision-capable models, grouped by provider):
+- **OpenAI**: `gpt-5.5` (Recommended – flagship, the default), `gpt-5.4-mini` (budget option)
+- **Claude**: `claude-sonnet-5-5`, `claude-opus-5-5`, `claude-fable-5-1`
 - **Gemini**: `gemini-3.1-flash-lite`, `gemini-2.5-pro`, `gemini-3.1-pro-preview`
 
+The **Model Capabilities** box below the dropdown says what each model is good at.
+
 **Formatting Option**:
-- ✓ **Preserve formatting (bold/italic/underline)** - Enabled by default
+- ✓ **Preserve formatting (bold/italic/underline)** – Enabled by default
 - Unchecked = Plain text output only
 
 **Extraction Instructions**:
@@ -186,11 +188,10 @@ Click: 📂 Folder → Select folder with images
 
 **Export Options**:
 
-1. **💾 Save DOCX** (Primary export)
-   - Formatted Word document
-   - Markdown converted to proper formatting
-   - One page per document page
-   - Page headers with filenames
+1. **💾 Export Markdown & Word** (Primary export)
+   - Asks for one file name and writes three files: `name.md` (the extracted text as Markdown), `name.docx` (the formatted Word document) and `name_report.md` (the session report)
+   - Markdown converted to proper formatting in the Word document
+   - A heading per page (*Page 1: filename*)
    - Ready for translation work
 
 2. **📋 Copy All**

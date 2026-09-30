@@ -12,10 +12,10 @@ You need a project open with segments. Press **F1** (or the **?** in the top-rig
 
 ## ⚡ Quick Count (no project needed)
 
-When you just want a fast count and don't want to set up a project, use **Tools → ⚡ Quick Count…** instead:
+When you just want a fast count and don't want to set up a project, use **Tools → ⚡ Quick Count (pick files, no project)…** instead:
 
 1. Browse to **one or more files**. Supported: **DOCX** (plus IDML, HTML, XLIFF, PO, XLSX, PPTX via Okapi) and the CAT bilingual formats **Trados `.sdlxliff`** and **memoQ `.mqxliff`**.
-2. The same Statistics dialog opens – pick your TMs and matching depth, then **Analyse**.
+2. The same Statistics dialog opens – pick your TMs and matching depth, then **📊 Analyse**.
 
 DOCX files are sentence-segmented through Okapi exactly like a normal import, so the numbers match the project-based tool. If a file can't be read it's reported on its own and the rest are still counted. The language pair used for segmentation/matching is the open project's, or your last-used import pair if no project is open.
 
@@ -32,7 +32,7 @@ When you analyse **more than one file** (Quick Count with several files, or a mu
 1. Tick one or more translation memories to analyse against. The TMs already activated for the current project are ticked for you.
    - **Leave every TM unticked** to get a plain word count plus internal repetitions only (no TM lookup).
 2. Choose a **Matching depth** (see below).
-3. Click **Analyse**. The analysis runs in the background – you can cancel it at any time. Results appear per TM as each one finishes.
+3. Click **📊 Analyse**. The analysis runs in the background – you can cancel it at any time. Results appear per TM as each one finishes.
 4. Optionally click **Export…** to save the report as **HTML**, **Excel (.xlsx)**, or **CSV**.
 
 ## Matching depth
