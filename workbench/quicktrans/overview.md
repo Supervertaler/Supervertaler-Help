@@ -68,7 +68,7 @@ Each provider is independently enabled / disabled in **Workbench Settings → �
 | Engine | API key required? |
 | --- | --- |
 | Google Translate | Yes |
-| DeepL | Yes |
+| DeepL | Yes – a DeepL API key, or the CAT-tool key of a DeepL Pro Advanced or Ultimate subscription (from v1.10.373) |
 | Microsoft Translator | Yes |
 | Amazon Translate | Yes |
 | ModernMT | Yes |

@@ -21,6 +21,8 @@ guesswork.
   - **Speed:** the Preview is built when it is shown, and there are notes on large projects under Performance.
   - **Xbench:** a new *Open in Xbench* page (QA → 🔬 Open in Xbench…).
   - **Project folder:** the `tm/` folder for the backup TMX.
+  - **memoQ:** *memoQ Workflow* covers memoQ XLIFF: views with several documents, inline codes as numbered tags, status mapping and locked segments, and the XLIFF export. Exports now keep document order when the grid is sorted.
+  - **DeepL:** *QuickTrans* and *Machine Translation* explain that the CAT-tool key of DeepL Pro Advanced and Ultimate works as well as an API key.
 
 ## 2026-09-30
 
