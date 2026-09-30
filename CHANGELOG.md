@@ -23,6 +23,8 @@ guesswork.
   - **Project folder:** the `tm/` folder for the backup TMX.
   - **memoQ:** *memoQ Workflow* covers memoQ XLIFF: views with several documents, inline codes as numbered tags, status mapping and locked segments, and the XLIFF export. Exports now keep document order when the grid is sorted.
   - **DeepL:** *QuickTrans* and *Machine Translation* explain that the CAT-tool key of DeepL Pro Advanced and Ultimate works as well as an API key.
+  - **Fragment matches:** *Fuzzy Matching* has a new section on TM sentences that contain the segment or are part of it (✂ fragment).
+  - **Project folder:** the `glossary/` and `reports/` folders, and TMX exports and the review table opening in the project folder.
 
 ## 2026-09-30
 

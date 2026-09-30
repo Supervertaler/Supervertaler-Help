@@ -24,7 +24,9 @@ My Project/
 ├─ My Project.svproj.bak  ← the previous save, kept as a safety copy
 ├─ source/                ← the original documents you're translating
 ├─ target/                ← the translated documents you export
-├─ tm/                    ← the automatic backup of the project as TMX
+├─ tm/                    ← the automatic backup of the project, and TMX exports
+├─ glossary/              ← termbases you export
+├─ reports/               ← statistics and QA reports you export
 └─ qa/xbench/             ← written by QA → Open in Xbench
 ```
 
@@ -45,8 +47,24 @@ My Project/
   `doc_2.sdlxliff`).
 - **`target/`** – when you run **Project → Export → Export Translated Document**
   (or Simple Text), the Save dialog opens here by default, so your finished
-  translations land next to their sources. You can still browse somewhere else;
-  this is only the default.
+  translations land next to their sources. The bilingual review table does the
+  same from v1.10.373. You can still browse somewhere else; this is only the
+  default.
+- **`tm/`** – the automatic backup (**Settings → 💾 Backup**) exports the
+  project as `<project>_backup.tmx` into this folder, the way OmegaT keeps its
+  TMs in `tm/`. A backup left next to the `.svproj` by an older version is
+  moved here. From v1.10.373, exporting a TM, the TM database or selected
+  segments as TMX also opens here.
+- **`glossary/`** – from v1.10.373, exporting a termbase from the
+  **Termbases** tab opens here.
+- **`reports/`** – from v1.10.373, **Export** in the
+  [Statistics](/workbench/tools/statistics/) window and in
+  [QA Checks](/workbench/qa/qa-checks/) opens here.
+- **`qa/xbench/`** – what [Open in Xbench](/workbench/qa/xbench/) writes.
+
+Supervertaler creates each folder the first time something is saved in it.
+Before a project has been saved, there's no project folder yet, and the Save
+dialogs open wherever they did before.
 
 ## Why this matters
 
@@ -60,12 +78,6 @@ My Project/
 Keep the `.svproj` **inside** its folder. If you want to relocate a project,
 move or copy the **whole folder**, not just the `.svproj` on its own.
 :::
-
-- **`tm/`** – the automatic backup (**Settings → 💾 Backup**) exports the
-  project as `<project>_backup.tmx` into this folder, the way OmegaT keeps its
-  TMs in `tm/`. A backup left next to the `.svproj` by an older version is
-  moved here.
-- **`qa/xbench/`** – what [Open in Xbench](/workbench/qa/xbench/) writes.
 
 ## Safe saving and the backup copy
 
