@@ -12,7 +12,7 @@ Open it from **Tools → 🌐 Superbrowser…**. It opens in its own window, so 
 
 * **Three columns, three services** – ChatGPT (left), Claude (centre), Gemini (right), each in a full embedded browser. Drag the dividers to resize.
 * **Persistent logins** – each column keeps its own isolated browser profile, so you sign in once per service and stay signed in between Supervertaler sessions. Profiles are stored under `workbench/superbrowser_profiles/` in your Supervertaler data folder.
-* **Custom URLs** – click **Show Configuration** (top right) to point any column at a different address – a specific chat session, a project conversation, or another service entirely – and apply all three at once with **Update URLs**.
+* **Custom URLs** – the **🔧 Configuration** panel at the top has an address field per column (**ChatGPT URL**, **Claude URL**, **Gemini URL**). Point any column at a different address – a specific chat session, a project conversation, or another service entirely – and apply all three at once with **Update URLs**. Click **▼ Hide Configuration** (top right) to fold the panel away, and **▶ Show Configuration** to bring it back.
 
 ### Why compare models?
 

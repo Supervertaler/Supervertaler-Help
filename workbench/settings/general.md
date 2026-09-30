@@ -34,7 +34,7 @@ See [Setting Up API Keys](/workbench/get-started/api-keys/) for step-by-step ins
 
 ## Voice settings
 
-The [🎤 Voice top tab](/workbench/voice/overview/) contains all voice command and dictation settings (engine, model, sensitivity, push-to-talk mode). They are not duplicated here – open the Voice tab directly to configure them.
+The [🎤 Voice top tab](/workbench/voice/overview/) contains all voice command and dictation settings (microphone, Always-On listening, the dictation model, language and vocabulary, push-to-talk mode). They are not duplicated here – open the Voice tab directly to configure them.
 
 ## Related pages
 

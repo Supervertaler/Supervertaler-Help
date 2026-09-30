@@ -6,18 +6,19 @@ Termbases help you enforce terminology consistently.
 
 ## Create a termbase
 
-1. Open the **Termbases** tab
-2. Click **Create Termbase**
-3. Give it a name and select languages
+1. Open the **🏷️ Termbases** tab
+2. Click **+ Create New**
+3. Give it a name, enter the source and target language codes (e.g. `en`, `nl`), and choose the scope: **Global (all projects)** or **Project-specific**
+4. Click **Create**
 
 ## Add terms while translating
 
 You can build terminology as you work:
 
 - Select text in both Source and Target
-- Use **Add to Termbase** from the context menu
+- Use **📖 Add to Termbase** from the context menu
 
-The right-click menu offers several routes: **Add to Termbase** (`Ctrl+Alt+T`, opens the entry dialog), and the quick-adds **Quick Add to Project Termbase** (`Alt+Up`) and **Quick Add to Background Termbase** (`Alt+Down`).
+The right-click menu offers several routes: **📖 Add to Termbase** (`Ctrl+Alt+T`, opens the entry dialog), and the quick-adds **⚡ Quick Add to Project Termbase** (`Alt+Up`) and **⚡ Quick Add to Background Termbase** (`Alt+Down`, which adds to the first background termbase with **Write** ticked).
 
 ## Similar Term Found – merge as a synonym
 

@@ -37,7 +37,7 @@ If you've also customised the grid font size (above), that value still applies o
 - Font changes apply immediately in the grid – no restart needed
 - If glyphs for a specific language appear as boxes, install a font with full Unicode coverage for that script (Noto Sans is a good all-rounder)
 - On a 4K or Retina display, try 125% or 150% UI scale before reaching for individual font-size settings – it keeps every panel proportional
-- The QuickTrans popup's header controls (🔍 Run in SuperLookup, ⚙ Settings) deliberately don't scale with this setting, because they live in fixed-size buttons and scaling the glyph alone would overflow them
+- The QuickTrans popup's buttons on the **Source** row (↻ Re-translate, 🔍 Run in SuperLookup, ⚙️ Settings) deliberately don't scale with this setting, because they live in fixed-size buttons and scaling the glyph alone would overflow them
 
 ## Related pages
 

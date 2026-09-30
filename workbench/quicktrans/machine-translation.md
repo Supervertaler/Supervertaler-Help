@@ -9,8 +9,8 @@ Machine translation is delivered by **QuickTrans** – an always-on-top popup (a
 | How | Notes |
 |-----|-------|
 | **Ctrl+Alt+Q** (⌘⌥Q on macOS) | Opens the QuickTrans always-on-top popup and starts the MT fan-out immediately on the selected text. Auto-copies the current selection so you don't need a separate Ctrl+C first. |
-| Editor right-click → ⚡ QuickTrans | Right-click menu in the editor. |
-| **🔍 Run in SuperLookup** button in the popup header | After you've seen the QuickTrans results, click 🔍 to hand the same query off to Workbench's SuperLookup tab for a richer concordance / termbase / web look-up. |
+| Grid cell right-click → **⚡ QuickLauncher** → **⚡ QuickTrans** | Right-click menu in the editor. |
+| **🔍 Run in SuperLookup** button in the popup | After you've seen the QuickTrans results, click 🔍 to hand the same query off to Workbench's SuperLookup tab for a richer concordance / termbase / web look-up. |
 
 ## Providers
 
@@ -22,29 +22,33 @@ QuickTrans supports these MT providers (subject to your API keys and per-provide
 - Amazon Translate
 - ModernMT
 - MyMemory (free)
+- Your own OpenAI-compatible MT service – see [Custom MT endpoint](/workbench/quicktrans/custom-mt-endpoint/)
 
-Plus optional LLM-based "translation as suggestion" from Claude, OpenAI, Gemini, Mistral, DeepSeek, and a custom OpenAI-compatible endpoint or local Ollama model.
+Plus optional AI "translation as suggestion" from Claude, OpenAI, Gemini, Mistral, DeepSeek, OpenRouter, a custom OpenAI-compatible endpoint or a local Ollama model.
+
+The MT engines' API keys are entered in **Settings → 🌐 MT Settings**; the AI providers reuse the keys in **Settings → 🤖 AI Settings**.
 
 ## Configure providers
 
-QuickTrans's provider list and LLM model selectors live in **Workbench Settings → ⚡ QuickTrans**. Click the ⚙ cog icon in the QuickTrans popup header to jump there in one click.
+QuickTrans's provider list and LLM model selectors live in **Workbench Settings → ⚡ QuickTrans**. Click the ⚙️ cog icon in the QuickTrans popup to jump there in one click.
 
-Per-provider on/off + LLM model choices persist in `general_settings.json` under `mt_quick_lookup`.
+There's no Save button: since v1.10.372 each change is saved a moment after you make it, together with the rest of Workbench's settings in `settings.json`. The same page also decides whether the popup fetches AI providers automatically or shows a **Fetch** button for each – see [QuickTrans](/workbench/quicktrans/overview/#ai-providers-automatic-or-on-request).
 
 ## Language behaviour
 
-- QuickTrans uses the active project's language pair by default.
-- The popup has its own From / To dropdowns – override per-query without affecting your project settings.
+- QuickTrans uses the active project's language pair by default (or the default pair in **Settings → 🌐 Language Pair** when no project is open).
+- Text in the project's target language is detected and translated back into the source language.
+- The popup's **Languages:** row has its own source and target dropdowns and a **⇄** swap button. Changing them fetches the translations again, without affecting your project settings. The choice sticks for later popups until the project's (or the default) language pair changes.
 
 ## Performance
 
-Provider calls run in parallel (each with a 5 s timeout, overall batch capped at 6 s) so total wall-clock is roughly the slowest single provider, not the sum. Results appear in the popup as they arrive – the first to finish is auto-selected so you can hit Enter without waiting for the slow providers.
+Provider calls run in parallel, so the total wait is roughly the slowest single provider, not the sum. Results appear in the popup as they arrive – the first successful one is auto-selected so you can hit Enter without waiting for the slow providers.
 
-## Copying results
+## Using a result
 
-- Successful results show a **📋 copy button**.
-- You can also **double-click** a result row to copy the translation.
-- Number keys **1**–**9** select the corresponding result (1 = first, 2 = second, etc.).
+- **Click** a result, or press **Enter** on the selected one, to insert it.
+- Number keys **1**–**9** insert the corresponding result (1 = first, 2 = second, etc.).
+- From another application, the chosen translation is pasted over your selection there; inside Workbench it goes into the current segment's target.
 
 :::note
 If a provider call fails, QuickTrans shows the error message in red. Failed providers don't block the others.

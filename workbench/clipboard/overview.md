@@ -11,6 +11,8 @@ The Clipboard Manager in Supervertaler Workbench captures everything you copy an
 
 When you summon the Clipboard Manager via **Ctrl+Alt+C** from another app (e.g. Trados), Workbench automatically sends Ctrl+C in the source app *before* opening the tab. So you don't need a separate "copy first" keystroke – the current selection lands at the top of the clipboard history the moment the tab opens.
 
+On Windows, AltGr counts as Ctrl+Alt. Since v1.10.372, if AltGr+C types a character on your keyboard layout (**ć** on a Polish keyboard, for example), you get the character rather than the Clipboard Manager – use the left Ctrl and left Alt keys for the hotkey.
+
 :::note
 The tab was renamed from "📋 Clipboard" to "📋 Clipboard Manager" in v1.10.47 to match what the widget actually does – it has been more than a clipboard history for several versions (Snippets, Text Conversions, QuickLauncher Prompts, plus the clipboard history columns).
 :::
@@ -102,13 +104,36 @@ Click any item in the Text or Images list to paste it. What happens:
 
 1. The item is placed on the system clipboard.
 2. Workbench is hidden to the system tray.
-3. `Ctrl+V` is sent to whichever window was active before the Clipboard tab opened.
+3. `Ctrl+V` is sent to whichever window was active when you pressed **Ctrl+Alt+C**.
+
+If you pressed Ctrl+Alt+C inside Workbench itself, it switches back to the tab you were on and pastes there instead. If you opened the tab by clicking it, there is no window to return to, so the item is simply put on the clipboard for you to paste yourself.
 
 After pasting, the item is marked as used and appears greyed out. This makes it easy to track which clips you have already inserted in a session.
 
 :::note
+**Apps that ignore Ctrl+V.** Terminals and some other programs don't accept a pasted Ctrl+V. Right-click a text clip and choose **⌨ Paste by typing** to have the text typed out instead, or set the **Paste method** for all pastes (see [Right-clicking a clip](#right-clicking-a-clip)). On Windows, if the target program runs as administrator and Workbench doesn't, Windows blocks the paste; Workbench tells you so, and running Workbench as administrator too solves it.
+:::
+
+:::note
 **Latest clip is highlighted on open.** Every time you switch to the Clipboard tab, the most recent text clip (top of the list) is selected automatically – press **Enter** to paste it without touching the mouse. If you'd rather paste an older clip, arrow up/down to it first.
 :::
+
+### Image preview
+
+The thumbnails in the Images column are small, so near-identical screenshots are hard to tell apart. Move through the Images column with the arrow keys and pause on an item for a moment: a larger preview appears to the left of the column. It follows you as you move on, never takes the focus, and disappears when you leave the column, paste a clip or press Esc.
+
+### Right-clicking a clip
+
+Right-click an entry in the Text or Images list for these options:
+
+| Option | What it does |
+| --- | --- |
+| **🗑 Delete** | Remove this clip from the history |
+| **⌨ Paste by typing** | Text clips only: paste this clip by typing it out, for a program that ignores Ctrl+V |
+| **📇 Save to Personal Snippets…** | Text clips only: turn the clip into a permanent snippet in the Menu column. A small dialog lets you change the label first. |
+| **✨ Save to Special Characters…** | The same, but into the Special Characters category |
+| **Clear all** | Remove the entire history (see [Deleting clips](#deleting-clips)) |
+| **Paste method** | How clips are pasted from now on: **Auto – type into terminals, else Ctrl+V** (the default), **Always Ctrl+V**, or **Always type the text**. The choice is remembered. |
 
 ## The Menu column
 
@@ -122,13 +147,22 @@ Refresh reloads three sources: the unified prompt library (via `UnifiedPromptLib
 
 ### 📌 Personal Snippets
 
-Your own text snippets (e.g. phone numbers, email signatures, boilerplate paragraphs). Snippets are loaded from `.md` files inside your user-data folder – see [Personal Snippets](/trados/text-transforms/) for the file format.
+Your own text snippets (e.g. phone numbers, email signatures, boilerplate paragraphs). Activating a snippet (click or Enter) copies its body to the clipboard and pastes it into the source app via the same hide-and-paste flow used for clipboard clips.
 
-Activating a snippet (click or Enter) copies its body to the clipboard and pastes it into the source app via the same hide-and-paste flow used for clipboard clips.
+**Managing snippets.** Right-click in the Menu column:
+
+* on a snippet: **✏ Edit snippet…** (change its label or text) or **🗑 Delete snippet**;
+* on a category, or on a snippet inside it: **➕ New snippet in "…"…**;
+* on empty space: **➕ New Personal Snippet…**;
+* anywhere: **📂 Open snippets folder**.
+
+The quickest way to create one is from a clip: right-click it in the Text list and choose **📇 Save to Personal Snippets…**.
+
+**On disk.** Each snippet is one `.md` file under `snippet_library/` in your [user data folder](/workbench/reference/data-folder/). The file name is the label shown in the Menu, the file's content is the text that gets inserted, and the top-level folder is the category (**Personal Snippets**, **Special Characters**, or any folder you create). Subfolders inside a category show up as collapsible folders in the Menu, to any depth. After editing the files outside Workbench, click **🔄 Refresh**.
 
 ### ✨ Special Characters
 
-Quick-insert symbols, arrows, primes, dashes, quotes, currency signs, legal symbols, mathematical operators, and bullet characters. Activate one to paste the character into the source app.
+Quick-insert symbols, arrows, primes, dashes, quotes, currency signs, legal symbols, mathematical operators, and bullet characters. Activate one to paste the character into the source app. These are snippets too, so you can edit, add and delete them in the same way as Personal Snippets.
 
 ### 🔁 Text Conversions
 

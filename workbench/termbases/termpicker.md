@@ -10,7 +10,7 @@ title: "TermPicker"
 **TermLens and TermPicker are sibling surfaces, not parent/child.** Both consume termbase matches for the current segment, but present them in completely different ways:
 
 - **TermLens** shows matches *in context* – the source sentence with terms highlighted in place and translation chips anchored to where each term sits. Best for reading and scanning.
-- **TermPicker** shows the same matches as a flat sortable list with keyboard-driven Enter-to-insert. Best for quick insertion when you already know which term you want.
+- **TermPicker** shows the same matches as a flat, numbered list with keyboard-driven Enter-to-insert. Best for quick insertion when you already know which term you want.
 
 Underneath both: your termbases.
 :::
@@ -19,7 +19,7 @@ Underneath both: your termbases.
 
 Press **Ctrl+Shift+P** to open TermPicker. It appears as a modal window above the editor. (P = **P**icker – matches the Trados plugin and follows the VS Code-style command-palette convention.)
 
-The shortcut is fully remappable via **Settings → Keyboard Shortcuts** under the `term_picker` action.
+The shortcut is fixed: TermPicker doesn't appear in **Settings → Keyboard Shortcuts**, so it can't be rebound there.
 
 > Looking for the lone-Ctrl-tap behaviour? That opens the [TermLens popup](/workbench/termbases/termlens-popup/) – a more compact in-context view of the same matches. TermPicker described on this page is the table-based alternative for users who prefer a tabular UI.
 
@@ -52,10 +52,10 @@ TermPicker is designed for fast keyboard use:
 
 | Key           | Action                                                            |
 | ------------- | ----------------------------------------------------------------- |
-| **0–9**       | Jump to that-numbered row; auto-inserts when ≤ 9 total matches    |
+| **0–9**       | Jump to that-numbered row (0 = row 10); auto-inserts when ≤ 9 total matches |
 | **Enter**     | Insert the selected term and close the picker                     |
 | **Esc**       | Close the picker without inserting                                |
-| **Up / Down** | Navigate between rows (wraps around)                              |
+| **Up / Down** | Navigate between rows                                             |
 | **Right**     | Expand synonyms for the selected row                              |
 | **Left**      | Collapse synonyms (jumps to parent row when on a sub-row)         |
 
@@ -71,11 +71,11 @@ You can insert a term in three ways:
 
 The selected translation lands at the current cursor position in the target segment.
 
-### Persisted layout
+### Remembered layout
 
-TermPicker remembers your preferred size and column widths between sessions, so once you resize it to fit your screen the layout sticks.
+TermPicker remembers its size and column widths while Workbench is running, so once you resize it to fit your screen the layout sticks for the rest of the session. After a restart it opens at its default size again.
 
-> TermPicker shows the same matches as TermLens, but in a flat sortable list format that scales better when there are many results.
+> TermPicker shows the same matches as TermLens, but in a flat list format that scales better when there are many results.
 
 ***
 

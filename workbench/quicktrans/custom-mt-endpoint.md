@@ -66,7 +66,7 @@ These are free, best-effort services and their availability and quality vary; `d
 
 | | Custom MT endpoint | AI custom endpoint |
 |---|---|---|
-| Lives in | QuickTrans ▸ MT engines | AI Settings ▸ AI/LLM Providers |
+| Lives in | **Settings → ⚡ QuickTrans → 🌐 Machine Translation Providers** | **Settings → 🤖 AI Settings → 🔌 Custom (OpenAI-Compatible API)** |
 | Used for | Fast MT results in QuickTrans | AI Assistant chat & AI translation |
 | Independent? | Yes – configure both at once | Yes |
 | Profiles | Multiple, each a QuickTrans result | Multiple, one active at a time |

@@ -42,6 +42,13 @@ guesswork.
   - Exporting the concordance hits.
   - The Direction filter, which no longer exists, is gone from the pages.
 - **Workbench: the Language page** says what is translated now – about 1,100 strings, not the 180 of the first pass – and which languages are complete. It also says that the choice saves itself.
+- **Workbench: QuickTrans, Voice, Clipboard, termbases and tools** were checked against v1.10.372:
+  - **QuickTrans:** the popup's Source row and language combos, auto-fetch for AI providers, the full provider list, and the docked panel;
+  - **Voice:** the Settings section is rewritten to match the tab – Always-On is Vosk only, dictation is always faster-whisper, and hold-to-talk is the default;
+  - **Clipboard Manager:** snippet and clip right-click menus;
+  - **termbases:** real buttons, columns and import format (TSV, with the Non-translatable column);
+  - **tools:** the PDF Rescue, TMX Editor, Statistics and Superbrowser labels.
+- **Workbench: the data-folder page** lists the settings files and the folders added since it was written. *Contributing* says the help pages live in this repository.
 - **Workbench: older mistakes corrected along the way:**
   - the Theme page pointed to a Settings tab that doesn't exist;
   - the UI font scale is under View Settings;
