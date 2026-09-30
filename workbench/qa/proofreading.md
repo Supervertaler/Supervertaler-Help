@@ -9,7 +9,7 @@ Proofreading lives under the top-level **QA** menu:
 * **QA ▸ Proofreading ▸ Proofread Translation…** – run a proofreading pass.
 * **QA ▸ Proofreading ▸ Delete All Proofreading Comments** – clear every proofreading comment in the project.
 
-The same menu also has **🔎 Run QA Checks…** for your own saved checks and a tag check ([QA Checks](/workbench/qa/qa-checks/)), and **📝 Check with LanguageTool…** for grammar, spelling and style ([Check with LanguageTool](/workbench/qa/languagetool/)).
+The same menu also has **🔎 Run QA Checks…** for your own saved checks and a tag check ([QA Checks](/workbench/qa/qa-checks/)), **📝 Check with LanguageTool…** for grammar, spelling and style ([Check with LanguageTool](/workbench/qa/languagetool/)), and **🔬 Open in Xbench…** ([Open in Xbench](/workbench/qa/xbench/)).
 
 ## Running a proofreading pass
 

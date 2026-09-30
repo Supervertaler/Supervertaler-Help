@@ -769,6 +769,10 @@ const sidebar = [
             "link": "/workbench/qa/languagetool/"
           },
           {
+            "label": "Open in Xbench",
+            "link": "/workbench/qa/xbench/"
+          },
+          {
             "label": "Tag Validation",
             "link": "/workbench/qa/tag-validation/"
           },

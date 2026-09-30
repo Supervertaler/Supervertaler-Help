@@ -19,6 +19,8 @@ guesswork.
   - **Shortcuts:** Import Document moved to **Ctrl+Shift+O**, and Ctrl+O opens a project again.
   - **QA:** the tag check now recognises self-closing tags such as `<2/>`.
   - **Speed:** the Preview is built when it is shown, and there are notes on large projects under Performance.
+  - **Xbench:** a new *Open in Xbench* page (QA → 🔬 Open in Xbench…).
+  - **Project folder:** the `tm/` folder for the backup TMX.
 
 ## 2026-09-30
 

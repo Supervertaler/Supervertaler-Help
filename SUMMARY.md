@@ -207,6 +207,7 @@
 * [QA Checks](workbench/qa/qa-checks.md)
 * [Spellcheck](workbench/qa/spellcheck.md)
 * [Check with LanguageTool](workbench/qa/languagetool.md)
+* [Open in Xbench](workbench/qa/xbench.md)
 * [Tag Validation](workbench/qa/tag-validation.md)
 * [Non-Translatables](workbench/qa/non-translatables.md)
 

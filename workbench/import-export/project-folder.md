@@ -23,7 +23,9 @@ My Project/
 ├─ My Project.svproj      ← the project file
 ├─ My Project.svproj.bak  ← the previous save, kept as a safety copy
 ├─ source/                ← the original documents you're translating
-└─ target/                ← the translated documents you export
+├─ target/                ← the translated documents you export
+├─ tm/                    ← the automatic backup of the project as TMX
+└─ qa/xbench/             ← written by QA → Open in Xbench
 ```
 
 - **`source/`** – when you **save** a project, its original document is copied
@@ -58,6 +60,12 @@ My Project/
 Keep the `.svproj` **inside** its folder. If you want to relocate a project,
 move or copy the **whole folder**, not just the `.svproj` on its own.
 :::
+
+- **`tm/`** – the automatic backup (**Settings → 💾 Backup**) exports the
+  project as `<project>_backup.tmx` into this folder, the way OmegaT keeps its
+  TMs in `tm/`. A backup left next to the `.svproj` by an older version is
+  moved here.
+- **`qa/xbench/`** – what [Open in Xbench](/workbench/qa/xbench/) writes.
 
 ## Safe saving and the backup copy
 

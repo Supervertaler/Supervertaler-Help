@@ -124,6 +124,7 @@ QA is Workbench's home for quality-assurance features. Next to Proofreading, the
 
 * **🔎 Run QA Checks…** – run your saved find-only checks, and a check that tags and codes match the source, over the whole project. See [QA Checks](/workbench/qa/qa-checks/).
 * **📝 Check with LanguageTool…** – check the target text for grammar, spelling and style. See [Check with LanguageTool](/workbench/qa/languagetool/).
+* **🔬 Open in Xbench…** – open the project in ApSIC Xbench, with your glossary terms as key terms. See [Open in Xbench](/workbench/qa/xbench/).
 
 See also [Spellcheck](/workbench/qa/spellcheck/), [Tag Validation](/workbench/qa/tag-validation/) and [Non-Translatables](/workbench/qa/non-translatables/).
 
