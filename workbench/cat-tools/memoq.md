@@ -29,9 +29,26 @@ The table format with source and target columns works best with Supervertaler.
 ## Import to Supervertaler
 
 1. Go to **Project → Import → memoQ → Bilingual Table (DOCX)…**
+   - Or **Project → Import → memoQ → Bilingual Table (RTF)…**
    - Or **Project → Import → memoQ → XLIFF (.mqxliff)…**
 2. Select your exported file
 3. The segments appear in the translation grid
+
+### The language pair
+
+Supervertaler reads the language pair from the bilingual table's header row
+(or, for XLIFF, from the file itself). In a bilingual DOCX, language codes such
+as `IT` or `it-IT`, names in other languages such as *Italiano* or *Deutsch*, and
+regional forms such as *English (United Kingdom)* are all understood.
+
+If the pair can't be read, the **Confirm language pair** prompt asks you for it
+rather than guessing. Pick the right languages: TM matches are looked up for this
+pair, and a project with the wrong one finds no TM matches at all.
+
+:::note
+Before v1.10.372, that prompt couldn't open, and the import stopped with the
+error "No module named 'PySide6'". Update if you see it.
+:::
 
 ### What Gets Imported
 

@@ -12,15 +12,24 @@ This page covers:
 - How to contribute a translation
 
 :::note
-**Current scope (MVP, v1.10.208).** This first translation pass covers the **menu bar**, **Settings tab labels**, and **General-tab group titles** – around 180 strings. Dialog bodies, error messages, status-bar text, and per-cell tooltips remain in English for now. Subsequent passes will widen coverage as translators contribute.
+**Current scope.** About 1,100 strings can be translated: the **menu bar**, the **toolbar**, most **Settings** pages, and many dialog titles and buttons. Message boxes, error messages and some labels are not yet prepared for translation, so they stay in English in every language for now. The first pass (v1.10.208) covered only the menu bar and Settings tab labels, around 180 strings.
 :::
+
+## Available languages
+
+| Language | Status |
+| --- | --- |
+| **Chinese (Simplified)** – `zh_CN` | Complete |
+| **Chinese (Traditional)** – `zh_TW` | Complete |
+| **Dutch** – `nl` | Partial – about a third of the strings; the rest show in English |
+
+Every other language shows the English interface until someone contributes a translation – see [How to contribute a translation](#how-to-contribute-a-translation).
 
 ## Picking your display language
 
 1. Open **Settings → General → 🌐 Language**.
-2. Use the **Display language** dropdown to choose a locale.
-3. Click **OK** to close Settings.
-4. **Restart Supervertaler** for the new language to take effect.
+2. Use the **Display language** dropdown to choose a locale. Your choice is saved straight away – there is no Save button.
+3. **Restart Supervertaler** for the new language to take effect. A reminder appears under the dropdown until you do.
 
 <figure><img src="/.gitbook/assets/Workbench-Settings-Language-Dropdown.png" alt=""><figcaption><p>Settings → General → Language dropdown</p></figcaption></figure>
 
@@ -121,7 +130,7 @@ The whole flow is designed so you can use whichever CAT tool you already work in
 - **Avoid mnemonic collisions** within the same menu. Two items both using `&S` will cause one to silently lose the shortcut.
 - **Emoji** (📁 🔍 ⚙️ etc.) stay in the translation – they're part of the visual identity.
 - **Newlines (`\n`)** in source strings should be preserved.
-- **Placeholders** like `{0}` or `%1` are not in this MVP's strings, but if you see one, leave it verbatim.
+- **Placeholders** like `{0}` or `%1` must be copied exactly as they are.
 
 ## How translations are picked up
 

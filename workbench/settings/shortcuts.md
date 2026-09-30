@@ -77,6 +77,8 @@ The Status indicator on the right-hand side of Settings → Keyboard Shortcuts s
 
 Global hotkeys are registered via the native `RegisterHotKey` API, which consumes the keystroke at the OS level. The combination is reserved for Supervertaler whenever it's running. If another app has already claimed the same combination, Supervertaler logs a `failed_hotkeys` warning and that one combination won't fire – re-bind to something free in Settings → Keyboard Shortcuts.
 
+Windows passes the **AltGr** key on as Ctrl+Alt, so a Ctrl+Alt hotkey could swallow the character AltGr types: no **ł** (AltGr+L) on a Polish keyboard, no **@** (AltGr+Q) on a German one. Since v1.10.372, when a Ctrl+Alt hotkey fires while the right Alt key is held and your keyboard layout types a character with that key, the character is typed and the hotkey is not run. **Left Ctrl + left Alt** still runs the hotkey, and so does AltGr on a layout such as English (US), where AltGr+key types nothing.
+
 **Linux**
 
 Global hotkeys go through `pynput`, which uses XGrabKey under X11. If hotkeys silently don't fire, your user may need to be in the `input` group (`sudo usermod -aG input $USER`, then log out and back in).

@@ -13,9 +13,7 @@ SuperLookup’s **Termbases** tab searches your Supervertaler termbases for pref
 
 1. Type (or paste) a term into the search box.
 2. Press `Enter` (or click **Search**).
-3. Optional filters:
-	- **Direction:** Both / Source / Target
-	- **From / To:** filter by termbase language pair (leave as **Any** to search across languages)
+3. Optional filter: **From / To** limits the search to a termbase language pair (leave as **Any** to search across languages).
 
 ## What you’ll see
 

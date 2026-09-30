@@ -9,6 +9,8 @@ Proofreading lives under the top-level **QA** menu:
 * **QA ▸ Proofreading ▸ Proofread Translation…** – run a proofreading pass.
 * **QA ▸ Proofreading ▸ Delete All Proofreading Comments** – clear every proofreading comment in the project.
 
+The same menu also has **🔎 Run QA Checks…** for your own saved checks and a tag check ([QA Checks](/workbench/qa/qa-checks/)), and **📝 Check with LanguageTool…** for grammar, spelling and style ([Check with LanguageTool](/workbench/qa/languagetool/)).
+
 ## Running a proofreading pass
 
 Open **QA ▸ Proofreading ▸ Proofread Translation…**. The dialog has three things to set:
@@ -60,6 +62,7 @@ Results are stored **keyed by model**, so passes with different models *accumula
 ## Related
 
 * [Comments](/workbench/editor/comments/) – where proofreading comments are listed and managed
+* [QA Checks](/workbench/qa/qa-checks/) · [Check with LanguageTool](/workbench/qa/languagetool/)
 * [Spellcheck](/workbench/qa/spellcheck/) · [Tag Validation](/workbench/qa/tag-validation/) · [Non-Translatables](/workbench/qa/non-translatables/)
 * [Prompt Library](/workbench/ai-translation/prompt-library/) – save custom proofreading prompts
 * [Usage & Costs](/workbench/ai-translation/usage-costs/)

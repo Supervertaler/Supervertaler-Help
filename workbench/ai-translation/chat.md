@@ -2,7 +2,7 @@
 title: "Chat"
 ---
 
-The **💬 Chat** panel is a full AI assistant that supports OpenAI, Claude, Gemini, Ollama, and any OpenAI-compatible custom provider. It's available in two places: as the **Chat** sub-tab of the **✦ AI** top tab, and as a **💬 Chat** tab in the editor's right panel so you can keep a conversation visible while you translate.
+The **💬 Chat** panel is a full AI assistant that supports OpenAI, Claude, Gemini, Ollama, and any OpenAI-compatible custom provider. It's available in two places: as the **💬 Chat** sub-tab of the **✨ AI** top tab, and as a **💬 Chat** tab in the editor's right panel so you can keep a conversation visible while you translate.
 
 When you have **Supervertaler for Trados** running with its Assistant panel active, Chat automatically picks up the project context from Trados – active segment, surrounding segments, TM matches, termbase hits, project metadata – and answers questions about your real translation work without you having to switch out of Trados.
 
@@ -14,9 +14,24 @@ Supervertaler for Trados runs a tiny localhost-only HTTP service called the **Su
 
 Nothing leaves your computer – the bridge listens only on `127.0.0.1`, requires a per-session authentication token, and is never reachable from outside the machine.
 
+## Context chips
+
+Above the chat input is a row of **Context:** chips: **📄 Document**, **💾 TMs**, **📚 Termbases** and **📎 Files**. Click a chip to switch it on or off; right-click it for details.
+
+Two of them send your own Workbench resources along with each message:
+
+* **💾 TMs** – the translation memories switched on for the project, with their sizes, plus the TM matches for the segment selected in the grid.
+* **📚 Termbases** – the terms from the project's termbases that occur in the document (up to 150), found by the same lookup TermLens uses. Forbidden and non-translatable terms are marked as such.
+
+When these chips are on, [AutoPrompt](/workbench/ai-translation/autoprompt/) receives the same data too.
+
+:::note
+Before v1.10.372, switching these two chips on changed only their look – the AI received no TM or termbase data at all.
+:::
+
 ## The 🔗 Trados chip
 
-Above the chat input you'll see a row of context chips (Document, TMs, Termbases, Files). When the Trados plugin is detected, a fifth chip appears:
+When the Trados plugin is detected, a fifth chip appears next to the others:
 
 * **Hidden** until the bridge is detected for the first time. Users without the Trados plugin never see this chip.
 * **Lit green** – bridge is reachable; Trados context is included in chat messages.

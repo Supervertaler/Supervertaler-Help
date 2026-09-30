@@ -7,7 +7,32 @@ Supervertaler can import and export several formats depending on your workflow.
 ## Standard documents
 
 - **DOCX** (Microsoft Word): import a document, translate in the grid, export a translated DOCX.
-- **TXT** (plain text): each line becomes a segment.
+- **TXT** / **MD** (plain text and Markdown): each line becomes a segment, or each sentence if you tick **Split lines into sentences**. See [Importing Text Files](/workbench/import-export/txt-import/).
+
+## Adding more source text to a project
+
+A client often sends a few more sentences after you've started. If you created
+the project from pasted text (**📝 Paste Text** in New Project), from a plain-text
+or Markdown file, or with **⭐ Start Empty**, you can add them to the project you
+already have, with no need to make a text file and import it (from v1.10.372):
+
+1. Choose **Edit → ➕ Add Source Text…**
+2. Paste or type the new text and click **Add Segments**.
+
+The text is split into sentences the same way as when a project is created
+(following your [Segmentation Rules](/workbench/settings/segmentation-rules/)),
+and added as new segments at the end of the project. The grid jumps to the first new segment, and
+**Ctrl+Z** takes the whole addition back out.
+
+Each line you paste becomes its own paragraph, so a plain-text export puts the
+added text on new lines rather than gluing it onto the last one.
+
+:::note
+**Add Source Text** isn't available for DOCX, Okapi (IDML, HTML, XLIFF, PO, XLSX,
+PPTX) or bilingual CAT-tool projects, and says so if you try. Those projects are
+exported back into their original file, which has no place for new text. If the
+grid is sorted, switch back to **Document Order** (Sort menu) first.
+:::
 
 ## Other formats via Okapi
 

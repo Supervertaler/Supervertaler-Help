@@ -204,7 +204,9 @@
 ## 🖥️ Quality Assurance
 
 * [AI Proofreading](workbench/qa/proofreading.md)
+* [QA Checks](workbench/qa/qa-checks.md)
 * [Spellcheck](workbench/qa/spellcheck.md)
+* [Check with LanguageTool](workbench/qa/languagetool.md)
 * [Tag Validation](workbench/qa/tag-validation.md)
 * [Non-Translatables](workbench/qa/non-translatables.md)
 
@@ -235,6 +237,8 @@
 * [AutoCorrect while typing](workbench/settings/autocorrect.md)
 * [TM Settings](workbench/settings/tm-settings.md)
 * [Termbase Settings](workbench/settings/termbase-settings.md)
+* [Segmentation Rules](workbench/settings/segmentation-rules.md)
+* [Inline Codes](workbench/settings/inline-codes.md)
 * [Language (UI Translation)](workbench/settings/language.md)
 * [View Settings](workbench/settings/view.md)
 * [Customising Shortcuts](workbench/settings/shortcuts.md)
@@ -244,6 +248,7 @@
 ## 🖥️ Troubleshooting
 
 * [Common Issues](workbench/troubleshooting/common-issues.md)
+* [TM Matches Not Appearing](workbench/troubleshooting/tm-matches.md)
 * [API Connection Problems](workbench/troubleshooting/api-issues.md)
 * [Import/Export Errors](workbench/troubleshooting/import-export-errors.md)
 * [Performance Tips](workbench/troubleshooting/performance.md)

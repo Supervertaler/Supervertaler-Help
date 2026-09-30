@@ -4,6 +4,8 @@ title: "Spellcheck"
 
 Supervertaler includes a powerful spellcheck system that highlights misspellings while you translate, with support for regional language variants.
 
+For grammar and style as well as spelling, you can also [check the translation with LanguageTool](/workbench/qa/languagetool/).
+
 ## How It Works
 
 Supervertaler uses a **three-tier spellcheck system** that automatically selects the best available backend:
@@ -47,10 +49,7 @@ Supervertaler supports regional language variants. The spellcheck dropdown shows
 
 ## Spellcheck Info Dialog
 
-Access detailed information about your spellcheck setup:
-
-1. Click the **🔤 Spellcheck** button in the grid toolbar
-2. Or go to **View → Spellcheck Info**
+Access detailed information about your spellcheck setup: click the **📝 Spellcheck** button above the grid and choose **ℹ️ Spellcheck Info** from its menu.
 
 The dialog shows:
 - Current language and backend
@@ -88,9 +87,26 @@ To add spellcheck support for additional languages or variants:
 You can add words that Supervertaler should always accept:
 
 - **Right-click a "misspelled" word** → **Add to Dictionary**
-- Or manually edit `user_data/dictionaries/custom_words.txt`
+- Or manage the whole list in **📖 Manage Custom Dictionary…**, in the menu of the **📝 Spellcheck** button above the grid
 
-Custom words are stored permanently and apply to all languages.
+Custom words are stored permanently and apply to all languages. Case doesn't matter: the list is stored in lower case.
+
+### Managing the list
+
+**📖 Manage Custom Dictionary…** opens the list as plain text, one word per line, which you can edit directly. The buttons above it help with bigger changes (from v1.10.372):
+
+| Button | What it does |
+|--------|--------------|
+| **📥 Import…** | Adds the words from a text file with one word per line, or from a Hunspell `.dic` file. The word count on the first line of a `.dic` file and the `/FLAGS` after each word are dealt with for you, and words already in your list are not added twice. |
+| **📤 Export…** | Saves your list as a text file, for example to back it up or share it with a colleague. |
+| **🔤 Sort & remove duplicates** | Sorts the list alphabetically and removes words that appear more than once. |
+| **📂 Open folder** | Opens the folder where the list is kept, as `custom_words.txt`. |
+
+The line under the list shows how many words it holds, and how many duplicates will be merged when you save.
+
+:::note
+Nothing is saved until you click **💾 Save**. **Cancel** closes the dialog without keeping your changes, including any words you imported.
+:::
 
 ## Troubleshooting
 

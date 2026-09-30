@@ -118,7 +118,14 @@ Proofreading comments are **not** exported to the final document. They're a tran
 
 ### The QA menu
 
-AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**), which also hosts **Delete All Proofreading Comments**. See **[AI Proofreading](/workbench/qa/proofreading/)** for how to run a pass. QA is Workbench's home for quality-assurance features – see also [Spellcheck](/workbench/qa/spellcheck/), [Tag Validation](/workbench/qa/tag-validation/) and [Non-Translatables](/workbench/qa/non-translatables/).
+AI proofreading lives under the top-level **QA** menu (**QA ▸ Proofreading**), which also hosts **Delete All Proofreading Comments**. See **[AI Proofreading](/workbench/qa/proofreading/)** for how to run a pass.
+
+QA is Workbench's home for quality-assurance features. Next to Proofreading, the menu has:
+
+* **🔎 Run QA Checks…** – run your saved find-only checks, and a check that tags and codes match the source, over the whole project. See [QA Checks](/workbench/qa/qa-checks/).
+* **📝 Check with LanguageTool…** – check the target text for grammar, spelling and style. See [Check with LanguageTool](/workbench/qa/languagetool/).
+
+See also [Spellcheck](/workbench/qa/spellcheck/), [Tag Validation](/workbench/qa/tag-validation/) and [Non-Translatables](/workbench/qa/non-translatables/).
 
 ## Quick reference
 

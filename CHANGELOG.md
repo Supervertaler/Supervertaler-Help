@@ -8,6 +8,46 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-30
+
+- **Workbench: the pages catch up with v1.10.370–v1.10.372.** They were last updated for v1.10.369, and the three releases since changed a good deal.
+- **Workbench: five new pages.**
+  - *Segmentation Rules* – your own break and no-break rules, SRX import and export, and which imports use them.
+  - *Inline Codes* – placeholders such as `{name}`, `%s` and `\n` treated like tags.
+  - *QA Checks* – saved find-only checks and the tags & codes check.
+  - *Check with LanguageTool* – the public service or your own server, and what is sent.
+  - *TM Matches Not Appearing* – four checks, and the diagnostic script from v1.10.370–371 with its `--repair` option.
+- **Workbench: Settings pages save themselves** (from v1.10.372). The General page explains it, and every "click Save" step is gone, including those for API keys, the language and the custom MT endpoint.
+- **Workbench: the AI pages.**
+  - *Token Usage & Costs* covers showing costs in euros, the cost of one project in **Project → 📋 Project Info…** (which also shows the AI model in use), and the estimate before a batch run.
+  - The Ollama page has the request timeout and keep-warm settings.
+  - Chat explains what the 💾 TMs and 📚 Termbases chips send.
+  - *Batch Translation* describes the dialog as it really is.
+- **Workbench: import, export and CAT tools.**
+  - Updating a project by pasting bilingual text, with no file (Ctrl+Shift+V).
+  - **Edit → ➕ Add Source Text…**.
+  - **📦 Back Up All TMs & Termbases…**.
+  - The missing-text check now covers every Okapi format.
+  - How each import gets its language pair, including the CafeTran, Trados review DOCX and Déjà Vu fixes.
+  - TMX import rewritten with the real steps.
+- **Workbench: the editor and QA pages.**
+  - Find & Replace can change your TMs too (**Also in writable TMs**).
+  - The Source and Target filter boxes take regular expressions (`/pattern/`).
+  - The Preview text can be made larger or smaller.
+  - The custom spellcheck dictionary can be imported, exported and tidied.
+  - The QA menu lists its new items.
+- **Workbench: SuperLookup.**
+  - Adding your own web resources.
+  - Text size for TM results.
+  - Exporting the concordance hits.
+  - The Direction filter, which no longer exists, is gone from the pages.
+- **Workbench: the Language page** says what is translated now – about 1,100 strings, not the 180 of the first pass – and which languages are complete. It also says that the choice saves itself.
+- **Workbench: older mistakes corrected along the way:**
+  - the Theme page pointed to a Settings tab that doesn't exist;
+  - the UI font scale is under View Settings;
+  - the TermLens page still called Alt+0 a Compare Panel key and linked the old stand-alone TermLens plugin;
+  - *Setting Up API Keys* described a Test Connection button and a Grok provider that Workbench doesn't have.
+
 ## 2026-09-29
 
 - **memoQ: updating from 0.1.0 or 0.1.1.** The *Updating* section says those versions have no update check, and how to tell (no *Check for updates* under Help), so nobody waits for an offer that cannot come. *Later* is described as it behaves – offered again the next time the editor opens, not "tomorrow".

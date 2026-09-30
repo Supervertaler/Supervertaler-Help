@@ -15,14 +15,16 @@ It is deliberately separate from the **AI custom endpoint** used for the AI Assi
 ## Set it up
 
 1. Open **Workbench Settings → ⚡ QuickTrans**.
-2. Under **MT engines**, tick **Custom MT endpoint (OpenAI-compatible)**.
+2. In the **🌐 Machine Translation Providers** group, under **Custom MT endpoint**, tick **Custom MT endpoint (OpenAI-compatible)**.
 3. Click **+** next to *Profile* and give the profile a name (e.g. `Local proxy`).
 4. Fill in:
    - **Endpoint URL** – the OpenAI-compatible base URL, e.g. `http://127.0.0.1:1234/v1`
    - **Model / engine** – the model (or, for a multi-engine proxy, the engine name, e.g. `google`)
    - **API key** – only if your endpoint requires one; leave blank otherwise
    - **Show this profile in QuickTrans** – tick to include this profile as a QuickTrans result; untick to keep it configured but hidden
-5. Click **💾 Save QuickTrans Settings**.
+   - **Send raw text only (MT mode)** – on by default and recommended for MT proxies: only the source text is sent, with the language direction in the system message. Turn it off if the endpoint is an instruction-following LLM that should see a full "translate this" prompt.
+
+There is no Save button: each change is saved a moment after you make it (from v1.10.372).
 
 Each profile that is enabled (**Show this profile in QuickTrans** ticked) and has an endpoint appears as its own result in the QuickTrans popup (summoned with **Ctrl+Alt+Q**). Add more profiles with **+** to expose several engines at once; remove one with **−**.
 
@@ -31,7 +33,7 @@ The "Custom MT endpoint" checkbox is the master on/off for the whole feature; th
 :::
 
 :::note
-The endpoint must be OpenAI **chat-completions** compatible (it receives a `POST` to `/v1/chat/completions` with `messages` and a `model`, and returns the translation as the assistant message). Workbench sends a strict "translate only" prompt, so the endpoint should return just the translated text.
+The endpoint must be OpenAI **chat-completions** compatible (it receives a `POST` to `/v1/chat/completions` with `messages` and a `model`, and returns the translation as the assistant message). Either way – raw text or a strict "translate only" prompt – the endpoint should return just the translated text.
 :::
 
 ## Example: a local multi-engine MT proxy

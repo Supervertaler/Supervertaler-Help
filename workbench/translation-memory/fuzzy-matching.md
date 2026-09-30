@@ -18,3 +18,4 @@ Fuzzy matching finds similar segments (not just exact duplicates).
 
 - Always review fuzzy matches before inserting.
 - For formatted text, preserve tags when inserting matches.
+- If you only ever get 100% matches and never fuzzy ones, see [TM Matches Not Appearing](/workbench/troubleshooting/tm-matches/#3-exact-matches-appear-but-never-fuzzy-ones).

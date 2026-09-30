@@ -11,33 +11,40 @@ Translate multiple segments at once with AI.
    - Or use **Edit → Select All** (`Ctrl+A`)
    
 2. **Start batch**:
-   - Press `Ctrl+Shift+T`
-   - Or go to **Translate → Batch Translate**
+   - Go to **Translate → Batch Translate** and choose which segments to translate, for example **Translate selected not-started segments**
+   - Or press `Ctrl+Shift+T` for **Translate all not-started & pre-translated**
 
-## Batch Dialog Options
+## The Batch Translate dialog
 
-### Provider Selection
+The dialog asks how the segments should be translated. Tick one of:
 
-Choose your LLM provider:
-- OpenAI (GPT-5.5, GPT-5.4 Mini)
-- Anthropic (Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8)
-- Google (Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro)
-- Mistral, DeepSeek
-- Ollama (local models)
-
-### Translation Mode
-
-| Mode | Description |
-|------|-------------|
-| **LLM Only** | Use AI for all segments |
-| **TM First** | Use TM matches above threshold, AI for rest |
-| **TM + Context** | Include TM matches as context for AI |
+- **📖 TM (Translation Memory)** – pre-translate from the TMs switched on for the project (exact matches and fuzzy matches from 75%). Tick **⚡ Exact matches only** to use 100% matches only, which is fastest.
+- **🤖 LLM (AI)** – translate with AI (the default). The provider and model are the ones chosen in **Settings → AI Settings**; the dialog shows which one under **📊 Current LLM**.
+- **🌐 MT (Machine Translation)** – use the MT providers you have set up in **Settings → MT Settings**.
 
 ### Options
 
-- **Skip confirmed segments**: Don't re-translate ✅ segments
-- **Include context**: Send surrounding segments for better quality
-- **Retry until complete**: Auto-retry segments that return empty
+- **🔄 Retry until all segments are translated (recommended)** – see [Retry Feature](#retry-feature) below.
+- **✔ Auto-confirm 100% TM matches** – with TM selected, exact matches are confirmed straight away instead of getting the TM 100% status.
+- **🔧 Use FuzzyFixer (adapt fuzzy TM matches with AI)** – see [FuzzyFixer](/workbench/ai-translation/fuzzyfixer/). Segments are then sent one at a time.
+
+Click **Start Translation** to begin.
+
+### The cost estimate
+
+With **🤖 LLM (AI)** ticked, the dialog shows what the run is likely to cost before you start, for example:
+
+```
+💰 Estimated cost: ~$0.42 · ~120,000 tokens in / ~35,000 out in 12 call(s)
+```
+
+- The estimate uses your actual prompt and glossary, your **Batch size** (Settings → AI Settings) and the same price list as the [usage log](/workbench/ai-translation/usage-costs/). When the prompt is long enough for the provider to cache it, batches 2 onwards are priced at the cheaper cached rate, as they will be billed.
+- It updates when you tick **🔧 Use FuzzyFixer**, which sends one call per segment and so costs more.
+- It is hidden when **📖 TM** or **🌐 MT** is ticked.
+- A local (Ollama) model shows as free. A model that isn't in the price list shows "unknown" rather than pretending to be free.
+- The amount is shown in dollars or euros, whichever you chose in [Token Usage & Costs](/workbench/ai-translation/usage-costs/#showing-costs-in-euros).
+
+It is an estimate (token counts are worked out at about 4 characters per token); the actual cost of every call is logged in **Tools → 💰 Token Usage & Costs**.
 
 ## Progress Tracking
 
@@ -48,7 +55,7 @@ During translation:
 
 ## Retry Feature
 
-Enable **"🔄 Retry until all segments are translated"** to:
+**🔄 Retry until all segments are translated** is on by default. It will:
 - Automatically detect empty translations
 - Retry failed segments (up to 5 passes)
 - Ensure all segments get translated
@@ -81,3 +88,4 @@ After batch translation:
 - [AI Translation Overview](/workbench/ai-translation/overview/)
 - [Creating Prompts](/workbench/ai-translation/prompts/)
 - [Single Segment Translation](/workbench/ai-translation/single-segment/)
+- [Token Usage & Costs](/workbench/ai-translation/usage-costs/)

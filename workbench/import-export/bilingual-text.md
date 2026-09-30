@@ -21,7 +21,14 @@ safe and maximally readable.
 **Project → Export → 🔁 Supervertaler Re-importable → Bilingual Text (AI-friendly)…**
 
 You'll get a small options dialog (include locked segments; which statuses to
-include), then a save dialog. Two files are written side by side:
+include) with two ways out:
+
+- **Save to File…** – opens a save dialog and writes the text file (see below).
+- **📋 Copy to Clipboard** – copies the same text instead, ready to paste into an
+  AI chat. No file is written. See
+  [Working without files](#working-without-files-copy-and-paste).
+
+When you save to a file, two files are written side by side:
 
 - `MyProject_bilingual.txt` – the editable text file.
 - `MyProject_bilingual.txt.svexport.json` – a **sidecar** that records, per
@@ -96,6 +103,9 @@ are skipped – and why. Nothing is applied until you click **Apply changes**.
   tags"** ticked (the default), such segments are skipped; untick it to apply
   them anyway. Cosmetic `<b>`/`<i>`/`<u>` changes never trip this.
 - **Locked segments** are never modified.
+- **Blocks that match nothing** – when a block can't be matched to a segment
+  of the open project, the preview lists it as **MISSING** and it is never
+  written anywhere.
 
 ### Status
 
@@ -111,13 +121,58 @@ are skipped – and why. Nothing is applied until you click **Apply changes**.
   the segment's comments. A comment-only edit (target left alone) is applied on
   its own and shows up in the import preview.
 
+## Working without files: copy and paste
+
+If you work on the text in an AI chat, you don't need a file in either
+direction (from v1.10.372). This is the Workbench counterpart of Clipboard Mode
+in Supervertaler for Trados.
+
+1. **Project → Export → 🔁 Supervertaler Re-importable → Bilingual Text
+   (AI-friendly)…**, choose your options and click **📋 Copy to Clipboard**.
+2. Paste the text into your AI chat, with your instructions (see
+   [Editing with an LLM](#editing-with-an-llm)).
+3. Copy the AI's reply and press **Ctrl+Shift+V** in Supervertaler, or choose
+   **Project → Import → 🔁 Supervertaler Re-importable → Bilingual Text
+   (AI-friendly) - Update from Pasted Text…**
+4. The **Update from Pasted Text** box opens. If the clipboard already holds
+   `[SEGMENT NNNN]` text, it is filled in for you; otherwise paste it in. Click
+   **Preview Changes…**.
+5. You get the same preview and the same safeguards as the file import (tag
+   check, locked segments skipped). Click **Apply changes** to update the
+   translations, comments and statuses.
+
+The reply doesn't have to be tidy: a line of chat before or after the blocks,
+or the whole text wrapped in a code block, is fine.
+
+### How pasted blocks find their segments
+
+Pasted text has no sidecar, so the blocks are matched to your segments by their
+**source line**, not by their `[SEGMENT NNNN]` number. The number can't be
+trusted on its own: an export filtered by status numbers its blocks from 1
+wherever they sit in the project, and an AI may reorder or drop blocks. The
+source line is reliable, because it is read-only.
+
+- **Leave the source lines exactly as they were.** A block whose source matches
+  no segment is listed in the preview as not found and skipped.
+- **Repeated sources** – when the same source text occurs more than once, the
+  blocks are paired with those segments in document order.
+- **Same session** – if you exported or copied this project earlier in the same
+  session, that export's exact mapping is used first.
+
+:::tip
+**Ctrl+Shift+V** works only while Supervertaler is the active window, so it
+doesn't interfere with other applications. You can change it in
+**Settings → ⌨️ Keyboard Shortcuts**.
+:::
+
 ## Tips
 
 - Export reads **live grid state**, so in-progress edits are included even if
   the segment isn't confirmed.
-- If the sidecar is missing, you can still re-import – segments are then matched
-  by position only, and source-tamper detection is unavailable. You'll be warned
-  first.
+- If the sidecar is missing, you can still re-import the file. Segments are then
+  matched by their source text, exactly as for
+  [pasted text](#how-pasted-blocks-find-their-segments), so edits still reach
+  the right segments even if the export was filtered by status.
 
 ## Related
 

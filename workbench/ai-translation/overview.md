@@ -84,14 +84,15 @@ See [Creating Prompts](/workbench/ai-translation/prompts/) and [Prompt Manager](
 
 ### In Settings
 
-1. Go to **Settings** tab
-2. Find **LLM Settings**
-3. Choose your preferred **Provider** and **Model**
-4. Save settings
+1. Go to the **⚙️ Settings** tab
+2. Open **🤖 AI Settings**
+3. Choose your preferred provider under **🤖 LLM Provider Selection** and the model under **📦 Model Selection**
 
-### Per-Translation
+There is no Save button: the change is saved a moment after you make it.
 
-When batch translating, you can choose the provider in the dialog.
+### Where to check which model is in use
+
+The status bar shows the current model. **Project → 📋 Project Info…** lists it too, with its provider, at the top of the **AI & Prompts** section, and the Batch Translate dialog shows it as **📊 Current LLM**.
 
 ## Quality Tips
 
@@ -111,11 +112,15 @@ When batch translating, you can choose the provider in the dialog.
 | Tags removed/moved | Explicitly tell AI to preserve tags |
 | Too literal | Ask for "natural, fluent" translation |
 
+**Slightly garbled tags are repaired for you.** Some models return a numbered inline tag a little wrong: `< 1>`, `</ 1 >`, `<1 />`, or HTML-escaped as `&lt;1&gt;`. Since v1.10.372, AI translations – batch, single-segment and FuzzyFixer – are repaired as they arrive, and each such tag is put back into its exact form instead of ending up in your target as plain text. Only tags that the source segment really contains are touched, so an ordinary `<` or `>` in the text is left alone. A tag pair left empty, with the words outside it, is not guessed at: the [tag check](/workbench/qa/tag-validation/) still reports it.
+
 ## Cost Management
 
 ### API costs
 
 Cloud providers typically charge by usage (tokens). Pricing and free tiers change over time, so treat each provider dashboard as the source of truth.
+
+Supervertaler logs the tokens and cost of every AI call. The Batch Translate dialog shows an estimate before you start, and **Project → 📋 Project Info…** shows what the project has cost so far. See [Token Usage & Costs](/workbench/ai-translation/usage-costs/).
 
 ### Reducing Costs
 
