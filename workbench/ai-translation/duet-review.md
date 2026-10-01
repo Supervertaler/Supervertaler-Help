@@ -65,8 +65,13 @@ To keep it affordable:
 
 If a provider returns an error, Supervertaler waits 15 seconds and tries again, then 30 seconds. After a third failure the review stops, and the transcript so far is kept.
 
+## One segment at a time
+
+The same debate can settle a single contested translation: right-click a segment in the grid and choose **🎭 Arbitrate This Segment (two AI models)…**. See [Cross-model Review → Arbitrate This Segment](/workbench/qa/cross-model-review/#arbitrate-this-segment).
+
 ## See also
 
 - [Prompt Manager](/workbench/ai-translation/prompt-library/)
+- [Cross-model Review](/workbench/qa/cross-model-review/), where a second model reviews translations
 - [AutoPrompt](/workbench/ai-translation/autoprompt/), which writes a first prompt that a Duet review can then improve
 - [Supported LLM Providers](/workbench/ai-translation/providers/)

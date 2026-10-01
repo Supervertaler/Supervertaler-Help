@@ -110,7 +110,14 @@ Each entry is one **(segment, model)** result:
 * The proofreader's findings, shown verbatim. The text is **read-only** – you read it and decide whether to act on it.
 * A **🗑️ delete** button that removes just that one comment.
 
-**Each LLM engine gets its own colour**, so if you ran the project through more than one model (e.g. GPT *and* Claude), you can tell at a glance which model flagged what. Selecting a segment in the grid scrolls the list to – and highlights – that segment's proofreading comment(s), exactly like the Segment sub-tab.
+**Each LLM engine gets its own colour**, so if you ran the project through more than one model (e.g. GPT *and* Claude), you can tell at a glance which model flagged what.
+
+From v1.10.373 the list holds three kinds of comment, and **Show:** at the top filters by kind:
+
+* **AI proofreading** – from **Proofread Translation…**, named after the model;
+* **Cross-model review (XR)** – flags from a second model, named *XR · model* (see [Cross-model Review](/workbench/qa/cross-model-review/));
+* **Translator comments (TC)** – the ⟦TC: …⟧ comments of the translating model, moved out of the target text.
+ Selecting a segment in the grid scrolls the list to – and highlights – that segment's proofreading comment(s), exactly like the Segment sub-tab.
 
 To clear everything at once, use **QA ▸ Proofreading ▸ Delete All Proofreading Comments**. Deletion is safe: re-running **Proofread Translation** regenerates the comments.
 

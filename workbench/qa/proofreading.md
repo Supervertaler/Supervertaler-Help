@@ -7,7 +7,9 @@ title: "AI Proofreading"
 Proofreading lives under the top-level **QA** menu:
 
 * **QA ▸ Proofreading ▸ Proofread Translation…** – run a proofreading pass.
-* **QA ▸ Proofreading ▸ Delete All Proofreading Comments** – clear every proofreading comment in the project.
+* **QA ▸ Proofreading ▸ 🔀 Cross-model Review…** – have a *second* model check the translations against your project's prompt and glossary. See [Cross-model Review](/workbench/qa/cross-model-review/).
+* **QA ▸ Proofreading ▸ ⟦TC⟧ Move Translator Comments out of the Target Text** – move the ⟦TC: …⟧ comments an AutoPrompt prompt has the AI write into proofreading comments ([details](/workbench/qa/cross-model-review/#translator-comments-tc)).
+* **QA ▸ Proofreading ▸ Delete All Proofreading Comments** – clear every proofreading comment in the project, of every kind.
 
 The same menu also has **🔎 Run QA Checks…** for your own saved checks and a tag check ([QA Checks](/workbench/qa/qa-checks/)), **📝 Check with LanguageTool…** for grammar, spelling and style ([Check with LanguageTool](/workbench/qa/languagetool/)), and **🔬 Open in Xbench…** ([Open in Xbench](/workbench/qa/xbench/)).
 
@@ -47,6 +49,7 @@ Findings land in the **✅ Proofreading** sub-tab of the **💬 Comments** panel
 * Each entry has a clickable **Segment #N · model** header that jumps to the segment.
 * Selecting a segment in the grid **scrolls and highlights** the list to that segment's comments.
 * A **🗑️** button deletes a single comment; **QA ▸ Proofreading ▸ Delete All Proofreading Comments** clears them all.
+* **Show:** at the top of the list filters by origin: AI proofreading, cross-model review (**XR**) or translator comments (**TC**).
 * In the grid, a segment with a proofreading comment shows a **purple** Status-cell background (versus **amber** for a segment comment, and a **split** when it has both).
 
 ## Multiple models
@@ -62,6 +65,7 @@ Results are stored **keyed by model**, so passes with different models *accumula
 ## Related
 
 * [Comments](/workbench/editor/comments/) – where proofreading comments are listed and managed
+* [Cross-model Review](/workbench/qa/cross-model-review/) – a second model reviews the translations, and two models arbitrate a single segment
 * [QA Checks](/workbench/qa/qa-checks/) · [Check with LanguageTool](/workbench/qa/languagetool/)
 * [Spellcheck](/workbench/qa/spellcheck/) · [Tag Validation](/workbench/qa/tag-validation/) · [Non-Translatables](/workbench/qa/non-translatables/)
 * [Prompt Library](/workbench/ai-translation/prompt-library/) – save custom proofreading prompts

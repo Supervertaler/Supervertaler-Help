@@ -206,6 +206,7 @@
 ## 🖥️ Quality Assurance
 
 * [AI Proofreading](workbench/qa/proofreading.md)
+* [Cross-model Review](workbench/qa/cross-model-review.md)
 * [QA Checks](workbench/qa/qa-checks.md)
 * [Spellcheck](workbench/qa/spellcheck.md)
 * [Check with LanguageTool](workbench/qa/languagetool.md)

@@ -765,6 +765,10 @@ const sidebar = [
             "link": "/workbench/qa/proofreading/"
           },
           {
+            "label": "Cross-model Review",
+            "link": "/workbench/qa/cross-model-review/"
+          },
+          {
             "label": "QA Checks",
             "link": "/workbench/qa/qa-checks/"
           },
