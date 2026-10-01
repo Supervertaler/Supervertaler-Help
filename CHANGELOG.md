@@ -25,6 +25,7 @@ guesswork.
   - **DeepL:** *QuickTrans* and *Machine Translation* explain that the CAT-tool key of DeepL Pro Advanced and Ultimate works as well as an API key.
   - **Fragment matches:** *Fuzzy Matching* has a new section on TM sentences that contain the segment or are part of it (✂ fragment).
   - **Project folder:** the `glossary/` and `reports/` folders, and TMX exports and the review table opening in the project folder.
+  - **Project Packages (new page, after The Project Folder):** **Project → 📦 Pack Project** and **Open Package**, covering what's packed, how TMs, glossaries and prompts are brought in on the other computer, and what isn't merged.
   - **Duet review (new page, under Prompts):** two AI models review a prompt together, with the debate rules, the result saved as a new version, the transcript in `reports/duet/`, and the cost.
 
 ## 2026-09-30

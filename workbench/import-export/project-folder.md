@@ -76,7 +76,9 @@ dialogs open wherever they did before.
 
 :::tip
 Keep the `.svproj` **inside** its folder. If you want to relocate a project,
-move or copy the **whole folder**, not just the `.svproj` on its own.
+move or copy the **whole folder**, not just the `.svproj` on its own. To take
+it to another computer together with its TMs, glossaries and prompt, pack it
+into one file: see [Project Packages](/workbench/import-export/project-packages/).
 :::
 
 ## Safe saving and the backup copy

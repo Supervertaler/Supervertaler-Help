@@ -518,6 +518,10 @@ const sidebar = [
             "link": "/workbench/import-export/project-folder/"
           },
           {
+            "label": "Project Packages (.svpkg)",
+            "link": "/workbench/import-export/project-packages/"
+          },
+          {
             "label": "Exporting Translations",
             "items": [
               {
