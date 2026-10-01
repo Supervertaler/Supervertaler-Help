@@ -36,7 +36,7 @@ Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macO
 - **Hold-to-talk** (default, recommended) – hold the hotkey to record, release to stop
 - **Toggle** – press once to start, press again to stop
 
-_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. On macOS and Linux, releasing the global hotkey isn't detected yet: press it again to stop, or let the maximum recording duration end the recording._
+_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. From v1.10.373 this also works on macOS, if Supervertaler has the **Input Monitoring** permission (System Settings → Privacy & Security). Without it, and on Linux, releasing the global hotkey isn't detected: press it again to stop, or let the maximum recording duration end the recording._
 
 ### Push-to-Talk for commands (Ctrl+Alt+V) – v1.10.193
 
@@ -71,6 +71,8 @@ The key is **recorded, not typed**, so it works with keys you can't express as t
    - **Toggle** – press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
 
 It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* – your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
+
+_On macOS, **⏺ Record key** is switched off from v1.10.373. The keyboard listener it needs crashes Supervertaler on macOS 26, so this option is for Windows and Linux for now._
 
 :::note
 **Which to use – this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.

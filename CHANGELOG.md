@@ -28,6 +28,7 @@ guesswork.
   - **Project Packages (new page, after The Project Folder):** **Project → 📦 Pack Project** and **Open Package**, covering what's packed, how TMs, glossaries and prompts are brought in on the other computer, and what isn't merged.
   - **Duet review (new page, under Prompts):** two AI models review a prompt together, with the debate rules, the result saved as a new version, the transcript in `reports/duet/`, and the cost.
   - **Cross-model Review (new page, under QA, after AI Proofreading):** a second AI model reviews the translations against the project's prompt and glossary, from the QA menu or after a batch translation. The page covers the XR flags and the **Show:** filter in the Proofreading comments, the report in `reports/cross-review/`, moving ⟦TC⟧ translator comments out of the target text, and **Arbitrate This Segment**, where two models debate one translation. *AI Proofreading*, *Comments*, *Batch Translation* and *Duet Review* link to it.
+  - **macOS global hotkeys:** *Keyboard Shortcuts* explains the new Accessibility notice, Input Monitoring for hold-to-talk, ⌘⇧ with digits, function and arrow keys, and non-Latin layouts. *Voice* says hold-to-talk now stops on release on macOS, and that **Record key** for the pause hotkey is off on macOS.
 
 ## 2026-09-30
 

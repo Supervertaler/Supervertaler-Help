@@ -73,6 +73,13 @@ Also requires the `pyobjc-framework-Cocoa` Python package (`pip install pyobjc-f
 
 The Status indicator on the right-hand side of Settings → Keyboard Shortcuts shows **Active (via NSEvent)** when global hotkeys are working on macOS.
 
+From v1.10.373:
+
+- **If Accessibility isn't granted**, Supervertaler says so when it starts: without it, macOS sends the hotkeys no keystrokes from other apps. **Open System Settings** goes straight to the Accessibility page, with Supervertaler already listed there. Switch it on, then restart Supervertaler. You can tick **Don't show this again**.
+- **Hold-to-talk** dictation also needs **Input Monitoring**, on the same Privacy & Security page. With it, Supervertaler notices when you let go of the hotkey. Without it, press the hotkey again to stop.
+- A global hotkey on macOS fires from the key itself, not from the character Shift makes of it, so **⌘⇧1** works. Function keys (**F1**–**F20**), arrow keys and Home/End/Page Up/Page Down can be used with a modifier.
+- On a keyboard layout that types non-Latin letters, such as Russian or Greek, **⌘⌥L** is the key where L is on a US keyboard, as for macOS's own ⌘ shortcuts.
+
 **Windows**
 
 Global hotkeys are registered via the native `RegisterHotKey` API, which consumes the keystroke at the OS level. The combination is reserved for Supervertaler whenever it's running. If another app has already claimed the same combination, Supervertaler logs a `failed_hotkeys` warning and that one combination won't fire – re-bind to something free in Settings → Keyboard Shortcuts.
