@@ -697,6 +697,10 @@ const sidebar = [
               {
                 "label": "AutoPrompt",
                 "link": "/workbench/ai-translation/autoprompt/"
+              },
+              {
+                "label": "Duet Review",
+                "link": "/workbench/ai-translation/duet-review/"
               }
             ]
           },

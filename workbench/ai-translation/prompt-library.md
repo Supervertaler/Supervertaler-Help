@@ -41,11 +41,13 @@ Whichever way you pick, the choice is saved into the `.svproj` immediately, so i
 
 - **Start simple** and evolve prompts as you learn what works for your language pair.
 - **AutoPrompt is a good starting point** for new projects, especially in unfamiliar domains – use the auto-generated prompt as a draft and edit it from there.
+- **Have two models check a prompt** – right-click it and choose **🎭 Duet review…** (from v1.10.373). Two different AI models review it against your project and save the improved prompt as a new version. See [Duet Review](/workbench/ai-translation/duet-review/).
 - **Preview Combined is honest** – it shows you the actual final prompt that will be sent. If something looks wrong, it's because something *is* wrong.
 - **External prompts can be edited in place** – if you load a prompt from an external file, Supervertaler can show it in the editor on the right and save changes back to the same file.
 
 ## See also
 
 - [AutoPrompt](/workbench/ai-translation/autoprompt/) – auto-generate a tailored translation prompt from the current document
+- [Duet Review](/workbench/ai-translation/duet-review/) – two AI models review a prompt and save an improved version
 - [Creating Prompts](/workbench/ai-translation/prompts/) – what makes a good translation prompt when writing one by hand
 - [AI Translation Overview](/workbench/ai-translation/overview/) – how the assembled prompt is used during translation

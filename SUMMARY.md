@@ -187,6 +187,7 @@
 * [Prompts](workbench/ai-translation/prompts.md)
   * [Prompt Manager](workbench/ai-translation/prompt-library.md)
   * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
+  * [Duet Review](workbench/ai-translation/duet-review.md)
 * [Image Context](workbench/ai-translation/image-context.md)
 * [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
 * [FuzzyFixer (Adapt Fuzzy Matches)](workbench/ai-translation/fuzzyfixer.md)
