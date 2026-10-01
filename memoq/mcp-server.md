@@ -118,7 +118,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | --- | :---: | --- |
 | `help` | ✓ | A menu of what you can ask, memoQ edition |
 | `get_project` | ✓ | Language pair, client/domain/subject, captured and live documents, what is staged |
-| `get_segments` | ✓ | With the live link: rows in memoQ's order with source, **target**, and the active row marked. Without: the source segments captured from translation requests |
+| `get_segments` | ✓ | With the live link: rows in memoQ's order with source, **target**, and the active row marked – plus, for rows memoQ has already asked about, the source with its inline tags, so Claude can put bold, italics and other tags in the right places. Without: the source segments captured from translation requests |
 | `get_active_segment` | ✓ | The row your cursor is on, with what is selected – needs the live link |
 | `go_to_segment` | ✓ | Asks memoQ to select a row – needs the live link |
 | `get_confirmed_pairs` | ✓ | Segments you have confirmed, via [Self-learning](/memoq/self-learning/) |
@@ -173,6 +173,8 @@ Reading is all this does. Nothing writes into a bank from memoQ; you edit the fi
 
 **Claude says the project is empty.** Nothing has been captured yet. Run Pre-translate once, or visit some segments.
 
-**Staged translations do not appear after Pre-translate.** They are matched by exact source text. If you edited a source segment after Claude read it, the match fails – ask Claude to re-read and re-stage that segment. Also check that Supervertaler is the selected MT engine for the Pre-translate run.
+**Staged translations do not appear after Pre-translate.** They are matched by source text, with inline tags and spacing set aside. If you edited a source segment after Claude read it, the match fails – ask Claude to re-read and re-stage that segment. Also check that Supervertaler is the selected MT engine for the Pre-translate run.
+
+**A staged row says "inline tags not placed".** Claude's translation reached the row, but without the tags the source has, so memoQ's tag check will flag it. Ask Claude to read the segments again – it can see each row's tags once memoQ has asked about it – and re-stage those rows with the tags in place, then Pre-translate again.
 
 **`get_confirmed_pairs` is always empty.** Self-learning is not on. See [Self-learning translation](/memoq/self-learning/).
