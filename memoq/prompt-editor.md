@@ -125,7 +125,7 @@ There is no switch for it. Without the live link, or for a document with no list
 
 ### Translator comments
 
-Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original, a deliberate departure from a translation memory match – the AI puts it inline at the end of the target as a `[[TC: …]]` marker: one per segment at most, short, and written as your comment to the client. This is built in, not something a prompt has to ask for: every request ends with a fixed **output contract** that says so, whichever prompt is selected. A prompt can add to it – its own examples of good comments, a language other than English for them – but cannot switch it off by accident. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
+Where a note is genuinely necessary – an ambiguity in the source, a term that could go two ways, a probable defect in the original, an error it corrected in a 100% translation memory match, a deliberate departure from the terminology – the AI puts it inline at the end of the target as a `[[TC: …]]` marker: one per segment at most, short, and written as your comment to the client. This is built in, not something a prompt has to ask for: every request ends with a fixed **output contract** that says so, whichever prompt is selected. A prompt can add to it – its own examples of good comments, a language other than English for them – but cannot switch it off by accident. Supervertaler for Trados uses the same form, so a prompt written for one product reads correctly in the other.
 
 ### What the model may send back
 

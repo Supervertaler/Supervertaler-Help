@@ -46,11 +46,13 @@ memoQ only sends confirmations to an engine selected under **Self-learning MT**,
 
 ### 4. The closest translation memory match
 
-memoQ can forward the best fuzzy match for a segment to an MT engine, and when you route it to Supervertaler that match goes into the prompt ahead of everything else – presented as the thing to adapt rather than as background reading, because a human wrote and approved it for a nearly identical source.
+memoQ can forward the best fuzzy match for a segment to an MT engine, and when you route it to Supervertaler that match goes into the prompt ahead of everything else.
+
+From v0.1.8 it is offered as a **reference to check, not wording to follow**. A memory can hold translations made for other documents, products or clients, and they can be wrong. So the AI is told to check the match against the segment's source and the document, reuse its wording only where it is correct for this segment, let the termbase and the document take precedence, and translate from the source when in doubt. A correct match is still reused; the AI just checks it first. Supervertaler for Trados treats its matches the same way.
 
 Set it in memoQ under **Edit machine translation settings → Send best fuzzy TM match to → Supervertaler**. It is deliberately *not* governed by the document-context toggle: a match you went out of your way to route here should not disappear because you turned off surrounding context.
 
-Two things to know about its shape. It is **one** match per segment – memoQ forwards the single best one, which is what its own setting says – rather than a set to choose among. And memoQ hands over the two segments without a match rate, so the prompt cannot tell the model *how* close the match is; it is described as the closest approved rendering, and the model judges the difference from the text itself. The match is forwarded for every segment memoQ asks about, batches included.
+Two things to know about its shape. It is **one** match per segment – memoQ forwards the single best one, which is what its own setting says – rather than a set to choose among. And memoQ hands over the two segments without a match rate, so the prompt cannot tell the model *how* close the match is. Instead the segment's own text is shown directly above the memory's source, and the model is told to compare the two word by word, because a small difference can change the meaning. The match is forwarded for every segment memoQ asks about, batches included.
 
 ### 5. Whether the row was rejected
 
