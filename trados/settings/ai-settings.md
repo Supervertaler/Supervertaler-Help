@@ -228,7 +228,7 @@ The behaviour of this checkbox depends on which feature is asking for context:
 
 - **Chat and QuickLauncher (live TM lookups).** When enabled, the AI gets translation memory matches – fuzzy and exact – for the active segment. This gives the AI reference translations from your project TMs to improve consistency.
 - **AutoPrompt (Batch Operations).** When enabled, [AutoPrompt](/trados/generate-prompt/) samples up to 50 already-translated, human-confirmed segment pairs evenly from the active document and includes them in the meta-prompt as in-project reference translations. This includes 100% / exact matches that have been applied and confirmed, fuzzy-and-edited segments, and segments translated from scratch – any segment with a Translated, Approved, or Signed-off confirmation level qualifies. AutoPrompt does **not** do live TM lookups; it samples confirmed segments straight from the document.
-- **Other Batch Operations (Translate, Proofread).** Unaffected by this checkbox – they always work segment-by-segment without TM reference pairs, regardless of how it's set.
+- **Other Batch Operations (Translate, Proofread).** Unaffected by this checkbox. Batch Translate and Clipboard Mode have their own setting, **Send TM matches to the AI** on the Batch Operations tab, with the threshold below under [Lowest TM match to send](#lowest-tm-match-to-send). Batch Proofread works without TM reference pairs.
 
 :::tip
 **Tip for AutoPrompt users:** confirm a handful of segments you are happy with before clicking AutoPrompt. Even 10–20 confirmed segments give the AI meaningful style anchors to work from. Without any confirmed segments to sample, the generated prompt won't have in-project reference translations.
@@ -296,6 +296,10 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 
 - A larger batch size is faster but uses more tokens per request
 - A smaller batch size is more granular and easier to review
+
+### Lowest TM match to send
+
+Batch Translate searches the project's translation memories and sends each segment's closest approved translation to the AI, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
 
 ### Add the AI's [[TC: …]] notes as Trados comments (from v18/19.20.198)
 

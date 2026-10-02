@@ -101,8 +101,9 @@ Batch Translate uses several context sources from your [AI Settings](/trados/set
 * **Termbase terms** – terminology from enabled termbases is injected into the prompt, including term definitions and domains when that option is enabled.
 * **Custom prompts** – the selected prompt provides domain-specific translation instructions.
 * **SuperMemory** – when enabled, the active memory bank and `_shared`. From v18/19.20.198 a large bank is narrowed to the part the document needs, the first time you translate it, and the log says what was sent and names a file listing what was left out. See [SuperMemory – AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
+* **Translation memory matches** – Batch Translate searches the project's translation memories for each segment and sends the closest approved translation, together with the source sentence it was made for, so the AI can see which words differ instead of assuming the wording fits. Matches at or above **Lowest TM match to send** in [AI Settings](/trados/settings/ai-settings/#lowest-tm-match-to-send) are sent, 70% by default. This works on empty segments too, not only ones Trados has pre-translated. **Send TM matches to the AI** on the Batch Operations tab turns it off for a job whose memory you do not trust, and **👁 Preview prompt** shows the matches. *(From v18/19.20.190; in [Clipboard Mode](/trados/clipboard-mode/#translation-memory-matches) from v18/19.20.198.)*
 
-TM matches and surrounding segments are **not** included in Batch Translate – these are Chat & QuickLauncher features only. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
+Surrounding segments are **not** included in Batch Translate – that is a Chat & QuickLauncher feature. See the [AI Settings](/trados/settings/ai-settings/) page for a full comparison table.
 
 ### What the AI may send back
 

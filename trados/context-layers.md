@@ -24,7 +24,7 @@ This page is the single place that lists every layer. Each section is a short ov
 | 9 | Figure descriptions | the images in your documents | after two clicks in FigureLens |
 | 10 | Attached files | you, per chat turn | when you attach something |
 
-Layers 1 to 8 need no work from you at all (layer 5 only where Studio has already put a TM hit in the segment). Layer 9 is two clicks per project. Layer 10 is deliberate.
+Layers 1 to 8 need no work from you at all. Layer 9 is two clicks per project. Layer 10 is deliberate.
 
 ### 1. Project and file information
 
@@ -48,14 +48,16 @@ Very long documents are truncated to a configured maximum (default 500 segments)
 
 ### 5. A translation memory match
 
-Where Studio has already put a TM hit in the segment – a pre-translated or auto-propagated row – that translation goes to the AI as work you have already approved, so it is followed rather than quietly rewritten.
+Batch Translate searches the project's translation memories for each segment and sends the closest approved translation to the AI as work you have already approved, so it is followed rather than quietly rewritten. Clipboard Mode's **Copy to Clipboard** runs the same search from v18/19.20.198.
 
-Two limits worth knowing, because they are easy to assume away:
+Two things worth knowing, because they are easy to assume away:
 
-- It is the match **Studio left on the segment**, not a search of your TMs for the best few. A segment with no TM origin contributes nothing here, so pre-translating before a batch run is what gives this layer anything to say.
-- **Batch Translate sends exact matches only.** Studio records how close a match is but not the source it was made for, so a fuzzy could only be offered as a translation of a sentence the model cannot read – unable to tell which words differ, and most misleading precisely where a memory has been padded with near-misses to manufacture matches. At 100% the match's source *is* the segment's source, so nothing is hidden. Chat, QuickLauncher and AutoPrompt still send whatever match is on the segment, with its percentage.
+- **A match always travels with the source it was made for.** The AI is shown the segment, the memory's source sentence and the approved translation side by side, and told to carry the translation across only as far as the two sources agree. A fuzzy sent on its own would be a translation of a sentence the model cannot read – unable to tell which words differ, and most misleading precisely where a memory has been padded with near-misses to manufacture matches.
+- **It is a search, not what Studio left on the segment.** Empty segments get matches too, so there is no need to pre-translate before a batch run. Below **Lowest TM match to send** (AI Settings, 70% by default) nothing is sent; set it to 100 for exact matches only.
 
-**Toggles:** **Send 100% TM matches to the AI** on the Batch Operations tab, for a job whose memory you do not trust; AI Settings → *Include TM matches* for the rest.
+Chat, QuickLauncher and AutoPrompt get their TM context separately; see [Include TM matches](/trados/settings/ai-settings/#include-tm-matches).
+
+**Toggles:** **Send TM matches to the AI** on the Batch Operations tab, for a job whose memory you do not trust; AI Settings → *Lowest TM match to send*; AI Settings → *Include TM matches* for Chat, QuickLauncher and AutoPrompt.
 
 ### 6. Termbase terms
 
