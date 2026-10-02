@@ -139,6 +139,7 @@
 * [Multi-File Projects](workbench/import-export/multi-file.md)
 * [Import Options (File Types)](workbench/import-export/import-options.md)
 * [The Project Folder](workbench/import-export/project-folder.md)
+* [Project Packages (.svpkg)](workbench/import-export/project-packages.md)
 * [Exporting Translations](workbench/import-export/exporting.md)
   * [Re-importable Table (DOCX)](workbench/import-export/bilingual-tables.md)
   * [Re-importable Text (AI-friendly)](workbench/import-export/bilingual-text.md)
@@ -187,6 +188,7 @@
 * [Prompts](workbench/ai-translation/prompts.md)
   * [Prompt Manager](workbench/ai-translation/prompt-library.md)
   * [AutoPrompt (Workbench)](workbench/ai-translation/autoprompt.md)
+  * [Duet Review](workbench/ai-translation/duet-review.md)
 * [Image Context](workbench/ai-translation/image-context.md)
 * [Chat (AI conversation panel)](workbench/ai-translation/chat.md)
 * [FuzzyFixer (Adapt Fuzzy Matches)](workbench/ai-translation/fuzzyfixer.md)
@@ -204,9 +206,11 @@
 ## 🖥️ Quality Assurance
 
 * [AI Proofreading](workbench/qa/proofreading.md)
+* [Cross-model Review](workbench/qa/cross-model-review.md)
 * [QA Checks](workbench/qa/qa-checks.md)
 * [Spellcheck](workbench/qa/spellcheck.md)
 * [Check with LanguageTool](workbench/qa/languagetool.md)
+* [Open in Xbench](workbench/qa/xbench.md)
 * [Tag Validation](workbench/qa/tag-validation.md)
 * [Non-Translatables](workbench/qa/non-translatables.md)
 

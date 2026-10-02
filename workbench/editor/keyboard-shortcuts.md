@@ -92,6 +92,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | `Ctrl+S` | Save project |
 | `Ctrl+Shift+V` | Update the project from pasted [bilingual text](/workbench/import-export/bilingual-text/) (AI-friendly format) |
 | `Ctrl+O` | Open project |
+| `Ctrl+Shift+O` | Import a document (**Project → Import → Import Document…**) |
 | `Alt+F4` | Quit the application |
 
 ## Termbase / Glossary

@@ -8,6 +8,29 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-09-30 – Workbench v1.10.373
+
+- **Workbench: the features of v1.10.373.**
+  - **Tag protection:** *Editing & Confirming* has a new *Tags are protected* section, and the Inline Codes page describes its switch.
+  - **Languages:** the Polish interface is complete, 1,286 strings.
+  - **Projects:** safe saving with `.svproj.bak` and opening a damaged project; source files from other CAT tools are bundled into `source/`.
+  - **Glossaries:** synonym chips in TermLens and the Synonyms column in the terms table.
+  - **QuickTrans:** the **Δ** difference marking.
+  - **Shortcuts:** Import Document moved to **Ctrl+Shift+O**, and Ctrl+O opens a project again.
+  - **QA:** the tag check now recognises self-closing tags such as `<2/>`.
+  - **Speed:** the Preview is built when it is shown, and there are notes on large projects under Performance.
+  - **Xbench:** a new *Open in Xbench* page (QA → 🔬 Open in Xbench…).
+  - **Project folder:** the `tm/` folder for the backup TMX.
+  - **memoQ:** *memoQ Workflow* covers memoQ XLIFF: views with several documents, inline codes as numbered tags, status mapping and locked segments, and the XLIFF export. Exports now keep document order when the grid is sorted.
+  - **DeepL:** *QuickTrans* and *Machine Translation* explain that the CAT-tool key of DeepL Pro Advanced and Ultimate works as well as an API key.
+  - **Fragment matches:** *Fuzzy Matching* has a new section on TM sentences that contain the segment or are part of it (✂ fragment).
+  - **Project folder:** the `glossary/` and `reports/` folders, and TMX exports and the review table opening in the project folder.
+  - **Project Packages (new page, after The Project Folder):** **Project → 📦 Pack Project** and **Open Package**, covering what's packed, how TMs, glossaries and prompts are brought in on the other computer, and what isn't merged.
+  - **Duet review (new page, under Prompts):** two AI models review a prompt together, with the debate rules, the result saved as a new version, the transcript in `reports/duet/`, and the cost.
+  - **Cross-model Review (new page, under QA, after AI Proofreading):** a second AI model reviews the translations against the project's prompt and glossary, from the QA menu or after a batch translation. The page covers the XR flags and the **Show:** filter in the Proofreading comments, the report in `reports/cross-review/`, moving ⟦TC⟧ translator comments out of the target text, and **Arbitrate This Segment**, where two models debate one translation. *AI Proofreading*, *Comments*, *Batch Translation* and *Duet Review* link to it.
+  - **macOS global hotkeys:** *Keyboard Shortcuts* explains the new Accessibility notice, Input Monitoring for hold-to-talk, ⌘⇧ with digits, function and arrow keys, and non-Latin layouts. *Voice* says hold-to-talk now stops on release on macOS, and that **Record key** for the pause hotkey is off on macOS.
+  - **Dictation engines (Voice):** the new **Engine** setting, faster-whisper or NVIDIA Parakeet V3: its 25 languages, the download (progress, cancel, checksums, Remove) and what applies to which engine.
+
 ## 2026-09-30
 
 - **Workbench is in active development again.** The banner on every Workbench page said it was no longer developed; it is gone. The docs home page lists Workbench with the other products instead of as a footnote, and its card says development has resumed.

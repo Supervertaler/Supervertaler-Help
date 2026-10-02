@@ -518,6 +518,10 @@ const sidebar = [
             "link": "/workbench/import-export/project-folder/"
           },
           {
+            "label": "Project Packages (.svpkg)",
+            "link": "/workbench/import-export/project-packages/"
+          },
+          {
             "label": "Exporting Translations",
             "items": [
               {
@@ -697,6 +701,10 @@ const sidebar = [
               {
                 "label": "AutoPrompt",
                 "link": "/workbench/ai-translation/autoprompt/"
+              },
+              {
+                "label": "Duet Review",
+                "link": "/workbench/ai-translation/duet-review/"
               }
             ]
           },
@@ -757,6 +765,10 @@ const sidebar = [
             "link": "/workbench/qa/proofreading/"
           },
           {
+            "label": "Cross-model Review",
+            "link": "/workbench/qa/cross-model-review/"
+          },
+          {
             "label": "QA Checks",
             "link": "/workbench/qa/qa-checks/"
           },
@@ -767,6 +779,10 @@ const sidebar = [
           {
             "label": "Check with LanguageTool",
             "link": "/workbench/qa/languagetool/"
+          },
+          {
+            "label": "Open in Xbench",
+            "link": "/workbench/qa/xbench/"
           },
           {
             "label": "Tag Validation",

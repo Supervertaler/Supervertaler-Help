@@ -26,6 +26,8 @@ The table format with source and target columns works best with Supervertaler.
 3. Choose **memoQ XLIFF bilingual**
 4. Save the `.mqxliff` file
 
+A memoQ **view** can be exported the same way. Its `.mqxliff` holds every document in the view, and from v1.10.373 Supervertaler imports all of them. Earlier versions read only the first document, so a view came in with just a few segments.
+
 ## Import to Supervertaler
 
 1. Go to **Project → Import → memoQ → Bilingual Table (DOCX)…**
@@ -57,6 +59,32 @@ error "No module named 'PySide6'". Update if you see it.
 - ✅ Inline formatting tags (`{1}`, `[2}`, etc.)
 - ✅ Segment status
 
+### memoQ XLIFF: tags, statuses and locked segments
+
+From v1.10.373, a `.mqxliff` import brings in memoQ's inline codes as numbered tags, the same way as Trados SDLXLIFF files:
+
+| In memoQ | In Supervertaler |
+|---|---|
+| A formatting pair, such as bold or italic | `<1>`…`</1>` |
+| A placeholder, such as a cross-reference, field or tab | `<2/>` |
+
+Keep the tags in your translation, as in memoQ. On export, each tag becomes the memoQ code it stands for again, so the formatting and placeholders go back where you put them. Before v1.10.373, the contents of a placeholder could appear in the segment as text, for example `(<x id="1164" mq:catalogvalue="…"/>)`.
+
+memoQ's segment statuses come in too:
+
+| memoQ | Supervertaler |
+|---|---|
+| Not started | Not started |
+| Pre-translated, assembled from fragments | Pre-translated |
+| Machine translated | Machine translated |
+| Edited | Draft |
+| Confirmed | Confirmed |
+| Reviewer 1 confirmed | Proofread |
+| Reviewer 2 confirmed | Approved |
+| Rejected | Rejected |
+
+Segments locked in memoQ stay locked.
+
 ### memoQ Tag Handling
 
 memoQ uses special tag formats:
@@ -85,8 +113,13 @@ These tags are highlighted in dark red in the grid (matching memoQ's color).
 ## Export from Supervertaler
 
 1. Go to **Project → Export → memoQ → Bilingual Table - Translated (DOCX)…**
+   - Or **Project → Export → memoQ → XLIFF - Translated (.mqxliff)…** for a project imported from memoQ XLIFF
 2. Choose a filename
-3. The bilingual table is recreated with your translations
+3. The bilingual table (or XLIFF) is recreated with your translations
+
+The export writes the translations in document order, even when the grid is sorted.
+
+A memoQ XLIFF export changes only the segments whose translation or status you changed. Those get the matching memoQ status: *Confirmed* for a confirmed segment, *Reviewer 1* or *Reviewer 2 confirmed* for a proofread or approved one, and *Edited* for anything else. Untranslated segments and segments you left alone keep memoQ's own status.
 
 ## Import Back to memoQ
 

@@ -27,6 +27,7 @@ The dialog asks how the segments should be translated. Tick one of:
 - **🔄 Retry until all segments are translated (recommended)** – see [Retry Feature](#retry-feature) below.
 - **✔ Auto-confirm 100% TM matches** – with TM selected, exact matches are confirmed straight away instead of getting the TM 100% status.
 - **🔧 Use FuzzyFixer (adapt fuzzy TM matches with AI)** – see [FuzzyFixer](/workbench/ai-translation/fuzzyfixer/). Segments are then sent one at a time.
+- **🔀 Then have a second AI model review the translations (cross-model review)** – AI translation only. When the batch is done, another model checks the new translations against the source, your prompt and glossary, and flags problems. See [Cross-model Review](/workbench/qa/cross-model-review/).
 
 Click **Start Translation** to begin.
 

@@ -28,7 +28,7 @@ Voice also keeps a microphone icon in the system tray: grey while Always-On is o
 
 ### Push-to-Talk dictation (Ctrl+Shift+Space)
 
-Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the hotkey again (in toggle mode). The speech is transcribed on your own computer with faster-whisper, and the text is typed at the cursor position.
+Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the hotkey again (in toggle mode). The speech is transcribed on your own computer with faster-whisper, or with NVIDIA Parakeet V3 if you choose it as the [engine](#dictation-engines), and the text is typed at the cursor position.
 
 **Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, Voice pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
 
@@ -36,7 +36,7 @@ Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macO
 - **Hold-to-talk** (default, recommended) – hold the hotkey to record, release to stop
 - **Toggle** – press once to start, press again to stop
 
-_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. On macOS and Linux, releasing the global hotkey isn't detected yet: press it again to stop, or let the maximum recording duration end the recording._
+_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. From v1.10.373 this also works on macOS, if Supervertaler has the **Input Monitoring** permission (System Settings → Privacy & Security). Without it, and on Linux, releasing the global hotkey isn't detected: press it again to stop, or let the maximum recording duration end the recording._
 
 ### Push-to-Talk for commands (Ctrl+Alt+V) – v1.10.193
 
@@ -71,6 +71,8 @@ The key is **recorded, not typed**, so it works with keys you can't express as t
    - **Toggle** – press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
 
 It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* – your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
+
+_On macOS, **⏺ Record key** is switched off from v1.10.373. The keyboard listener it needs crashes Supervertaler on macOS 26, so this option is for Windows and Linux for now._
 
 :::note
 **Which to use – this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.
@@ -159,12 +161,13 @@ See [Pause Always-On for external dictation](#pause-always-on-for-external-dicta
 
 ### 🗣️ Dictation (push-to-talk)
 
-Push-to-talk dictation always uses **faster-whisper**, which runs OpenAI's Whisper speech models on your own computer (offline, free).
+Push-to-talk dictation runs on your own computer (offline, free), with one of two engines.
 
 | Setting | What it does |
 | --- | --- |
 | **Hotkey** | Shows the dictation hotkey (**Ctrl+Shift+Space** by default). Click **Change in Settings → Keyboard Shortcuts** to rebind it – any key works, for example numpad **+** for one-finger dictation. |
 | **Mode** | **Hold-to-talk** (default) or **Toggle** – see [Push-to-Talk dictation](#push-to-talk-dictation-ctrlshiftspace) above. |
+| **Engine** | **faster-whisper** (default) or **Parakeet V3** – see [Dictation engines](#dictation-engines) below. The engine is saved as soon as you change it. |
 | **Model** | The Whisper model size. Larger models are more accurate but slower to load and transcribe, and need more RAM. |
 | **Max** | The longest single recording, from 3 to 60 seconds (default 10). Speech beyond the limit is cut off and transcribed up to that point. |
 | **Language** | **Auto (use project target language)** (default) uses the project's target language. **Auto-detect (Whisper picks per utterance)** lets Whisper work out the language each time – handy if you dictate in more than one language, but it needs about a second of speech to be reliable. Or pick a language explicitly. |
@@ -176,6 +179,23 @@ Push-to-talk dictation always uses **faster-whisper**, which runs OpenAI's Whisp
 | small | ~466 MB | Noticeably better accuracy |
 | medium | ~1.5 GB | High accuracy |
 | large | ~2.9 GB | Best accuracy, slow on CPU |
+
+#### Dictation engines
+
+From v1.10.373 you can choose the engine:
+
+| Engine | Languages | Notes |
+| --- | --- | --- |
+| **faster-whisper** (default) | about 100 | Runs OpenAI's Whisper models. Choose the model size and language above. Its models download automatically the first time you use them. |
+| **Parakeet V3** | 25 European languages | NVIDIA's Parakeet TDT 0.6B v3. Much faster than faster-whisper on the same computer. It recognises the language by itself, so **Model** and **Language** are switched off. |
+
+Parakeet V3 covers Bulgarian, Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, German, Greek, Hungarian, Italian, Latvian, Lithuanian, Maltese, Polish, Portuguese, Romanian, Russian, Slovak, Slovenian, Spanish, Swedish and Ukrainian.
+
+**Downloading Parakeet V3.** When you choose Parakeet V3, the Dictation group says whether its model is on your computer. Click **⬇ Download** to get it: about 650 MB from Hugging Face, once. A progress bar shows how far it is, and **Cancel** stops it. Files that finished downloading are kept, so a new download continues where it stopped. Every file is checked against the checksum Hugging Face lists for it, and a damaged file is thrown away. The model is stored in `voice-models/` in your data folder. **Remove** deletes it.
+
+The first dictation after starting Supervertaler loads the model, which takes a few seconds. After that it stays loaded.
+
+The **Replacements** list below also applies to Parakeet. The custom dictionary and termbase terms don't: they steer Whisper only.
 
 ### 📚 Dictation vocabulary
 

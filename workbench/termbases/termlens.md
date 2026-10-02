@@ -15,6 +15,12 @@ When you select a segment, TermLens analyses the source text against all active 
 
 This gives you an at-a-glance overview of every term in the segment that has a termbase entry – without having to hover or click anything.
 
+### Synonyms get their own chip
+
+A **source synonym** found in the segment is shown where it occurs, even when the entry's main term is in the same sentence (from v1.10.373). Take an entry *methyl-ethylketoxime* → *methyl ethyl ketoxime* with the synonym *MEKO* on both sides. In "…op basis van methyl-ethylketoxime (MEKO) en…", TermLens shows the main term under "methyl-ethylketoxime" **and** **MEKO** under "(MEKO)", each with its own number.
+
+A synonym's chip suggests the matching **target synonym** when the entry has one (MEKO → MEKO), otherwise the main target term, and offers the other forms as alternatives. The grid highlights the synonym too.
+
 ## Where to find it
 
 TermLens appears in two places:

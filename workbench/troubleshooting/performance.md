@@ -23,6 +23,14 @@ Very large files (thousands of segments) can stress any UI grid.
 - Prefer pagination.
 - Consider splitting source documents or using multi-file projects.
 
+Since v1.10.373 big projects load much faster. A Trados package of 300 files and 17,000 segments, which used to freeze Supervertaler for more than ten minutes, now imports in about 11 seconds:
+
+- the [Document Preview](/workbench/editor/preview/) is built only when you open it, not on every import;
+- the grid, the file-name banners of multi-file projects and the status-bar file count no longer do work that grows with the square of the project size;
+- starting Supervertaler takes about two seconds less.
+
+If a large project still feels slow on an older version, update first.
+
 ## A slow start-up with a TM message in the log
 
 If the log says "[TM] The full-text index cannot find its own rows… Rebuilding

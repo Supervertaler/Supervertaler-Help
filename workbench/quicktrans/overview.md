@@ -31,6 +31,7 @@ The window title reads **⚡ Supervertaler QuickTrans**. Below it:
 * **↻ Re-translate** – runs every provider again on the (edited) source text.
 * **🔍 Run in SuperLookup** – closes the popup and opens Workbench's SuperLookup tab with the same query pre-filled and the search auto-fired. Useful when you've translated a phrase via QuickTrans and then think "actually, I want to look this up in my TMs / termbases / web resources too" – one click instead of dismissing the popup and pasting the query again
 * **⚙️** – opens Workbench Settings → ⚡ QuickTrans so you can enable / disable providers and pick LLM models
+* **Δ** – marks where each result differs from the top one (see [Seeing where the engines disagree](#seeing-where-the-engines-disagree) below)
 * **Languages:** – the source and target language, with a **⇄** swap button (see [Language pair](#language-pair) below).
 
 ## Translation results
@@ -48,6 +49,12 @@ If a provider fails, its row shows the error in red; it can't be picked, and it 
 
 Each translation row shows its number, a coloured provider label, and the translated text.
 
+### Seeing where the engines disagree
+
+From v1.10.373, every result below the top one marks – character by character, in amber – where it differs from the top result. "Open de k**raan** langzaam." under "Open de klep langzaam." shows at a glance that only the noun differs; a small inflection or a changed punctuation mark is just as easy to spot. Hover over a row to see which result it is compared with.
+
+The **Δ** button switches the marking on and off, in the popup and in the docked panel, and your choice is remembered. Only the display is marked: clicking a row, or pressing its number, still inserts that engine's exact translation.
+
 ### AI providers: automatic or on request
 
 AI calls cost money, so you can decide whether the popup calls them by itself. In **Settings → ⚡ QuickTrans**, the option **Auto-fetch AI providers in the popup (otherwise show 'Fetch' buttons)** is on by default: the enabled AI providers are queried as soon as the popup opens, just like the MT engines. Untick it, and each AI provider appears as a row with a **Fetch** button instead – nothing is sent to that provider until you click it. Machine translation engines always fetch automatically.
@@ -61,7 +68,7 @@ Each provider is independently enabled / disabled in **Workbench Settings → �
 | Engine | API key required? |
 | --- | --- |
 | Google Translate | Yes |
-| DeepL | Yes |
+| DeepL | Yes – a DeepL API key, or the CAT-tool key of a DeepL Pro Advanced or Ultimate subscription (from v1.10.373) |
 | Microsoft Translator | Yes |
 | Amazon Translate | Yes |
 | ModernMT | Yes |
@@ -103,7 +110,7 @@ Besides the popup, QuickTrans has a **⚡ QuickTrans** tab in two places: next t
 
 * The machine translation engines are fetched automatically, but only while the tab is visible.
 * AI providers always appear as **Fetch** rows, so a paid AI call only happens when you click.
-* **🔄** fetches the current segment again; **⚙️** opens the QuickTrans settings.
+* **🔄** fetches the current segment again; **⚙️** opens the QuickTrans settings; **Δ** switches the [difference marking](#seeing-where-the-engines-disagree) on and off.
 * Click a result to insert it into the target cell. While you're editing the target, **Ctrl+1** … **Ctrl+9** inserts the result with that number.
 
 ## Tips

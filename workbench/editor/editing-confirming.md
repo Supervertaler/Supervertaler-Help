@@ -13,6 +13,16 @@ Translate by editing the **Target** column in the grid.
 
 - Use **Shift+Enter** to insert a line break inside the cell.
 
+### Tags are protected
+
+Inline tags in the target cell behave as single units, the way they do in memoQ and Trados, so a slip of the keyboard can't leave half a tag behind (from v1.10.373). This covers `<b>`, `</1>`, `[2}`, `{3}`, Déjà Vu's `{00108}` and your own [inline codes](/workbench/settings/inline-codes/):
+
+- **The cursor steps over a tag** instead of landing inside it – with the arrow keys and when you click in it.
+- **Backspace just after a tag, or Delete just before it, removes the whole tag.** **Ctrl+Z** brings it back.
+- **Typing, pasting or cutting over a selection that cuts into a tag takes the whole tag.** A paste made with the cursor inside a tag lands just after it.
+
+To edit tags character by character, untick **Settings → 🏷️ Inline Codes → Protect tags and codes in the target**. **Ctrl+,** still inserts the next tag from the source.
+
 ## Confirming segments
 
 Confirming matters for many workflows, especially when exporting back to a CAT tool.

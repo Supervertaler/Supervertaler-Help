@@ -28,6 +28,15 @@ Plus optional AI "translation as suggestion" from Claude, OpenAI, Gemini, Mistra
 
 The MT engines' API keys are entered in **Settings → 🌐 MT Settings**; the AI providers reuse the keys in **Settings → 🤖 AI Settings**.
 
+### DeepL keys
+
+DeepL gives out two kinds of key, and from v1.10.373 both work in the **DeepL** field:
+
+- **A DeepL API key** (API Free or API Pro), from [deepl.com/pro-api](https://www.deepl.com/pro-api).
+- **The authentication key for CAT tools** that comes with a **DeepL Pro Advanced or Ultimate** subscription. You find it in your DeepL account under **Account → Authentication key for CAT tools**.
+
+DeepL accepts the CAT-tool key only on an older version of its interface. When DeepL refuses a key, Supervertaler tries that version and, if the key works there, uses it for that key from then on. Before v1.10.373, only API keys worked, and a CAT-tool key gave an authorization error.
+
 ## Configure providers
 
 QuickTrans's provider list and LLM model selectors live in **Workbench Settings → ⚡ QuickTrans**. Click the ⚙️ cog icon in the QuickTrans popup to jump there in one click.
