@@ -64,7 +64,7 @@ The server exposes these tools to the AI app:
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
 | `list_project_templates` | Your Trados project templates *(v18.20.111)* |
-| `update_segments` | Write translations and/or set confirmation statuses (see safety rails below) |
+| `update_segments` | Write translations and/or set confirmation statuses (see safety rails below). *From v18/19.20.198* it can also update the project's main translation memory as it goes, for the segments it confirms – only when you ask |
 | `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain – only the fields you name change, everything else is preserved |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
@@ -102,6 +102,8 @@ The server exposes these tools to the AI app:
 * **Find & replace keeps each segment's confirmation status** *(from v18.20.148)*. Editing a segment's content normally demotes it to Draft, which meant a single consistency sweep over a finished file could quietly leave thousands of segments unconfirmed. The AI can still ask for a specific status when you want one.
 * Updates are limited to 40 segments per call; larger jobs are processed in reported batches. *(Lowered from 200 in v18.20.148: bigger batches could outlast the connection timeout, and because the write had already gone through, the AI couldn't tell success from failure.)*
 * Changes land in the open document but are **not saved automatically** – saving stays your decision. From v18.20.115 the AI can run the save for you (`save_document`, same as Ctrl+S), but only when you ask or approve – *"save and run the analysis"* is one instruction, silent saving is not allowed.
+* **The translation memory is updated only when you ask** *(from v18/19.20.198)*. Asked to (*"…and update the TM as you go"*), `update_segments` also writes each segment it leaves **Translated**, **Translation Approved** or **Signed Off** to the project's main translation memories – the ones with **Update** ticked in Project Settings – exactly as Studio does when you confirm a segment yourself. A segment the AI rewrites updates the unit it wrote before rather than adding a second one, and translations stored for the same sentence in other places are left alone. **Drafts are never sent**, so nothing reaches the memory unreviewed. The AI's report says, for each segment, whether each memory took it (added, updated, merged or unchanged) or why it was skipped.
+* **A TM update takes effect at once.** Unlike the document edits, it is not undone by closing the document without saving. Save the document afterwards all the same: the link between each segment and its unit in the memory is kept in the document, and it is what lets a later rewrite update that unit instead of adding a duplicate. *(The `update_tm` batch task below does the same for every confirmed segment in a document at once.)*
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
 
 ### Two Studios open at once *(from v18.20.184)*
@@ -236,7 +238,7 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "How did I translate this sentence before?" *(searches the Trados TMs attached to your project – from v18.20.95)*
 * "Search my TM for *scherminrichting*."
 * "Search only the target side of my TMs for *roller blind*." *(from v18.20.95)*
-* "Before translating, check my TM and termbase and follow what you find."
+* "Before translating, check my TM and termbase. Follow the termbase; treat TM matches as references to check, not wording to follow – they may come from other documents or products, and they can be wrong."
 
 ### The segment I'm working on
 
@@ -250,8 +252,9 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Translate the segments containing *warranty*, use my termbase, set them to Draft."
 * "Redo segment 14 – too literal, make it flow better, then update it."
 * "Set all my Draft segments to Translated." (status-only changes work too)
+* "Translate segments 20 to 40, set them to Translated and update the TM as you go." *(from v18/19.20.198)*
 
-Everything the AI writes lands as **Draft** unless you say otherwise, locked segments are never touched, and nothing is saved until you save in Studio.
+Everything the AI writes lands as **Draft** unless you say otherwise, locked segments are never touched, and nothing is saved until you save in Studio – except a TM update you asked for, which is written at once.
 
 ### Quality and consistency
 
