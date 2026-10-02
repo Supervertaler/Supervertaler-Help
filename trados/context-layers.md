@@ -48,11 +48,12 @@ Very long documents are truncated to a configured maximum (default 500 segments)
 
 ### 5. A translation memory match
 
-Batch Translate searches the project's translation memories for each segment and sends the closest approved translation to the AI as work you have already approved, so it is followed rather than quietly rewritten. Clipboard Mode's **Copy to Clipboard** runs the same search from v18/19.20.198.
+Batch Translate searches the project's translation memories for each segment and sends the closest match to the AI. Clipboard Mode's **Copy to Clipboard** runs the same search from v18/19.20.198.
 
-Two things worth knowing, because they are easy to assume away:
+Three things worth knowing, because they are easy to assume away:
 
-- **A match always travels with the source it was made for.** The AI is shown the segment, the memory's source sentence and the approved translation side by side, and told to carry the translation across only as far as the two sources agree. A fuzzy sent on its own would be a translation of a sentence the model cannot read – unable to tell which words differ, and most misleading precisely where a memory has been padded with near-misses to manufacture matches.
+- **A match is a reference, not an instruction** *(from v18/19.20.198)*. A memory can hold translations made for other documents, products or clients, and they can be wrong, even at 100%: a 100% match means only that the source sentence is the same. So the AI is told to check each match against the segment and the document, reuse its wording only where it is correct, let the termbase and the document take precedence, and translate from the source when in doubt. A correct match is still reused. Before v18/19.20.198 the matches were presented as approved work to follow.
+- **A match always travels with the source it was made for.** The AI is shown the segment, the memory's source sentence and the memory's translation side by side, and told to compare them word by word. A fuzzy sent on its own would be a translation of a sentence the model cannot read – unable to tell which words differ, and most misleading precisely where a memory has been padded with near-misses to manufacture matches.
 - **It is a search, not what Studio left on the segment.** Empty segments get matches too, so there is no need to pre-translate before a batch run. Below **Lowest TM match to send** (AI Settings, 70% by default) nothing is sent; set it to 100 for exact matches only.
 
 Chat, QuickLauncher and AutoPrompt get their TM context separately; see [Include TM matches](/trados/settings/ai-settings/#include-tm-matches).

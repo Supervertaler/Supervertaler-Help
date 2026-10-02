@@ -43,7 +43,7 @@ When you click **Copy to Clipboard**, Supervertaler builds a comprehensive promp
 * **Custom prompt** – your selected prompt from the Prompt Manager, if any
 * **Terminology** – terms from your enabled termbases, including definitions and domains (when term metadata is enabled in AI Settings)
 * **Document context** – source segments from the document (when enabled in AI Settings), so the AI understands the document type and domain
-* **Translation memory matches** – the closest approved translation from the project's TMs for each segment that has one, with the source sentence it was made for *(from v18/19.20.198)*; see [Translation memory matches](#translation-memory-matches) below
+* **Translation memory matches** – the closest match from the project's TMs for each segment that has one, as a reference for the AI to check, with the source sentence it was made for *(from v18/19.20.198)*; see [Translation memory matches](#translation-memory-matches) below
 * **Numbered bilingual segments** – each segment is numbered and formatted with status annotations
 
 This is not just a list of segments – it is a fully self-contained prompt ready to paste into any LLM chat window.
@@ -88,17 +88,17 @@ These annotations help the AI understand the state of each segment and respond a
 *(From v18/19.20.198.)* When **Send TM matches to the AI** is ticked on the Batch Operations tab, **Copy to Clipboard** first searches the project's translation memories for every segment in scope – the same search **▶ Translate** runs – and lists the matches in a block ahead of the segments:
 
 ```
-**CLOSEST APPROVED TRANSLATIONS FROM THE TRANSLATION MEMORY**
+**TRANSLATION MEMORY MATCHES – REFERENCE ONLY**
 
-A human wrote and approved each of these for a source that was close to, but not always the same as, the segment named. …
+These are earlier translations of similar sentences, found in the project's translation memory. A memory can hold translations made for other documents, products or clients, and they can be wrong, even at 100% … Where a match does not fit, or you are in doubt, translate from the source. …
 
 Segment 2 – 85% match
-  this segment:     Nieuwe toepassingen in onderwijs.
-  source in memory: Nieuwe toepassingen in het onderwijs.
-  approved:         New applications in education.
+  this segment:          Nieuwe toepassingen in onderwijs.
+  source in memory:      Nieuwe toepassingen in het onderwijs.
+  translation in memory: New applications in education.
 ```
 
-A match always comes with the source sentence it was made for, so the AI can compare the two and keep the approved wording only as far as they agree. Only matches at or above **Lowest TM match to send** in [AI Settings](/trados/settings/ai-settings/#lowest-tm-match-to-send) are included – 70% by default. It works on empty segments too, which is where it helps most: a `[new]` segment can still have a close match in the memory.
+A match always comes with the source sentence it was made for, so the AI can compare the two. It is a reference, not wording to follow: the AI reuses a match only where it is correct for the segment in this document, lets the termbase and the document take precedence, and translates from the source when in doubt. Only matches at or above **Lowest TM match to send** in [AI Settings](/trados/settings/ai-settings/#lowest-tm-match-to-send) are included – 70% by default. It works on empty segments too, which is where it helps most: a `[new]` segment can still have a close match in the memory.
 
 The segments are listed below the block exactly as before, and **Paste from Clipboard** reads the reply the same way. The search runs in the background: the progress bar moves while it does, and the log says how many segments got a match. **👁 Preview prompt** shows the same block. Untick **Send TM matches to the AI** for a job whose memory you do not trust.
 

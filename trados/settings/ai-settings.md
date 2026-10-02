@@ -299,11 +299,11 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 
 ### Lowest TM match to send
 
-Batch Translate searches the project's translation memories and sends each segment's closest approved translation to the AI, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
+Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
 
 ### Add the AI's [[TC: …]] notes as Trados comments (from v18/19.20.198)
 
-When the AI needs to flag something in a segment – a defect in the source, a real ambiguity, a deliberate departure from the TM or the termbase – it adds one short note at the end of that segment's translation, written as your comment to the client: `[[TC: …]]`. See [Translator comments](/trados/batch-translate/#translator-comments).
+When the AI needs to flag something in a segment – a defect in the source, a real ambiguity, an error it corrected in a 100% TM match, a deliberate departure from the termbase – it adds one short note at the end of that segment's translation, written as your comment to the client: `[[TC: …]]`. See [Translator comments](/trados/batch-translate/#translator-comments).
 
 - **Unticked (the default):** the note stays at the end of the target, where you see it while you review. Remove it before you confirm the segment, or turn it into a comment yourself.
 - **Ticked:** the note is taken out of the target and added to the segment as a Trados comment instead.
