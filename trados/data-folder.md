@@ -8,7 +8,7 @@ A **team folder** is optional. It lets a team share its memory banks and prompt 
 
 ## Where your data folder is
 
-**Settings → General → Data folder** shows where your data folder is. Click **Open** to open it in File Explorer. (From v18/19.20.199.)
+**Settings → General → Data folder** shows where your data folder is. Click **Open** to open it in File Explorer, or **Move…** to [move it](#moving-your-data-folder). (From v18/19.20.199.)
 
 By default the data folder is:
 
@@ -108,7 +108,29 @@ Supervertaler Workbench does not use the team folder yet: it keeps using the mem
 
 ## Moving your data folder
 
-There is no button for this in Supervertaler yet, so it takes a few steps by hand:
+*From v18/19.20.199.*
+
+1. **Close Supervertaler Workbench**, and memoQ if you use Supervertaler for memoQ. They would otherwise go on saving to the old folder.
+2. In **Settings → General → Data folder**, click **Move…** and choose where your data folder should go: an empty folder, or a new one. If you choose a folder that already has files in it, Supervertaler offers to use a `Supervertaler` folder inside it instead. If you choose a folder that already holds a Supervertaler data folder – your old one, say, or one restored from a backup – Supervertaler offers to switch to it as it is, copying nothing.
+3. Click **OK**. Supervertaler copies everything in your data folder to the new place, with a progress window you can cancel.
+4. **Restart Trados Studio.** From then on, every Supervertaler product on the computer uses the new folder.
+
+Move takes care of the details:
+
+- **Your old folder is left exactly as it is.** Once you have checked that everything is in the new folder, you can delete the old one.
+- **Settings that point into the data folder** – such as your termbase and your selected prompts – are updated in the copy.
+- **The termbase database is copied safely**, even though Trados Studio has it open.
+- **If the copy fails, or you cancel it**, the partial copy is removed and nothing changes.
+
+Until you restart Trados Studio, Supervertaler keeps using the old folder, so anything you change in between is saved there, not in the new one. Restart straight away.
+
+:::note
+Choose a folder on your own computer. The termbase database does not work reliably over a network, so Supervertaler warns you if the folder you choose is on a network drive.
+:::
+
+### Moving it by hand
+
+On a version before v18/19.20.199, the data folder is moved by hand:
 
 1. **Close Trados Studio**, and any other Supervertaler program that is open: Supervertaler Workbench, and memoQ if you use Supervertaler for memoQ.
 2. In File Explorer, **move the whole data folder** to its new place, for example `E:\Work\Supervertaler`.
