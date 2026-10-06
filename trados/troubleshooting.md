@@ -240,7 +240,7 @@ See [MultiTerm Support](/trados/multiterm-support/) for full details.
 
 1. Move your data folder to the Windows side (e.g., `C:\Users\<username>\Supervertaler`)
 2. Copy your `.db` termbase files from the Mac-side location into the new Windows-side folder
-3. Update the data folder path in Supervertaler settings, or delete `%AppData%\Supervertaler\config.json` and restart Trados to trigger the first-run setup again
+3. Point Supervertaler at the new location – see [Moving your data folder](/trados/data-folder/#moving-your-data-folder)
 
 :::note
 See [Installation – Running on a Mac (Parallels)](/trados/installation/#running-on-a-mac-parallels) for the recommended setup.

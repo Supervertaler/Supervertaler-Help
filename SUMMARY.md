@@ -77,7 +77,7 @@
 ## 🧩 Reference
 
 * [Trados Studio 2026 & .ttb](trados/studio-2026.md)
-* [User Data Folder](trados/data-folder.md)
+* [Data Folder and Team Folder](trados/data-folder.md)
 * [Keyboard Shortcuts (Trados)](trados/keyboard-shortcuts.md)
 * [Troubleshooting](trados/troubleshooting.md)
 * [Support & Community](trados/support.md)

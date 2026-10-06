@@ -295,7 +295,7 @@ const sidebar = [
             "link": "/trados/studio-2026/"
           },
           {
-            "label": "User Data Folder",
+            "label": "Data Folder and Team Folder",
             "link": "/trados/data-folder/"
           },
           {
