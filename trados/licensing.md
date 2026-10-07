@@ -73,7 +73,15 @@ If you replace a computer or need to move your licence:
 1. On the old machine: open **Settings → Licence** and click **Deactivate**
 2. On the new machine: enter your licence key and click **Activate**
 
-If you can no longer access the old machine, the activation slot will be freed automatically when the licence is next validated.
+If you can no longer use the old machine, enter your key on the new one anyway. If the key has no activations left and you brought your data folder over from the old machine, Supervertaler releases the old machine's activation to make room once it has gone a day unused *(from v18/19.20.199)*. Otherwise, for example after a fresh install on a new computer when the old one can no longer be used, [get in touch](https://beijer.uk/contact) and we will free the old activation for you.
+
+## One Licence per Computer and Windows Account *(from v18/19.20.199)*
+
+A licence counts only for the computer and Windows account it was activated on. If one data folder is used from more than one computer or Windows account – shared with colleagues, or synced between your own computers – each of them keeps its own licence record in it, with its own trial and its own activation, and none can overwrite another's. Each colleague needs a licence of their own. To share memory banks and prompts in a team, use a [team folder](/trados/data-folder/#sharing-memory-banks-and-prompts-with-a-team-folder) rather than one shared data folder.
+
+### After renaming your computer or reinstalling Windows
+
+Your licence was activated under the computer's old name or the old Windows installation, so it does not count as it is. Supervertaler tells you so when Trados Studio starts, and **Settings → Licence** explains it above the licence key box. Enter your licence key there and click **Activate**. If the key has no activations left, the old activation recorded in your data folder is released to make room once it has gone a day unused; until then, try again the next day.
 
 ## Privacy & Security
 
