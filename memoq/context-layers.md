@@ -76,6 +76,10 @@ Where a termbase gives the model flat pairs of terms, a memory bank gives it the
 
 Banks are remembered per memoQ project, and a project you have never chosen one for uses none rather than inheriting the last – a bank carries one client's terminology, and the wrong one is worse than none. See [Memory banks](/memoq/mcp-server/#memory-banks).
 
+**Shared by a team.** From v0.1.9, if your team shares its memory banks and prompts from a team folder, set up in Supervertaler for Trados (see [Sharing memory banks and prompts with a team folder](/trados/data-folder/#sharing-memory-banks-and-prompts-with-a-team-folder)), Supervertaler for memoQ uses it too. Memory banks and prompts come from the team folder; your licence, settings, API keys and termbases stay in your own data folder. memoQ has no setting of its own for it: it follows what is set in Supervertaler for Trados on the same computer.
+
+The team folder is checked when memoQ starts and when the editor starts. If it cannot be reached, your own memory banks and prompts are used until you restart, and you are told: the editor shows a warning when it opens, its **Settings** shows the team folder and whether it is in use, and the AI assistant's list of memory banks says so too. If memoQ and the editor reached different folders – the network answered for one and not the other – the editor warns you, and restarting both puts them back on the same folder.
+
 ### 8. List numbering
 
 Word numbers claims, letters steps and bullets lists as paragraph properties, not as text, so memoQ's grid never contains the `a)` or the `9.` and neither did anything the model received. Shown six unlettered steps and then *"steps a. to f."*, a model will flag the reference as a possible defect in the source – a note that would have reached the client.
