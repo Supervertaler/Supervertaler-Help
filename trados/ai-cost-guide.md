@@ -15,7 +15,7 @@ The **Reports** tab shows **real billed token counts and cost** as reported by y
 The number is cache-aware:
 
 * **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate, cache writes at 1.25×.
-* **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (50% off cached input).
+* **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (90–95% off cached input on the current models).
 * **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
 * **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input).
 
@@ -60,18 +60,18 @@ These are estimates for a representative document – actual usage varies with s
 There's a wide spread between models. As a rough mental model:
 
 * **Local models (Ollama)** are **free** – they run on your own computer, with no API charges at all. The trade-off is that quality depends on your hardware, and they're generally less capable than cloud-hosted models. If you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
-* **Budget cloud models** – the "Mini", "Flash-Lite" and "Small" tier from each provider (e.g. GPT-5.4 Mini, Gemini 3.1 Flash-Lite, Mistral Small, Claude Haiku 4.5) – typically cost a small fraction of a cent per segment. They're excellent for routine, high-volume translation.
-* **Flagship models** – Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro and the like – can run roughly 10–50× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
+* **Budget cloud models** – the cheapest tier from each provider (e.g. GPT-6 Luna, Gemini 3.5 Flash-Lite, Mistral Small, DeepSeek V4 Flash) – typically cost a small fraction of a cent per segment. They're excellent for routine, high-volume translation.
+* **Flagship models** – Claude Opus 5.5, GPT-6 Astra, Gemini 3.1 Pro and the like – can run roughly 10–100× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
 
 To see what a model **actually** costs for your work, run one operation and check the **Reports** tab – it shows the real billed cost. For OpenRouter, expect the underlying provider's rate plus a small platform fee.
 
 ### Our recommendation
 
 :::tip
-**If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 4.6.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content – at a cost that works out to a small fraction of a cent per segment.
+**If you could only pick one model for everything – translation, proofreading, and chat – we would recommend Claude Sonnet 5.5.** It follows translation instructions precisely, handles terminology constraints well, is fast enough for batch operations, and delivers consistently high quality across legal, technical, and general content – at a cost that works out to a small fraction of a cent per segment.
 :::
 
-For budget-conscious batch work, **GPT-5.4 Mini** or **Gemini 3.1 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 4.8** or **GPT-5.5** are worth the premium.
+For budget-conscious batch work, **GPT-6 Luna** or **Gemini 3.5 Flash-Lite** offer excellent quality at a fraction of the price. For the absolute highest quality on specialised content, **Claude Opus 5.5** or **GPT-6 Astra** are worth the premium.
 
 ### Token pricing
 
@@ -81,8 +81,8 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 
 ### Tips for managing costs
 
-* **Start with a budget model** – GPT-5.4 Mini, Gemini 3.1 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
-* **Use premium models selectively** – reserve GPT-5.5, Claude Opus 4.8, or Gemini 2.5 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
+* **Start with a budget model** – GPT-6 Luna, Gemini 3.5 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
+* **Use premium models selectively** – reserve GPT-6 Astra, Claude Opus 5.5, or Gemini 3.1 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](/trados/usage-costs/)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 * **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](/trados/usage-costs/#monthly-budget).
@@ -112,7 +112,7 @@ If a request is estimated to cost more than $0.50 in input tokens, a confirmatio
 
 #### Choosing the right model
 
-For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-5.4 Mini** or another budget model. Reserve premium models like **GPT-5.5** or **Claude Opus 4.8** for AutoPrompt and complex tasks where the quality difference justifies the cost.
+For everyday work – chat queries, terminology questions, QuickLauncher prompts – use **GPT-6 Luna** or another budget model. Reserve premium models like **GPT-6 Astra** or **Claude Opus 5.5** for AutoPrompt and complex tasks where the quality difference justifies the cost.
 
 ### See also
 

@@ -15,9 +15,9 @@ The current provider and model are shown in the status area at the bottom of the
 
 | Provider | Models |
 | -------- | ------ |
-| **OpenAI** | GPT-5.5, GPT-5.4 Mini |
-| **Anthropic** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 |
-| **Google** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
+| **OpenAI** | GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna |
+| **Anthropic** | Claude Sonnet 5.5, Claude Opus 5.5, Claude Fable 5.1 |
+| **Google** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 3.1 Pro (Preview) |
 | **Grok** | Grok 4.3 |
 | **Mistral** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
@@ -33,13 +33,13 @@ If you prefer a single account that covers many providers, **OpenRouter** gives 
 
 ## Choosing a Model
 
-For everyday translation questions, a smaller and cheaper model like **GPT-5.4 Mini**, **Claude Haiku 4.5**, or **DeepSeek V4 Flash** works well. For complex tasks like document analysis, prompt generation, or when you need the highest quality suggestions, use a larger model like **Claude Sonnet 4.6**, **GPT-5.5**, or **DeepSeek V4 Pro**.
+For everyday translation questions, a smaller and cheaper model like **GPT-6 Luna**, **Gemini 3.5 Flash-Lite**, or **DeepSeek V4 Flash** works well. For complex tasks like document analysis, prompt generation, or when you need the highest quality suggestions, use a larger model like **Claude Sonnet 5.5**, **GPT-6 Astra**, or **DeepSeek V4 Pro**.
 
 Some features are provider-specific:
 
 | Feature | Availability |
 | ------- | ------------ |
-| [Studio Tools](/trados/ai-assistant/studio-tools/) | All providers except Ollama |
+| [Studio Tools](/trados/ai-assistant/studio-tools/) | All providers except Ollama. Not GPT-6.1 Sol, directly or through OpenRouter (from v18/19.20.199) |
 | Image attachments | All providers with vision support |
 | Document attachments | All providers |
 | [Memory bank](/trados/ai-assistant/super-memory/ai-integration/) context | All providers |

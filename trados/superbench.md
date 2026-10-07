@@ -7,7 +7,7 @@ Which model should you use for this project? SuperBench answers that with eviden
 
 ## What it does
 
-1. You pick **three models**, one per slot – any provider each. The defaults are Claude Opus 5, GPT-5.6 Sol and Gemini 3.1 Pro.
+1. You pick **three models**, one per slot – any provider each. The defaults are Claude Opus 5.5, GPT-6.1 Sol and Gemini 3.1 Pro (GPT-6.1 Sol from v18/19.20.199).
 2. You pick a **judge** – Claude Fable 5.1 by default – and how many segments of the open document to use. Twenty is a good start.
 3. Each model translates those segments through the batch pipeline itself. The selected prompt, the termbase terms that occur in the text, the document context, SuperMemory and the batch size are exactly what a real Batch Translate would send; only the model changes. **Nothing is written to the document.**
 4. The judge reads the source and the three translations **blind** – labelled A, B and C in a shuffled order, so no brand name colours the verdict – together with the same approved terms and instructions, and writes a short report: a ranked verdict, the significant errors per candidate with segment numbers, how each handled terminology and tags, and a recommendation for this project.

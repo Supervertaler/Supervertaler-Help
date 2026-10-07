@@ -14,7 +14,7 @@ Choose one of the supported AI providers:
 
 | Provider | Models | Where to get a key |
 |----------|--------|--------------------|
-| **OpenAI** | GPT-5.6 Sol, GPT-5.6 Terra, GPT-5.6 Luna, GPT-5.4 Mini | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
+| **OpenAI** | GPT-6 Astra, GPT-6.1 Sol (the default), GPT-6 Luna | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
 | **Claude (Anthropic)** | Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.1 | [console.anthropic.com](https://console.anthropic.com) |
 | **Gemini (Google)** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 3.1 Pro (Preview) | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
@@ -27,6 +27,8 @@ Choose one of the supported AI providers:
 :::note
 You only need one provider to get started. If you would rather not manage several accounts, **OpenRouter** gives you access to models from all of the above with a single key.
 :::
+
+**The OpenAI models** (from v18/19.20.199) are OpenAI's three current tiers, most capable first: GPT-6 Astra ($10 / $50 per million tokens), GPT-6.1 Sol ($2 / $10) and GPT-6 Luna ($0.10 / $0.50), all with a 1M-token context. GPT-6.1 Sol is the default for a new installation. Earlier versions list GPT-5.6 Sol, Terra and Luna and GPT-5.4 Mini; if you have one of those selected, it keeps working and is still costed. In the AI Assistant chat, GPT-6.1 Sol answers without the [Studio Tools](/trados/ai-assistant/studio-tools/) lookups – OpenAI does not let it use them through the connection Supervertaler uses – while the current segment, its terms and its TM matches still go with every message.
 
 ### Getting your first key
 
@@ -125,20 +127,22 @@ Names are free-form labels – use whatever makes sense for your workflow (e.g. 
 
 ### Curated model list
 
-The model dropdown includes a curated selection of the best models for translation:
+The model dropdown includes a curated selection of the best models for translation (as of v18/19.20.199; earlier versions show older models):
 
 | Model | Description |
 |-------|-------------|
-| **Claude Sonnet 4.6** | Recommended – best balance of speed, quality, and cost |
-| **Claude Opus 4.8** | Highest quality – Anthropic's most capable model, 1M context |
-| **GPT-5.5** | Premium quality – OpenAI's most advanced model |
-| **GPT-5.4 Mini** | Fast, affordable, and high quality for everyday translation |
-| **Gemini 3.1 Pro** | Google's most advanced model, large context |
-| **Gemini 3 Flash** | Fast and affordable – great for large batch jobs |
+| **Claude Sonnet 5.5** | Recommended – newest Sonnet, near-Opus quality at Sonnet cost, 1M context |
+| **Claude Opus 5.5** | Premium – Anthropic's newest Opus, 1M context. Top choice for hard legal/technical work |
+| **Claude Fable 5.1** | Maximum capability – Anthropic's most capable model, at double Opus pricing |
+| **GPT-6 Astra** | OpenAI's most capable model, 1M context. For the hardest work when cost is secondary |
+| **GPT-6.1 Sol** | Close to Astra's quality at a fifth of its price, 1M context |
+| **GPT-6 Luna** | OpenAI's cheapest – for high-volume work |
+| **Gemini 3.8 Flash** | Google's newest Flash – strong quality at low cost, 1M context |
+| **Gemini 3.1 Pro (Preview)** | Google's most capable model; still a preview |
 | **Gemma 4 31B** | Open-source – strong multilingual quality, 256K context |
 | **Gemma 4 26B MoE** | Open-source – near-31B quality at a fraction of the cost |
 | **Mistral Small 4** | Very fast and cheap – good multilingual support |
-| **Qwen 3.6 Plus (Free)** | Free – no API costs, good general-purpose quality |
+| **Qwen 3.8 27B (Free)** | Free and rate-limited – providers of free models may keep what you send, so not for confidential work |
 | **DeepSeek V4 Pro** | DeepSeek flagship – strong multilingual, competitive pricing |
 | **DeepSeek V4 Flash** | DeepSeek fast – great for high-volume translation |
 
@@ -148,7 +152,7 @@ OpenRouter exposes far more models than the curated list above. To use one that 
 
 ### Pricing
 
-OpenRouter adds a **5.5% platform fee** on top of the underlying provider's token price. For example, if Claude Sonnet 4.6 costs $3/$15 per million tokens at Anthropic, it costs approximately $3.17/$15.83 through OpenRouter. For a typical 5,000-word translation costing $0.50, the OpenRouter fee adds less than 3 cents.
+OpenRouter adds a **5.5% platform fee** on top of the underlying provider's token price. For example, if Claude Sonnet 5.5 costs $2/$10 per million tokens at Anthropic, it costs approximately $2.11/$10.55 through OpenRouter. For a typical 5,000-word translation costing $0.50, the OpenRouter fee adds less than 3 cents.
 
 :::note
 OpenRouter also offers some **free models** (marked with "Free" in the dropdown). These have no API cost at all – they are rate-limited but perfectly usable for testing or light workloads.
