@@ -38,6 +38,8 @@ A licence can be active on **two computers** – a desktop and a laptop, say. Bo
 
 To move the licence to another computer, open **Help → Licence** on the old one and click **Deactivate this computer**. That frees it for Supervertaler for Trados on that computer as well, since it is the same licence.
 
+From v0.1.9, **a licence counts only for the computer and Windows account that activated it**. If you rename your computer or reinstall Windows, Supervertaler sees a new computer: the editor tells you so when it opens, everything stays available that day, and entering your licence key again in **Help → Licence** activates it here. The same goes for a colleague using the same data folder – each person activates their own copy of the licence.
+
 ## When a licence lapses
 
 Only **AI translation** pauses. Terminology, termbases, prompts, memory banks and the editor all keep working, and nothing you have made is lost.
