@@ -95,7 +95,7 @@ Open **Help → Plugin Management** and look for Supervertaler in the list. If i
 
 Only needed if the steps above do not work. Close Studio, then paste each of these paths into the address bar of a File Explorer window and delete anything with **Supervertaler** in the name – a `.sdlplugin` file in the `Packages` folders, a folder in the `Unpacked` ones.
 
-Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026.
+Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026. For Studio 2022, use the Studio 2024 block with `18` changed to `17`.
 
 Each path is one of the three choices the Trados Plugin Installer offers under "Please select the folder where the plugin will be installed", so if you remember which you picked, start with that one – but check all three, because an earlier install may have used a different one.
 

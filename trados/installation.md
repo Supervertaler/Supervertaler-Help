@@ -9,7 +9,7 @@ title: "Installation"
 **Install Supervertaler for Trados from the [RWS App Store](https://appstore.rws.com/plugin/432).** This is the recommended route for everyone: every published build is RWS-signed, so Trados loads it without the "Unsigned Trados Studio Plug-in Found" warning that appears – *every time Studio starts* – for a plugin installed from anywhere else.
 
 :::note
-Supervertaler for Trados comes in two builds: one for **Trados Studio 2024** and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – the 2024 build will not load in Studio 2026, and vice versa. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to both; only the version you select in the Plugin Installer differs.
+Supervertaler for Trados comes in three builds: one for **Trados Studio 2022** *(from v17.20.200)*, one for **Trados Studio 2024**, and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – each build loads only in its own Studio version. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to all three; only the version you select in the Plugin Installer differs.
 :::
 
 You can either install from inside Trados Studio (**Add-Ins > RWS App Store**, search for "Supervertaler", click **Download**) or download the `Supervertaler for Trados.sdlplugin` file from the [App Store website](https://appstore.rws.com/plugin/432) and double-click it. Either path opens the Trados Plugin Installer.
@@ -35,7 +35,7 @@ App Store updates go through RWS review, so a brand-new fix can take a day or tw
 
 The installer offers three options for where to place the plugin. Each option stores the plugin in a different Windows folder, which determines who can use it and whether it follows you to other computers.
 
-The paths below are for **Trados Studio 2024**. For **Studio 2026** every path is identical except that `\18\` becomes `\19\`.
+The paths below are for **Trados Studio 2024**. For **Studio 2026** every path is identical except that `\18\` becomes `\19\`, and for **Studio 2022** it becomes `\17\`.
 
 **"All your domain computers"** (default) : Installs to: `C:\Users\<user>\AppData\Roaming\Trados\Trados Studio\18\Plugins\Packages\` : The Windows **Roaming** profile folder. In environments that sync the Roaming profile across machines – classic Active Directory roaming profiles, FSLogix profile containers, and similar setups – the plugin follows your Windows account from one PC to another. (OneDrive Known Folder Move does **not** sync `AppData\Roaming` by default, so OneDrive on its own is not a roaming mechanism.) On a single-PC personal install without any profile-sync setup, the plugin simply stays on the machine – functionally similar to "This computer for me only", though the folder is still `Roaming` rather than `Local`, which can matter if the machine later joins a profile-sync environment.
 
@@ -141,7 +141,7 @@ From **v4.19.24** onwards the in-plugin updater is install-scope aware – it wr
 
 If Trados still loads an older version of the plugin after installing a new one, an old copy may be lingering in a different installation location. Check all three plugin folders and remove any old `Supervertaler for Trados.sdlplugin` (in `Packages`) and `Supervertaler.Trados` folder (in `Unpacked`):
 
-Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026.
+Replace `<username>` with your own Windows user name. Use the block for your Studio version – `18` is Studio 2024, `19` is Studio 2026. For Studio 2022, use the Studio 2024 block with `18` changed to `17`.
 
 Each path is one of the three choices the Trados Plugin Installer offers under "Please select the folder where the plugin will be installed", so if you remember which you picked, start with that one – but check all three, because an earlier install may have used a different one.
 

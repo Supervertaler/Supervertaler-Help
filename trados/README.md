@@ -49,11 +49,11 @@ The client decisions you cannot look up: which term they insist on, what they re
 
 | Requirement    | Version             |
 | -------------- | ------------------- |
-| Trados Studio  | 2024 (v18) or later |
+| Trados Studio  | 2022 (v17), 2024 (v18) or 2026 (v19) – 2022 from v17.20.200 |
 | Windows        | 10 or 11            |
 | .NET Framework | 4.8                 |
 
-There are two builds: one for **Trados Studio 2024** (MultiTerm `.sdltb` termbases) and one for **Trados Studio 2026** (`.ttb` termbases). Install the build that matches your Studio version –see [Trados Studio 2026 & .ttb](/trados/studio-2026/).
+There are three builds: one for **Trados Studio 2022** and one for **Trados Studio 2024** (both with MultiTerm `.sdltb` termbases), and one for **Trados Studio 2026** (`.ttb` termbases). Install the build that matches your Studio version – see [Trados Studio 2026 & .ttb](/trados/studio-2026/).
 
 ### Shared Termbase Format
 
