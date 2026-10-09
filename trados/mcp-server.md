@@ -90,10 +90,10 @@ The server exposes these tools to the AI app:
 | `get_supermemory_context` | The active [SuperMemory](/trados/ai-assistant/super-memory/) bank for this project – its brief, terminology table and style rules, plus the `_shared` bank of house defaults that the client bank overrides *(three-file banks from v18.20.169)* |
 | `search_supermemory` | Search your active memory bank **and `_shared`** by keyword – *"what did I decide about this term, and why?"*. Each hit says which bank it came from *(v18.20.146; `_shared` included from v18.20.172)* |
 | `list_supermemory_banks` | Your memory banks and which one is active. `_shared` is labelled as the always-loaded layer rather than listed as an ordinary bank *(v18.20.146; roles from v18.20.172)* |
-| `read_supermemory_file` | Read one file of a memory bank in full, with the version stamp the AI has to hand back when it changes that file *(v18.20.200)* |
-| `append_terminology_row` | Record a terminology decision as a new row in a bank's `terminology.md`, with its scope (project, client or domain) and the reason. Refused when the term already has a row, so one term never ends up with two answers *(v18.20.200)* |
-| `update_supermemory_section` | Rewrite one `##` section of a bank file and leave the rest of the file exactly as it was *(v18.20.200)* |
-| `write_supermemory_file` | Create a new bank file, or replace one in full *(v18.20.200)* |
+| `read_supermemory_file` | Read one file of a memory bank in full, with the version stamp the AI has to hand back when it changes that file *(v18/19.20.199)* |
+| `append_terminology_row` | Record a terminology decision as a new row in a bank's `terminology.md`, with its scope (project, client or domain) and the reason. Refused when the term already has a row, so one term never ends up with two answers *(v18/19.20.199)* |
+| `update_supermemory_section` | Rewrite one `##` section of a bank file and leave the rest of the file exactly as it was *(v18/19.20.199)* |
+| `write_supermemory_file` | Create a new bank file, or replace one in full *(v18/19.20.199)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >
@@ -300,7 +300,7 @@ The AI cites the articles it drew from by path, so you can open them in Obsidian
 
 A large bank will not fit into one answer, so some of it is left out – and **the AI is now told which files those were** *(from v18.20.183)*. It used to be trimmed silently, which is the worse failure: two of your three articles look exactly like all three, so a rule you had written down could be absent from the answer with nothing to say so. If the AI mentions that something was left out, ask it to read the bank again with a larger budget, or ask about that file by name.
 
-### Keeping your memory bank up to date *(from v18.20.200)*
+### Keeping your memory bank up to date *(from v18/19.20.199)*
 
 The AI can also write to a memory bank, so a decision the two of you reach during a job goes into the bank instead of staying behind in the chat:
 
