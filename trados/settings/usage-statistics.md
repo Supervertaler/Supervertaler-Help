@@ -17,7 +17,7 @@ Supervertaler for Trados sends one anonymous, lightweight ping to the developer 
   * Trados Studio version
   * System locale (e.g. en-GB)
   * Whether Windows runs in a virtual machine, and which kind (Parallels, VMware, VirtualBox or Hyper-V); Parallels usually means a Mac
-  * The processor architecture Trados runs as (x86 for Trados Studio 2024, amd64 or arm64 for Trados Studio 2026)
+  * The processor architecture Trados runs as (x86 for Trados Studio 2022 and 2024, amd64 or arm64 for Trados Studio 2026)
   * Your Windows display scaling and Windows text size (e.g. 150% and 100%)
   * The Supervertaler **UI scale** setting (e.g. 100%)
 

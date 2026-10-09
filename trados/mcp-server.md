@@ -108,7 +108,7 @@ The server exposes these tools to the AI app:
 
 ### Two Studios open at once *(from v18.20.184)*
 
-Trados Studio 2024 and Trados Studio 2026 can run side by side, each with its own project and its own connection. Two AI apps can then work on **two different projects at the same time** – ChatGPT drafting one job while Claude Desktop drafts the other, in two Studio windows, on one machine.
+Trados Studio 2022, 2024 and 2026 can run side by side, each with its own project and its own connection. Two AI apps can then work on **two different projects at the same time** – ChatGPT drafting one job while Claude Desktop drafts the other, in two Studio windows, on one machine.
 
 Each Studio announces itself with its version and the project it has open, so an AI app can tell them apart and say which one it is working in.
 
@@ -142,7 +142,7 @@ If you always pair the same app with the same Studio, set it once in that app's 
 "args": ["--instance", "2024"]
 ```
 
-or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE` to `2024`, `2026`, or part of a project name. A pinned app never asks – and if the Studio it wants is not running, it says so rather than quietly using the other one.
+or set the environment variable `SUPERVERTALER_TRADOS_INSTANCE` to `2022`, `2024`, `2026`, or part of a project name. A pinned app never asks – and if the Studio it wants is not running, it says so rather than quietly using the other one.
 
 #### Two chats in the same app – read this before switching windows
 
@@ -152,7 +152,7 @@ The recipe above uses **two different AI apps** for a reason. One app runs **one
 
 > This project works only with Trados Studio 2026. Pass `instance: "2026"` on **every** Supervertaler tool call – reads as well as writes. Do **not** call `select_trados_instance`; the `instance` argument replaces it.
 
-and `"2024"` in the other. From v18.20.190 every Supervertaler tool takes an optional `instance` – `"2024"`, `"2026"`, or part of the project name – resolved against the Studios actually running. A call scoped to 2026 is answered by, or written to, the 2026 Studio and no other; one that names a Studio which is not running is **refused by name**, nothing touched. Because each call carries its own answer, the two chats never share a setting and never need `select_trados_instance` – which is the trap to avoid, since that command sets one selection shared by *every* chat, so two chats using it just overwrite each other. Pass `instance` on every call and that whole problem disappears. This is the reliable way, and it needs no second server and no file to edit.
+and `"2024"` in the other. From v18.20.190 every Supervertaler tool takes an optional `instance` – `"2022"` (from v17.20.199), `"2024"`, `"2026"`, or part of the project name – resolved against the Studios actually running. A call scoped to 2026 is answered by, or written to, the 2026 Studio and no other; one that names a Studio which is not running is **refused by name**, nothing touched. Because each call carries its own answer, the two chats never share a setting and never need `select_trados_instance` – which is the trap to avoid, since that command sets one selection shared by *every* chat, so two chats using it just overwrite each other. Pass `instance` on every call and that whole problem disappears. This is the reliable way, and it needs no second server and no file to edit.
 
 Every write also now **says which Studio and project it landed in**, in its reply, so even without the `instance` line a translation that went to the wrong place is visible at once rather than discovered later.
 

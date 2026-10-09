@@ -4,27 +4,29 @@ title: "Trados Studio 2026 & .ttb Termbases"
 
 Trados Studio 2026 introduces a new termbase format –the SQLite-based **`.ttb`** file –and drops the legacy MultiTerm engine that earlier versions relied on. Supervertaler for Trados supports Studio 2026 through a dedicated build that reads `.ttb` termbases directly.
 
-## Two builds, one product
+## Three builds, one product
 
-Supervertaler for Trados ships as two separate plugin builds from the same codebase:
+Supervertaler for Trados ships as separate plugin builds from the same codebase:
 
 | Build | For | Termbase format |
 |-------|-----|-----------------|
+| **Supervertaler for Trados (Studio 2022)** *(from v17.20.199)* | Trados Studio 2022 | MultiTerm `.sdltb` |
 | **Supervertaler for Trados** | Trados Studio 2024 | MultiTerm `.sdltb` |
 | **Supervertaler for Trados (Studio 2026)** | Trados Studio 2026 | `.ttb` |
 
-Install the build that matches your Studio version. The 2024 build will not load in Studio 2026, and vice versa, because the two Studio releases use different plugin frameworks and termbase engines.
+Install the build that matches your Studio version. Each build loads only in its own Studio version: Studio 2026 uses a different plugin framework and termbase engine, and each Studio release checks that a plugin was built for it.
 
 ## Version numbering
 
-Each build's **major version tracks the Trados Studio major it targets**, so the two builds always carry distinct, non-colliding version numbers that share the same tail:
+Each build's **major version tracks the Trados Studio major it targets**, so the builds always carry distinct, non-colliding version numbers that share the same tail:
 
 | Build | Example version |
 |-------|-----------------|
-| Trados Studio 2024 | `18.20.86` |
-| Trados Studio 2026 | `19.20.86` |
+| Trados Studio 2022 | `17.20.199` |
+| Trados Studio 2024 | `18.20.199` |
+| Trados Studio 2026 | `19.20.199` |
 
-So you can tell at a glance which Studio a build is for: a `18.x` plugin is for Studio 2024, a `19.x` plugin is for Studio 2026. (Releases up to and including `4.20.85` used a single shared number for both builds.)
+So you can tell at a glance which Studio a build is for: a `17.x` plugin is for Studio 2022 *(from v17.20.199)*, a `18.x` plugin is for Studio 2024, a `19.x` plugin is for Studio 2026. (Releases up to and including `4.20.85` used a single shared number for both the 2024 and 2026 builds.)
 
 ## TermLens and `.ttb` termbases
 
@@ -32,7 +34,7 @@ In Studio 2026, TermLens reads the new `.ttb` termbases attached to your project
 
 `.ttb` termbases are **read-only** in TermLens, just like MultiTerm termbases. To add or edit terms, use Studio 2026's built-in Termbases view.
 
-Everything else – Supervertaler, Batch Translate, SuperSearch, TermPicker, AI terminology injection – works identically across both builds.
+Everything else – Supervertaler, Batch Translate, SuperSearch, TermPicker, AI terminology injection – works identically across all three builds.
 
 ## What about my existing `.sdltb` termbases?
 
