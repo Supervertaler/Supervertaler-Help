@@ -4,7 +4,7 @@ title: "Trados Studio 2026 & .ttb Termbases"
 
 Trados Studio 2026 introduces a new termbase format –the SQLite-based **`.ttb`** file –and drops the legacy MultiTerm engine that earlier versions relied on. Supervertaler for Trados supports Studio 2026 through a dedicated build that reads `.ttb` termbases directly.
 
-## Two builds, one product
+## Three builds, one product
 
 Supervertaler for Trados ships as separate plugin builds from the same codebase:
 
@@ -34,7 +34,7 @@ In Studio 2026, TermLens reads the new `.ttb` termbases attached to your project
 
 `.ttb` termbases are **read-only** in TermLens, just like MultiTerm termbases. To add or edit terms, use Studio 2026's built-in Termbases view.
 
-Everything else – Supervertaler, Batch Translate, SuperSearch, TermPicker, AI terminology injection – works identically across both builds.
+Everything else – Supervertaler, Batch Translate, SuperSearch, TermPicker, AI terminology injection – works identically across all three builds.
 
 ## What about my existing `.sdltb` termbases?
 

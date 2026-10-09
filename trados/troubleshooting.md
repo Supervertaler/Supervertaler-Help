@@ -12,7 +12,7 @@ Solutions to common issues with the Supervertaler for Trados plugin.
 
 **Solutions:**
 
-1. **Check Trados version** – the plugin requires **Trados Studio 2024** or later
+1. **Check Trados version** – the plugin requires **Trados Studio 2022** or later (2022 from v17.20.199)
 2. **Verify .NET Framework** – ensure **.NET Framework 4.8** is installed on your system
 3. **Reinstall the plugin** – remove the plugin via **Trados Plugin Management**, restart Trados, then install it again
 4. **Check for errors** – open **Trados Plugin Management** and look for error messages next to the Supervertaler plugin entry
@@ -78,12 +78,12 @@ On the installer's first screen, the list of installed Studio versions greys out
 
 > Studio versions that are not compatible with the plugin will be grayed out.
 
-**Almost always this means you downloaded the other build.** Supervertaler for Trados ships as two separate downloads, and the App Store page asks which you want:
+**Almost always this means you downloaded the wrong build.** Supervertaler for Trados ships as separate downloads for Studio 2022, 2024 and 2026, and the App Store page asks which you want – for example:
 
 > Trados Studio - 2026 Release, 19.x
 > Trados Studio 2024, 18.x
 
-The 2024 build greys out Studio 2026, and the 2026 build greys out Studio 2024 – by design, since each is built against its own Studio. If the version you want is greyed out, go back to the [App Store page](https://appstore.rws.com/plugin/432), click **Download**, and pick the other entry from the dropdown.
+Each build greys out the other Studio versions – the 2024 build greys out 2022 and 2026, and so on – by design, since each is built against its own Studio. If the version you want is greyed out, go back to the [App Store page](https://appstore.rws.com/plugin/432), click **Download**, and pick the entry for your Studio from the dropdown.
 
 If you are certain you downloaded the right build and your Studio version is *still* greyed out, email support@supervertaler.com with the version number from **Help → About**. That means your Studio is outside the range this build declares, which is a fault at our end, not yours.
 

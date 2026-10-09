@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-09
+
+- **Trados: Studio 2022 is supported** (from v17.20.199), in a third build beside the 2024 and 2026 ones. The overview, requirements and installation pages, the build and version tables on *Trados Studio 2026 & .ttb* (now "Three builds, one product"), Troubleshooting (the minimum Studio, the three downloads and which build greys out which Studio, and the plugin folders for `17`), the docs home page, Usage Statistics and MultiTerm Support say so. The MCP Server page lists `"2022"` among the `instance` values and three Studios side by side.
+
 ## 2026-09-30
 
 - **Workbench is in active development again.** The banner on every Workbench page said it was no longer developed; it is gone. The docs home page lists Workbench with the other products instead of as a footnote, and its card says development has resumed.
