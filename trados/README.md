@@ -49,7 +49,7 @@ The client decisions you cannot look up: which term they insist on, what they re
 
 | Requirement    | Version             |
 | -------------- | ------------------- |
-| Trados Studio  | 2022 (v17), 2024 (v18) or 2026 (v19) – 2022 from v17.20.200 |
+| Trados Studio  | 2022 (v17), 2024 (v18) or 2026 (v19) – 2022 from v17.20.199 |
 | Windows        | 10 or 11            |
 | .NET Framework | 4.8                 |
 

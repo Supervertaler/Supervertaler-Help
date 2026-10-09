@@ -9,7 +9,7 @@ title: "Installation"
 **Install Supervertaler for Trados from the [RWS App Store](https://appstore.rws.com/plugin/432).** This is the recommended route for everyone: every published build is RWS-signed, so Trados loads it without the "Unsigned Trados Studio Plug-in Found" warning that appears – *every time Studio starts* – for a plugin installed from anywhere else.
 
 :::note
-Supervertaler for Trados comes in three builds: one for **Trados Studio 2022** *(from v17.20.200)*, one for **Trados Studio 2024**, and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – each build loads only in its own Studio version. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to all three; only the version you select in the Plugin Installer differs.
+Supervertaler for Trados comes in three builds: one for **Trados Studio 2022** *(from v17.20.199)*, one for **Trados Studio 2024**, and one for **Trados Studio 2026** (which uses the new `.ttb` termbase format). Install the build that matches your Studio version – each build loads only in its own Studio version. See [Trados Studio 2026 & .ttb](/trados/studio-2026/) for details. The installation steps below apply to all three; only the version you select in the Plugin Installer differs.
 :::
 
 You can either install from inside Trados Studio (**Add-Ins > RWS App Store**, search for "Supervertaler", click **Download**) or download the `Supervertaler for Trados.sdlplugin` file from the [App Store website](https://appstore.rws.com/plugin/432) and double-click it. Either path opens the Trados Plugin Installer.

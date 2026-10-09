@@ -10,7 +10,7 @@ Supervertaler for Trados ships as separate plugin builds from the same codebase:
 
 | Build | For | Termbase format |
 |-------|-----|-----------------|
-| **Supervertaler for Trados (Studio 2022)** *(from v17.20.200)* | Trados Studio 2022 | MultiTerm `.sdltb` |
+| **Supervertaler for Trados (Studio 2022)** *(from v17.20.199)* | Trados Studio 2022 | MultiTerm `.sdltb` |
 | **Supervertaler for Trados** | Trados Studio 2024 | MultiTerm `.sdltb` |
 | **Supervertaler for Trados (Studio 2026)** | Trados Studio 2026 | `.ttb` |
 
@@ -22,11 +22,11 @@ Each build's **major version tracks the Trados Studio major it targets**, so the
 
 | Build | Example version |
 |-------|-----------------|
-| Trados Studio 2022 | `17.20.200` |
-| Trados Studio 2024 | `18.20.200` |
-| Trados Studio 2026 | `19.20.200` |
+| Trados Studio 2022 | `17.20.199` |
+| Trados Studio 2024 | `18.20.199` |
+| Trados Studio 2026 | `19.20.199` |
 
-So you can tell at a glance which Studio a build is for: a `17.x` plugin is for Studio 2022 *(from v17.20.200)*, a `18.x` plugin is for Studio 2024, a `19.x` plugin is for Studio 2026. (Releases up to and including `4.20.85` used a single shared number for both the 2024 and 2026 builds.)
+So you can tell at a glance which Studio a build is for: a `17.x` plugin is for Studio 2022 *(from v17.20.199)*, a `18.x` plugin is for Studio 2024, a `19.x` plugin is for Studio 2026. (Releases up to and including `4.20.85` used a single shared number for both the 2024 and 2026 builds.)
 
 ## TermLens and `.ttb` termbases
 
