@@ -132,7 +132,7 @@ Process Inbox, Distill and Health Check are gone. They existed to manage complex
 
 ## Working with a bank outside Trados
 
-The active bank is exposed over the [Supervertaler MCP server](/trados/mcp-server/), so Claude Desktop, Claude Code or any other MCP client can read it: `get_supermemory_context` for the current picture, `search_supermemory` to look a decision up, `list_supermemory_banks` to see what exists. Access is read-only.
+The active bank is exposed over the [Supervertaler MCP server](/trados/mcp-server/), so Claude Desktop, Claude Code or any other MCP client can read it: `get_supermemory_context` for the current picture, `search_supermemory` to look a decision up, `list_supermemory_banks` to see what exists. From v18.20.200 the AI can also update a bank when you ask – add a terminology row, rewrite one section of a file – with the safeguards described on the [MCP server page](/trados/mcp-server/).
 
 Beyond that, a bank is a folder of Markdown files. Edit it in any text editor, search it with ordinary tools, version-control it with Git, keep it in a synced folder so it follows you between machines. [Obsidian](https://obsidian.md/) works nicely if you like it, though with three files per bank you no longer need it to find your way around.
 

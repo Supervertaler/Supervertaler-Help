@@ -90,6 +90,10 @@ The server exposes these tools to the AI app:
 | `get_supermemory_context` | The active [SuperMemory](/trados/ai-assistant/super-memory/) bank for this project – its brief, terminology table and style rules, plus the `_shared` bank of house defaults that the client bank overrides *(three-file banks from v18.20.169)* |
 | `search_supermemory` | Search your active memory bank **and `_shared`** by keyword – *"what did I decide about this term, and why?"*. Each hit says which bank it came from *(v18.20.146; `_shared` included from v18.20.172)* |
 | `list_supermemory_banks` | Your memory banks and which one is active. `_shared` is labelled as the always-loaded layer rather than listed as an ordinary bank *(v18.20.146; roles from v18.20.172)* |
+| `read_supermemory_file` | Read one file of a memory bank in full, with the version stamp the AI has to hand back when it changes that file *(v18.20.200)* |
+| `append_terminology_row` | Record a terminology decision as a new row in a bank's `terminology.md`, with its scope (project, client or domain) and the reason. Refused when the term already has a row, so one term never ends up with two answers *(v18.20.200)* |
+| `update_supermemory_section` | Rewrite one `##` section of a bank file and leave the rest of the file exactly as it was *(v18.20.200)* |
+| `write_supermemory_file` | Create a new bank file, or replace one in full *(v18.20.200)* |
 
 > The four batch tasks (`analyze_files`, `pretranslate`, `update_tm`, `export_target`) run in the **background** and return immediately – the AI polls `get_task_status` and tells you when they finish, so a long analysis never stalls the chat.
 >
@@ -292,9 +296,27 @@ Your [SuperMemory](/trados/ai-assistant/super-memory/) memory bank holds the rea
 * "Check this translation against my style guide and terminology notes."
 * "Which memory bank are you using?"
 
-The AI cites the articles it drew from by path, so you can open them in Obsidian and check its reasoning. Retrieval is read-only – nothing is written back to the bank over MCP. If you have turned memory-bank context off under Settings → AI Settings, these tools stay quiet too.
+The AI cites the articles it drew from by path, so you can open them in Obsidian and check its reasoning. If you have turned memory-bank context off under Settings → AI Settings, these tools stay quiet too.
 
 A large bank will not fit into one answer, so some of it is left out – and **the AI is now told which files those were** *(from v18.20.183)*. It used to be trimmed silently, which is the worse failure: two of your three articles look exactly like all three, so a rule you had written down could be absent from the answer with nothing to say so. If the AI mentions that something was left out, ask it to read the bank again with a larger budget, or ask about that file by name.
+
+### Keeping your memory bank up to date *(from v18.20.200)*
+
+The AI can also write to a memory bank, so a decision the two of you reach during a job goes into the bank instead of staying behind in the chat:
+
+* "Add *hellingmeter* → *inclinometer* to this client's terminology, scope client, and note why."
+* "Update the Numbers section of my style guide with what we just agreed."
+* "Read the tracked-changes harvest in reference/ and add the recurring decisions to terminology.md."
+
+The AI writes to a bank only when you ask or agree. What protects the bank:
+
+* **The bank is named every time.** A write never goes to the active bank by default, and a bank name that does not exist is an error, not a new bank.
+* **Nothing is overwritten unseen.** The AI reads a file before changing it and hands back the version it read. If the file has changed in the meantime – you edited it in Obsidian, a colleague did in the team folder, Supervertaler for memoQ did – nothing is written, and the AI is given the file as it now stands.
+* **`reference/` is never written**, and the `_shared` bank of house defaults only when you have agreed to it.
+* **One row per term.** A term that already has a row is refused, and the AI is shown that row to change instead. A new row goes into the first table with a *Scope* column, never into a table of rejected variants further down.
+* **Your files keep their shape.** Each file keeps its own line endings, so a one-row change shows as one row in Obsidian's or Git's history, not as a change to every line.
+* **The previous version is kept** in your own data folder, under `backups\memory-banks\<bank>\` – one copy per file, replaced by the next change. Backups never go into the bank folder, so they do not show up in Obsidian, in Git or in a shared team folder.
+* **When the team folder could not be reached as Trados started**, the AI cannot change banks at all that session: it would be changing your own copy, which your colleagues never see.
 
 ### Your prompt library *(from v18.20.101)*
 
