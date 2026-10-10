@@ -40,7 +40,7 @@ The sidebar includes (by default):
 - Wikipedia (Source)
 - Wikipedia (Target)
 - Juremy
-- Beijerterm
+- Beijerdictionary
 - AcronymFinder
 - BabelNet
 - Wiktionary (Source)
