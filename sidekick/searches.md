@@ -56,7 +56,7 @@ When the current pair is not in the list, the entry says so rather than opening 
 
 ### MultiSearch – a batch at once
 
-**MultiSearch** opens a whole set of sources in one go, each in its own tab of a fresh browser window, for the current pair. Read down the tabs, close the window, done. The starter batch, at the top of Web searches, is eleven sources: Google Patents, IATE, ProZ, Beijerdictionary, Reverso, Juremy, Linguee, Wikipedia, Wiktionary, AcronymFinder and BabelNet. A language pack brings its own batch for its pair.
+**MultiSearch** opens a whole set of sources in one go, each in its own tab of a fresh browser window, for the current pair. Read down the tabs, close the window, done. The starter batch, at the top of Web searches, is eleven sources: Google Patents, IATE, ProZ, Beijer Dictionary, Reverso, Juremy, Linguee, Wikipedia, Wiktionary, AcronymFinder and BabelNet. A language pack brings its own batch for its pair.
 
 It is an entry of kind **multisearch** in the Library Editor: one address per line, the same placeholders. Make as many batches as you like – one for legal, one for engineering – and give each a key.
 
@@ -70,7 +70,7 @@ A **language pack** is everything for one language pair, both directions: the bi
 
 Pack entries are never written into your menu, so removing a pack is one untick, and the Library Editor only ever shows your own entries.
 
-Sidekick ships Dutch ⇄ English today, with thirteen sources: a MultiSearch over the pair, Beijerdictionary, Mijnwoordenboek, Woordenlijst, Synoniemen.net, Encyclo, Merriam-Webster, Cambridge, Collins, OneLook, Thesaurus.com, Wordnik and Ludwig. A pack is a small JSON file in the `packs\` folder of the Sidekick folder, in exactly the format of a search entry, so a pack for another pair is a matter of writing one – and contributing it back on GitHub so the next translator in that pair starts with it.
+Sidekick ships Dutch ⇄ English today, with thirteen sources: a MultiSearch over the pair, Beijer Dictionary, Mijnwoordenboek, Woordenlijst, Synoniemen.net, Encyclo, Merriam-Webster, Cambridge, Collins, OneLook, Thesaurus.com, Wordnik and Ludwig. A pack is a small JSON file in the `packs\` folder of the Sidekick folder, in exactly the format of a search entry, so a pack for another pair is a matter of writing one – and contributing it back on GitHub so the next translator in that pair starts with it.
 
 ### Local searches
 

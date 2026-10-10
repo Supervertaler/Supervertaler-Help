@@ -91,7 +91,7 @@ You can also right-click in the editor and choose **Search the web**, or use the
 
 #### Choosing which sites to search
 
-Click **Web (n)** in the SuperSearch bar – it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijerdictionary**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
+Click **Web (n)** in the SuperSearch bar – it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijer Dictionary**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
 
 The other thirty-six cover bilingual dictionaries (Glosbe, WordReference, bab.la), EU and legal terminology (EUR-Lex, EuroTermBank, Juremy, GEMET), encyclopaedic sources (Wikipedia, Wiktionary, Wikidata), English monolingual and writing references (Collins, Merriam-Webster, Oxford Collocations, SkELL, Etymonline), Dutch resources (Woordenlijst, Synoniemen.net, de Financiële Begrippenlijst), medical databases (EMA, EMC) and general search (Google, Google Patents, GitHub Code).
 
