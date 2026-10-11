@@ -28,11 +28,13 @@ Advertising the capability only makes the engine eligible; memoQ does not send c
 
 ### Terminology is not showing
 
-Three things must all be true, under **Options → Terminology plugins**:
+Three things must all be true:
 
-1. **Perform terminology plugin lookups while working in the translation grid** is ticked
-2. **Supervertaler terms** does not read *Not configured* – i.e. at least one termbase is ticked Read for the project in the [Termbases window](/memoq/terminology/#the-termbases-window)
-3. **Enable plugin** is ticked for it
+1. **Perform terminology plugin lookups while working in the translation grid** is ticked, under **Options → Terminology plugins**
+2. **Enable plugin** is ticked for **Supervertaler terms**, in the same place
+3. At least one termbase is ticked Read for the project in the [Termbases window](/memoq/terminology/#the-termbases-window)
+
+In v0.1.10 and earlier, *Supervertaler terms* also read *Not configured* until a termbase was ticked for the project, and a termbase ticked while memoQ was open gave no hits until memoQ was restarted. Restart memoQ, or update.
 
 ### A termbase gives no hits
 

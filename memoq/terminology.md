@@ -53,10 +53,11 @@ A termbase you make here is ticked Read for the current project as it is made.
 **Options → Terminology plugins.**
 
 1. Tick **Perform terminology plugin lookups while working in the translation grid**. Nothing happens until this is on.
-2. Find **Supervertaler terms** in the list. It reads *Not configured* until at least one termbase is ticked Read for the current project – so tick one in the Termbases window first.
-3. Tick **Enable plugin**. Its **Options** button opens the prompt editor, which is where terminology is managed.
+2. Find **Supervertaler terms** in the list and tick **Enable plugin**. Its **Options** button opens the prompt editor, which is where terminology is managed.
 
 That is all: a terminology plugin applies to every project, and does not appear in **Project home → Term bases**, which lists memoQ's own term bases only. Restart memoQ after enabling the plugin for the first time.
+
+After that, a termbase you tick Read in the [Termbases window](#the-termbases-window) shows its terms on the next segment you land on, with memoQ left open. Up to v0.1.10 it did not: *Supervertaler terms* read *Not configured* until a termbase was ticked for the current project, and a termbase ticked during a memoQ session gave no hits until memoQ was restarted.
 
 ### What you get
 
