@@ -32,7 +32,9 @@ The panel docks at the bottom of the editor by default, but you can drag it anyw
 
 ## Searching
 
-Type your search query in the text box and press **Enter** (or click **Search**).
+SuperSearch has two search boxes, labelled with the languages of the document you have open – **Dutch:** and **English:** in an NL→EN project, for example. Type in the first to search the language you translate from, in the second to search the translations, or in both to find entries whose source matches one term *and* whose translation matches the other. Press **Enter** (or click **Search**).
+
+The results columns and the preview pane are labelled the same way *(from v18.20.200)*. A regional variant is named where it matters – *Dutch (Belgium)*, or *English (United Kingdom)* and *English (United States)* when both sides are English – and in a narrow panel the box labels shorten to language codes (**NL:**, **EN:**). With no document open, the labels read **Source** and **Target**.
 
 ### Search Modes
 
@@ -47,7 +49,9 @@ The **mode** dropdown in the search bar controls where SuperSearch looks:
 
 The mode is remembered across sessions until you change it.
 
-Translation-memory results are found via the project's attached file-based TMs (`.sdltm`) – read from the project settings and the project's `Tm` folder. Server-based (GroupShare) TMs are not searched. TM hits obey the same **Aa**, **.\***, and **Word** options as file results, and the **Scope** dropdown maps to source-side / target-side concordance.
+Translation-memory results come from the TMs attached to the project – file-based `.sdltm` TMs, read from the project settings and the project's `Tm` folder, and server-based GroupShare TMs. TM hits obey the same **Aa**, **.\***, and **Word** options as file results, and each search box maps to a source-side or target-side concordance search.
+
+Every TM hit is shown **in your document's direction** *(from v18.20.200)*. A TM stored the other way round – an EN→NL memory attached to an NL→EN project – is searched on the side that holds the language you typed, and its hits are turned round to match, so the Dutch is always in the Dutch column.
 
 The TM list is re-checked every time you search, so a TM you attach to the project mid-session is picked up without reopening the project. SuperSearch searches every attached TM regardless of its **Enabled** / **Concordance** state in the project's TM settings – use the **TMs** button (see below) to narrow the list.
 
@@ -61,7 +65,7 @@ All three kinds of termbase are included, with nothing extra to configure:
 * **MultiTerm** – the `.sdltb` termbases attached to the Trados project
 * **Trados `.ttb`** – the Studio 2026 termbase format
 
-Terminology is matched **in your project's direction**: a termbase declared the other way round (an EN→NL termbase in an NL→EN project) is oriented before matching, so the **Src** box always means *the language you translate from* – not "whichever column that particular termbase calls source". This is the same treatment TermLens gives your terminology.
+Terminology is matched **in your project's direction**: a termbase declared the other way round (an EN→NL termbase in an NL→EN project) is oriented before matching, so the first search box always means *the language you translate from* – not "whichever column that particular termbase calls source". This is the same treatment TermLens gives your terminology.
 
 Searches read the terminology TermLens already holds in memory, so a termbase search is effectively instant. (Immediately after opening a project TermLens may still be loading, in which case the first search falls back to reading the database and takes longer.)
 
@@ -118,7 +122,6 @@ Some sites, ProZ.com in particular, block embedded browsers. When that happens t
 
 | Option             | Description                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------- |
-| **Scope** dropdown | Choose _Source & Target_ (default), _Source only_, or _Target only_                         |
 | **Aa** checkbox    | Case-sensitive search – when unchecked, "Hello" matches "hello", "HELLO", etc.             |
 | **.\*** checkbox   | Treat the query as a regular expression (see [Regex tips](/trados/supersearch/#regex-tips) below) |
 | **Word** checkbox  | Match whole words only – "cat" won't match "category" or "scatter". Ignored when **.\*** is on |
@@ -133,9 +136,13 @@ Each row shows one matching segment, one TM entry, or one termbase entry:
 | ----------- | ------------------------------------------------------------------------------------------------- |
 | **Found in** | The project-file name, the translation-memory name (blue), or the termbase name (green). Hover for the full path |
 | **#**       | Segment number within the file; for TM results, the concordance match score; empty for termbase entries |
-| **Source**  | Source text – matching text is highlighted in yellow                                             |
-| **Target**  | Target text – matching text is highlighted in yellow                                             |
+| *Your source language*, e.g. **Dutch** | Text in the language you translate from – matching text is highlighted in yellow |
+| *Your target language*, e.g. **English** | Text in the language you translate into – matching text is highlighted in yellow |
 | **Status**  | Confirmation status (Not Translated, Draft, Translated, etc.), "TM" for TM results, or the termbase kind (`Supervertaler`, `MultiTerm`, `TTB`) for terminology |
+
+Every row – project file, TM or termbase – is shown in your document's direction, so the language column headers hold for all of them. The exception is a TM or Supervertaler termbase in some *other* language pair, such as an NL→DE memory in a multilingual NL→EN project: its hits are marked in amber in the Status column with their own languages, for example **TM (NL→DE)**, because the headers do not apply to them. Hover over the marker for the full language names; the preview pane shows them too.
+
+Switching to a document in a different language pair clears the results, since they were searched the other way round. Search again to fill the grid for the new document.
 
 ### Preview Pane
 
@@ -239,8 +246,8 @@ Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` a
 ## Tips
 
 * Select a term in the editor and press **Alt+S** to instantly search for it across the entire project – or **Alt+W** to look it up on IATE, Linguee, Reverso and the rest, in your project's language pair.
-* Use **Source only** scope to find segments where a particular term appears, then check how it was translated across files.
-* Use **Target only** scope with Replace to fix a consistent mistranslation across the entire project.
+* Fill only the source-language box to find segments where a particular term appears, then check how it was translated across files.
+* Fill only the target-language box and use Replace to fix a consistent mistranslation across the entire project.
 * Use the **Files** and **TMs** buttons to limit the search to specific files or translation memories – useful in large projects where you only want to search a subset.
 * Switch the mode dropdown to **TMs** to use SuperSearch as a concordance tool, **Termbases** to search your terminology, or **Everything** to see project, TM and termbase hits side by side.
 * The status bar shows the number of results, what was searched, and the search time in milliseconds.
