@@ -63,7 +63,7 @@ The server exposes these tools to the AI app:
 | `list_projects` | Every project registered in Trados Studio – across Studio 2026/2024/2022 – with status and paths *(v18.20.111)* |
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
-| `list_project_templates` | Your Trados project templates *(v18.20.111)* |
+| `list_project_templates` | Your Trados project templates *(v18.20.111)*: every template Studio offers under **New Project** → **Use Settings from**, wherever the file is stored, with its Studio version and whether Studio lists it *(templates outside the `Project Templates` folders from v18/19.20.199)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below). *From v18/19.20.198* it can also update the project's main translation memory as it goes, for the segments it confirms – only when you ask |
 | `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain – only the fields you name change, everything else is preserved |

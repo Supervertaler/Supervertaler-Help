@@ -98,7 +98,7 @@ Studio Tools reads data directly from your local Trados Studio installation. Spe
 * **Projects** are read from the `projects.xml` file in your Documents folder (e.g., `Documents\Studio 2024\Projects\projects.xml`). Project details, statistics, and file status are read from the individual `.sdlproj` files.
 * **Termbases** are read from the termbase configuration stored in each `.sdlproj` file.
 * **Translation memories** are found by scanning the `Translation Memories` folder and project folders. TM metadata and search use direct SQLite read-only access to the `.sdltm` files.
-* **Project templates** are found in the `Project Templates` folder.
+* **Project templates** are the ones Trados Studio offers under **New Project** → **Use Settings from**: every template registered in each installed Studio version, wherever the file is stored, plus any in the `Project Templates` folders. Each says which Studio version it belongs to and whether Studio lists it, and one whose file has been moved or deleted is shown as missing *(from v18/19.20.199; earlier versions looked only in the `Project Templates` folders)*.
 
 No data is sent to external services other than the AI provider. The tool results are passed to the AI as part of the conversation so it can format and present them to you.
 

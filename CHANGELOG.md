@@ -10,6 +10,8 @@ guesswork.
 
 ## 2026-10-12
 
+- **Trados: an AI assistant can keep your memory banks up to date** (from v18/19.20.199). The MCP Server page lists the four new tools (`read_supermemory_file`, `append_terminology_row`, `update_supermemory_section`, `write_supermemory_file`) and has a new section, *Keeping your memory bank up to date*, on what it can write and what protects the bank. *SuperMemory* no longer says MCP access is read-only.
+- **Trados: `list_project_templates` finds every template Studio offers** (from v18/19.20.199), not only those in the `Project Templates` folders. The MCP Server and Studio Tools pages say so.
 - **memoQ: no more "early development" notice.** The banner across every memoQ page, which pointed readers to the Trados plugin as "the stable product", is gone, and the memoQ card on the docs home page says "Source-available, 14-day free trial" like the others instead of "In early development". Supervertaler for memoQ has been released since 0.1.0.
 - **memoQ: a screenshot on the overview page** – memoQ with the Supervertaler editor open beside the grid, termbase terms highlighted and the AI's suggestion and term hits in Translation results.
 - **memoQ: a termbase ticked with memoQ open works without a restart** (from v0.1.11). *Terminology* drops the step about ticking a termbase to clear *Not configured*, and *Troubleshooting* lists the termbase tick as its own check; both say what v0.1.10 and earlier did.
