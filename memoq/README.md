@@ -6,6 +6,8 @@ Supervertaler for memoQ brings AI translation and your own terminology into **me
 
 Unlike the Trados plugin, which docks its own panels into the editor, memoQ gives an add-in no window of its own. Supervertaler therefore works through memoQ's existing surfaces – the machine-translation engine and the terminology pane – rather than adding new ones. In practice that turns out to suit it: the results appear exactly where you already look for them.
 
+![memoQ with the Supervertaler editor open beside the translation grid. Termbase terms are highlighted in the source, and Translation results shows the AI's suggestion followed by the term hits.](/.gitbook/assets/Supervertaler-for-memoQ-with-editor.jpg)
+
 ### What it does
 
 **AI translation.** An LLM machine-translation engine using Anthropic, OpenAI or Google, with your own API key and your own instructions. It works segment by segment as you translate, and in bulk through **Pre-translate**. Inline tags survive the round trip.

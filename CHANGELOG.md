@@ -8,6 +8,11 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-12
+
+- **memoQ: a screenshot on the overview page** – memoQ with the Supervertaler editor open beside the grid, termbase terms highlighted and the AI's suggestion and term hits in Translation results.
+- **memoQ: a termbase ticked with memoQ open works without a restart** (from v0.1.11). *Terminology* drops the step about ticking a termbase to clear *Not configured*, and *Troubleshooting* lists the termbase tick as its own check; both say what v0.1.10 and earlier did.
+
 ## 2026-10-09
 
 - **Trados: Studio 2022 is supported** (from v17.20.199), in a third build beside the 2024 and 2026 ones. The overview, requirements and installation pages, the build and version tables on *Trados Studio 2026 & .ttb* (now "Three builds, one product"), Troubleshooting (the minimum Studio, the three downloads and which build greys out which Studio, and the plugin folders for `17`), the docs home page, Usage Statistics and MultiTerm Support say so. The MCP Server page lists `"2022"` among the `instance` values and three Studios side by side.
