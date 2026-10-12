@@ -62,10 +62,6 @@ export const PRODUCTS: Product[] = [
     emoji: '🟠',
     icon: '/product-icons/sv-memoq.svg',
     llmsSubset: '/_llms-txt/supervertaler-for-memoq.txt',
-    banner:
-      '<strong>Supervertaler for memoQ is in early development.</strong> ' +
-      'These pages describe what works today and will change as it does. ' +
-      'The stable product is <a href="/trados/">Supervertaler for Trados</a>.',
   },
   {
     id: 'sidekick',
