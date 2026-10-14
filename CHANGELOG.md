@@ -10,7 +10,7 @@ guesswork.
 
 ## 2026-10-14
 
-- **Trados: *AI Providers* has a section, *Local models: what to expect*.** Quality, speed, what narrows the gap (termbases and SuperMemory), SuperBench for testing on your own work, and a link to the case study on supervertaler.com. Its Ollama note now says that models ending in `-cloud` run on Ollama's servers, so the text leaves your computer.
+- **Trados: *Providers* has a section, *Local models: what to expect*.** Quality, speed, what narrows the gap (termbases and SuperMemory), SuperBench for testing on your own work, and a link to the case study on supervertaler.com. Its Ollama note now says that models ending in `-cloud` run on Ollama's servers, so the text leaves your computer.
 - **memoQ: a new page, *Local and Cloud Models*.** What leaves your computer with each choice (a local model, an Ollama cloud model, an OpenAI-compatible server, the cloud providers, Claude Desktop under a Team or a personal plan); setting up Ollama; context length and a model's own limit; speed without a graphics card, with a picture of the waiting notice; the *Stop translating these segments* link for Pre-translate; the separate Parallel requests value; and what quality to expect, linking to the case study on supervertaler.com. Under *Features (memoQ)* in the menu.
 - **memoQ: *Getting Started* lists local models as a provider**, and says the Endpoint is only for Ollama and OpenAI-compatible servers. It still said "Anthropic, OpenAI or Google", although Ollama and OpenAI-compatible have been supported since v0.1.12.
 
