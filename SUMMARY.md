@@ -102,6 +102,7 @@
 
 ## 🟠 Reference (memoQ)
 
+* [memoQ and Trados Compared](memoq/memoq-vs-trados.md)
 * [Troubleshooting (memoQ)](memoq/troubleshooting.md)
 
 ## 🧰 Get Started (Sidekick)

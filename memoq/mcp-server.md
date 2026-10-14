@@ -9,6 +9,10 @@ Setting either one up is a button in the editor: see [Setting it up](#setting-it
 It is the same [Supervertaler MCP Server](/trados/mcp-server/) the Trados plugin uses. What differs is what memoQ lets a plugin do – which is a good deal less than Trados – so read [What it can and cannot do](#what-it-can-and-cannot-do) before you expect Trados behaviour.
 
 > **Which AI apps work?** The same answer as for Trados: any app that runs a **local (STDIO) MCP server on your own machine** – Claude Desktop, ChatGPT's desktop app, Claude Code. Cloud-hosted clients (the claude.ai and chatgpt.com websites) have no route to a bridge that lives on your PC.
+>
+> One exception: a **Claude conversation linked to your computer through the Claude desktop app** *(confirmed October 2026)*. The conversation itself runs in the cloud, but the desktop app relays the Supervertaler server installed on your PC, so it can read the project and stage translations like Claude Desktop itself. The server still runs on your PC, and the desktop app must be open.
+>
+> The switch and the setting are labelled *Claude Desktop*, but they work the same for every one of these apps.
 
 ## The one thing to understand first
 
@@ -23,7 +27,7 @@ The other half: a plugin only *sees* what memoQ sends it. Claude cannot read you
 With everything set up (below), a chat-driven job looks like this:
 
 1. **Open the project** in memoQ and tick **Pre-translate via Claude Desktop (MCP)** in Supervertaler's settings (see [The checkbox](#the-checkbox)).
-2. **Pre-translate** with Supervertaler as the MT engine. It is instant and free: the grid stays empty, but Supervertaler now holds every source segment.
+2. **Pre-translate** with Supervertaler as the MT engine. It is instant and free: nothing is written into the grid, but Supervertaler now holds every source segment. memoQ shows *No staged translation for this segment* under the grid for each row – that is expected, and the row is left exactly as it was.
 3. **In Claude Desktop or ChatGPT:** *"Read my memoQ project and translate it into Dutch."* The assistant reads the segments, checks your termbases, and stages translations. Nothing has changed in memoQ yet.
 4. **Pre-translate again.** The grid fills. Each row is marked `Claude (staged via Supervertaler MCP)` in Translation results.
 5. **Confirm as you go.** If [Self-learning](/memoq/self-learning/) is on, each confirmation is visible to Claude too – *"what have I confirmed so far?"* – so a mid-job conversation about terminology is grounded in your actual choices.
@@ -39,12 +43,14 @@ Either in the [prompt editor](/memoq/prompt-editor/), on the **Settings** menu, 
 
 Both paths call an AI model. The checkbox decides **which one pays and who drives**: unticked, this plugin translates through the API key you entered; ticked, Pre-translate leaves the translating to the chat app, billed to that subscription.
 
+"Hands the segments to the chat" does not mean memoQ sends anything to Claude and waits for an answer. The assistant has to have staged its translations already. Pre-translate records each row's source text, so the assistant can read it, and inserts whatever is staged.
+
 | | Pre-translate | Landing on a segment |
 |---|---|---|
-| **Unticked** (default) | This plugin translates every segment through your API key. Staged translations are used first where they exist. | Live suggestion from the model; staged first if present. |
-| **Ticked** | Hands the segments to the chat and inserts what it sends back. Nothing charged to the API key. | Unchanged – live suggestion from the model. |
+| **Unticked** (default) | Staged translations first. Every other row is translated through your API key. | Staged translation first if there is one; otherwise a live suggestion from the model, through your API key. |
+| **Ticked** | Staged translations only. A row with nothing staged is **left exactly as it was** – an existing fuzzy match or your own text is never cleared – and memoQ shows *No staged translation for this segment* under the grid. Nothing is charged to the API key. | Same as unticked: staged first, otherwise a live suggestion through your API key. |
 
-Two consequences worth knowing:
+Three things worth knowing:
 
 - **You never have to toggle it mid-job.** Ticked is right for the whole of a chat-driven job: the capture pass is free, the delivery pass is free, and walking the document afterwards still gives you live suggestions for anything Claude did not cover.
 - **It is one switch for the whole installation, not a project setting.** It says how you are working at this moment, so the editor and memoQ show the same state and either can change it.
@@ -137,6 +143,8 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
 
+For the differences outside the AI assistant – proofreading, QuickLauncher, TMs, SuperSearch – see [memoQ and Trados compared](/memoq/memoq-vs-trados/).
+
 **Reading is complete with the live link; writing goes through you.** What you give up compared with Trados is Claude editing rows in place – and in memoQ the alternative, staging plus one Pre-translate, is a review step rather than a loss.
 
 ## Two channels for seeing the document
@@ -174,6 +182,8 @@ Reading is all this does. Nothing writes into a bank from memoQ; you edit the fi
 **Claude says the project is empty.** Nothing has been captured yet. Run Pre-translate once, or visit some segments.
 
 **Staged translations do not appear after Pre-translate.** They are matched by source text, with inline tags and spacing set aside. If you edited a source segment after Claude read it, the match fails – ask Claude to re-read and re-stage that segment. Also check that Supervertaler is the selected MT engine for the Pre-translate run.
+
+**Pre-translate reports "No staged translation for this segment" on many rows.** That is the [checkbox](#the-checkbox) ticked, doing its job: nothing was staged for those rows, so Supervertaler tells memoQ it has no result and memoQ leaves them as they were. On the capture pass it appears on every row. Stage translations for the rows you want filled and run Pre-translate again, or untick the checkbox to have the rest translated through your API key.
 
 **A staged row says "inline tags not placed".** Claude's translation reached the row, but without the tags the source has, so memoQ's tag check will flag it. Ask Claude to read the segments again – it can see each row's tags once memoQ has asked about it – and re-stage those rows with the tags in place, then Pre-translate again.
 

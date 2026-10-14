@@ -19,7 +19,7 @@ Fill in:
 | **Parallel requests** | how many requests go to the model at once. Saved separately for cloud providers and for local servers: **4** suits a cloud provider, **1** a model on your own computer – see [Local and cloud models](/memoq/local-models/#parallel-requests) |
 | **Segments per batch** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference). Called *Segments per request* before version 0.1.20 |
 | **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [The Supervertaler editor](/memoq/prompt-editor/). The editor chooses it from the panel at the top left |
-| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop or ChatGPT – see [AI assistants](/memoq/mcp-server/). Also the switch at the top right of the editor |
+| **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through an AI assistant such as Claude Desktop, ChatGPT desktop or Claude Code – see [AI assistants](/memoq/mcp-server/). Staged translations are used either way; the setting only decides whether Pre-translate sends the other rows to your API key. Also the switch at the top right of the editor |
 
 In memoQ's dialog, **Test connection** translates a short sentence for real, so it exercises the key, the model name and the endpoint together – a green result means everything works.
 
