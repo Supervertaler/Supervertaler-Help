@@ -357,6 +357,10 @@ const sidebar = [
             "link": "/memoq/self-learning/"
           },
           {
+            "label": "Local and Cloud Models",
+            "link": "/memoq/local-models/"
+          },
+          {
             "label": "The Supervertaler Editor",
             "link": "/memoq/prompt-editor/"
           },

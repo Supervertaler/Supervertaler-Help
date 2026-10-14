@@ -94,6 +94,7 @@
 
 * [Context Layers](memoq/context-layers.md)
 * [Self-learning Translation](memoq/self-learning.md)
+* [Local and Cloud Models](memoq/local-models.md)
 * [The Supervertaler Editor](memoq/prompt-editor.md)
 * [AI Assistants (Claude Desktop, ChatGPT)](memoq/mcp-server.md)
 * [Terminology](memoq/terminology.md)

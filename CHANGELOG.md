@@ -8,6 +8,11 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-14
+
+- **memoQ: a new page, *Local and Cloud Models*.** What leaves your computer with each choice (a local model, an Ollama cloud model, an OpenAI-compatible server, the cloud providers, Claude Desktop under a Team or a personal plan); setting up Ollama; context length and a model's own limit; speed without a graphics card, with a picture of the waiting notice; the *Stop translating these segments* link for Pre-translate; the separate Parallel requests value; and what quality to expect, linking to the case study on supervertaler.com. Under *Features (memoQ)* in the menu.
+- **memoQ: *Getting Started* lists local models as a provider**, and says the Endpoint is only for Ollama and OpenAI-compatible servers. It still said "Anthropic, OpenAI or Google", although Ollama and OpenAI-compatible have been supported since v0.1.12.
+
 ## 2026-10-12
 
 - **Trados: an AI assistant can keep your memory banks up to date** (from v18/19.20.199). The MCP Server page lists the four new tools (`read_supermemory_file`, `append_terminology_row`, `update_supermemory_section`, `write_supermemory_file`) and has a new section, *Keeping your memory bank up to date*, on what it can write and what protects the bank. *SuperMemory* no longer says MCP access is read-only.
