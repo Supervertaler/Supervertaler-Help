@@ -181,7 +181,7 @@ Changing the provider changes three things together: the model list, the model i
 
 memoQ’s own **Configure plugin** dialog has the same three controls, reading and writing the same settings, so it does not matter which one you use.
 
-**Segments per request** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
+**Segments per batch** can only lower what memoQ does, not raise it – memoQ hands a plugin about ten segments at a time during Pre-translate, however high this is set. Lowering it is still worth doing if a model keeps returning fewer translations than it was sent.
 
 **Send anonymous usage statistics when memoQ starts** (from version 0.1.1) is your answer to the question the editor asks the first time it opens. If it is ticked, memoQ sends one small message each time it starts: a random ID, the plugin version, the Windows and memoQ versions and your system language – never your documents, translations, terminology or file names. Nothing is sent unless you tick it. See the [privacy policy](https://supervertaler.com/privacy/#memoq).
 

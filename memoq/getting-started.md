@@ -16,7 +16,8 @@ Fill in:
 | **Model** | a short list of the models worth recommending for that provider, with a line on each saying what it is for. **Fetch list** asks the provider for its full catalogue and **Show all models** adds it underneath – that is where to look for a model released after your copy of Supervertaler was built. The box also takes anything typed, for a gateway or a local model |
 | **API key** | your own key for that provider. All Supervertaler products share one key file at `C:\Users\<you>\Supervertaler\settings\api-keys.json`, so a key you have already set in Supervertaler for Trados or Sidekick is picked up here and you can leave this empty – see [The Supervertaler editor](/memoq/prompt-editor/#api-keys-live-in-one-file) |
 | **Endpoint** | only for Ollama and OpenAI-compatible servers; for Ollama on this computer, leave it blank |
-| **Segments per request** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference) |
+| **Parallel requests** | how many requests go to the model at once. Saved separately for cloud providers and for local servers: **4** suits a cloud provider, **1** a model on your own computer – see [Local and cloud models](/memoq/local-models/#parallel-requests) |
+| **Segments per batch** | how many segments go into one request during Pre-translate (memoQ hands the plugin about 10 at a time, so values above 10 make no difference). Called *Segments per request* before version 0.1.20 |
 | **Prompt** | a prompt from the shared library, or *(instructions below)* to type your own – see [The Supervertaler editor](/memoq/prompt-editor/). The editor chooses it from the panel at the top left |
 | **Pre-translate via Claude Desktop (MCP)** | leave **unticked** unless you translate through Claude Desktop or ChatGPT – see [AI assistants](/memoq/mcp-server/). Also the switch at the top right of the editor |
 

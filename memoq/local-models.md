@@ -53,7 +53,12 @@ Some models (Gemma 4, for example) "think" before every answer, which adds time 
 
 ### Parallel requests
 
-**Parallel requests** keeps two values: one for cloud providers and one for local servers. The settings show whichever applies to the provider you have chosen. For a model on your own computer, **1** is right: it works on one request at a time anyway.
+**Parallel requests** is how many requests go to the model at once. It keeps two values, one for cloud providers and one for local servers, and the settings show whichever applies to the provider you have chosen.
+
+- **A model on your own computer:** **1** is right. It works on one request at a time anyway.
+- **A cloud provider:** **4** is a good start. Lower it if the provider says you are sending too many requests. Raising it above the number memoQ settled on when your MT settings were created (usually 4) makes no difference, because memoQ never sends more at once.
+
+Before version 0.1.20 the cloud value had no effect at all.
 
 ### What quality to expect
 
