@@ -26,10 +26,20 @@ The current provider and model are shown in the status area at the bottom of the
 | **Custom** | Any OpenAI-compatible API endpoint |
 
 :::note
-If you want privacy or offline use, try **Ollama** with a local model. No API key or internet connection needed.
+If you want privacy or offline use, try **Ollama** with a local model. No API key or internet connection needed. Ollama models whose names end in `-cloud` are the exception: they run on Ollama's servers, so your text leaves your computer.
 
 If you prefer a single account that covers many providers, **OpenRouter** gives you access to 200+ models with one key.
 :::
+
+## Local models: what to expect
+
+A local model keeps every word on your computer, but expect less than from the large cloud models. In a test on a published Dutch patent, Gemma 4 31B, about the largest model a well-equipped PC can run, wrote fluent and mostly accurate English, but its terminology drifted from one batch to the next, which broke the consistency of the claims. Models of 7 to 8 billion parameters were not good enough for patent work at all. Claude Opus 5.5 stayed consistent throughout.
+
+- **Speed:** without a graphics card a local model is slow. Reading Supervertaler's instructions before the first segment can take 10 to 15 minutes; a model of about 30 billion parameters needs around 24 GB of graphics memory to run at a usable speed.
+- **What narrows the gap:** termbases ticked for AI, and house rules in [SuperMemory](/trados/ai-assistant/super-memory/). In the same test, a local model applied six patent conventions it had been getting wrong as soon as they were in the shared memory bank.
+- **Test it on your own work:** [SuperBench](/trados/superbench/) translates the same segments with three models and has a fourth judge them.
+
+The full test, with every paragraph side by side, is on supervertaler.com: [Can a local AI model translate a patent?](https://supervertaler.com/articles/local-ai-patent-test/)
 
 ## Choosing a Model
 
