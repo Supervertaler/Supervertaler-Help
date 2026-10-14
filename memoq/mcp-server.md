@@ -143,6 +143,8 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
 
+For the differences outside the AI assistant – proofreading, QuickLauncher, TMs, SuperSearch – see [memoQ and Trados compared](/memoq/memoq-vs-trados/).
+
 **Reading is complete with the live link; writing goes through you.** What you give up compared with Trados is Claude editing rows in place – and in memoQ the alternative, staging plus one Pre-translate, is a review step rather than a loss.
 
 ## Two channels for seeing the document

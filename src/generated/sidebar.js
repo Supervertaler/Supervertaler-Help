@@ -388,6 +388,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "memoQ and Trados Compared",
+            "link": "/memoq/memoq-vs-trados/"
+          },
+          {
             "label": "Troubleshooting",
             "link": "/memoq/troubleshooting/"
           }

@@ -10,6 +10,8 @@ guesswork.
 
 ## 2026-10-14
 
+- **memoQ: a new page, *memoQ and Trados Compared*.** One table of what each plugin can and cannot do – AI translation, terminology, translation memories and AI assistants – with what to do in memoQ instead, and a short list of what memoQ would need to give plugins to close each gap. Under *Reference (memoQ)*, and linked from the memoQ overview and *AI Assistants*.
+
 - **memoQ: the *Claude Desktop* switch, explained without the guesswork.** *AI Assistants* now says that "hands the segments to the chat" means recording them and inserting what is already staged, not sending anything to Claude; that with the switch on, a row with nothing staged is left exactly as it was and memoQ shows *No staged translation for this segment* (also a new Troubleshooting entry); and that landing on a segment serves a staged translation first in both modes, which the table had wrong for the ticked state. Three bullets are no longer introduced as "two consequences". *Getting Started* and the editor page say what the switch decides – the rows nothing was staged for – rather than only who pays.
 - **memoQ: *Which AI apps work?* covers a Claude conversation linked to your computer through the Claude desktop app.** It runs in the cloud but reaches the Supervertaler server on your PC through the desktop app, so the note no longer implies every cloud-hosted Claude is ruled out. It also says the *Claude Desktop* label covers ChatGPT desktop and Claude Code too.
 
