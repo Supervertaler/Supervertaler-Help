@@ -36,10 +36,13 @@ The scope dropdown controls which segments are translated:
 
 ### Prompt Selection
 
-Choose a prompt to guide the AI translation style and domain. The prompt selector shows:
+Choose a prompt to guide the AI translation style and domain. The prompt selector shows, from the top:
 
-* **Default Translation Prompt** – a general-purpose prompt that works well for most content types. Use it as-is or duplicate it in the Prompt Manager and customise it for your domain.
+* **(Built-in instructions only)** – no prompt from your library: Supervertaler's own translation instructions alone (inline tags, numbers, the output contract), with your termbase, translation memory matches and memory bank as set in AI Settings.
+* **Default Translation Prompt** – a general-purpose prompt that works well for most content types. Use it as-is or duplicate it in the Prompt Manager and customise it for your domain. *From v18/19.20.200 this is what Batch Translate and Alt+T use until you choose another prompt;* before that, they started on the built-in instructions alone.
 * **Custom prompts** – your own prompts created in the Prompt Manager
+
+Choosing **(Built-in instructions only)**, or turning off the active prompt in the Prompt Manager, is remembered as your choice. Hover over the prompt selector for a summary of what each kind of item means.
 
 The **active prompt** for the current project is marked with a checkmark in the dropdown. When you open a project that has an active prompt set, it is automatically selected. See [Memory banks – Active Prompt](/trados/ai-assistant/super-memory/active-prompt/) for how to set the active prompt.
 

@@ -23,6 +23,8 @@ It counts every AI call Supervertaler makes in Trados – Batch Translate and Pr
 
 When you run the **AI Proofreader** (the Proofread mode of [Batch Operations](/trados/batch-operations/)), each issue the AI finds is shown here as a clickable card. See [AI Proofreader](/trados/ai-proofreader/) for the full workflow and what each card contains.
 
+*From v18/19.20.200* a card also shows the AI's corrected translation, and its **Apply** button writes the correction into the segment; **Apply all** at the top of the tab does the same for every card you have not ticked off. See [Applying fixes](/trados/ai-proofreader/#applying-fixes-from-v181920200). From the same version the tab copes with a report of any size: thousands of findings appear at once and scroll smoothly. Before, a report of more than about 200 findings was slow to appear, and its later cards could be drawn on top of one another.
+
 Since v18.20.187 every completed run is also written to `trados\reports` in your data folder as Markdown, and **Save report…** next to **Clear** writes a copy wherever you choose. The button is enabled only while a proofreading report is showing.
 
 ## AI operation log

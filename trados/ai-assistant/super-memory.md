@@ -84,7 +84,7 @@ D:\Supervertaler\memory-banks\
 
 ### Switching
 
-The **Memory Bank** dropdown lists every bank it finds. Switching is immediate – the next chat turn and the next batch translation both use the new bank, no restart, and your chat history is preserved. The choice persists across Trados sessions.
+The **Memory Bank** dropdown lists every bank it finds. It sits in the **SuperMemory** bar at the top of the Supervertaler Assistant panel, above the tabs, so it is in view whichever tab you are on *(from v18/19.20.200; before that it was inside the Chat tab)*. Switching is immediate – the next chat turn, batch translation, proofread and Alt+T translation all use the new bank, no restart, and your chat history is preserved. The choice persists across Trados sessions.
 
 ### Creating
 

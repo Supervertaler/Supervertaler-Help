@@ -53,7 +53,7 @@ The server exposes these tools to the AI app:
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
-| `check_tags` | Translated segments with missing or extra inline tags – compares underlying tag ids as well as counts, so two tags sharing one id are caught *(ids from v18.20.157)* |
+| `check_tags` | Translated segments with missing or extra inline tags – compares underlying tag ids as well as counts, so two tags sharing one id are caught *(ids from v18.20.157)*. Tags in text struck out with Track Changes are not counted *(from v18/19.20.200)* |
 | `check_terminology` | Translated segments that don't use the termbase's expected translation – longest-match-wins, ranked by signal rather than raw count, restrictable to a curated termbase *(overhauled v18.20.157)* |
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
 | `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
@@ -102,6 +102,7 @@ The server exposes these tools to the AI app:
 ### Safety rails on write actions
 
 * Translations written by the AI are set to **Draft** status unless it explicitly sets another status – so you can filter for them in Studio and review everything.
+* **With Track Changes on, only what the AI changed shows as a revision** *(from v18/19.20.197)*. A rewritten segment is recorded word by word, the way Studio records your own typing: a changed word shows as that word struck through and its replacement inserted, not as the whole sentence retyped. *From v18/19.20.200*, a segment where only the tags change – Studio's own bold tag replaced by the one the source uses, say, or a stray tag pair removed from text the source does not format – shows no revision at all: the tags are corrected without one, since a tag change on its own would show you nothing to review. A tag correction plus a changed word shows just that word. Where a segment cannot be shown word by word – a tag moves to other words, tags are added or removed while the text changes too, or the segment already carries tracked changes – it is recorded as one whole-segment change, as before. The AI's report says, for each segment, which way it was recorded and how many tags were corrected.
 * **Locked segments are never touched.**
 * **Find & replace keeps each segment's confirmation status** *(from v18.20.148)*. Editing a segment's content normally demotes it to Draft, which meant a single consistency sweep over a finished file could quietly leave thousands of segments unconfirmed. The AI can still ask for a specific status when you want one.
 * Updates are limited to 40 segments per call; larger jobs are processed in reported batches. *(Lowered from 200 in v18.20.148: bigger batches could outlast the connection timeout, and because the write had already gone through, the AI couldn't tell success from failure.)*

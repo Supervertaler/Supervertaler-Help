@@ -82,7 +82,7 @@ From v18/19.20.198, a translation leaves out any note marked for the assistants 
 
 Where a termbase gives the AI flat pairs of terms, SuperMemory gives it the **reasoning** behind them: the decisions, the caveats, the client-specific overrides. Only the active bank is used (plus `_shared`), so switch to the right one before translating.
 
-**Toggles:** AI Settings → *Include memory bank context* / *Use memory bank in AutoPrompt*.
+**Toggles:** AI Settings → *Include SuperMemory knowledge base in AI context* / *Use knowledge base when generating prompts (AutoPrompt)*.
 
 ### 8. List numbering
 

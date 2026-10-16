@@ -256,17 +256,17 @@ Batch Operations do not use this setting because each batch already contains a g
 
 These two toggles control whether [SuperMemory](/trados/ai-assistant/super-memory/) content is included in the AI context.
 
-#### Include memory bank in AI context
+#### Include SuperMemory knowledge base in AI context
 
-When enabled, the AI reads the active bank's `brief.md`, `terminology.md` and `style.md` - plus the `_shared` bank of house defaults - before every translation and chat message. This gives it the _reasoning_ behind your decisions, not just the terms themselves.
+When enabled, the AI reads the active bank's `brief.md`, `terminology.md` and `style.md` - plus the `_shared` bank of house defaults - before every translation, proofreading run and chat message. This gives it the _reasoning_ behind your decisions, not just the terms themselves.
 
 :::caution
 **Off by default.** SuperMemory is a power-user feature that most translators should opt into deliberately. The simpler workflow – TermLens termbases + the AI context options above – covers the majority of needs. Enable this toggle once you have a populated memory bank and want the AI to consult it.
 :::
 
-#### Use memory bank when generating prompts (AutoPrompt)
+#### Use knowledge base when generating prompts (AutoPrompt)
 
-When enabled, SuperMemory content is included in the [AutoPrompt](/trados/generate-prompt/) meta-prompt so that generated translation prompts reflect your established client conventions, terminology reasoning, and style guides. Only effective when "Include memory bank in AI context" is also enabled.
+When enabled, SuperMemory content is included in the [AutoPrompt](/trados/generate-prompt/) meta-prompt so that generated translation prompts reflect your established client conventions, terminology reasoning, and style guides. Only effective when "Include SuperMemory knowledge base in AI context" is also enabled.
 
 ## Prompt logging
 

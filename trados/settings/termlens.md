@@ -20,6 +20,8 @@ The path to your Supervertaler termbase `.db` file. Click **Browse** to select a
 
 Each Supervertaler termbase in the database has three toggles. See [Termbase Management](/trados/termbase-management/) for full details.
 
+*From v18/19.20.200* the list opens in alphabetical order, so a termbase you have just added appears in its place rather than at the bottom.
+
 | Toggle | Purpose |
 |--------|---------|
 | **Read** | Load terms for matching –only termbases with Read enabled appear in TermLens |

@@ -3,7 +3,7 @@ title: "AI Integration"
 description: "What SuperMemory sends to the AI, and in what order"
 ---
 
-When you translate a segment, run a batch translation, or ask the chat a question, Supervertaler builds the prompt from several context sources. This page covers what SuperMemory contributes.
+When you translate a segment, run a batch translation or a proofreading run, or ask the chat a question, Supervertaler builds the prompt from several context sources. This page covers what SuperMemory contributes.
 
 ## What gets sent
 
@@ -18,14 +18,14 @@ Within each, the three files are sent: `brief.md`, then `terminology.md`, then `
 
 ## A large bank sends only what each document needs
 
-*From v18/19.20.198.* Once the active bank and `_shared` together come to more than about 8,000 tokens, a translation no longer sends all of it with every request. The first time you translate a document – with Batch Translate, Translate active segment (Alt+T), **Preview prompt** or SuperBench – Supervertaler makes a selection for that document:
+*From v18/19.20.198.* Once the active bank and `_shared` together come to more than about 8,000 tokens, a translation no longer sends all of it with every request. The first time you translate a document – with Batch Translate, Translate active segment (Alt+T), **Preview prompt** or SuperBench – or proofread it (from v18/19.20.200), Supervertaler makes a selection for that document:
 
 * **Terminology:** only the table rows whose term occurs in the document. Both columns are checked, so a Dutch–English table still serves an English–Dutch job.
 * **Other notes:** your AI model is shown the start of the document and asked, once, which of the bank's other notes (such as `figures.md`) matter for it.
 * **Your house defaults, rule by rule:** in the same question, each rule of `_shared/style.md` – each section that starts with a `## ` heading – is offered on its own, and so is each section of `_shared/terminology.md` that holds no table. A rule written for another language direction or another kind of document is left out: nl→en patent boilerplate stays out of an en→nl software job. The model sees each rule's heading and its first lines, so a **Scope:** line near the top, such as *Scope: all Dutch→English patent work* or *Scope: all work, any direction*, is what it goes by. When unsure, it keeps the rule. A section holding a terminology table is never offered: its rows are already kept or dropped by the document itself.
 * **Always sent:** the brief and style guide of the active bank, and `_shared/brief.md`.
 
-The selection is kept for that document until you change a file in the bank, so every request of the job carries exactly the same text, and a provider that caches prompts keeps charging the cached rate. Opening a document sends nothing to the model; the selection is made only when you translate. If the question fails or times out, every note is sent, as it would be without selection. A bank of 8,000 tokens or less is sent whole, as before, and costs no extra request.
+The selection is kept for that document until you change a file in the bank, so every request of the job carries exactly the same text, and a provider that caches prompts keeps charging the cached rate. Opening a document sends nothing to the model; the selection is made only when you translate or proofread. A proofreading run uses the same selection as a translation of the document, so proofreading a document you have just translated makes no new one. If the question fails or times out, every note is sent, as it would be without selection. A bank of 8,000 tokens or less is sent whole, as before, and costs no extra request.
 
 **Nothing is left out without a trace.** What was sent for each document, what was left out and why, is written to a file in the `trados\bank-extracts\` folder of your [data folder](/trados/data-folder/), one per document. The Batch Translate log names that file and gives the figures, for example:
 
@@ -50,7 +50,7 @@ audience: assistant
 ---
 ```
 
-It is then left out of every translation: Batch Translate, Translate active segment, Preview prompt, SuperBench and AutoPrompt. The AI Assistant chat and the AI tools connected through the MCP server still read it – they are who it is written for. A note without the marker is sent as always. The Batch Translate log lists anything left out this way, as do the per-document file (for a large bank) and the **☰ Report** button.
+It is then left out of every translation: Batch Translate, Translate active segment, Preview prompt, SuperBench and AutoPrompt, and out of Proofread. The AI Assistant chat and the AI tools connected through the MCP server still read it – they are who it is written for. A note without the marker is sent as always. The Batch Translate log lists anything left out this way, as do the per-document file (for a large bank) and the **☰ Report** button.
 
 ## Precedence
 
@@ -101,8 +101,8 @@ Because the banks are also readable over the [MCP server](/trados/mcp-server/), 
 
 Toggled in [AI Settings](/trados/settings/ai-settings/):
 
-- **Include memory bank in AI context** – for translations and chat.
-- **Use memory bank when generating prompts (AutoPrompt)** – when AutoPrompt drafts a translation prompt.
+- **Include SuperMemory knowledge base in AI context** – for translations, Proofread and chat.
+- **Use knowledge base when generating prompts (AutoPrompt)** – when AutoPrompt drafts a translation prompt.
 
 Both are **off by default**. Turning them off does not delete anything – the files stay on disk.
 

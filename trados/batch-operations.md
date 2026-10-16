@@ -11,7 +11,7 @@ The **Batch Operations** tab in the Supervertaler Assistant panel provides two A
 
 Switch between modes using the **Mode** dropdown at the top of the Batch Operations tab.
 
-Both modes share the same prompt selector, provider/model configuration, and scope options. Prompts are filtered by mode – Translate prompts appear in Translate mode, Proofread prompts appear in Proofread mode. You can click the **provider/model label** to quickly switch AI models via a flyout menu – the same menu available in the Chat tab.
+Both modes share the same prompt selector, provider/model configuration, and scope options. Prompts are filtered by mode – Translate prompts appear in Translate mode, Proofread prompts appear in Proofread mode. From v18/19.20.200 each mode starts on its shipped default prompt – the **Default Translation Prompt** or the **Default Proofreading Prompt** – until you choose another; **(Built-in instructions only)** at the top of the list sends Supervertaler's own instructions without a prompt from your Library. You can click the **provider/model label** to quickly switch AI models via a flyout menu – the same menu available in the Chat tab.
 
 ### Clipboard Mode
 
