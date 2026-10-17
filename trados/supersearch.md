@@ -95,9 +95,9 @@ You can also right-click in the editor and choose **Search the web**, or use the
 
 #### Choosing which sites to search
 
-Click **Web (n)** in the SuperSearch bar – it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-one sites ship with the plugin, of which five are on out of the box: **Beijer Dictionary**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
+Click **Web (n)** in the SuperSearch bar – it sits beside **Files**, **TMs** and **TBs**, and works the same way. Forty-three sites ship with the plugin, of which five are on out of the box: **Beijer Dictionary**, **IATE**, **Linguee**, **ProZ.com** and **Reverso**.
 
-The other thirty-six cover bilingual dictionaries (Glosbe, WordReference, bab.la), EU and legal terminology (EUR-Lex, EuroTermBank, Juremy, GEMET), encyclopaedic sources (Wikipedia, Wiktionary, Wikidata), English monolingual and writing references (Collins, Merriam-Webster, Oxford Collocations, SkELL, Etymonline), Dutch resources (Woordenlijst, Synoniemen.net, de Financiële Begrippenlijst), medical databases (EMA, EMC) and general search (Google, Google Patents, GitHub Code).
+The other thirty-eight cover bilingual dictionaries (Glosbe, WordReference, bab.la), EU and legal terminology (EUR-Lex, EuroTermBank, Juremy, GEMET), encyclopaedic sources (Wikipedia, Wiktionary, Wikidata), English monolingual and writing references (Collins, Merriam-Webster, Oxford Collocations, SkELL, Etymonline), Dutch resources (Woordenlijst, Synoniemen.net, de Financiële Begrippenlijst, and JoostdeVree.nl for building and architecture, which gives the English for its entries and so works from either language *(from v18.20.201)*), medical databases (EMA, EMC) and general search (Google, Google Patents, GitHub Code).
 
 Only five are enabled initially on purpose – forty tabs opening on your first search would be a poor introduction. Tick whichever you actually use.
 
@@ -159,7 +159,7 @@ Four buttons in the search bar let you narrow what SuperSearch looks at – **Fi
 * **TMs (3)** – all 3 project TMs are included
 * **TMs (1/3)** – 1 of 3 TMs is included (2 excluded)
 * **TBs (2)** – both available termbases are included
-* **Web (5/41)** – 5 of the 41 available web resources are switched on
+* **Web (5/43)** – 5 of the 43 available web resources are switched on
 
 Files, TMs and termbases are all discovered when the project opens, so the counts are filled in before your first search. Web resources are your own standing choice rather than a property of the project, so that count is the same in every job until you change it.
 
