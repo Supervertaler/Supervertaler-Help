@@ -314,6 +314,13 @@ When the AI needs to flag something in a segment – a defect in the source, a r
 
 Applies to Batch Translate, Translate active segment (Alt+T) and Paste from Clipboard.
 
+### Start Proofread comments with "AI proofreader (model):" (from v18/19.20.201)
+
+With **Also add issues as Trados comments** ticked on Batch Operations, each issue the [AI Proofreader](/trados/ai-proofreader/#adding-issues-as-trados-comments-from-v181920201) finds is added to its segment as a Trados comment.
+
+- **Ticked (the default):** the comment starts with "AI proofreader" and the model that found the issue, for example `AI proofreader (Claude Opus 5.5):`, so whoever gets the file can tell it from a colleague's comment.
+- **Unticked:** the comment holds only the issue and the suggestion. Supervertaler then cannot tell its own comments from anyone else's, so a later proofreading run can add a second comment to a segment if it words the issue differently.
+
 ---
 
 ## See Also

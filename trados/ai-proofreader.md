@@ -88,6 +88,7 @@ A card with a correction has an **Apply** button. Click it to write the correcti
 * **Formatting tags are kept.** The proofreader is shown each segment with its tags, and its correction comes back with them, so bold, links and other inline tags stay where they were.
 * **Non-breaking spaces are kept.** An AI writes ordinary spaces, so Supervertaler puts the translation's own non-breaking spaces and hyphens back wherever the correction leaves the text around them alone – "0,4 mm" keeps its non-breaking space when only the number is corrected.
 * **Nothing is written over newer work.** Before writing, Supervertaler checks that the segment still reads exactly as it did when it was proofread. If you or anyone else has changed it since, the card stays and says **Not applied: the segment has changed since it was checked**: proofread it again, or fix it by hand.
+* **The reason can go with the fix** *(from v18/19.20.201)*. With **Also add issues as Trados comments** ticked on Batch Operations, each fix you apply also gets its issue as a Trados comment, so a reviser who accepts or rejects the tracked change can see why it was made. See [Adding Issues as Trados Comments](#adding-issues-as-trados-comments-from-v181920201).
 
 Some corrections cannot be applied at all, and the card says why instead of showing an **Apply** button – a correction that would lose or add a formatting tag, or drop a line break, for example. A locked segment is never written. A source query whose translation can stay as it is has no correction.
 
@@ -116,9 +117,25 @@ After a proofreading run, the Reports tab shows:
 * Total number of issues found and segments checked
 * Run timestamp and duration in the footer
 
-## Adding Issues as Trados Comments
+## Adding Issues as Trados Comments (from v18/19.20.201)
 
-Check the **"Also add issues as Trados comments"** checkbox in the Batch Operations tab (visible only in Proofread mode) before starting the run. When enabled, each issue found by the proofreader is also inserted as a Trados segment comment, so you can see the issues directly in the editor without switching to the Reports tab.
+Tick **Also add issues as Trados comments** on the Batch Operations tab before you start the run. It is shown in Proofread mode, and not in Clipboard Mode. When the run ends, each issue is added to its segment as a Trados comment, with its suggestion, so you – or a reviser you send the file to – can read the issues in the editor and in Studio's Comments window, without the Reports tab:
+
+```
+AI proofreader (Claude Opus 5.5): "nadat" (after) contradicts the source "before opening any panel".
+Suggestion: Replace "nadat" with "voordat".
+```
+
+* **The correction is not in the comment.** The comment says what is wrong and what to do about it; the corrected translation is what [Apply](#applying-fixes-from-v181920200) writes into the segment.
+* **The label names the model** that found the issue, so the comment cannot be taken for a colleague's. To leave the label out, untick **Start Proofread comments with "AI proofreader (model):"** in [AI Settings](/trados/settings/ai-settings/).
+* **Apply follows the same box.** With it ticked, **Apply** and **Apply all** also add the issue as a comment when they write the fix. With Track Changes on, a reviser then sees each tracked change with its reason beside it, and accepts or rejects it. This also works for a report you ran without the box: tick it before you apply.
+* **One comment per segment.** A segment that already has a comment from the proofreader is left alone. So running the check again – which words the same issue differently every time – or applying a fix the run already commented on does not add a second. A different issue found on that segment later is shown on the Reports tab only. With the label switched off, Supervertaler cannot tell its own comments from a colleague's, so only an identical comment is left out.
+* **The segment's status is not changed** by a comment. A fix you apply still sets it to Draft.
+* **Comments go in a few at a time**, so Trados Studio stays responsive. Trados Studio takes up to a fifth of a second over each, so a few hundred issues can take a minute: the Reports tab footer shows how far it has got, and unticking the box stops it. Switching documents, clearing the report or starting a new run stops it too. When it finishes, the Batch Operations log says how many were added and names any segment that could not take one.
+
+Comments are part of the document's unsaved changes: save the document to keep them. They travel with the bilingual file, so delete any you do not want a client to see before you deliver.
+
+Until v18/19.20.200 the box was there but did nothing.
 
 ## AI Context in Proofreading
 
