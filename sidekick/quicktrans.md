@@ -24,9 +24,14 @@ Every engine is asked at the same time, and each answer appears as it lands, so 
 | `Ctrl+Enter` | translate again (after editing the source text or changing a language) |
 | `Ctrl+Shift+Enter` | ask the AI engines |
 | `Ctrl+C` | copy the selected translation |
+| `Ctrl+=` `Ctrl+-` | larger or smaller text; `Ctrl+0` goes back to 9 pt |
 | `Esc` | close |
 
 The **From** and **To** dropdowns set the language pair for the whole program – the [searches](/sidekick/searches/#the-language-pair) read it too – and the choice is remembered in `settings.ini`. The ⇄ button swaps the direction.
+
+### Text size
+
+The small **−** and **+** at the right end of the **Source** line make the text larger or smaller, as `Ctrl+-` and `Ctrl+=` do. What changes is the text you read and write – the source box and the translations, and the note on the Scratchpad tab – while the labels, the buttons, the clipboard list and the menu stay as they are. Each translation still gets as many lines as it needs at any size. The size is remembered, so a laptop screen and a large monitor can each keep their own.
 
 ### Machine translation first, AI when you ask
 
@@ -36,9 +41,14 @@ Set `AutoFetchAI=0` under `[QuickTrans]` in `settings.ini` and the AI engines wa
 
 ### Choosing models
 
-Open **Settings → AI providers & keys…** to switch engines on and off and to choose a model for each. The **Models** button asks that provider what your key can actually use, since availability differs by account.
+Open **Settings → AI providers & keys…** to switch engines on and off and to choose a model for each. Each model list has two tiers, as in Supervertaler for Trados:
 
-For one-sentence translation the small models are the sensible choice – as good as the flagship at this job, several times faster and far cheaper, and you are paying several engines at once.
+- **The short list** – the few models worth recommending for that engine, the same ones the Trados plugin shows. This is what the dropdown opens on, and picking one shows its verdict and price at the bottom of the window.
+- **Everything else** – tick **Show all models** and Sidekick asks each provider what your key can use and adds the rest to every list. **Models** beside an engine does the same for that engine alone. A provider's full list runs to dozens of dated versions and previews, which is why it is not the default.
+
+You can also type a model name the lists do not have.
+
+For one-sentence translation the cheaper models are the sensible choice – as good as the flagship at this job, faster and far cheaper, and you are paying several engines at once.
 
 ### Local and custom endpoints
 

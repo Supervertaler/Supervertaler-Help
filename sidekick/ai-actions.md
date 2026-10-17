@@ -4,7 +4,7 @@ title: "AI actions"
 
 An AI action runs a prompt of your own over whatever text you have selected, in any application, and shows the answer. The prompts are ordinary menu entries, so they sit beside your snippets and searches, are edited in the same [Library Editor](/sidekick/library/#the-library-editor), and can have keyboard shortcuts attached.
 
-The starter set covers the everyday ones: ask a question in any language, translate (Dutch to English, English to Dutch, custom pair), localise, explain, proofread, rephrase with five options, make it sound better, summarise, expand, and summarise a GitHub issue. Every one of them is a few lines you can change.
+The starter set covers the everyday ones: ask a question in any language, explain, proofread, rephrase with five options, make it sound better, summarise and expand. For translation there is [QuickTrans](/sidekick/quicktrans/), at the top of the same section. Every one of them is a few lines you can change.
 
 ### Writing one
 

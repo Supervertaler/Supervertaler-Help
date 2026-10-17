@@ -75,8 +75,9 @@ Sidekick ships Dutch ⇄ English today, with thirteen sources: a MultiSearch ove
 ### Local searches
 
 - **Google the selection** – `Ctrl+/`
-- **Search the desktop** – `Ctrl+Shift+D` – hands the selection to dtSearch, if you have it
-- Entries for desktop terminology tools such as LogiTerm ship in the starter set and are easy to drop if you do not use them
+- **Search the desktop** – hands the selection to dtSearch, if you have it. It has no key until you give it one in [Keyboard shortcuts](/sidekick/keyboard-shortcuts/); `Ctrl+Shift+D` suits it
+
+Every search opens in your default browser.
 
 ### Other language pairs
 

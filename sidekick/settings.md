@@ -2,16 +2,17 @@
 title: "Settings and files"
 ---
 
-Sidekick keeps everything in two places: its own folder, and the key file it shares with the other Supervertaler products. Nothing is written to the registry or to AppData.
+Sidekick keeps everything in two places: its own folder – the one you chose when installing, `C:\Users\<you>\Supervertaler\sidekick` unless you picked another – and the key file it shares with the other Supervertaler products. Sidekick itself writes nothing to the registry or to AppData. The installer adds only what any installed program has: a Start menu entry, a sign-in shortcut if you asked for one, and its line in Windows' list of installed apps.
 
 ### The Sidekick folder
 
 | | |
 |---|---|
 | `Sidekick.ahk`, `lib\` | the program |
+| `AutoHotkey\` | the AutoHotkey that runs it, in an installed copy – see [Running it from the source](/sidekick/installation/#running-it-from-the-source) |
 | `data\` | **your content** – the menu, clipboard history, shortcuts, text expansions. Never overwritten by an update. |
 | `data.example\` | the starter set, copied into `data\` on first run |
-| `settings.ini` | your settings; created from `settings.example.ini` |
+| `settings.ini` | your settings, written as you change them; anything it does not mention is at its default |
 | `settings.example.ini` | the documented template – every setting, with a comment saying what it does |
 | `packs\` | the language packs, one JSON file per language pair – see [Searches](/sidekick/searches/#language-packs) |
 
@@ -24,7 +25,7 @@ Inside `data\`:
 | `expansions.json` | text expansions – see [Text expansion](/sidekick/text-expansion/) |
 | `clipboard.json` | clipboard history |
 
-All plain JSON. Copy the folder to another machine and Sidekick is set up there.
+All plain JSON. Copy the `data` folder and `settings.ini` into Sidekick's folder on another computer and Sidekick is set up there.
 
 ### settings.ini
 
@@ -40,7 +41,7 @@ Open it in any editor, or reach the parts that have a window through the menu:
 | `[Clipboard]` | capture on/off, size, expiry, excluded programs | **Settings → Pause / resume clipboard capture** |
 | `[Window]` | the main window's size and position, written automatically | – |
 
-Changes to `settings.ini` made by hand take effect after **Settings → Reload Sidekick** (`Ctrl+R`).
+Changes to `settings.ini` made by hand take effect after **Settings → Reload Sidekick**.
 
 ### The shared API key file
 
@@ -49,6 +50,8 @@ API keys are read first from the file all Supervertaler products share:
 ```
 C:\Users\<you>\Supervertaler\settings\api-keys.json
 ```
+
+If you moved your Supervertaler data folder, it is the `settings` folder inside that one.
 
 One key per provider, plain text. A key pasted into Supervertaler for Trados or Supervertaler for memoQ works in Sidekick, and one entered in Sidekick's **AI providers & keys…** window is written there for the plugins. Sidekick's machine-translation keys sit in the same file under their own names – note that `google` there is Google Translate, not Gemini.
 

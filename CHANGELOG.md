@@ -8,6 +8,18 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-18
+
+- **Sidekick: text size.** *QuickTrans* has a new section on the **−** and **+** at the end of the Source line and `Ctrl+=` / `Ctrl+-` / `Ctrl+0`, and the window page lists the keys. Neither page mentioned text size before.
+- **Sidekick: model lists in two tiers.** *QuickTrans → Choosing models* explains the short list each dropdown opens on (the one Supervertaler for Trados shows) and **Show all models**, which replaced **Fetch all models**. *Installation* says the same in one line.
+- **Sidekick: the Scratchpad tab, documented.** The window page describes the third tab, `Ctrl+3`, and the **Opens on:** choice; *Keyboard shortcuts* lists `Ctrl+Alt+N`. All three arrived on 2026-09-19 without a mention here.
+- **Sidekick: the starter menu, as it now ships.** *AI actions* no longer lists the Dutch–English translation prompts, Localize or the GitHub-issue summary, and points to QuickTrans for translation; *The window* drops the Local searches section; *Web and local searches* drops LogiTerm and says every search opens in your default browser.
+- **Sidekick: Reload and Search the desktop have no key by default.** *Keyboard shortcuts* shows both as none and suggests a key; *Web and local searches*, *Settings and files* and *Installation* no longer send you to `Ctrl+R` or `Ctrl+Shift+D`.
+- **Sidekick: *Installation* is about the installer now.** It starts from the download, says what to do when Windows calls the installer unrecognised, and explains the folder it suggests and why your content lives there. *Updating* and *Uninstalling* describe the installer's behaviour, and running the script with your own AutoHotkey moves to *Running it from the source* at the end. The download link points at GitHub's latest release, so it always gives the newest installer.
+- **Sidekick: *Settings and files* matches an installed copy.** Where the folder is, the `AutoHotkey` folder inside it, what the installer adds to Windows (it said nothing at all was written outside the folder), that `settings.ini` is written as you change settings rather than copied from the example, and where the key file is when the data folder has moved.
+- **Sidekick: the character keys are in the shortcuts table.** *Keyboard shortcuts* lists the eight built-in ones – euro sign, en and em dash, single curly quotes, quotes around the selection, bullet and backtick – with their keys, and says what to do when one clashes with a program's own key.
+- **Sidekick: *Installation* no longer says Sidekick asks for administrator rights.** It stopped doing so on 2026-08-30. The note now says what running without them means: its shortcuts do not reach a program started with *Run as administrator*.
+
 ## 2026-10-14
 
 - **memoQ: a new page, *memoQ and Trados Compared*.** One table of what each plugin can and cannot do – AI translation, terminology, translation memories and AI assistants – with what to do in memoQ instead, and a short list of what memoQ would need to give plugins to close each gap. Under *Reference (memoQ)*, and linked from the memoQ overview and *AI Assistants*.

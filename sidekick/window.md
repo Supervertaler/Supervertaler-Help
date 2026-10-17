@@ -20,12 +20,19 @@ Press `` ` `` (backtick) in any application and the window opens with the clipbo
 | `Ctrl+↑` `Ctrl+↓` | step from section to section |
 | `Home` `End` | first and last entry |
 | `Ctrl+C` | copy the selected clip without pasting it |
-| `Ctrl+Tab`, `Ctrl+1`, `Ctrl+2` | switch between the Clipboard and QuickTrans tabs |
+| `Ctrl+Tab`, `Ctrl+1`, `Ctrl+2`, `Ctrl+3` | switch between the Clipboard, QuickTrans and Scratchpad tabs |
+| `Ctrl+=` `Ctrl+-` `Ctrl+0` | larger text, smaller text, back to 9 pt |
 | `Esc` | close |
 
 Using a clip pastes it into the window you came from and ticks it in the list, so a list of terms can be worked through top to bottom without losing your place. See [Clipboard history](/sidekick/clipboard/).
 
 The second tab of the same window is [QuickTrans](/sidekick/quicktrans/). The menu stays beside it, so you can translate something, insert it, and run a menu action without changing windows.
+
+The third tab, **Scratchpad**, is a note: one box of plain text, saved as you type to `data\scratchpad.txt`. `Ctrl+Alt+N` opens the window there with the cursor at the end of the note, ready to type.
+
+**Opens on:**, at the right of the tab strip, chooses the tab the backtick opens on: Clipboard, QuickTrans, Scratchpad, or whichever you used last. The QuickTrans and Scratchpad shortcuts always open their own tab.
+
+**Text size** – `Ctrl+=` and `Ctrl+-`, or the **−** and **+** on the QuickTrans tab – changes the text you read and write: the note, the QuickTrans source box and the translations. The clipboard list, the menu and the labels stay the size they are. The size is remembered.
 
 :::tip
 On US-International keyboards, common for anyone who types Dutch, French or German, the backtick is a dead key waiting to compose à, è and ù, and claiming it breaks accented typing. Change the key in **Settings → Keyboard shortcuts…**; `Win+Space` and `Ctrl+Alt+Space` are good, rarely taken choices. See [Keyboard shortcuts](/sidekick/keyboard-shortcuts/).
@@ -49,6 +56,5 @@ What the menu contains is entirely yours to change – see [Snippets, bookmarks 
 - **Bookmarks** – online and local
 - **AI** – prompts that run over the selection, and QuickTrans
 - **Text conversions** – case, quotes, brackets, soft hyphens, HTML bold
-- **Local searches** – the desktop, and a terminology tool if you have one
 - **Web searches** – terminology sources one at a time, or a whole batch
 - **Settings** – the language pair and language packs, the Library Editor, keyboard shortcuts, text expansions, AI providers and keys, pausing clipboard capture, and reloading

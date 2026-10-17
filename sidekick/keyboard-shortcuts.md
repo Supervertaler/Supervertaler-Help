@@ -10,14 +10,25 @@ A shortcut is a key to press and something for it to do. Sidekick has a built-in
 |---|---|
 | Open the palette (search everything) | `Ctrl+Alt+Space` |
 | Translate the selection (QuickTrans) | `Ctrl+Alt+T` |
+| Jot a note (Scratchpad) | `Ctrl+Alt+N` |
 | Open the window (clipboard + menu) | `` ` `` (backtick) |
 | Classic popup menu | `Ctrl` + `` ` `` (backtick) |
 | Clipboard history | `Ctrl+Alt+C` |
 | Library Editor | none |
 | Google the selection | `Ctrl+/` |
-| Search the desktop (dtSearch) | `Ctrl+Shift+D` |
+| Search the desktop (dtSearch) | none – `Ctrl+Shift+D` is a good key if you have dtSearch |
 | Confirm segment (presses Ctrl+Enter) | `Numpad Enter`, in memoQ and Trados Studio only |
-| Reload Sidekick | `Ctrl+R` |
+| Type a euro sign (€) | `Ctrl+Shift+3` |
+| Type an en dash (–) | `Ctrl+Shift+6` |
+| Type an em dash (—) | `Ctrl+Shift+-` |
+| Type an opening single quote (‘) | `Ctrl+Shift+9` |
+| Type a closing single quote (’) | `Ctrl+Shift+0` |
+| Single curly quotes around the selection | `Ctrl+Shift+'` |
+| Type a bullet and a space (• ) | `Ctrl+Shift+O` |
+| Type a backtick | `` Ctrl+Shift+` `` |
+| Reload Sidekick | none – it is in the menu, under **Settings** |
+
+The character keys type what a keyboard has no key for. They work in every program, so one may take over a key a program of yours uses – in Word, `Ctrl+Shift+-` is a non-breaking hyphen. Change that key, limit it to the programs you want it in, or turn it off. A backtick needs a key of its own because the backtick itself opens the window.
 
 **Confirm segment** is there because memoQ and Trados both confirm with Ctrl+Enter, which is two hands. Numpad Enter is one. It is limited to those two programs, so Numpad Enter keeps its normal meaning everywhere else.
 

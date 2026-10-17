@@ -38,7 +38,7 @@ Sidekick is built in [AutoHotkey v2](https://www.autohotkey.com/docs/v2/). Nothi
 
 ### Where to start
 
-- [Installation](/sidekick/installation/) – AutoHotkey, the download, and API keys
+- [Installation](/sidekick/installation/) – the installer, API keys, and running it from the source
 - [The window and the palette](/sidekick/window/) – the two ways in
 - [Clipboard history](/sidekick/clipboard/) – the feature you will use most
 - [Settings and files](/sidekick/settings/) – where everything lives
