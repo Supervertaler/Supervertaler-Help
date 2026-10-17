@@ -28,9 +28,10 @@ For an OpenAI-compatible server, choose **OpenAI-compatible** and enter its addr
 
 ### Context length: how much the model can read
 
-Supervertaler sends each request with its instructions: your prompt, the memory bank and the segment, often 10,000 to 20,000 tokens with a memory bank. Two limits apply:
+Supervertaler sends each request with its instructions: your prompt, the memory bank and the segment, often 10,000 to 20,000 tokens with a memory bank. What limits how much the model reads:
 
-- **Ollama's own setting.** In the Ollama app, **Settings → Context length**. If it is smaller than the request, Ollama silently drops the middle of it, so Supervertaler checks every answer and refuses one that was made from part of the instructions, saying which setting to raise. 32k is a sensible value.
+- **With Ollama, nothing to set.** Supervertaler tells Ollama how much room each request needs, so Ollama's own **Settings → Context length** makes no difference to Supervertaler. Before version 0.1.21 it did, and a request larger than it was silently cut.
+- **With an OpenAI-compatible server**, its own context length, which in LM Studio you set when you load the model. 32k is a sensible value. Supervertaler checks every answer and refuses one that was made from part of the instructions, saying how large to set it.
 - **The model's own limit**, which no setting raises. Some models hold only 8,192 tokens (aya-expanse:8b, for example). Supervertaler asks Ollama for the model's limit and refuses a request that cannot fit, at once, rather than after the model has read half of it. Switching off **Send the memory bank to the model** usually makes the request small enough.
 
 ### Speed on a computer without a graphics card
@@ -41,7 +42,9 @@ A local model reads the instructions first and then writes the translation, and 
 
 While you wait, Supervertaler shows a notice in memoQ's corner: which segment the model is working on, how much of the instructions it has read, and roughly how long is left. If memoQ has stopped waiting by the time an answer arrives, the notice says so: click another segment and back to see it.
 
-**Keep the model loaded while Ollama runs** (in the settings, under Endpoint) stops Ollama unloading the model after five minutes, which would mean reading all the instructions again. It applies to every program that uses Ollama on your computer. Restart Ollama after changing it.
+Ollama keeps the model loaded for four hours after the last segment, so a break does not mean reading all the instructions again. The model holds its memory meanwhile; quit Ollama to free it sooner. Supervertaler waits up to 30 minutes for each answer from a local model.
+
+Before version 0.1.21 Ollama unloaded the model after five idle minutes, and the settings had a **Keep the model loaded while Ollama runs** box. That box is gone. If you ticked it, Ollama's own `OLLAMA_KEEP_ALIVE` setting is left as it was and still applies to other programs that use Ollama.
 
 A graphics card with enough memory changes the picture completely: the same models answer in seconds. A model of about 30 billion parameters needs around 24 GB of graphics memory.
 
@@ -49,7 +52,7 @@ A graphics card with enough memory changes the picture completely: the same mode
 
 Pre-translate sends ten segments at a time. On a computer without a graphics card one such batch can take many minutes, and memoQ's own **Cancel** waits for the batch in progress to finish. Click **Stop translating these segments** on Supervertaler's notice instead: the translation in progress is cancelled, everything still waiting is left untranslated, and memoQ's Pre-translate finishes within seconds. The segments say why under the grid; translate them again later.
 
-Some models (Gemma 4, for example) "think" before every answer, which adds time to each segment and much more to a batch.
+Some models, Gemma 4 and Qwen 3 for example, "think" before they answer unless told not to. Since version 0.1.21 Supervertaler tells them not to: one paragraph took 8 seconds instead of 213.
 
 ### Parallel requests
 
