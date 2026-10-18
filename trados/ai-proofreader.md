@@ -9,9 +9,10 @@ The AI Proofreader checks your translated segments for errors using AI. It ident
 1. Open the **Supervertaler Assistant** panel (View > Supervertaler Assistant)
 2. Switch to the **Batch Operations** tab
 3. Select **Proofread** (instead of Translate)
-4. Choose a **scope** from the dropdown
-5. Optionally select a proofreading **prompt** from the prompt selector
-6. Click **Proofread**
+4. Optionally tick **Translation only (no source)** for a quick final read of the translation alone – see [Checking the translation only](#checking-the-translation-only-from-v181920201)
+5. Choose a **scope** from the dropdown
+6. Optionally select a proofreading **prompt** from the prompt selector
+7. Click **Proofread**
 
 ## Scope
 
@@ -25,6 +26,33 @@ The scope dropdown controls which segments are checked:
 | **All segments**                   | Checks every segment that has target text                                       |
 | **Filtered segments**              | Checks only segments visible after applying a Trados display filter             |
 | **Filtered (translated only)**     | Checks translated segments within the current filter                            |
+
+## Checking the translation only (from v18/19.20.201)
+
+A full check sends every segment with its source, so the AI can compare the two. After post-editing, when the translation has already been checked against the source, a last read for slips is often all that is left – and for that the source is not needed. Tick **Translation only (no source)** on the Batch Operations tab, in Proofread mode, and the proofreader is sent the translation alone.
+
+It checks what can be seen in the translation on its own:
+
+* **Spelling and typos**
+* **Editing leftovers** – words doubled, left behind or half replaced while the text was edited, so that a sentence no longer runs
+* **Grammar** – agreement, verb forms, word order, articles and prepositions
+* **Punctuation and spacing**
+* **Number formatting** – numbers, dates and measurements as the target language writes them
+* **Consistency** – the same word or name spelled, capitalised or hyphenated differently in different segments
+* the **language-specific checks** for Dutch, German and French targets
+* your **memory bank**, with SuperMemory on: its language and style rules, and any term decision that can be judged from the translation alone, such as a word the client never wants used
+
+What it cannot check without the source is whether the translation says what the source says: **accuracy, omissions, additions and terminology**. The AI is told so, and not to guess at what the source might say. No termbase is sent either, not even its forbidden terms: whether a term is right depends on the source term it translates – a word forbidden for one source term can be the right one for another. There are no source queries.
+
+Leaving the source out takes roughly half off the segments and the document context sent with them. Your instructions and the memory bank are sent either way, so on a fully translated document a run costs roughly a third to a half less – the most when the memory bank is small. Segments not yet translated are left out of the document context altogether: on the example project, where only a fifth of the segments are translated, a run took 10,000 input tokens instead of the full check's 20,800. Your proofreading prompt is still sent; where it asks for something that needs the source, such as source queries or source segment citations, the AI is told to leave that part out and follow the rest.
+
+* **Findings work as in a full check.** Each comes with a correction you can [apply](#applying-fixes-from-v181920200), with the same safeguards: a correction that would lose a formatting tag or a line break is not applied, and nor is one for a segment that has changed since the check. Supervertaler still compares against the source on your computer before writing; it is only not sent to the AI.
+* **The report says what was checked.** The Reports tab footer reads *translation only*, and the saved report has a line saying the check was made without the source.
+* **The box is not remembered.** Every time Trados Studio starts, Proofread starts with the full check, so a box left ticked never skips the accuracy check on your next job by accident.
+* **It works in Clipboard Mode too**: the copied prompt then carries the translation only.
+* **Preview prompt** shows exactly what is sent.
+
+The box takes the place of **Send TM matches to the AI** and **Retry segments left empty**, which apply to Batch Translate and are hidden in Proofread mode.
 
 ## Prompt Selection
 
@@ -92,6 +120,8 @@ A card with a correction has an **Apply** button. Click it to write the correcti
 
 Some corrections cannot be applied at all, and the card says why instead of showing an **Apply** button – a correction that would lose or add a formatting tag, or drop a line break, for example. A locked segment is never written. A source query whose translation can stay as it is has no correction.
 
+A segment that still holds tracked changes nobody has accepted or rejected cannot be written while Track Changes is off: Trados Studio protects them. Its card stays and says so *(from v18/19.20.201; before that, Apply could report it as applied while the segment stayed as it was)*. Accept or reject those changes, or switch Track Changes on, and apply again.
+
 Apply all works through the cards a few at a time, so Trados Studio stays responsive while it runs. The button reads **Stop (12/80)** meanwhile: click it to stop after the segment in hand. It also stops if you switch documents, clear the report or start a new proofreading run. When it finishes, the footer says how many fixes were applied and how many were not; the cards of those not applied stay, each with its reason.
 
 Apply writes to the open document like an edit of your own: save the document to keep the changes.
@@ -115,7 +145,7 @@ Click the **Clear** button at the top of the Reports tab to remove all results a
 After a proofreading run, the Reports tab shows:
 
 * Total number of issues found and segments checked
-* Run timestamp and duration in the footer
+* Run timestamp and duration in the footer, followed by *translation only* when the run [checked the translation alone](#checking-the-translation-only-from-v181920201)
 
 ## Adding Issues as Trados Comments (from v18/19.20.201)
 
@@ -141,8 +171,8 @@ Until v18/19.20.200 the box was there but did nothing.
 
 Batch Proofread builds a richer context than Batch Translate – it has to, because verifying whether a term is rendered consistently across the document is exactly the kind of question the AI needs the whole document to answer.
 
-* **Full bilingual document context** – when **Include document context** is enabled in [AI Settings](/trados/settings/ai-settings/), every segment in the document is included with both source AND target text, with no truncation. This is what makes target-side consistency verifiable: the AI can check "this term is rendered as X in [SEGMENT 0031] and Y in [SEGMENT 0084]" against the actual document, not against a guess. Segment numbers in the document context match the `[SEGMENT XXXX]` numbers the AI sees in the batch it's reviewing, so citations cross-reference both ways.
-* **Termbase terms** – terminology from enabled termbases is checked against the translations, including term definitions and domains when that option is enabled. Forbidden terms are flagged with a `⚠️ DO NOT USE` marker so the AI knows to flag them as issues if it sees them in the translation.
+* **Full bilingual document context** – when **Include document context** is enabled in [AI Settings](/trados/settings/ai-settings/), every segment in the document is included with both source AND target text, with no truncation. This is what makes target-side consistency verifiable: the AI can check "this term is rendered as X in [SEGMENT 0031] and Y in [SEGMENT 0084]" against the actual document, not against a guess. Segment numbers in the document context match the `[SEGMENT XXXX]` numbers the AI sees in the batch it's reviewing, so citations cross-reference both ways. With [Translation only](#checking-the-translation-only-from-v181920201) ticked, the document context is the translation alone, without the segments not yet translated.
+* **Termbase terms** – terminology from enabled termbases is checked against the translations, including term definitions and domains when that option is enabled. Forbidden terms are flagged with a `⚠️ DO NOT USE` marker so the AI knows to flag them as issues if it sees them in the translation. No termbase is sent with [Translation only](#checking-the-translation-only-from-v181920201) ticked.
 * **Language-specific checks** – Dutch, German, and French targets get auto-included quality checks (compound spelling, dt-errors, de/het articles for Dutch; capitalisation and case system for German; accents and punctuation spacing for French). These come from the hardcoded base and don't need to be in your custom prompt.
 * **Formatting tags** *(from v18/19.20.200)* – each segment in the batch is shown with its inline tags as numbered placeholders (`<t1>…</t1>`, `<t2/>`), as Batch Translate shows them, and a tag in the target carries the number of the source tag it stands for. The proofreader is told that tags are formatting, not words, and to report one only when it is missing or wraps the wrong words. Until v18/19.20.199 the batch was plain text, although the document context already showed the tags.
 * **Custom prompts** – the selected proofreading prompt provides domain-specific quality checks on top of all of the above.
@@ -156,7 +186,7 @@ TM matches and surrounding segments are **not** included in proofreading – the
 
 ## Clipboard Mode
 
-If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. Supervertaler builds a complete proofreading prompt with both source and target text for each segment and copies it to your clipboard. See [Clipboard Mode](/trados/clipboard-mode/) for full details.
+If you prefer to use a web-based AI (ChatGPT, Claude, Gemini, etc.) instead of an API, tick the **Clipboard Mode** checkbox. Supervertaler builds a complete proofreading prompt with both source and target text for each segment – or the target alone, with [Translation only](#checking-the-translation-only-from-v181920201) ticked – and copies it to your clipboard. See [Clipboard Mode](/trados/clipboard-mode/) for full details.
 
 ## Tips
 
