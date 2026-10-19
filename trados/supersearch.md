@@ -211,6 +211,14 @@ Tick the **Replace** checkbox to reveal the replace bar. Replace always operates
 Replace respects the same **Aa** (case sensitivity) and **.\*** (regex) settings as search. When using regex, you can use capture groups in the replacement (e.g., `$1`, `$2`).
 :::
 
+### With Track Changes on
+
+*From v18/19.20.201*, Replace and Replace All in the active file record a replace word by word when Track Changes is on: the old word struck through and the new one inserted beside it, with the rest of the segment, its tags and its comments as they were. Until v18/19.20.200, even a one-word replace was recorded as the whole sentence struck through and retyped.
+
+A segment that already holds tracked changes is still recorded as one whole-segment change, and the status bar says so: `Replaced in 1 segment – tracked as a whole-segment change (the segment already carries tracked changes).`, or after a Replace All `…, N not word by word: …` with the reason. With Track Changes off, a segment holding tracked changes nobody has accepted or rejected is not replaced at all, because Trados Studio protects them; the status bar tells you to accept or reject them, or to switch Track Changes on.
+
+Files changed on disk are never tracked: Replace All edits their SDLXLIFF text directly, so the change does not show as a tracked change when you reopen them.
+
 ### Matches that span inline tags are skipped
 
 Trados segments often contain inline tags – formatting marks, placeholders, field codes – that interrupt a run of plain text. If your search string would only match across one of these tag boundaries (for example, searching for `important thing` when the segment renders as `important<bold>thing</bold>`), Replace and Replace All will **skip that segment** rather than apply a destructive flatten-and-rewrite that would lose the tag.
