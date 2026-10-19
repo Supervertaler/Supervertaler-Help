@@ -49,7 +49,7 @@ Some features are provider-specific:
 
 | Feature | Availability |
 | ------- | ------------ |
-| [Studio Tools](/trados/ai-assistant/studio-tools/) | All providers except Ollama. Not GPT-6.1 Sol, directly or through OpenRouter (from v18/19.20.199) |
+| [Studio Tools](/trados/ai-assistant/studio-tools/) | All providers except Ollama. GPT-6.1 Sol only with your own OpenAI key, not through OpenRouter (from v18/19.20.201; in v18/19.20.199 and 200, not GPT-6.1 Sol at all) |
 | Image attachments | All providers with vision support |
 | Document attachments | All providers |
 | [Memory bank](/trados/ai-assistant/super-memory/ai-integration/) context | All providers |
