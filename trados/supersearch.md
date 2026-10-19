@@ -144,6 +144,8 @@ Every row – project file, TM or termbase – is shown in your document's direc
 
 Switching to a document in a different language pair clears the results, since they were searched the other way round. Search again to fill the grid for the new document.
 
+Project-file segments are searched and shown as they read with their tracked changes accepted *(from v18/19.20.201)*: a word a tracked change has deleted is not found, and the row shows the corrected wording, not the old and new wording run together.
+
 ### Preview Pane
 
 Below the results grid is a preview pane showing the **full source and target text** of the selected result, side by side, with the match highlighted in yellow. This is handy when a segment is too long to read in its grid row. Click any result row to update the preview, and drag the splitter bar between the grid and the preview pane to resize it.
@@ -213,9 +215,11 @@ Replace respects the same **Aa** (case sensitivity) and **.\*** (regex) settings
 
 Trados segments often contain inline tags – formatting marks, placeholders, field codes – that interrupt a run of plain text. If your search string would only match across one of these tag boundaries (for example, searching for `important thing` when the segment renders as `important<bold>thing</bold>`), Replace and Replace All will **skip that segment** rather than apply a destructive flatten-and-rewrite that would lose the tag.
 
-You'll see this in the status bar after a Replace All as `…, skipped N (match spans inline tags)`. The skipped segments are left untouched so the formatting survives; you can edit them manually if you want the replacement to happen.
+You'll see this in the status bar after a Replace All as `…, skipped N (match spans inline tags or a tracked change)`. The skipped segments are left untouched so the formatting survives; you can edit them manually if you want the replacement to happen.
 
 This applies to both the active-file path (Trados API replacements) and the on-disk path (SDLXLIFF XML rewrites). It only kicks in when the match genuinely straddles a tag – ordinary matches inside a single text run are replaced normally and tags are preserved.
+
+The same goes for tracked changes *(from v18/19.20.201)*. Replace never changes text a tracked change has deleted: that stays as it is until you accept or reject the change. A match that runs from unchanged text into a tracked change – searching for `foobaz` in a segment that reads "foobaz" because "bar" was deleted from "foobarbaz", say – is skipped in the same way. Until v18/19.20.200, Replace refused every segment in the active file that contained any tag, wherever the match was; ordinary matches in tagged segments are now replaced.
 
 ## Regex Tips
 
