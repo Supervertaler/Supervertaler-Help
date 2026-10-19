@@ -120,6 +120,7 @@ A generated prompt follows the structure of professional translation prompts use
 * **Project-specific termbase** – all termbase terms, marked as locked and mandatory
 * **TM reference translations** – validated translation pairs as style anchors
 * **Output format** – translation only, no commentary, preserve formatting
+* **Segment references** – in a document made of several files, which Trados Studio numbers from 1 in each file, a segment the prompt points to (a defect in the source, say) is named by its file and its number as Studio shows them, with a few words of its text beside the number *(v18.20.201)*
 
 #### Tips
 
