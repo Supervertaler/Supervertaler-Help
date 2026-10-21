@@ -149,6 +149,10 @@ const sidebar = [
                 "link": "/trados/ai-assistant/super-memory/quick-add/"
               },
               {
+                "label": "Add segments to SuperMemory",
+                "link": "/trados/ai-assistant/super-memory/add-segments/"
+              },
+              {
                 "label": "Active Prompt",
                 "link": "/trados/ai-assistant/super-memory/active-prompt/"
               },

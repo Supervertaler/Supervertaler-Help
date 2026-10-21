@@ -52,5 +52,6 @@ Open `terminology.md` now and again (**📂 Open folder** in the toolbar) and re
 ## Related
 
 * [**SuperMemory**](/trados/ai-assistant/super-memory/) – how a bank is structured
+* [**Add segments to SuperMemory**](/trados/ai-assistant/super-memory/add-segments/) – a range of reviewed segments at once
 * [**Active Prompt**](/trados/ai-assistant/super-memory/active-prompt/) – the prompt Quick Add can also append to
 * [**Keyboard Shortcuts**](/trados/keyboard-shortcuts/) – the full list
