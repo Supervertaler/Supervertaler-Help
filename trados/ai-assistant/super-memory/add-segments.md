@@ -1,5 +1,5 @@
 ---
-title: "Add segments to SuperMemory"
+title: "Add segments to SuperMemory (Ctrl+Alt+Shift+A)"
 description: "Use the part of a document you have reviewed as the reference for the rest"
 ---
 
@@ -10,7 +10,7 @@ Some documents have a part that settles the wording of everything after it: the 
 ## How to use
 
 1. Translate and review the part you want to use. Confirm the segments as you go: only confirmed segments are taken, unless you say otherwise.
-2. In the editor, select those rows – click the first row's number, then Shift+click the last – and right-click: **Add segments to SuperMemory**. Without a selection, the range starts at the active segment, and you type the numbers you want.
+2. In the editor, select those rows by their numbers – click the first row's number, then Shift+click the last – and press **Ctrl+Alt+Shift+A**. The dialogue opens with that range filled in.
 3. In the dialogue:
    * **Save to memory bank** – the active bank is preselected. A translation reads only the active bank (and `_shared`), so the dialogue tells you when you pick another one.
    * **From** and **To** – the segment numbers Trados Studio shows. In a document made of several files, where each file is numbered from 1, choose the file as well. A range can run from one file into the next.
@@ -19,6 +19,12 @@ Some documents have a part that settles the wording of everything after it: the 
 4. Click **Add**.
 
 The next translation from that bank carries the segments, and so does every one after it.
+
+### From the right-click menu
+
+**Add segments to SuperMemory** is also on the editor's right-click menu. Opened from there, the range starts at the active segment, and you type the numbers you want: right-clicking in a segment's text moves the cursor into it, and Trados Studio drops the rows you had selected. The menu you get by right-clicking the row numbers, where the selection survives, is one Trados Studio does not let plugins add to. To fill the range in from a selection, use the shortcut.
+
+To use a different key, change it under **File → Options → Keyboard Shortcuts** (search for *Add segments to SuperMemory*).
 
 ## What gets written
 

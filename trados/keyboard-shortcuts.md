@@ -81,6 +81,7 @@ Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prom
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|
 | `Ctrl+Alt+M` | `Control+Option+M` | Quick Add – add a term or correction to the active memory bank |
+| `Ctrl+Alt+Shift+A` | `Control+Option+Shift+A` | [Add segments to SuperMemory](/trados/ai-assistant/super-memory/add-segments/) – copy the selected rows, source and translation, into a memory bank as reference translations |
 
 ## SuperSearch
 
