@@ -18,6 +18,9 @@ Do this when the translation is finished, just before you deliver.
 
 1. **Export.** In **Project home → Translations**, select the documents – all of them, if you like – and choose **Documents → Export → Export Bilingual**. Pick **memoQ XLIFF** and tick **Include skeleton and preview**; memoQ then ticks **Save a compressed file (.mqxlz)** as well. Save the files into a folder of your choice.
 2. **Clean.** In the Supervertaler editor, choose **memoQ → Remove MT marks from an exported file…** and select the files you just exported. The editor writes a clean copy of each, under the same name, into a **Clean** folder beside them, and reports how many marks it removed and from which engines. The files you exported are not changed.
+
+   ![The Supervertaler editor with its memoQ menu open and "Remove MT marks from an exported file…" highlighted. The tooltip beside it reads: Clean a memoQ XLIFF you exported, so that its rows no longer say they came from machine translation.](/.gitbook/assets/Supervertaler-for-memoQ-Remove-MT-marks-menu.jpg)
+
 3. **Remove the documents from the project.** Back in **Project home → Translations**, select the same documents and remove them from the project.
 4. **Import the clean copies.** Choose **Documents → Import → Import with options**, open the **Clean** folder and select every file in it (Ctrl+A). In the **Document import options** window the action must say **Import as new**. Click **OK**.
 5. **Check.** Open a document and click a row: the Review tab no longer shows an **Inserted match** line.

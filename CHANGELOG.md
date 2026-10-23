@@ -11,6 +11,7 @@ guesswork.
 ## 2026-10-23
 
 - **memoQ: Removing MT Marks, a new page.** memoQ keeps a record of every machine translation inserted into a row and shows it in the Review tab, the edit distance report and bilingual exports, even after the row is rewritten and confirmed. The page explains the editor's new *Remove MT marks from an exported file* and the steps that make it work: export with the skeleton, clean, remove the documents, import the clean copies as new. It also says why an update does not work and where the method works. *The Supervertaler Editor* links to it, and *Troubleshooting (memoQ)* answers "The Review tab says machine translation from MT / Supervertaler".
+- **memoQ: Removing MT Marks shows where the command is.** A screenshot of the editor's *memoQ* menu with *Remove MT marks from an exported file…* highlighted, at step 2.
 
 ## 2026-10-18
 
