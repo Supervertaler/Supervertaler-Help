@@ -6,6 +6,8 @@ memoQ gives an add-in no window of its own, so everything Supervertaler needs a 
 
 It is where you choose what memoQ uses for each job (model, prompt, memory bank, termbases), edit the **shared Supervertaler prompt library** – the same folder of prompts the Trados plugin uses, so a prompt tuned in one tool is available in the other – draft prompts with [AutoPrompt](#autoprompt-drafting-a-prompt-for-the-open-project), describe a document's figures with [FigureLens](#figurelens), watch what the plugin is doing in the [Activity window](#the-activity-window), connect [AI assistants](/memoq/mcp-server/#setting-it-up) and manage your [licence](/memoq/licensing/).
 
+It also [removes MT marks](/memoq/remove-mt-marks/) from documents you have exported, so that rows you reworked no longer say they came from machine translation.
+
 Instructions can also be typed straight into memoQ's settings dialog instead of coming from the library.
 
 ## Choosing a prompt

@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-23
+
+- **memoQ: Removing MT Marks, a new page.** memoQ keeps a record of every machine translation inserted into a row and shows it in the Review tab, the edit distance report and bilingual exports, even after the row is rewritten and confirmed. The page explains the editor's new *Remove MT marks from an exported file* and the steps that make it work: export with the skeleton, clean, remove the documents, import the clean copies as new. It also says why an update does not work and where the method works. *The Supervertaler Editor* links to it, and *Troubleshooting (memoQ)* answers "The Review tab says machine translation from MT / Supervertaler".
+
 ## 2026-10-18
 
 - **Sidekick: text size.** *QuickTrans* has a new section on the **−** and **+** at the end of the Source line and `Ctrl+=` / `Ctrl+-` / `Ctrl+0`, and the window page lists the keys. Neither page mentioned text size before.

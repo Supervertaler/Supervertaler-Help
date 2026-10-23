@@ -20,6 +20,10 @@ The check looks for signs of commentary that the source itself does not have, so
 
 The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
 
+### The Review tab says "machine translation from MT / Supervertaler"
+
+memoQ records every machine translation inserted into a row, keeps the record after you rewrite and confirm the row, and shows it to whoever receives the project. No memoQ setting turns it off. The Supervertaler editor can remove it from documents you export – see [Removing MT Marks](/memoq/remove-mt-marks/).
+
 ### It translates, but never learns
 
 **Self-learning MT** is not set. Resource console → MT settings → your resource → **Settings** tab → **Self-learning MT** → *Supervertaler*, then restart memoQ.

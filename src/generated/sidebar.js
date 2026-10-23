@@ -365,6 +365,10 @@ const sidebar = [
             "link": "/memoq/prompt-editor/"
           },
           {
+            "label": "Removing MT Marks",
+            "link": "/memoq/remove-mt-marks/"
+          },
+          {
             "label": "AI Assistants (Claude Desktop, ChatGPT)",
             "link": "/memoq/mcp-server/"
           },

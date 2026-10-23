@@ -96,6 +96,7 @@
 * [Self-learning Translation](memoq/self-learning.md)
 * [Local and Cloud Models](memoq/local-models.md)
 * [The Supervertaler Editor](memoq/prompt-editor.md)
+* [Removing MT Marks](memoq/remove-mt-marks.md)
 * [AI Assistants (Claude Desktop, ChatGPT)](memoq/mcp-server.md)
 * [Terminology](memoq/terminology.md)
   * [Glossary Format](memoq/glossary-format.md)
