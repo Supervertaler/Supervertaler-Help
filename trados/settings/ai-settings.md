@@ -305,6 +305,15 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 
 Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
 
+### Keep repetitions consistent in Batch Translate (from v18/19.20.201)
+
+The AI translates every segment separately, so the same sentence can come back worded differently each time it occurs.
+
+- **Ticked (the default):** every later occurrence of a sentence gets the translation of its first, across all the files in the run. A segment the run does not overwrite – a TM match, a locked segment – keeps its translation, and that is the one its empty repetitions get. If two such segments already disagree, nothing is changed and the log lists them. Nothing sent to the AI changes.
+- **Unticked:** every segment keeps the AI's own translation.
+
+A repetition is the same text exactly – same capitals, spaces (a non-breaking space is not an ordinary one) and tags. See [Repetitions get one translation](/trados/batch-translate/#repetitions-get-one-translation-from-v181920201).
+
 ### Add the AI's [[TC: …]] notes as Trados comments (from v18/19.20.198)
 
 When the AI needs to flag something in a segment – a defect in the source, a real ambiguity, an error it corrected in a 100% TM match, a deliberate departure from the termbase – it adds one short note at the end of that segment's translation, written as your comment to the client: `[[TC: …]]`. See [Translator comments](/trados/batch-translate/#translator-comments).

@@ -34,6 +34,22 @@ The scope dropdown controls which segments are translated:
 **Locked segments are never sent to the AI**, in any scope – batch translation and batch proofreading both skip them, and the segment counters above the Translate button exclude them. *(From v18.20.154; earlier versions incorrectly included locked segments in batch runs.)*
 :::
 
+### Repetitions get one translation (from v18/19.20.201)
+
+The AI translates every segment on its own, so a sentence that occurs twice in a run could come back worded two ways – *the cover is fitted* in one place, *the cover is mounted* in another. Batch Translate now gives every occurrence of a sentence the same translation:
+
+* **Every later occurrence gets the translation of the first one**, across all the files in the run – open several files together to cover them all. The tags go in the same places, using each segment's own tags, and a `[[TC: …]]` note goes with the translation. If the AI left the first occurrence empty, the first one it did translate counts, and the empty one is filled from it.
+* **A segment the run does not overwrite keeps its translation**, and that translation is the one its empty repetitions get. With **Empty Segments Only**, for example, a segment Trados filled from your translation memory, or one you translated yourself, decides how its empty repetitions are translated. Locked segments are never changed.
+* **If such segments already disagree with each other, nothing is changed.** The log lists them under *Different existing translations*, naming the segments, so you can decide which is right.
+* **A repetition the AI left empty is filled** from its first occurrence, without waiting for **Retry segments left empty**.
+* **Nothing sent to the AI changes.** Every segment is still translated, in the same batches and with the same context, so a run costs what it did before. Only what is written for a later repetition is different.
+
+**What counts as a repetition:** the same source text exactly – the same capitals, the same spaces and the same tags in the same order; only the tag numbers may differ. A non-breaking space is not an ordinary one, so *5 %* written with each is two different sentences. Near-matches are not repetitions.
+
+**What you see:** the log ends with a line such as *Repetitions: 586 segments – 130 repetitions aligned to their first occurrence (12 worded differently by the AI, 2 in place of a failed translation)*. The [backup TMX](#backup-tmx) keeps the AI's own wording of each repetition it replaced.
+
+It is on by default. To switch it off, untick **Keep repetitions consistent in Batch Translate** in [AI Settings](/trados/settings/ai-settings/#keep-repetitions-consistent-in-batch-translate-from-v181920201): every segment then keeps the AI's own translation, as before. Translate active segment (Alt+T) and Batch Proofread are not affected.
+
 ### Prompt Selection
 
 Choose a prompt to guide the AI translation style and domain. The prompt selector shows, from the top:
@@ -67,6 +83,8 @@ During translation:
 * A **progress bar** shows overall completion
 * A **real-time log** displays the status of each segment as it is translated
 * The **Stop** button aborts the batch at any time – segments already translated are kept
+
+You can switch to another document while a run is going. From v18/19.20.201 the run writes only into the document it was started in; before, it wrote each translation into whichever document was active at that moment.
 
 ### Translate Active Segment (Alt+T)
 
@@ -145,6 +163,7 @@ To disable backups for a particular run, simply untick the checkbox before click
 * Every **10 translated segments**, the file is rewritten in full – so at most 10 segments are lost in a crash.
 * The file is written atomically (via a temp file + rename) so it is always a valid, complete TMX – never a partial or corrupt file.
 * At the end of a completed or cancelled run, the file is flushed one final time.
+* A [repetition](#repetitions-get-one-translation-from-v181920201) is backed up with the translation it was given. Where the AI had worded it differently, the entry carries a note with the AI's own version: *Repetition: written with its first occurrence's translation. The AI's own: …* *(From v18/19.20.201.)*
 
 #### Where the files are saved
 

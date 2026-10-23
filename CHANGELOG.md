@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-23
+
+- **Trados: Batch Translate gives repetitions one translation** (from v18/19.20.201). *Batch Translate* has a new section, *Repetitions get one translation*: what counts as a repetition, which segments decide the translation and which are never changed, what happens when existing translations disagree, the log line, and the note the backup TMX keeps of the AI's own wording. *AI Settings* describes **Keep repetitions consistent in Batch Translate**. *Progress and Logging* says that a run now writes only into the document it was started in, so switching documents during a run is safe.
+
 ## 2026-10-18
 
 - **Sidekick: text size.** *QuickTrans* has a new section on the **−** and **+** at the end of the Source line and `Ctrl+=` / `Ctrl+-` / `Ctrl+0`, and the window page lists the keys. Neither page mentioned text size before.
