@@ -31,7 +31,7 @@ const product = p?.label ?? null;
 // site's (its tools/make-icons.py makes them): a Trados or memoQ page gets that
 // product's card, everything else the brand one.
 const card = p?.id === 'trados' || p?.id === 'memoq' ? `-${p.id}` : '';
-const ogImage = `https://supervertaler.com/og-image${card}.png?v=1`;
+const ogImage = `https://supervertaler.com/og-image${card}.png?v=2`;
 const ogAlt = card ? p!.fullName : 'Supervertaler';
 ---
 
