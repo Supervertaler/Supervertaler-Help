@@ -58,6 +58,12 @@ If clicking into a segment does not update the panel, memoQ is not calling the e
 
 If you chose a memory bank while the panel was stale, open the bank chooser again once the right project is shown – that records the choice against the right project – and check the previous project’s row in `C:\Users\<you>\AppData\Local\Supervertaler.memoQ\memory-bank-projects.txt`, one project GUID per line, in case it now names a bank it should not.
 
+### A bank called `shared` has no effect
+
+Before v0.1.26, **New memory bank…** in the editor removed a leading underscore, so asking it for `_shared` made an ordinary bank called `shared`. Only `_shared` goes with every request; `shared` is sent only for a project that has it chosen as its bank. Supervertaler for Trados did the same before v18/19.20.201. From v0.1.26 an empty `_shared` is also made beside it, when memoQ or the editor starts.
+
+To fix it, close memoQ and the editor, and open `memory-banks\` in your data folder (`C:\Users\<you>\Supervertaler\` unless you moved it) or in your team folder. If you have written nothing in `_shared`, delete it and rename `shared` to `_shared`. If you have, move what is in `shared` into `_shared` by hand, then delete `shared`. Then, in any project that had `shared` chosen, choose its bank again in the editor's **Bank** row.
+
 ### The log
 
 The **Activity** window in the prompt editor (**memoQ → Activity**, or Ctrl+L) shows the same log live. On disk it is:

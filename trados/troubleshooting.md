@@ -230,6 +230,21 @@ See [MultiTerm Support](/trados/multiterm-support/) for full details.
 
 ---
 
+## A bank called `shared` has no effect
+
+**Symptoms:** You have a memory bank called `shared`, without the underscore, and what you wrote in it does not reach the AI as your house defaults. From v18/19.20.201 there may be an empty `_shared` beside it.
+
+**Cause:** Before v18/19.20.201 the *+ New memory bank…* dialog removed a leading underscore, so asking it for `_shared` made an ordinary bank called `shared`. Only `_shared` is loaded under every bank; `shared` is used only while it is the active bank. Supervertaler for memoQ did the same before v0.1.26.
+
+**Solution:**
+
+1. Close Trados Studio, and memoQ if you use Supervertaler there too.
+2. In File Explorer, open `memory-banks\` in your [data folder](/trados/data-folder/) – or in your team folder, if you use one.
+3. If you have written nothing in `_shared`, delete it and rename `shared` to `_shared`. If you have, move what is in `shared` into `_shared` by hand, then delete `shared`.
+4. Start Trados Studio. If `shared` was the active bank, choose your client bank in the Memory Bank dropdown, and do the same in any project that used `shared`.
+
+---
+
 ## Database errors on Mac (Parallels)
 
 **Symptoms:** Database locked errors, "cannot open database", or corrupt termbase data when running Trados Studio inside Parallels Desktop on a Mac.

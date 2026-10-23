@@ -173,7 +173,7 @@ Four things behave differently from the Trados plugin, and they are worth knowin
 - **`_shared` is always underneath, and travels alone.** It is not a bank you select: whatever you do select is layered over it and wins wherever the two disagree – and when you select no client bank, `_shared` still goes on its own. Choosing "no client bank" is not the same as sending nothing.
 - **The answer is trimmed to about 6,000 tokens**, and whatever did not fit is listed under `trimmed` in the reply rather than dropped in silence. A tool result stays in the conversation and is re-sent on every following turn, so it is kept deliberately small – ask for a larger budget, or for one article by name, when you need the rest.
 
-Reading is all this does. Nothing writes into a bank from memoQ; you edit the files yourself, in Obsidian or any text editor.
+Reading is all this does: Claude cannot change a bank through memoQ. You edit the files yourself – in the [Supervertaler editor](/memoq/prompt-editor/#the-editor), in Obsidian or in any text editor.
 
 ## Troubleshooting
 

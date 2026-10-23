@@ -55,7 +55,7 @@ This page lists the differences in one place. **✓** means the plugin can do it
 | Let the assistant save the document or export the target file | ✓ | ✗ | Save and export in memoQ |
 | Let the assistant list projects and read file statistics | ✓ | ✗ | – |
 | Let the assistant read your memory banks | ✓ | ✓ | – |
-| Let the assistant update your memory banks | ✓ | ✗ | Edit the files yourself, in Obsidian or any text editor |
+| Let the assistant update your memory banks | ✓ | ✗ | Edit the files yourself, in the Supervertaler editor, Obsidian or any text editor |
 
 The full tool-by-tool list is under [AI assistants → What it can and cannot do](/memoq/mcp-server/#what-it-can-and-cannot-do).
 

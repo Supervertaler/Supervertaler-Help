@@ -52,6 +52,8 @@ Supervertaler/
 
 \* When a team folder is set, the prompt library and memory banks come from the team folder instead.
 
+`_shared` is the [bank of house defaults](/trados/ai-assistant/super-memory/#the-_shared-bank) loaded under every other bank. From v18/19.20.201 Supervertaler makes it when Trados Studio starts and there is none, in the team folder when one is set, and Supervertaler for memoQ does the same from v0.1.26. Until you write something in it, it sends nothing to the AI.
+
 ### Shared resources
 
 The **prompt library**, **memory banks** and **resources** folders are shared between all Supervertaler products. Prompts you create or edit in one program are immediately available in the others. The SQLite database (`supervertaler.db`) holds your termbases and translation memories – Workbench has full read-write access, while the Trados plugin reads from it.

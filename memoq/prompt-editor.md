@@ -26,7 +26,7 @@ Open **Supervertaler for memoQ** from the Start menu, or press **Edit…** besid
 
 <!-- screenshot: the editor with the tree on the left, a prompt open on the right -->
 
-- **Left:** the library as a tree, folders and prompts. Select one to open it.
+- **Left:** the library as a tree, folders and prompts, and below them your **Memory banks** with the files in each – `_shared` first, marked *always sent*. Select a prompt or a bank file to open it.
 - **Right:** name, description, which product it is for, sort order, and the prompt text with Markdown headings and `{{PLACEHOLDERS}}` highlighted.
 - **Toolbar, left:** New, Save, Placeholder, AutoPrompt.
 - **Toolbar, right:** whether Pre-translate goes to Claude Desktop, and the [Activity window](#the-activity-window). Everything else is on the menus: **File** for the library, **memoQ** for the open job, **Settings** for [Translation settings](#settings) and [Connect AI assistant](/memoq/mcp-server/#setting-it-up), and **Help** for this documentation and your [licence](/memoq/licensing/).
@@ -36,6 +36,8 @@ The **Claude Desktop** button on the right is a switch, not a command, and its c
 Save with **Ctrl+S**. A built-in prompt – the Default Translation Prompt, say – is never saved over: your changes are saved as a prompt of your own, named "… (my version)" unless you gave it a new name, and it becomes the active prompt if the original was. The built-in one stays as it shipped, so an update to it can never overwrite your work.
 
 Any settings the file carries that the editor does not have a field for – tags, favourites, QuickLauncher flags set by the Trados plugin – are preserved untouched on save. The status line under the description says which ones the file has.
+
+A memory bank file opened from the tree – `brief.md`, `terminology.md`, `style.md` or any other article – is shown as plain text, without the prompt fields, and **Ctrl+S** saves it. Right-click a bank, or a file in it, for **Set as active memory bank**, which chooses it for the open project as the [Bank](#what-memoq-is-using) row does. `_shared` cannot be chosen that way: it is always sent, whatever bank is chosen.
 
 ### What memoQ is using
 
@@ -53,7 +55,7 @@ The memory bank is remembered **per project**. Choose one while working on a job
 
 What such a project gets instead is the row called **(no client bank – shared defaults only)**. Your `_shared` bank still travels: it is where the material that applies to every job regardless of client lives, so it is never switched off by not choosing a client. See [Memory banks](/memoq/mcp-server/#memory-banks) for where they live.
 
-**The shared bank is made for you** *(from v0.1.26)*. When memoQ loads Supervertaler, or the editor opens, and there is no `_shared` bank, it is made – in your team folder, if you use one – with a starting brief, terminology table and style guide. It is at the top of the editor's list of memory banks, marked *always sent*, and it sends nothing to the model until you write something in it. A `_shared` bank you already have is left exactly as it is, including any file you deleted from it. Typing `_shared` into **New memory bank** gives you the shared bank as well; before v0.1.26 the underscore was dropped, which made an ordinary bank called `shared` that is never sent as the shared one. Supervertaler for Trados makes `_shared` the same way, from v18/19.20.201.
+**The shared bank is made for you** *(from v0.1.26)*. When memoQ loads Supervertaler, or the editor opens, and there is no `_shared` bank, it is made – in your team folder, if you use one – with a starting brief, terminology table and style guide. It is at the top of the memory banks in the editor's tree, marked *always sent* – open its files there to fill it in – and it sends nothing to the model until you write something in it. A `_shared` bank you already have is left exactly as it is, including any file you deleted from it. It is not offered in the Bank list, because it is not a bank you choose; typing `_shared` as the name in **New memory bank…** there gives you the shared bank and leaves the project's bank as it was. Before v0.1.26 the underscore was dropped, which made an ordinary bank called `shared` that is never sent as the shared one – see [Troubleshooting](/memoq/troubleshooting/#a-bank-called-shared-has-no-effect) if you have one. Supervertaler for Trados makes `_shared` the same way, from v18/19.20.201.
 
 A bank is sent whole with **every** translation request, up to about 32,000 tokens, and to AutoPrompt up to 40,000. Anything that does not fit is dropped by priority and named in the [Activity window](#the-activity-window) rather than lost quietly – if you see a file listed there, that is the budget, not a fault. The cost of carrying it is small because the same text is sent every time and providers cache it: on one 370-segment run the bank and prompt together came to 45,870 tokens, and caching turned roughly $10 into roughly $4 – for Pre-translate and, since September 2026, for the single rows memoQ asks about as you move through the grid.
 

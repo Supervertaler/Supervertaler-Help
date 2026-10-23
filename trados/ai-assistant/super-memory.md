@@ -18,7 +18,7 @@ Every bank contains the same three Markdown files, plus a folder for source mate
 | `style.md` | Prose rules and approved boilerplate – how things are phrased, rather than which term is used |
 | `reference/` | Source material, unmodified: style guides, PDFs, glossaries. Never sent to the AI |
 
-That is the whole structure. You are meant to open these files and edit them by hand – the **📂 Open folder** button in the toolbar is there for exactly that.
+That is the whole structure. You are meant to open these files and edit them by hand – the **Open folder** button in the toolbar is there for exactly that, and **Settings → Library** shows every bank's files without leaving Trados (see [Seeing, renaming and deleting](#seeing-renaming-and-deleting)).
 
 Any other Markdown file you put at the top of a bank – `figures.md`, say – is read too, under its own filename (from v18/19.20.183).
 
@@ -90,11 +90,15 @@ The **Memory Bank** dropdown lists every bank it finds. It sits in the **SuperMe
 
 ### Creating
 
-Pick **+ New memory bank…** at the bottom of the dropdown, give it a short name (lowercase letters, digits, hyphens, underscores), and it is created with the three files already in place, each carrying its headings and a line explaining what belongs in it.
+Pick **+ New memory bank…** at the bottom of the dropdown, give it a short name (lowercase letters, digits, hyphens, underscores), and it is created with the three files and a `reference/` folder already in place, each file carrying its headings and a line explaining what belongs in it. The new bank becomes the active one. A file is not sent to the AI until you write something of your own in it, so an empty new bank costs nothing.
 
-### Renaming and deleting
+You do not need to create `_shared` this way: it is made for you (see [The `_shared` bank](#the-_shared-bank)).
 
-Not yet available from inside the plugin. Close Trados and rename or delete the folder under `memory-banks\` directly.
+### Seeing, renaming and deleting
+
+**Settings → Library** lists every bank beneath your prompt folders, under **SuperMemory**, with the files in each *(from v18/19.20.184)*. `_shared` is marked *(loaded with every bank)*, the active bank *(active)*, and `reference/` *(not read into prompts)*. Select a file to read it, laid out as Markdown, and click **Edit** to change it. A file changed by Obsidian or a colleague while you have it open is not overwritten: you are told first.
+
+Right-click a bank for **Set as active memory bank**, **Rename memory bank…**, **Delete memory bank…** and **Open bank folder**. Renaming the active bank keeps it active. Deleting does not destroy anything: the bank is moved to `memory-banks\.trash\`, under its name and the time, and you can put it back by renaming that folder. Two things are refused: deleting the bank you are using (switch to another first), and renaming or deleting `_shared`, which is loaded by that exact name.
 
 ## Filling a bank
 
