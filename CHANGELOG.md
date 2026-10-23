@@ -10,6 +10,8 @@ guesswork.
 
 ## 2026-10-23
 
+- **Trados: the `_shared` bank is made for you.** *SuperMemory* told you to create `_shared` in File Explorer, because the *+ New memory bank…* dialog stripped the underscore. It now says that from v18/19.20.201 Supervertaler makes `_shared` when Trados Studio starts and there is none, that it sends nothing until you write in it, that an existing one is left alone, and that the dialog keeps the name; the File Explorer route stays, for earlier versions. *AI Integration* says that a file still exactly as Supervertaler created it is not sent.
+- **memoQ: the `_shared` bank is made for you.** *The Supervertaler Editor* and *Context layers* mentioned `_shared` without saying how it comes to exist. They now say that from v0.1.26 memoQ and the editor make it when it is missing, that it is at the top of the editor's list of memory banks marked *always sent*, and that it sends nothing until you write something in it.
 - **memoQ: Removing MT Marks, a new page.** memoQ keeps a record of every machine translation inserted into a row and shows it in the Review tab, the edit distance report and bilingual exports, even after the row is rewritten and confirmed. The page explains the editor's new *Remove MT marks from an exported file* and the steps that make it work: export with the skeleton, clean, remove the documents, import the clean copies as new. It also says why an update does not work and where the method works. *The Supervertaler Editor* links to it, and *Troubleshooting (memoQ)* answers "The Review tab says machine translation from MT / Supervertaler".
 - **memoQ: Removing MT Marks shows where the command is.** A screenshot of the editor's *memoQ* menu with *Remove MT marks from an exported file…* highlighted, at step 2.
 

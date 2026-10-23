@@ -59,7 +59,9 @@ Alongside whichever bank is active, Supervertaler always loads a bank called **`
 
 A rule earns its place in `_shared` once it has held across more than one client. Until then it stays in the bank where you found it, tagged in the Scope column. Promote by *moving* the row, not copying it, or the two drift apart.
 
-**Create `_shared` in the file system, not from the dropdown.** The name is reserved, and the *+ New memory bank…* dialog strips leading underscores from whatever you type – so asking it for `_shared` gets you an ordinary bank called `shared`, which does nothing. Instead use **Open folder**, go up one level to `memory-banks\`, create a folder called `_shared`, and put `brief.md`, `terminology.md` and `style.md` in it.
+**`_shared` is made for you** *(from v18/19.20.201)*. When Trados Studio starts and there is no `_shared` bank, Supervertaler makes one – in your team folder, if you use one – with a starting `brief.md`, `terminology.md` and `style.md`, so it is in the Memory Bank dropdown and in **Settings → Library** from the start. It sends nothing to the AI until you write something in it. A `_shared` bank you already have is left exactly as it is, including any file you deleted from it. Supervertaler for memoQ makes it the same way, from v0.1.26.
+
+The name is reserved: typing `_shared` into *+ New memory bank…* gives you the shared bank, not a client bank, and leaves the active bank as it was. Before v18/19.20.201 nothing made `_shared`, and the dialog stripped the underscore, making an ordinary bank called `shared` that does nothing – so on an earlier version, use **Open folder**, go up one level to `memory-banks\` and create a folder called `_shared` yourself.
 
 You never have to select `_shared` to use it – it is loaded on top of whichever bank is active. Select it only when you want to edit your defaults.
 

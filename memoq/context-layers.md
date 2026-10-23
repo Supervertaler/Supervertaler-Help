@@ -72,7 +72,7 @@ While an AutoPrompt-drafted prompt is selected, its own locked-terms table is th
 
 A bank of Markdown articles – `brief.md`, `terminology.md`, `style.md`, and any others you add – goes out with every request, up to about 32,000 tokens, and to AutoPrompt up to 40,000.
 
-Where a termbase gives the model flat pairs of terms, a memory bank gives it the **reasoning**: the decisions, the caveats, the client-specific overrides. The `_shared` bank travels alongside as house defaults.
+Where a termbase gives the model flat pairs of terms, a memory bank gives it the **reasoning**: the decisions, the caveats, the client-specific overrides. The `_shared` bank travels alongside as house defaults. From v0.1.26 memoQ and the editor make `_shared` when it is missing, and until you write something in it, it sends nothing (see [What memoQ is using](/memoq/prompt-editor/#what-memoq-is-using)).
 
 Banks are remembered per memoQ project, and a project you have never chosen one for uses none rather than inheriting the last – a bank carries one client's terminology, and the wrong one is worse than none. See [Memory banks](/memoq/mcp-server/#memory-banks).
 

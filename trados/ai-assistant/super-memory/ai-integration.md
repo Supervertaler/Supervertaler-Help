@@ -12,7 +12,7 @@ Two banks, in this order:
 1. **`_shared`** – your house defaults, labelled as such.
 2. **The active bank** – labelled as overriding the defaults above.
 
-Within each, the three files are sent: `brief.md`, then `terminology.md`, then `style.md`, followed by any other Markdown file you have put at the top of the bank (such as `figures.md`), under its own filename. A small bank goes whole. Two things narrow it, both described below: a large bank sends a translation only the part the document needs, and a note you have marked for the assistants stays out of translation.
+Within each, the three files are sent: `brief.md`, then `terminology.md`, then `style.md`, followed by any other Markdown file you have put at the top of the bank (such as `figures.md`), under its own filename. A file still exactly as Supervertaler created it – its headings and the lines saying what belongs there – is not sent, so a bank nobody has written in adds nothing, and neither does the empty `_shared` bank Supervertaler makes for you (from v18/19.20.201). A small bank goes whole. Two things narrow it, both described below: a large bank sends a translation only the part the document needs, and a note you have marked for the assistants stays out of translation.
 
 `reference/` is never sent. It holds the source material the three files were derived from, and a superseded draft answering as if it were current is precisely the failure it exists to prevent.
 
