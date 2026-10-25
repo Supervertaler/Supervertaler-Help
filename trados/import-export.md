@@ -130,16 +130,16 @@ This filter composes orthogonally with the **Include locked segments** option an
 Click **📥 Re-import…**, pick the round-tripped file. Supervertaler:
 
 1. Loads the file's sidecar manifest (the `.svexport.json` written alongside the export).
-2. For each row in the file, looks up the matching segment in Trados via the manifest's `(ParagraphUnitId, SegmentId)` mapping.
+2. For each row in the file, looks up the matching segment in Trados via the manifest's `(ParagraphUnitId, SegmentId)` mapping. In a combined export of a merged document, where Trados Studio numbers every file from 1, a row is matched by its file as well as its number – the **File** column in a DOCX, the `📄 File:` line in a Bilingual Text file – so each edit goes to the segment in its own file.
 3. Compares the file's target text against the current Trados target – same serialisation pipeline on both sides, so only real edits register as changes.
-4. Counts up: **changes to apply**, **unchanged**, **tag-mismatch** (will be skipped under strict mode), and **other issues** (segment missing, **locked**, source text was tampered with).
+4. Counts up: **changes to apply**, **unchanged**, **tag-mismatch** (will be skipped under strict mode), and **other issues** (segment missing, **locked**, source text was tampered with). A row whose number is in more than one file, and which does not say which file it is in, is skipped and named in the summary rather than written to a segment by guesswork. That can happen when a row's **File** cell was changed, or with a combined export from a version old enough not to record each segment's file; export the files again, or export them separately, to re-import those rows.
 5. Shows you a summary dialog with **OK** / **Cancel**.
 
 Click **OK** and Supervertaler writes the accepted changes back via the same code path the batch AI translator uses – confirmation level is preserved, and **locked segments are skipped automatically** (the writeback queries `IsLocked` on every segment, so a lock toggled in Trados between export and re-import is also respected).
 
 ## Recent exports
 
-At the bottom of the tab, a list tracks every export from this session with:
+At the bottom of the tab, a list tracks every export from this session. Click an export in the list, then:
 
 * **Open file** – opens the bilingual file in its default app
 * **Open folder** – opens the containing folder
