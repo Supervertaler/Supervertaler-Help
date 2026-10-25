@@ -8,6 +8,13 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-25
+
+- **Trados: Add segments to SuperMemory, a new page** (from v18/19.20.201). How to copy a range of reviewed segments into a memory bank with Ctrl+Alt+Shift+A, so the reviewed part of a document becomes the reference for the rest: choosing the range, the bank and the size limits. Linked from *SuperMemory*, *Quick Add* and *Keyboard shortcuts*.
+- **Trados: re-importing a combined export of a merged document** (from v18/19.20.201). *Import/Export* now says a row is matched by its file as well as its number, and that a row whose file cannot be told is skipped and named; step 2 also says to click an export before using its buttons.
+- **Trados: Proofread on a merged document** (from v18/19.20.201). *AI Proofreader* now says each request holds one file's segments, and that the cards name the file, e.g. *Segment 3 of Acme - Text.docx*.
+- **Trados: Batch Translate gives repetitions one translation** (from v18/19.20.201). *Batch Translate* has a new section, *Repetitions get one translation*: what counts as a repetition, which segments decide the translation and which are never changed, what happens when existing translations disagree, the log line, and the note the backup TMX keeps of the AI's own wording. *AI Settings* describes **Keep repetitions consistent in Batch Translate**. *Progress and Logging* says that a run now writes only into the document it was started in, so switching documents during a run is safe.
+
 ## 2026-10-23
 
 - **Link previews have a picture.** A docs link pasted into WhatsApp, LinkedIn, Slack or X showed the touch icon stretched into a blur, because Starlight writes every Open Graph tag except the image. `Head.astro` now adds one: a Trados page gets the product site's *Supervertaler for Trados* card, a memoQ page the *for memoQ* card, and every other page the brand card. The pictures are served from supervertaler.com, so the docs and the product site share one set.
