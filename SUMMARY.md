@@ -36,6 +36,7 @@
 * [Reports](trados/reports.md)
 * [SuperMemory](trados/ai-assistant/super-memory.md)
   * [Quick Add](trados/ai-assistant/super-memory/quick-add.md)
+  * [Add segments to SuperMemory](trados/ai-assistant/super-memory/add-segments.md)
   * [Active Prompt](trados/ai-assistant/super-memory/active-prompt.md)
   * [AI Integration](trados/ai-assistant/super-memory/ai-integration.md)
   * [Obsidian Setup](trados/ai-assistant/super-memory/obsidian-setup.md)

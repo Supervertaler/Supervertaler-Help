@@ -106,6 +106,8 @@ Right-click a bank for **Set as active memory bank**, **Rename memory bank…**,
 
 **[Quick Add](/trados/ai-assistant/super-memory/quick-add/) (Ctrl+Alt+M)** captures a decision without leaving the segment you are on. It appends one row to `terminology.md`.
 
+**[Add segments to SuperMemory](/trados/ai-assistant/super-memory/add-segments/) (Ctrl+Alt+Shift+A)** copies a range of reviewed segments into `brief.md`, so that the part of a document you have reviewed – the definitions of a contract, say – becomes the reference for the rest of the job.
+
 **Drop source material into `reference/`** – a client style guide, a PDF, a glossary. Nothing happens to it automatically. When you want it in the bank, read it and write the parts that matter into the three files, or paste it into the chat and ask the assistant to draft the rows for you to check.
 
 That last point is the design in one line: **the AI proposes, you decide what gets written.**
@@ -149,6 +151,7 @@ Supervertaler Workbench does not use memory banks. That remains a genuine gap ra
 | Feature | Description |
 | --- | --- |
 | [**Quick Add**](/trados/ai-assistant/super-memory/quick-add/) | Capture a term decision while translating (Ctrl+Alt+M) |
+| [**Add segments to SuperMemory**](/trados/ai-assistant/super-memory/add-segments/) | Copy a range of reviewed segments into a bank, as reference translations for the rest of the job (Ctrl+Alt+Shift+A) |
 | [**Active Prompt**](/trados/ai-assistant/super-memory/active-prompt/) | Per-project prompt that Quick Add can also append terminology to |
 | [**AI Integration**](/trados/ai-assistant/super-memory/ai-integration/) | What gets sent to the AI, and in what order |
 | [**Obsidian Setup**](/trados/ai-assistant/super-memory/obsidian-setup/) | Optional: installing Obsidian and the Web Clipper |
