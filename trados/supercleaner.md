@@ -22,7 +22,7 @@ SuperCleaner is under construction. This page describes how it will work, so you
 
 SuperCleaner tidies up Word documents **before Trados turns them into segments**, so you get fewer tags in the editor. It joins pieces of text that Word has split up for no visible reason, and removes Word's internal bookkeeping. The finished translation looks exactly like the original document.
 
-It is meant for the documents that fill a segment with tags: files converted from PDF (ABBYY FineReader, Acrobat, Word's own PDF import) and documents that have been edited by many people. It does what TransTools' Document Cleaner does in Word, but inside Supervertaler, so the file no longer has to go through Word first.
+It is meant for the documents that fill a segment with tags: files converted from PDF (ABBYY FineReader, Acrobat, Word's own PDF import) and documents that have been edited by many people.
 
 ## Why Word files have so many tags
 
@@ -98,6 +98,7 @@ If it used your original instead, the report says so and why.
 - **Files already in a project are not cleaned again.** SuperCleaner runs when Trados converts a file, so turning it on affects files you add from then on.
 - **A handful of unusual files are left as they are.** Some programs write Word files in a way that SuperCleaner cannot prove it has understood exactly. It leaves those untouched rather than guess. In tests that was fewer than two files in a thousand.
 - In **memoQ**, SuperCleaner runs from the Supervertaler for memoQ editor instead, before you import the file.
+- **Background.** Translators have cleaned up Word files like this for a long time. Dave Turner's CodeZapper macros were the first that many translators used, and TransTools' Document Cleaner came later; both run in Word, so the file is cleaned there before it goes into the CAT tool. Some CAT tools also have a setting for reducing tags in Word files – in Trados, the Word file type can skip advanced font formatting such as tracking and kerning. SuperCleaner does the job as the file goes into Trados, and checks the result against your original before Trados sees it.
 
 ---
 
