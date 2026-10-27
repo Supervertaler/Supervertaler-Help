@@ -54,6 +54,7 @@
 * [AutoTagger](trados/autotagger.md)
 * [QuickLauncher](trados/quicklauncher.md)
 * [Text Transforms](trados/text-transforms.md)
+* [SuperCleaner](trados/supercleaner.md)
 
 ## 🧩 Integration
 

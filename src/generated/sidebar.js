@@ -214,6 +214,10 @@ const sidebar = [
           {
             "label": "Text Transforms",
             "link": "/trados/text-transforms/"
+          },
+          {
+            "label": "SuperCleaner",
+            "link": "/trados/supercleaner/"
           }
         ]
       },

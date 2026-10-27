@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-27
+
+- **Trados: SuperCleaner, a new page – not released yet.** SuperCleaner tidies up Word documents as Trados converts them, so you get fewer tags: it joins pieces of text Word has split for no visible reason, and removes Word's bookkeeping, with optional clean-up for documents converted from PDF. The page covers turning it on, what happens to your file (the original is never changed), what it cleans, and the check that compares every cleaned file with the original and uses the original if anything differs. It is published ahead of the feature with a notice saying so. Listed under *More Tools*.
+
 ## 2026-10-25
 
 - **Trados: Add segments to SuperMemory, a new page** (from v18/19.20.201). How to copy a range of reviewed segments into a memory bank with Ctrl+Alt+Shift+A, so the reviewed part of a document becomes the reference for the rest: choosing the range, the bank and the size limits. Linked from *SuperMemory*, *Quick Add* and *Keyboard shortcuts*.
