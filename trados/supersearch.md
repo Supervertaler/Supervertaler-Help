@@ -201,10 +201,14 @@ Tick the **Replace** checkbox to reveal the replace bar. Replace always operates
 ### How Replace All works
 
 * For the **active file**: changes go through the Trados API, so they appear immediately and are tracked in Trados's undo history.
-* For **other files**: the SDLXLIFF XML is modified directly on disk. You need to reopen those files to see the changes.
+* For **files that are not open in the editor**: the SDLXLIFF XML is modified directly on disk. You need to reopen those files to see the changes. *From v18/19.20.203*, each file is copied to a backup folder before it is changed, and the new file is written in a single step, so an interrupted write cannot leave a damaged file.
+* **Files that are open in the editor** – in another tab, or the other files of a merged document – are left unchanged *from v18/19.20.203*. Trados Studio holds its own copy of each, and would save over a change made on disk, or the change would overwrite your edits. Go to that file and run Replace All there.
+* A segment that no longer reads as it did when you searched – because the file was changed since – is left alone. Search again to include it.
+
+When it has finished, Replace All lists, file by file, what it changed and what it left unchanged and why, and offers to open the backup folder.
 
 :::caution
-**Replace All cannot be undone** for files modified on disk. Always review the search results carefully before replacing. Consider saving your project first.
+**Ctrl+Z cannot undo Replace All in files changed on disk.** To undo it, close the file in Trados Studio and copy its backup back over it. The backups are in `trados\replace_backups` in your Supervertaler data folder, one folder per Replace All, with a `restore.txt` that says where each file came from. The ten most recent runs are kept. Until v18/19.20.202, Replace All kept no backup.
 :::
 
 :::note
