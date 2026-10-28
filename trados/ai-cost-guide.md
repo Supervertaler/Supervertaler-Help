@@ -14,7 +14,7 @@ The **Reports** tab shows **real billed token counts and cost** as reported by y
 
 The number is cache-aware:
 
-* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate, cache writes at 1.25×.
+* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5, 0.025× on Claude Fable 5.1), cache writes at 1.25×. See [Prompt caching](#prompt-caching) below.
 * **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (90–95% off cached input on the current models).
 * **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
 * **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input).
@@ -53,7 +53,33 @@ Because Supervertaler translates **segment by segment**, the system prompt and t
 | **AI Proofreader**  | \~140,000    | \~8,000       |
 | **AutoPrompt**      | \~10,000     | \~2,000       |
 
-These are estimates for a representative document – actual usage varies with segment length, terminology context size, and prompt complexity. Token counts like these are fairly stable; what changes is the **price per token**, which is why this guide points you to live figures rather than quoting them.
+These are estimates for a representative document – actual usage varies with segment length, terminology context size, and prompt complexity. Token counts like these are fairly stable; what changes is the **price per token**, which is why this guide points you to live figures rather than quoting them. Most of those input tokens are the same in every request, which is what [prompt caching](#prompt-caching) makes cheaper.
+
+### Prompt caching
+
+Most of what Supervertaler sends with each request is the same every time: the instructions, your custom prompt, your SuperMemory context, the terminology and the document context. Only the segments change. **Prompt caching** lets the AI provider keep that shared part after the first request and charge much less for it in the requests that follow.
+
+**Where it's used.** Batch Translate, the AI Proofreader and Translate active segment (Alt+T). All three keep the shared part of the prompt exactly the same from one request to the next, so it can be cached. AutoPrompt and QuickLauncher prompts are one-off requests and are sent without caching. With Claude, chat in the AI Assistant does not use the cache at present.
+
+**With Claude** (directly, or through OpenRouter), Supervertaler marks the shared part of the prompt for Claude's cache:
+
+* The **first** request pays 25% extra on that part, to store it.
+* **Every request after that** reads it back for a tenth of the normal input price, or less: a twentieth on Claude Opus 5.5 and a fortieth on Claude Fable 5.1.
+* The cache lasts **five minutes**, and every request that reads from it starts the five minutes again. As long as you keep working, it stays available.
+
+A prompt shorter than Claude's minimum is simply not cached, and costs nothing extra.
+
+**OpenAI, DeepSeek and Gemini (2.5 and later)** cache automatically, with no marker needed. Because Supervertaler keeps the shared part of the prompt the same, they give their cache discount too – see [Estimates vs actual cost](#estimates-vs-actual-cost) for the rates.
+
+**Why the five-minute cache.** Claude also offers a one-hour cache, but storing a prompt in it costs twice the normal input price instead of 1.25×. In a batch run the requests follow each other within seconds, and when you translate segment by segment each new segment restarts the five minutes, so the shorter, cheaper cache is enough.
+
+**What makes it start over.** The cache only helps when the shared part is exactly the same. The next request pays the full price again (plus the 25% with Claude) after:
+
+* a pause of more than five minutes;
+* a change of model, prompt or AI settings, or a switch to another SuperMemory bank;
+* moving to another document, or starting a new batch run over different segments (each run sends only the terminology its own segments need).
+
+**Seeing it work.** In the **Reports** tab, the number of tokens read from the cache appears next to the input count, e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`, and the cost already includes the discount. The [Token Usage & Costs](/trados/usage-costs/) log keeps cache reads and cache writes in separate columns.
 
 ### How much will it cost?
 
@@ -86,7 +112,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](/trados/usage-costs/)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 * **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](/trados/usage-costs/#monthly-budget).
-* **Keep going when translating segment by segment** – from v18/19.20.198, Translate active segment (Alt+T) sends the same shared prompt every time, so a provider that caches prompts charges about a tenth for it from the second segment on, if each segment follows within five minutes. A pause longer than that means the next segment pays full price again. See [Translate Active Segment](/trados/batch-translate/#translate-active-segment-altt).
+* **Keep going when translating segment by segment** – from v18/19.20.198, Translate active segment (Alt+T) sends the same shared prompt every time, so a provider that caches prompts charges about a tenth for it from the second segment on, if each segment follows within five minutes. A pause longer than that means the next segment pays full price again. See [Prompt caching](#prompt-caching) and [Translate Active Segment](/trados/batch-translate/#translate-active-segment-altt).
 
 ### Built-in cost protection
 
