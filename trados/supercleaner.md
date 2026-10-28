@@ -20,15 +20,15 @@ SuperCleaner is under construction. This page describes how it will work, so you
   - links from Getting Started, Import/Export and Troubleshooting.
 -->
 
-SuperCleaner tidies up Word documents **before Trados turns them into segments**, so you get fewer tags in the editor. It joins pieces of text that Word has split up for no visible reason, and removes Word's internal bookkeeping. The finished translation looks exactly like the original document.
+SuperCleaner tidies up the formatting of Word documents **before Trados turns them into segments**, so you get fewer tags in the editor. The finished translation looks like the original document.
 
 It is meant for the documents that fill a segment with tags: files converted from PDF (ABBYY FineReader, Acrobat, Word's own PDF import) and documents that have been edited by many people.
 
 ## Why Word files have so many tags
 
-Word stores text in pieces called *runs*, and a new run starts wherever anything about the formatting changes, or where Word merely noted that an edit happened. A paragraph that looks perfectly uniform can be stored as dozens of runs that differ only in things you cannot see: a character spacing of 0.1 pt, a different editing-session number, a font size of 11.5 instead of 11. Trados shows every one of those boundaries as a tag pair.
+Word stores text in pieces called *runs*, and a new run starts wherever anything about the formatting changes, or where Word merely noted that an edit happened. A paragraph that looks perfectly uniform can be stored as dozens of runs that differ only in things you can hardly see, or not at all: a character spacing of 0.1 pt, a font size of 11.5 instead of 11, a different language setting. Trados shows each of those boundaries as a tag pair. (Boundaries where nothing at all differs, such as Word's editing-session numbers, Trados already ignores.)
 
-SuperCleaner removes the invisible boundaries. A sentence that came in as twenty runs goes into Trados as one.
+SuperCleaner's OCR clean-up evens out those small differences, so the boundaries disappear: a sentence that came in as twenty runs can go into Trados as one.
 
 ## Turning it on
 
@@ -54,7 +54,7 @@ It works in Trados Studio 2022, 2024 and 2026.
 - pieces of text with identical formatting are joined into one;
 - Word's editing-session numbers and spelling-check markers are removed.
 
-This is where most of the tag savings come from.
+Trados already ignores both of these by itself, so on their own they don't change the tags you see in Trados; they tidy the file underneath. Hidden text is left exactly as it is.
 
 **OCR clean-up – each option off until you tick it.** For documents converted from PDF, where the formatting is often meaningless anyway. These options *do* change the formatting, slightly and on purpose:
 
@@ -67,7 +67,7 @@ This is where most of the tag savings come from.
 - turn Symbol and Wingdings characters into ordinary Unicode characters;
 - turn superscript 2 and 3 into ² and ³.
 
-Leave them off for documents that were written in Word: the invisible clean-up is all those need.
+This is where the tag savings in Trados come from. Leave the options off for documents that were written in Word, where formatting differences are usually there on purpose.
 
 ## Why it can't damage your document
 
@@ -76,6 +76,8 @@ Before Trados ever sees the cleaned copy, SuperCleaner **compares it with your o
 **If anything differs that you did not ask for, SuperCleaner throws the cleaned copy away and Trados gets your original, unchanged.** The same happens if a document cannot be read completely – a damaged or password-protected file, for example. Either way the file still goes into your project; SuperCleaner never stops you working.
 
 This check was tested before release on more than 9,000 real Word documents from translation jobs, with more than 20,000 deliberately damaged copies. It caught every change, down to a single letter moved out of a bold word.
+
+SuperCleaner was also tested with Trados itself. Trados read 757 tag-heavy real documents before and after cleaning, and saw exactly the same text in every one, down to text boxes, headers, footers and hyperlinks.
 
 ## Checking the result yourself
 
@@ -96,7 +98,7 @@ If it used your original instead, the report says so and why.
 
 - **Word 2007 and later only** (.docx, .docm, .dotx, .dotm). Old .doc files are not cleaned: Trados converts those internally, past the point where SuperCleaner runs.
 - **Files already in a project are not cleaned again.** SuperCleaner runs when Trados converts a file, so turning it on affects files you add from then on.
-- **A handful of unusual files are left as they are.** Some programs write Word files in a way that SuperCleaner cannot prove it has understood exactly. It leaves those untouched rather than guess. In tests that was fewer than two files in a thousand.
+- **A handful of unusual files are left as they are.** Some programs write Word files in a way that SuperCleaner cannot prove it has understood exactly. It leaves those untouched rather than guess. In tests that was about three files in a thousand.
 - In **memoQ**, SuperCleaner runs from the Supervertaler for memoQ editor instead, before you import the file.
 - **Background.** Translators have cleaned up Word files like this for a long time. Dave Turner's CodeZapper macros were the first that many translators used, and TransTools' Document Cleaner came later; both run in Word, so the file is cleaned there before it goes into the CAT tool. Some CAT tools also have a setting for reducing tags in Word files, aimed mainly at files converted from PDF by OCR – in Trados, the Word file type can skip advanced font formatting such as tracking and kerning. SuperCleaner does the job as the file goes into Trados, and checks the result against your original before Trados sees it.
 
