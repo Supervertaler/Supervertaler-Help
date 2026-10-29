@@ -11,6 +11,8 @@ guesswork.
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
+- **Trados: Gemini 4 Argon replaces Gemini 3.1 Pro – not released yet.** AI Settings, Providers and Models, SuperBench and the AI Cost Guide now name Gemini 4 Argon as the top Gemini model, with its prices ($2 / $10 until 30 November 2026, $4 / $20 from 1 December) and its 95% cache discount, marked "from v18/19.20.203". Publish with the release that ships it.
+- **Trados: SuperSearch's Replace All keeps a backup, and regular expressions stop after 2 seconds – not released yet.** *SuperSearch* says that Replace All copies each file it changes on disk to a backup folder first, leaves files open in the editor alone, and how to undo it from the backup; and that a regular expression taking more than 2 seconds on one segment is stopped and reported.
 
 ## 2026-10-27
 

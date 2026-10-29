@@ -17,7 +17,7 @@ The number is cache-aware:
 * **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5, 0.025× on Claude Fable 5.1), cache writes at 1.25×. See [Prompt caching](#prompt-caching) below.
 * **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (90–95% off cached input on the current models).
 * **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
-* **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input).
+* **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input; 95% off on Gemini 4 Argon, from v18/19.20.203).
 
 For these providers the in-app number is the authoritative billable figure (modulo any account-level credits or monthly minimums you may have).
 
@@ -87,7 +87,7 @@ There's a wide spread between models. As a rough mental model:
 
 * **Local models (Ollama)** are **free** – they run on your own computer, with no API charges at all. The trade-off is that quality depends on your hardware, and they're generally less capable than cloud-hosted models. If you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Budget cloud models** – the cheapest tier from each provider (e.g. GPT-6 Luna, Gemini 3.5 Flash-Lite, Mistral Small, DeepSeek V4 Flash) – typically cost a small fraction of a cent per segment. They're excellent for routine, high-volume translation.
-* **Flagship models** – Claude Opus 5.5, GPT-6 Astra, Gemini 3.1 Pro and the like – can run roughly 10–100× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
+* **Flagship models** – Claude Opus 5.5, GPT-6 Astra, Gemini 4 Argon and the like – can run roughly 10–100× the price of the budget tier. Reserve them for specialised content where the quality difference earns its keep.
 
 To see what a model **actually** costs for your work, run one operation and check the **Reports** tab – it shows the real billed cost. For OpenRouter, expect the underlying provider's rate plus a small platform fee.
 
@@ -108,7 +108,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 ### Tips for managing costs
 
 * **Start with a budget model** – GPT-6 Luna, Gemini 3.5 Flash-Lite, or Mistral Small are excellent for routine translation at a fraction of the cost of a flagship.
-* **Use premium models selectively** – reserve GPT-6 Astra, Claude Opus 5.5, or Gemini 3.1 Pro for specialised content (legal, medical, patents) where the quality difference justifies the cost.
+* **Use premium models selectively** – reserve GPT-6 Astra, Claude Opus 5.5, or Gemini 4 Argon for specialised content (legal, medical, patents) where the quality difference justifies the cost.
 * **Try Ollama for zero cost** – if you have a computer with 8+ GB of RAM, TranslateGemma 12B delivers surprisingly good results for free.
 * **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](/trados/usage-costs/)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 * **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](/trados/usage-costs/#monthly-budget).

@@ -17,7 +17,7 @@ The current provider and model are shown in the status area at the bottom of the
 | -------- | ------ |
 | **OpenAI** | GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna |
 | **Anthropic** | Claude Sonnet 5.5, Claude Opus 5.5, Claude Fable 5.1 |
-| **Google** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 3.1 Pro (Preview) |
+| **Google** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 4 Argon |
 | **Grok** | Grok 4.3 |
 | **Mistral** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
