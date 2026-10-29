@@ -49,6 +49,8 @@ There are two ways to get there, and they need opposite fixes:
 - **The free trial has ended.** Enter a licence key under **Help → Licence**.
 - **A licensed computer has been offline for 30 days.** Nothing needs buying: connect to the internet, open **Help → Licence** and click **Check now**.
 
+If **Check now** answers that the licence server no longer has this computer's activation, checking again will not help: enter your licence key again in **Help → Licence** and click **Activate**, which activates this computer afresh. Once AI translation has paused, the key box is in the window (from v0.1.28). Before then, click **Deactivate this computer** first, and it appears.
+
 While AI translation is paused, memoQ shows why under the grid for each segment it asks Supervertaler about, so a Pre-translate run tells you rather than failing silently.
 
 If Supervertaler cannot read its licence at all, it keeps working and tries again the next time it starts. It never pauses your work because of a missing answer.

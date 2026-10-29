@@ -18,7 +18,7 @@ The check looks for signs of commentary that the source itself does not have, so
 
 ### "AI translation is paused"
 
-The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
+The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. If **Check now** says the licence server no longer has this computer's activation, enter your licence key again in the same window. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
 
 ### The Review tab says "machine translation from MT / Supervertaler"
 
