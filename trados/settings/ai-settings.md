@@ -16,7 +16,7 @@ Choose one of the supported AI providers:
 |----------|--------|--------------------|
 | **OpenAI** | GPT-6 Astra, GPT-6.1 Sol (the default), GPT-6 Luna | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
 | **Claude (Anthropic)** | Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.1 | [console.anthropic.com](https://console.anthropic.com) |
-| **Gemini (Google)** | Gemini 3.8 Flash, Gemini 3.5 Flash-Lite, Gemini 3.1 Pro (Preview) | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
+| **Gemini (Google)** | Gemini 3.8 Flash (the default), Gemini 3.5 Flash-Lite, Gemini 4 Argon | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
 | **Mistral AI** | Mistral Large, Mistral Small | [console.mistral.ai](https://console.mistral.ai) |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash | [platform.deepseek.com](https://platform.deepseek.com) |
@@ -29,6 +29,8 @@ You only need one provider to get started. If you would rather not manage severa
 :::
 
 **The OpenAI models** (from v18/19.20.199) are OpenAI's three current tiers, most capable first: GPT-6 Astra ($10 / $50 per million tokens), GPT-6.1 Sol ($2 / $10) and GPT-6 Luna ($0.10 / $0.50), all with a 1M-token context. GPT-6.1 Sol is the default for a new installation. Earlier versions list GPT-5.6 Sol, Terra and Luna and GPT-5.4 Mini; if you have one of those selected, it keeps working and is still costed. In the AI Assistant chat, GPT-6.1 Sol can use the [Studio Tools](/trados/ai-assistant/studio-tools/) lookups from v18/19.20.201, with your own OpenAI key: OpenAI lets it use tools only through its newer Responses API, which Supervertaler now uses for this model's chat. Supervertaler asks OpenAI not to store those conversations, and the chat shows the tokens OpenAI reports, its reasoning included. Through OpenRouter, and in v18/19.20.199 and 200, it answers without the lookups, while the current segment, its terms and its TM matches still go with every message.
+
+**The Gemini models** (from v18/19.20.203) are Gemini 3.8 Flash ($0.75 / $3.75 per million tokens until the end of 2026), Gemini 3.5 Flash-Lite ($0.30 / $2.50) and Gemini 4 Argon, Google's most capable model open to developers ($2 / $10 until 30 November 2026, $4 / $20 from 1 December), all with a 1M-token context. Gemini 3.8 Flash is the default. Supervertaler counts Argon at its December price, so until then the cost it shows for Argon is twice what Google charges. Earlier versions list Gemini 3.1 Pro (Preview) in Argon's place; if you have it selected, it keeps working and is still costed.
 
 ### Getting your first key
 
@@ -138,7 +140,7 @@ The model dropdown includes a curated selection of the best models for translati
 | **GPT-6.1 Sol** | Close to Astra's quality at a fifth of its price, 1M context |
 | **GPT-6 Luna** | OpenAI's cheapest – for high-volume work |
 | **Gemini 3.8 Flash** | Google's newest Flash – strong quality at low cost, 1M context |
-| **Gemini 3.1 Pro (Preview)** | Google's most capable model; still a preview |
+| **Gemini 4 Argon** | Google's most capable model, 1M context (from v18/19.20.203; earlier versions list Gemini 3.1 Pro) |
 | **Gemma 4 31B** | Open-source – strong multilingual quality, 256K context |
 | **Gemma 4 26B MoE** | Open-source – near-31B quality at a fraction of the cost |
 | **Mistral Small 4** | Very fast and cheap – good multilingual support |

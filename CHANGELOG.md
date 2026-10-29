@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-29
+
+- **Trados: Gemini 4 Argon replaces Gemini 3.1 Pro – not released yet.** AI Settings, Providers and Models, SuperBench and the AI Cost Guide now name Gemini 4 Argon as the top Gemini model, with its prices ($2 / $10 until 30 November 2026, $4 / $20 from 1 December) and its 95% cache discount, marked "from v18/19.20.203". Publish with the release that ships it.
+
 ## 2026-10-27
 
 - **Trados: SuperCleaner, a new page – not released yet.** SuperCleaner tidies up Word documents as Trados converts them, so you get fewer tags: it joins pieces of text Word has split for no visible reason, and removes Word's bookkeeping, with optional clean-up for documents converted from PDF. The page covers turning it on, what happens to your file (the original is never changed), what it cleans, and the check that compares every cleaned file with the original and uses the original if anything differs. It is published ahead of the feature with a notice saying so. Listed under *More Tools*.
