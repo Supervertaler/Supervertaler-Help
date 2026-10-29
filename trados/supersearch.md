@@ -249,6 +249,10 @@ When the **.\*** checkbox is enabled, the search query is treated as a .NET regu
 Regex replace supports capture groups. For example, search for `(\w+)\s+(\w+)` and replace with `$2 $1` to swap two words.
 :::
 
+:::caution
+*From v18/19.20.203*, a regular expression may take at most 2 seconds on any one segment. Some patterns – usually nested repeats such as `(a+)+` – can take minutes on the wrong text, and until v18/19.20.202 Trados Studio stopped responding while they ran. Now SuperSearch stops and says in the status bar that the pattern took too long: simplify it and try again. Replace All stops at the segment where it happened. What it had already replaced stays replaced, and the file it stopped in, and every file after it, are left unchanged.
+:::
+
 ## Keyboard Shortcuts
 
 | Shortcut                      | Action                                          |
