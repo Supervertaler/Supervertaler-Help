@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-10-30
+
+- **memoQ: API keys also kept locked to this computer – not released yet.** *The Supervertaler editor* has *API keys are shared* in place of *API keys live in one file*: every key is also kept in `C:\Users\<you>\AppData\Roaming\Supervertaler\api-keys.locked.json`, locked to your Windows sign-in, nothing changes yet in how keys are entered, and a later version will stop keeping the plain-text copy in the data folder. A new subsection says what *Can't use your Anthropic key – it can't be read on this computer* means and what to do; the paragraph calling plain text a deliberate choice is gone. *Getting Started* links to the renamed section, and *Troubleshooting* has an entry for the message.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".

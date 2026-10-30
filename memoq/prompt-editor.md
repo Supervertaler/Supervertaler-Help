@@ -193,21 +193,31 @@ memoQ’s own **Configure plugin** dialog has the same three controls, reading a
 
 **Settings → Pre-translate via Claude Desktop (MCP)** is on the menu itself, and on the right of the toolbar, because it is the one that gets flipped between jobs rather than set once. See [MCP server](/memoq/mcp-server/).
 
-### API keys live in one file
+### API keys are shared
 
-Every Supervertaler product reads the same file:
+Every Supervertaler product reads the same keys, from a file in your Supervertaler data folder:
 
 ```
 C:\Users\<you>\Supervertaler\settings\api-keys.json
 ```
 
-One key per provider, plain text, editable in Notepad. A key pasted here works in Supervertaler for Trados and Supervertaler Sidekick as well, and rotating one means changing one line in one place. Before this file existed there were three dialogs in three products each keeping their own, which is how an hour goes missing to a key for one service pasted into another’s box.
+One key per provider, plain text, editable in Notepad. A key pasted here works in Supervertaler for Trados and Supervertaler Sidekick as well, and changing one means changing it in one place. Before this file existed there were three dialogs in three products each keeping their own, which is how an hour goes missing to a key for one service pasted into another’s box.
 
 Keys are stored under the provider ids `claude`, `openai` and `gemini`. Sidekick keeps its machine-translation keys in the same file under their own names – note that `google` there is Google Translate, not Gemini.
 
-Plain text is deliberate, and the same choice Supervertaler for Trados has always made: a key that can be rotated by pasting a line into a text file is a key that actually gets rotated, and anyone who can read that file can already read everything else in your profile.
+Every key is also kept on this computer, locked by Windows to your Windows sign-in:
 
-The **API key** box shows the key for the provider you have selected and writes back to that file. If you had a key configured before the file existed – in memoQ’s own settings, or in Trados’s – it is copied in the first time Supervertaler needs it, so there is nothing to do.
+```
+C:\Users\<you>\AppData\Roaming\Supervertaler\api-keys.locked.json
+```
+
+Nothing changes in how you enter keys: Supervertaler keeps both files, and a key in your data folder is the one used. A later version will stop keeping the plain-text copy in the data folder, so that a data folder you sync, back up or hand to someone no longer carries your keys with it. Until then Supervertaler copies the keys into the locked file by itself, on every computer you use it on, so you will not have to type them in again when that happens.
+
+The **API key** box shows the key for the provider you have selected and writes back to both. If you had a key configured before the file existed – in memoQ’s own settings, or in Trados’s – it is copied in the first time Supervertaler needs it, so there is nothing to do.
+
+#### When a key can’t be read on this computer
+
+A locked key can be unlocked only by the Windows sign-in that saved it. One saved under another Windows sign-in, or before an administrator reset your Windows password, cannot be read here, and Supervertaler says so rather than leaving you guessing: the key box stays empty with a note under it – *Your Anthropic key can’t be read on this computer …* – and a translation shows *Can’t use your Anthropic key – it can’t be read on this computer …* under memoQ’s grid. It never sends the provider an empty or older key instead, which would only come back as “invalid key”. Paste the key in again; the one that can’t be read is kept until you do, and nothing else is affected.
 
 If you paste a key that plainly belongs to another service, the line under the box says so as you type: *This is an OpenAI key, not an Anthropic one.* That is worth more than the provider’s own answer, which is that the key is incorrect.
 
