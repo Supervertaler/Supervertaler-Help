@@ -67,7 +67,7 @@ A key that Windows will not unlock for you – one saved under another Windows s
 
 An AI action that needs the key stops with "Can't use your Anthropic key – it can't be read on this computer…" instead of calling the provider. Paste the key in again and click **OK**. Until you do, the unreadable copy is kept: some causes pass by themselves, such as a company network that cannot be reached yet after a password reset.
 
-If the file holding the locked keys is ever damaged, Supervertaler keeps a copy of it beside the original (`api-keys.locked.damaged-…json`), locks your keys again from the data folder, and says so under the key box. Normally there is nothing to do; a key that an AI action then reports as missing can be pasted in again.
+If the file holding the locked keys is ever damaged, Supervertaler keeps a copy of it beside the original (`api-keys.locked.damaged-…json`) and says so under the key box, asking you to paste your keys in again. While this version still keeps your keys in the data folder as well, they are locked again from there by themselves, so in practice only a key that an AI action reports as missing needs pasting.
 
 ## Model selection
 
