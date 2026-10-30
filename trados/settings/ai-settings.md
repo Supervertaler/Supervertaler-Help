@@ -55,6 +55,20 @@ Keys are kept in one file shared by Supervertaler for Trados, Supervertaler for 
 
 The key box says so when a key plainly belongs to another service. Each provider's keys have a recognisable start: Anthropic `sk-ant-`, OpenAI `sk-` or `sk-proj-`, Gemini `AIza`, xAI `xai-`, OpenRouter `sk-or-`.
 
+### Keys locked to this computer (from v18.20.204)
+
+Each key is now also kept in your Windows profile, in `%APPDATA%\Supervertaler\api-keys.locked.json`, locked by Windows so that it opens only for your Windows account. The data folder's `api-keys.json` is still written as before, so Supervertaler for memoQ, Sidekick and older versions keep working; a later version will stop keeping keys in the data folder. There is nothing to do: your existing keys, including those of your custom endpoints, are locked when Trados Studio starts, and renaming an endpoint takes its key with it.
+
+### "Can't be read on this computer"
+
+A key that Windows will not unlock for you – one saved under another Windows sign-in, or one stored before an administrator reset your Windows password – is never shown as an empty box or sent to the provider. AI Settings says so under that provider's key box (or the endpoint's):
+
+> Your Anthropic key can't be read on this computer – it was saved under another Windows sign-in, or your Windows password was reset. Paste the key in again; nothing else is affected.
+
+An AI action that needs the key stops with "Can't use your Anthropic key – it can't be read on this computer…" instead of calling the provider. Paste the key in again and click **OK**. Until you do, the unreadable copy is kept: some causes pass by themselves, such as a company network that cannot be reached yet after a password reset.
+
+If the file holding the locked keys is ever damaged, Supervertaler keeps a copy of it beside the original (`api-keys.locked.damaged-…json`), locks your keys again from the data folder, and says so under the key box. Normally there is nothing to do; a key that an AI action then reports as missing can be pasted in again.
+
 ## Model selection
 
 A dropdown showing a curated list of recommended models for the selected provider.
