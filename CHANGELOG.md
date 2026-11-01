@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-01
+
+- **Trados: SuperBench with DeepL, Google Translate and Microsoft Translator – not released yet.** *SuperBench* explains that any slot can hold a machine-translation engine, what it is given (the source text only; DeepL also the neighbouring segments when document context is on), how the judge marks it, and what each engine costs per million characters. *AI Settings* gets a "Machine translation (SuperBench)" section: where to get each key, the Microsoft region, the Test button, and that the keys are shared with Sidekick. Both marked "from v18/19.20.204". Publish with the release that ships it.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
