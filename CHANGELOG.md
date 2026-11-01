@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-01
+
+- **Sidekick: API keys also locked to the computer, and the "can't be read" message – not released yet.** *Settings and files* says that each key is also kept in the Windows profile (`C:\Users\<you>\AppData\Roaming\Supervertaler\api-keys.locked.json`), locked to the Windows account, while the data folder's `api-keys.json` is still written; what the "can't be read on this computer" note and message mean and what to do; and what happens if the locked file is damaged. *QuickTrans* says that an engine whose key can't be read shows so in its row. Publish with the Sidekick change.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
