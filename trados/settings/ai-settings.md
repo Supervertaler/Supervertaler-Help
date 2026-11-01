@@ -334,16 +334,15 @@ With **Also add issues as Trados comments** ticked on Batch Operations, each iss
 
 ## Machine translation (SuperBench) (from v18/19.20.204)
 
-The keys for the machine-translation engines that [SuperBench](/trados/superbench/#deepl-google-translate-and-microsoft-translator-from-v181920204) can set against your AI models. Each box has **Show** and **Test**.
+The keys for the machine-translation engines that [SuperBench](/trados/superbench/#deepl-and-google-translate-from-v181920204) can set against your AI models. Each box has **Show** and **Test**.
 
 | Engine | Key | Where to get one |
 |---|---|---|
 | **DeepL** | **DeepL key** | [deepl.com/pro-api](https://www.deepl.com/en/pro-api) – the free **Developer** plan comes with 1 million characters, once. Copy the key from your account's **API Keys** page. A key from DeepL's free plan ends in `:fx`. |
 | **Google Translate** | **Google Translate key** | A Google Cloud API key with the **Cloud Translation API** turned on in its project. |
-| **Microsoft Translator** | **Microsoft Translator key** and **Microsoft region** | In the [Azure portal](https://portal.azure.com), create a **Translator** resource, pricing tier **Free F0** (2 million characters a month). Copy **KEY 1** from **Keys and Endpoint**. Choose region **Global** and leave **Microsoft region** empty; for any other region, type it as Azure shows it, for example `westeurope`. |
 
 - **Shared with Sidekick.** The keys go into the same key file as every other provider's, under their own names, so a key entered in Sidekick appears here and the other way round. They are locked to your Windows sign-in like every other key.
-- **Test** checks the key in its box without saving it. For DeepL it asks how much of your allowance is used, which costs nothing; Google and Microsoft translate one word. With an empty box, Test asks for a key instead of sending none.
+- **Test** checks the key in its box without saving it. For DeepL it asks how much of your allowance is used, which costs nothing; for Google it translates one word. With an empty box, Test asks for a key instead of sending none.
 - **A key that can't be read on this computer** – saved under another Windows sign-in, or after your Windows password was reset by an administrator – leaves its box empty with a note under it saying so. Paste the key in again. **OK** with the box left empty keeps the stored key.
 
 ---

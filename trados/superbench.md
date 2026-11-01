@@ -33,9 +33,9 @@ The legend at the top of the report maps the judge's letters to the models. The 
 
 A judge is a model too. Treat the report as a well-informed second opinion: read the segments it names before deciding, and run it again on a different stretch of the document if the verdict is close.
 
-## DeepL, Google Translate and Microsoft Translator (from v18/19.20.204)
+## DeepL and Google Translate (from v18/19.20.204)
 
-Any slot can hold a machine-translation engine instead of an AI model: **DeepL**, **Google Translate** or **Microsoft Translator**. Pick it in the slot's first dropdown. This answers a question the AI models alone cannot: does an AI model with your prompt really beat DeepL on your own text?
+Any slot can hold a machine-translation engine instead of an AI model: **DeepL** or **Google Translate**. Pick it in the slot's first dropdown. This answers a question the AI models alone cannot: does an AI model with your prompt really beat DeepL on your own text?
 
 - **What the engine is given.** The source text only. No prompt, no termbase, no SuperMemory, no TM matches. The one exception is DeepL: when **Include full document content** is ticked in [AI Settings](/trados/settings/ai-settings/), it also reads the neighbouring segments, which DeepL does not charge for. A line under the slots says what each engine gets.
 - **How it is judged.** Blind, like the AI models – the judge does not know which candidate is the engine. It marks every candidate against your prompt and your termbase, because that is what the job needs, so an engine can lose points on terminology it was never given. The report says so plainly.
@@ -55,6 +55,5 @@ A machine-translation engine charges by the character, not the token. The report
 |---|---|---|
 | DeepL | $27.50 (€22.00 in Europe) | a free "Developer" key comes with 1 million characters, once |
 | Google Translate | $20 | the first 500,000 characters a month |
-| Microsoft Translator | $10 | 2 million characters a month on the free tier |
 
-Twenty segments come to about 3,000 characters: a few cents at most. Within a free allowance, or the characters your plan includes, an engine costs you nothing extra – Supervertaler cannot see which plan you have, so it shows the list price and says so. Google and Microsoft charge for the tags too; DeepL charges only the text.
+Twenty segments come to about 3,000 characters: a few cents at most. Within a free allowance, or the characters your plan includes, an engine costs you nothing extra – Supervertaler cannot see which plan you have, so it shows the list price and says so. Google charges for the tags too; DeepL charges only the text.
