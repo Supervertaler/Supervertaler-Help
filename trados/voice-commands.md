@@ -80,6 +80,8 @@ Everything works out of the box – no configuration needed. Most commands also 
 | "select all" | "select everything" | Select all the text in the active segment (Ctrl+A) |
 | "press enter" | "hit enter" | Press Enter – the default button of an open dialog |
 | "clear target" | | Clear the target segment |
+| "split segment" | "split segments" | Split the segment at the cursor (Alt+Shift+T, Studio's **Split Segment**) *(from v18/19.20.204)* |
+| "merge segments" | "merge segment" | Merge the segments you have selected (Ctrl+Alt+S, Studio's **Merge Segments**) *(from v18/19.20.204)* |
 | "select …" | "choose …" | **Beta, off by default.** Select those words in the target – see [Selecting words](#selecting-words-by-saying-them) |
 | "select source …" | "source select …" | **Beta, off by default.** Select those words in the **source** segment |
 | "numbers" | "show numbers", "number words" | Number the words of the target, then say **"select 12"** or **"select 12 to 14"** – see [Select by number](#select-by-number) |
@@ -113,6 +115,10 @@ Trados Studio's font-size actions ship **without a default keyboard shortcut**, 
 4. Click **OK**
 
 From then on, "zoom in" and "zoom out" control the editor font size hands-free. (Make sure **Adapt font sizes** is enabled under File > Options > Editor > Font Adaptation.)
+
+#### "split segment" and "merge segments"
+
+These two press Studio's own shortcuts for **Split Segment** (Alt+Shift+T) and **Merge Segments** (Ctrl+Alt+S), so they do exactly what those keys do. If you have given either action a different shortcut under **File > Options > Keyboard Shortcuts**, change the command's action to the same keys in SuperVoice settings.
 
 ### Selecting words by saying them
 
@@ -241,7 +247,7 @@ Homophones are the trap, not spelling. The built-in "term eight" and "match eigh
 
 Commands are stored in `trados/settings/voice_commands.json` in your Supervertaler data folder, in the same format as Supervertaler Workbench's voice commands – so you can exchange command sets between the two products.
 
-Default commands added in plugin updates are **merged into your saved set automatically** – your customisations are never touched. Because of this, if you want to get rid of a default command, **untick it rather than delete it** (a deleted phrase would come back if a later update re-ships it). **Restore defaults** replaces everything with the built-in set, discarding your customisations.
+Default commands added in plugin updates are **merged into your saved set automatically** – your customisations are never touched. An update adds only the commands that are new since your last update, so a default command you have deleted or renamed stays that way, and a new one is left out if one of your own commands already uses its words *(from v18/19.20.204; before that, every default you had deleted came back with the next update that added commands)*. **Restore defaults** replaces everything with the built-in set, discarding your customisations.
 
 ### Limitations
 

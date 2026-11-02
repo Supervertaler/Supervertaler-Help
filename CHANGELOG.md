@@ -12,6 +12,7 @@ guesswork.
 
 - **Trados: API keys also locked to the computer, and the "can't be read" message – not released yet.** *AI Settings* says that from v18.20.204 each key is also kept in the Windows profile (`%APPDATA%\Supervertaler\api-keys.locked.json`), locked to the Windows account, while the data folder's `api-keys.json` is still written; what the "can't be read on this computer" note and message mean and what to do; and what happens if the locked file is damaged. Publish with the release that ships it.
 - **Trados: SuperBench with DeepL and Google Translate – not released yet.** *SuperBench* explains that any slot can hold a machine-translation engine, what it is given (the source text only; DeepL also the neighbouring segments when document context is on), how the judge marks it, and what each engine costs per million characters. *AI Settings* gets a "Machine translation (SuperBench)" section: where to get each key, the Test button, and that the keys are shared with Sidekick. Both marked "from v18/19.20.204". Publish with the release that ships it.
+- **Trados: two new voice commands, "split segment" and "merge segments" – not released yet.** *SuperVoice* lists them in the command table (Studio's Split Segment, Alt+Shift+T, and Merge Segments, Ctrl+Alt+S) and says what to change if you have rebound those shortcuts. *Customising commands* no longer says to untick a default command rather than delete it: from 18/19.20.204 a deleted or renamed default stays that way after an update.
 
 ## 2026-10-29
 
