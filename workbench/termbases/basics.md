@@ -95,7 +95,6 @@ Termbases must be activated to show matches. Each termbase has a row of tick box
 - ✅ **Write**: New terms can be added during translation
 - ✅ **Project**: This is the project termbase (see above)
 - ✅ **AI**: Matching terms are sent to the AI – see [Sending Terms to the AI](/workbench/termbases/ai-injection/)
-- ✅ **🎤 Voice**: The termbase's target terms help voice dictation recognise your terminology – see [Voice](/workbench/voice/overview/)
 - ✅ **🔍 SuperLookup**: The termbase is searched by SuperLookup
 
 ### Highlight Style

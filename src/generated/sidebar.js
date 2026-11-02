@@ -820,7 +820,7 @@ const sidebar = [
             ]
           },
           {
-            "label": "Voice Commands & Dictation",
+            "label": "Voice Commands",
             "link": "/workbench/voice/overview/"
           },
           {

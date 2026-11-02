@@ -11,6 +11,13 @@ guesswork.
 ## 2026-11-02
 
 - **Workbench: the Clipboard Manager is gone – not released yet.** Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older. Publish with the Workbench release that ships it.
+- **Workbench: Voice is commands only – not released yet** (from v1.10.374). *Voice* is rewritten for the commands-only Voice tab:
+  - The built-in dictation (push-to-talk with Whisper), the hold-to-talk key for commands and the "pause for external dictation" key are gone; for running text the page points to a dictation tool such as Windows voice typing or Wispr Flow.
+  - There is one on/off switch (Ctrl+Alt+O), commands are spoken in English, and there is a new *What I heard* list.
+  - One-word commands fire only when said on their own, speech that matches no command is never typed, and Keystroke commands no longer need AutoHotkey.
+  - The status line shows *Starting…* while the speech model loads.
+  - The shortcut tables, *General settings*, *Termbases* (no 🎤 Voice column), *AutoCorrect*, the memoQ page and the link titles follow.
+  - Publish with v1.10.374.
 
 ## 2026-10-29
 

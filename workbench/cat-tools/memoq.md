@@ -144,4 +144,4 @@ memoQ's import may not change segment status. You can:
 ## See Also
 
 - [CAT Tool Overview](/workbench/cat-tools/overview/)
-- [Voice (commands and dictation in memoQ)](/workbench/voice/overview/)
+- [Voice (commands in memoQ)](/workbench/voice/overview/)

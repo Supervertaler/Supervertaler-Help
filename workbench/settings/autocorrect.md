@@ -48,7 +48,6 @@ If AutoCorrect converts something you actually wanted to leave alone, press **Ba
 - **Inside tag markers** (`{1}`, `[2}`, `<seg>`). Auto-correcting inside a tag would corrupt the boundaries and break the round-trip back to your source format, so the engine skips these.
 - **Paste**. Pasting a block of text never triggers any rule – only single typed characters do. If you want the engine to clean up pasted text, do it explicitly with Find & Replace.
 - **Programmatic content** (loaded translations, MT/TM insertions, Copy Source → Target). Same reason – these aren't user keystrokes.
-- **Dictation**. Voice-typed content arrives via a different input path and is not auto-corrected.
 - **The source column**. AutoCorrect is target-only.
 
 ## Turning a single rule off temporarily

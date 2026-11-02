@@ -18,9 +18,7 @@ The 🌍 actions and their out-of-the-box bindings:
 |---|---|---|
 | Open SuperLookup | **Ctrl+Alt+L** / **⌘⌥L** | Auto-copies the current selection, then opens Workbench's SuperLookup tab with the text pre-filled and the search auto-fired |
 | QuickTrans | **Ctrl+Alt+Q** / **⌘⌥Q** | Instant translation popup; auto-copies the selection |
-| Voice dictation / push-to-talk | **Ctrl+Shift+Space** / **⌘⇧Space** | Hold to record, release to stop (the default; press again to stop in toggle mode, and on macOS and Linux); a "🎤 Listening…" toast confirms the mic is live |
-| Voice commands push-to-talk | **Ctrl+Alt+V** / **⌘⌥V** | Hold to listen for voice *commands* only – for pairing Workbench's command listener with an external dictation app |
-| Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Continuous listening on/off |
+| Voice Always-On (toggle) | **Ctrl+Alt+O** / **⌘⌥O** | Voice commands: listening on/off |
 
 Rebind any of these in **Settings → Keyboard Shortcuts** by clicking the row and pressing a new combination.
 
@@ -115,4 +113,4 @@ The settings page has an **Export Cheatsheet (HTML)** button on the right-hand p
 ## Related pages
 
 - [Editor Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)
-- [Voice Commands & Dictation](/workbench/voice/overview/)
+- [Voice Commands](/workbench/voice/overview/)

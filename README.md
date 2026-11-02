@@ -26,7 +26,7 @@ The system-wide toolbox for translators. Select text in any Windows application 
 
 #### 🖥️ Supervertaler Workbench
 
-A standalone CAT tool of its own: editor, AI translation, translation memory, terminology and QA in one place, plus SuperLookup, QuickTrans and voice dictation that work in any application. Runs on Windows, macOS and Linux. Free and open source.
+A standalone CAT tool of its own: editor, AI translation, translation memory, terminology and QA in one place, plus SuperLookup, QuickTrans and voice commands that work in any application. Runs on Windows, macOS and Linux. Free and open source.
 
 [Open the Workbench docs →](workbench/)
 
