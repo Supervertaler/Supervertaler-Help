@@ -16,7 +16,7 @@ Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **🎤 Open
 
 Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to **Vosk**, the offline speech recogniser Always-On uses.
 
-Vosk only emits text for phrases in your command list – anything else is silently dropped as `[unk]`. So Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions. Running text is dictated with push-to-talk (below), not with Always-On.
+Vosk only emits text for phrases in your command list – anything else comes out as `[unk]`. Speech that matches no command is never typed: the status bar just says **No command matched**. So Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions. Running text is dictated with push-to-talk (below), not with Always-On.
 
 **To start:** click **▶️ Start Always-On** in the Voice tab, or press **Ctrl+Alt+O** from any application.
 
@@ -144,7 +144,7 @@ The **Microphone** dropdown picks the input device for both Always-On and push-t
 
 ### 🎤 Voice commands (Always-On listening)
 
-- **▶️ Start Always-On** / **⏹️ Stop Always-On**, with a status line (**⚪ Not active**, **🟢 Listening for speech…**, **🔴 Recording…**, **⏳ Processing…**).
+- **▶️ Start Always-On** / **⏹️ Stop Always-On**, with a status line (**⚪ Not active**, **⏳ Starting…** while the speech model loads – or downloads, the first time – **🟢 Listening for speech…**, **🔴 Recording…**, **⏳ Processing…**). If Always-On stops by itself (say, the microphone is unplugged), it shows an error and goes back to **⚪ Not active**.
 - **Mic sensitivity** – the amplitude threshold used to detect speech onset:
   - **Low (noisy)** – raises the threshold; ignores quiet background sounds but may miss soft speech
   - **Medium (normal)** – default; works well in a typical home office
