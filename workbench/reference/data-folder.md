@@ -108,6 +108,7 @@ folder:
 | `shortcuts.json` | Your keyboard shortcut changes |
 | `recent_projects.json` | The recent projects list |
 | `find_replace_history.json` | Find & Replace search history |
+| `superlookup_history.json` | SuperLookup search history (older versions kept it in the shared `settings/` folder; it is read from there once) |
 | `voice_commands.json` | Your voice commands |
 
 Older versions kept settings in separate files (such as `general_settings.json`
