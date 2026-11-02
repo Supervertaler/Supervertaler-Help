@@ -30,6 +30,7 @@ The window title reads **⚡ Supervertaler QuickTrans**. Below it:
 * **Source:** – the text being translated, in a small editable box. Fix a typo, trim it or paste something else, then press **Ctrl+Enter** (or click **↻ Re-translate**) and every provider translates the edited text again. While the box has the focus, digits and arrow keys go into the text instead of picking a result.
 * **↻ Re-translate** – runs every provider again on the (edited) source text.
 * **🔍 Run in SuperLookup** – closes the popup and opens Workbench's SuperLookup tab with the same query pre-filled and the search auto-fired. Useful when you've translated a phrase via QuickTrans and then think "actually, I want to look this up in my TMs / termbases / web resources too" – one click instead of dismissing the popup and pasting the query again
+* **Δ** – switches the [difference marks](#where-the-engines-disagree) on or off
 * **⚙️** – opens Workbench Settings → ⚡ QuickTrans so you can enable / disable providers and pick LLM models
 * **Languages:** – the source and target language, with a **⇄** swap button (see [Language pair](#language-pair) below).
 
@@ -47,6 +48,14 @@ If a provider fails, its row shows the error in red; it can't be picked, and it 
 | **Esc** | Dismiss the popup without inserting |
 
 Each translation row shows its number, a coloured provider label, and the translated text.
+
+### Where the engines disagree
+
+The first successful result is the reference. In every other row, the characters that differ from it are marked with an amber background. Under "Open de kraan langzaam.", DeepL's "Open de k**lep** langzaam." shows at a glance that only the noun differs; a different ending or a missing comma is just as easy to spot.
+
+* The **Δ** button in the popup and in the docked panel switches the marks on or off. Your choice is remembered.
+* Only the display is marked. Clicking a row, or pressing its number, inserts that engine's exact translation.
+* Results longer than 1,000 characters are shown without marks.
 
 ### AI providers: automatic or on request
 
@@ -103,7 +112,7 @@ Besides the popup, QuickTrans has a **⚡ QuickTrans** tab in two places: next t
 
 * The machine translation engines are fetched automatically, but only while the tab is visible.
 * AI providers always appear as **Fetch** rows, so a paid AI call only happens when you click.
-* **🔄** fetches the current segment again; **⚙️** opens the QuickTrans settings.
+* **🔄** fetches the current segment again; **Δ** switches the [difference marks](#where-the-engines-disagree) on or off; **⚙️** opens the QuickTrans settings.
 * Click a result to insert it into the target cell. While you're editing the target, **Ctrl+1** … **Ctrl+9** inserts the result with that number.
 
 ## Tips

@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-02
+
+- **Workbench: QuickTrans difference marks, glossary synonyms, SuperLookup history – not released yet.** *QuickTrans* has a new section, *Where the engines disagree*: the characters where each result differs from the first one are marked, the **Δ** button switches that on or off, and a click still inserts the exact translation. *TermLens* says that a synonym gets a chip of its own where it occurs, even next to the main term, and what it suggests. *Termbases* mentions the read-only **Synonyms** column. *User Data Folder* lists `superlookup_history.json` in `workbench/settings/`. Publish with the Workbench release that ships branch `claude/pr252-features`.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".

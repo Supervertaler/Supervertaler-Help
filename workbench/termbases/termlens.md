@@ -12,6 +12,7 @@ When you select a segment, TermLens analyses the source text against all active 
 - **Unmatched words** are shown in light text so you can read the full source sentence in context
 - **Project termbase** matches appear in pink; **Background termbase** matches appear in blue
 - **Non-translatable** terms (if configured) are shown in a distinct style
+- **Synonyms** get a chip of their own where they occur, even next to the main term. Take an entry *methyl-ethylketoxime* → *methyl ethyl ketoxime* with the synonym *MEKO* on both sides: in "…methyl-ethylketoxime (MEKO)…", TermLens shows the main term and, under "(MEKO)", **MEKO**. A synonym's chip suggests the same form among the target synonyms when there is one (MEKO → MEKO), otherwise the main target term; the other forms are offered as alternatives
 
 This gives you an at-a-glance overview of every term in the segment that has a termbase entry – without having to hover or click anything.
 
