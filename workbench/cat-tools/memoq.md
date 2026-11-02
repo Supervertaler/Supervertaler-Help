@@ -26,6 +26,20 @@ The table format with source and target columns works best with Supervertaler.
 3. Choose **memoQ XLIFF bilingual**
 4. Save the `.mqxliff` file
 
+You can also export a memoQ **view** that combines several documents. Supervertaler
+imports every document in it, and the import message says how many there were.
+(Older versions imported only the first one.)
+
+In an XLIFF import, memoQ's inline codes appear as numbered tags, as in Trados
+files: `<1>`…`</1>` for a pair such as bold, `<2/>` for a placeholder such as a
+cross-reference. Keep them in your translation; the export turns each one back
+into memoQ's own code.
+
+memoQ's segment statuses come in as Workbench statuses (*Confirmed*, *Proofread*,
+*Approved*, *Pre-translated*, *Draft*…), and locked segments stay locked. On
+export, only segments whose translation or status you changed are written; the
+others keep memoQ's own status, and untranslated segments are left empty.
+
 ## Import to Supervertaler
 
 1. Go to **Project → Import → memoQ → Bilingual Table (DOCX)…**

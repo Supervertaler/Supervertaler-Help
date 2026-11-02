@@ -18,6 +18,7 @@ guesswork.
   - The status line shows *Starting…* while the speech model loads.
   - The shortcut tables, *General settings*, *Termbases* (no 🎤 Voice column), *AutoCorrect*, the memoQ page and the link titles follow.
   - Publish with v1.10.374.
+- **Workbench: safe saving, the project folder, Ctrl+Shift+O and memoQ views – not released yet.** *Backup* has a new section, *Safe saving and the .svproj.bak copy*: every save is all-or-nothing, the previous save is kept as `<project>.svproj.bak`, and a damaged project offers to open that copy; the auto-backup TMX now goes into the project's `tm/` folder. *The Project Folder* shows `tm/` and the `.bak`, and says that the files a project exports back into (memoQ, Trados, CafeTran, Déjà Vu, PO) are copied into `source/` too, and when that copy is used. **Import Document** is now `Ctrl+Shift+O` in *Keyboard Shortcuts*, *Your First Project* and *DOCX Import* (Ctrl+O stays Open Project). *memoQ* says that an XLIFF of a memoQ view imports every document, how memoQ's inline codes appear as numbered tags, and what happens to statuses and locked segments. Publish with the Workbench release that ships branch `claude/pr252-fixes`.
 
 ## 2026-10-29
 
