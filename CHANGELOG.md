@@ -8,6 +8,16 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-02
+
+- **Workbench: Voice is commands only – not released yet** (from v1.10.374). *Voice* is rewritten for the commands-only Voice tab:
+  - The built-in dictation (push-to-talk with Whisper), the hold-to-talk key for commands and the "pause for external dictation" key are gone; for running text the page points to a dictation tool such as Windows voice typing or Wispr Flow.
+  - There is one on/off switch (Ctrl+Alt+O), commands are spoken in English, and there is a new *What I heard* list.
+  - One-word commands fire only when said on their own, speech that matches no command is never typed, and Keystroke commands no longer need AutoHotkey.
+  - The status line shows *Starting…* while the speech model loads.
+  - The shortcut tables, *General settings*, *Termbases* (no 🎤 Voice column), *AutoCorrect*, the memoQ page and the link titles follow.
+  - Publish with v1.10.374.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
