@@ -20,8 +20,10 @@ nest a project inside a larger job folder.
 ```
 My Project/
 ├─ My Project.svproj     ← the project file
+├─ My Project.svproj.bak ← the previous save (see Backup)
 ├─ source/               ← the original documents you're translating
-└─ target/               ← the translated documents you export
+├─ target/               ← the translated documents you export
+└─ tm/                   ← the auto-backup TMX
 ```
 
 - **`source/`** – when you **save** a project, its original document is copied
@@ -29,10 +31,24 @@ My Project/
   what makes the project portable: it no longer depends on the document staying
   at the exact location you first imported it from. Move or rename the original
   afterwards and your export still works.
+
+  Files you **export back into**, such as a memoQ bilingual DOCX or XLIFF, a
+  Trados package (SDLPPX), SDLXLIFF files, or a CafeTran, Déjà Vu or PO file, are
+  copied here too. Supervertaler keeps using your original as long as it can find
+  it, so the export is still offered next to it. The copy in `source/` is used
+  only when the original is gone, for example after you moved the folder or
+  opened the project on another computer; the export is then offered in
+  `target/`. A file is copied again only when it has changed, and two different
+  files with the same name get separate copies (`doc.sdlxliff`, `doc_2.sdlxliff`).
 - **`target/`** – when you run **Project → Export → Export Translated Document**
   (or Simple Text), the Save dialog opens here by default, so your finished
   translations land next to their sources. You can still browse somewhere else;
   this is only the default.
+- **`tm/`** – the automatic backup (**Settings → 💾 Backup**) writes the
+  project's translations here as `<project>_backup.tmx`.
+- **`.svproj.bak`** – the project as it was at the previous save. If the project
+  file is ever damaged, Supervertaler offers to open this copy. See
+  [Backup](/workbench/settings/backup/#safe-saving-and-the-svprojbak-copy).
 
 ## Why this matters
 

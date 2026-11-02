@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-02
+
+- **Workbench: safe saving, the project folder, Ctrl+Shift+O and memoQ views – not released yet.** *Backup* has a new section, *Safe saving and the .svproj.bak copy*: every save is all-or-nothing, the previous save is kept as `<project>.svproj.bak`, and a damaged project offers to open that copy; the auto-backup TMX now goes into the project's `tm/` folder. *The Project Folder* shows `tm/` and the `.bak`, and says that the files a project exports back into (memoQ, Trados, CafeTran, Déjà Vu, PO) are copied into `source/` too, and when that copy is used. **Import Document** is now `Ctrl+Shift+O` in *Keyboard Shortcuts*, *Your First Project* and *DOCX Import* (Ctrl+O stays Open Project). *memoQ* says that an XLIFF of a memoQ view imports every document, how memoQ's inline codes appear as numbered tags, and what happens to statuses and locked segments. Publish with the Workbench release that ships branch `claude/pr252-fixes`.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
