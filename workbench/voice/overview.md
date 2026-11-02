@@ -2,85 +2,60 @@
 title: "Voice"
 ---
 
-**Voice** is Supervertaler's voice command and dictation engine. It lets you control any application on your computer – Trados, memoQ, Word, or anything else in the foreground – using your voice, while Supervertaler Workbench stays running in the background.
+**Voice** lets you control Workbench – and Trados, memoQ, Word or anything else in the foreground – with spoken **commands**: "next segment", "confirm", "copy source", "undo", and any commands you add yourself. It runs offline, on your own computer.
 
-Open it via the **🎤 Voice** top tab in Workbench, the tray icon's **🎤 Open Voice** entry, or press **Ctrl+Alt+O** to toggle Always-On listening from anywhere on your computer.
+Open it via the **🎤 Voice** top tab in Workbench or the tray icon's **🎤 Open Voice** entry, or press **Ctrl+Alt+O** to switch listening on or off from anywhere on your computer.
 
-![](/.gitbook/assets/Supervertaler-Workbench-Sidekick-AutoFingers.png)
+:::note[Commands only – use a dictation tool for running text]
+Voice does not write your translation. For running text, use a dictation tool such as Windows voice typing (**Win+H**), [Wispr Flow](https://wisprflow.ai/) or Dragon. Voice keeps listening for commands while you dictate with it. This is the same approach as SuperVoice in [Supervertaler for Trados](/trados/voice-commands/).
+
+Workbench used to have its own push-to-talk dictation (Ctrl+Shift+Space). It was removed in v1.10.374.
+:::
 
 ***
 
-## Three modes
+## Listening
 
-### Always-On listening
+Voice listens until you switch it off. When you speak, it detects the start and end of what you say from the sound level, and hands the recording to **Vosk**, the offline speech recogniser Voice uses.
 
-Always-On runs a continuous microphone stream in the background. When you speak, Voice detects speech via amplitude-based VAD (voice activity detection), captures the utterance, and hands it to **Vosk**, the offline speech recogniser Always-On uses.
+Vosk only knows the phrases in your command list – anything else comes out as `[unk]`. Speech that matches no command is never typed: the status bar just says **No command matched**. So you can leave Voice on, talk to colleagues or take phone calls, and only your command phrases trigger anything.
 
-Vosk only emits text for phrases in your command list – anything else comes out as `[unk]`. Speech that matches no command is never typed: the status bar just says **No command matched**. So Always-On is "commands only" by design: you can leave it on all day, talk to colleagues, take phone calls, etc., and only matching command phrases will trigger actions. Running text is dictated with push-to-talk (below), not with Always-On.
+**To start:** click **▶️ Start Always-On** in the Voice tab, press **Ctrl+Alt+O** from any application, or click the microphone icon in the system tray.
 
-**To start:** click **▶️ Start Always-On** in the Voice tab, or press **Ctrl+Alt+O** from any application.
+**To stop:** the same again – **⏹️ Stop Always-On**, **Ctrl+Alt+O**, the tray icon – or say **"stop listening"**.
 
-**To stop:** click **⏹️ Stop Always-On** or press **Ctrl+Alt+O** again.
+The tray icon is grey while Voice is off and red while it is listening; right-click it for **▶ Start Always-On** and **🎤 Open Voice**.
 
-Voice also keeps a microphone icon in the system tray: grey while Always-On is off, red while it is listening. Click the icon to start or stop Always-On; right-click it for **▶ Start Always-On** and **🎤 Open Voice**.
+**Commands are spoken in English**, whatever your project's languages. The first time you start listening, the small English speech model (about 40 MB) downloads to the `vosk-models` folder in your data folder.
 
-**Focus matters:** Voice sends keystrokes and text to whichever window is currently focused. After starting Always-On, click into Trados, Word, or your browser before you speak.
+**Focus matters:** commands that press keys go to whichever window is in front. After switching listening on, click into Trados, memoQ or Word before you speak.
 
-### Push-to-Talk dictation (Ctrl+Shift+Space)
+### What I heard
 
-Press **Ctrl+Shift+Space** (the default dictation hotkey – ⌘⇧Space on macOS; works globally, from any application, and is configurable in **Settings → Keyboard Shortcuts**) to record a single utterance for free-form running-text dictation. A small "🎤 Listening…" toast appears in the top-right of the screen so you know the recording is live; it goes away again when you stop. Recording stops when you release the key (in hold-to-talk mode) or when you press the hotkey again (in toggle mode). The speech is transcribed on your own computer with faster-whisper, and the text is typed at the cursor position.
+Under the listening controls, **What I heard** lists the last 50 things Voice heard, newest first, and what happened:
 
-**Always-On + push-to-talk coexist.** If Always-On is running when you trigger push-to-talk, Voice pauses the always-on listener for the duration of the recording, runs the dictation, then resumes Always-On automatically. So you get free continuous Vosk command recognition all day *plus* a hotkey for occasional running-text dictation, without having to manually toggle Always-On off and on.
+- green – a command ran, e.g. *“undo” → ✓ Undo last action*
+- red – a command matched but failed, e.g. a key it couldn't send
+- grey – *no command matched*
 
-**Push-to-talk modes** (the **Mode** dropdown in the **🗣️ Dictation (push-to-talk)** group):
-- **Hold-to-talk** (default, recommended) – hold the hotkey to record, release to stop
-- **Toggle** – press once to start, press again to stop
-
-_On Windows, Voice detects when you release the global hotkey, so hold-to-talk works from any application. On macOS and Linux, releasing the global hotkey isn't detected yet: press it again to stop, or let the maximum recording duration end the recording._
-
-### Push-to-Talk for commands (Ctrl+Alt+V) – v1.10.193
-
-Press and **hold** **Ctrl+Alt+V** (the default; configurable in **Settings → Keyboard Shortcuts**) to temporarily activate the command listener for the duration of the hold. Release the key to stop it again. Works globally, from any application.
-
-This is a third mode that sits between the two above:
-
-- Always-On is the **toggle** version of command listening – mic open continuously, listens for commands all day.
-- Command Push-to-Talk is the **hold** version – mic open only while you hold the chord, so the rest of the time the microphone is genuinely free for other applications.
-
-**When to use this mode:**
-
-- You also use an external dictation app (Wispr Flow, Dragon, macOS Dictation, etc.) for running-text dictation and don't want Supervertaler's always-on mic competing for the audio stream.
-- You only need voice commands occasionally – pressing a hotkey when you want to issue one is less intrusive than leaving the mic open all day.
-- You're on a laptop battery-conscious about the always-on Vosk model running 24/7.
-
-**Coexistence with the toggle mode:** if Always-On is already running when you press Ctrl+Alt+V, the hotkey is a no-op – it won't restart what's already going, and releasing it won't stop Always-On either (we never touch what we didn't start). So the two modes don't fight each other; you can use whichever feels right for the moment.
-
-**Platform notes:** release detection on Windows uses `GetAsyncKeyState` polling (same mechanism as the dictate PTT). On macOS / Linux, the listener stays running until you press Ctrl+Alt+O or click ⏹ Stop Always-On – it doesn't auto-stop on key release. Lift to a manual toggle there.
-
-### Pause Always-On for external dictation – v1.10.246
-
-The opposite trade-off to Command Push-to-Talk: keep Always-On running **permanently**, but have it step off the microphone for the moments you're dictating into an **external** tool (Wispr Flow, Dragon, macOS Dictation, …). You bind one of *your* keys – the same key you press to start your external dictation – and Always-On pauses while it's engaged, then resumes. So your voice commands stay available all day, and the two never fight over the mic.
-
-The key is **recorded, not typed**, so it works with keys you can't express as text – including media keys like **fast-forward**, which many people use to trigger their dictation tool.
-
-**To set it up** – Voice tab → **⏸️ Pause Always-On for external dictation**:
-
-1. Click **⏺ Record key**, then press the key you use for your external dictation tool. The label shows what was captured (e.g. *Media Next / Fast-Forward*).
-2. Choose a **mode**:
-   - **Hold** _(default)_ – Always-On pauses only while you hold the key and resumes the instant you release it. Pair this with **hold-to-talk** tools like Wispr Flow: hold your key → speak → release, and Always-On is live again.
-   - **Toggle** – press once to pause, press again to resume. Use this if your tool starts/stops dictation on a single tap.
-
-It works **globally** (the Workbench doesn't need to be focused) and the key is observed *passively* – your external tool still receives it normally. Press detection and release both come from the same low-level hook used by Command Push-to-Talk.
-
-:::note
-**Which to use – this or Command Push-to-Talk (Ctrl+Alt+V)?** They solve the same problem from opposite ends. Command Push-to-Talk keeps Always-On **off** and listens for commands only while you hold its chord. The pause hotkey keeps Always-On **on** and only pauses it while you hold *your* key. Pick the pause hotkey if you want commands available most of the time and just need to duck out of the mic during external dictation.
-:::
+If a command didn't fire, this is where you see why. The list is cleared when Workbench closes.
 
 ***
 
 ## Voice commands
 
-Voice commands execute specific actions when you speak a trigger phrase. They can type text, press keyboard shortcuts, run AutoHotkey scripts, or call internal Workbench functions.
+Voice commands run an action when you speak their phrase. They can call a Workbench action, press keys in the program in front, or run AutoHotkey code.
+
+### How a phrase is matched
+
+- A command fires when you say its phrase (or one of its aliases) on its own. Capitals don't matter.
+- A phrase of **two or more words** also fires when Voice hears it inside a longer utterance.
+- A **one-word** command fires only when you say it on its own – never from the middle of a sentence.
+- Near misses don't count: Voice never fires the "closest" command.
+
+:::caution[Choose distinctive phrases]
+Voice keeps listening while you dictate with another tool, so an everyday word could fire mid-sentence. Prefer two or three words – "next segment", not "next"; "confirm segment", not "okay". The built-in commands follow this rule.
+:::
 
 ### The commands table
 
@@ -114,7 +89,7 @@ You can also select a row and click the **✏️ Edit** button below the table.
 Click **➕ Add** below the table. Choose a command type:
 
 - **Command** – calls an internal Workbench action (confirm segment, next segment, etc.)
-- **Keystroke** – sends a key combination to the active window. Click into the **Keystroke** field and press the keys you want to send (e.g. press Ctrl+Enter); the field shows the platform-native symbols (⌘⇧⌥⌃ on macOS, Ctrl+Shift+Alt elsewhere) so you don't have to translate between platforms.
+- **Keystroke** – sends a key combination to the active window. Click into the **Keystroke** field and press the keys you want to send (e.g. press Ctrl+Enter); the field shows the platform-native symbols (⌘⇧⌥⌃ on macOS, Ctrl+Shift+Alt elsewhere) so you don't have to translate between platforms. Keystroke commands don't need AutoHotkey.
 - **AHK Script** – runs an AutoHotkey v2 script file
 - **AHK Inline** – runs a short AutoHotkey v2 snippet directly
 
@@ -128,80 +103,36 @@ The Edit Voice Command dialog includes a **context-sensitive cheat sheet** below
 
 Select the row and click **🗑️ Remove**, or select multiple rows and remove them together. **🔄 Reset** restores the default command list.
 
-### Edits take effect immediately under Vosk
+### Edits take effect immediately
 
-Adding / editing / removing / disabling a command immediately rebuilds Vosk's recogniser grammar in the background – you don't have to stop and restart Always-On to "teach" Vosk a new phrase. The status bar briefly shows `🔄 Vosk grammar refreshed (N phrases)` to confirm the swap took effect. The next utterance you speak will use the new grammar.
+Adding / editing / removing / disabling a command immediately rebuilds Vosk's list of phrases in the background – you don't have to stop and restart listening to "teach" Vosk a new phrase. The next thing you say uses the new list.
 
 ***
 
 ## Settings
 
-All Voice settings are in the left half of the **🎤 Voice** tab, from top to bottom:
+All Voice settings are in the left half of the **🎤 Voice** tab. They are saved as soon as you change them.
 
 ### Microphone
 
-The **Microphone** dropdown picks the input device for both Always-On and push-to-talk. **System default** follows whatever microphone your operating system has selected. If a chosen microphone is unplugged, Voice falls back to the system default. The choice is saved as soon as you make it.
+The **Microphone** dropdown picks the input device. **System default** follows whatever microphone your operating system has selected. If a chosen microphone is unplugged, Voice falls back to the system default.
 
-### 🎤 Voice commands (Always-On listening)
+### 🎤 Voice commands
 
-- **▶️ Start Always-On** / **⏹️ Stop Always-On**, with a status line (**⚪ Not active**, **⏳ Starting…** while the speech model loads – or downloads, the first time – **🟢 Listening for speech…**, **🔴 Recording…**, **⏳ Processing…**). If Always-On stops by itself (say, the microphone is unplugged), it shows an error and goes back to **⚪ Not active**.
-- **Mic sensitivity** – the amplitude threshold used to detect speech onset:
+- **▶️ Start Always-On** / **⏹️ Stop Always-On**, with a status line (**⚪ Not active**, **⏳ Starting…** while the speech model loads – or downloads, the first time – **🟢 Listening for speech…**, **🔴 Recording…**, **⏳ Processing…**). If listening stops by itself (say, the microphone is unplugged), Voice shows an error and goes back to **⚪ Not active**.
+- **On/off hotkey** – shows the hotkey (**Ctrl+Alt+O** by default). Click **Change in Settings → Keyboard Shortcuts** to give it another key – any key works, for example numpad **+**.
+- **Mic sensitivity** – the sound level that counts as speech:
   - **Low (noisy)** – raises the threshold; ignores quiet background sounds but may miss soft speech
   - **Medium (normal)** – default; works well in a typical home office
   - **High (quiet)** – lowers the threshold; captures quiet voices but may trigger on background noise
-- **Push-to-talk hotkey** – shows the Command Push-to-Talk chord (**Ctrl+Alt+V** by default). Click **Change in Settings → Keyboard Shortcuts** to rebind it.
-
-There is no engine choice here: Always-On always uses **Vosk** – offline, free and with almost no CPU load, which makes it both faster and more accurate for commands than a Whisper model. The first time you start Always-On, the small English Vosk model (~40 MB) auto-downloads to `vosk-models/` in your data folder. Same for the small Dutch model when your project's target language is Dutch. Models are cached after the first download.
-
-### ⏸️ Pause Always-On for external dictation
-
-See [Pause Always-On for external dictation](#pause-always-on-for-external-dictation--v110246) above.
-
-### 🗣️ Dictation (push-to-talk)
-
-Push-to-talk dictation always uses **faster-whisper**, which runs OpenAI's Whisper speech models on your own computer (offline, free).
-
-| Setting | What it does |
-| --- | --- |
-| **Hotkey** | Shows the dictation hotkey (**Ctrl+Shift+Space** by default). Click **Change in Settings → Keyboard Shortcuts** to rebind it – any key works, for example numpad **+** for one-finger dictation. |
-| **Mode** | **Hold-to-talk** (default) or **Toggle** – see [Push-to-Talk dictation](#push-to-talk-dictation-ctrlshiftspace) above. |
-| **Model** | The Whisper model size. Larger models are more accurate but slower to load and transcribe, and need more RAM. |
-| **Max** | The longest single recording, from 3 to 60 seconds (default 10). Speech beyond the limit is cut off and transcribed up to that point. |
-| **Language** | **Auto (use project target language)** (default) uses the project's target language. **Auto-detect (Whisper picks per utterance)** lets Whisper work out the language each time – handy if you dictate in more than one language, but it needs about a second of speech to be reliable. Or pick a language explicitly. |
-
-| Model | Download size | Notes |
-| --- | --- | --- |
-| tiny | ~75 MB | Very fast, lowest accuracy |
-| base | ~142 MB | Good balance (recommended) |
-| small | ~466 MB | Noticeably better accuracy |
-| medium | ~1.5 GB | High accuracy |
-| large | ~2.9 GB | Best accuracy, slow on CPU |
-
-### 📚 Dictation vocabulary
-
-Helps Whisper spell brand names and technical terms correctly. Common ones (Supervertaler, Trados, memoQ, OpenAI and so on) are built in.
-
-- **Custom dictionary** – your own terms, separated by commas or new lines: client names, product names, jargon.
-- **Also bias from your termbases (target-language terms)** – adds the target-language terms of every termbase you have ticked in the **🎤 Voice** column of the **🏷️ Termbases** tab (up to 200 terms per dictation). No termbase is ticked by default; ticking this box takes you to the Termbases tab so you can choose.
-- **Replacements** – fixes for words Whisper keeps getting wrong: enter what it hears under **Heard** and what you meant under **Meant**. Use **➕ Add row** and **➖ Remove selected** to edit the list.
-
-### ⌨️ AutoHotkey Integration
-
-See [AutoHotkey integration](#autohotkey-integration) below.
-
-### Saving
-
-The microphone, mic sensitivity, push-to-talk mode and pause-hotkey settings are saved as soon as you change them. The Whisper model, maximum duration, language and dictation vocabulary are saved when you click **💾 Save Voice Settings** at the bottom of the panel.
 
 ***
 
 ## AutoHotkey integration
 
-AutoHotkey v2 must be installed for AHK-type commands to work. Supervertaler checks for it automatically and shows the result in the **⌨️ AutoHotkey Integration** group of the Voice tab.
+AutoHotkey v2 is only needed for **AHK Inline** and **AHK Script** commands. Supervertaler checks for it automatically and shows the result under the commands table: **✅ AutoHotkey detected** or **⚠️ AutoHotkey not found**.
 
-To verify: the status line in the **⌨️ AutoHotkey Integration** group shows either **✅ AutoHotkey detected** or **⚠️ AutoHotkey not found**.
-
-Click **📂 Open Scripts Folder** to open the folder where standalone AHK script files are stored.
+Click **📂 Scripts folder** to open the folder where standalone AHK script files are stored.
 
 ***
 
@@ -217,7 +148,7 @@ Voice sends input at the Win32 hardware-input level (equivalent to physical keys
 | "go to top" | Keystroke | `ctrl+home` |
 | "undo" | Keystroke | `ctrl+z` |
 
-After creating a command, start Always-On, click into Trados Studio, and speak the phrase.
+After creating a command, start listening, click into Trados Studio, and speak the phrase. If you work in Trados most of the time, Supervertaler for Trados has its own voice commands, [SuperVoice](/trados/voice-commands/), which work inside Studio.
 
 ***
 
@@ -225,13 +156,11 @@ After creating a command, start Always-On, click into Trados Studio, and speak t
 
 | Shortcut | Action |
 | --- | --- |
-| **Ctrl+Alt+O** (⌘⌥O on macOS) | Toggle Always-On listening |
-| **Ctrl+Shift+Space** (⌘⇧Space on macOS) | Push-to-talk dictation (one utterance) – default, configurable |
-| **Ctrl+Alt+V** (⌘⌥V on macOS) | Command Push-to-Talk – hold to listen for voice commands |
+| **Ctrl+Alt+O** (⌘⌥O on macOS) | Switch listening on or off |
 
 Global hotkeys work on macOS too (via the NSEvent monitor), but require Accessibility permission for whichever binary launched Python – see [Keyboard Shortcuts](/workbench/settings/shortcuts/#per-platform-notes) for setup. All hotkeys can be customised in **Settings → Keyboard Shortcuts**.
 
-On Windows, AltGr counts as Ctrl+Alt. Since v1.10.372, if AltGr+O or AltGr+V types a character on your keyboard layout, you get the character rather than the Voice hotkey – use the left Ctrl and left Alt keys for the hotkeys.
+On Windows, AltGr counts as Ctrl+Alt. Since v1.10.372, if AltGr+O types a character on your keyboard layout, you get the character rather than the Voice hotkey – use the left Ctrl and left Alt keys for the hotkey.
 
 :::note
 **Always-On moved from Ctrl+Alt+A to Ctrl+Alt+O in v1.10.368.** Supervertaler for Trados now uses Ctrl+Alt+A for "Add term with abbreviation", and because Always-On is a *global* hotkey it fires whichever application is in front – so a single press in Trados would have triggered both. If you had customised it to Ctrl+Alt+A yourself, it has been returned to the new default; you can set it back, but it will keep clashing while both products are running.

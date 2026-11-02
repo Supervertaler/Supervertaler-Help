@@ -824,7 +824,7 @@ const sidebar = [
             "link": "/workbench/clipboard/overview/"
           },
           {
-            "label": "Voice Commands & Dictation",
+            "label": "Voice Commands",
             "link": "/workbench/voice/overview/"
           },
           {
