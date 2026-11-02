@@ -13,7 +13,7 @@ Welcome to the help center for 🖥️ **Supervertaler Workbench** – a free, o
 - **Translation Memory** – fuzzy matching, TMX import, concordance search
 - **Terminology** – termbases, automatic term highlighting, TermLens
 - **Your own rules** – [segmentation rules](/workbench/settings/segmentation-rules/) and [inline codes](/workbench/settings/inline-codes/) (placeholders such as `{name}` or `%s` treated like tags)
-- **Companion tabs** – Chat (AI conversation), SuperLookup, Clipboard manager, Voice
+- **Companion tabs** – Chat (AI conversation), SuperLookup, Voice
 - **Voice** – always-on voice commands and push-to-talk dictation for any application
 - **SuperLookup** – system-wide translation lookup (TM, termbase, MT, web)
 - **QuickTrans Popup** – always-on-top popup with simultaneous translations from every enabled provider

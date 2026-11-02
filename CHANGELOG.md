@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-02
+
+- **Workbench: the Clipboard Manager is gone – not released yet.** Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older. Publish with the Workbench release that ships it.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".

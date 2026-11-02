@@ -8,7 +8,7 @@ Font settings control the typeface and size used in the translation grid and the
 
 - **Font family** – any font installed on your system; the dropdown shows available fonts
 - **Font size** – point size for the grid; companion tabs use the same family at their own size
-- **Global UI font scale** – a single setting that scales every UI element (menus, tabs, settings, Chat panel, Clipboard history, SuperLookup, status bar) at once
+- **Global UI font scale** – a single setting that scales every UI element (menus, tabs, settings, Chat panel, SuperLookup, status bar) at once
 
 ## Choosing a font
 
@@ -23,12 +23,12 @@ Font settings control the typeface and size used in the translation grid and the
 The scale covers:
 
 - The grid (segment numbers, type column, source and target text)
-- Companion tabs (Clipboard 3-column tree, SuperLookup web resources, Voice command table, Chat panel)
+- Companion tabs (SuperLookup web resources, Voice command table, Chat panel)
 - QuickTrans always-on-top popup
 - Tabs, settings panels, AI tools, status bar, menus
 - Termbase and TM panes
 
-A new value is applied a moment after you change it, because the page saves itself; the **Apply** button next to the box applies it straight away. Most areas update immediately. Lazy-constructed widgets (Clipboard, SuperLookup, Voice) pick up the new size when they are next opened, so switch away from a companion tab and back once after changing the scale.
+A new value is applied a moment after you change it, because the page saves itself; the **Apply** button next to the box applies it straight away. Most areas update immediately. Lazy-constructed widgets (SuperLookup, Voice) pick up the new size when they are next opened, so switch away from a companion tab and back once after changing the scale.
 
 If you've also customised the grid font size (above), that value still applies on top of the scale – so a 12 pt grid font at 150% renders at 18 pt. Grid zoom (Ctrl+= / Ctrl+-) continues to work at any scale.
 

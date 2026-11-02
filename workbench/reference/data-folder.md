@@ -44,8 +44,8 @@ Supervertaler/
 │   ├── non_translatables/
 │   └── segmentation_rules/
 │
-├── snippet_library/             Workbench: Clipboard Manager snippets
-├── text_conversion_library/     Workbench: Clipboard Manager text conversions
+├── snippet_library/             Workbench up to v1.10.373: Clipboard Manager snippets
+├── text_conversion_library/     Workbench up to v1.10.373: Clipboard Manager text conversions
 ├── find_replace_sets/           Workbench: saved Find & Replace sets
 ├── vosk-models/                 Workbench: speech models for Voice
 │
@@ -88,10 +88,12 @@ versioned project `backups/` (see [Backup](/workbench/settings/backup/)), the di
 voice scripts, the Superbrowser logins and a web cache.
 
 A few Workbench libraries sit at the top level of the data folder:
-`snippet_library/` and `text_conversion_library/` (the
-[Clipboard Manager](/workbench/clipboard/overview/)'s Menu column),
 `find_replace_sets/` (saved Find & Replace sets) and `vosk-models/` (the
 speech models [Voice](/workbench/voice/overview/) downloads on first use).
+`snippet_library/` and `text_conversion_library/` hold the snippets and text
+conversions of the Clipboard Manager, which Workbench had until v1.10.373.
+Workbench no longer uses them but leaves them where they are, so you can copy
+what you need into [Supervertaler Sidekick](/sidekick/clipboard/).
 
 ### Settings files
 

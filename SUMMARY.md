@@ -220,7 +220,6 @@
 * [QuickTrans](workbench/quicktrans/overview.md)
   * [Machine Translation Engines](workbench/quicktrans/machine-translation.md)
   * [Custom MT Endpoint](workbench/quicktrans/custom-mt-endpoint.md)
-* [Clipboard Manager](workbench/clipboard/overview.md)
 * [Voice Commands & Dictation](workbench/voice/overview.md)
 * [PDF Rescue (OCR)](workbench/tools/pdf-rescue.md)
 * [TMX Editor](workbench/tools/tmx-editor.md)

@@ -241,6 +241,5 @@ On Windows, AltGr counts as Ctrl+Alt. Since v1.10.372, if AltGr+O or AltGr+V typ
 
 ## Related pages
 
-- [Clipboard Manager](/workbench/clipboard/overview/)
 - [Keyboard Shortcuts](/workbench/settings/shortcuts/)
 - [General Settings](/workbench/settings/general/)

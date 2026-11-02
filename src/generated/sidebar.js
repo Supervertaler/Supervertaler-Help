@@ -820,10 +820,6 @@ const sidebar = [
             ]
           },
           {
-            "label": "Clipboard Manager",
-            "link": "/workbench/clipboard/overview/"
-          },
-          {
             "label": "Voice Commands & Dictation",
             "link": "/workbench/voice/overview/"
           },

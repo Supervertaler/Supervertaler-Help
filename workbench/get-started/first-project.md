@@ -35,11 +35,11 @@ Your document is now segmented and ready for translation.
 
 ## Understanding the Interface
 
-After import, you'll see the main window. Along the top are the workspace tabs (**Editor**, **TMs**, **Termbases**, **AI**, **SuperLookup**, **Clipboard Manager**, **Voice**, **Settings**). The **Editor** tab holds the translation grid:
+After import, you'll see the main window. Along the top are the workspace tabs (**Editor**, **TMs**, **Termbases**, **AI**, **SuperLookup**, **Voice**, **Settings**). The **Editor** tab holds the translation grid:
 
 ```
 ┌──────────────────────────────────────────────────────────────────────┐
-│ Editor │ TMs │ Termbases │ AI │ SuperLookup │ Clipboard │ Voice │ ⚙   │
+│ Editor │ TMs │ Termbases │ AI │ SuperLookup │ Voice │ ⚙               │
 ├──────────────────────────────────────────────────────────────────────┤
 │  # │ Type │ Source                │ Target                │ Status    │
 ├────┼──────┼───────────────────────┼───────────────────────┼───────────┤

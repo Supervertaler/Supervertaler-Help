@@ -83,7 +83,6 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 |----------|--------|
 | `Ctrl+Shift+M` | TM Manager (separate window) |
 | `F5` | Force-refresh matches (clear cache) |
-| `Ctrl+Alt+C` | Open the Clipboard manager (system-wide) |
 
 ## File Operations
 
