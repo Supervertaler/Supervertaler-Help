@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-02
+
+- **Trados: two new voice commands, "split segment" and "merge segments" – not released yet.** *SuperVoice* lists them in the command table (Studio's Split Segment, Alt+Shift+T, and Merge Segments, Ctrl+Alt+S) and says what to change if you have rebound those shortcuts. *Customising commands* no longer says to untick a default command rather than delete it: from 18/19.20.204 a deleted or renamed default stays that way after an update.
+
 ## 2026-10-29
 
 - **memoQ: when Check now cannot confirm the licence** (from v0.1.28). *Licensing* says what to do when **Check now** answers that the licence server no longer has this computer's activation: enter the licence key again, in the key box the window shows once AI translation has paused, or after **Deactivate this computer** before then. *Troubleshooting* says the same under "AI translation is paused".
