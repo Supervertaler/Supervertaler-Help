@@ -346,6 +346,19 @@ With **Also add issues as Trados comments** ticked on Batch Operations, each iss
 - **Ticked (the default):** the comment starts with "AI proofreader" and the model that found the issue, for example `AI proofreader (Claude Opus 5.5):`, so whoever gets the file can tell it from a colleague's comment.
 - **Unticked:** the comment holds only the issue and the suggestion. Supervertaler then cannot tell its own comments from anyone else's, so a later proofreading run can add a second comment to a segment if it words the issue differently.
 
+## Machine translation (SuperBench) (from v18/19.20.204)
+
+The keys for the machine-translation engines that [SuperBench](/trados/superbench/#deepl-and-google-translate-from-v181920204) can set against your AI models. Each box has **Show** and **Test**.
+
+| Engine | Key | Where to get one |
+|---|---|---|
+| **DeepL** | **DeepL key** | [deepl.com/pro-api](https://www.deepl.com/en/pro-api) – the free **Developer** plan comes with 1 million characters, once. Copy the key from your account's **API Keys** page. A key from DeepL's free plan ends in `:fx`. |
+| **Google Translate** | **Google Translate key** | A Google Cloud API key with the **Cloud Translation API** turned on in its project. |
+
+- **Shared with Sidekick.** The keys go into the same key file as every other provider's, under their own names, so a key entered in Sidekick appears here and the other way round. They are locked to your Windows sign-in like every other key.
+- **Test** checks the key in its box without saving it. For DeepL it asks how much of your allowance is used, which costs nothing; for Google it translates one word. With an empty box, Test asks for a key instead of sending none.
+- **A key that can't be read on this computer** – saved under another Windows sign-in, or after your Windows password was reset by an administrator – leaves its box empty with a note under it saying so. Paste the key in again. **OK** with the box left empty keeps the stored key.
+
 ---
 
 ## See Also
