@@ -55,6 +55,20 @@ Keys are kept in one file shared by Supervertaler for Trados, Supervertaler for 
 
 The key box says so when a key plainly belongs to another service. Each provider's keys have a recognisable start: Anthropic `sk-ant-`, OpenAI `sk-` or `sk-proj-`, Gemini `AIza`, xAI `xai-`, OpenRouter `sk-or-`.
 
+### Keys locked to this computer (from v18.20.204)
+
+Each key is now also kept in your Windows profile, in `%APPDATA%\Supervertaler\api-keys.locked.json`, locked by Windows so that it opens only for your Windows account. The data folder's `api-keys.json` is still written as before, so Supervertaler for memoQ, Sidekick and older versions keep working; a later version will stop keeping keys in the data folder. There is nothing to do: your existing keys, including those of your custom endpoints, are locked when Trados Studio starts, and renaming an endpoint takes its key with it.
+
+### "Can't be read on this computer"
+
+A key that Windows will not unlock for you – one saved under another Windows sign-in, or one stored before an administrator reset your Windows password – is never shown as an empty box or sent to the provider. AI Settings says so under that provider's key box (or the endpoint's):
+
+> Your Anthropic key can't be read on this computer – it was saved under another Windows sign-in, or your Windows password was reset. Paste the key in again; nothing else is affected.
+
+An AI action that needs the key stops with "Can't use your Anthropic key – it can't be read on this computer…" instead of calling the provider. Paste the key in again and click **OK**. Until you do, the unreadable copy is kept: some causes pass by themselves, such as a company network that cannot be reached yet after a password reset.
+
+If the file holding the locked keys is ever damaged, Supervertaler keeps a copy of it beside the original (`api-keys.locked.damaged-…json`) and says so under the key box, asking you to paste your keys in again. While this version still keeps your keys in the data folder as well, they are locked again from there by themselves, so in practice only a key that an AI action reports as missing needs pasting.
+
 ## Model selection
 
 A dropdown showing a curated list of recommended models for the selected provider.
@@ -331,6 +345,19 @@ With **Also add issues as Trados comments** ticked on Batch Operations, each iss
 
 - **Ticked (the default):** the comment starts with "AI proofreader" and the model that found the issue, for example `AI proofreader (Claude Opus 5.5):`, so whoever gets the file can tell it from a colleague's comment.
 - **Unticked:** the comment holds only the issue and the suggestion. Supervertaler then cannot tell its own comments from anyone else's, so a later proofreading run can add a second comment to a segment if it words the issue differently.
+
+## Machine translation (SuperBench) (from v18/19.20.204)
+
+The keys for the machine-translation engines that [SuperBench](/trados/superbench/#deepl-and-google-translate-from-v181920204) can set against your AI models. Each box has **Show** and **Test**.
+
+| Engine | Key | Where to get one |
+|---|---|---|
+| **DeepL** | **DeepL key** | [deepl.com/pro-api](https://www.deepl.com/en/pro-api) – the free **Developer** plan comes with 1 million characters, once. Copy the key from your account's **API Keys** page. A key from DeepL's free plan ends in `:fx`. |
+| **Google Translate** | **Google Translate key** | A Google Cloud API key with the **Cloud Translation API** turned on in its project. |
+
+- **Shared with Sidekick.** The keys go into the same key file as every other provider's, under their own names, so a key entered in Sidekick appears here and the other way round. They are locked to your Windows sign-in like every other key.
+- **Test** checks the key in its box without saving it. For DeepL it asks how much of your allowance is used, which costs nothing; for Google it translates one word. With an empty box, Test asks for a key instead of sending none.
+- **A key that can't be read on this computer** – saved under another Windows sign-in, or after your Windows password was reset by an administrator – leaves its box empty with a note under it saying so. Paste the key in again. **OK** with the box left empty keeps the stored key.
 
 ---
 
