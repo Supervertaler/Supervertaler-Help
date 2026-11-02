@@ -20,6 +20,12 @@ The check looks for signs of commentary that the source itself does not have, so
 
 The free trial has ended, or a licensed computer has not been online for 30 days. Terminology, termbases, prompts and memory banks keep working meanwhile. Open **Supervertaler for memoQ** from the Start menu and choose **Help → Licence**: enter a key, or click **Check now** once you are online. If **Check now** says the licence server no longer has this computer's activation, enter your licence key again in the same window. See [Licensing](/memoq/licensing/#when-a-licence-lapses).
 
+### "Can't use your Anthropic key – it can't be read on this computer"
+
+The key is stored, but Windows will not unlock it for you here: it was saved under another Windows sign-in, or before an administrator reset your Windows password. Paste the key in again under **Settings → Translation settings** in Supervertaler for memoQ, or in memoQ's own Supervertaler dialog. Nothing else is affected, and nothing was sent to the provider. See [API keys are shared](/memoq/prompt-editor/#api-keys-are-shared).
+
+If the message says instead that *the file holding your locked API keys is damaged*, paste the key in again the same way: the damaged file is set aside, not deleted, and replaced.
+
 ### The Review tab says "machine translation from MT / Supervertaler"
 
 memoQ records every machine translation inserted into a row, keeps the record after you rewrite and confirm the row, and shows it to whoever receives the project. No memoQ setting turns it off. The Supervertaler editor can remove it from documents you export – see [Removing MT Marks](/memoq/remove-mt-marks/).
