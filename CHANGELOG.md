@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-03
 
+- **Site: the Sv brand mark is purple.** The favicon and the Sidekick icon in the menu go from black to purple, the brand's new colour on supervertaler.com too. The favicon no longer inverts on a dark tab strip: a purple disc shows on both. A link to a Workbench page pasted into WhatsApp, LinkedIn, Slack or X now shows Workbench's green mark rather than the brand one.
 - **Site: an enlarged screenshot is no longer cut off by the menu.** Clicking a screenshot enlarges it over the whole window. The left-hand menu and the top bar used to stay in front of it and hide its left edge.
 - **Workbench: the Clipboard Manager is gone** (from v1.10.374). Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older.
 - **Workbench: Voice is commands only** (from v1.10.374). *Voice* is rewritten for the commands-only Voice tab, with a new screenshot. It also lists the built-in commands, explains the Add Voice Command box and says where Voice keeps its files:

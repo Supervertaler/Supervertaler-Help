@@ -28,10 +28,11 @@ const product = p?.label ?? null;
 // The picture WhatsApp, LinkedIn, Slack and X show when a link is pasted.
 // Starlight writes the other og: tags itself but has no image, so those apps
 // fell back to the touch icon and stretched it. The pictures are the product
-// site's (its tools/make-icons.py makes them): a Trados or memoQ page gets that
-// product's card, everything else the brand one.
-const card = p?.id === 'trados' || p?.id === 'memoq' ? `-${p.id}` : '';
-const ogImage = `https://supervertaler.com/og-image${card}.png?v=2`;
+// site's (its tools/make-icons.py makes them): a Trados, memoQ or Workbench
+// page gets that product's card, everything else - Sidekick included, which
+// wears the brand mark - the brand one.
+const card = p?.id === 'trados' || p?.id === 'memoq' || p?.id === 'workbench' ? `-${p.id}` : '';
+const ogImage = `https://supervertaler.com/og-image${card}.png?v=3`;
 const ogAlt = card ? p!.fullName : 'Supervertaler';
 ---
 
