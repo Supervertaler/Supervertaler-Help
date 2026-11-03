@@ -19,11 +19,15 @@ In the Library Editor, add an entry of kind **AI** and give it a prompt:
 }
 ```
 
-The selection is appended to the prompt. Optional per-entry overrides: `system` (a system prompt), `provider`, `model`, `effort` (`low`, `medium`, `high`, `xhigh`, `max` – Anthropic only) and `maxtokens`. Anything not set comes from the `[AI]` section of `settings.ini`.
+The selection is appended to the prompt. Optional per-entry overrides: `system` (a system prompt), `provider`, `model`, `effort` (`low`, `medium`, `high`, `xhigh`, `max` – Anthropic only) and `maxtokens`. Anything not set comes from the `[AI]` section of `settings.ini`, where the provider and model are the ones chosen in the window below.
 
 ### Providers
 
-The default provider and model are set under `[AI]` in `settings.ini`; keys live in the shared key file and are entered through **Settings → AI providers & keys…** – see [Installation](/sidekick/installation/#4-add-api-keys). Anthropic and OpenAI are supported as AI-action providers; the request and response shapes for each live in one place in the code, so a further provider is one entry rather than a rewrite.
+Open **Settings → AI providers & keys…**. The line at the top, **AI menu actions use:**, picks which provider and model answer your AI actions: Claude (Anthropic), OpenAI, Gemini, Mistral, DeepSeek or OpenRouter, and a model. The model list is the one that provider's row further down has – the few models worth recommending, and everything your key can use once **Models** or **Show all models** has asked. Leave the model blank for the provider's default; the empty box says which that is. A model you typed by hand stays as you typed it.
+
+Click **Save** and the next AI action uses your choice – there is no need to reload Sidekick. The provider needs a key: if it has none, or its key can't be read on this computer, the window says so and keeps the provider you had, so your AI actions don't stop working. Paste the key into that provider's row and click **Save** again. Keys live in the shared key file – see [Installation](/sidekick/installation/#4-add-api-keys).
+
+An AI action whose entry names its own `provider` or `model` keeps it, whatever the window says.
 
 Requests do not block. The rest of Sidekick keeps working while an answer is on its way.
 

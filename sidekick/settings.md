@@ -34,7 +34,7 @@ Open it in any editor, or reach the parts that have a window through the menu:
 | Section | Holds | Window |
 |---|---|---|
 | `[Hotkeys]` | the built-in shortcuts | **Settings → Keyboard shortcuts…** |
-| `[AI]` | provider, model and effort for AI actions | – |
+| `[AI]` | provider, model and effort for AI actions | **Settings → AI providers & keys…** (provider and model) |
 | `[Keys]` | API keys (see below) | **Settings → AI providers & keys…** |
 | `[QuickTrans]` | which engines, which models, whether AI is fetched automatically, and the language pair (`SourceLang`, `TargetLang`) | **Settings → AI providers & keys…**, **Settings → Language pair…** |
 | `[Packs]` | which language packs are installed (`Installed=nl-en`); absent means the pack for the current pair | **Settings → Language packs…** |
