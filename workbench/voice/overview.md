@@ -90,6 +90,7 @@ These are the commands Voice starts with. You can change, switch off or remove a
 | open project | | Press Ctrl+O |
 | show log | open log | Open the Log window |
 | show editor | editor tab, go to editor | Go to the Editor tab |
+| stop listening | | Switch Always-On off, like the **⏹️ Stop Always-On** button (from v1.10.375; before that it did nothing) |
 | termbase | add term, add to termbase | memoQ: add a term pair to the termbase (Alt+Down) |
 | tag next | next tag, insert tag | memoQ: go to the end of the segment, insert the next tag and confirm |
 | confirm memoQ | confirm memo | memoQ: confirm the segment (Ctrl+Enter) |

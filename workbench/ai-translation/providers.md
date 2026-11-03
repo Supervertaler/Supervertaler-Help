@@ -8,21 +8,21 @@ Supervertaler supports multiple AI providers so you can choose what fits your wo
 
 ### OpenAI
 
-Models: **GPT-5.5**, **GPT-5.4 Mini**
+Models: **GPT-6 Astra**, **GPT-6.1 Sol**, **GPT-6 Luna**
 
-Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). GPT-5.4 Mini is a good starting point – fast, affordable, and high quality for most translation tasks. GPT-5.5 is the flagship for the most demanding work.
+Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys). GPT-6.1 Sol is the recommended default: close to Astra's quality at a fifth of its price. GPT-6 Astra is OpenAI's most capable model, for the hardest work; GPT-6 Luna is the cheapest, for high-volume work.
 
 ### Anthropic (Claude)
 
-Models: **Claude Sonnet 4.6**, **Claude Haiku 4.5**, **Claude Opus 4.8**
+Models: **Claude Sonnet 5.5**, **Claude Opus 5.5**, **Claude Fable 5.1**
 
-Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 4.6 is the recommended default. Haiku 4.5 is the fastest and cheapest option; Opus 4.8 is the most capable.
+Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 5.5 is the recommended default. Opus 5.5 gives the highest quality for hard legal and technical work; Fable 5.1 is Anthropic's most capable model overall, at 2.5 times Opus's price.
 
 ### Google (Gemini)
 
-Models: **Gemini 3.1 Flash-Lite**, **Gemini 2.5 Pro**, **Gemini 3.1 Pro (Preview)**, **Gemma 4 26B MoE**
+Models: **Gemini 3.1 Flash-Lite**, **Gemini 3.5 Flash**, **Gemini 2.5 Pro**, **Gemini 3.1 Pro (Preview)**, **Gemini 4 Argon**, **Gemma 4 26B MoE**
 
-Get an API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Gemini 3.1 Flash-Lite offers a generous free tier and is a strong choice for high-volume work.
+Get an API key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Gemini 3.1 Flash-Lite offers a generous free tier and is a strong choice for high-volume work. Gemini 4 Argon (from v1.10.375) is Google's most capable model.
 
 ### Mistral AI
 
@@ -43,6 +43,8 @@ Get an API key at [platform.deepseek.com](https://platform.deepseek.com). DeepSe
 [OpenRouter](https://openrouter.ai) is an API gateway that gives you access to 200+ models from OpenAI, Anthropic, Google, DeepSeek, Mistral, Meta, and many others – all through a **single API key**.
 
 The model dropdown includes a curated selection for translation, and you can also type any OpenRouter model ID directly. Browse all models at [openrouter.ai/models](https://openrouter.ai/models).
+
+From v1.10.375 the dropdown offers the same models as Supervertaler for Trados and for memoQ, with Claude Sonnet 5.5 as the default. If the model you chose has left the list, Settings shows it as "your current model" and keeps it. Providers of free models, such as Qwen 3.8 27B (Free), may keep what you send, so don't use them for confidential work.
 
 Get an API key at [openrouter.ai/keys](https://openrouter.ai/keys).
 
