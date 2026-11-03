@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-03
+
+- **Workbench: in the TermLens popup, Up edits and Down shows details – not released yet** (from v1.10.375). *TermLens popup* says that **Up** now opens the highlighted entry for editing, like **E**, and **Down** shows or hides its details, like **I**. Only **Left**, **Right**, **Tab** and **Shift+Tab** move between the chips, and the page quotes the new key line at the bottom of the popup. *TermLens* says "cycle chips with Left and Right" instead of "with arrow keys". Publish with the Workbench release that ships branch `claude/termlens-popup-up-down`.
+
 ## 2026-11-02
 
 - **Workbench: the Clipboard Manager is gone – not released yet.** Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older. Publish with the Workbench release that ships it.

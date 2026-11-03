@@ -54,7 +54,7 @@ In addition to the always-visible panels, two on-demand views show the same matc
 
 | View                                                | Trigger        | Best for                                                                    |
 | --------------------------------------------------- | -------------- | --------------------------------------------------------------------------- |
-| [**TermLens popup**](/workbench/termbases/termlens-popup/)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with arrow keys, insert with Enter or 1–9. |
+| [**TermLens popup**](/workbench/termbases/termlens-popup/)             | **Ctrl** tap   | Floating mirror of the docked panel; cycle chips with Left and Right, insert with Enter or 1–9. |
 | [**TermPicker**](/workbench/termbases/termpicker/)                     | **Ctrl+Shift+P** | Modal tabular grid with #/Source/Target/Termbase columns and expandable synonym sub-rows. |
 
 Both pull from the same data the docked panel uses, so the chips / rows you see are identical – just laid out differently.

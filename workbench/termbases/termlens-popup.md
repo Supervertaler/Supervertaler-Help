@@ -26,12 +26,16 @@ A "Ctrl tap" is a press-and-release of the Ctrl key on its own – no other key 
 
 When the popup opens, the first chip has a thin blue ring around it – that is the **current chip** that Enter will insert. The cycle skips bare source words; only chips you can actually insert get the highlight.
 
-| Key                            | Action                                             |
-| ------------------------------ | -------------------------------------------------- |
-| **Right** / **Down** / **Tab** | Move the current-chip highlight to the next chip   |
-| **Left** / **Up** / **Shift+Tab** | Move it to the previous chip                    |
+| Key                       | Action                                             |
+| ------------------------- | -------------------------------------------------- |
+| **Right** / **Tab**       | Move the current-chip highlight to the next chip   |
+| **Left** / **Shift+Tab**  | Move it to the previous chip                       |
 
 Cycling wraps: from the last chip, Right takes you back to the first.
+
+**Up** and **Down** don't move between chips (from v1.10.375). **Up** edits the current chip, and **Down** shows its details; see below. Before v1.10.375, Up and Down did the same as Left and Right.
+
+From v1.10.375, the line at the bottom of the popup lists the keys like this: “← → cycle · Enter insert · 1–9 insert · ↑/E edit · ↓/I info · Esc close · F1 help”.
 
 ### Inserting
 
@@ -45,11 +49,11 @@ All paths share the same insertion logic – there is no difference between pick
 
 ### Editing a match
 
-Press **E** while a chip is highlighted to open the term-entry editor for that entry. The popup closes first so the editor opens with clean focus. The editor is the same dialogue the docked panel's right-click "Edit Termbase Entry…" menu uses, including the multi-termbase "Editing:" dropdown that lets you switch between sibling entries from other active termbases.
+Press **E** or **Up** while a chip is highlighted to open the term-entry editor for that entry. (**Up** does this from v1.10.375.) The popup closes first so the editor opens with clean focus. The editor is the same dialogue the docked panel's right-click "Edit Termbase Entry…" menu uses, including the multi-termbase "Editing:" dropdown that lets you switch between sibling entries from other active termbases.
 
 ### Showing metadata
 
-Press **I** while a chip is highlighted to toggle the sticky metadata popup for that entry – the same hover popup the docked panel shows, with the entry's synonyms, abbreviations, definition, domain, notes, and URL fields. Press **I** again to dismiss it.
+Press **I** or **Down** while a chip is highlighted to toggle the sticky metadata popup for that entry – the same hover popup the docked panel shows, with the entry's synonyms, abbreviations, definition, domain, notes, and URL fields. Press **I** or **Down** again to dismiss it. (**Down** does this from v1.10.375.)
 
 ### Visuals
 
@@ -76,7 +80,7 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 | -------- | -------------------------------------------------------- | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word   | Numbered, scrollable table                              |
 | Best for | Skimming matches in segment context                      | Many matches, picked by number                          |
-| Keyboard | Arrow / Tab cycles a highlighted chip                    | 0–9 jumps directly; Up / Down navigate                  |
+| Keyboard | Left / Right / Tab cycle a highlighted chip              | 0–9 jumps directly; Up / Down navigate                  |
 | Modality | Modeless – Esc / mouse move / click outside to dismiss   | Modal – Esc or Cancel to close                          |
 
 ***
