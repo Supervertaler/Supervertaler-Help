@@ -14,7 +14,7 @@ Machine translation: **MyMemory**, **Google**, **Microsoft**, **ModernMT** and *
 
 LLMs: **Claude**, **OpenAI**, **Gemini**, **Mistral**, **DeepSeek**, **OpenRouter**, a local **Ollama**, and any **custom** OpenAI-compatible endpoint you point it at.
 
-Every engine is asked at the same time, and each answer appears as it lands, so nothing waits for the slowest. MyMemory needs no key, so QuickTrans does something useful before anything is configured; the rest read their key from the shared key file and are skipped silently when it is missing. See [Installation → Add API keys](/sidekick/installation/#4-add-api-keys).
+Every engine is asked at the same time, and each answer appears as it lands, so nothing waits for the slowest. MyMemory needs no key, so QuickTrans does something useful before anything is configured; the rest read their key from the shared key file and are skipped silently when it is missing. An engine whose key is there but can't be read on this computer is not skipped: its row says so, and nothing is sent to it (see [Settings and files](/sidekick/settings/#cant-be-read-on-this-computer)). See [Installation → Add API keys](/sidekick/installation/#4-add-api-keys).
 
 ### Using it
 

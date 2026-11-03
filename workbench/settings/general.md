@@ -20,7 +20,7 @@ Since v1.10.372 there are no Save buttons on the Settings pages. Each change is 
 
 - **🤖 LLM Provider Selection** – OpenAI, Anthropic Claude, Google Gemini, Mistral AI, DeepSeek, 🌐 OpenRouter (200+ models), 🖥️ Local LLM (Ollama) or 🔌 Custom (OpenAI-Compatible API)
 - **📦 Model Selection** – the model for the chosen provider, used for AI translation and the Chat assistant; for a custom provider, the endpoint profile
-- **🔑 LLM API Keys** – a key for each provider, saved automatically and stored locally in your user data folder
+- **🔑 LLM API Keys** – a key for each provider, saved automatically, shared with Supervertaler's other products and locked to this computer (see [Setting Up API Keys](/workbench/get-started/api-keys/#where-your-keys-are-kept))
 - **✅ Enable/Disable LLM Providers** – which providers are offered elsewhere in Workbench
 - **🌐 HTTP Proxy Settings** – for networks that reach the internet through a proxy
 - **🖥️ Local LLM (Ollama) Advanced Settings** – request timeout and keeping the model loaded; see [Using Local LLMs (Ollama)](/workbench/ai-translation/ollama/)
