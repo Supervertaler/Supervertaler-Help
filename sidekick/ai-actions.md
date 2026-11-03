@@ -19,14 +19,29 @@ In the Library Editor, add an entry of kind **AI** and give it a prompt:
 }
 ```
 
-The selection is appended to the prompt. Optional per-entry overrides: `system` (a system prompt), `provider`, `model`, `effort` (`low`, `medium`, `high`, `xhigh`, `max` – Anthropic only) and `maxtokens`. Anything not set comes from the `[AI]` section of `settings.ini`.
+The selection is appended to the prompt. Optional per-entry overrides: `system` (a system prompt), `provider`, `model`, `effort` (`low`, `medium`, `high`, `xhigh`, `max` – Anthropic only) and `maxtokens`. Anything not set comes from the `[AI]` section of `settings.ini`, where the provider and model are the ones chosen in the window below.
 
 ### Providers
 
-The default provider and model are set under `[AI]` in `settings.ini`; keys live in the shared key file and are entered through **Settings → AI providers & keys…** – see [Installation](/sidekick/installation/#4-add-api-keys). Anthropic and OpenAI are supported as AI-action providers; the request and response shapes for each live in one place in the code, so a further provider is one entry rather than a rewrite.
+Open **Settings → AI providers & keys…**. The line at the top, **AI menu actions use:**, picks which provider and model answer your AI actions: Claude (Anthropic), OpenAI, Gemini, Mistral, DeepSeek or OpenRouter, and a model. The model list is the one that provider's row further down has – the few models worth recommending, and everything your key can use once **Models** or **Show all models** has asked. Leave the model blank for the provider's default; the empty box says which that is. A model you typed by hand stays as you typed it.
+
+Click **Save** and the next AI action uses your choice – there is no need to reload Sidekick. The provider needs a key: if it has none, or its key can't be read on this computer, the window says so and keeps the provider you had, so your AI actions don't stop working. Paste the key into that provider's row and click **Save** again. Keys live in the shared key file – see [Installation](/sidekick/installation/#4-add-api-keys).
+
+An AI action whose entry names its own `provider` or `model` keeps it, whatever the window says.
 
 Requests do not block. The rest of Sidekick keeps working while an answer is on its way.
 
 ### Sharing prompts with the Trados plugin
 
 Supervertaler for Trados keeps its prompts in a [library](/trados/settings/prompts/) with [QuickLauncher](/trados/quicklauncher/) shortcuts. Sidekick's AI actions are the same idea outside the CAT tool, and today they are a separate list. Letting the two share one prompt library, so a prompt written for the Trados editor is also on the Sidekick menu, is planned.
+
+### The answer
+
+The answer opens in a window of its own, formatted: headings, **bold** and *italic* text, bullet and numbered lists, tables, code, and sub- and superscript (H₂O, m²) appear as the AI meant them, rather than as Markdown's `#`, `**` and `-` marks. Error messages are shown exactly as they arrive.
+
+- **Copy** puts the whole answer on the clipboard in two forms: as plain text without the Markdown marks – what Trados, memoQ, a browser or Notepad paste – and formatted, which is what Word pastes.
+- **Insert & close** types the answer, as plain text, where your selection was.
+- **Retry** asks again; **Close** or Esc closes the window.
+- To copy part of the answer, select it with the mouse and press Ctrl+C. Right-click for **Copy**, **Select all** and **Copy as Markdown** – the answer exactly as the AI wrote it, marks and all, for when the marks belong in the text (when you are translating a Markdown file, say).
+
+In the plain text, bullets become • (◦ one level in), numbered lists keep their numbers, and a table's cells are separated by " | ".

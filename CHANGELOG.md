@@ -8,6 +8,12 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-03
+
+- **Sidekick: API keys also locked to the computer, and the "can't be read" message.** *Settings and files* says that each key is also kept in the Windows profile (`C:\Users\<you>\AppData\Roaming\Supervertaler\api-keys.locked.json`), locked to the Windows account, while the data folder's `api-keys.json` is still written; what the "can't be read on this computer" note and message mean and what to do; and what happens if the locked file is damaged. *QuickTrans* says that an engine whose key can't be read shows so in its row. Publish with the Sidekick change.
+- **Sidekick: choosing the AI for AI actions.** *AI actions* now says how to pick the provider and model that answer AI actions, under **AI menu actions use:** at the top of **Settings → AI providers & keys…**: the six providers, the model lists, blank for the default, that the choice applies at once, and that it is not saved while the provider has no key Sidekick can use. *Settings and files* names that window for `[AI]`. Publish with the Sidekick change.
+- **Sidekick: AI answers shown formatted.** *AI actions* has a new section, *The answer*: the answer window shows headings, bold, lists, tables and code formatted instead of as Markdown marks; what **Copy** (plain text, and formatted for Word), **Insert & close** (plain text), the right-click **Copy as Markdown** and selecting part of the answer give you; and how bullets and tables look in the plain text. Publish with the Sidekick change.
+
 ## 2026-11-02
 
 - **Workbench: the Clipboard Manager is gone – not released yet.** Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older. Publish with the Workbench release that ships it.
