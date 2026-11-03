@@ -37,6 +37,9 @@ Supervertaler/
 │   ├── project_prompts/
 │   └── style_guides/
 │
+├── settings/                    Shared
+│   └── api-keys.json            API keys (see Setting Up API Keys)
+│
 ├── resources/                   Shared
 │   ├── supervertaler.db
 │   ├── termbases/
@@ -116,8 +119,11 @@ and `api_keys.txt`). They are merged into `settings.json` automatically at
 startup and renamed with a `.migrated` extension.
 
 :::caution
-`settings.json` contains your API keys. Don't share it, or attach it to a
-support request, without removing them first.
+`settings.json` contains your API keys, and so does `settings/api-keys.json`,
+the file Workbench shares with Supervertaler's other products. Don't share
+either, or attach it to a support request, without removing the keys first.
+(A later version will stop keeping keys in the data folder: see
+[Setting Up API Keys](/workbench/get-started/api-keys/#where-your-keys-are-kept).)
 :::
 
 ## Automatic migration
