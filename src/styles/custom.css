@@ -85,6 +85,17 @@
   cursor: zoom-out;
 }
 
+/* medium-zoom gives its backdrop and the zoomed image no z-index, so
+ * Starlight's fixed header and sidebar (z-index 10 and 5) were painted
+ * over them and cut off the left of every zoomed screenshot. Lift both
+ * above the page chrome, the image above its backdrop. */
+.medium-zoom-overlay {
+  z-index: 100;
+}
+.medium-zoom-image--opened {
+  z-index: 101;
+}
+
 /* ── Inline code inside tables ────────────────────────────────────────
  *
  * Reference tables pair a short identifier (a tool name, a setting key)

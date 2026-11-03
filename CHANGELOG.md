@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-03
 
+- **Site: an enlarged screenshot is no longer cut off by the menu.** Clicking a screenshot enlarges it over the whole window. The left-hand menu and the top bar used to stay in front of it and hide its left edge.
 - **Workbench: the Clipboard Manager is gone** (from v1.10.374). Its page is removed, and its address now leads to Sidekick's *Clipboard history* page, because Supervertaler Sidekick is the clipboard tool. The other Workbench pages no longer mention the Clipboard tab, Settings → Clipboard, Ctrl+Alt+C or the tray's "Open Clipboard": *Keyboard Shortcuts*, *Editor Keyboard Shortcuts*, *Your first project*, *Data folder*, *Fonts*, *Theme*, *SuperLookup*, *Voice*, the Workbench overview and the home page. *Data folder* says the snippet and text-conversion folders are left over from v1.10.373 and older.
 - **Workbench: Voice is commands only** (from v1.10.374). *Voice* is rewritten for the commands-only Voice tab, with a new screenshot. It also lists the built-in commands, explains the Add Voice Command box and says where Voice keeps its files:
   - The built-in dictation (push-to-talk with Whisper), the hold-to-talk key for commands and the "pause for external dictation" key are gone; for running text the page points to a dictation tool such as Windows voice typing or Wispr Flow.
