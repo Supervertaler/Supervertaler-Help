@@ -38,7 +38,7 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 | `Ctrl+Alt+T` | `Control+Option+T` | Add term entry (opens full editor with definition, domain, notes, URL, client, project, and synonyms) |
 | `Ctrl+Alt+A` | `Control+Option+A` | [Add term with abbreviation](/trados/termlens/adding-terms/) – the AI fills in the term pair and both abbreviations from the segment, for you to confirm (from v18/19.20.157) |
 | `Ctrl+Alt+N` | `Control+Option+N` | Quick-add non-translatable term |
-| `Ctrl` (tap) | `Control` (tap) | Toggle the floating **TermLens popup** (open / close) |
+| `Alt+L` | `Option+L` | Toggle the floating **TermLens popup** (open / close) |
 | `Alt+P` | `Option+P` | Open **TermPicker** (list-based) – or focus the TermPicker pane when it is docked |
 | `Alt+1` ... `Alt+9` | `Option+1` ... `Option+9` | Insert term 1–9 by badge number |
 

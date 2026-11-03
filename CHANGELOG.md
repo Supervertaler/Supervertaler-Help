@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-03
 
+- **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
 - **Workbench: in the TermLens popup, Up edits and Down shows details** (from v1.10.375). *TermLens popup* says that **Up** now opens the highlighted entry for editing, like **E**, and **Down** shows or hides its details, like **I**. Only **Left**, **Right**, **Tab** and **Shift+Tab** move between the chips, and the page quotes the new key line at the bottom of the popup. *TermLens* says "cycle chips with Left and Right" instead of "with arrow keys".
 - **Workbench: "stop listening" works, Gemini 4 Argon, and the OpenRouter list** (from v1.10.375). *Voice* lists "stop listening" among the built-in commands again: it now switches Always-On off. *Providers* gives the current models: GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna; Claude Sonnet 5.5, Opus 5.5 and Fable 5.1; Gemini 3.5 Flash and Gemini 4 Argon added to the Gemini list. For OpenRouter it says the dropdown now matches the plugins', with Claude Sonnet 5.5 as the default, that a model that has left the list is kept, and that free models are not for confidential work.
 
