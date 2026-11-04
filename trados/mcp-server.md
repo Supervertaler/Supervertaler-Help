@@ -43,7 +43,7 @@ The server exposes these tools to the AI app:
 | `session_report` | How many bytes of tool results this session has sent the AI, per tool, biggest first – so you can see which tools are filling (and re-billing) the conversation *(v18.20.158)* |
 | `list_trados_instances` | Which Trados Studios are running, the project open in each, and which one the AI is talking to – for when you have more than one open *(v18.20.184)* |
 | `select_trados_instance` | Tell the AI which of several running Studios to work with, by Studio version or project name *(v18.20.184)* |
-| `get_active_project` | Project name, language pair, active file, segment counts per confirmation status |
+| `get_active_project` | Project name, language pair, active file, segment counts per confirmation status – and warnings about problems that quietly cost quality, such as source text outside any segment *(that warning from v18/19.20.205)* |
 | `get_segments` | List segments, with filters (status, contains-text, file) and paging – or fetch exact segments by the grid number(s) you see in Studio (`fromNumber`/`toNumber`) *(grid numbers v18.20.114)* |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
 | `get_active_segment` | The segment you are editing right now, with TM matches and termbase hits |
@@ -56,6 +56,7 @@ The server exposes these tools to the AI app:
 | `check_tags` | Translated segments with missing or extra inline tags – compares underlying tag ids as well as counts, so two tags sharing one id are caught *(ids from v18.20.157)*. Tags in text struck out with Track Changes are not counted *(from v18/19.20.200)* |
 | `check_terminology` | Translated segments that don't use the termbase's expected translation – longest-match-wins, ranked by signal rather than raw count, restrictable to a curated termbase *(overhauled v18.20.157)* |
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
+| `check_unsegmented_text` | Source text that Trados left outside every segment – invisible in the editor, skipped by QA and the word count, and exported untranslated – with the segments it sits between and its text. Paragraphs with no segment at all are listed separately, since they are usually deliberate. See [Source text outside any segment](/trados/troubleshooting/#source-text-outside-any-segment) *(from v18/19.20.205)* |
 | `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
 | `mark_reviewed` | Record that segments were read source-against-target and deliberately left unchanged – session-scoped, never written to the file *(v18.20.157)* |
 | `get_tracked_changes` | The document's tracked changes as (before, after) pairs per segment – how you corrected the drafts – optionally saved into the active SuperMemory bank's reference folder for future projects *(v18.20.158)* |
@@ -270,6 +271,7 @@ Everything the AI writes lands as **Draft** unless you say otherwise, locked seg
 * "Check my translated segments against the termbase and list violations." *(from v18.20.95)*
 * "Find all repeated sentences that I translated differently." *(from v18.20.95)*
 * "Check whether I've lost any non-breaking spaces." *(from v18.20.148)*
+* "Is there any source text outside segments that will export untranslated?" *(from v18/19.20.205)*
 * "Put a non-breaking space between every value and its unit." *(from v18.20.148)*
 * "Where does my translation differ from the client's reference TM?" *(from v18.20.148)*
 * "Run all your QA checks and give me a report."

@@ -263,6 +263,39 @@ See [Installation – Running on a Mac (Parallels)](/trados/installation/#runnin
 
 ---
 
+## Source text outside any segment
+
+*(from v18/19.20.205)*
+
+**Symptoms:** A yellow line across the top of the Supervertaler panel says, for example, "2 stretches of source text are outside any segment and will export untranslated." Or a sentence came out in the source language in the exported file, although every segment in the editor is translated.
+
+**What it means:** Trados sometimes leaves a stretch of source text in a file outside every segment. It has happened where a client's Word comments – one of them an empty point comment – ended exactly at the end of a sentence: the next sentence sat between two segments. Text like that:
+
+- never shows in the editor, so you cannot see or translate it there;
+- is skipped by every QA check and by the word count;
+- is exported as it is – untranslated – and Studio does not warn you.
+
+Whenever you open a document, Supervertaler checks its files for such text in the background, without slowing down opening, and shows the warning only when it finds some. Spaces, punctuation, numbers, tags and comment markers between segments never count.
+
+Nor do paragraphs that have no segment at all. In files made from memoQ or other XLIFF formats, those are usually rows the other tool locked, hid or left out on purpose – often hundreds per file – so warning about them would drown out the real cases. The AI assistant's `check_unsegmented_text` lists them separately, if you want to look.
+
+**What to do:**
+
+1. **Click the warning** to list each stretch: the segments it sits between and its first words. In a document made of several files, each line names the file too.
+2. **Click a stretch** to go to the nearest segment, so you can see where the text belongs.
+3. **Fix it outside the editor** – Supervertaler only warns, it does not repair anything. Either:
+   - translate the stretch in the exported target file, or
+   - fix the source document (for example, remove or move the comments around that sentence) and prepare the file again.
+4. **Click ×** to hide the warning once you have dealt with it. It stays hidden for those results and comes back only when they change – after the file has been prepared again, for example.
+
+:::note
+The check reads each file as last saved, which is also what Studio exports. If a file cannot be read – locked by another program, or still being written – you get no warning, and it is checked again the next time you open the document.
+:::
+
+The AI assistant sees the same list: [`get_active_project`](/trados/mcp-server/) reports it among its warnings, and asking *"Is there any source text outside segments?"* runs `check_unsegmented_text`, which lists every stretch for your end-of-job checks.
+
+---
+
 ## Performance issues
 
 **Symptoms:** The editor feels sluggish, or TermLens takes a long time to display matches.

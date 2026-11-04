@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-04
+
+- **Trados: a warning for source text outside any segment** (from v18/19.20.205). *Troubleshooting* has a new section, *Source text outside any segment*: what the yellow line across the top of the Supervertaler panel means, why such text is invisible in the editor, skipped by QA and the word count and exported untranslated, how to list the stretches and go to the nearest segment, how to fix it outside the editor, and why paragraphs with no segment at all are not counted. *MCP Server* lists the new `check_unsegmented_text` tool, says that `get_active_project` warns about such text, and adds a prompt for it under *Quality and consistency*. Not released yet: publish with the release that ships it.
+
 ## 2026-11-03
 
 - **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
