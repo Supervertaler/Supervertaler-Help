@@ -267,7 +267,7 @@ See [Installation – Running on a Mac (Parallels)](/trados/installation/#runnin
 
 *(from v18/19.20.205)*
 
-**Symptoms:** A yellow line across the top of the Supervertaler panel says, for example, "2 stretches of source text are outside any segment and will export untranslated." Or a sentence came out in the source language in the exported file, although every segment in the editor is translated.
+**Symptoms:** A yellow line across the top of the TermLens panel says, for example, "2 stretches of source text are outside any segment and will export untranslated." Or a sentence came out in the source language in the exported file, although every segment in the editor is translated.
 
 **What it means:** Trados sometimes leaves a stretch of source text in a file outside every segment. It has happened where a client's Word comments – one of them an empty point comment – ended exactly at the end of a sentence: the next sentence sat between two segments. Text like that:
 
