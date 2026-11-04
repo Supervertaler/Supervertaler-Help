@@ -59,7 +59,9 @@ These are estimates for a representative document – actual usage varies with s
 
 Most of what Supervertaler sends with each request is the same every time: the instructions, your custom prompt, your SuperMemory context, the terminology and the document context. Only the segments change. **Prompt caching** lets the AI provider keep that shared part after the first request and charge much less for it in the requests that follow.
 
-**Where it's used.** Batch Translate, the AI Proofreader and Translate active segment (Alt+T). All three keep the shared part of the prompt exactly the same from one request to the next, so it can be cached. AutoPrompt and QuickLauncher prompts are one-off requests and are sent without caching. With Claude, chat in the AI Assistant does not use the cache at present.
+**Where it's used.** Batch Translate, the AI Proofreader, Translate active segment (Alt+T) and, from v18/19.20.205, chat in the AI Assistant. All of them keep the shared part of the prompt exactly the same from one request to the next, so it can be cached. AutoPrompt and QuickLauncher prompts are one-off requests and are sent without caching.
+
+**In the AI Assistant chat** (from v18/19.20.205), every message you send goes to the AI together with the instructions, your SuperMemory context, the document and the conversation so far. From the second message on, all of that is read from the cache, and only your new message and the details of the active segment – its position, the segments around it, its TM matches and its terms – are paid in full. When you move to another segment, those details and the conversation are sent again in full, but they are short; the document part is still read from the cache. When the AI uses a tool to answer, each step reads the one before it from the cache too.
 
 **With Claude** (directly, or through OpenRouter), Supervertaler marks the shared part of the prompt for Claude's cache:
 
@@ -124,7 +126,7 @@ When you run a prompt from the QuickLauncher menu (Alt+Q), only the prompt itsel
 
 #### Chat token budget
 
-Regular chat messages include recent conversation history so the AI can follow your discussion. However, Supervertaler automatically trims older messages when the history grows too large (\~50,000 tokens). This prevents costs from spiralling when previous messages contained large context blocks (e.g. full document content).
+Regular chat messages include recent conversation history so the AI can follow your discussion: your last 10 to 13 messages. From v18/19.20.205 the oldest ones are dropped two exchanges at a time rather than one with every message, so the conversation keeps the same beginning for several messages and can be read from the [cache](#prompt-caching). Supervertaler also trims older messages when the history grows too large (\~50,000 tokens). This prevents costs from spiralling when previous messages contained large context blocks (e.g. full document content).
 
 #### Cost warning
 

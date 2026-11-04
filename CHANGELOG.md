@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-04
+
+- **Trados: chat in the AI Assistant uses the prompt cache** (from v18/19.20.205). *AI Cost Guide* no longer says that chat with Claude does not use the cache. *Prompt caching* lists the chat among the features that use it, and a new paragraph says what a chat message reads from the cache from the second message on (the instructions, SuperMemory, the document and the conversation so far), what it still pays in full (the new message and the active segment's details), what moving to another segment changes, and that each step of a tool-using answer reads the one before it. *Chat token budget* says the chat sends your last 10 to 13 messages and now drops older ones two exchanges at a time, so the conversation can be read from the cache. Not released yet: publish with the release that ships it.
+
 ## 2026-11-03
 
 - **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
