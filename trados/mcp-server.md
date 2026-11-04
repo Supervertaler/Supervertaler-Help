@@ -49,12 +49,12 @@ The server exposes these tools to the AI app:
 | `get_active_segment` | The segment you are editing right now, with TM matches and termbase hits |
 | `get_project_statistics` | Analysis bands and per-file confirmation statistics – word counts, progress *(v18.20.95)* |
 | `search_studio_tm` | Concordance-search the Trados TMs attached to the project (.sdltm and GroupShare) *(v18.20.95)* |
-| `lookup_term` | Look up a term in your termbases (exact first – against source and target terms alike – then substring matching); hits report which column matched and are never reoriented *(v18.20.153)* |
+| `lookup_term` | Look up a term in your termbases (exact first – against source and target terms alike – then substring matching); hits report which column matched and are never reoriented *(v18.20.153)*. Hits show the entry's abbreviations, and an abbreviation on its own finds its entry *(from v18/19.20.205)* |
 | `find_inconsistencies` | Repeated source segments whose translations differ *(v18.20.95)* |
 | `compare_document_to_tm` | Every segment where your translation differs from what the TM already holds for the same source – the pre-delivery consistency check *(v18.20.148)* |
 | `check_numbers` | Translated segments whose numbers differ between source and target *(v18.20.95)* |
 | `check_tags` | Translated segments with missing or extra inline tags – compares underlying tag ids as well as counts, so two tags sharing one id are caught *(ids from v18.20.157)*. Tags in text struck out with Track Changes are not counted *(from v18/19.20.200)* |
-| `check_terminology` | Translated segments that don't use the termbase's expected translation – longest-match-wins, ranked by signal rather than raw count, restrictable to a curated termbase *(overhauled v18.20.157)* |
+| `check_terminology` | Translated segments that don't use the termbase's expected translation – longest-match-wins, ranked by signal rather than raw count, restrictable to a curated termbase *(overhauled v18.20.157)*. A translation that uses the entry's target abbreviation counts as correct *(from v18/19.20.205)* |
 | `check_nbsp` | Translated segments that lost a non-breaking space the source had – invisible on screen, so nothing else catches it *(v18.20.148)* |
 | `get_coverage` | Which segments have been neither written nor explicitly reviewed this session, per TM match band – so "the fuzzy band was read" becomes checkable instead of remembered *(v18.20.157)* |
 | `mark_reviewed` | Record that segments were read source-against-target and deliberately left unchanged – session-scoped, never written to the file *(v18.20.157)* |
@@ -65,10 +65,10 @@ The server exposes these tools to the AI app:
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
 | `list_project_templates` | Your Trados project templates *(v18.20.111)*: every template Studio offers under **New Project** → **Use Settings from**, wherever the file is stored, with its Studio version and whether Studio lists it *(templates outside the `Project Templates` folders from v18/19.20.199)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below). *From v18/19.20.198* it can also update the project's main translation memory as it goes, for the segments it confirms – only when you ask |
-| `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
-| `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain – only the fields you name change, everything else is preserved |
+| `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes and source/target abbreviations *(abbreviations from v18/19.20.205)*, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
+| `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain, and from v18/19.20.205 its abbreviations – only the fields you name change, everything else is preserved |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
-| `import_project_termbase` | Copy the Trados termbase attached to the open project (`.sdltb` / `.ttb`) into a Supervertaler termbase in one step – the same job as the *Import .sdltb/.ttb…* button. Ask for a dry run first and it reports the entry count, language pair and field mapping before writing anything; running it twice adds nothing the second time. An existing destination must be Write-enabled, a new name is created for you, and your Trados termbase is only ever read *(v18.20.175)* |
+| `import_project_termbase` | Copy the Trados termbase attached to the open project (`.sdltb` / `.ttb`) into a Supervertaler termbase in one step – the same job as the *Import .sdltb/.ttb…* button. Ask for a dry run first and it reports the entry count, language pair and field mapping before writing anything; running it twice adds nothing the second time. An existing destination must be Write-enabled, a new name is created for you, and your Trados termbase is only ever read *(v18.20.175)*. Abbreviation fields, and the abbreviation columns of a CSV or TSV glossary, go into the entries' abbreviation fields *(from v18/19.20.205)* |
 | `insert_into_active_segment` | Insert text into the active segment's target (like Apply-to-target) |
 | `save_document` | Save the open document (Ctrl+S) – only when you ask or approve *(v18.20.115)* |
 | `go_to_segment` | Move the Studio editor to a specific segment (by grid number or id) |
@@ -198,6 +198,18 @@ A common setup is two Write-enabled termbases with different roles: a large pers
 * **Duplicates show what they matched.** When a termbase refuses a pair as already present, the response now includes the existing entry (its id and exact stored pair) instead of a bare "duplicate" – no more guessing what it collided with.
 * **Stale project termbases are flagged.** If the Project-ticked termbase's name shares no word with the open project's name – the classic sign of a tick left over from a previous job – the `add_term` response says so, before weeks of terms land in the wrong client's termbase.
 
+### Abbreviations *(from v18/19.20.205)*
+
+A Supervertaler termbase entry has a source abbreviation and a target abbreviation beside its two terms – the fields **Add term with abbreviation** (Ctrl+Alt+A) fills. The AI can now use them too, instead of putting abbreviations in the notes or adding them as separate entries:
+
+* **Adding.** *"Add gaschromatografie (GC) = gas chromatography (GC)"* stores both abbreviations with the pair. Each abbreviation stays beside its own term, so in a termbase that runs the other way the abbreviations swap sides with the terms, and the response shows where each one was stored.
+* **Finding.** `lookup_term` shows an entry's abbreviations, and an abbreviation on its own finds its entry – *GC* finds *gas chromatography*. Only the whole abbreviation counts, so *GC* is not found inside a longer word. TermLens already shows the entry when the source abbreviation alone appears in a segment.
+* **Changing and removing.** `update_term` changes an abbreviation, or removes it when the AI sends an empty one; the fields it is not asked about stay as they are.
+* **Importing.** `import_project_termbase` puts a Trados termbase's *Abbreviation* fields into the abbreviation fields, each on the side of its own language. In a CSV or TSV glossary, a column whose heading names its language or side – *Dutch abbreviation*, *Abbr. (EN)*, *Source abbreviation* – is used in the same way. A column headed just *Abbreviation* is left out until you say which language it is in; the dry run says so.
+* **Checking.** `check_terminology` accepts a translation that uses the entry's target abbreviation as a whole word, in the same letter case. Abbreviations of one or two letters are not checked there, like any other term that short.
+
+Abbreviations are optional: an entry without them works exactly as before.
+
 ## Prompt cookbook
 
 You talk to the AI in plain language – there are no commands to memorise. The AI decides which tools to call from what you say. This section lists, per task, the kinds of things you can say, so you know the full range of what's possible. Mix and combine freely ("find X, then fix Y").
@@ -238,6 +250,7 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Add *commandovoering* = *command and control* to my termbases – with the NATO definition and a usage note." *(direction-aware per termbase, with definition/domain/notes – from v18.20.153)*
 * "Add this pair to the Acme termbase only." *(write to named termbases instead of all Write-enabled ones – from v18.20.153)*
 * "Add this to my **project** termbase only." / "Put that one in my **background** termbase, it's not client-specific." *(role-based targeting via the Project tick – from v18.20.159)*
+* "Add *gaschromatografie* (GC) = *gas chromatography* (GC), with both abbreviations." / "What does *GC* stand for in my termbase?" / "Remove the English abbreviation from that entry." *(abbreviation fields – from v18/19.20.205)*
 * "Extend the usage note on *eenzelfde* with a warning about the split spelling." *(edit an entry's notes, definition or domain in place, without touching the pair – from v18.20.159)*
 
 ### Translation memory

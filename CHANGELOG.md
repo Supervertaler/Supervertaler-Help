@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-04
+
+- **Trados: the MCP termbase tools handle abbreviations** (from v18/19.20.205). *MCP server* has a new section, *Abbreviations*: `add_term` stores a source and a target abbreviation with the pair, each beside its own term; `lookup_term` shows them and finds an entry by its abbreviation alone; `update_term` changes or removes them; `import_project_termbase` puts Abbreviation fields, and abbreviation columns of a CSV or TSV glossary, into those fields; and `check_terminology` accepts a translation that uses the target abbreviation. The tool table and the example prompts follow. Not released yet: publish with the release that ships it.
+
 ## 2026-11-03
 
 - **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
