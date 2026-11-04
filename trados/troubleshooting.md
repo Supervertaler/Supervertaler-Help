@@ -267,7 +267,7 @@ See [Installation – Running on a Mac (Parallels)](/trados/installation/#runnin
 
 *(from v18/19.20.205)*
 
-**Symptoms:** A yellow line across the top of the TermLens panel says, for example, "2 stretches of source text are outside any segment and will export untranslated." Or a sentence came out in the source language in the exported file, although every segment in the editor is translated.
+**Symptoms:** When you open a document, a pop-up says, for example, "Trados left 2 stretches of source text in Catalogue.docx outside any segment." It appears whether or not you show the TermLens panel, and it does not take the focus, so you can keep typing. While the document is open, a yellow line across the top of the TermLens panel says the same: "2 stretches of source text are outside any segment and will export untranslated." Or a sentence came out in the source language in the exported file, although every segment in the editor is translated.
 
 **What it means:** Trados sometimes leaves a stretch of source text in a file outside every segment. It has happened where a client's Word comments – one of them an empty point comment – ended exactly at the end of a sentence: the next sentence sat between two segments. Text like that:
 
@@ -281,12 +281,12 @@ Nor do paragraphs that have no segment at all. In files made from memoQ or other
 
 **What to do:**
 
-1. **Click the warning** to list each stretch: the segments it sits between and its first words. In a document made of several files, each line names the file too.
+1. **Click Show list** in the pop-up, or click the yellow line, to list each stretch: the segments it sits between and its first words. In a document made of several files, each line names the file too.
 2. **Click a stretch** to go to the nearest segment, so you can see where the text belongs.
 3. **Fix it outside the editor** – Supervertaler only warns, it does not repair anything. Either:
    - translate the stretch in the exported target file, or
    - fix the source document (for example, remove or move the comments around that sentence) and prepare the file again.
-4. **Click ×** to hide the warning once you have dealt with it. It stays hidden for those results and comes back only when they change – after the file has been prepared again, for example.
+4. **Click OK** to close the pop-up, and **×** to hide the yellow line once you have dealt with it. The yellow line stays hidden for those results and comes back only when they change – after the file has been prepared again, for example. The pop-up, too, comes once per document while Studio is running, and again only when the stretches change: switching back to the document, or saving it, does not bring it back.
 
 :::note
 The check reads each file as last saved, which is also what Studio exports. If a file cannot be read – locked by another program, or still being written – you get no warning, and it is checked again the next time you open the document.
