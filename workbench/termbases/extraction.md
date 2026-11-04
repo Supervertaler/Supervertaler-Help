@@ -56,7 +56,7 @@ On very large projects only the first portion of the text (roughly 8–9k words)
 
 Click **Create Project Termbase**, then give it a name. The default is `<Project name> Terminology`.
 
-Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and makes it the **Project termbase** – it appears in the Termbases tab with the pink **Project** tick and **Read** enabled, so terms with targets immediately produce [TermLens](/workbench/termbases/termlens/) suggestions. Empty-target entries can be completed later – see [Creating termbases](/workbench/termbases/creating/).
+Supervertaler creates a project-scoped **bilingual** termbase containing every ticked pair and makes it the **Project termbase** – it appears in the Termbases tab with the pink **Project** tick and **Read** enabled, so terms with targets immediately produce [TermLens](/workbench/termbases/termlens/) suggestions. Empty-target entries can be completed later in the termbase's [terms window](/workbench/termbases/basics/#the-terms-window).
 
 :::note
 **One project termbase per project.** If the project already has one, you are asked what to do (v1.10.358+): make the new termbase the project termbase (the existing one is kept as a regular termbase), save the new one as a regular termbase alongside, or cancel. Nothing is deleted in any case.

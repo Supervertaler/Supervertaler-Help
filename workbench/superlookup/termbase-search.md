@@ -39,7 +39,7 @@ Right-click a result to open a context menu with:
 
 - **Edit in Termbase: …**
 
-This navigates to the **Termbases** tab, selects the termbase, and filters the terms list to the source term.
+This switches to the **Termbases** tab, selects the termbase and opens its [terms window](/workbench/termbases/basics/#the-terms-window), filtered to the source term, with the first match selected.
 
 ## Termbase selection
 
