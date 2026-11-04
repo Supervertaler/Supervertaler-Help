@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-04
+
+- **Trados: the AI assistant and segments that hold only tags** (from v18/19.20.205). *MCP Server* says that `get_segments` now lists segments that hold only tags – email links, a field, an image – and names a segment whose source is empty instead of leaving it out silently; that `update_segments` can fill a segment with a copy of its source, as Ctrl+Insert does; and that `check_tags` checks segments of tags only. A new safety rail says that a translation written without the segment's fingerprint is refused when its tags would not match the source's, and that a segment of tags only is copied, not retyped. Not released yet: publish with the release that ships it.
+
 ## 2026-11-03
 
 - **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
