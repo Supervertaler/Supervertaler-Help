@@ -93,7 +93,7 @@ Importing a document switches every TM and termbase off for the new project, so 
 
 1. Go to the **Termbases** tab
 2. Click **+ Create New**
-3. Add terms manually or import from TSV
+3. Add terms: right-click the termbase → **📝 Edit Terms…** → **+ Add Term**, or import a TSV file with **📥 Import**
 4. Make sure **Read** is ticked so the project uses it
 
 ## Saving Your Project

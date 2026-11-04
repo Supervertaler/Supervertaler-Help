@@ -8,6 +8,15 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-04
+
+- **Workbench: a termbase's terms open in their own window, and "+ Add Term" opens a dialog** (from v1.10.376). *Termbase Basics* has a new section, *The Terms Window*. The Termbases tab lists the termbases, and right-click → **📝 Edit Terms…** opens a termbase's terms in a window of their own, with the filter, page size, sort, editing in the cells, **Forbidden** and 🗑. *Your First Translation Project*, *Termbase Search* (SuperLookup's **Edit in Termbase** opens the terms window) and *Term Extraction* follow. *Adding Terms → Manually* now describes the **Add Term to Termbase** dialog:
+  - its boxes are labelled with the termbase's languages
+  - the new term is selected after Save
+  - empty terms and duplicates are refused
+  - a locked or read-only database gives a message
+  - a note says how to find the empty terms the old button left behind
+
 ## 2026-11-03
 
 - **Trados: the TermLens popup opens with Alt+L.** *Keyboard shortcuts* still said a Ctrl tap, which no longer opens it.
