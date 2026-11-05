@@ -377,6 +377,10 @@ const sidebar = [
             "link": "/memoq/remove-mt-marks/"
           },
           {
+            "label": "Showing Your Changes as Tracked Changes",
+            "link": "/memoq/tracked-changes/"
+          },
+          {
             "label": "AI Assistants (Claude Desktop, ChatGPT)",
             "link": "/memoq/mcp-server/"
           },

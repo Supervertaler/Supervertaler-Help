@@ -99,6 +99,7 @@
 * [Local and Cloud Models](memoq/local-models.md)
 * [The Supervertaler Editor](memoq/prompt-editor.md)
 * [Removing MT Marks](memoq/remove-mt-marks.md)
+* [Showing Your Changes as Tracked Changes](memoq/tracked-changes.md)
 * [AI Assistants (Claude Desktop, ChatGPT)](memoq/mcp-server.md)
 * [Terminology](memoq/terminology.md)
   * [Glossary Format](memoq/glossary-format.md)
