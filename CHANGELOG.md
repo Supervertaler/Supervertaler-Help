@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-06
+
+- **memoQ: showing your changes as tracked changes.** A new page, *Showing Your Changes as Tracked Changes*, for when a client wants to see what you changed in a translation that is already in memoQ: export the document as a Two-column RTF, edit the target column (in Word or Workbench), bring it back with **Documents → Import → Update From Bilingual**, and tick **Import edits as tracked changes**. It says why to leave **Do not update if source segment is different** ticked, and that in a memoQ server project it works in your local copy if the project manager allows checking out and exporting. *Troubleshooting* links to it from the section on MT plugins switched off in a server project.
+
 ## 2026-11-04
 
 - **Trados: chat in the AI Assistant uses the prompt cache** (from v18/19.20.205). *AI Cost Guide* no longer says that chat with Claude does not use the cache. *Prompt caching* lists the chat among the features that use it, and a new paragraph says what a chat message reads from the cache from the second message on (the instructions, SuperMemory, the document and the conversation so far), what it still pays in full (the new message and the active segment's details), what moving to another segment changes, and that each step of a tool-using answer reads the one before it. *Chat token budget* says the chat sends your last 10 to 13 messages and now drops older ones two exchanges at a time, so the conversation can be read from the cache.
