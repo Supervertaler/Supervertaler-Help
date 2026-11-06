@@ -2,7 +2,9 @@
 title: "SuperVault"
 ---
 
-SuperVault brings your **Supervertaler Workbench memory into Trados Studio as a translation memory**. You add it to a project like any TM, and it serves every project in a language pair your Workbench database holds: **all language variants, in both directions**. One Dutch–English memory serves nl-BE > en-US, nl-NL > en-GB, en-GB > nl-BE and en-US > nl-NL alike. There are no reversed copies to make and nothing to add per variant.
+SuperVault is **one translation memory for every language variant, in both directions**, built into Supervertaler for Trados. You add it to a project like any TM, and it serves every project in a language pair it holds. One Dutch–English memory serves nl-BE > en-US, nl-NL > en-GB, en-GB > nl-BE and en-US > nl-NL alike. There are no reversed copies to make and nothing to add per variant.
+
+You fill it by importing TMX files and Studio TMs. It needs no other program.
 
 *(From v18.20.206 / v19.20.206. In this first version SuperVault offers lookups and concordance search; segments you confirm in Studio are not yet stored in it.)*
 
@@ -11,7 +13,7 @@ SuperVault brings your **Supervertaler Workbench memory into Trados Studio as a 
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM.
 - **Analyze and Pre-translate** count and use SuperVault matches like any TM's.
 - **Concordance search** on the source and on the target.
-- **Formatting comes along.** Where a stored unit has formatting (bold, a tag pair such as `<pt x="1">…</pt>`, a memoQ `[1}…{1]` pair), the match carries your document's own tags in the right places. When the tags can't be placed with confidence – the stored unit has a different number of tags than your segment, for example – the match comes as plain text, with your project's formatting penalty, just as a Studio TM's would.
+- **Formatting comes along.** Where a stored unit has the same formatting as your segment, the match carries your document's own tags in the right places. When the tags can't be placed with confidence – the stored unit has a different number of tags than your segment, for example – the match comes as plain text, with your project's formatting penalty, just as a Studio TM's would.
 
 ## Your own TMs always come first
 
@@ -27,31 +29,41 @@ This matters because of how Studio treats two TMs that disagree. When two TMs gi
 ## Setting it up
 
 1. Open **Project Settings** (or **File > Options** for your default settings), go to **Language Pairs > All Language Pairs > Translation Memory and Automated Translation**, and click **Use > SuperVault...**.
-2. The first time, click **Build index**. SuperVault reads your Workbench database and builds a search index of its own. This runs in the background, so you can click **Add** and keep working; Studio starts using SuperVault as soon as the index is ready. It takes about 6 minutes for 1.5 million units.
+2. Fill SuperVault: click **Import TMX...** or **Import Studio TM...** and choose one or more files. The import runs in the background, so you can click **Add** and keep working; Studio starts using the new units as soon as SuperVault has updated its search index.
 3. Tick **Lookup** and **Concordance** for SuperVault in the list, as for any TM. SuperVault has no **Update** yet.
 
-To see the index, rebuild it or stop a build, select SuperVault in the list and click **Settings...**.
+To import more later, see what SuperVault holds, or rebuild its index, select SuperVault in the list and click **Settings...**.
+
+## Importing
+
+| Import | What it takes |
+| --- | --- |
+| **Import TMX...** | Any TMX file, of any size. A unit in more than two languages gives one unit per pair of languages. Formatting tags are kept. |
+| **Import Studio TM...** | A Studio file-based TM (`.sdltm`), read through Studio itself, formatting tags included. A TM with a password can't be imported: export it to TMX in Studio and import that. |
+| **Import from Workbench** | Shown only if you have Supervertaler Workbench: adds the units in its memory. Workbench's database is only read, never changed. |
+
+- **Duplicates are stored once.** A unit counts as the same when its text and formatting are the same, whatever its direction, language variants or tag numbers. Importing the same TM twice, or an en-GB > nl-NL TM after its nl-BE > en-US twin, adds nothing new; the summary after the import says how many units were added and how many were already there.
+- **Left out:** units with no text once the tags are removed, units with the same language on both sides, and a known kind of broken unit from public software corpora, where a menu label ran into the next one (*AndereSearch in:" "All Categories*).
+- **An import that fails or that you stop adds nothing**: the memory and the index stay as they were.
+- Variants count as one language (nl-BE and nl-NL are both Dutch); different scripts don't (Chinese Simplified and Traditional, Serbian Latin and Cyrillic are kept apart).
 
 ## Where it lives
 
-| What | Where |
+Everything is in `supervault` in your [Supervertaler data folder](data-folder.md):
+
+| What | File |
 | --- | --- |
-| Your Workbench database (read, never changed) | `resources\supervertaler.db` in your [Supervertaler data folder](data-folder.md) |
-| SuperVault's index | `supervault` in your Supervertaler data folder |
+| The memory itself | `supervault.db` |
+| Its search index | the `gen-…` folder, rebuilt from the memory after every import |
 
-The index can always be built again from the database: deleting the `supervault` folder loses nothing. It takes about 365 MB per 1.5 million units.
+The index can always be rebuilt from the memory, so it needs no backing up. Back up `supervault.db` with the rest of your data folder.
 
-## Keeping it up to date
+## Keeping the index healthy
 
-Units you add in Workbench reach SuperVault when you click **Rebuild index** in SuperVault's settings. Studio keeps using the old index while the new one is built, and switches over when it is complete. If a build fails or you stop it, the old index stays in use, unchanged.
+SuperVault updates its index after every import. Studio keeps using the previous index while the new one is built, and switches over when it is complete. It takes about 6 minutes and 365 MB for 1.5 million units.
 
-If the index is damaged, or was built by another version of Supervertaler, Studio shows SuperVault as unavailable, with a message; your other TMs work as usual. Click **Rebuild index** to put it right.
-
-## Which units SuperVault serves
-
-- **Language pairs:** every pair of two different languages your Workbench database holds. Variants count as one language (nl-BE and nl-NL are both Dutch); different scripts don't (Chinese Simplified and Traditional, Serbian Latin and Cyrillic are kept apart).
-- **Left out:** units with no text once the tags are removed, and a known kind of broken unit from public software corpora, where a menu label ran into the next one (*AndereSearch in:" "All Categories*).
+If the index is damaged, or was built by another version of Supervertaler, Studio shows SuperVault as unavailable, with a message; your other TMs work as usual. Click **Rebuild index** in SuperVault's settings to put it right.
 
 ## Speed
 
-A lookup takes about 35 ms with 1.5 million units. Analyze and Pre-translate look up every segment this way, so they take about 35 ms longer per segment with SuperVault added.
+A lookup takes about 20 ms in Studio 2024 and 35 ms in Studio 2026 with 1.5 million units. Analyze and Pre-translate look up every segment this way.
