@@ -48,6 +48,10 @@
 
 * [SuperSearch](trados/supersearch.md)
 
+## 🧩 SuperVault
+
+* [SuperVault](trados/supervault.md)
+
 ## 🧩 More Tools
 
 * [SuperVoice](trados/voice-commands.md)
