@@ -12,7 +12,7 @@ You fill it by importing TMX files and Studio TMs. It needs no other program.
 
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM.
 - **Analyze and Pre-translate** count and use SuperVault matches like any TM's.
-- **Concordance search** on the source and on the target.
+- **Concordance search** on the source and on the target, with the words you searched for highlighted. Concordance results show the text without its formatting.
 - **Formatting comes along.** Where a stored unit has the same formatting as your segment, the match carries your document's own tags in the right places. When the tags can't be placed with confidence – the stored unit has a different number of tags than your segment, for example – the match comes as plain text, with your project's formatting penalty, just as a Studio TM's would.
 
 ## Your own TMs always come first
@@ -23,7 +23,7 @@ This matters because of how Studio treats two TMs that disagree. When two TMs gi
 
 - Where only SuperVault has the segment, its match shows as 100%.
 - Where your TM has a 100% or Context Match, that match stays exactly as it was, is listed first, and is the one Pre-translate uses. SuperVault's match is listed after it.
-- If SuperVault holds the very same translation, tags included, Studio shows it once, as your TM's match.
+- If SuperVault holds the very same translation, you may see it twice: once from your TM, listed first, and once from SuperVault, below it. Neither is marked down.
 - If two of *your* TMs disagree, Studio penalises them as it always has.
 
 ## Setting it up
