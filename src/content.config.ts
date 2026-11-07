@@ -12,7 +12,8 @@
 //
 // The custom `glob` loader scans the product folders (one per entry in
 // src/products.ts) plus a single `index.mdx` at the repo root (the landing
-// page).  The README.md and
+// page) and `names.md` (Supervertaler names at a glance, shared by all
+// products).  The README.md and
 // SUMMARY.md at the root are GitBook-only and are deliberately excluded
 // from the Starlight build.
 
@@ -26,6 +27,7 @@ export const collections = {
       pattern: [
         '{trados,memoq,sidekick,workbench}/**/*.{md,mdx}',
         'index.mdx',
+        'names.md',
       ],
       base: './',
       // GitBook's convention is that `<folder>/README.md` is the homepage

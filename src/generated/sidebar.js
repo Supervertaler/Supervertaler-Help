@@ -7,6 +7,10 @@
 // @ts-nocheck
 const sidebar = [
   {
+    "label": "Supervertaler names at a glance",
+    "link": "/names/"
+  },
+  {
     "label": "🧩 Supervertaler for Trados",
     "collapsed": false,
     "items": [
@@ -192,6 +196,16 @@ const sidebar = [
           {
             "label": "SuperSearch",
             "link": "/trados/supersearch/"
+          }
+        ]
+      },
+      {
+        "label": "SuperVault",
+        "collapsed": true,
+        "items": [
+          {
+            "label": "SuperVault",
+            "link": "/trados/supervault/"
           }
         ]
       },

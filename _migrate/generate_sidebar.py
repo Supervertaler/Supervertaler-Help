@@ -111,8 +111,12 @@ def md_path_to_url(md_path: str) -> str:
     return url
 
 
-def parse_summary(text: str) -> List[Dict]:
-    """Return a list of section dicts, one per "## emoji Name" header.
+def parse_summary(text: str) -> Tuple[List[Dict], List[Dict]]:
+    """Return (top_items, sections).
+
+    top_items are the shared pages listed above the first section header,
+    as {'label', 'link'} leaves.  sections is a list of section dicts, one
+    per "## emoji Name" header.
 
     Each section dict:
         { 'product': 'Trados' | 'Workbench',
@@ -123,6 +127,7 @@ def parse_summary(text: str) -> List[Dict]:
         { 'label': str, 'link': str, 'items'?: [<children>] }
     """
     sections: List[Dict] = []
+    top_items: List[Dict] = []
     current: Optional[Dict] = None
     # Stack of (indent_width, items_list) for nested .items[].
     # The root list of the current section is at indent -1.
@@ -140,6 +145,13 @@ def parse_summary(text: str) -> List[Dict]:
             continue
 
         if current is None:
+            # Items above the first section are shared pages that belong to
+            # no product (e.g. names.md).  The root README.md is GitBook's
+            # welcome page and is not part of the Starlight build, so skip it.
+            item_m = ITEM_RE.match(raw_line)
+            if item_m and item_m.group(3).strip().lower() != "readme.md":
+                top_items.append({"label": clean_label(item_m.group(2)),
+                                  "link": md_path_to_url(item_m.group(3))})
             continue
 
         # List item
@@ -203,11 +215,11 @@ def parse_summary(text: str) -> List[Dict]:
     for sec in sections:
         prune(sec["items"])
 
-    return sections
+    return top_items, sections
 
 
-def build_sidebar(sections: List[Dict]) -> List[Dict]:
-    """Group sections into two top-level products with nested section folders."""
+def build_sidebar(top_items: List[Dict], sections: List[Dict]) -> List[Dict]:
+    """Shared top-level pages first, then one group per product with nested section folders."""
     trados_sections = [s for s in sections if s["product"] == "Trados"]
     memoq_sections = [s for s in sections if s["product"] == "memoQ"]
     sidekick_sections = [s for s in sections if s["product"] == "Sidekick"]
@@ -220,7 +232,7 @@ def build_sidebar(sections: List[Dict]) -> List[Dict]:
             "items": sec["items"],
         }
 
-    return [
+    return top_items + [
         {
             "label": "🧩 Supervertaler for Trados",
             "collapsed": False,
@@ -262,8 +274,8 @@ def emit_js(sidebar: List[Dict]) -> str:
 
 def main() -> int:
     text = SUMMARY_PATH.read_text(encoding="utf-8")
-    sections = parse_summary(text)
-    sidebar = build_sidebar(sections)
+    top_items, sections = parse_summary(text)
+    sidebar = build_sidebar(top_items, sections)
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT_PATH.write_text(emit_js(sidebar), encoding="utf-8")
 

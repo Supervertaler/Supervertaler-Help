@@ -1,6 +1,7 @@
 ﻿# Table of contents
 
 * [Welcome to Supervertaler Docs!](README.md)
+* [Supervertaler names at a glance](names.md)
 
 ## 🧩 Get Started
 

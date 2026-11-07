@@ -211,18 +211,18 @@
   background-repeat: no-repeat;
 }
 .sv-sidebar[data-product="trados"] .top-level > li > details > summary .large::before,
-.sv-sidebar[data-product="all"] .top-level > li:nth-child(1) > details > summary .large::before {
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(1 of :has(> details)) > details > summary .large::before {
   background-image: url('/product-icons/sv-trados.svg');
 }
 .sv-sidebar[data-product="memoq"] .top-level > li > details > summary .large::before,
-.sv-sidebar[data-product="all"] .top-level > li:nth-child(2) > details > summary .large::before {
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(2 of :has(> details)) > details > summary .large::before {
   background-image: url('/product-icons/sv-memoq.svg');
 }
 .sv-sidebar[data-product="sidekick"] .top-level > li > details > summary .large::before,
-.sv-sidebar[data-product="all"] .top-level > li:nth-child(3) > details > summary .large::before {
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(3 of :has(> details)) > details > summary .large::before {
   background-image: url('/product-icons/sv-sidekick.svg');
 }
 .sv-sidebar[data-product="workbench"] .top-level > li > details > summary .large::before,
-.sv-sidebar[data-product="all"] .top-level > li:nth-child(4) > details > summary .large::before {
+.sv-sidebar[data-product="all"] .top-level > li:nth-child(4 of :has(> details)) > details > summary .large::before {
   background-image: url('/product-icons/sv-workbench.svg');
 }

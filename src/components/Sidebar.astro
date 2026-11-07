@@ -45,6 +45,9 @@ const currentProduct = productFor(id);
 if (currentProduct && route?.sidebar) {
   const name = currentProduct.label;
   route.sidebar = route.sidebar.filter((entry: any) => {
+    // A top-level link (not a group) is a shared page such as names.md,
+    // which belongs to every product: keep it.
+    if (entry?.type === 'link') return true;
     const label: string = entry?.label ?? '';
     return label.includes(name);
   });
