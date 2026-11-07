@@ -88,7 +88,7 @@ subfolder (`workbench/` or `trados/`), so the two never interfere with each
 other. Workbench's `workbench/` subfolder holds your `settings/`, custom
 spellcheck `dictionaries/` (including `custom_words.txt`), saved `projects/`,
 versioned project `backups/` (see [Backup](/workbench/settings/backup/)), the diagnostic log (`logs/supervertaler.log`), AI assistant data,
-voice scripts, the Superbrowser logins and a web cache.
+voice scripts, the SuperBrowser logins and a web cache.
 
 A few Workbench libraries sit at the top level of the data folder:
 `find_replace_sets/` (saved Find & Replace sets) and `vosk-models/` (the

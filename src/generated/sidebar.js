@@ -854,7 +854,7 @@ const sidebar = [
             "link": "/workbench/tools/statistics/"
           },
           {
-            "label": "Superbrowser (Multi-Chat AI Browser)",
+            "label": "SuperBrowser (Multi-Chat AI Browser)",
             "link": "/workbench/tools/superbrowser/"
           }
         ]

@@ -11,6 +11,7 @@ guesswork.
 ## 2026-11-07
 
 - **Site: Supervertaler names at a glance.** A new page, *Supervertaler names at a glance*, says in one line what each Supervertaler name means – SuperMemory, SuperVault, SuperSearch, SuperLookup, TermLens, TermPicker, AutoPrompt, QuickTrans, FigureLens and the rest, 28 in all – which of the four products has it, and links to its page in each. A short section, *Easily confused*, sets SuperMemory against SuperVault, SuperSearch against SuperLookup, TermLens against TermPicker and QuickLauncher against QuickTrans. It is the first page in the sidebar, above the four products, and stays there on every product's pages. The sidebar now also shows *SuperVault*, which was in the table of contents but had not reached the site's menu. Publish with the v18/19.20.206 release, since it lists SuperVault.
+- **Workbench: SuperBrowser** is now spelt with a capital B, like the other Super- names, on its page, in the sidebar and on *Data folder*. Workbench's own menu and window title change in its next release.
 
 ## 2026-11-06
 

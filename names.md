@@ -20,7 +20,7 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 | **QuickLauncher** | A menu of your favourite AI prompts, run on the current segment with one click. | [Trados](/trados/quicklauncher/), Workbench |
 | **QuickTrans** | Translates the selected text with several engines at once and shows the answers side by side. | [Sidekick](/sidekick/quicktrans/), [Workbench](/workbench/quicktrans/overview/) |
 | **SuperBench** | Translates part of your document with three models under the same settings, and has a fourth model judge which one to use. | [Trados](/trados/superbench/) |
-| **Superbrowser** | ChatGPT, Claude and Gemini side by side in one window, so you can ask all three the same question. | [Workbench](/workbench/tools/superbrowser/) |
+| **SuperBrowser** | ChatGPT, Claude and Gemini side by side in one window, so you can ask all three the same question. | [Workbench](/workbench/tools/superbrowser/) |
 | **SuperCleaner** | Tidies up Word files as Trados imports them, so you get fewer tags. Not released yet. | [Trados](/trados/supercleaner/) |
 | **SuperLookup** | One search box across your termbases, translation memories and web resources. | [Workbench](/workbench/superlookup/overview/) |
 | **SuperMemory** | Your notes for the AI about a client or subject: the terms they insist on, wordings they rejected, house style, and why. Kept in *memory banks*, one per client or subject. | [Trados](/trados/ai-assistant/super-memory/), [memoQ](/memoq/context-layers/#7-supermemory-memory-banks) |
