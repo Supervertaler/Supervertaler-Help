@@ -6,6 +6,8 @@ SuperVault is **one translation memory for every language variant, in both direc
 
 You fill it by importing TMX files and Studio TMs. It needs no other program.
 
+Despite the name, SuperVault isn't encrypted or locked storage. It is your own lifetime translation memory: one ordinary database on your own PC, in your Supervertaler data folder (see [Where it lives](#where-it-lives)). Keep it safe as you would your other TMs.
+
 *(From v18.20.206 / v19.20.206. In this first version SuperVault offers lookups and concordance search; segments you confirm in Studio are not yet stored in it.)*
 
 ## What you get
