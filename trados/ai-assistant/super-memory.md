@@ -7,6 +7,8 @@ description: ">-"
 
 Knowledge lives in **memory banks**: one folder per client, domain, or job, which you switch between from the Supervertaler Assistant toolbar. SuperMemory is one of several [context layers](/trados/context-layers/) the assistant consults, alongside termbases, translation memories, document content and segment metadata.
 
+Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned* – your notes for the AI about a client or subject – and **SuperVault** holds what you've *translated*: every segment pair from your TMs. See [SuperVault](/trados/supervault/) for the translations.
+
 ## A bank is three files
 
 Every bank contains the same three Markdown files, plus a folder for source material:

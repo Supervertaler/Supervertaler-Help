@@ -42,7 +42,7 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 
 ## Easily confused
 
-**SuperMemory or SuperVault?** SuperMemory holds *notes* that you write for the AI: what a client wants and why. SuperVault holds *translations*: it is your own lifetime translation memory, filled from your TMs, which Trados searches like any other TM. One is read by the AI as instructions; the other gives you matches.
+**SuperMemory or SuperVault?** Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned* – your notes for the AI about a client or subject – and **SuperVault** holds what you've *translated*: every segment pair from your TMs. In more detail: SuperMemory holds *notes* that you write for the AI: what a client wants and why. SuperVault holds *translations*: it is your own lifetime translation memory, filled from your TMs, which Trados searches like any other TM. One is read by the AI as instructions; the other gives you matches.
 
 **SuperSearch or SuperLookup?** SuperSearch is in the Trados plugin and searches the files of the project you have open, so you can find and replace across them. SuperLookup is in Workbench and looks a word up in your termbases, translation memories and web resources.
 

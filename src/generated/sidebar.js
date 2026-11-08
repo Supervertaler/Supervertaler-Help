@@ -142,6 +142,29 @@ const sidebar = [
             "link": "/trados/reports/"
           },
           {
+            "label": "How the assistant works",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/trados/ai-assistant/how-it-works/"
+              },
+              {
+                "label": "Providers and Models",
+                "link": "/trados/ai-assistant/providers/"
+              },
+              {
+                "label": "Incognito Mode",
+                "link": "/trados/ai-assistant/incognito-mode/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "label": "Memory",
+        "collapsed": true,
+        "items": [
+          {
             "label": "SuperMemory",
             "items": [
               {
@@ -171,21 +194,8 @@ const sidebar = [
             ]
           },
           {
-            "label": "How the assistant works",
-            "items": [
-              {
-                "label": "Overview",
-                "link": "/trados/ai-assistant/how-it-works/"
-              },
-              {
-                "label": "Providers and Models",
-                "link": "/trados/ai-assistant/providers/"
-              },
-              {
-                "label": "Incognito Mode",
-                "link": "/trados/ai-assistant/incognito-mode/"
-              }
-            ]
+            "label": "SuperVault",
+            "link": "/trados/supervault/"
           }
         ]
       },
@@ -196,16 +206,6 @@ const sidebar = [
           {
             "label": "SuperSearch",
             "link": "/trados/supersearch/"
-          }
-        ]
-      },
-      {
-        "label": "SuperVault",
-        "collapsed": true,
-        "items": [
-          {
-            "label": "SuperVault",
-            "link": "/trados/supervault/"
           }
         ]
       },

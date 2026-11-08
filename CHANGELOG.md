@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-08
 
+- **Trados: SuperMemory and SuperVault side by side.** The Trados sidebar has a new heading, *Memory*, holding *SuperMemory* (moved from under *Supervertaler Assistant*) and *SuperVault* (which had a heading of its own with a single page under it). Both pages, and *Supervertaler names at a glance*, now open with the same line: Supervertaler remembers in two ways – SuperMemory holds what you've learned, SuperVault what you've translated. The pages' addresses are unchanged.
 - **Trados: in the TermLens popup, Up edits a match and Down shows its details** (from v18/19.20.205). *TermLens popup* says that Left, Right, Tab and Shift+Tab move between the matches, that Up now does what E does and Down what I does, and quotes the key line at the bottom of the popup. A new section, *Showing a match's details*, describes I and Down; the page did not mention I before.
 
 ## 2026-11-07
