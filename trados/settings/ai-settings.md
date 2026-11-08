@@ -77,7 +77,7 @@ A dropdown showing a curated list of recommended models for the selected provide
 
 By default the dropdown is a short list: the few models worth recommending for translation work, each with a one-line verdict. It is kept current with every release, and a model that has been superseded is removed from it rather than left in with a warning.
 
-Tick **Show all models** beside the dropdown to see everything the provider offers as well. Click **Fetch list** to ask the provider for its current list, using the API key in the box (it need not be saved yet) – Anthropic, OpenAI, Gemini, Mistral, DeepSeek, xAI, OpenRouter, Ollama and custom OpenAI-compatible endpoints all publish one. Fetching switches **Show all models** on. Models not in the short list appear with the provider's own name for them; dated snapshots and models that are not for translating text (speech, image, transcription, embeddings) are left out. The fetched list and the tick box are remembered across restarts, and the Batch Operations and chat model menus follow them.
+Tick **Show all models** beside the dropdown to see everything the provider offers as well. Click **Fetch list** to ask the provider for its current list, using the API key in the box (it need not be saved yet) – Anthropic, OpenAI, Gemini, Mistral, DeepSeek, xAI, OpenRouter, Ollama and custom OpenAI-compatible endpoints all publish one. Fetching switches **Show all models** on. Models not in the short list appear with the provider's own name for them; dated snapshots and models that are not for translating text (speech, image, transcription, embeddings) are left out. The fetched list and the tick box are remembered across restarts, and the Batch Operations and chat model menus and [SuperBench](/trados/superbench/) follow them.
 
 This is the way to use a model released after your plugin build: click **Fetch list**, pick it, OK.
 
@@ -164,7 +164,12 @@ The model dropdown includes a curated selection of the best models for translati
 
 ### Using any OpenRouter model
 
-OpenRouter exposes far more models than the curated list above. To use one that isn't listed, type its exact model ID into the **Model ID** field (see [Model selection](#model-selection)) – for example, `meta-llama/llama-3.1-70b-instruct`, `deepseek/deepseek-r1`, or a router such as `openrouter/free`. Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
+OpenRouter exposes far more models than the curated list above. There are two ways to use one that isn't listed:
+
+- **Pick it from the full list.** Click **Fetch list** beside the model dropdown: every model OpenRouter offers is added to the dropdown, and to the model lists in Batch Operations, the chat and [SuperBench](/trados/superbench/). This is the way to test an OpenRouter model in SuperBench.
+- **Type its ID.** Enter its exact model ID in the **Model ID** field (see [Model selection](#model-selection)) – for example, `deepseek/deepseek-r1`, or a router such as `openrouter/free`. This sets the model for Batch Translate and the chat, but SuperBench does not read it.
+
+Browse all available models at [openrouter.ai/models](https://openrouter.ai/models).
 
 ### Pricing
 

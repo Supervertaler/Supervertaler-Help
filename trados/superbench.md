@@ -22,6 +22,18 @@ Which model should you use for this project? SuperBench answers that with eviden
 3. Choose the three models, the judge and the number of segments. The line under the segment count shows the estimated cost of the three runs and the judge's call.
 4. Click **Run SuperBench**. The status line follows the runs; **Cancel** stops after the current call.
 
+:::tip[Want to test any model on OpenRouter?]
+Each slot offers the short list of recommended models at first. To try one of the hundreds of other models on [OpenRouter](https://openrouter.ai/models):
+
+1. Close SuperBench and open **Settings → AI Settings**.
+2. Choose **OpenRouter** as the provider and click **Fetch list** beside the model dropdown. **Show all models** is ticked for you.
+3. Click **OK**, then open SuperBench again.
+
+Every model OpenRouter offers is now in a slot's model list when its provider is **OpenRouter**, under the name OpenRouter gives it. The same works for the other providers that publish a list. Untick **Show all models** to go back to the short list.
+
+Typing a model's ID into the **Model ID** box in AI Settings does not add it to SuperBench: that box sets the model for Batch Translate and the chat, and SuperBench offers only the models in the list.
+:::
+
 ## Reading the report
 
 The legend at the top of the report maps the judge's letters to the models. The judge's own text uses only the letters.
