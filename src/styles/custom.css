@@ -147,6 +147,19 @@
   border-inline-start-color: #3a3f47;
 }
 
+/* A page that sits beside a group at the same level (Memory: SuperMemory
+ * is a group, SuperVault a single page) is drawn like that group's
+ * heading. Starlight draws nested links smaller and lighter than group
+ * headings, so such a page looked like the last sub-page of the group
+ * above it. The current page keeps Starlight's highlight colours: its
+ * [aria-current] rule is more specific than this one. (2026-11-08) */
+.sidebar-pane ul ul > li:has(> details) ~ li > a,
+.sidebar-pane ul ul > li:has(~ li > details) > a {
+  font-size: var(--sl-text-lg);
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+
 /* ---------------------------------------------------------------
  * Product marks on the landing cards
  *
