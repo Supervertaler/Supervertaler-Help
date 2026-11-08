@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-08
+
+- **Trados: in the TermLens popup, Up edits a match and Down shows its details** (from v18/19.20.205). *TermLens popup* says that Left, Right, Tab and Shift+Tab move between the matches, that Up now does what E does and Down what I does, and quotes the key line at the bottom of the popup. A new section, *Showing a match's details*, describes I and Down; the page did not mention I before.
+
 ## 2026-11-07
 
 - **Site: Supervertaler names at a glance.** A new page, *Supervertaler names at a glance*, says in one line what each Supervertaler name means – SuperMemory, SuperVault, SuperSearch, SuperLookup, TermLens, TermPicker, AutoPrompt, QuickTrans, FigureLens and the rest, 28 in all – which of the four products has it, and links to its page in each. A short section, *Easily confused*, sets SuperMemory against SuperVault, SuperSearch against SuperLookup, TermLens against TermPicker and QuickLauncher against QuickTrans. It is the first page in the sidebar, above the four products, and stays there on every product's pages. The sidebar now also shows *SuperVault*, which was in the table of contents but had not reached the site's menu.

@@ -27,12 +27,16 @@ You can change the key in **File → Options → Keyboard Shortcuts**. (Earlier 
 
 When the popup opens, the first match has an amber ring around its source word – that is the **current match** that Enter will insert.
 
-| Key                               | Action                                             |
-| --------------------------------- | -------------------------------------------------- |
-| **Right** / **Down** / **Tab**    | Move the current-match highlight to the next match |
-| **Left** / **Up** / **Shift+Tab** | Move it to the previous match                      |
+| Key                      | Action                                             |
+| ------------------------ | -------------------------------------------------- |
+| **Right** / **Tab**      | Move the current-match highlight to the next match |
+| **Left** / **Shift+Tab** | Move it to the previous match                      |
 
 Cycling wraps: from the last match, Right takes you back to the first.
+
+**Up and Down have jobs of their own** (from v18/19.20.205). **Up** opens the current match for editing, like **E**, and **Down** shows or hides its details, like **I** – see [Editing a match](#editing-a-match) and [Showing a match's details](#showing-a-matchs-details) below. Before v18/19.20.205, Up and Down moved between matches, the same as Left and Right.
+
+The line at the bottom of the popup lists the keys: "← → cycle · Enter insert · ↑/E edit · ↓/I info · Esc close".
 
 ### Inserting
 
@@ -45,11 +49,17 @@ Both paths share the same insertion logic – there is no difference between pic
 
 ### Editing a match
 
-Press **E** while a match is highlighted to open the term-entry editor for that entry. The popup closes first so the editor opens with clean focus. The editor is the same dialogue the docked panel's right-click "Edit Term…" menu uses, including the multi-termbase editing case for entries that exist in more than one termbase.
+Press **E** – or **Up** (from v18/19.20.205) – while a match is highlighted to open the term-entry editor for that entry. The popup closes first so the editor opens with clean focus. The editor is the same dialogue the docked panel's right-click "Edit Term…" menu uses, including the multi-termbase editing case for entries that exist in more than one termbase.
 
 :::note
-**MultiTerm matches are read-only** in TermLens. Pressing E on a green MultiTerm chip flashes a hint instead – edit those entries in **Trados → Termbase Viewer**.
+**MultiTerm matches are read-only** in TermLens. Pressing E or Up on a green MultiTerm chip flashes a hint instead – edit those entries in **Trados → Termbase Viewer**.
 :::
+
+### Showing a match's details
+
+Press **I** – or **Down** (from v18/19.20.205) – to show the details of the current match below its chip: synonyms, definition, domain, notes and links, the same details you see when you hover over a chip in the docked panel. Press I or Down again to hide them. The popup stays open, so you can still insert the match with Enter. Holding Down shows the details once; they don't flicker.
+
+**Escape** with the details showing hides the details first; press it again to close the popup.
 
 ### Visuals
 
@@ -63,7 +73,7 @@ Both show the same matches for the active segment. Pick whichever fits your styl
 | -------- | ------------------------------------------------------ | ------------------------------------------------------- |
 | Layout   | Source segment with chips underneath each matched word | Sortable, scrollable table                              |
 | Best for | Skimming matches in segment context                    | Many matches that benefit from sorting / typing-to-jump |
-| Keyboard | Arrow / Tab cycles a highlighted match                 | 0–9 jumps directly; Up / Down navigate                  |
+| Keyboard | Left / Right / Tab cycle a highlighted match; Up edits it, Down shows its details | 0–9 jumps directly; Up / Down navigate                  |
 | Modality | Modeless – click outside to dismiss                    | Modal – Escape or Cancel to close                       |
 
 ***
