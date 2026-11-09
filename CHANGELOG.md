@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-09
+
+- **Site: the community is now on Reddit.** *Support* (Trados), *Troubleshooting*, *Context layers* and two Workbench pages now point to [r/Supervertaler](https://www.reddit.com/r/Supervertaler/) instead of GitHub Discussions. Links to particular old GitHub posts are unchanged.
+
 ## 2026-11-08
 
 - **Trados: SuperVault learns as you work** (from v18/19.20.206). *SuperVault* has a new section, *Learning as you work*: tick SuperVault's Update box and every segment you confirm, and every Update Main Translation Memories, goes into it; a correction replaces what it learned, imported units are never changed, and several Studios can share one SuperVault. *Importing* says that Import from Workbench first lets you choose Workbench's TMs. A new section, *What SuperVault keeps*, says which information comes along with a unit and which is left out (TMX properties, Studio TM fields, users and dates). *Setting it up*, *Where it lives* and *Keeping the index healthy* are brought up to date: SuperVault can be added in any language pair, starts empty without complaint, and updates its index in place for confirmed segments and small imports.

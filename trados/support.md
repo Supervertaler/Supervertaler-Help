@@ -6,9 +6,9 @@ There are several ways to get help with Supervertaler for Trados.
 
 ---
 
-## GitHub Discussions
+## Community on Reddit
 
-[GitHub Discussions](https://github.com/orgs/Supervertaler/discussions) is the main community hub for both Supervertaler for Trados and Supervertaler Workbench. It is the best place to:
+[r/Supervertaler](https://www.reddit.com/r/Supervertaler/) on Reddit is the community for all the Supervertaler products: Supervertaler for Trados, for memoQ, Sidekick and Workbench. It is the best place to:
 
 - Ask questions and get help from other users
 - Share tips, workflows, and best practices
@@ -16,7 +16,9 @@ There are several ways to get help with Supervertaler for Trados.
 - Discuss anything related to Supervertaler
 
 :::tip
-**[Visit Supervertaler Discussions →](https://github.com/orgs/Supervertaler/discussions)**
+**[Visit r/Supervertaler →](https://www.reddit.com/r/Supervertaler/)**
+
+The earlier forum on GitHub Discussions is no longer used for new questions; its posts stay readable.
 :::
 
 ---

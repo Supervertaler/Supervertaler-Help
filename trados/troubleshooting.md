@@ -311,7 +311,7 @@ The AI assistant sees the same list: [`get_active_project`](/trados/mcp-server/)
 
 ## Still having issues?
 
-1. Ask a question in [GitHub Discussions](https://github.com/orgs/Supervertaler/discussions) – the community hub for both Supervertaler Workbench and Supervertaler for Trados
+1. Ask a question on [r/Supervertaler](https://www.reddit.com/r/Supervertaler/) – the Supervertaler community on Reddit, for all the Supervertaler products
 2. Check the [GitHub Issues](https://github.com/Supervertaler/Supervertaler-for-Trados/issues) for known bugs, feature requests, and workarounds
 3. Open a new issue to report a bug or request a feature, including:
    - Your Trados Studio version

@@ -44,6 +44,6 @@ Both tools share the same SQLite-based termbase format (`.db`) – termbases cre
 
 - Browse this help center using the sidebar
 - Report issues on [GitHub](https://github.com/Supervertaler/Supervertaler-Workbench/issues)
-- Ask in [GitHub Discussions](https://github.com/orgs/Supervertaler/discussions)
+- Ask on [r/Supervertaler](https://www.reddit.com/r/Supervertaler/), our community on Reddit
 - Visit [supervertaler.com](https://supervertaler.com)
 

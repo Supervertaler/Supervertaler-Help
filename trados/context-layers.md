@@ -123,7 +123,7 @@ More context is not automatically better, though. The context window is finite, 
 The four layers that describe the *document* rather than the *client* – 3, 4, 8 and 9 – behave differently: they are cheap, they never contradict each other, and there is no case yet found where turning one off improved a translation.
 
 :::caution
-We have not published composition presets (e.g. "Mature client – memory bank only", "Unfamiliar domain – TM + termbase"). Until we do, leave everything enabled and experiment per project. If you find a configuration that works well, say so in [GitHub Discussions](https://github.com/orgs/Supervertaler/discussions).
+We have not published composition presets (e.g. "Mature client – memory bank only", "Unfamiliar domain – TM + termbase"). Until we do, leave everything enabled and experiment per project. If you find a configuration that works well, say so on [r/Supervertaler](https://www.reddit.com/r/Supervertaler/), our community on Reddit.
 :::
 
 ## Seeing and controlling the layers
