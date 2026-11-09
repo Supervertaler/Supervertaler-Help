@@ -11,6 +11,7 @@ guesswork.
 ## 2026-11-09
 
 - **Site: the community is now on Reddit.** *Support* (Trados), *Troubleshooting*, *Context layers* and two Workbench pages now point to [r/Supervertaler](https://www.reddit.com/r/Supervertaler/) instead of GitHub Discussions. Links to particular old GitHub posts are unchanged.
+- **Site: sidebar pages beside a group look like its neighbours.** A single page next to a group in the sidebar (*SuperVault* beside *SuperMemory*, *AI Settings* beside *Prompts*) is now drawn like the group's heading, so it no longer looks like the last sub-page of the group above it.
 
 ## 2026-11-08
 
