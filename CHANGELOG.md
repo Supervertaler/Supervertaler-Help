@@ -11,7 +11,7 @@ guesswork.
 ## 2026-11-09
 
 - **Site: the community is now on Reddit.** *Support* (Trados), *Troubleshooting*, *Context layers* and two Workbench pages now point to [r/Supervertaler](https://www.reddit.com/r/Supervertaler/) instead of GitHub Discussions. Links to particular old GitHub posts are unchanged.
-- **Site: sidebar pages beside a group look like its neighbours.** A single page next to a group in the sidebar (*SuperVault* beside *SuperMemory*, *AI Settings* beside *Prompts*) is now drawn like the group's heading, so it no longer looks like the last sub-page of the group above it.
+- **Site: a calmer sidebar where pages and folders look different.** Bold text with an arrow is always a folder, which only opens and closes; every page is plain text, wherever it sits. The page you are on is shown the same way at every level: accent-coloured text on a light tint with a bar on the left, instead of a solid block whose size depended on the entry. A page that follows an open folder (*SuperVault* after *SuperMemory*) has a little space above it, so it no longer looks like that folder's last page. This replaces a change earlier the same day that drew such pages bold, like folders.
 
 ## 2026-11-08
 

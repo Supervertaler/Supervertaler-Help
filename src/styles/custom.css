@@ -147,17 +147,28 @@
   border-inline-start-color: #3a3f47;
 }
 
-/* A page that sits beside a group at the same level (Memory: SuperMemory
- * is a group, SuperVault a single page) is drawn like that group's
- * heading. Starlight draws nested links smaller and lighter than group
- * headings, so such a page looked like the last sub-page of the group
- * above it. The current page keeps Starlight's highlight colours: its
- * [aria-current] rule is more specific than this one. (2026-11-08) */
-.sidebar-pane ul ul > li:has(> details) ~ li > a,
-.sidebar-pane ul ul > li:has(~ li > details) > a {
-  font-size: var(--sl-text-lg);
+/* Sidebar: pages and folders (2026-11-09).
+ * Bold text with an arrow always means a folder (it only opens and
+ * closes); every page is plain text, wherever it sits. An 8 Nov rule that
+ * drew some pages bold, like folders, is gone: it made pages and folders
+ * look alike. */
+
+/* A page right after an open folder gets a little space, so it doesn't
+ * read as that folder's last page (SuperVault after SuperMemory). */
+.sidebar-pane ul ul > li:has(> details[open]) + li {
+  margin-top: 0.5rem;
+}
+
+/* The current page: one calm style at every level - accent text on a
+ * light accent tint with a bar on the left - instead of Starlight's solid
+ * block, whose size depended on the kind of entry. */
+.sidebar-pane .sv-sidebar a[aria-current='page'],
+.sidebar-pane .sv-sidebar a[aria-current='page']:hover,
+.sidebar-pane .sv-sidebar a[aria-current='page']:focus {
+  color: var(--sl-color-text-accent);
+  background-color: color-mix(in srgb, var(--sl-color-text-accent) 12%, transparent);
+  box-shadow: inset 3px 0 0 var(--sl-color-text-accent);
   font-weight: 600;
-  color: var(--sl-color-white);
 }
 
 /* ---------------------------------------------------------------
