@@ -14,7 +14,7 @@ You have just worked out how a term should be translated for this client. Quick 
    * **Target term** – pre-filled from the target selection if you made one.
    * **Notes** – why, or when it applies. This is the part that will matter in six months.
    * **Save as raw note** – puts the text in `reference/` instead of the table, for when the decision is not settled enough to be a row.
-   * **Also append to active translation prompt** – adds the same pair to the TERMINOLOGY table in your [active prompt](/trados/ai-assistant/super-memory/active-prompt/), so it takes effect on the very next Ctrl+T.
+   * **Also append to active translation prompt** – adds the same pair to the TERMINOLOGY table in your [active prompt](/trados/ai-assistant/super-memory/active-prompt/), so it takes effect on the very next Alt+T (Translate active segment).
 4. Click **Add**.
 
 The row lands in whichever bank is selected in the toolbar dropdown. To capture into a different bank, switch first.

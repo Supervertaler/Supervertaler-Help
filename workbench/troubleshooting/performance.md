@@ -12,7 +12,7 @@ Supervertaler is designed to stay responsive on large projects, but performance 
 
 ## Quick wins when it feels slow
 
-1. Disable spellcheck temporarily (Settings → View Settings)
+1. Disable spellcheck temporarily (the **📝 Spellcheck** button above the grid)
 2. Close other heavy apps (browsers with many tabs, IDE builds, etc.)
 3. Restart Supervertaler and reopen the project
 

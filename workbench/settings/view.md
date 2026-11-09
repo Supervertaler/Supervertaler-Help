@@ -2,23 +2,56 @@
 title: "View"
 ---
 
-View settings control how the translation grid and the side panels look while you translate.
+View settings control how the translation grid, the Match Panel and TermLens look while you translate. Open them in **Settings → 🔍 View Settings**. The page has these groups:
 
-## Grid display
+## 📊 Grid Text Font Settings
 
-- **Show invisibles** – reveals spaces, tabs, and line breaks as visible markers; useful for catching trailing whitespace
-- **Tag colour** – the highlight colour used for inline formatting tags (`<b>`, `<i>`, etc.)
-- **Row height** – compact, normal, or spacious; affects how many segments you see at once without scrolling
+The font family and size (7–72 pt) of the source and target text in the grid, with a preview of each.
 
-## Right panel (Chat, matches)
+## 📊 Grid Display Options
 
-- **Right panel default width** – default width of the right-hand panel that hosts the Match Panel and the 💬 Chat tab. Can also be dragged at runtime; the width is remembered across sessions.
+- **Hide outer wrapping tags in grid** (e.g. `<li-o>...</li-o>`) – hides tags that wrap a whole segment, so the text is easier to read.
+- **Show Status column between Source and Target** – untick it to move the Status column to the far right.
 
-## Tips
+## 📊 Status Bar
 
-- If tags are hard to see, increase tag colour saturation or switch to **Tag View** (shows placeholder boxes instead of raw tag text).
-- For long sessions, try a slightly larger row height – it reduces eye strain when scanning for specific segments.
-- Dark mode is set in [Theme](/workbench/settings/theme/), not here.
+- **Show confirmed progress by word count** – the progress figure in the status bar counts words instead of segments.
+
+## 📋 Match Panel & Tag Colors
+
+- The font sizes of the match list and the compare boxes.
+- **Show HTML/XML tags in match text** – shows tags such as `<b>` in the matches; untick it to see only the text.
+- The colour of CAT tool tags in the grid and the results pane, of the match number badges, and of the symbols for invisible characters. Each has a **Reset** button.
+
+## 🎨 Grid Row Colors
+
+**Enable alternating row colors**, with a colour for even rows and one for odd rows, and **Reset to Default Colors**.
+
+## 🔵 Target Cell Focus Border
+
+The colour and thickness (1–10 pixels) of the border around the target cell you are working in.
+
+## 🏷️ Termbase Highlight Style
+
+How terms found in your termbases are marked in the source: a pastel green background, a dotted underline (with its own colour), or semibold text (the default).
+
+## 🔍 TermLens Font Settings and 📊 Match Panel Font Settings
+
+The font family, size and bold setting for TermLens, and for the source and target text of TM matches in the Match Panel.
+
+## 🖥️ Global UI Font Scale
+
+Scales all the text in the program (50%–200%). Click **Apply** to see it at once.
+
+## 📐 Compact UI Chrome
+
+**Compact UI chrome** tightens the padding of the menu bar and tab strips, leaving more room for the grid.
+
+## Not here
+
+- **Show invisibles** (spaces, tabs, line breaks and so on) is the **¶ Show Invisibles** button on the grid toolbar. Its colour is set above, under Match Panel & Tag Colors.
+- **Spellcheck** is the **📝 Spellcheck** button on the grid toolbar. See [Spellcheck](/workbench/qa/spellcheck/).
+- **Dark mode** is set in [Theme](/workbench/settings/theme/).
 
 ## Related pages
 

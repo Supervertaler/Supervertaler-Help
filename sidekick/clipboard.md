@@ -8,7 +8,7 @@ It is text only. Image clips were left out deliberately: for translation work th
 
 ### Using it
 
-The history is the left pane of the [window](/sidekick/window/) (`` ` ``), and it also has a window of its own on `Ctrl+Alt+C`. Both work the same way:
+The history is the left pane of the [window](/sidekick/window/) (`` ` ``), and it also has a window of its own on `Ctrl+Alt+C`. The two don't use quite the same keys. In the clipboard window (`Ctrl+Alt+C`):
 
 | Key | Does |
 |---|---|
@@ -19,6 +19,8 @@ The history is the left pane of the [window](/sidekick/window/) (`` ` ``), and i
 | `Alt+1`–`9` | paste the first, second, third… clip straight away |
 | `Ctrl+Delete` | delete the selected clip |
 | `Esc` | close |
+
+In the main window's history pane, `↑` `↓`, `Home` `End`, typing and `Enter` work as above, but `Ctrl+C` copies the selected clip without pasting, and `Alt+1`–`9` jumps to a section of the menu instead of pasting a clip (see [The window and the palette](/sidekick/window/)). `PgUp` `PgDn` and `Ctrl+Delete` work only in the clipboard window.
 
 **Ticks.** A clip you have pasted is ticked and greyed in the list. Copy a column of terms, then work down the list pasting each one where it belongs: the ticks show how far you have got. The most recent clips are also listed on the classic popup menu under **Recent clips**.
 

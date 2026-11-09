@@ -6,7 +6,7 @@ Supervertaler Sidekick is the system-wide toolbox for translators. Where [Superv
 
 Select text in any Windows application – a CAT tool, a browser, a PDF, an email, a chat window – press `` ` `` (backtick), and act on it: look it up across a dozen terminology sources, translate it with several engines at once, run an AI prompt over it, change its case, wrap it in quotes, or paste a snippet in its place.
 
-It is free and open source, and it needs no account. The source is at [github.com/Supervertaler/Supervertaler-Sidekick](https://github.com/Supervertaler/Supervertaler-Sidekick).
+It is free – no licence key, no account – and source-available: you can read and check the code, but not redistribute it. The source is at [github.com/Supervertaler/Supervertaler-Sidekick](https://github.com/Supervertaler/Supervertaler-Sidekick).
 
 ![Sidekick's QuickTrans tab over a technical text in Trados Studio: six engines answering at once, the menu tree beside them](/.gitbook/assets/Supervertaler-Sidekick-in-Trados.png)
 
@@ -22,7 +22,7 @@ It is free and open source, and it needs no account. The source is at [github.co
 
 **AI actions.** Any prompt over the selection: translate, proofread, rephrase, summarise, expand, localise, explain. Every prompt is yours to edit. See [AI actions](/sidekick/ai-actions/).
 
-**Web and local searches.** Select a term, pick a source – IATE, Juremy, JurLex, Van Dale, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once in a fresh browser window. Every source follows the language pair you set, so one entry serves every direction, and a language pack adds everything for your pair in one click. See [Web and local searches](/sidekick/searches/).
+**Web and local searches.** Select a term, pick a source – IATE, Juremy, Linguee, ProZ, Reverso, BabelNet, Wikipedia, Wiktionary, Google Patents and more, or a whole batch at once in a fresh browser window. Every source follows the language pair you set, so one entry serves every direction, and a language pack adds everything for your pair in one click. See [Web and local searches](/sidekick/searches/).
 
 **Snippets, bookmarks and text conversions.** Boilerplate, standard replies, special characters and regex patterns inserted at the cursor; sites and folders you keep reopening; upper, lower, title and sentence case, curly quotes, brackets, HTML bold. See [Snippets, bookmarks and conversions](/sidekick/library/).
 

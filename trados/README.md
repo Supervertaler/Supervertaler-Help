@@ -65,4 +65,10 @@ Press **F1** at any time to open context-sensitive help for the panel or dialogu
 
 ### Next Steps
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Installation</strong></td><td><a href="installation.md">Install the plugin →</a></td></tr><tr><td><strong>Getting Started</strong></td><td><a href="getting-started.md">Set up termbases and AI →</a></td></tr><tr><td><strong>TermLens</strong></td><td><a href="termlens.md">Inline terminology display →</a></td></tr><tr><td><strong>Supervertaler</strong></td><td><a href="ai-assistant.md">Chat with AI in Trados →</a></td></tr><tr><td><strong>MultiTerm Support</strong></td><td><a href="multiterm-support.md">Use MultiTerm termbases in TermLens →</a></td></tr><tr><td><strong>Batch Translate</strong></td><td><a href="batch-translate.md">Translate segments in bulk →</a></td></tr><tr><td><strong>Keyboard Shortcuts</strong></td><td><a href="keyboard-shortcuts.md">All shortcuts at a glance →</a></td></tr></tbody></table>
+- **[Installation](/trados/installation/)** – Install the plugin
+- **[Getting Started](/trados/getting-started/)** – Set up termbases and AI
+- **[TermLens](/trados/termlens/)** – Inline terminology display
+- **[Supervertaler Assistant](/trados/ai-assistant/)** – Chat with AI in Trados
+- **[MultiTerm Support](/trados/multiterm-support/)** – Use MultiTerm termbases in TermLens
+- **[Batch Translate](/trados/batch-translate/)** – Translate segments in bulk
+- **[Keyboard Shortcuts](/trados/keyboard-shortcuts/)** – All shortcuts at a glance

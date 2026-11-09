@@ -58,7 +58,7 @@ Supervertaler/
 
 The **prompt library**, **memory banks** and **resources** folders are shared between all Supervertaler products. Prompts you create or edit in one program are immediately available in the others. The SQLite database (`supervertaler.db`) holds your termbases and translation memories – Workbench has full read-write access, while the Trados plugin reads from it.
 
-The **settings** folder holds your AI provider API keys. They are encrypted so that only your own Windows account can read them.
+The **settings** folder holds your AI provider API keys, in `api-keys.json`. That file is **plain text**, on purpose, so that Supervertaler for memoQ and Sidekick can read the same keys; anyone who can open your data folder can read them. From v18/19.20.204 each key is also kept in a copy locked to your Windows account, in `%APPDATA%\Supervertaler\api-keys.locked.json`, outside the data folder. See [AI Settings → API key](/trados/settings/ai-settings/#api-key).
 
 ### Program-specific folders
 
@@ -82,7 +82,11 @@ When several translators work together – in an agency, or as a team on a share
 | | AI Assistant chat history, usage records and logs |
 
 :::note
-Share the team folder, not the data folder. Pointing everyone at one shared data folder does not work: the licence and settings in it belong to one person, the API keys are encrypted for one Windows account (so your colleagues would find none), and the termbase database is not made for several people writing to it over a network. The team folder shares only what is meant to be shared.
+Share the team folder, not the data folder. Pointing everyone at one shared data folder does not work: the licence and settings in it belong to one person, and the termbase database is not made for several people writing to it over a network. The team folder shares only what is meant to be shared.
+:::
+
+:::caution
+**Sharing or syncing a data folder shares your API keys.** The data folder's `settings\api-keys.json` holds every key in plain text, so anyone who can open the folder – a colleague, or a cloud service it is synced to – can read and use them, and the usage is billed to you. Keep the data folder to yourself, and share a team folder instead.
 :::
 
 ### Setting it up

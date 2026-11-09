@@ -43,8 +43,4 @@ This switches to the **Termbases** tab, selects the termbase and opens its [term
 
 ## Termbase selection
 
-In **SuperLookup → Settings → Termbases**, you can pick which termbases SuperLookup searches.
-
-:::note
-If you don’t select any termbases in the SuperLookup Settings tab, SuperLookup searches **all available** termbases.
-:::
+SuperLookup searches every termbase that has its **🔍 SuperLookup** box ticked on the main **🏷️ Termbases** tab. This is independent of the **Read** box, so a termbase can stay out of your project's matches and still be searched here. (The termbase list that used to be under SuperLookup → Settings was removed in v1.10.168.)

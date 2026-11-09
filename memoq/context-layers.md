@@ -22,13 +22,13 @@ This page is the single place that lists every layer. Supervertaler for Trados h
 | 7 | SuperMemory memory banks | what you have recorded about the client | a bank per client |
 | 8 | List numbering | the original Word file | the live document link |
 | 9 | Figure descriptions | the images in your documents | two clicks in FigureLens |
-| 10 | The whole document | the live document link | for AutoPrompt only |
+| 10 | The whole document | memoQ, or the live document link | no (cloud providers only) |
 
 ### 1. Project and job information
 
 The client, domain and subject recorded in memoQ's project, the language pair, and which document the segment is in. memoQ sends these with every translation request, so they need no setting – but they are only as good as what the project manager filled in. An empty *Client* field in memoQ is an empty line in the prompt.
 
-**Toggle:** Translation settings → *Send surrounding segments and project metadata to the model*.
+**Toggle:** Translation settings → *Send the document, confirmed segments and project metadata to the model*.
 
 ### 2. The segment being translated
 
@@ -38,11 +38,11 @@ The source text, with its inline tags preserved so they can be put back in the r
 
 Every segment you confirm is recorded, and the most lexically similar ones are shown to the model when it translates later segments of the same document. Confirm *electric module* once and the rest of the document follows.
 
-This is memoQ's answer to a layer Trados gets for free. A Trados plugin is handed the segments surrounding the one it is translating; a memoQ MT plugin is not – memoQ reserves that channel for its own AGT engine – so Supervertaler builds the equivalent out of your confirmed work instead. It is arguably the better trade: every example is one you approved, rather than merely one that happens to be nearby.
+This is memoQ's answer to a layer Trados gets for free. A Trados plugin is handed the segments surrounding the one it is translating; a memoQ MT plugin is not – memoQ reserves that channel for its own AGT engine – so Supervertaler builds the equivalent out of your confirmed work instead, and sends the document text itself (layer 10). It is arguably the better trade: every example is one you approved, rather than merely one that happens to be nearby.
 
 memoQ only sends confirmations to an engine selected under **Self-learning MT**, so that box must be ticked as well as the engine being chosen for translation. Until it is, nothing is captured and the [Activity window](/memoq/prompt-editor/#the-activity-window) says so. See [Self-learning](/memoq/self-learning/).
 
-**Toggle:** Translation settings → *Send surrounding segments and project metadata to the model*.
+**Toggle:** Translation settings → *Send the document, confirmed segments and project metadata to the model*.
 
 ### 4. The closest translation memory match
 
@@ -100,9 +100,19 @@ Two clicks per project, then it is automatic. One AI request per image; the pane
 
 ### 10. The whole document
 
-Not a translation layer: memoQ hands an MT plugin about ten segments at a time and never the document, so a per-segment prompt cannot contain it.
+*From v0.1.26.* Every request to a cloud model – Anthropic, OpenAI or Google – carries the document's source text, so the model can tell what kind of document it is translating and keep its terminology and register consistent from start to finish. memoQ itself hands an MT plugin only about ten segments at a time, so Supervertaler supplies the document:
 
-What does get the whole document is [**AutoPrompt**](/memoq/prompt-editor/#autoprompt-drafting-a-prompt-for-the-open-project), which reads it through the live document link to classify the job and draft a prompt for it. That prompt then carries the document's character into every subsequent request – which is the point: the document is read once, expensively, and its conclusions ride along cheaply thereafter.
+- **With the live document link connected**, the model has the whole document from the first segment.
+- **Without it**, the model sees the document as far as memoQ has sent it so far – at least the first half of it.
+- **How much is sent.** Up to about 25,000 tokens, roughly 15,000 to 18,000 words. A longer document is shortened: the first 80% of that allowance comes from the start of the document and the last 20% from the end, so a patent's claims stay in. Tick *Send long documents whole* (off by default) to send up to about 200,000 tokens (about 130,000 words) instead; that costs noticeably more per request on a long job.
+- **Cost.** The text goes in the part of the request the provider caches, so after the first request it is read at a reduced rate.
+- **Local models are never sent it.** Ollama and OpenAI-compatible servers don't receive the document text.
+
+This matters for confidentiality: with a cloud provider, the whole source document (or as much of it as fits) reaches the provider, not just the segments being translated. To stop it, untick *Send the document, confirmed segments and project metadata to the model* in the translation settings; that also stops layers 1 and 3. See [What leaves your computer](/memoq/local-models/).
+
+**Toggle:** Translation settings → *Send the document, confirmed segments and project metadata to the model*, and *Send long documents whole* for the larger allowance.
+
+AutoPrompt reads the document too: [**AutoPrompt**](/memoq/prompt-editor/#autoprompt-drafting-a-prompt-for-the-open-project), which reads it through the live document link to classify the job and draft a prompt for it. That prompt then carries the document's character into every subsequent request – which is the point: the document is read once, expensively, and its conclusions ride along cheaply thereafter.
 
 Where memoQ shows several files merged into one view, AutoPrompt offers **All N documents memoQ is showing** so the prompt is drafted from all of them rather than whichever file you happened to pick.
 
@@ -110,7 +120,7 @@ Where memoQ shows several files merged into one view, AutoPrompt offers **All N 
 
 Worth stating plainly, because the Trados page lists them and the difference is not a fault in either product:
 
-- **Surrounding segments.** memoQ passes neighbouring segments only through the rich lookup channel reserved for its own AGT engine. Layer 3 exists because of this.
+- **Surrounding segments.** memoQ passes neighbouring segments only through the rich lookup channel reserved for its own AGT engine. Layer 3 exists because of this, and layer 10 sends the document text itself.
 - **Term base hits.** The same channel, the same result. See layer 6.
 - **Attached files.** memoQ has no equivalent; there is nothing to attach a file to.
 

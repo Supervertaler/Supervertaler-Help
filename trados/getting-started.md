@@ -64,7 +64,7 @@ See [Clipboard Mode](/trados/clipboard-mode/) for the full walkthrough.
 ### AI Translate (API key required)
 
 1. Place the cursor in a segment
-2. Press **Ctrl+T** to translate the active segment with AI
+2. Press **Alt+T** to translate the active segment with AI (or right-click → **Translate active segment**). Trados has its own `Alt+T` binding, so clear it once first – see [Keyboard shortcuts](/trados/keyboard-shortcuts/)
 3. The AI translation appears in the target cell
 
 ### Supervertaler

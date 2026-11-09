@@ -70,9 +70,9 @@ During translation:
 
 ### Quality vs Speed
 
-- Claude Sonnet 4.6: Good all-round balance of speed and quality
-- GPT-5.5 / Claude Opus 4.8: Highest quality, slower and more expensive
-- GPT-5.4 Mini / Gemini 3.1 Flash-Lite: Fastest, lower cost
+- Claude Sonnet 5.5 / GPT-6.1 Sol: Good all-round balance of speed and quality
+- Claude Opus 5.5 / GPT-6 Astra / Gemini 4 Argon: Highest quality, slower and more expensive
+- GPT-6 Luna / Gemini 3.1 Flash-Lite: Fastest, lower cost
 
 ### Post-Edit Strategy
 

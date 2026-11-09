@@ -5,7 +5,7 @@ title: "Installation"
 ### Requirements
 
 - **memoQ 11 or 12** – translator pro or project manager edition. Earlier versions have not been tested, and the installer leaves them alone.
-- An API key for Anthropic, OpenAI or Google, or Claude Desktop or ChatGPT desktop if you would rather [translate through an assistant](/memoq/mcp-server/)
+- An API key for Anthropic, OpenAI or Google; or a [local model](/memoq/local-models/) through Ollama or an OpenAI-compatible server, which needs no key; or Claude Desktop or ChatGPT desktop if you would rather [translate through an assistant](/memoq/mcp-server/)
 - Administrator rights on the computer, once, while installing
 - *Optional:* memoQ's free **PDF Preview tool**, which the [live document link](/memoq/mcp-server/#the-live-document-link) needs. Everything else works without it.
 

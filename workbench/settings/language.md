@@ -31,8 +31,6 @@ Every other language shows the English interface until someone contributes a tra
 2. Use the **Display language** dropdown to choose a locale. Your choice is saved straight away – there is no Save button.
 3. **Restart Supervertaler** for the new language to take effect. A reminder appears under the dropdown until you do.
 
-<figure><img src="/.gitbook/assets/Workbench-Settings-Language-Dropdown.png" alt=""><figcaption><p>Settings → General → Language dropdown</p></figcaption></figure>
-
 <figure><img src="/.gitbook/assets/UI-Localisation-Dutch.png" alt=""><figcaption><p>The Workbench interface after picking a locale – here localised to Dutch</p></figcaption></figure>
 
 ### Locale options

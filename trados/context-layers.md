@@ -19,12 +19,12 @@ This page is the single place that lists every layer. Each section is a short ov
 | 4 | Full document content | Trados | yes |
 | 5 | A translation memory match | your TMs | yes |
 | 6 | Termbase terms | your termbases | yes |
-| 7 | SuperMemory | what you have recorded about the client | yes, when a bank is active |
+| 7 | SuperMemory | what you have recorded about the client | no – switch it on in [AI Settings](/trados/settings/ai-settings/) |
 | 8 | List numbering | the Word file inside the sdlxliff | yes, from v18.20.189 |
 | 9 | Figure descriptions | the images in your documents | after two clicks in FigureLens |
 | 10 | Attached files | you, per chat turn | when you attach something |
 
-Layers 1 to 8 need no work from you at all. Layer 9 is two clicks per project. Layer 10 is deliberate.
+Layers 1 to 6 and 8 need no work from you at all. Layer 7 is one tick in AI Settings, once you have a memory bank. Layer 9 is two clicks per project. Layer 10 is deliberate.
 
 ### 1. Project and file information
 
@@ -70,7 +70,7 @@ Both Supervertaler termbases and MultiTerm `.sdltb` termbases attached to the pr
 
 ### 7. SuperMemory
 
-[**SuperMemory**](/trados/ai-assistant/super-memory/) is where you record the things about a client that cannot be looked up. If a bank is active, its files go out with every AI call:
+[**SuperMemory**](/trados/ai-assistant/super-memory/) is where you record the things about a client that cannot be looked up. If a bank is active and **Include SuperMemory knowledge base in AI context** is ticked in [AI Settings](/trados/settings/ai-settings/) (it is off by default), its files go out with every AI call:
 
 - `brief.md` – who the client is and anything standing
 - `terminology.md` – term decisions, one table

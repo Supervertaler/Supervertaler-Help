@@ -8,9 +8,9 @@ Supervertaler integrates with leading AI language models for high-quality transl
 
 | Provider | Models |
 |----------|--------|
-| **OpenAI** | GPT-5.5, GPT-5.4 Mini |
-| **Anthropic** | Claude Sonnet 4.6, Claude Haiku 4.5, Claude Opus 4.8 |
-| **Google** | Gemini 3.1 Flash-Lite, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemma 4 26B MoE |
+| **OpenAI** | GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna |
+| **Anthropic** | Claude Sonnet 5.5, Claude Opus 5.5, Claude Fable 5.1 |
+| **Google** | Gemini 3.1 Flash-Lite, Gemini 3.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemini 4 Argon, Gemma 4 26B MoE |
 | **Mistral** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |
 | **OpenRouter** | 200+ models via a single API key |
@@ -133,29 +133,7 @@ Supervertaler logs the tokens and cost of every AI call. The Batch Translate dia
 
 ## Learn More
 
-<table data-view="cards">
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Single Segment</strong></td>
-<td><a href="single-segment.md">Translate one at a time →</a></td>
-</tr>
-<tr>
-<td><strong>Batch Translation</strong></td>
-<td><a href="batch-translation.md">Translate in bulk →</a></td>
-</tr>
-<tr>
-<td><strong>Creating Prompts</strong></td>
-<td><a href="prompts.md">Write effective prompts →</a></td>
-</tr>
-<tr>
-<td><strong>Local AI (Ollama)</strong></td>
-<td><a href="ollama.md">Free, private AI →</a></td>
-</tr>
-</tbody>
-</table>
+- **[Single Segment](/workbench/ai-translation/single-segment/)** – Translate one at a time
+- **[Batch Translation](/workbench/ai-translation/batch-translation/)** – Translate in bulk
+- **[Creating Prompts](/workbench/ai-translation/prompts/)** – Write effective prompts
+- **[Local AI (Ollama)](/workbench/ai-translation/ollama/)** – Free, private AI

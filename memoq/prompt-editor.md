@@ -175,7 +175,7 @@ Any prompt with a table laid out the same way works, not only AutoPrompt's. Corr
 
 ### Settings
 
-**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per request, and whether termbase hits, surrounding segments and the memory bank are sent to the model. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
+**Settings → Translation settings** holds how Supervertaler translates: provider, model, endpoint, parallel requests, segments per batch, and whether termbase hits, the document and confirmed segments (*Send the document, confirmed segments and project metadata to the model*), long documents whole, and the memory bank are sent to the model, and whether Pre-translate keeps repetitions consistent. These are the same settings as memoQ’s own Supervertaler dialog, reading and writing the same file, so either place can change them and both show the same values.
 
 The **Model** list is short on purpose: three to five models per provider, each with a line saying what it is for. A provider’s own catalogue runs to thirty or forty entries – image models, speech models, dated snapshots of the same model – and a list like that is one nobody in a hurry can choose from. A model that has been superseded is removed rather than annotated, so what is left is what is worth using today.
 

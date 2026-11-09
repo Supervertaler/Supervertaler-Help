@@ -114,4 +114,6 @@ For CAT tool workflows, always export the matching return format (for example, S
 * [CAT Tool Integration](/workbench/cat-tools/overview/) – memoQ/Trados/Phrase/CafeTran workflows
 * [Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/) – faster editing and navigation
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Set up AI Translation</strong></td><td><a href="api-keys.md">Configure API keys →</a></td></tr><tr><td><strong>Learn Keyboard Shortcuts</strong></td><td><a href="../editor/keyboard-shortcuts.md">View all shortcuts →</a></td></tr><tr><td><strong>Work with CAT Tools</strong></td><td><a href="../cat-tools/overview.md">CAT tool integration →</a></td></tr></tbody></table>
+- **[Set up AI Translation](/workbench/get-started/api-keys/)** – Configure API keys
+- **[Learn Keyboard Shortcuts](/workbench/editor/keyboard-shortcuts/)** – View all shortcuts
+- **[Work with CAT Tools](/workbench/cat-tools/overview/)** – CAT tool integration

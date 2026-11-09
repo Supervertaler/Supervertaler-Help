@@ -227,7 +227,7 @@ The markers come from the original Word file that Studio keeps inside the sdlxli
 
 Two safety nets: anything the model echoes back in a target is removed before the segment is written and logged in the batch log, and the TMX backup records the segment as Studio has it, without the sentinel. Files that are not Word documents, and Word files without any lists, get a one-line fallback rule instead: the numbering exists, is not in the text, and its absence is not a defect.
 
-v18.20.188 shipped this behind a checkbox so the first real runs could be checked; they showed no marker reaching a target, so from v18.20.189 it is simply on and the checkbox is gone. If you ever need it off – say, to compare prompts – add `"structureContext": false` to the `aiSettings` block of `settings.json` in `%LocalAppData%\Supervertaler.Trados\` while Studio is closed.
+v18.20.188 shipped this behind a checkbox so the first real runs could be checked; they showed no marker reaching a target, so from v18.20.189 it is simply on and the checkbox is gone. If you ever need it off – say, to compare prompts – add `"structureContext": false` to the `aiSettings` block of `settings.json` in `<data folder>\trados\settings\` (by default `C:\Users\<username>\Supervertaler\trados\settings\`) while Studio is closed.
 
 #### Include term definitions and domains
 

@@ -120,29 +120,7 @@ Files exported from Supervertaler can be imported back into the CAT tool with:
 
 ## Tool-Specific Guides
 
-<table data-view="cards">
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>memoQ</strong></td>
-<td><a href="memoq.md">memoQ workflow guide →</a></td>
-</tr>
-<tr>
-<td><strong>Trados Studio</strong></td>
-<td><a href="trados.md">Trados workflow guide →</a></td>
-</tr>
-<tr>
-<td><strong>Phrase</strong></td>
-<td><a href="phrase.md">Phrase workflow guide →</a></td>
-</tr>
-<tr>
-<td><strong>CafeTran</strong></td>
-<td><a href="cafetran.md">CafeTran workflow guide →</a></td>
-</tr>
-</tbody>
-</table>
+- **[memoQ](/workbench/cat-tools/memoq/)** – memoQ workflow guide
+- **[Trados Studio](/workbench/cat-tools/trados/)** – Trados workflow guide
+- **[Phrase](/workbench/cat-tools/phrase/)** – Phrase workflow guide
+- **[CafeTran](/workbench/cat-tools/cafetran/)** – CafeTran workflow guide

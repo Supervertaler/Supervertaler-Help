@@ -85,15 +85,19 @@ Your licence was activated under the computer's old name or the old Windows inst
 
 ## Privacy & Security
 
-The plugin makes **no network calls** except to:
+The plugin connects to the internet only for the following:
 
-1. **Your chosen AI provider** (OpenAI, Anthropic, Google Gemini, OpenRouter, or local Ollama) – only when you use AI features
-2. **Lemon Squeezy licence API** (`api.lemonsqueezy.com`) – for licence activation and periodic validation
-3. **Anonymous usage statistics** (on by default; you can turn them off with one click) – a single ping on startup with a random anonymous ID, the plugin, Trados and Windows versions, your system locale and a few display and hardware details, never anything you translate. See [Usage Statistics](/trados/settings/usage-statistics/) for the full list.
+1. **Your chosen AI provider** (Anthropic, OpenAI, Google, Grok, Mistral, DeepSeek, OpenRouter, a custom OpenAI-compatible endpoint, or local Ollama, which stays on your computer) – only when you use AI features
+2. **DeepL or Google Translate** – only when you choose one of them as a machine-translation engine
+3. **The web resources you enable in SuperSearch** (IATE, Linguee and so on) – only when you search the web for a term, which opens them in a browser view
+4. **Lemon Squeezy licence API** (`api.lemonsqueezy.com`) – for licence activation and periodic validation
+5. **Trial registration** – during the trial, the trial's start date is registered with Supervertaler's own licence endpoint on startup, with the anonymous machine hash and no content (see [Privacy](/trados/privacy/))
+6. **The update check** – on startup the plugin asks the RWS AppStore (`api-appstore.rws.com`) whether a newer version exists
+7. **Anonymous usage statistics** (on by default; you can turn them off with one click) – a single ping on startup with a random anonymous ID, the plugin, Trados and Windows versions, your system locale and a few display and hardware details, never anything you translate. See [Usage Statistics](/trados/settings/usage-statistics/) for the full list.
 
 The licence validation sends only your licence key and a hashed machine fingerprint (a one-way hash of your computer name, your Windows user ID and the serial number of the drive Windows is installed on). No personal data, no translation content, no termbase information is ever collected.
 
-Your API keys are stored locally in `%LocalAppData%\Supervertaler.Trados\settings.json` and are never transmitted anywhere except to your chosen AI provider.
+Your API keys are kept on your computer, in two places: `settings\api-keys.json` in your [Supervertaler data folder](/trados/data-folder/), in plain text, so that Supervertaler for memoQ and Sidekick can read the same keys; and a copy locked to your Windows account in `%APPDATA%\Supervertaler\api-keys.locked.json`. They are never sent anywhere except to the provider they belong to. See [AI Settings → One key file for every product](/trados/settings/ai-settings/#one-key-file-for-every-product-from-v1820187).
 
 :::note
 The full source code is available on [GitHub](https://github.com/Supervertaler/Supervertaler-for-Trados) for security audit. You can verify exactly what the plugin does and does not transmit.

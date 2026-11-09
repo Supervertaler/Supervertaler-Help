@@ -2,6 +2,10 @@
 title: "SuperVault"
 ---
 
+:::caution[Not released yet – coming in 18.20.206]
+SuperVault is not in any released version of Supervertaler for Trados yet. It comes with version 18.20.206 / 19.20.206. This page describes how it will work, so you can see what is coming; the details may still change before it ships.
+:::
+
 SuperVault is **one translation memory for every language variant, in both directions**, built into Supervertaler for Trados. You add it to a project like any TM. One Dutch–English memory serves nl-BE > en-US, nl-NL > en-GB, en-GB > nl-BE and en-US > nl-NL alike. There are no reversed copies to make and nothing to add per variant.
 
 You fill it by importing TMX files and Studio TMs, and **it learns from the segments you confirm**. It needs no other program.
@@ -9,8 +13,6 @@ You fill it by importing TMX files and Studio TMs, and **it learns from the segm
 Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned* – your notes for the AI about a client or subject – and **SuperVault** holds what you've *translated*: every segment pair from your TMs. See [SuperMemory](/trados/ai-assistant/super-memory/) for the notes.
 
 Despite the name, SuperVault isn't encrypted or locked storage. It is your own lifetime translation memory: one ordinary database on your own PC, in your Supervertaler data folder (see [Where it lives](#where-it-lives)). Keep it safe as you would your other TMs.
-
-*(From v18.20.206 / v19.20.206.)*
 
 ## What you get
 
@@ -76,7 +78,7 @@ It does **not** keep the rest of a unit's information: TMX properties and notes,
 
 ## Where it lives
 
-Everything is in `supervault` in your [Supervertaler data folder](data-folder.md):
+Everything is in `supervault` in your [Supervertaler data folder](/trados/data-folder/):
 
 | What | File |
 | --- | --- |

@@ -55,7 +55,7 @@ To add or remove MultiTerm termbases from your project, use Trados Studio's **Pr
 
 ### MultiTerm and AI Terminology Injection
 
-Your MultiTerm termbases are loaded and used for **AI terminology injection**. This means the AI Assistant, Batch Translate, and Ctrl+T all receive your MultiTerm terminology in their prompts, helping the AI use the correct approved terms – as long as the termbases are enabled in Trados Project Settings.
+Your MultiTerm termbases are loaded and used for **AI terminology injection**. This means the AI Assistant, Batch Translate, and Alt+T (Translate active segment) all receive your MultiTerm terminology in their prompts, helping the AI use the correct approved terms – as long as the termbases are enabled in Trados Project Settings.
 
 ### Technical Details
 

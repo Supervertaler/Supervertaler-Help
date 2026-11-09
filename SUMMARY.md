@@ -47,7 +47,6 @@
   * [Active Prompt](trados/ai-assistant/super-memory/active-prompt.md)
   * [AI Integration](trados/ai-assistant/super-memory/ai-integration.md)
   * [Obsidian Setup](trados/ai-assistant/super-memory/obsidian-setup.md)
-* [SuperVault](trados/supervault.md)
 
 ## 🧩 SuperSearch
 

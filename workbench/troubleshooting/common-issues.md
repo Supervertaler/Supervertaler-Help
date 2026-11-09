@@ -169,7 +169,7 @@ The original imported file was moved or deleted.
 ### Application is slow
 
 1. **Pick a smaller Per page size** above the grid (the grid shows all segments by default; try 100 or 50)
-2. **Disable spellcheck** if not needed (Settings → View)
+2. **Disable spellcheck** if not needed (the **📝 Spellcheck** button above the grid)
 3. **Close other heavy applications**
 
 ### Large files take forever to import
@@ -184,13 +184,13 @@ The original imported file was moved or deleted.
 
 ### Spellcheck not working
 
-1. Check spellcheck is enabled: **Settings → View Settings → Spellcheck**
-2. Verify the correct language is selected
+1. Check spellcheck is enabled: the **📝 Spellcheck** button above the grid is pressed in (or tick **Enable Spellcheck** in its menu)
+2. Check which language it is using: **ℹ️ Spellcheck Info** in the same menu
 3. For Hunspell, ensure dictionaries are installed
 
 ### Wrong language being checked
 
-Go to **Settings → View Settings → Spellcheck** and select the correct target language.
+Spellcheck checks in the project's target language. If it checks the wrong one, check the project's target language, and use **ℹ️ Spellcheck Info** (in the menu of the **📝 Spellcheck** button above the grid) to see whether a dictionary for that language and variant is installed. See [Spellcheck](/workbench/qa/spellcheck/).
 
 ### Red underlines appear everywhere
 

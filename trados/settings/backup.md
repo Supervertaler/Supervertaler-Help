@@ -30,7 +30,9 @@ Importing settings replaces **all** current settings. Your previous settings are
 Your settings are stored at:
 
 ```
-%LocalAppData%\Supervertaler.Trados\settings.json
+<data folder>\trados\settings\settings.json
 ```
+
+With the default data folder that is `C:\Users\<username>\Supervertaler\trados\settings\settings.json`. If you moved your data folder, look in that folder instead (see [Data folder](/trados/data-folder/)).
 
 You can also manually back up or edit this file. After an import, the previous settings are saved as `settings.backup.json` in the same folder.

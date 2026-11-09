@@ -192,10 +192,6 @@ const sidebar = [
                 "link": "/trados/ai-assistant/super-memory/obsidian-setup/"
               }
             ]
-          },
-          {
-            "label": "SuperVault",
-            "link": "/trados/supervault/"
           }
         ]
       },

@@ -14,6 +14,8 @@ Supervertaler for memoQ can translate with a model running on your own computer,
 | **Anthropic, OpenAI, Google** | To that provider, under its API terms for business customers. Anthropic's, for example, do not use API data for training and delete it within 30 days. |
 | **Claude Desktop, through the [MCP connector](/memoq/mcp-server/)** | To Anthropic, under the terms of the plan you are signed in with: the Team and Enterprise plans fall under Anthropic's Commercial Terms, the personal Free, Pro and Max plans under its Consumer Terms. |
 
+**With a cloud provider, the whole document goes too, not just the segments.** From v0.1.26, each request to Anthropic, OpenAI or Google also carries the document's source text: up to about 15,000–18,000 words, or about 130,000 with *Send long documents whole*. To stop it, untick *Send the document, confirmed segments and project metadata to the model* in the translation settings. Ollama and OpenAI-compatible servers are never sent the document text. See [Context layers → The whole document](/memoq/context-layers/#10-the-whole-document).
+
 If a client requires that a document never leaves your computer, only a local model qualifies.
 
 ### Setting up Ollama

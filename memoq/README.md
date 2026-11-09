@@ -10,7 +10,7 @@ Unlike the Trados plugin, which docks its own panels into the editor, memoQ give
 
 ### What it does
 
-**AI translation.** An LLM machine-translation engine using Anthropic, OpenAI or Google, with your own API key and your own instructions. It works segment by segment as you translate, and in bulk through **Pre-translate**. Inline tags survive the round trip.
+**AI translation.** An LLM machine-translation engine using Anthropic, OpenAI or Google with your own API key, or a model on your own computer through Ollama or an OpenAI-compatible server (see [Local models](/memoq/local-models/)), with your own instructions. It works segment by segment as you translate, and in bulk through **Pre-translate**. Inline tags survive the round trip.
 
 **It learns as you work.** Every segment you confirm is remembered, and the most relevant ones are shown to the model when it translates later segments in the same document. Settle on a term once and the rest of the document follows it – no configuration, no retraining, just your own approved choices fed forward. See [Self-learning translation](/memoq/self-learning/).
 

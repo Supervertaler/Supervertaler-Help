@@ -40,7 +40,7 @@ Supervertaler for Trados sends one anonymous, lightweight ping to the developer 
 You can change your choice at any time:
 
 1. Open **Settings** (click the gear icon in the Supervertaler Assistant panel)
-2. In the **TermLens** tab, scroll to the **Privacy** section
+2. On the **General** tab, scroll to the **Privacy** section
 3. Check or uncheck **"Share anonymous usage statistics (no personal data)"**
 4. Click **OK**
 

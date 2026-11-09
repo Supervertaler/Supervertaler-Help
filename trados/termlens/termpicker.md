@@ -12,7 +12,7 @@ TermLens and TermPicker are sibling surfaces: both show the terminology matches 
 
 |               | Docked pane                    | Popup at the cursor      |
 | ------------- | ------------------------------ | ------------------------ |
-| **TermLens**  | TermLens panel                 | tap **Ctrl**             |
+| **TermLens**  | TermLens panel                 | **Alt+L**                |
 | **TermPicker**| TermPicker pane                | **Alt+P**                |
 
 * **TermLens** shows matches *in context* – the source sentence with terms highlighted in place. Best for reading and scanning.
