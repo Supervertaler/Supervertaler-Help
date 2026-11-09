@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-09
 
+- **Trados: SuperVault is now called EverTM.** Its page moved to *EverTM* (the old address leads there) and *Supervertaler names at a glance* uses the new name. The page gains a section on exporting to TMX, a note on the size limit in Studio 2024, and what happens to an early test build's `supervault` folder. EverTM is still not released (it comes with 18.20.206), so the page stays out of the sidebar with its "Not released yet" notice.
 - **Site: the serious problems from today's docs audit are fixed.** A check of all 187 pages against the products found pages that would send a user the wrong way; these are corrected:
   - *SuperVault* is not released yet (it comes with Trados plugin 18.20.206), so it is out of the sidebar, *SuperMemory* no longer links to it, *Supervertaler names at a glance* says it is not released yet, and its page, still at its address, opens with a "Not released yet" notice.
   - Four overview pages (*Supervertaler for Trados*, and Workbench's *Quick Start*, *AI Translation Overview* and *CAT Tool Integration*) had a block of links left over from GitBook that led nowhere on this site. Each is now a plain list of working links. One more such link on *SuperVault* is fixed too.

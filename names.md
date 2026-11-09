@@ -13,6 +13,7 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 | --- | --- | --- |
 | **AutoPrompt** | Has the AI read your whole project and write a translation prompt for it, with its terms, style and domain. | [Trados](/trados/generate-prompt/), [memoQ](/memoq/prompt-editor/#autoprompt-drafting-a-prompt-for-the-open-project), [Workbench](/workbench/ai-translation/autoprompt/) |
 | **AutoTagger** | Puts the source segment's inline tags back into a translation that has lost them, without changing the words. | [Trados](/trados/autotagger/), [Workbench](/workbench/ai-translation/autotagger/) |
+| **EverTM** | Your own lifetime translation memory: one memory for every language variant, in both directions, filled by importing your TMs. You add it to a Trados project like any TM. Not released yet. | Trados |
 | **FigureLens** | Takes the pictures out of your documents and has the AI describe them, so the AI that translates the text knows what the figures show. | [Trados](/trados/batch-operations/#figurelens-from-v1820189), [memoQ](/memoq/prompt-editor/#figurelens) |
 | **FuzzyFixer** | Gives the AI a fuzzy match from your TM and asks it to change only what the new source requires. | [Workbench](/workbench/ai-translation/fuzzyfixer/) |
 | **MultiSearch** | Opens a whole set of dictionaries and search sites at once, each in its own browser tab. | [Sidekick](/sidekick/searches/#multisearch--a-batch-at-once) |
@@ -25,7 +26,6 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 | **SuperLookup** | One search box across your termbases, translation memories and web resources. | [Workbench](/workbench/superlookup/overview/) |
 | **SuperMemory** | Your notes for the AI about a client or subject: the terms they insist on, wordings they rejected, house style, and why. Kept in *memory banks*, one per client or subject. | [Trados](/trados/ai-assistant/super-memory/), [memoQ](/memoq/context-layers/#7-supermemory-memory-banks) |
 | **SuperSearch** | Search and replace across every file in a Trados project, and in its translation memories if you like. | [Trados](/trados/supersearch/) |
-| **SuperVault** | Your own lifetime translation memory: one memory for every language variant, in both directions, filled by importing your TMs. You add it to a Trados project like any TM. Not released yet. | Trados |
 | **Supervertaler Assistant** | The AI chat panel inside Trados that knows your current segment, its terms and its TM matches. | [Trados](/trados/ai-assistant/) |
 | **Supervertaler Bridge** | A small service inside the Trados plugin, reachable only from your own PC, through which the MCP Server and Workbench reach your open Trados project. | [Trados](/trados/ai-assistant/supervertaler-bridge/) |
 | **Supervertaler editor** | The window beside memoQ where you choose the model, prompt and memory bank for a job, and edit your prompts. | [memoQ](/memoq/prompt-editor/) |
@@ -42,7 +42,7 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 
 ## Easily confused
 
-**SuperMemory or SuperVault?** Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned* – your notes for the AI about a client or subject – and **SuperVault** holds what you've *translated*: every segment pair from your TMs. In more detail: SuperMemory holds *notes* that you write for the AI: what a client wants and why. SuperVault holds *translations*: it is your own lifetime translation memory, filled from your TMs, which Trados searches like any other TM. One is read by the AI as instructions; the other gives you matches. (SuperVault is not released yet.)
+**SuperMemory or EverTM?** Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned* – your notes for the AI about a client or subject – and **EverTM** holds what you've *translated*: every segment pair from your TMs. In more detail: SuperMemory holds *notes* that you write for the AI: what a client wants and why. EverTM holds *translations*: it is your own lifetime translation memory, filled from your TMs, which Trados searches like any other TM. One is read by the AI as instructions; the other gives you matches. (EverTM is not released yet.)
 
 **SuperSearch or SuperLookup?** SuperSearch is in the Trados plugin and searches the files of the project you have open, so you can find and replace across them. SuperLookup is in Workbench and looks a word up in your termbases, translation memories and web resources.
 

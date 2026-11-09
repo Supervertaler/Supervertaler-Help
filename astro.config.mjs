@@ -28,6 +28,9 @@ export default defineConfig({
     // Sidekick is the clipboard tool. Workbench 1.10.373 and older still
     // open this address from their Help buttons.
     '/workbench/clipboard/overview/': '/sidekick/clipboard/',
+    // SuperVault was renamed EverTM before release (2026-11-09); the old page was
+    // live from 8 Nov, so its address keeps working.
+    '/trados/supervault/': '/trados/evertm/',
   },
 
   integrations: [
