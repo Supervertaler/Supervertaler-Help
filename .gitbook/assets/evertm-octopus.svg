@@ -1,59 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
-  <!-- EverTM octopus, draft 1: flat, Supervertaler purple (#5B21B6 -> #7C3AED), teal language tags. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="EverTM purple octopus holding NL and EN tags under a two-way arrow">
   <defs>
-    <linearGradient id="body" x1="0%" y1="0%" x2="70%" y2="100%">
-      <stop offset="0%" stop-color="#8B5CF6"/>
-      <stop offset="100%" stop-color="#5B21B6"/>
-    </linearGradient>
-    <linearGradient id="arm" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#6D28D9"/>
+    <linearGradient id="body" x2=".18" y2="1">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset=".48" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#5B21B6"/>
     </linearGradient>
   </defs>
 
-  <!-- arms: left three, then the same mirrored -->
-  <g fill="none" stroke="url(#arm)" stroke-width="15" stroke-linecap="round">
-    <g id="arms">
-      <path d="M88 128 C62 128 42 116 34 96 C28 80 36 66 50 70"/>
-      <path d="M96 140 C80 156 58 166 44 180 C34 192 44 204 56 196"/>
-      <path d="M110 146 C108 166 104 182 98 194 C92 206 80 202 84 192"/>
-    </g>
-    <use href="#arms" transform="translate(240 0) scale(-1 1)"/>
+  <!-- Arms: four curled tips on each side -->
+  <g fill="none" stroke="url(#body)" stroke-linecap="round">
+    <path stroke-width="32" d="M164 285 C104 294 59 244 73 201 C80 180 101 177 105 191 M348 285 C408 294 453 244 439 201 C432 180 411 177 407 191"/>
+    <path stroke-width="27" d="M186 302 C149 323 89 373 79 412 C73 438 106 438 104 417 M326 302 C363 323 423 373 433 412 C439 438 406 438 408 417"/>
+    <path stroke-width="23" d="M205 309 C201 342 192 371 173 377 M307 309 C311 342 320 371 339 377"/>
+    <path stroke-width="35" d="M231 313 C225 362 218 409 196 436 C183 451 168 439 181 425 M281 313 C287 362 294 409 316 436 C329 451 344 439 331 425"/>
   </g>
-  <!-- suckers on the curled tips -->
-  <g fill="#C4B5FD" opacity="0.9">
-    <circle cx="44" cy="86" r="2.6"/><circle cx="50" cy="194" r="2.6"/><circle cx="90" cy="198" r="2.6"/>
-    <circle cx="196" cy="86" r="2.6"/><circle cx="190" cy="194" r="2.6"/><circle cx="150" cy="198" r="2.6"/>
-  </g>
-
-  <!-- head -->
-  <path d="M120 22 C162 22 184 54 184 92 C184 126 160 150 120 150 C80 150 56 126 56 92 C56 54 78 22 120 22 Z" fill="url(#body)"/>
-  <ellipse cx="100" cy="48" rx="16" ry="9" fill="#ffffff" opacity="0.18" transform="rotate(-25 100 48)"/>
-
-  <!-- face -->
-  <g>
-    <ellipse cx="100" cy="94" rx="13" ry="14" fill="#ffffff"/>
-    <ellipse cx="140" cy="94" rx="13" ry="14" fill="#ffffff"/>
-    <circle cx="103" cy="97" r="7.5" fill="#1E1B4B"/>
-    <circle cx="143" cy="97" r="7.5" fill="#1E1B4B"/>
-    <circle cx="106" cy="93" r="2.6" fill="#ffffff"/>
-    <circle cx="146" cy="93" r="2.6" fill="#ffffff"/>
-    <ellipse cx="84" cy="116" rx="8" ry="5" fill="#F0ABFC" opacity="0.55"/>
-    <ellipse cx="156" cy="116" rx="8" ry="5" fill="#F0ABFC" opacity="0.55"/>
-    <path d="M110 118 Q120 128 130 118" fill="none" stroke="#1E1B4B" stroke-width="3.5" stroke-linecap="round"/>
+  <g fill="#C4A0F5">
+    <circle cx="105" cy="191" r="6"/><circle cx="407" cy="191" r="6"/>
+    <circle cx="104" cy="417" r="6"/><circle cx="408" cy="417" r="6"/>
+    <circle cx="173" cy="377" r="5"/><circle cx="339" cy="377" r="5"/>
+    <circle cx="181" cy="425" r="6"/><circle cx="331" cy="425" r="6"/>
   </g>
 
-  <!-- language tags held by the top arms -->
-  <g font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="15" text-anchor="middle">
-    <rect x="22" y="38" width="38" height="26" rx="7" fill="#0D9488"/>
-    <text x="41" y="56.5" fill="#ffffff">NL</text>
-    <rect x="180" y="38" width="38" height="26" rx="7" fill="#0D9488"/>
-    <text x="199" y="56.5" fill="#ffffff">EN</text>
+  <!-- Head and highlight -->
+  <circle cx="256" cy="210" r="122" fill="url(#body)"/>
+  <ellipse cx="216" cy="139" rx="37" ry="17" transform="rotate(-27 216 139)" fill="#C4A0F5" opacity=".47"/>
+
+  <!-- Face -->
+  <g fill="#FFFFFF">
+    <circle cx="215" cy="222" r="27"/><circle cx="297" cy="222" r="27"/>
   </g>
-  <!-- two-way arrow between the tags, over the head -->
-  <g fill="none" stroke="#0D9488" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M70 16 Q120 -2 170 16"/>
-    <path d="M162 9 L170 16 L160 20"/>
-    <path d="M78 9 L70 16 L80 20"/>
+  <g fill="#1E1B4B">
+    <circle cx="221" cy="227" r="15"/><circle cx="303" cy="227" r="15"/>
+  </g>
+  <g fill="#FFFFFF">
+    <circle cx="228" cy="217" r="5"/><circle cx="310" cy="217" r="5"/>
+  </g>
+  <g fill="#E49ADB" opacity=".82">
+    <ellipse cx="186" cy="263" rx="16" ry="10"/><ellipse cx="326" cy="263" rx="16" ry="10"/>
+  </g>
+  <path d="M237 266 Q256 286 275 266" fill="none" stroke="#1E1B4B" stroke-width="7" stroke-linecap="round"/>
+
+  <!-- Language tags -->
+  <g fill="#0D9488">
+    <rect x="46" y="119" width="90" height="58" rx="15"/>
+    <rect x="376" y="119" width="90" height="58" rx="15"/>
+  </g>
+  <g fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="35" font-weight="bold" text-anchor="middle">
+    <text x="91" y="161">NL</text>
+    <text x="421" y="161">EN</text>
+  </g>
+
+  <!-- Two-way arrow -->
+  <g fill="none" stroke="#0D9488" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M148 79 Q256 26 364 79"/>
+    <path d="M162 59 L148 79 L171 83 M350 59 L364 79 L341 83"/>
   </g>
 </svg>
