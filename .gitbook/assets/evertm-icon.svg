@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- EverTM small icon, draft 1: for 16-32 px. No text, thick shapes. -->
+  <g fill="none" stroke="#6D28D9" stroke-width="6" stroke-linecap="round">
+    <path d="M22 40 C14 44 8 48 6 56"/>
+    <path d="M28 44 C26 50 24 54 22 60"/>
+    <path d="M36 44 C38 50 40 54 42 60"/>
+    <path d="M42 40 C50 44 56 48 58 56"/>
+  </g>
+  <path d="M32 4 C46 4 54 14 54 26 C54 38 45 46 32 46 C19 46 10 38 10 26 C10 14 18 4 32 4 Z" fill="#7C3AED"/>
+  <circle cx="25" cy="26" r="5.5" fill="#ffffff"/>
+  <circle cx="39" cy="26" r="5.5" fill="#ffffff"/>
+  <circle cx="26" cy="27" r="3" fill="#1E1B4B"/>
+  <circle cx="40" cy="27" r="3" fill="#1E1B4B"/>
+  <path d="M28 35 Q32 38.5 36 35" fill="none" stroke="#1E1B4B" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

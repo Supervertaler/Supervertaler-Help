@@ -6,6 +6,8 @@ title: "EverTM"
 EverTM is not in any released version of Supervertaler for Trados yet. It comes with version 18.20.206 / 19.20.206. This page describes how it will work, so you can see what is coming; the details may still change before it ships.
 :::
 
+<img src="/.gitbook/assets/evertm-octopus.svg" width="140" height="128" alt="The EverTM mascot: a friendly purple octopus holding an NL and an EN tag, with a two-way arrow over its head" style="float: right; max-width: 35%; height: auto; margin: 0 0 0.75rem 1rem;">
+
 EverTM is **one translation memory for every language variant, in both directions**, built into Supervertaler for Trados. You add it to a project like any TM. One Dutch–English memory serves nl-BE > en-US, nl-NL > en-GB, en-GB > nl-BE and en-US > nl-NL alike. There are no reversed copies to make and nothing to add per variant. (Each translation unit still remembers its own variant; see [Keeping language variants apart](#planned) for what is planned for those who want them kept separate.)
 
 You fill it by importing TMX files and Studio TMs, and **it learns from the segments you confirm**. It needs no other program.
