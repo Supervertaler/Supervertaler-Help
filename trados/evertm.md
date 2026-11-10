@@ -14,6 +14,12 @@ Supervertaler remembers in two ways: **SuperMemory** holds what you've *learned*
 
 EverTM isn't encrypted or locked storage. It is your own lifetime translation memory: one ordinary database on your own PC, in your Supervertaler data folder (see [Where it lives](#where-it-lives)). Keep it safe as you would your other TMs.
 
+## Why EverTM
+
+With Studio's AnyTM, every reversed or variant copy of a TM piles up: one TM for Dutch to English, another for English to Dutch, more for each language variant. The same translations end up stored many times, in TMs you have to keep apart and keep up to date.
+
+EverTM is one memory that serves every language variant in both directions. There are no copies. Each translation is stored once, with where it came from and when, and it serves every project in that language pair.
+
 ## What you get
 
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM.
@@ -21,6 +27,27 @@ EverTM isn't encrypted or locked storage. It is your own lifetime translation me
 - **Concordance search** on the source and on the target, with the words you searched for highlighted. Concordance results show the text without its formatting.
 - **Formatting comes along.** Where a stored unit has the same formatting as your segment, the match carries your document's own tags in the right places. When the tags can't be placed with confidence – the stored unit has a different number of tags than your segment, for example – the match comes as plain text, with your project's formatting penalty, just as a Studio TM's would.
 - **It learns as you work.** With its **Update** box ticked, every segment you confirm goes into EverTM (see [Learning as you work](#learning-as-you-work)).
+
+## What's coming
+
+EverTM is meant to become the one place for everything you have ever translated: not only a memory that gives matches, but one you can sort, filter and look after. The order and the details below may still change.
+
+### Built and being tested now
+
+- **Your TMs' information is kept.** Each translation unit keeps its fields – Project, Client, End client, Subject, Document, Source and Note – and who created and last changed it, and when. This comes from TMX files, Studio TMs and Workbench, and Studio shows it with every EverTM match.
+- **The newest translation wins.** When a sentence has been translated in more than one way, EverTM gives the newest translation (in your exact language variant first). Older translations are kept and hidden, never deleted.
+- **Re-importing fills in what was missing.** Importing a TM again adds its fields and dates to the translation units EverTM already holds, without storing anything twice.
+- **AI Batch Translate uses EverTM.** Its TM matches, which it sends to the AI with each segment, include EverTM's.
+- **Export to TMX includes the fields, dates and users.**
+
+### Planned
+
+- **EverTM Matches, a pane of its own in Studio's Editor**, next to TermLens. It shows EverTM's matches with the differences highlighted, and a one-line summary under each match (client, project, date), so you can tell matches apart at a glance. Below them, the selected match's full details: every field, its dates and users, and its older translations. You can remove a wrong translation from EverTM there, with Undo and a list to restore it from. It can take the place of Studio's Translation Results for EverTM.
+- **A manager for EverTM.** Browse what EverTM holds by client, end client, project, subject or where it came from, with the number of translation units in each. Export just the part you need – all patent work for one client, say – to a TMX file.
+- **A profile per project.** Tell EverTM what a project is – its client and subject – and it tags the translations you confirm with them. The same profile limits EverTM's matches to work that fits: patents only, for example, or never medical texts. It applies everywhere EverTM is used – Translation Results, Analyze, Pre-translate, Batch Translate and EverTM Matches. Translation units without any information always pass, and a switch shows the matches that were left out. Projects made from the same Studio template share a profile.
+- **Re-tagging in bulk**, for translation units that came in without information.
+- **Context matches**, where the previous segment matches too.
+- **Cleaning up and editing:** finding near-duplicates, and correcting a translation unit or its information.
 
 ## Your own TMs always come first
 
@@ -84,6 +111,8 @@ To take your memory elsewhere – another CAT tool, a colleague, a backup you ca
 For each unit, EverTM keeps the source and target text with their formatting, the language pair it first came with (nl-BE > en-US, say), where it came from (the TMX or TM file's name, "workbench", or "studio" for a segment you confirmed) and when it went into EverTM.
 
 It does **not** keep the rest of a unit's information: TMX properties and notes, a Studio TM's fields (client, subject, project and so on), who created or changed a unit and when, usage counts, or Workbench's project and context. So EverTM matches can't be filtered by client or subject, and client details stay out of EverTM. Because a unit is stored once, a sentence that is in several TMs keeps the origin of the first one imported.
+
+This changes with the next step, now being tested: EverTM will keep each unit's fields, and who created and changed it, and when. See [What's coming](#whats-coming).
 
 ## Where it lives
 
