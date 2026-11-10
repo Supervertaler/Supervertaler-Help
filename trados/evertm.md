@@ -149,7 +149,7 @@ The import summary says how many translation units brought metadata or dates. A 
 
 ### What you see in Studio
 
-- **Translation Results and Concordance** show the fields on each EverTM match, with Project, Client and Subject first. Studio shows the first few beside the match; hover over them to see the full list. If EverTM hid older translations of the sentence, the list ends with *Older translations: N*.
+- **Translation Results and Concordance** show the fields on each EverTM match, with Project, Client and Subject first. Studio shows the first few beside the match, one under the other. The column is narrow, so long values are cut off ("…"): hover over them to see the full list. If EverTM hid older translations of the sentence, the list ends with *Older translations: N*.
 - **Below the results**, Studio shows when the translation unit was created and last changed, and by whom, as for its own TMs. A translation unit with no known date shows when it went into EverTM. When EverTM doesn't know the user, no user is shown; Studio's tooltip over that line then says "Never" and "N/A", as it does for any TM's translation unit without a user.
 
 Client and project names, and other people's user names from agency TMs, are stored only on your PC, in the EverTM folder. But they show in Translation Results and Concordance – so also in screenshots and screen shares – and an EverTM TMX export includes them.
