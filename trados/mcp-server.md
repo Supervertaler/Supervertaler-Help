@@ -65,6 +65,7 @@ The server exposes these tools to the AI app:
 | `get_project` | Details of any registered project by name, without opening it *(v18.20.111)* |
 | `list_tms` | The file TMs on this machine (Studio folders + project references) *(v18.20.111)* |
 | `list_project_templates` | Your Trados project templates *(v18.20.111)*: every template Studio offers under **New Project** → **Use Settings from**, wherever the file is stored, with its Studio version and whether Studio lists it *(templates outside the `Project Templates` folders from v18/19.20.199)* |
+| `create_project` | Create a new Trados Studio project from your source files, optionally from one of your project templates, and add it to the Projects list *(v18/19.20.206)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below). *From v18/19.20.198* it can also update the project's main translation memory as it goes, for the segments it confirms – only when you ask. *From v18/19.20.205* it can also fill a segment with a copy of its source, as Ctrl+Insert does – the way it fills a segment that holds only tags |
 | `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes and source/target abbreviations *(abbreviations from v18/19.20.205)*, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain, and from v18/19.20.205 its abbreviations – only the fields you name change, everything else is preserved |
@@ -211,6 +212,16 @@ A Supervertaler termbase entry has a source abbreviation and a target abbreviati
 * **Checking.** `check_terminology` accepts a translation that uses the entry's target abbreviation as a whole word, in the same letter case. Abbreviations of one or two letters are not checked there, like any other term that short.
 
 Abbreviations are optional: an entry without them works exactly as before.
+
+### Creating a project *(from v18/19.20.206)*
+
+Ask your assistant to set up a project – *"Create a project for the Acme files in Downloads, Dutch to English, with my Acme template"*. It finds your templates with `list_project_templates`, shows you the plan (name, languages, template, where the project goes, the files) and asks before it creates anything. It then creates the project the way **New Project** does: your files are copied into it and converted for every target language, and a template brings its TMs, termbases and settings. Files in subfolders keep their subfolders. The project gets its own new folder – by default in Studio's Projects folder – and appears in the Projects view; your original files are only read.
+
+It refuses, creating nothing, when the project name is already in use, a file is missing, empty or open in another program (close it in Word and ask again), a file is not a document Studio can translate (a .zip, say), a language code is unknown, or the template can't be read. A template with more than one language pair is not guessed at: the assistant is told the pairs and asks you which one. If the template points to a TM or termbase that no longer exists, you are told before the project is made.
+
+Creating runs in the background, so Studio stays usable even with hundreds of files. If Studio can't convert one of the files, or anything else goes wrong on the way, the project is not created, the files concerned are named, and nothing is left behind – no folder and no entry in the Projects view. The new project is not opened, analysed or pre-translated: open it from the Projects view.
+
+It works with the regular Studio licence as well as Professional: it uses Studio's own project API from inside Studio. Tested in Studio 2022, 2024 and 2026.
 
 ## Prompt cookbook
 
