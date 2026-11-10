@@ -14,7 +14,7 @@ The **Reports** tab shows **real billed token counts and cost** as reported by y
 
 The number is cache-aware:
 
-* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5, 0.025× on Claude Fable 5.1), cache writes at 1.25×. See [Prompt caching](#prompt-caching) below.
+* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5, 0.025× on Claude Fable 5.1 and 5.2), cache writes at 1.25×. See [Prompt caching](#prompt-caching) below.
 * **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (90–95% off cached input on the current models).
 * **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
 * **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input; 95% off on Gemini 4 Argon, from v18/19.20.203).
@@ -66,7 +66,7 @@ Most of what Supervertaler sends with each request is the same every time: the i
 **With Claude** (directly, or through OpenRouter), Supervertaler marks the shared part of the prompt for Claude's cache:
 
 * The **first** request pays 25% extra on that part, to store it.
-* **Every request after that** reads it back for a tenth of the normal input price, or less: a twentieth on Claude Opus 5.5 and a fortieth on Claude Fable 5.1.
+* **Every request after that** reads it back for a tenth of the normal input price, or less: a twentieth on Claude Opus 5.5 and a fortieth on Claude Fable 5.1 and 5.2.
 * The cache lasts **five minutes**, and every request that reads from it starts the five minutes again. As long as you keep working, it stays available.
 
 A prompt shorter than Claude's minimum is simply not cached, and costs nothing extra.

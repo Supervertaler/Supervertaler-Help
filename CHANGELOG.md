@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-10
+
+- **Trados and Workbench: Claude Fable 5.2 replaces Fable 5.1** in the model lists on *AI Settings*, the AI Assistant's *Providers*, *SuperBench* (now the default judge), Workbench's AI translation *Overview* and *Providers*, and *PDF Rescue*. *AI cost guide* gives 5.2 the same cache-read rate as 5.1 (a fortieth of the input price). Fable 5.2 is now twice Opus's price, not 2.5 times. The SuperBench screenshot caption still names Fable 5.1, as the screenshot does. Publish with the Trados and Workbench releases that ship Fable 5.2.
+
 ## 2026-11-09
 
 - **Trados: SuperVault is now called EverTM.** Its page moved to *EverTM* (the old address leads there) and *Supervertaler names at a glance* uses the new name. The page gains a section on exporting to TMX, a note on the size limit in Studio 2024, and what happens to an early test build's `supervault` folder. EverTM is still not released (it comes with 18.20.206), so the page stays out of the sidebar with its "Not released yet" notice.
