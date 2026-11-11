@@ -46,7 +46,75 @@ const subsets = (current ? [current] : PRODUCTS).map((p) => ({
   ))}
 </div>
 
+<!-- Back to top: the same round arrow as on supervertaler.com. Shown after
+     600px of scrolling; a real button, so it works from the keyboard. -->
+<button type="button" class="sv-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+<script>
+  // One listener per page load. Starlight pages are full page loads, so there
+  // is nothing to clean up between pages.
+  const btn = document.querySelector<HTMLButtonElement>('.sv-to-top');
+  if (btn) {
+    // Toggling one class is cheap, so no throttling: a requestAnimationFrame
+    // wrapper never ran while the tab was in the background.
+    const update = () => btn.classList.toggle('show', window.scrollY > 600);
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+    btn.addEventListener('click', () => {
+      const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+    });
+  }
+</script>
+
 <style>
+  .sv-to-top {
+    position: fixed;
+    right: calc(20px + env(safe-area-inset-right, 0px));
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    z-index: 4; /* under the header and the open phone menu */
+    width: 44px; /* the accessible minimum tap target */
+    height: 44px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-white);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+  }
+  .sv-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .sv-to-top:hover {
+    border-color: var(--sl-color-accent);
+    color: var(--sl-color-accent-high);
+  }
+  .sv-to-top:focus-visible {
+    outline: 3px solid var(--sl-color-accent);
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sv-to-top {
+      transition: none;
+    }
+  }
+  @media print {
+    .sv-to-top {
+      display: none;
+    }
+  }
+
   .sv-llms-note {
     color: var(--sl-color-gray-3);
     font-size: var(--sl-text-xs);
