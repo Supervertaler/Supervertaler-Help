@@ -22,6 +22,17 @@ With Studio's AnyTM, every reversed or variant copy of a TM piles up: one TM for
 
 EverTM is one memory that serves every language variant in both directions. There are no copies. Each translation is stored once, with where it came from and when, and it serves every project in that language pair.
 
+:::tip[EverTM compared with a Studio TM]
+- **One memory, not one per direction and variant.** A Studio TM has one direction and one pair of variants. EverTM serves nl-BE > en-US and en-GB > nl-NL from the same translation units.
+- **Your project name is stamped automatically.** Every segment you confirm is stored with the project's name, its customer, the document, your user name and the date. With a Studio TM you first add a field to the TM, and then type the value under **Project Settings > Translation Memory and Automated Translation > Update** in every project. Forget once, and nothing is stamped.
+- **Nothing to set up per project.** Add EverTM once to your default settings and it is there in every new project, in any language pair.
+- **Your own TMs keep their matches.** EverTM never lowers a match from a project TM (see [Your own TMs always come first](#your-own-tms-always-come-first)).
+- **One translation per sentence.** When a sentence has been translated in several ways, you get the newest. The older ones are kept, not deleted.
+- **Yours to take away.** It is an ordinary database on your own PC, and it exports to a TMX file at any time.
+
+A Studio TM is still the right choice for a TM you share on a server, a TM a client sends you and expects back, and for editing translation units by hand. EverTM works beside those TMs; it does not replace them.
+:::
+
 ## What you get
 
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM.
