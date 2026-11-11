@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 360" role="img" aria-label="Timeline of fuzzy match repair in translation tools, from Déjà Vu's Assemble in the late 1990s to AI-based repair">
+  <!-- Draft 1 (11 Nov 2026). Years and names checked against the sources listed on the FuzzyFixer help page.
+       Drawn on its own light card so it reads the same in the site's light and dark themes. -->
+  <defs>
+    <linearGradient id="ai" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#5B21B6"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="878" height="358" rx="14" fill="#FFFFFF" stroke="#D9DCE3"/>
+
+  <g font-family="Segoe UI, Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="440" y="36" font-size="19" font-weight="700" fill="#17181C">Repairing fuzzy matches: a short history</text>
+
+    <!-- era labels -->
+    <g font-size="12.5" font-weight="700">
+      <rect x="40" y="52" width="592" height="24" rx="12" fill="#E6F4F1"/>
+      <text x="336" y="68.5" fill="#0B6B62">ASSEMBLE AND PATCH FROM STORED PIECES</text>
+      <rect x="644" y="52" width="196" height="24" rx="12" fill="#EFE9FE"/>
+      <text x="742" y="68.5" fill="#5B21B6">REWRITE WITH AI</text>
+    </g>
+
+    <!-- the line -->
+    <line x1="60" y1="200" x2="638" y2="200" stroke="#0D9488" stroke-width="4" stroke-linecap="round"/>
+    <line x1="638" y1="200" x2="820" y2="200" stroke="#7C3AED" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- stems -->
+    <g stroke-width="2">
+      <g stroke="#0D9488">
+        <line x1="70" y1="200" x2="70" y2="150"/>
+        <line x1="173" y1="200" x2="173" y2="250"/>
+        <line x1="276" y1="200" x2="276" y2="150"/>
+        <line x1="379" y1="200" x2="379" y2="250"/>
+        <line x1="482" y1="200" x2="482" y2="150"/>
+        <line x1="585" y1="200" x2="585" y2="250"/>
+      </g>
+      <g stroke="#7C3AED">
+        <line x1="688" y1="200" x2="688" y2="150"/>
+        <line x1="791" y1="200" x2="791" y2="250"/>
+      </g>
+    </g>
+
+    <!-- dots -->
+    <g fill="#FFFFFF" stroke-width="4">
+      <g stroke="#0D9488">
+        <circle cx="70" cy="200" r="8"/><circle cx="173" cy="200" r="8"/><circle cx="276" cy="200" r="8"/>
+        <circle cx="379" cy="200" r="8"/><circle cx="482" cy="200" r="8"/><circle cx="585" cy="200" r="8"/>
+      </g>
+      <circle cx="688" cy="200" r="8" stroke="#7C3AED"/>
+    </g>
+    <circle cx="791" cy="200" r="11" fill="url(#ai)"/>
+
+    <!-- labels above the line: year, tool, feature -->
+    <g>
+      <text x="70" y="98" font-size="13" font-weight="700" fill="#0B6B62">late 1990s</text>
+      <text x="70" y="118" font-size="14" font-weight="700" fill="#17181C">Déjà Vu</text>
+      <text x="70" y="137" font-size="13" fill="#3A3F47">Assemble</text>
+
+      <text x="276" y="98" font-size="13" font-weight="700" fill="#0B6B62">2011</text>
+      <text x="276" y="118" font-size="14" font-weight="700" fill="#17181C">Déjà Vu X2</text>
+      <text x="276" y="137" font-size="13" fill="#3A3F47">DeepMiner</text>
+
+      <text x="482" y="98" font-size="13" font-weight="700" fill="#0B6B62">2015</text>
+      <text x="482" y="118" font-size="14" font-weight="700" fill="#17181C">memoQ 2015</text>
+      <text x="482" y="137" font-size="13" fill="#3A3F47">MatchPatch</text>
+
+      <text x="688" y="98" font-size="13" font-weight="700" fill="#5B21B6">2024</text>
+      <text x="688" y="118" font-size="14" font-weight="700" fill="#17181C">Cloud platforms</text>
+      <text x="688" y="137" font-size="13" fill="#3A3F47">repair with an LLM</text>
+    </g>
+
+    <!-- labels below the line: tool, feature, year -->
+    <g>
+      <text x="173" y="270" font-size="14" font-weight="700" fill="#17181C">memoQ</text>
+      <text x="173" y="289" font-size="13" fill="#3A3F47">Fragment assembly</text>
+      <text x="173" y="309" font-size="13" font-weight="700" fill="#0B6B62">by 2009</text>
+
+      <text x="379" y="270" font-size="14" font-weight="700" fill="#17181C">Déjà Vu X2</text>
+      <text x="379" y="289" font-size="13" fill="#3A3F47">Fuzzy Match Repair</text>
+      <text x="379" y="309" font-size="13" font-weight="700" fill="#0B6B62">by 2013</text>
+
+      <text x="585" y="270" font-size="14" font-weight="700" fill="#17181C">Trados Studio 2017</text>
+      <text x="585" y="289" font-size="13" fill="#3A3F47">upLIFT Fuzzy Repair</text>
+      <text x="585" y="309" font-size="13" font-weight="700" fill="#0B6B62">2016</text>
+
+      <text x="791" y="270" font-size="14" font-weight="700" fill="#5B21B6">Supervertaler</text>
+      <text x="791" y="289" font-size="13" font-weight="700" fill="#5B21B6">FuzzyFixer</text>
+      <text x="791" y="309" font-size="13" fill="#3A3F47">in your CAT tool</text>
+    </g>
+
+    <text x="440" y="342" font-size="11.5" fill="#6B7280">Also in the first group: STAR Transit (terms put into fuzzy matches, late 1990s) and CafeTran Espresso (Auto-assembling).</text>
+  </g>
+</svg>
