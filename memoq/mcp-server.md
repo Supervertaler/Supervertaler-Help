@@ -123,7 +123,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | Tool | memoQ | Notes |
 | --- | :---: | --- |
 | `help` | ✓ | A menu of what you can ask, memoQ edition |
-| `get_project` | ✓ | Language pair, client/domain/subject, captured and live documents, what is staged |
+| `get_project` | ✓ | Language pair, client/domain/subject, captured and live documents, what is staged. The live document your cursor is in is marked `isActive`, and a document you close in memoQ drops out within about 45 seconds |
 | `get_segments` | ✓ | With the live link: rows in memoQ's order with source, **target**, and the active row marked – plus, for rows memoQ has already asked about, the source with its inline tags, so Claude can put bold, italics and other tags in the right places. Without: the source segments captured from translation requests |
 | `get_active_segment` | ✓ | The row your cursor is on, with what is selected – needs the live link |
 | `go_to_segment` | ✓ | Asks memoQ to select a row – needs the live link |
@@ -143,6 +143,8 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_files`, `get_project_statistics`, `export_target` | ✗ | No project or file API |
 | `pretranslate` | ✗ | You press Pre-translate; that is the design |
 
+**Which document a tool works on.** Every tool that takes a document accepts the same things: the key or GUID that `get_project` gives, or the document's name, capitals or not. When Claude names no document, the tool uses the one your cursor is in. A document that cannot be found is an error that lists the open documents, never a quiet switch to another one. Two open documents with the same name are refused by name; Claude then uses the key.
+
 For the differences outside the AI assistant – proofreading, QuickLauncher, TMs, SuperSearch – see [memoQ and Trados compared](/memoq/memoq-vs-trados/).
 
 **Reading is complete with the live link; writing goes through you.** What you give up compared with Trados is Claude editing rows in place – and in memoQ the alternative, staging plus one Pre-translate, is a review step rather than a loss.
@@ -154,7 +156,7 @@ Supervertaler captures segments in two ways, and it helps to know which is which
 - **Translation requests** – every segment memoQ sends to Supervertaler as the MT engine. One Pre-translate captures the whole document, with its identity and metadata. This is the normal route.
 - **Terminology lookups** – every row your cursor lands on, through the [terminology plugin](/memoq/terminology/), *regardless of which MT engine is selected*. So a document you pre-translated with Google or from TM alone still becomes visible to Claude one visited row at a time. memoQ does not tell the terminology plugin which document a row belongs to, so these land in a per-language-pair bucket rather than under the document.
 
-`get_project` labels each captured document with its origin.
+`get_project` labels each captured document with its origin, and marks the live document your cursor is in `isActive`.
 
 ## Memory banks
 
@@ -188,3 +190,9 @@ Reading is all this does: Claude cannot change a bank through memoQ. You edit th
 **A staged row says "inline tags not placed".** Claude's translation reached the row, but without the tags the source has, so memoQ's tag check will flag it. Ask Claude to read the segments again – it can see each row's tags once memoQ has asked about it – and re-stage those rows with the tags in place, then Pre-translate again.
 
 **`get_confirmed_pairs` is always empty.** Self-learning is not on. See [Self-learning translation](/memoq/self-learning/).
+
+**A term with an accent is not found, although memoQ shows it.** Before version 0.1.30, a lookup for a term such as *sovranità digitale*, or any term in Polish, Greek, Russian or Japanese, found nothing; so did a document or memory bank with an accent in its name. Update to 0.1.30 or later.
+
+**Claude still lists a document you closed.** Before version 0.1.30, a closed document stayed listed until memoQ was restarted. From 0.1.30 it leaves within about 45 seconds of its tab closing.
+
+**A check says "No document has been seen yet" although a document is open.** Before version 0.1.30, `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` and `find_inconsistencies` refused the document key that `get_project` gives. Update to 0.1.30 or later.

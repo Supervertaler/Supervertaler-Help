@@ -95,7 +95,7 @@ The marker is written from the **Available in** field on every save and stripped
 
 Press **AutoPrompt…** in the editor’s toolbar, or choose it from the **memoQ** menu. Supervertaler reads the document you are translating, the termbase hits in it (from termbases ticked AI) and anything you have already confirmed, and has the AI write a prompt tailored to that job – domain, register, a locked glossary, the lot. The result is saved under **Translate** and opened for you to review; then pick it from memoQ's **Prompt** dropdown.
 
-Before it runs you choose the document (if several are captured), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative. The briefing is the one input nothing else supplies: the filing route, a discrepancy you already know about, anything true of this job that is not in the document or the memory bank.
+Before it runs you choose the document (if several are captured; if you choose none, it uses the document your cursor is in), and can add a briefing – client, audience, style, what to avoid – which the AI treats as authoritative. The briefing is the one input nothing else supplies: the filing route, a discrepancy you already know about, anything true of this job that is not in the document or the memory bank.
 
 The two checkboxes grey out when they have nothing to offer – no termbase is ticked AI for this project, or nothing has been confirmed in this document yet – and say which it is, rather than sitting there ticked and doing nothing.
 
