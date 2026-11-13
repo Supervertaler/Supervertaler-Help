@@ -134,7 +134,7 @@ Click: 📂 Folder → Select folder with images
 
 **Model Selection** (the **AI Model** dropdown; vision-capable models, grouped by provider):
 - **OpenAI**: `gpt-6-astra` (most capable), `gpt-6.1-sol` (the default), `gpt-6-luna` (budget option)
-- **Claude**: `claude-sonnet-5-5`, `claude-opus-5-5`, `claude-fable-5-1`
+- **Claude**: `claude-sonnet-5-5`, `claude-opus-5-5`, `claude-fable-5-2`
 - **Gemini**: `gemini-3.1-flash-lite`, `gemini-2.5-pro`, `gemini-3.1-pro-preview`, `gemini-4-argon`
 
 The **Model Capabilities** box below the dropdown says what each model is good at.

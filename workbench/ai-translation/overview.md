@@ -9,7 +9,7 @@ Supervertaler integrates with leading AI language models for high-quality transl
 | Provider | Models |
 |----------|--------|
 | **OpenAI** | GPT-6 Astra, GPT-6.1 Sol, GPT-6 Luna |
-| **Anthropic** | Claude Sonnet 5.5, Claude Opus 5.5, Claude Fable 5.1 |
+| **Anthropic** | Claude Sonnet 5.5, Claude Opus 5.5, Claude Fable 5.2 |
 | **Google** | Gemini 3.1 Flash-Lite, Gemini 3.5 Flash, Gemini 2.5 Pro, Gemini 3.1 Pro (Preview), Gemini 4 Argon, Gemma 4 26B MoE |
 | **Mistral** | Mistral Large, Mistral Small |
 | **DeepSeek** | DeepSeek V4 Pro, DeepSeek V4 Flash |

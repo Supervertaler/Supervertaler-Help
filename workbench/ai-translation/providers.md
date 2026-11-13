@@ -14,9 +14,9 @@ Get an API key at [platform.openai.com/api-keys](https://platform.openai.com/api
 
 ### Anthropic (Claude)
 
-Models: **Claude Sonnet 5.5**, **Claude Opus 5.5**, **Claude Fable 5.1**
+Models: **Claude Sonnet 5.5**, **Claude Opus 5.5**, **Claude Fable 5.2**
 
-Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 5.5 is the recommended default. Opus 5.5 gives the highest quality for hard legal and technical work; Fable 5.1 is Anthropic's most capable model overall, at 2.5 times Opus's price.
+Get an API key at [console.anthropic.com](https://console.anthropic.com). Claude Sonnet 5.5 is the recommended default. Opus 5.5 gives the highest quality for hard legal and technical work; Fable 5.2 is Anthropic's most capable model overall, at twice Opus's price.
 
 ### Google (Gemini)
 

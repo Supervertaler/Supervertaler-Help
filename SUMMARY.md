@@ -67,6 +67,7 @@
 
 ## 🧩 Settings
 
+* [General settings](trados/settings/general.md)
 * [TermLens Settings](trados/settings/termlens.md)
 * [AI Settings](trados/settings/ai-settings.md)
 * [Prompts](trados/settings/prompts.md)

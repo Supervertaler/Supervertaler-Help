@@ -250,6 +250,10 @@ const sidebar = [
         "collapsed": true,
         "items": [
           {
+            "label": "General settings",
+            "link": "/trados/settings/general/"
+          },
+          {
             "label": "TermLens Settings",
             "link": "/trados/settings/termlens/"
           },

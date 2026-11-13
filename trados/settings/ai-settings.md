@@ -15,7 +15,7 @@ Choose one of the supported AI providers:
 | Provider | Models | Where to get a key |
 |----------|--------|--------------------|
 | **OpenAI** | GPT-6 Astra, GPT-6.1 Sol (the default), GPT-6 Luna | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
-| **Claude (Anthropic)** | Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.1 | [console.anthropic.com](https://console.anthropic.com) |
+| **Claude (Anthropic)** | Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.2 | [console.anthropic.com](https://console.anthropic.com) |
 | **Gemini (Google)** | Gemini 3.8 Flash (the default), Gemini 3.5 Flash-Lite, Gemini 4 Argon | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
 | **Mistral AI** | Mistral Large, Mistral Small | [console.mistral.ai](https://console.mistral.ai) |
@@ -149,7 +149,7 @@ The model dropdown includes a curated selection of the best models for translati
 |-------|-------------|
 | **Claude Sonnet 5.5** | Recommended – newest Sonnet, near-Opus quality at Sonnet cost, 1M context |
 | **Claude Opus 5.5** | Premium – Anthropic's newest Opus, 1M context. Top choice for hard legal/technical work |
-| **Claude Fable 5.1** | Maximum capability – Anthropic's most capable model, at double Opus pricing |
+| **Claude Fable 5.2** | Maximum capability – Anthropic's most capable model, at double Opus pricing |
 | **GPT-6 Astra** | OpenAI's most capable model, 1M context. For the hardest work when cost is secondary |
 | **GPT-6.1 Sol** | Close to Astra's quality at a fifth of its price, 1M context |
 | **GPT-6 Luna** | OpenAI's cheapest – for high-volume work |

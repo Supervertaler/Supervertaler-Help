@@ -24,7 +24,7 @@ EverTM is one memory that serves every language variant in both directions. Ther
 
 :::tip[EverTM compared with a Studio TM]
 - **One memory, not one per direction and variant.** A Studio TM has one direction and one pair of variants. EverTM serves nl-BE > en-US and en-GB > nl-NL from the same translation units.
-- **Your project name is stamped automatically.** Every segment you confirm is stored with the project's name, its client, the document, your user name and the date, with nothing to set up (see [What is stamped on a segment you confirm](#what-is-stamped-on-a-segment-you-confirm)). A Studio TM stores such a value only if the TM has a field for it and the value is filled in under **Project Settings > Translation Memory and Automated Translation > Update** in every project. Supervertaler can fill in the project's name and client there for you, but that is off until you switch it on, and a Studio TM cannot store the document's name this way (see [Stamping the project's name and client on Studio TMs](/trados/settings/project-settings/#stamping-the-projects-name-and-client-on-studio-tms)).
+- **Your project name is stamped automatically.** Every segment you confirm is stored with the project's name, its client, the document, your user name and the date, with nothing to set up (see [What is stamped on a segment you confirm](#what-is-stamped-on-a-segment-you-confirm)). A Studio TM stores such a value only if the TM has a field for it and the value is filled in under **Project Settings > Translation Memory and Automated Translation > Update** in every project. Supervertaler can fill in the project's name and client there for you, but that is off until you switch it on, and a Studio TM cannot store the document's name this way (see [Stamping the project's name and client on Studio TMs](/trados/settings/general/#studio-translation-memories)).
 - **Nothing to set up per project.** Add EverTM once to your default settings and it is there in every new project, in any language pair.
 - **Your own TMs keep their matches.** EverTM never lowers a match from a project TM (see [Your own TMs always come first](#your-own-tms-always-come-first)).
 - **One translation per sentence.** When a sentence has been translated in several ways, you get the newest. The older ones are kept, not deleted.
@@ -48,7 +48,7 @@ A Studio TM is still the right choice for a TM you share on a server, a TM a cli
 
 EverTM is meant to become the one place for everything you have ever translated: not only a memory that gives matches, but one you can sort, filter and look after. The order and the details below may still change.
 
-### Built and being tested now
+### Now in EverTM (from v18/19.20.206)
 
 - **Your TMs' information is kept.** Each translation unit keeps its fields – Project, Client, End client, Subject, Document, Source and Note – and who created and last changed it, and when. This comes from TMX files, Studio TMs and Workbench, and Studio shows it with every EverTM match.
 - **The newest translation wins.** When a sentence has been translated in more than one way, EverTM gives the newest translation (in your exact language variant first). Older translations are kept and hidden, never deleted.
@@ -83,7 +83,7 @@ This matters because of how Studio treats two TMs that disagree. When two TMs gi
 EverTM scores a fuzzy match the way Studio scores one from its own TMs. An EverTM match and a Studio TM match for the same sentence normally show the same percentage, and Analyze puts them in the same band.
 
 - **What counts, as in Studio.** A missing or extra word counts more than a missing comma. A word in another form ("disable" and "disabling"), with another capital letter or without its accent counts as a small change. A word that has moved counts as one change. The differences are weighed against both sentences.
-- **Close to Studio's figure, not always the same.** Studio's own word lists, and its way of reading measurements and web addresses, are not public. For most sentences EverTM gives Studio's percentage or one within 2 points of it. About one match in ten is a few points higher in EverTM. Lines that are mostly numbers can be lower.
+- **Close to Studio's figure, not always the same.** Studio's own word lists, and its way of reading measurements and web addresses, are not public. For most sentences EverTM gives Studio's percentage or one within 2 points of it. About one match in ten scores a point or a few higher in EverTM (typically 1 to 3 points, mostly between 50% and 80%). Lines that are mostly numbers can be lower.
 - **13 languages.** Word forms and common words ("the", "of") are recognised for Danish, Dutch, English, Finnish, French, German, Hungarian, Italian, Norwegian, Portuguese, Russian, Spanish and Swedish. In other languages a word in another form counts as a different word, so a match can be a few points lower than in Studio.
 - **100% means the identical sentence**, and nothing else.
 - **The differences are highlighted as for a Studio TM.** Extra, missing and changed words are marked where Studio marks them for its own TMs. Where a whole stretch was reworded, EverTM shows the new words and then the old ones, struck through, so an EverTM row and a Studio TM row may mark that stretch differently. The percentage is the same.
@@ -163,7 +163,7 @@ To take your memory elsewhere – another CAT tool, a colleague, a backup you ca
 - **Choose what to export.** The window lists what EverTM holds by where it came from (each TMX or TM file, "workbench", "studio" for segments you confirmed), with the number of translation units. Choose a language pair or **All language pairs**, tick the sources you want (**Select all** / **Select none**), click **Export...** and pick where to save the TMX file.
 - **What the file holds.** A standard TMX 1.4 file. Each translation unit is written in the direction and language variants it was first stored with, with its formatting tags, its fields (Project, Client, Subject and so on), when it was created and changed and by whom (where EverTM knows), the date it went into EverTM, and where it came from. Older translations that EverTM hides in Studio are exported too.
 - **Back in, unchanged.** Import the file into EverTM again – on another PC, say – and you get exactly the same translation units back, with their formatting, dates and fields.
-- **Keep working.** The export runs in the background; you can go on translating, in that Studio and in others. About a million translation units take some 25 seconds.
+- **Keep working.** The export runs in the background; you can go on translating, in that Studio and in others. With 10 million translation units it takes about 4 minutes and gives a 3.5 GB file.
 - **Stop leaves nothing.** Click **Stop** and the half-written file is removed: you never end up with a partial TMX.
 
 ## What EverTM keeps
@@ -212,7 +212,7 @@ Each has a tick box in [EverTM's window](#evertms-window), after **Stamped on se
 - **With Project unticked**, the Source field says only *Studio*, without the project's name, so the name is not stored anywhere.
 - **The time you confirmed a segment is always stored.** It has no tick box, because it decides which translation is the newest.
 
-These tick boxes are for EverTM only. To have the project's name and client stored in your Studio TMs too, see [Stamping the project's name and client on Studio TMs](/trados/settings/project-settings/#stamping-the-projects-name-and-client-on-studio-tms).
+These tick boxes are for EverTM only. To have the project's name and client stored in your Studio TMs too, see [Stamping the project's name and client on Studio TMs](/trados/settings/general/#studio-translation-memories).
 
 ### One translation per sentence: the newest
 
@@ -251,8 +251,6 @@ With **Send TM matches to the AI** on, [AI Batch Translate](/trados/batch-transl
 - If EverTM can't be searched – empty, damaged or being rebuilt – the batch goes on with your other TMs.
 - Where EverTM has put your segment's number into its translation (see [When only a number differs](#when-only-a-number-differs)), the match says so, and it is sent as *same sentence, different numbers*, not as a 100% match.
 
-This changes with the next step, now being tested: EverTM will keep each unit's fields, and who created and changed it, and when. See [What's coming](#whats-coming).
-
 ## Where it lives
 
 Everything is in `evertm` in your [Supervertaler data folder](/trados/data-folder/):
@@ -272,7 +270,7 @@ EverTM was called SuperVault in early test builds. If you used one, the first St
 
 Segments you confirm and small imports are added to the index in place, in seconds. A large import – more than a quarter of what EverTM already holds – rebuilds the whole index instead: about 6 minutes and 365 MB for 1.5 million translation units. Studio keeps using the previous index while the new one is built, and switches over when it is complete.
 
-After you update from an earlier test build, the first Studio you start rebuilds EverTM's index in the background, in a new format: about 4–5 minutes with 870,000 translation units. Matches go on meanwhile, from the old index. Install the new version in every Studio you use with EverTM: an older version can't read the new index.
+After you update from an earlier test build, the first Studio you start rebuilds EverTM's index in the background, in a new format: about 6 minutes with 1.5 million translation units. Matches go on meanwhile, from the old index. Install the new version in every Studio you use with EverTM: an older version can't read the new index.
 
 If the index is damaged, or was built by another version of Supervertaler, Studio shows EverTM as unavailable, with a message; your other TMs work as usual. Click **Rebuild index** in EverTM's settings to put it right. An empty EverTM is not an error: it gives no matches and fills up as you import or confirm.
 
