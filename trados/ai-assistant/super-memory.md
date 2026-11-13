@@ -22,6 +22,26 @@ That is the whole structure. You are meant to open these files and edit them by 
 
 Any other Markdown file you put at the top of a bank – `figures.md`, say – is read too, under its own filename (from v18/19.20.183).
 
+### Files for one target language
+
+*From v18/19.20.206.* A bank can hold files written for one target language. Put the language code in the file's name, before `.md`:
+
+| File | Sent with |
+| --- | --- |
+| `style.md` | Every job, as before |
+| `style.nl.md` | Jobs into Dutch, whatever the variant |
+| `style.nl-BE.md` | Jobs into Dutch (Belgium) only |
+| `style.en-GB.md` | Jobs into English (United Kingdom) only |
+
+So a bank – or `_shared` – can keep house conventions for several languages without every request carrying all of them.
+
+- **A job into Dutch (Belgium) gets both** `style.nl.md` and `style.nl-BE.md`. Where the two disagree, the Belgian one wins.
+- **With no document open** – in the chat, say – every language file is sent.
+- **Only two-letter language codes count.** A file such as `notes.may.md` stays an ordinary file and is sent with every job.
+- **A bank without such files** works exactly as before.
+
+The bank's [Report](#the-report-button) says which language files go with the open document and which are left out.
+
 ### Notes for the assistants only
 
 *From v18/19.20.198.* A note about how to work a job rather than how to translate it – what to check before delivery, how to verify a termbase – can be kept out of translation. Put this at the very top of the file:
@@ -56,6 +76,8 @@ Everything in the three files is *derived* from something – a style guide, a r
 Alongside whichever bank is active, Supervertaler always loads a bank called **`_shared`**. It holds the defaults that are true of *your* work rather than of any one client: house style, domain conventions, jurisdictional rules.
 
 **Where they disagree, the active bank wins.** That is what a client bank is for – `_shared` says how you normally translate, and the client says how this one insists on it being done. The AI is told which layer is which, so it can apply the override rather than average the two.
+
+For the full order – the bank, your termbase, `_shared` and translation memory matches – see [Which source wins](/trados/ai-assistant/super-memory/ai-integration/#which-source-wins).
 
 A rule earns its place in `_shared` once it has held across more than one client. Until then it stays in the bank where you found it, tagged in the Scope column. Promote by *moving* the row, not copying it, or the two drift apart.
 
@@ -116,7 +138,7 @@ That last point is the design in one line: **the AI proposes, you decide what ge
 
 **☰ Report** tells you what the bank actually contributes: which files exist and how big, how many rows the terminology table has, **how many tokens get added to a prompt**, whether `_shared` is being applied, and warnings for things that are quietly wrong – a missing brief, a terminology file that is still prose rather than a table.
 
-From v18/19.20.198 the figure is what a *translation* sends. For a bank over about 8,000 tokens it is the most a translation can send, because each document then gets only the part it needs (see [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs)). Notes marked for the assistants only are listed separately, as kept for the chat and the MCP tools. Other files at the top of the bank are listed as read. (Before v18/19.20.198 the report said such files were never sent to the AI. That had stopped being true in v18/19.20.183.)
+From v18/19.20.198 the figure is what a *translation* sends. For a bank over about 8,000 tokens it is the most a translation can send, because each document then gets only the part it needs (see [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs)). Notes marked for the assistants only are listed separately, as kept for the chat and the MCP tools. Other files at the top of the bank are listed as read. From v18/19.20.206, a bank with [files for one target language](#files-for-one-target-language) also gets a paragraph, **Files for one language**, saying which of those files are included for the open document and which are left out; with no document open, it says that all of them are included. (Before v18/19.20.198 the report said such files were never sent to the AI. That had stopped being true in v18/19.20.183.)
 
 It reads the files directly, so it is instant and costs nothing.
 

@@ -12,9 +12,20 @@ Two banks, in this order:
 1. **`_shared`** – your house defaults, labelled as such.
 2. **The active bank** – labelled as overriding the defaults above.
 
-Within each, the three files are sent: `brief.md`, then `terminology.md`, then `style.md`, followed by any other Markdown file you have put at the top of the bank (such as `figures.md`), under its own filename. A file still exactly as Supervertaler created it – its headings and the lines saying what belongs there – is not sent, so a bank nobody has written in adds nothing, and neither does the empty `_shared` bank Supervertaler makes for you (from v18/19.20.201). A small bank goes whole. Two things narrow it, both described below: a large bank sends a translation only the part the document needs, and a note you have marked for the assistants stays out of translation.
+Within each, the three files are sent: `brief.md`, then `terminology.md`, then `style.md`, followed by any other Markdown file you have put at the top of the bank (such as `figures.md`), under its own filename. A file still exactly as Supervertaler created it – its headings and the lines saying what belongs there – is not sent, so a bank nobody has written in adds nothing, and neither does the empty `_shared` bank Supervertaler makes for you (from v18/19.20.201). A small bank goes whole. Three things narrow it, all described below: a file written for one target language goes only with work into that language, a large bank sends a translation only the part the document needs, and a note you have marked for the assistants stays out of translation.
 
 `reference/` is never sent. It holds the source material the three files were derived from, and a superseded draft answering as if it were current is precisely the failure it exists to prevent.
+
+## Files for one target language
+
+*From v18/19.20.206.* A file with a language code in its name – `style.nl-BE.md`, `style.fr-FR.md`, `style.en-GB.md` – is sent only with work into that language. This holds for the active bank and for `_shared`.
+
+- A file for a language without a variant (`style.nl.md`) goes with every variant of that language.
+- A job into Dutch (Belgium) gets both `style.nl.md` and `style.nl-BE.md`. Where they disagree, the Belgian one wins.
+- With no document open – in the chat, say – every language file is sent.
+- Only two-letter language codes count, so a file such as `notes.may.md` stays an ordinary file.
+
+The **☰ Report** button has a paragraph, **Files for one language**, that says which of these files are included for the open document and which are left out. See [SuperMemory](/trados/ai-assistant/super-memory/#files-for-one-target-language) for how to name the files.
 
 ## A large bank sends only what each document needs
 
@@ -57,6 +68,19 @@ It is then left out of every translation: Batch Translate, Translate active segm
 The prompt states plainly that the client section overrides the house defaults. That instruction only works because the two layers are kept separate rather than merged, so the AI can tell which rule came from where.
 
 In practice: `_shared` might say *voorkeursvorm → preferred embodiment*, and a client bank might insist on *preferred form*. The client wins, and the override belongs in that client's bank – not as an edit to `_shared`, which would change the default for everyone.
+
+### Which source wins
+
+*From v18/19.20.206.* The memory bank part of every AI request also says which source wins when two of them disagree:
+
+| Order | Source | Note |
+| --- | --- | --- |
+| 1 | **The client's bank** – the active bank | Its term decisions included |
+| 2 | **Your termbase** | Wins over your house defaults |
+| 3 | **`_shared`** | Your house defaults |
+| 4 | **Translation memory matches** | References only: every source above wins over them |
+
+So a term decision in the client's bank beats the termbase, and the termbase beats a term in `_shared`.
 
 ## The bank is the selection
 

@@ -19,7 +19,7 @@ Both Translate and Proofread modes support **[Clipboard Mode](/trados/clipboard-
 
 ### Preview prompt
 
-Next to the action button, the **👁 Preview prompt** link opens a read-only dialog showing **exactly what would be sent to the AI** for the current configuration: the assembled system prompt (including the active custom prompt, termbase entries, language-specific checks, and the full bilingual document context for proofread), followed by the numbered segment list. No LLM call is made.
+Next to the action button, the **👁 Preview prompt** link opens a read-only dialog showing **exactly what would be sent to the AI** for the current configuration: the assembled system prompt (including the active custom prompt, termbase entries, language-specific checks, and the full bilingual document context for proofread), followed by the numbered segment list. No LLM call is made. It shows the prompt exactly as it is sent, with its line breaks, also for a memory-bank file saved with Unix line endings *(from v18/19.20.206; before, such a file appeared as one run-on paragraph, though what was sent was always correct)*.
 
 This is useful for:
 

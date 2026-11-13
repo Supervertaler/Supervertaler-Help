@@ -324,7 +324,7 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 
 ### Lowest TM match to send
 
-Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
+Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only: a match for the same sentence with different numbers is then not sent either *(from v18/19.20.206)*. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
 
 ### Keep repetitions consistent in Batch Translate (from v18/19.20.201)
 
