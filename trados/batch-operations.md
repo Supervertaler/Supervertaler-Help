@@ -64,7 +64,62 @@ The AI sees the text of your documents, not the pictures in them. **FigureLens**
 
 The descriptions are saved in the active memory bank, and that must be a bank of this project's own: the shared bank is read by every project, so the panel refuses to write there and instead offers **Create memory bank “<project name>” for this project and switch to it**, one click. If you already keep a bank for the project, pick it on the Chat tab first.
 
-Buttons that cannot run yet say why: no images in the documents, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers** stays a separate link above, because it is a check on the text, not part of this pipeline.
+Buttons that cannot run yet say why: no images in the documents and none in the chosen folder, step 1 not done, or no active memory bank. The **Document images report** link at the bottom opens the full per-image listing in the Chat tab. **Reference numbers** stays a separate link above, because it is a check on the text, not part of this pipeline.
+
+#### When the drawings came as separate files (from v18.20.207)
+
+The drawings of a patent are often sent as image files beside the text, not as pictures in the Word document. FigureLens can describe those too.
+
+**When this applies.** The project's documents hold no images at all. FigureLens says so under **Your documents**, for example: *No images in the 1 document of this project. The 4 image files in the folder below will be used.* If the documents do hold images, FigureLens works from those, as before, and ignores other files in the folder. It is one or the other, never both.
+
+**Choose the folder.** Under step 1, click **Already have the images in a folder? Choose it…** (later: **Change…**). The step 1 button stays grey, because there is nothing to extract. Then use **Describe images with AI** as usual.
+
+**Which files are used**
+
+- Image files in the folder and in its sub-folders one level down.
+- PNG, JPG, GIF and WebP are sent as they are.
+- BMP, TIFF, EMF and WMF are converted to PNG first, in memory; your file is not changed. Of a TIFF with several pages, only the first is used, and its row says so.
+- PDF, Word and other files are not used, and the folder line says how many there are. To use a drawing that is in a PDF, save its pages as PNG first.
+
+**A file gets its figure number from its name, never from the picture**
+
+| File name | Figure |
+| --- | --- |
+| `Figure 3.png`, `fig3.jpg`, `FIG-3.png`, `Figuur 3.png`, `03.png` | 3 |
+| `PROJ-001 Fig. 3A (amended).png` | 3A: the word and number can be anywhere in the name |
+| `Fig 1-2.png`, `Figs 3 and 4.png`, `Figures 5A-5C.png` | One file holding several figures. It is sent once, with the text for each of them. |
+| `Figure 1 - 13 Nov.png`, `Figure 3 (2).png` | 1 and 3: a second number counts only where it cannot be anything else |
+| `scan0042.png`, `page 2.png` | No figure number. The file is still described, and its row reads *no figure number in the file name*. Rename it (`Figure 2.png`) and run again to give it one. |
+
+**What is sent with each file.** The figure label and every sentence of the text that opens by naming that figure ("Figure 3 shows …", "Fig. 3 is …"). Sentences that mention the figure further on ("In figure 3, …") are not picked up. A letter is ignored when the text is looked up: `Figure 3A.png` gets the sentences for figures 3, 3A and 3B.
+
+**What it costs.** One AI request per image file. Beside the button, the window says before you start how many requests it will make, how many files it matched to a figure, and whether a figure in the text has no file.
+
+- More than 25 files: FigureLens asks first, naming the number and the folder.
+- More than 200 files: it refuses, and asks for a folder that holds only this project's drawings.
+- It always asks before replacing a `figures.md` that already exists.
+
+**In `figures.md`**
+
+- A line under the heading says that the images came from the folder and that the figure numbers come from the file names.
+- Two files that give the same figure are both described, and each names the other.
+- A file for a figure the text never describes says so.
+- A figure the text describes that has no file is listed with its text and *no image file for this figure*.
+
+**Describe from the text only** needs no images. With none in the documents, it writes one row for each figure the text describes, with the matching file from the folder where there is one. If no sentence in the text opens with a figure label, the button is grey and says so.
+
+#### Stopping a run, and runs that fail (from v18.20.207)
+
+- While a run is on, **Describe images with AI** reads **Stop**. A stopped run saves nothing.
+- If no image could be described, for example because of a wrong API key or no network, nothing is saved. A red line in the window gives the reason the provider gave for the first image.
+- In both cases, a `figures.md` that was already there is left exactly as it was.
+- If only some images fail, the file is written. The failed rows say *not analysed* and why.
+
+#### Limits
+
+- 200 image files per run.
+- A file over 50 MB is skipped, and so are an empty file and a file that is not really an image, each with the reason in its row.
+- An image larger than about 3.5 MB, or wider or taller than 7,900 pixels, is scaled down before it is sent, to at most 2,200 pixels on its long side. Your file is not changed. A WebP image that large cannot be scaled here: save it as PNG or JPG.
 
 ### AutoPrompt
 
