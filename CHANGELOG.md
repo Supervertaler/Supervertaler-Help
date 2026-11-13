@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-10
+
+- **Trados: EverTM keeps where each translation came from, and when** (from v18/19.20.206, still unreleased). *EverTM* has a new opening section, *Why EverTM*, on the copies of TMs that pile up with Studio's AnyTM. *What EverTM keeps* is rewritten: EverTM now keeps Project, Client, End client, Subject, Document, Source and Note with each translation unit, and when and by whom it was created and changed; where that comes from (TMX files, Studio TMs, Workbench TM names such as `ACME_Globex`, confirmed segments); one translation per sentence, the newest, with your language variant first and older ones hidden, never deleted; how re-importing fills in metadata and dates on translation units already there; and what Studio shows in Translation Results. New sections describe EverTM's window and AI Batch Translate's use of EverTM, and *AI Batch Translate* says its TM matches now include EverTM. *Importing* explains more plainly that nothing is stored twice and quotes the new import summary, and the page says "translation units" throughout, as EverTM's window now does.
+
 ## 2026-11-09
 
 - **Trados: SuperVault is now called EverTM.** Its page moved to *EverTM* (the old address leads there) and *Supervertaler names at a glance* uses the new name. The page gains a section on exporting to TMX, a note on the size limit in Studio 2024, and what happens to an early test build's `supervault` folder. EverTM is still not released (it comes with 18.20.206), so the page stays out of the sidebar with its "Not released yet" notice.
