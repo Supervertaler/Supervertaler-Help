@@ -322,6 +322,8 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 - A larger batch size is faster but uses more tokens per request
 - A smaller batch size is more granular and easier to review
 
+From v18.20.207 the same setting is also on the **Batch Operations** tab, as the **Batch size** box beside **Limit**, so you can choose it for a run without opening Settings. Changing it in one place changes it in the other. In Trados Studio 2024 and 2022 the box stops at 10, the most those versions take.
+
 ### Lowest TM match to send
 
 Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only: a match for the same sentence with different numbers is then not sent either *(from v18/19.20.206)*. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.

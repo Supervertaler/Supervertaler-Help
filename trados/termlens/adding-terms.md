@@ -126,6 +126,8 @@ When you add a term and the **source** or **target** already exists in the termb
 - **Keep Both** – creates a separate entry alongside the existing one
 - **Cancel** – aborts the operation
 
+From v18.20.207 each button answers to a key, and the letter is underlined on the button: **S** for Add as Synonym (Enter works too), **E** for Add & Edit, **K** for Keep Both and **Esc** for Cancel. Alt with the letter works as well.
+
 The merge prompt always displays terms in your **project's language direction**, regardless of how the termbase stores them internally. For example, in a Dutch → English project using an English → Dutch termbase, the dialogue shows the Dutch source term first and the English target term second.
 
 **Example:** Your termbase already has **adhesion → hechting**. You select **adhesion → aanhechting** and press Alt+Down. The merge prompt appears because the source term “adhesion” already exists. Clicking “Add as Synonym” adds _aanhechting_ as a target synonym of the existing entry, so both translations are grouped together.

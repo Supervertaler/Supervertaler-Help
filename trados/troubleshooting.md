@@ -305,7 +305,7 @@ The AI assistant sees the same list: [`get_active_project`](/trados/mcp-server/)
 - **Large termbases** (50,000+ terms) may take a moment to index when the database is first loaded on startup. This is a one-time cost per session
 - **Close and reopen the editor** if the plugin feels unresponsive after a long session
 - **Disable unused termbases** –uncheck **Read** for termbases you do not need for the current project to reduce the matching workload
-- **Reduce batch size** in [AI Settings](/trados/settings/ai-settings/) if Batch Translate is slow or timing out
+- **Reduce batch size** if Batch Translate is slow, timing out, or losing batches with a reply that cannot be read: use the **Batch size** box on the Batch Operations tab (from v18.20.207), or [AI Settings](/trados/settings/ai-settings/)
 
 ---
 
