@@ -44,11 +44,11 @@ All source segments in the current document, so the assistant can judge what kin
 
 Very long documents are truncated to a configured maximum (default 500 segments), keeping the first 80 % and the last 20 % so the beginning and the end both survive.
 
-**Toggle:** AI Settings → *Include full document content*.
+**Toggle** *(from v18/19.20.208)*: two tick boxes, both labelled **Include full document content in AI context**. The one on the **Chat** tab, just above the box you type in, is followed by Chat and QuickLauncher. The one on the **Batch Operations** tab, under **Send TM matches to the AI**, is followed by Batch Translate, Batch Proofread, Translate active segment (Alt+T), Clipboard Mode, Preview prompt and SuperBench. The maximum for a long document is still AI Settings → *Max segments*, and applies to both. Before v18/19.20.208 this was one tick box for everything: AI Settings → *Include full document content*. See [AI Settings](/trados/settings/ai-settings/#include-full-document-content).
 
 ### 5. A translation memory match
 
-Batch Translate searches the project's translation memories for each segment and sends the closest match to the AI. Clipboard Mode's **Copy to Clipboard** runs the same search from v18/19.20.198.
+Batch Translate searches the project's translation memories for each segment and sends the closest match to the AI. Clipboard Mode's **Copy to Clipboard** runs the same search from v18/19.20.198. From v18/19.20.208 only the memories that are **Enabled** and have **Lookup** ticked in Project Settings are searched, the rule Studio itself applies; see [Which translation memories are searched](/trados/batch-translate/#which-translation-memories-are-searched-from-v181920208).
 
 Three things worth knowing, because they are easy to assume away:
 
@@ -130,7 +130,7 @@ We have not published composition presets (e.g. "Mature client – memory bank o
 
 To see exactly what is being sent, click **👁 Preview prompt** next to the Translate button on the Batch Operations tab. It opens a read-only dialog with the assembled prompt – every layer, in the order the model receives it – and makes no AI call.
 
-To change what is sent, open the settings dialog's **AI Settings** tab, where you can toggle document content, TM matches, term metadata and memory bank context, and choose which termbases contribute.
+To change what is sent, open the settings dialog's **AI Settings** tab, where you can toggle TM matches, term metadata and memory bank context, and choose which termbases contribute. Document content has a tick box of its own on the Chat tab and one on the Batch Operations tab *(from v18/19.20.208; before, it was one tick box in AI Settings)*.
 
 ## See Also
 

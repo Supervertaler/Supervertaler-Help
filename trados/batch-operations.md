@@ -17,6 +17,17 @@ Both modes share the same prompt selector, provider/model configuration, and sco
 
 Both Translate and Proofread modes support **[Clipboard Mode](/trados/clipboard-mode/)** – an alternative workflow that lets you use any web-based AI (ChatGPT, Claude, Gemini, etc.) without an API key. Tick the **Clipboard Mode** checkbox to switch from API-based processing to a manual copy/paste workflow. See [Clipboard Mode](/trados/clipboard-mode/) for full details.
 
+### Include full document content in AI context (from v18/19.20.208)
+
+The tick box **Include full document content in AI context** is directly under **Send TM matches to the AI**. When it is ticked, the whole document goes to the AI as context with every request, so the AI can see what kind of document this is and what the rest of it says. A long document is cut down to the number of segments set as **Max segments** in [AI Settings](/trados/settings/ai-settings/#max-segments). It costs more input tokens: untick it to spend less.
+
+* **What follows it:** Batch Translate, Batch Proofread, Translate active segment (`Alt+T`), Clipboard Mode, **👁 Preview prompt** and SuperBench.
+* **It is shown in both Translate and Proofread mode**, and it is locked while a run is going.
+* **Chat and QuickLauncher have a tick box of their own**, with the same label, on the [Chat tab](/trados/ai-assistant/chat/#include-full-document-content-in-ai-context-from-v181920208). Neither box changes the other.
+* **AutoPrompt follows neither**: it always reads the whole source text to write its prompt.
+
+Before v18/19.20.208 there was one tick box for everything, in Settings → AI Settings. It is gone from there. Both new tick boxes start with the value it had, so nothing changes until you untick one of them. What is sent is described under [Include full document content](/trados/settings/ai-settings/#include-full-document-content).
+
 ### Preview prompt
 
 Next to the action button, the **👁 Preview prompt** link opens a read-only dialog showing **exactly what would be sent to the AI** for the current configuration: the assembled system prompt (including the active custom prompt, termbase entries, language-specific checks, and the full bilingual document context for proofread), followed by the numbered segment list. No LLM call is made. It shows the prompt exactly as it is sent, with its line breaks, also for a memory-bank file saved with Unix line endings *(from v18/19.20.206; before, such a file appeared as one run-on paragraph, though what was sent was always correct)*.

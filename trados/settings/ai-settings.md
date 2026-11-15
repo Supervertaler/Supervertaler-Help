@@ -188,7 +188,7 @@ These options control what additional context is included in AI prompts. The set
 | Setting | Chat & QuickLauncher | Batch Operations |
 |---------|:--------------------:|:----------------:|
 | Termbases in AI prompts | Yes | Yes |
-| Include full document content | Yes | Yes |
+| Include full document content *(from v18/19.20.208 a tick box on each tab, not in AI Settings; see below)* | Chat tab | Batch Operations tab |
 | Max segments | Yes | Yes |
 | Include term definitions and domains | Yes | Yes |
 | Log prompts to Reports | Yes | Yes |
@@ -200,6 +200,19 @@ These options control what additional context is included in AI prompts. The set
 These settings apply to **all** AI features – Chat, QuickLauncher, Batch Translate, and Batch Proofread.
 
 #### Include full document content
+
+*(From v18/19.20.208 this is no longer a tick box in AI Settings.)* There are now two tick boxes, both labelled **Include full document content in AI context**, each on the tab where you use it:
+
+| Where the tick box is | What follows it |
+|-----------------------|-----------------|
+| On the **Chat** tab of the Supervertaler Assistant, in a strip just above the box you type in ([Chat](/trados/ai-assistant/chat/#include-full-document-content-in-ai-context-from-v181920208)) | Chat and QuickLauncher |
+| On the **Batch Operations** tab, directly under **Send TM matches to the AI** ([Batch Operations](/trados/batch-operations/#include-full-document-content-in-ai-context-from-v181920208)) | Batch Translate, Batch Proofread, Translate active segment (`Alt+T`), Clipboard Mode, **👁 Preview prompt** and SuperBench |
+
+Both start with the value your one setting had, so nothing changes until you untick one of them. After that, each keeps its own value. AI Settings shows a note saying that the tick box is now on the two tabs. [AutoPrompt](/trados/generate-prompt/) follows neither tick box: it always reads the whole source text to write its prompt.
+
+Why two: sending the whole document with every request costs input tokens. In Chat you ask many small questions, and the document goes along with each of them; a batch run benefits from it. Each can now be set for what you use it for.
+
+Before v18/19.20.208 this was one tick box here in AI Settings, and it decided for all of these features at once.
 
 When enabled, all source segments in the current document are sent to the AI so it can determine the document type (legal, medical, technical, marketing, etc.) and provide context-appropriate assistance. This uses more tokens but greatly improves response quality – the AI can tailor its terminology and style to the specific type of document you are translating.
 
@@ -214,7 +227,7 @@ The maximum number of source segments to include in the AI prompt when document 
 Increase this for very large documents where you want the AI to see more content. Decrease it if you want to reduce token usage.
 
 :::note
-This setting is only available when **Include full document content** is enabled.
+From v18/19.20.208 this setting is always available, and it applies to both **Include full document content in AI context** tick boxes: the one on the Chat tab and the one on the Batch Operations tab. Before v18/19.20.208 it was greyed out while the tick box in AI Settings was unticked.
 :::
 
 #### List numbering as structure context (from v18.20.188; always on from v18.20.189)
@@ -326,7 +339,7 @@ From v18.20.207 the same setting is also on the **Batch Operations** tab, as the
 
 ### Lowest TM match to send
 
-Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only: a match for the same sentence with different numbers is then not sent either *(from v18/19.20.206)*. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether.
+Batch Translate searches the project's translation memories and sends each segment's closest match to the AI as a reference to check, always together with the source sentence it was made for (see [Batch Translate](/trados/batch-translate/#ai-context-in-batch-translate)). This is the lowest match percentage worth sending. Default: **70%**, where Studio's own fuzzy band starts; below that a "match" agrees with the segment largely by accident and competes with your termbase for the AI's attention. Set it to 100 for exact matches only: a match for the same sentence with different numbers is then not sent either *(from v18/19.20.206)*. Clipboard Mode uses the same threshold from v18/19.20.198. **Send TM matches to the AI** on the Batch Operations tab turns the search off altogether. From v18/19.20.208 only memories that are **Enabled** and have **Lookup** ticked in Project Settings are searched; see [Which translation memories are searched](/trados/batch-translate/#which-translation-memories-are-searched-from-v181920208).
 
 ### Keep repetitions consistent in Batch Translate (from v18/19.20.201)
 

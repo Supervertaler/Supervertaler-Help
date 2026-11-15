@@ -42,7 +42,7 @@ The server exposes these tools to the AI app:
 | `help` | A curated menu of what you can ask – shown when you say *"what can I do?"* *(v18.20.106)* |
 | `session_report` | How many bytes of tool results this session has sent the AI, per tool, biggest first – so you can see which tools are filling (and re-billing) the conversation *(v18.20.158)* |
 | `list_trados_instances` | Which Trados Studios are running, the project open in each, and which one the AI is talking to – for when you have more than one open *(v18.20.184)* |
-| `select_trados_instance` | Tell the AI which of several running Studios to work with, by Studio version or project name *(v18.20.184)* |
+| `select_trados_instance` | Tell the AI which of several running Studios to work with, by Studio version or project name *(v18.20.184)*. From v18/19.20.208, choosing another Studio also works when the one chosen before has been closed; this is in the MCP server itself, so it needs the assistant extension from that release |
 | `get_active_project` | Project name, language pair, active file, segment counts per confirmation status – and warnings about problems that quietly cost quality, such as source text outside any segment *(that warning from v18/19.20.205)* |
 | `get_segments` | List segments, with filters (status, contains-text, file) and paging – or fetch exact segments by the grid number(s) you see in Studio (`fromNumber`/`toNumber`) *(grid numbers v18.20.114)*. Segments that hold only tags – email links, a field, an image – are listed and marked as such; a segment whose source is completely empty is not listed, but the reply names it *(from v18/19.20.205; before, segments of tags only were silently left out)* |
 | `get_files` | The files of a merged multi-file document, with per-file segment counts *(v18.20.95)* |
@@ -226,7 +226,7 @@ It works with the regular Studio licence as well as Professional: it uses Studio
 
 ### Opening a project *(from v18/19.20.206)*
 
-Ask your assistant to open a project – *"Open the PROJ-001 project"*, or *"Open PROJ-001 and its files in the Editor"*. It opens a project from Studio's Projects list, by its name or by the project file that `create_project` made, as double-clicking it in the Projects view does.
+Ask your assistant to open a project – *"Open the PROJ-001 project"*, or *"Open PROJ-001 and its files in the Editor"*. It opens a project from Studio's Projects list, by its name or by the project file that `create_project` made, as double-clicking it in the Projects view does. From v18/19.20.208 the path of the project file (`.sdlproj`) that `create_project` returned also works straight after creating; before, only the name worked then in some cases.
 
 Ask, and it also opens the project's files in the Editor: all of them, or the ones you name. Several files open together as one document, as **Open for Translation** does when you select several files. If the project has several target languages, the assistant asks which one.
 

@@ -243,7 +243,7 @@ Client and project names, and other people's user names from agency TMs, are sto
 
 ## AI Batch Translate
 
-With **Send TM matches to the AI** on, [AI Batch Translate](/trados/batch-translate/) also searches EverTM for each segment's best match, when EverTM is in the project's TM settings with **Lookup** ticked. Before, it searched only the project's Studio TMs.
+With **Send TM matches to the AI** on, [AI Batch Translate](/trados/batch-translate/) also searches EverTM for each segment's best match, when EverTM is in the project's TM settings with **Lookup** ticked. Before, it searched only the project's Studio TMs. From v18/19.20.208 EverTM must also be **Enabled** there, as any project TM must: see [Which translation memories are searched](/trados/batch-translate/#which-translation-memories-are-searched-from-v181920208).
 
 - EverTM's best match at or above your **Lowest TM match to send** takes part like any TM's, with its own source sentence, so the AI sees what differs.
 - A project TM's match of the same score wins, and an exact match Studio already put on a segment is never replaced by a lower one.

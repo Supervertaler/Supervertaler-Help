@@ -42,7 +42,7 @@ When you click **Copy to Clipboard**, Supervertaler builds a comprehensive promp
 * **System instructions** – the same translation or proofreading instructions used by the API-based batch modes
 * **Custom prompt** – your selected prompt from the Prompt Manager, if any
 * **Terminology** – terms from your enabled termbases, including definitions and domains (when term metadata is enabled in AI Settings)
-* **Document context** – source segments from the document (when enabled in AI Settings), so the AI understands the document type and domain
+* **Document context** – source segments from the document, when **Include full document content in AI context** is ticked on the [Batch Operations tab](/trados/batch-operations/#include-full-document-content-in-ai-context-from-v181920208) *(from v18/19.20.208; before, this was a tick box in AI Settings)*, so the AI understands the document type and domain
 * **Translation memory matches** – the closest match from the project's TMs for each segment that has one, as a reference for the AI to check, with the source sentence it was made for *(from v18/19.20.198)*; see [Translation memory matches](#translation-memory-matches) below
 * **Numbered bilingual segments** – each segment is numbered and formatted with status annotations
 
@@ -101,6 +101,8 @@ Segment 2 – 85% match
 A match always comes with the source sentence it was made for, so the AI can compare the two. It is a reference, not wording to follow: the AI reuses a match only where it is correct for the segment in this document, lets the termbase and the document take precedence, and translates from the source when in doubt. Only matches at or above **Lowest TM match to send** in [AI Settings](/trados/settings/ai-settings/#lowest-tm-match-to-send) are included – 70% by default. It works on empty segments too, which is where it helps most: a `[new]` segment can still have a close match in the memory.
 
 The segments are listed below the block exactly as before, and **Paste from Clipboard** reads the reply the same way. The search runs in the background: the progress bar moves while it does, and the log says how many segments got a match. **👁 Preview prompt** shows the same block. Untick **Send TM matches to the AI** for a job whose memory you do not trust.
+
+From v18/19.20.208 the search covers only the memories that are **Enabled** and have **Lookup** ticked in Project Settings, as in Batch Translate; see [Which translation memories are searched](/trados/batch-translate/#which-translation-memories-are-searched-from-v181920208).
 
 :::note
 Before v18/19.20.198, Copy to Clipboard did not search the memory. The only matches in the clipboard text were those Trados had already put into a segment – shown as `[fuzzy, N%]`, with the match on the target line – so the file had to be pre-translated first (**Batch Tasks → Pre-translate Files**), or each segment opened in the editor. On those versions, use the **All unfinished segments** or **Filtered segments** scope after pre-translating: **Empty segments only** skips segments that hold a match.

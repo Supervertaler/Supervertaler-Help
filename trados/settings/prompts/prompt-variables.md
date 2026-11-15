@@ -49,7 +49,7 @@ The variables above are **only substituted in QuickLauncher prompts**. In Batch 
 
 This isn't a limitation in practice. The batch flows assemble a richer system prompt automatically, with no variables required:
 
-* **Batch Translate** automatically includes source-only document context (when **Include document context** is on in [AI Settings](/trados/settings/ai-settings/)), termbase entries, and language-specific checks.
+* **Batch Translate** automatically includes source-only document context (when **Include full document content in AI context** is ticked on the [Batch Operations tab](/trados/batch-operations/#include-full-document-content-in-ai-context-from-v181920208); before v18/19.20.208 this was a tick box in [AI Settings](/trados/settings/ai-settings/#include-full-document-content)), termbase entries, and language-specific checks.
 * **Batch Proofread** automatically includes the **full bilingual document context** (source + target, untruncated), termbase entries, and language-specific checks.
 
 So the right place for your custom prompt content in batch mode is to **complement** what's already there – domain-specific guidance, citation discipline, project-specific terminology preferences – rather than try to re-inject document context with `{{PROJECT}}`.
