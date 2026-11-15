@@ -44,7 +44,7 @@ The AI translates every segment on its own, so a sentence that occurs twice in a
 * **A repetition the AI left empty is filled** from its first occurrence, without waiting for **Retry segments left empty**.
 * **Nothing sent to the AI changes.** Every segment is still translated, in the same batches and with the same context, so a run costs what it did before. Only what is written for a later repetition is different.
 
-**What counts as a repetition:** the same source text exactly – the same capitals, the same spaces and the same tags in the same order; only the tag numbers may differ. A non-breaking space is not an ordinary one, so *5 %* written with each is two different sentences. Near-matches are not repetitions.
+**What counts as a repetition:** the same source text exactly – the same capitals, the same spaces and the same tags in the same order; only the tag numbers may differ. A non-breaking space is not an ordinary one, so *5 %* written with each is two different sentences. Near-matches are not repetitions. Segments that are similar but not the same – a passage repeated inside a longer sentence, or a sentence that differs in a word or a number – are handled by [short-term memory](#short-term-memory-repeated-passages-across-batches-from-v181920207) *(from v18/19.20.207)*.
 
 **What you see:** the log ends with a line such as *Repetitions: 586 segments – 130 repetitions aligned to their first occurrence (12 worded differently by the AI, 2 in place of a failed translation)*. The [backup TMX](#backup-tmx) keeps the AI's own wording of each repetition it replaced.
 
@@ -54,7 +54,7 @@ It is on by default. To switch it off, untick **Keep repetitions consistent in B
 
 A long document often says the same thing twice in slightly different places: a clause that comes back in a later article of a contract, a warning repeated in every chapter of a manual, two rows of a table that differ in one number. Batch Translate sends the document to the AI in batches, and the AI does not remember an earlier batch. So the same passage could come out in two different wordings, one per batch.
 
-Short-term memory closes that gap. Think of it as a translation memory for the run itself: a temporary one, which the AI uses during the batch translation and which is gone when the run ends.
+Short-term memory closes that gap. Think of it as a translation memory for the run itself: a temporary one, which the AI uses during the batch translation and which is gone when the run ends. In CAT-tool terms it works at **sub-segment** level: it matches a passage inside a longer segment, where a translation memory matches whole segments.
 
 **How it works**
 

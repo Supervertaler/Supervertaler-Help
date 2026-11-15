@@ -335,7 +335,7 @@ The AI translates every segment separately, so the same sentence can come back w
 - **Ticked (the default):** every later occurrence of a sentence gets the translation of its first, across all the files in the run. A segment the run does not overwrite – a TM match, a locked segment – keeps its translation, and that is the one its empty repetitions get. If two such segments already disagree, nothing is changed and the log lists them. Nothing sent to the AI changes.
 - **Unticked:** every segment keeps the AI's own translation.
 
-A repetition is the same text exactly – same capitals, spaces (a non-breaking space is not an ordinary one) and tags. See [Repetitions get one translation](/trados/batch-translate/#repetitions-get-one-translation-from-v181920201).
+A repetition is the same text exactly – same capitals, spaces (a non-breaking space is not an ordinary one) and tags. See [Repetitions get one translation](/trados/batch-translate/#repetitions-get-one-translation-from-v181920201). Segments that are similar but not the same are handled by [short-term memory](/trados/batch-translate/#short-term-memory-repeated-passages-across-batches-from-v181920207) *(from v18/19.20.207)*, which is always on and has no setting.
 
 ### Add the AI's [[TC: …]] notes as Trados comments (from v18/19.20.198)
 
