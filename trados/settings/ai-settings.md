@@ -227,7 +227,7 @@ The maximum number of source segments to include in the AI prompt when document 
 Increase this for very large documents where you want the AI to see more content. Decrease it if you want to reduce token usage.
 
 :::note
-From v18/19.20.208 this setting is always available, and it applies to both **Include full document content in AI context** tick boxes: the one on the Chat tab and the one on the Batch Operations tab. Before v18/19.20.208 it was greyed out while the tick box in AI Settings was unticked.
+From v18/19.20.208 this setting is always available, and it applies to both **Include full document content in AI context** tick boxes: the one on the Chat tab and the one on the Batch Operations tab. One exception, as before: [Batch Proofread](/trados/ai-proofreader/) sends the whole document, source and translation, without this limit, because checking consistency needs all of it. Before v18/19.20.208 it was greyed out while the tick box in AI Settings was unticked.
 :::
 
 #### List numbering as structure context (from v18.20.188; always on from v18.20.189)
