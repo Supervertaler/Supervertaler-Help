@@ -322,7 +322,7 @@ Configure the **batch size** for the [Batch Translate](/trados/batch-translate/)
 - A larger batch size is faster but uses more tokens per request
 - A smaller batch size is more granular and easier to review
 
-From v18.20.207 the same setting is also on the **Batch Operations** tab, as the **Batch size** box beside **Limit**, so you can choose it for a run without opening Settings. Changing it in one place changes it in the other. In Trados Studio 2024 and 2022 the box stops at 10, the most those versions take.
+From v18.20.207 the same setting is also on the **Batch Operations** tab, as the **Batch size** box beside **Limit**, so you can choose it for a run without opening Settings. Changing it in one place changes it in the other. In Trados Studio 2024 and 2022 the box stops at 10, the most those versions take. The same goes for the box in Settings there. The setting is shared by all your Trados Studio versions: Studio 2024 or 2022 showing 10 does not lower a larger number you use in Studio 2026, unless you change the box yourself. A run's first log line gives the batch size it really uses.
 
 ### Lowest TM match to send
 

@@ -296,6 +296,16 @@ The AI assistant sees the same list: [`get_active_project`](/trados/mcp-server/)
 
 ---
 
+## "Trados Studio reported an internal error straight after taking segment …"
+
+**Symptoms:** During Batch Translate, the log shows a line starting with ⚠ and saying that Trados Studio reported an internal error (often "Attempted to read or write protected memory") straight after taking a segment, and that the translation is in the document and counts as written.
+
+**What it means:** Trados Studio sometimes reports this error just after it has put a translation into the document, mostly on long segments. The translation is there and nothing is lost. Before v18.20.207, Supervertaler took the error at its word: it logged "Failed to write segment", left the segment out of the backup TMX and sent it to the AI a second time. From v18.20.207 it looks at the segment first. If the translation is in the document, the segment counts as written, and the log says so. If it is not, the failure is reported as before.
+
+**What to do:** Nothing. If you see the line often, the details (without any of your text) are in the diagnostic log, and [a report](/trados/troubleshooting/) with that log helps to find out what in Trados Studio causes it.
+
+---
+
 ## Performance issues
 
 **Symptoms:** The editor feels sluggish, or TermLens takes a long time to display matches.

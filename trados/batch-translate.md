@@ -50,6 +50,42 @@ The AI translates every segment on its own, so a sentence that occurs twice in a
 
 It is on by default. To switch it off, untick **Keep repetitions consistent in Batch Translate** in [AI Settings](/trados/settings/ai-settings/#keep-repetitions-consistent-in-batch-translate-from-v181920201): every segment then keeps the AI's own translation, as before. Translate active segment (Alt+T) and Batch Proofread are not affected.
 
+### Short-term memory: repeated passages across batches (from v18/19.20.207)
+
+A long document often says the same thing twice in slightly different places: a clause that comes back in a later article of a contract, a warning repeated in every chapter of a manual, two rows of a table that differ in one number. Batch Translate sends the document to the AI in batches, and the AI does not remember an earlier batch. So the same passage could come out in two different wordings, one per batch.
+
+Short-term memory closes that gap. Think of it as a translation memory for the run itself: a temporary one, which the AI uses during the batch translation and which is gone when the run ends.
+
+**How it works**
+
+* While a run is going, Supervertaler keeps the segments it has translated so far.
+* When a segment in a later batch repeats a passage of **eight words or more** from one of them, that earlier segment and its translation are sent along with the request, the way a translation memory match is. The AI is told to word the repeated passage the same way.
+* Two segments that are **almost the same** (at least four in five words shared) are shown whole, like a fuzzy match, with the words in which they differ pointed out. The AI is told to take every number from its own segment and never from the earlier one.
+* A phrase that turns up all over the document (in more than six segments) is treated as boilerplate and is not sent.
+* A request carries at most 20 earlier translations.
+
+There is nothing to switch on, and nothing is stored after the run. It works in **Batch Translate** only, for any kind of document.
+
+**What you see**
+
+At the end of a run the log says how many segments were shown an earlier translation, and lists any repeated passages that were still translated differently, by segment number:
+
+```
+Repeated passages: 17 segments were shown an earlier translation of a passage they repeat.
+Repeated passages: 2 translated differently (listed).
+Repeated passages: Translated differently: segment 71 and segment 96 – source “lamphouder voor het bevestigen van een lamp aan …” (64 words the same)
+```
+
+Nothing is changed for you: the list is there so you can look at those segments yourself.
+
+**What it does and does not do**
+
+* On a 105-segment test document, translated by Claude Opus 5.5 in batches of 10, the repeated passages that came out the same went from 12 of 22 without short-term memory to 20 of 22 with it, with every number correct.
+* It keeps **passages** consistent, not single **terms**. If one word can be translated two ways, the AI may still pick one in one batch and the other in the next. A [termbase](/trados/termlens/) entry is the way to fix a term.
+* Identical segments are a separate matter and are handled by [Repetitions get one translation](#repetitions-get-one-translation-from-v181920201) above.
+* A **larger batch size** helps as well, because segments in the same request see each other. Use the **Batch size** box on the Batch Operations tab, as far as your Trados Studio and your AI model allow; Trados Studio 2024 and 2022 take at most 10. Short-term memory is what keeps a document consistent when it does not fit in one request.
+* The earlier translations are extra text in the request, so a run with many repeated passages costs a little more. In the test above it was about 6,600 tokens over the whole run.
+
 ### Prompt Selection
 
 Choose a prompt to guide the AI translation style and domain. The prompt selector shows, from the top:
