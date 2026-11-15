@@ -73,7 +73,7 @@ The same entry is read by Codex CLI and the Codex extension for VS Code, since t
 Claude Desktop installs extensions from inside its own settings, so this is two steps rather than one:
 
 1. Press **Show me the extension**. It opens the folder with `Supervertaler-for-memoQ-MCP-Server.mcpb` selected and puts the file's location on the clipboard. Nothing is downloaded: the installer put it there.
-2. In Claude Desktop, open **Settings → Desktop app**, scroll down to **Extensions** and click **Manage**. On the Extensions page, click **Advanced settings → Install extension…** and paste the location when it asks for a file. (In Claude Desktop before late 2026 the same page was directly under **Settings → Extensions**.)
+2. In Claude Desktop, open **Settings → Desktop app**, scroll down to **Extensions** and click **Manage**. On the Extensions page, click **Advanced settings → Install extension** and paste the location when it asks for a file. (In Claude Desktop before late 2026 the same page was directly under **Settings → Extensions**.)
 
 Double-clicking the `.mcpb` file works on some computers and not on others, for reasons inside Windows rather than Supervertaler; the route above works everywhere. Dragging the file onto Claude does not work.
 
