@@ -51,7 +51,7 @@ From the **Licence** tab in Settings, you can:
 
 - **Verify Now** – manually check your licence status with the server
 - **Deactivate** – remove the licence from this machine (frees up an activation slot)
-- **Manage subscription →** – opens the Lemon Squeezy billing portal where you can update payment details or cancel
+- **Manage subscription →** – opens the page where you manage your subscription, run by Lemon Squeezy, the payment provider: update payment details or cancel
 
 ## Offline Use
 
@@ -90,7 +90,7 @@ The plugin connects to the internet only for the following:
 1. **Your chosen AI provider** (Anthropic, OpenAI, Google, Grok, Mistral, DeepSeek, OpenRouter, a custom OpenAI-compatible endpoint, or local Ollama, which stays on your computer) – only when you use AI features
 2. **DeepL or Google Translate** – only when you choose one of them as a machine-translation engine
 3. **The web resources you enable in SuperSearch** (IATE, Linguee and so on) – only when you search the web for a term, which opens them in a browser view
-4. **Lemon Squeezy licence API** (`api.lemonsqueezy.com`) – for licence activation and periodic validation
+4. **Supervertaler's licence service** (`licence.supervertaler.com`) – for licence activation and periodic validation. From v18/19.20.208 the plugin asks this address, which passes the question on to Lemon Squeezy, the payment provider, and returns the answer; earlier versions ask Lemon Squeezy (`api.lemonsqueezy.com`) directly
 5. **Trial registration** – during the trial, the trial's start date is registered with Supervertaler's own licence endpoint on startup, with the anonymous machine hash and no content (see [Privacy](/trados/privacy/))
 6. **The update check** – on startup the plugin asks the RWS AppStore (`api-appstore.rws.com`) whether a newer version exists
 7. **Anonymous usage statistics** (on by default; you can turn them off with one click) – a single ping on startup with a random anonymous ID, the plugin, Trados and Windows versions, your system locale and a few display and hardware details, never anything you translate. See [Usage Statistics](/trados/settings/usage-statistics/) for the full list.
