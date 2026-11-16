@@ -14,10 +14,10 @@ The **Reports** tab shows **real billed token counts and cost** as reported by y
 
 The number is cache-aware:
 
-* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5, 0.025× on Claude Fable 5.1 and 5.2), cache writes at 1.25×. See [Prompt caching](#prompt-caching) below.
+* **Anthropic (Claude) native + OpenRouter → Claude**: real usage from `usage.input_tokens` + `cache_creation_input_tokens` + `cache_read_input_tokens`. Cache reads are billed at 0.1× the input rate (0.05× on Claude Opus 5.5 and Claude Sonnet 5.5, 0.025× on Claude Fable 5.1 and 5.2), cache writes at 1.25×, or 2× for the one-hour cache that Translate active segment (Alt+T) and Chat use from v18/19.20.208. See [Prompt caching](#prompt-caching) below.
 * **OpenAI**: real `prompt_tokens` and `completion_tokens` plus `prompt_tokens_details.cached_tokens` for the auto-cache discount (90–95% off cached input on the current models).
 * **DeepSeek**: real `prompt_tokens` / `completion_tokens` with auto-cache (90% off cached input).
-* **Gemini 2.5+**: real `usageMetadata` with implicit cache (75% off cached input; 95% off on Gemini 4 Argon, from v18/19.20.203).
+* **Gemini 2.5+**: real `usageMetadata` with implicit cache (90% off cached input; 95% off on Gemini 4 Argon, from v18/19.20.203).
 
 For these providers the in-app number is the authoritative billable figure (modulo any account-level credits or monthly minimums you may have).
 
@@ -65,23 +65,35 @@ Most of what Supervertaler sends with each request is the same every time: the i
 
 **With Claude** (directly, or through OpenRouter), Supervertaler marks the shared part of the prompt for Claude's cache:
 
-* The **first** request pays 25% extra on that part, to store it.
-* **Every request after that** reads it back for a tenth of the normal input price, or less: a twentieth on Claude Opus 5.5 and a fortieth on Claude Fable 5.1 and 5.2.
-* The cache lasts **five minutes**, and every request that reads from it starts the five minutes again. As long as you keep working, it stays available.
+* The **first** request pays extra on that part, to store it: 25% extra for the five-minute cache, and twice the normal input price for the one-hour cache.
+* **Every request after that** reads it back for a tenth of the normal input price, or less: a twentieth on Claude Opus 5.5 and Claude Sonnet 5.5, and a fortieth on Claude Fable 5.1 and 5.2.
+* **How long the cache lasts depends on the feature** *(from v18/19.20.208)*:
+
+| Feature | Kept for | Storing it costs |
+| --- | --- | --- |
+| Translate active segment (Alt+T) | **One hour** after the last use | 2× the input price |
+| Chat in the AI Assistant | **One hour** after the last use | 2× the input price |
+| Batch Translate runs of more than one segment, Batch Proofread, SuperBench | **Five minutes** after the last use | 1.25× the input price |
+
+Every request that reads from the cache starts the hour, or the five minutes, again. As long as you keep working, it stays available. Before v18/19.20.208 every feature used the five-minute cache.
 
 A prompt shorter than Claude's minimum is simply not cached, and costs nothing extra.
 
 **OpenAI, DeepSeek and Gemini (2.5 and later)** cache automatically, with no marker needed. Because Supervertaler keeps the shared part of the prompt the same, they give their cache discount too – see [Estimates vs actual cost](#estimates-vs-actual-cost) for the rates.
 
-**Why the five-minute cache.** Claude also offers a one-hour cache, but storing a prompt in it costs twice the normal input price instead of 1.25×. In a batch run the requests follow each other within seconds, and when you translate segment by segment each new segment restarts the five minutes, so the shorter, cheaper cache is enough.
+**Why an hour for Alt+T and Chat** *(from v18/19.20.208)*. When you translate segment by segment or ask questions in the chat, the next request often comes after a pause of more than five minutes: you were reading, checking a term, answering an email. With the five-minute cache, that next request paid the full price for everything again. With the one-hour cache the first request costs a little more (storing the shared part costs twice the normal input price instead of 1.25×), and every request after a pause of five minutes to an hour costs far less. In a batch run, a proofreading run and SuperBench the requests follow each other within seconds, so they keep the shorter, cheaper cache. This applies to Claude directly and to Claude models through OpenRouter; other providers are unchanged.
 
-**What makes it start over.** The cache only helps when the shared part is exactly the same. The next request pays the full price again (plus the 25% with Claude) after:
+:::note
+**What Anthropic keeps, and for how long.** With the one-hour cache, Anthropic holds the cached part of your request – your document and memory bank among it – for up to an hour after the last use, instead of five minutes. It is kept for your account only and is not shared with anyone else.
+:::
 
-* a pause of more than five minutes;
+**What makes it start over.** The cache only helps when the shared part is exactly the same. The next request pays the full price again (plus the cost of storing it, with Claude) after:
+
+* a pause of more than an hour with Translate active segment (Alt+T) and Chat on Claude *(from v18/19.20.208)*, and of more than five minutes otherwise;
 * a change of model, prompt or AI settings, or a switch to another SuperMemory bank;
 * moving to another document, or starting a new batch run over different segments (each run sends only the terminology its own segments need).
 
-**Seeing it work.** In the **Reports** tab, the number of tokens read from the cache appears next to the input count, e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`, and the cost already includes the discount. The [Token Usage & Costs](/trados/usage-costs/) log keeps cache reads and cache writes in separate columns.
+**Seeing it work.** In the **Reports** tab, the number of tokens read from the cache appears next to the input count, e.g. `830,000 in (720,000 cached) / 32,000 out · $1.36`, and the cost already includes the discount. The [Token Usage & Costs](/trados/usage-costs/) log keeps cache reads and cache writes in separate columns, and from v18/19.20.208 the one-hour cache writes in a column of their own.
 
 ### How much will it cost?
 
@@ -115,7 +127,7 @@ Supervertaler's in-app cost figures come from a built-in per-token pricing table
 * **Check your usage** – the **Reports** tab lists every AI call live with its token count and cost; the **[Token Usage & Costs](/trados/usage-costs/)** report totals your spend over time (by project, client, model or month) and exports it to CSV/Excel; and your provider's own console (see the [Estimates vs actual cost](#estimates-vs-actual-cost) table above) shows the authoritative billable figure.
 * **Set a monthly budget** – give Supervertaler a soft monthly limit (Settings → AI Settings) and it will warn you before a batch once you've reached it. See [Token Usage & Costs](/trados/usage-costs/#monthly-budget).
 * **Send the whole document only where it pays** – when **Include full document content in AI context** is ticked, the document goes along with every request, and that costs input tokens each time. From v18/19.20.208 there are two tick boxes: one on the **Chat** tab, just above the box you type in, for Chat and QuickLauncher, and one on the **Batch Operations** tab, under **Send TM matches to the AI**, for Batch Translate, Batch Proofread, Translate active segment (Alt+T), Clipboard Mode and SuperBench. Chat means many small questions, where the document is expensive; a batch run benefits from it. **Max segments** in [AI Settings](/trados/settings/ai-settings/#max-segments) limits how much of a long document is sent, for both. Before v18/19.20.208 there was one tick box for everything, in AI Settings.
-* **Keep going when translating segment by segment** – from v18/19.20.198, Translate active segment (Alt+T) sends the same shared prompt every time, so a provider that caches prompts charges about a tenth for it from the second segment on, if each segment follows within five minutes. A pause longer than that means the next segment pays full price again. See [Prompt caching](#prompt-caching) and [Translate Active Segment](/trados/batch-translate/#translate-active-segment-altt).
+* **Keep going when translating segment by segment** – from v18/19.20.198, Translate active segment (Alt+T) sends the same shared prompt every time, so a provider that caches prompts charges a tenth for it, or less, from the second segment on. With Claude, from v18/19.20.208, that holds as long as each segment follows within an hour (within five minutes before); a pause longer than that means the next segment pays full price again. See [Prompt caching](#prompt-caching) and [Translate Active Segment](/trados/batch-translate/#translate-active-segment-altt).
 
 ### Built-in cost protection
 
@@ -128,6 +140,8 @@ When you run a prompt from the QuickLauncher menu (Alt+Q), the prompt is sent on
 #### Chat token budget
 
 Regular chat messages include recent conversation history so the AI can follow your discussion: your last 10 to 13 messages. From v18/19.20.205 the oldest ones are dropped two exchanges at a time rather than one with every message, so the conversation keeps the same beginning for several messages and can be read from the [cache](#prompt-caching). Supervertaler also trims older messages when the history grows too large (\~50,000 tokens). This prevents costs from spiralling when previous messages contained large context blocks (e.g. full document content).
+
+From v18/19.20.208, Supervertaler's own notices in the chat – the memory bank report, "Switched to memory bank …", "Prompt saved as …", the result of Harvest changes – are no longer sent to the AI and no longer count among those 10 to 13 messages. Before, each was sent with every later message and paid for as input tokens. See [Chat](/trados/ai-assistant/chat/#supervertalers-own-notices-are-not-sent-to-the-ai-from-v181920208).
 
 #### Cost warning
 

@@ -33,7 +33,9 @@ The file is **JSONL** (one JSON object per line), so you can open it directly in
 A few things worth knowing:
 
 * **Every flow is covered** – Translate, Batch Translate, Quick Launcher, AutoPrompt, Proofread and Chat. A batch run is recorded as **one** line (the whole job), not one line per segment.
+* **Translate active segment (Alt+T) has its own task** *(from v18/19.20.208)*: `"task":"Translate"`. Before, an Alt+T request was logged as `BatchTranslate`, so it could not be told apart from a Batch Translate run. Earlier entries in the log keep their old task.
 * **`source`** is `actual` when the figures are the real token counts reported by the provider's API, or `estimated` when they fall back to the chars/4 heuristic (see [Estimates vs actual cost](/trados/ai-cost-guide/#estimates-vs-actual-cost)). Cache reads/writes are broken out (`in_cache_read` / `in_cache_write`).
+* **One-hour cache writes are kept apart** *(from v18/19.20.208)*. With Claude, Translate active segment and Chat store the shared part of a request for an hour, which costs twice the input price where a five-minute write costs 1.25 times (see [Prompt caching](/trados/ai-cost-guide/#prompt-caching)). The log keeps those tokens in a field of their own, `in_cache_write_1h`. They are part of `in_cache_write`, not added to it. Costs already in the log are not changed.
 * **`cost_known`** is `false` when the model isn't in the price list – the **tokens are still logged**, with `cost_usd` at 0 until you add a rate (see [Custom and self-hosted models](#custom-and-self-hosted-models)). The Reports tab shows such a call as **"up to $X"** from v18/19.20.198 (and as "unknown" before).
 * It's **on by default**. Turn it off any time in **Settings → AI Settings → "Keep a persistent token-usage log"**.
 
@@ -53,6 +55,8 @@ Each row shows the number of calls, input and output tokens, total tokens, cost,
 ### Exporting
 
 The report's **Export CSV…** and **Export Excel…** buttons write the **detailed ledger** (one row per call, every column) for the selected range – ready for invoicing or analysis in any spreadsheet. CSV is written as UTF-8 (with a BOM, so Excel detects it correctly); Excel export produces a native `.xlsx`.
+
+From v18/19.20.208 both exports have a new column, **`input_cache_write_1h`**, after `input_cache_write`: the tokens written to Claude's one-hour cache. They are already counted in `input_cache_write`, so do not add the two together. In the **task** column, Translate active segment (Alt+T) is listed as `Translate`.
 
 Because both Supervertaler products write the **same columns**, an LSP can concatenate the CSV/JSONL from several translators – and from both Trados and Workbench – into one analysis.
 
