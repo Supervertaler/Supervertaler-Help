@@ -2,7 +2,7 @@
 title: "Reports"
 ---
 
-The **Reports** tab in the Supervertaler Assistant panel is where the assistant collects structured output from its AI operations. Two kinds of thing land here: **proofreading results** and an optional **log of AI calls**.
+The **Reports** tab in the Supervertaler Assistant panel is where the assistant collects structured output from its AI operations. Two kinds of thing land here: **proofreading results** and an optional **log of AI calls**. When both are there, the proofreading results come first and the AI calls follow below them *(from v18/19.20.208)*.
 
 ## Running cost
 
@@ -29,7 +29,19 @@ Since v18.20.187 every completed run is also written to `trados\reports` in your
 
 ## AI operation log
 
-When **Log prompts and responses to Reports tab** is enabled in [AI Settings](/trados/settings/ai-settings/), AI calls – Chat, Batch Translate, Batch Proofread and AutoPrompt – are recorded here together with the prompt, the response, the model used and the token/cost figures. It is the place to audit exactly what was sent to the AI provider and to review cost after the fact.
+When **Log prompts and responses to Reports tab** is enabled in [AI Settings](/trados/settings/ai-settings/), AI calls – Chat, Batch Translate, Translate active segment (Alt+T), Batch Proofread and AutoPrompt – are recorded here together with the prompt, the response, the model used and the token/cost figures. It is the place to audit exactly what was sent to the AI provider and to review cost after the fact. Each request has a card of its own.
+
+### The order of the cards (from v18/19.20.208)
+
+* **Oldest first, newest at the bottom**, like the chat. Before v18/19.20.208 the newest card went to the top.
+* **A new card scrolls the tab down to it**, even if you had scrolled up to read an earlier card. Studio switches the pane back to its own tab whenever you confirm or translate a segment, so the tab always shows the latest request when you come back to it.
+* **The one exception is a proofreading report.** While its findings are listed, the tab stays where you are in them, so fixing segments as you work through the findings does not lose your place. It follows a new card only if you were already at the bottom.
+* **With a proofreading report showing, its findings come first**, in document order, and the request cards follow below them. A report still opens at its first finding.
+* **Finishing a proofread no longer removes the request cards.** Before v18/19.20.208, every request card was removed when a Batch Proofread run finished, or when a saved report was shown again on opening its document. Now they stay, below the findings.
+* **Only Clear empties the tab.**
+* **The last 500 requests are kept**, as before.
+
+**Translate active segment has its own heading** *(from v18/19.20.208)*. A request made with Alt+T is headed **Translate active segment**. Before, its card said "Batch Translate". The [usage log](/trados/usage-costs/) lists it under the task `Translate`, apart from your Batch Translate runs.
 
 From v18/19.20.198:
 

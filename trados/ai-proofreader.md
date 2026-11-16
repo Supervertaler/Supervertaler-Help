@@ -140,6 +140,8 @@ The report also stays in the Reports tab until you clear it. Close Studio and re
 
 Click the **Clear** button at the top of the Reports tab to remove all results and start fresh. The automatic copy on disk is unaffected.
 
+If you log AI calls to the Reports tab, their cards are listed below the report's findings *(from v18/19.20.208)*. Finishing a proofreading run, or opening a document whose saved report is put back, no longer removes them: only **Clear** empties the tab. See [Reports](/trados/reports/#the-order-of-the-cards-from-v181920208).
+
 ### Run Summary
 
 After a proofreading run, the Reports tab shows:
