@@ -99,7 +99,7 @@ Choosing **(Built-in instructions only)**, or turning off the active prompt in t
 The **active prompt** for the current project is marked with a checkmark in the dropdown. When you open a project that has an active prompt set, it is automatically selected. See [Memory banks – Active Prompt](/trados/ai-assistant/super-memory/active-prompt/) for how to set the active prompt.
 
 :::tip
-**Tip:** If you save a prompt with the same name as your Trados project, the dropdown will auto-select it whenever you open that project. For example, a prompt called "HAYNESPRO" will be auto-selected when working in a project called HAYNESPRO.
+**Tip:** If you save a prompt with the same name as your Trados project, the dropdown will auto-select it whenever you open that project. For example, a prompt called "PROJ-001" will be auto-selected when working in a project called PROJ-001.
 :::
 
 :::note
@@ -129,7 +129,7 @@ While a run writes its translations, Trados Studio brings its own **Translation 
 * **Supervertaler leaves it alone during the run.** Before v18/19.20.208 it pulled its own pane back after every batch, so the two panes kept trading places for the whole run.
 * **The Supervertaler Assistant pane comes back once**, when the run has finished. The Batch Operations log keeps updating throughout.
 * **A run has a small progress window of its own**, titled **Supervertaler – Batch Translate**, at the bottom right of Studio's window. It shows the batch being translated and a progress bar, so you can follow the run while the pane is behind Translation Results.
-* **Its Stop button** does the same as **Stop** on the Batch Operations tab: the run stops after the batch in hand, and segments already translated are kept.
+* **Its Stop button** does the same as **Stop** on the Batch Operations tab: the run stops at once. The batch being translated at that moment is dropped, and the segments already written to the document are kept.
 * **The window closes by itself** when the run ends.
 * **The project is saved once**, at the end of the run.
 
@@ -245,7 +245,7 @@ C:\Users\<YourName>\Supervertaler\trados\batch_backups\
 Files are named by timestamp and project name, for example:
 
 ```
-batch_2026-04-10_14-23-01_YAXINCHENG.tmx
+batch_2026-04-10_14-23-01_PROJ-001.tmx
 ```
 
 The exact path is also printed to the **Batch Translate log** at the start of each run.

@@ -203,7 +203,7 @@ Clipboard Mode includes your termbase terms in the prompt, just like API mode. M
 
 ### Name Prompts After Your Projects
 
-If you save a custom prompt with the same name as your Trados project (e.g. "HAYNESPRO" for a project called HAYNESPRO), the prompt dropdown will auto-select it whenever you open that project. This works for both Translate and Proofread modes and saves you from having to reselect the correct prompt each time.
+If you save a custom prompt with the same name as your Trados project (e.g. "PROJ-001" for a project called PROJ-001), the prompt dropdown will auto-select it whenever you open that project. This works for both Translate and Proofread modes and saves you from having to reselect the correct prompt each time.
 
 ### Process in Batches
 

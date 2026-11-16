@@ -86,7 +86,7 @@ When you are satisfied with the generated prompt:
 
 1. **Right-click** the assistant message containing the prompt
 2. Select **Save as Prompt…**
-3. Enter a name for your prompt (e.g., "DLCH Patent NL-EN")
+3. Enter a name for your prompt (e.g., "Acme Patent NL-EN")
 4. Click **Save**
 
 The prompt is saved to the **Translate** category in the Prompt Manager and immediately appears in the prompt dropdown on the Batch Operations tab.
