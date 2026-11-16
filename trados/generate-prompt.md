@@ -27,6 +27,21 @@ Supervertaler gathers the following data from your project and sends it to your 
 The full document is sent to the AI for analysis. For a typical 30,000-word document, this costs approximately $0.20–$0.25 with a Sonnet-class model, or $1.00–$1.15 with an Opus-class model.
 :::
 
+**A very long document: AutoPrompt asks first** *(from v18/19.20.208)*. AutoPrompt always reads the whole document, whatever the two **Include full document content in AI context** tick boxes say. When the request comes to about 100,000 tokens or more – a document of some 60,000 words – a window titled **Large document – AutoPrompt** opens before anything is sent. It tells you:
+
+* how large the document is, in segments and words;
+* about how many tokens the request comes to;
+* what it is estimated to cost with the model you have chosen, for example "about $0.56 with Claude Opus 5.5".
+
+Choose **Yes** to generate the prompt anyway, or **No** to stop. On No, nothing is sent and nothing is added to the chat.
+
+* **A model that is not in the price list:** the window says the cost is not known and gives no figure.
+* **A model on your own computer:** it says that this costs nothing, but that a request this size may be slow or more than the model can take in.
+* **If the AI provider still refuses the request for its size,** the error in the chat begins with a plain sentence saying that the document is too large for the model, and to choose a model that can take in more.
+* **Ordinary documents:** below that size nothing changes, and AutoPrompt starts at once.
+
+Before v18/19.20.208 AutoPrompt sent a document of any length without asking.
+
 **2b. TermScan – automatic termbase extraction**
 
 Before building the prompt, AutoPrompt runs **TermScan**: it concatenates all source segments in the document and checks each termbase entry against this text. Only terms whose source term, source abbreviation, or source synonyms actually appear in the document are included in the generated prompt.
