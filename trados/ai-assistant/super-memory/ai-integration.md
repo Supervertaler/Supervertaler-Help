@@ -12,6 +12,8 @@ Two banks, in this order:
 1. **`_shared`** – your house defaults, labelled as such.
 2. **The active bank** – labelled as overriding the defaults above.
 
+A project with no bank of its own – the Memory Bank dropdown shows **(no project bank – shared only)** – gets `_shared` alone *(from v18/19.20.208; before, nothing was sent for such a project on most computers)*. See [The `_shared` bank](/trados/ai-assistant/super-memory/#the-_shared-bank).
+
 Within each, the three files are sent: `brief.md`, then `terminology.md`, then `style.md`, followed by any other Markdown file you have put at the top of the bank (such as `figures.md`), under its own filename. A file still exactly as Supervertaler created it – its headings and the lines saying what belongs there – is not sent, so a bank nobody has written in adds nothing, and neither does the empty `_shared` bank Supervertaler makes for you (from v18/19.20.201). A small bank goes whole. Three things narrow it, all described below: a file written for one target language goes only with work into that language, a large bank sends a translation only the part the document needs, and a note you have marked for the assistants stays out of translation.
 
 `reference/` is never sent. It holds the source material the three files were derived from, and a superseded draft answering as if it were current is precisely the failure it exists to prevent.

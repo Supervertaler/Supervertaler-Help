@@ -292,7 +292,7 @@ These two toggles control whether [SuperMemory](/trados/ai-assistant/super-memor
 
 #### Include SuperMemory knowledge base in AI context
 
-When enabled, the AI reads the active bank's `brief.md`, `terminology.md` and `style.md` - plus the `_shared` bank of house defaults - before every translation, proofreading run and chat message. This gives it the _reasoning_ behind your decisions, not just the terms themselves.
+When enabled, the AI reads the active bank's `brief.md`, `terminology.md` and `style.md` - plus the `_shared` bank of house defaults - before every translation, proofreading run and chat message. This gives it the _reasoning_ behind your decisions, not just the terms themselves. From v18/19.20.208 a project with no bank of its own gets the `_shared` bank on its own, and Translate active segment (Alt+T) sends the memory bank whether or not the Supervertaler Assistant pane has been opened.
 
 :::caution
 **Off by default.** SuperMemory is a power-user feature that most translators should opt into deliberately. The simpler workflow – TermLens termbases + the AI context options above – covers the majority of needs. Enable this toggle once you have a populated memory bank and want the AI to consult it.
@@ -315,6 +315,8 @@ When enabled, AI operations are logged to the **Reports** tab in the Supervertal
 :::note
 **Batch Translate** operations appear as a single consolidated entry showing the combined token count, cost, and total duration for the entire operation – regardless of how many sub-batches were processed.
 :::
+
+From v18/19.20.208 the entries are listed oldest first, with the newest at the bottom, and a request made with Translate active segment (Alt+T) is headed **Translate active segment**. See [Reports](/trados/reports/#the-order-of-the-cards-from-v181920208).
 
 Click "Show system prompt...", "Show messages...", or "Show response..." to expand a section. Press **Escape** to collapse it. Use **Copy** to copy a single section, or **Copy all** to copy the full prompt details to your clipboard.
 

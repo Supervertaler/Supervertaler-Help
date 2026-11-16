@@ -87,6 +87,14 @@ The name is reserved: typing `_shared` into *+ New memory bank…* gives you the
 
 You never have to select `_shared` to use it – it is loaded on top of whichever bank is active. Select it only when you want to edit your defaults.
 
+**A project with no bank of its own gets `_shared` too** *(from v18/19.20.208)*. When a project has no memory bank, the Memory Bank dropdown shows **(no project bank – shared only)**, and `_shared` is sent on its own: with Batch Translate, Translate active segment (Alt+T), Proofread, the chat and AutoPrompt, and to an AI assistant asking through the [MCP server](/trados/mcp-server/) (`get_supermemory_context`). Before v18/19.20.208 the dropdown and the chat said the shared bank was in use, but on most computers nothing from it was sent for such a project. What you will notice:
+
+- **Your house rules are followed on such projects** – terminology, style, the files for the target language – where they were not before.
+- **Requests there are larger** by the size of your shared bank. A shared bank over about 8,000 tokens is narrowed to what each document needs, as any large bank is.
+- **The Report says so**, where it used to say only that the bank did not exist.
+- **Nothing is sent** with **Include SuperMemory knowledge base in AI context** unticked, as before.
+- **Projects with a bank of their own are unchanged.**
+
 ## Banks
 
 ### Where they live
@@ -141,6 +149,8 @@ That last point is the design in one line: **the AI proposes, you decide what ge
 From v18/19.20.198 the figure is what a *translation* sends. For a bank over about 8,000 tokens it is the most a translation can send, because each document then gets only the part it needs (see [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs)). Notes marked for the assistants only are listed separately, as kept for the chat and the MCP tools. Other files at the top of the bank are listed as read. From v18/19.20.206, a bank with [files for one target language](#files-for-one-target-language) also gets a paragraph, **Files for one language**, saying which of those files are included for the open document and which are left out; with no document open, it says that all of them are included. (Before v18/19.20.198 the report said such files were never sent to the AI. That had stopped being true in v18/19.20.183.)
 
 It reads the files directly, so it is instant and costs nothing.
+
+The report is written into the chat. From v18/19.20.208 the pane switches to the Chat tab and scrolls to the report, whichever tab you clicked the button from; before, the pane stayed on the tab you were on, so from the Batch Operations, Import/Export or Reports tab the button seemed to do nothing. **Harvest changes** and **(match by project name)** in the dropdown show their answer the same way. From the same version the report is not sent to the AI with your later chat messages: see [Chat](/trados/ai-assistant/chat/#supervertalers-own-notices-are-not-sent-to-the-ai-from-v181920208).
 
 ## Converting a bank from the old layout
 

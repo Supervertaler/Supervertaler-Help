@@ -76,7 +76,7 @@ Both Supervertaler termbases and MultiTerm `.sdltb` termbases attached to the pr
 - `terminology.md` – term decisions, one table
 - `style.md` – prose rules and approved boilerplate
 
-The `_shared` bank is sent alongside as house defaults, and the active bank is marked as overriding it where the two disagree.
+The `_shared` bank is sent alongside as house defaults, and the active bank is marked as overriding it where the two disagree. From v18/19.20.208, a project with no bank of its own gets `_shared` on its own; before, nothing was sent for such a project on most computers.
 
 From v18/19.20.198, a translation leaves out any note marked for the assistants only, and a bank that comes to more than about 8,000 tokens with `_shared` is narrowed to the part each document needs, with a file recording what was left out. See [AI Integration](/trados/ai-assistant/super-memory/ai-integration/#a-large-bank-sends-only-what-each-document-needs).
 

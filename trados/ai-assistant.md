@@ -38,6 +38,8 @@ The conversation is saved automatically after every message and restored the nex
 
 To clear the history, click the **Clear** button in the chat toolbar.
 
+Before v18/19.20.208 the saved conversation could be lost when Trados Studio started with a document already open whose project uses a different memory bank: it was replaced by the one notice about the switch. That is fixed. From the same version, notices that Supervertaler itself writes in the chat, such as "Switched to memory bank …", are no longer sent to the AI: see [Chat](/trados/ai-assistant/chat/#supervertalers-own-notices-are-not-sent-to-the-ai-from-v181920208).
+
 :::note
 Chat history is stored in `~/Supervertaler/trados/chat_history.json`. It is a single global history – not per project or per file.
 :::
