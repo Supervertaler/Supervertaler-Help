@@ -66,6 +66,7 @@ Use these formats when you need to round-trip back into a CAT tool.
   - Packages: `.sdlppx` import → `.sdlrpx` return (recommended)
   - Bilingual Review DOCX (special workflow)
 - **Phrase (Memsource)**
+  - MXLIFF (recommended)
   - Bilingual DOCX
 - **CafeTran Espresso**
   - Bilingual DOCX table

@@ -8,6 +8,13 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-16
+
+From Workbench v1.10.377, released on this day.
+
+- **Workbench: Phrase MXLIFF.** *Phrase (Memsource) Workflow* is rewritten around the two formats, with MXLIFF recommended: importing (languages read from the file, which Phrase statuses become which Workbench statuses, locked segments, the summary, files that are refused), Phrase's tags shown as formatting in WYSIWYG view and saved back as Phrase's own tags, and exporting (only the translation and the confirmed flag change, which segments are left alone, and why it refuses after a split or join or with a different file). The bilingual DOCX section says the project now remembers its DOCX. *CAT Tool Integration Overview*, *Supported File Formats* and *Exporting Translations* list MXLIFF.
+- **Workbench: Zulu, and one list of languages.** *Your First Translation Project* has a note listing the 54 languages every language list offers, Zulu new among them, and says that codes and names such as `nl-BE`, `zu-ZA` and `zul` count as the same language.
+
 ## 2026-11-13
 
 - **Trados: EverTM's match percentages, numbers and stamps** (from v18/19.20.206, still unreleased). *EverTM* has a new section, *Match percentages*: EverTM scores a fuzzy match the way Studio does and highlights the differences in the same places; and, under *When only a number differs*, it puts your segment's number into its proposal and shows 99%, never 100%, but only when that cannot go wrong, and Pre-translate set to 100% only does not fill those segments. *Your own TMs always come first* no longer says an identical match may be shown twice: the very same translation unit from EverTM and a Studio TM is shown as one row. A new section, *What is stamped on a segment you confirm*, lists the six tick boxes in EverTM's window (Project, Client, End client, Subject, Document, User) and what unticking one does. *Learning as you work* says that a segment you have just confirmed can take a moment to show as a fuzzy match on the very next segments.

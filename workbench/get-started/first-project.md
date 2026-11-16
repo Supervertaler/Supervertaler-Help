@@ -20,6 +20,10 @@ Want to look around first? **Help → 🎓 Open Sample Project** opens a small r
 
 Your document is now segmented and ready for translation.
 
+:::note[Languages]
+Every language list in Supervertaler offers the same 54 languages: Afrikaans, Albanian, Arabic, Armenian, Basque, Bengali, Bulgarian, Catalan, Chinese (Simplified), Chinese (Traditional), Croatian, Czech, Danish, Dutch, English, Estonian, Finnish, French, Galician, Georgian, German, Greek, Hebrew, Hindi, Hungarian, Icelandic, Indonesian, Irish, Italian, Japanese, Korean, Latvian, Lithuanian, Macedonian, Malay, Norwegian, Persian, Polish, Portuguese, Romanian, Russian, Serbian, Slovak, Slovenian, Spanish, Swahili, Swedish, Thai, Turkish, Ukrainian, Urdu, Vietnamese, Welsh and Zulu. Zulu is new in v1.10.377. Codes and names count as the same language, so a translation memory tagged `nl-BE` finds matches for a Dutch project, and one tagged `zu-ZA` or `zul` for a Zulu project.
+:::
+
 ### Option 2: Import a Text File
 
 1. Go to **Project → Import → Text / Markdown File (TXT, MD)…**

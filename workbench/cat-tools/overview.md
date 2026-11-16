@@ -10,7 +10,7 @@ Supervertaler is designed to work alongside professional CAT (Computer-Assisted 
 |----------|--------------|---------------|
 | **memoQ** | Bilingual DOCX or RTF, XLIFF | Bilingual DOCX or RTF, XLIFF |
 | **Trados Studio** | SDLPPX packages | SDLRPX return packages |
-| **Phrase (Memsource)** | Bilingual DOCX | Bilingual DOCX |
+| **Phrase (Memsource)** | MXLIFF, bilingual DOCX | MXLIFF, bilingual DOCX |
 | **CafeTran Espresso** | Bilingual table DOCX | Bilingual table DOCX |
 | **Déjà Vu X3** | Bilingual RTF | Bilingual RTF |
 
@@ -88,6 +88,7 @@ file you import:
 |--------|---------------|
 | **Trados** package (SDLPPX) or SDLXLIFF | Read from the file. |
 | **memoQ** bilingual DOCX, RTF or XLIFF | Read from the table's column headers (DOCX), its header row (RTF) or the file itself (XLIFF). In the DOCX headers, codes such as `IT` or `it-IT`, names in other languages such as *Italiano*, and regional forms such as *English (United Kingdom)* are all understood. If the pair can't be read, the **Confirm language pair** prompt asks you. |
+| **Phrase** MXLIFF | Read from the file. If a language isn't recognised, the **Confirm language pair** prompt asks you. |
 | **Phrase** bilingual DOCX | Read from the file; the **Select Languages** dialog opens pre-filled for you to confirm. |
 | **Trados** bilingual review DOCX | The file has no language header, but Word stores a language on the source text and on the target text. The **Select Languages** dialog opens pre-filled from those ("Auto-detected from file: German → French. Confirm or change below."). If both columns carry the same language, nothing is assumed. |
 | **CafeTran** bilingual DOCX | The **Confirm language pair** prompt opens, pre-filled the same way from the Word languages of the two columns, or from the column headers if they are language codes. |
@@ -112,7 +113,7 @@ Files exported from Supervertaler can be imported back into the CAT tool with:
 |----------|---------------------|
 | **Full project in memoQ** | [memoQ Bilingual DOCX](/workbench/cat-tools/memoq/) |
 | **Trados Studio package** | [SDLPPX/SDLRPX](/workbench/cat-tools/trados/) |
-| **Phrase/Memsource project** | [Phrase Bilingual DOCX](/workbench/cat-tools/phrase/) |
+| **Phrase/Memsource project** | [Phrase MXLIFF or bilingual DOCX](/workbench/cat-tools/phrase/) |
 | **CafeTran external view** | [CafeTran DOCX](/workbench/cat-tools/cafetran/) |
 | **Standalone DOCX** | Direct import, no CAT tool needed |
 
