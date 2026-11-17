@@ -219,7 +219,9 @@ Replace respects the same **Aa** (case sensitivity) and **.\*** (regex) settings
 
 *From v18/19.20.201*, Replace and Replace All in the active file record a replace word by word when Track Changes is on: the old word struck through and the new one inserted beside it, with the rest of the segment, its tags and its comments as they were. Until v18/19.20.200, even a one-word replace was recorded as the whole sentence struck through and retyped.
 
-A segment that already holds tracked changes is still recorded as one whole-segment change, and the status bar says so: `Replaced in 1 segment – tracked as a whole-segment change (the segment already carries tracked changes).`, or after a Replace All `…, N not word by word: …` with the reason. With Track Changes off, a segment holding tracked changes nobody has accepted or rejected is not replaced at all, because Trados Studio protects them; the status bar tells you to accept or reject them, or to switch Track Changes on.
+*From v18/19.20.208*, this also holds for a segment that already has tracked changes in it: the replace adds its own marks and leaves the earlier ones as they were. Each change can then be accepted or rejected on its own in Studio: put the cursor inside the word and right-click. A replaced word is two changes, the struck-through word and the inserted one. Until v18/19.20.207, such a segment was recorded as one whole-segment change.
+
+Where a replace cannot be recorded word by word, it is recorded as one whole-segment change and the status bar says so, with the reason: `Replaced in 1 segment – tracked as a whole-segment change (…).`, or after a Replace All `…, N not word by word: …`. With Track Changes off, a segment holding tracked changes nobody has accepted or rejected is not replaced at all, because Trados Studio protects them; the status bar tells you to accept or reject them, or to switch Track Changes on.
 
 Files changed on disk are never tracked: Replace All edits their SDLXLIFF text directly, so the change does not show as a tracked change when you reopen them.
 

@@ -8,6 +8,12 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-17
+
+From v18/19.20.208, still unreleased. Publish with that release.
+
+- **Trados: a segment with tracked changes can be changed again, word by word.** *MCP Server* (With Track Changes on) and *SuperSearch* (With Track Changes on) say that a second or later change to a segment that already holds tracked changes is recorded word by word, no longer as one whole-segment change; what happens to an earlier insertion by the same author, to wording that is put back, and to another author's changes; that a whole-segment change remains where word by word is not possible, with the reason given; and, on *SuperSearch*, how to accept or reject each change in Studio.
+
 ## 2026-11-16
 
 All from v18/19.20.208, still unreleased. Publish with that release.
