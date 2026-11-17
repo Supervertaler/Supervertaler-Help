@@ -37,7 +37,7 @@ Don’t merge or split segments in Supervertaler when you plan to reimport into 
 - For CAT tool workflows, use the matching CAT export:
 	- memoQ bilingual DOCX
 	- Trados return package (SDLRPX) when you imported SDLPPX
-	- Phrase bilingual DOCX
+	- Phrase MXLIFF or bilingual DOCX
 	- CafeTran bilingual table DOCX
 - For review-only delivery, consider [Bilingual Tables](/workbench/import-export/bilingual-tables/).
 
