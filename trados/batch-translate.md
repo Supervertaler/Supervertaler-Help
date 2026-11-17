@@ -218,6 +218,19 @@ This applies to Batch Translate, Translate active segment (Alt+T) and [Paste fro
 
 The **Default Translation Prompt** used to tell the AI it could "add a brief explanation in parentheses" when a term had no established equivalent, which a model can take as licence to explain itself in the target. From 20.198 it asks for a `[[TC: …]]` marker instead. Your copy is updated automatically unless you have edited it; an edited copy is left alone.
 
+### With Track Changes on (from v18/19.20.208)
+
+With Track Changes switched on in Trados Studio (Review tab), a translation written over text that is already in the target is recorded word by word: only the words the AI changed are struck through and inserted, and the rest of the segment is left as it was. This holds for a Batch Translate run and for **Translate active segment** (Alt+T).
+
+This is what makes it practical to have the AI adapt fuzzy matches. Pre-translate from your translation memory, switch Track Changes on, tick **Send TM matches to the AI**, and run Batch Translate with a prompt that tells the AI to adapt the match rather than translate afresh. Each segment then shows exactly what the AI did to the match, and you can accept or reject each change on its own: put the cursor inside the word and right-click. A replaced word is two changes, the struck-through word and the inserted one.
+
+* **A translation identical to what was already there** is not written at all, so the segment shows no tracked change.
+* **A translation into an empty target** is one insertion, as before.
+* **A segment that already holds tracked changes**, yours or a reviser's, keeps them; the new changes are added beside them. If the translation changes words that another person inserted as a tracked change, the segment is recorded as one whole-segment change.
+* **With Track Changes off**, nothing is tracked, and a segment that still holds tracked changes nobody has accepted or rejected is not written: Trados Studio protects them.
+
+Until v18/19.20.207, any translation written over existing text was recorded as the whole old text struck through and the whole new text inserted.
+
 ### Backup TMX
 
 The **Auto-backup translations to TMX** checkbox is ticked by default. When enabled, Supervertaler writes every translated segment to a TMX file as it arrives from the AI. If Trados crashes mid-run, you can recover the completed translations without re-running the batch.

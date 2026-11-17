@@ -12,6 +12,7 @@ guesswork.
 
 From v18/19.20.208, still unreleased. Publish with that release.
 
+- **Trados: Batch Translate and Alt+T mark only the words the AI changed.** *Batch Translate* has a new section, *With Track Changes on*: a translation written over existing text is recorded word by word, how to use that to have the AI adapt fuzzy matches, what happens to an identical translation, an empty target and a segment that already holds tracked changes, and how to accept or reject each change in Studio.
 - **Trados: a segment with tracked changes can be changed again, word by word.** *MCP Server* (With Track Changes on) and *SuperSearch* (With Track Changes on) say that a second or later change to a segment that already holds tracked changes is recorded word by word, no longer as one whole-segment change; what happens to an earlier insertion by the same author, to wording that is put back, and to another author's changes; that a whole-segment change remains where word by word is not possible, with the reason given; and, on *SuperSearch*, how to accept or reject each change in Studio.
 
 ## 2026-11-16
