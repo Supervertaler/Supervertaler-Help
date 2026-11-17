@@ -137,6 +137,12 @@ Click **📥 Re-import…**, pick the round-tripped file. Supervertaler:
 
 Click **OK** and Supervertaler writes the accepted changes back via the same code path the batch AI translator uses – confirmation level is preserved, and **locked segments are skipped automatically** (the writeback queries `IsLocked` on every segment, so a lock toggled in Trados between export and re-import is also respected).
 
+### With Track Changes on (from v18/19.20.208)
+
+With Track Changes on in Trados Studio, a correction from the re-imported file is recorded word by word: only the words the reviewer changed are marked, as struck through and inserted text. Until v18/19.20.207, each corrected segment showed as the whole translation struck through and typed again.
+
+Where a correction cannot be recorded word by word – a tag moves to other words, for example – that segment is recorded as one whole-segment change, and the log on the tab says how many segments that applies to. See [Batch Translate: With Track Changes on](/trados/batch-translate/) for how the word-by-word recording works.
+
 ## Recent exports
 
 At the bottom of the tab, a list tracks every export from this session. Click an export in the list, then:

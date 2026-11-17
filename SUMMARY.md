@@ -30,6 +30,7 @@
   * [Studio Tools](trados/ai-assistant/studio-tools.md)
 * [Batch Operations](trados/batch-operations.md)
   * [Batch Translate](trados/batch-translate.md)
+  * [FuzzyFixer](trados/fuzzyfixer.md)
   * [AI Proofreader](trados/ai-proofreader.md)
   * [Clipboard Mode](trados/clipboard-mode.md)
   * [AutoPrompt (Trados)](trados/generate-prompt.md)

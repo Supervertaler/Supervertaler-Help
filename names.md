@@ -15,7 +15,7 @@ The four products are **Supervertaler for Trados**, **Supervertaler for memoQ**,
 | **AutoTagger** | Puts the source segment's inline tags back into a translation that has lost them, without changing the words. | [Trados](/trados/autotagger/), [Workbench](/workbench/ai-translation/autotagger/) |
 | **EverTM** | Your own lifetime translation memory: one memory for every language variant, in both directions, filled by importing your TMs. You add it to a Trados project like any TM. Not released yet. | Trados |
 | **FigureLens** | Takes the pictures out of your documents and has the AI describe them, so the AI that translates the text knows what the figures show. | [Trados](/trados/batch-operations/#figurelens-from-v1820189), [memoQ](/memoq/prompt-editor/#figurelens) |
-| **FuzzyFixer** | Gives the AI a fuzzy match from your TM and asks it to change only what the new source requires. | [Workbench](/workbench/ai-translation/fuzzyfixer/) |
+| **FuzzyFixer** | Gives the AI a fuzzy match from your TM and asks it to change only what the new source requires. | [Trados](/trados/fuzzyfixer/), [Workbench](/workbench/ai-translation/fuzzyfixer/) |
 | **MultiSearch** | Opens a whole set of dictionaries and search sites at once, each in its own browser tab. | [Sidekick](/sidekick/searches/#multisearch--a-batch-at-once) |
 | **PDF Rescue** | Uses an AI that reads images to get clean, editable text out of a badly scanned or badly converted PDF. | [Workbench](/workbench/tools/pdf-rescue/) |
 | **QuickLauncher** | A menu of your favourite AI prompts, run on the current segment with one click. | [Trados](/trados/quicklauncher/), Workbench |

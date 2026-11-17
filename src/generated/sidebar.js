@@ -120,6 +120,10 @@ const sidebar = [
                 "link": "/trados/batch-translate/"
               },
               {
+                "label": "FuzzyFixer",
+                "link": "/trados/fuzzyfixer/"
+              },
+              {
                 "label": "AI Proofreader",
                 "link": "/trados/ai-proofreader/"
               },
