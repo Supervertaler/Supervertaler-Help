@@ -14,6 +14,27 @@ The AI Proofreader checks your translated segments for errors using AI. It ident
 6. Optionally select a proofreading **prompt** from the prompt selector
 7. Click **Proofread**
 
+## Proofreading one segment (from v18/19.20.209)
+
+To check only the segment you are in, press **Ctrl+Alt+P** in the Editor, or right-click and choose **Proofread active segment**, or press **Alt+Q** and then **P**. It is the third of the Editor's one-segment actions, beside Translate active segment (Alt+T) and [FuzzyFixer](/trados/fuzzyfixer/) (Ctrl+Alt+F).
+
+A small window opens at once and names the model it is asking. While it is open, the Editor waits; closing it cancels the request.
+
+* **No issue:** the window says *No issues found in this segment.* There is nothing to write.
+* **An issue with a correction:** the window shows the issue and the suggestion in words, and under them the corrected translation as changes to yours: removed words red and struck through, added words green and underlined. Press **Enter** (or **Alt+W**) to write it, **Escape** (or **Alt+D**) to discard it. Nothing is written before you press Enter.
+* **An issue, but nothing to write:** the window shows the issue and says why, for example that the AI gave no corrected translation, or that its correction lost a tag or a line break. If the AI did give a correction, it is shown so you can copy from it by hand.
+
+What it sends and what it does:
+
+* **The same check as a full run, for one segment:** your proofreading prompt, your memory bank, and the termbase terms that occur in the segment.
+* **Not the whole document.** It sends the three segments before and the three after as context, whatever *Include full document content in AI context* says. They are not proofread.
+* **It uses the Translation model**, as a full proofreading run does.
+* **A correction is written the way [Apply](#applying-fixes-from-v181920200) writes one:** the same checks, the segment set to Draft, and with Track Changes on only the changed words marked.
+* **Your report is left alone.** It makes no proofreading report and does not touch the findings or the saved report from your last full run. The request gets the usual card on the Reports tab.
+* **A locked segment or one without a translation** is not checked, and a message says so.
+
+What one segment cannot tell you is whether it is consistent with the rest of the document: the same term translated differently elsewhere, or a number that disagrees with another segment. Those checks need a run over the document.
+
 ## Scope
 
 The scope dropdown controls which segments are checked:

@@ -8,6 +8,15 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-19
+
+From v18/19.20.209, still unreleased. Publish with that release.
+
+- **Trados: a model per kind of task.** *AI Settings* has a new section: the three lists Light tasks, Translation (the former Model) and AutoPrompt, what each is used for, the Follow Translation entry, when a cheap model for Light tasks pays, and what a small test of 30 repairs showed. Claude Haiku 5.5 is in the Claude list, with its price and the higher price above 100,000 tokens.
+- **Trados: Proofread active segment.** *AI Proofreader* has a new section, *Proofreading one segment*: Ctrl+Alt+P, what the window shows, what is sent, how a correction is written, and that no report is touched.
+- **Trados: the top of the QuickLauncher menu.** *QuickLauncher* describes the three fixed entries and their keys (Alt+Q, then T, F or P), that the menu opens without prompts, and that a prompt kept twice in the library is listed once. *Keyboard Shortcuts* lists Ctrl+Alt+P and the three keys.
+- **Trados: FuzzyFixer.** *FuzzyFixer* says that its window names the model, that it uses the Light tasks model, and that a repair is listed as FuzzyFixer on the Reports tab and in the usage figures.
+
 ## 2026-11-17
 
 From v18/19.20.208, still unreleased. Publish with that release.

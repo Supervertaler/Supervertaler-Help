@@ -49,6 +49,8 @@ The same applies to any other Supervertaler shortcut that appears dead: search *
 | `Alt+Q` | `Option+Q` | Open QuickLauncher prompt menu |
 | `Alt+T` | `Option+T` | Translate the active segment (uses Batch Translate settings, incl. document + SuperMemory context from v18/19.20.149) |
 | `Ctrl+Alt+F` | `Control+Option+F` | [FuzzyFixer](/trados/fuzzyfixer/): repair the best fuzzy match for the active segment with AI (from v18/19.20.208) |
+| `Ctrl+Alt+P` | `Control+Option+P` | [Proofread active segment](/trados/ai-proofreader/#proofreading-one-segment-from-v181920209): have the AI check the segment you are in (from v18/19.20.209) |
+| `Alt+Q`, then `T`, `F` or `P` | `Option+Q`, then `T`, `F` or `P` | With the QuickLauncher menu open: Translate active segment, FuzzyFixer, Proofread active segment (from v18/19.20.209) |
 
 :::note
 **QuickLauncher moved from `Ctrl+Q` to `Alt+Q` in v18/19.20.184.** `Ctrl+Q` is a Trados factory default ("View Internally Source") and Trados wins, so QuickLauncher did nothing on a fresh install until you went into Options and cleared that binding – with no error to tell you why. `Alt+Q` fits the `Alt`+letter family the other shortcuts use – but Trados also puts **Tell me what you want to do** on it (confirmed in Studio 2024), so it is in the table above: clear that binding once and QuickLauncher works. Tell Me is the search box at the top right of the ribbon and stays clickable without its shortcut. If you had already cleared the Trados binding to make `Ctrl+Q` work, that key will now do nothing for QuickLauncher – use `Alt+Q`, or reassign it in **File → Options → Keyboard Shortcuts**.

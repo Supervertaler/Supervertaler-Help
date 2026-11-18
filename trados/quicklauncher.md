@@ -17,6 +17,22 @@ QuickLauncher gives you one-click access to your most-used AI prompts directly f
 The menu heading **Supervertaler QuickLauncher** is clickable – click it to open **Settings → Prompts**, where you can view, edit, and organise your QuickLauncher prompts.
 :::
 
+### The top of the menu (from v18/19.20.209)
+
+Under the heading, above your own prompts, the menu has three fixed entries for the segment you are in:
+
+| Entry | Key with the menu open | Its own shortcut |
+|-------|------------------------|------------------|
+| **Translate active segment** | `T` | `Alt+T` |
+| **[FuzzyFixer](/trados/fuzzyfixer/)** | `F` | `Ctrl+Alt+F` |
+| **[Proofread active segment](/trados/ai-proofreader/#proofreading-one-segment-from-v181920209)** | `P` | `Ctrl+Alt+P` |
+
+So `Alt+Q`, then `F`, runs FuzzyFixer: a key sequence no other program takes. The three entries do exactly what their own shortcuts and Studio's right-click menu do, where they remain. They are fixed: you cannot change or reorder them. The shortcut shown beside each is the one Supervertaler ships; if you change it in Studio's keyboard settings, the menu still shows the shipped key.
+
+The menu also opens when you have no QuickLauncher prompts yet, with these three entries and a line saying how to add a prompt. Before v18/19.20.209 you got a message and no menu.
+
+A built-in prompt that another Supervertaler product also keeps in the shared prompt library (for example *Define*) is listed once (from v18/19.20.209); before that it could appear twice.
+
 The expanded prompt appears as a user message bubble in the **Supervertaler** chat panel, and the AI response follows immediately below it. The conversation continues from there – you can ask follow-up questions in the chat input as normal.
 
 ### QuickLauncher vs Translate Active Segment (Alt+T)

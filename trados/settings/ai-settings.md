@@ -15,7 +15,7 @@ Choose one of the supported AI providers:
 | Provider | Models | Where to get a key |
 |----------|--------|--------------------|
 | **OpenAI** | GPT-6 Astra, GPT-6.1 Sol (the default), GPT-6 Luna | [platform.openai.com/api-keys](https://platform.openai.com/api-keys) |
-| **Claude (Anthropic)** | Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.2 | [console.anthropic.com](https://console.anthropic.com) |
+| **Claude (Anthropic)** | Claude Haiku 5.5, Claude Sonnet 5.5 (the default), Claude Opus 5.5, Claude Fable 5.2 | [console.anthropic.com](https://console.anthropic.com) |
 | **Gemini (Google)** | Gemini 3.8 Flash (the default), Gemini 3.5 Flash-Lite, Gemini 4 Argon | [aistudio.google.com/apikey](https://aistudio.google.com/apikey) |
 | **Grok (xAI)** | Grok 4.3 | [console.x.ai](https://console.x.ai) |
 | **Mistral AI** | Mistral Large, Mistral Small | [console.mistral.ai](https://console.mistral.ai) |
@@ -31,6 +31,36 @@ You only need one provider to get started. If you would rather not manage severa
 **The OpenAI models** (from v18/19.20.199) are OpenAI's three current tiers, most capable first: GPT-6 Astra ($10 / $50 per million tokens), GPT-6.1 Sol ($2 / $10) and GPT-6 Luna ($0.10 / $0.50), all with a 1M-token context. GPT-6.1 Sol is the default for a new installation. Earlier versions list GPT-5.6 Sol, Terra and Luna and GPT-5.4 Mini; if you have one of those selected, it keeps working and is still costed. In the AI Assistant chat, GPT-6.1 Sol can use the [Studio Tools](/trados/ai-assistant/studio-tools/) lookups from v18/19.20.201, with your own OpenAI key: OpenAI lets it use tools only through its newer Responses API, which Supervertaler now uses for this model's chat. Supervertaler asks OpenAI not to store those conversations, and the chat shows the tokens OpenAI reports, its reasoning included. Through OpenRouter, and in v18/19.20.199 and 200, it answers without the lookups, while the current segment, its terms and its TM matches still go with every message.
 
 **The Gemini models** (from v18/19.20.203) are Gemini 3.8 Flash ($0.75 / $3.75 per million tokens until the end of 2026), Gemini 3.5 Flash-Lite ($0.30 / $2.50) and Gemini 4 Argon, Google's most capable model open to developers ($2 / $10 until 30 November 2026, $4 / $20 from 1 December), all with a 1M-token context. Gemini 3.8 Flash is the default. Supervertaler counts Argon at its December price, so until then the cost it shows for Argon is twice what Google charges. Earlier versions list Gemini 3.1 Pro (Preview) in Argon's place; if you have it selected, it keeps working and is still costed.
+
+**The Claude models** (from v18/19.20.209) are Anthropic's four current models, cheapest first: Claude Haiku 5.5 ($0.10 / $0.50 per million tokens), Claude Sonnet 5.5 ($2 / $10), Claude Opus 5.5 ($4 / $20) and Claude Fable 5.2 ($8 / $40). Sonnet 5.5 is the default for a new installation. Haiku 5.5 is new in this list: it is meant for the **Light tasks** list below, not for translating whole documents. On a request whose prompt is over 100,000 tokens, Haiku 5.5 costs five times as much, and Supervertaler's cost figures do not yet take that into account: for such a request they show too little. A light task never comes near that size. Earlier versions list Sonnet, Opus and Fable only.
+
+## A model per kind of task (from v18/19.20.209)
+
+Under **Provider** there are three model lists, in order of how powerful a model the work needs:
+
+| List | What uses it |
+|------|--------------|
+| **Light tasks** | Small mechanical requests: [FuzzyFixer](/trados/fuzzyfixer/), [AutoTagger](/trados/autotagger/), Add term with abbreviation, choosing articles from a large memory bank, and AutoPrompt's two short helper questions |
+| **Translation** | Batch Translate, Translate active segment (Alt+T), Chat, QuickLauncher prompts, the AI Proofreader and FigureLens. This is the list that was called **Model** until v18/19.20.208 |
+| **AutoPrompt** | Writing your project prompt with [AutoPrompt](/trados/generate-prompt/) |
+
+So you can translate with a strong model, repair fuzzy matches with a cheap one, and let the strongest write the prompt that every segment is then translated with.
+
+* **Nothing changes until you choose.** Light tasks and AutoPrompt start on their first entry, **Follow Translation**, with your Translation model in brackets. While a list stands on that entry, it uses whatever Translation is set to: change Translation and it changes with it. To keep a list on one model whatever Translation does, pick that model from the entries below it.
+* **The lists offer the models of the provider you have selected.** One API key, and your text goes to one company.
+* **Each provider remembers its own three choices.** Switch from Claude to Gemini and back, and Claude's choices are as you left them.
+* **The model menus on the Batch Operations tab and under the chat change Translation only.**
+* **Fetch list**, **Show all models** and **Model ID** belong to Translation, as before. A model you fetched also appears in the other two lists when Show all models is ticked.
+* **With Ollama or a custom OpenAI-compatible endpoint** the Light tasks and AutoPrompt lists are greyed out: one server, one model.
+* **If a model you chose is later withdrawn by the provider**, those requests use your Translation model, and the list shows Follow Translation again.
+
+### When a cheap model for Light tasks pays
+
+A provider's prompt cache belongs to one model. FuzzyFixer on the same model as Alt+T reuses the memory bank that Alt+T has just cached. On another model its first repair pays for the bank once, and the following ones are cheap. As a rule of thumb from list prices: if you translate with Opus or Fable, a small model for Light tasks pays from the second or third repair; if you translate with Sonnet, from about the eighth repair within an hour. The other light tasks share no cache with anything, so a cheaper model there only saves.
+
+### How good is a small model at repairs
+
+In a test of 30 invented English-Dutch fuzzy repairs (November 2026: word changes, numbers, added and removed clauses, and six cases with tags), Claude Haiku 4.5 matched Sonnet 5.5 and Opus 5.5 for a third of Sonnet's cost. Claude Haiku 5.5 got 27 of the 30 like the expected repair, with all tag cases right, for less than one cent; it made two slips the larger models did not (an article left out, an informal *je* where the sentence used *u*). Short technical sentences only, with no memory bank or termbase. You see every repair in the FuzzyFixer window before it is written.
 
 ### Getting your first key
 

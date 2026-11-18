@@ -11,8 +11,8 @@ It is a single command for the segment you are working on: **Ctrl+Alt+F** in the
 ## How to use it
 
 1. Put the cursor in a segment that has a fuzzy match in one of your project's translation memories.
-2. Press **Ctrl+Alt+F**. A window opens at once and says what it is doing: first it looks for the best match, then it asks the AI. While the window is open, the Editor waits.
-3. The window shows the repair as **changes to the match's translation**: removed words are red and struck through, added words are green and underlined.
+2. Press **Ctrl+Alt+F**, or **Alt+Q** and then **F** (from v18/19.20.209). A window opens at once and says what it is doing: first it looks for the best match, then it asks the AI. While the window is open, the Editor waits.
+3. The window shows the repair as **changes to the match's translation**: removed words are red and struck through, added words are green and underlined. Its top line names the match and the model that repaired it, for example *96% match from Acme EN-NL, repaired by Claude Haiku 5.5* (from v18/19.20.209).
 4. Press **Enter** (or **Alt+W**, or click **Write to target**) to write the repair into the target, as a **draft**. Press **Escape** (or **Alt+D**, or click **Discard**) to throw it away. Nothing is written before you press Enter.
 5. Review and confirm the segment as usual. **Ctrl+Z** undoes the write.
 
@@ -93,12 +93,12 @@ Sources: [Atril's version history](https://atril.com/version-history/) and [key 
 FuzzyFixer has no settings of its own.
 
 - **The lowest match it repairs** is **Lowest TM match to send (%)** under [Settings > AI Settings](/trados/settings/ai-settings/): 70 unless you changed it. FuzzyFixer works whether or not **Send TM matches to the AI** is ticked for Batch Translate.
-- **The AI model** is the one you chose for translation, local models included.
+- **The AI model** is the one in the **Light tasks** list under [Settings > AI Settings](/trados/settings/ai-settings/#a-model-per-kind-of-task-from-v181920209) (from v18/19.20.209). That list starts on Follow Translation, so until you choose another model it is the one you translate with, local models included. Before v18/19.20.209 it was always the translation model.
 - **A licence** is needed, as for the other AI features.
 
 ## Good to know
 
-- **One request per repair.** FuzzyFixer sends one segment to the AI each time you use it, and the request is smaller than an Alt+T request that sends the document. On the [Reports](/trados/reports/) tab and in your usage figures, a repair is listed as *Translate active segment*. See the [AI cost guide](/trados/ai-cost-guide/).
+- **One request per repair.** FuzzyFixer sends one segment to the AI each time you use it, and the request is smaller than an Alt+T request that sends the document. On the [Reports](/trados/reports/) tab and in your usage figures, a repair is listed as *FuzzyFixer* (from v18/19.20.209); before that it was listed as *Translate active segment*. See the [AI cost guide](/trados/ai-cost-guide/).
 - **It never confirms for you.** The result is a draft.
 - **Your tags are kept.** The match comes out of the memory as plain text, so the AI places your segment's tags in the repair, as it does when translating.
 - **The match percentage can differ slightly** from the one in Translation Results. FuzzyFixer shows the memory's own score; Studio applies your penalties on top.
