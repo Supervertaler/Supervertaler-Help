@@ -14,6 +14,14 @@ The plugin ships with default prompts organised into three categories:
 The Default Translation Prompt is a general-purpose starting point. For domain-specific projects, use **[AutoPrompt](/trados/generate-prompt/)** to automatically create a comprehensive prompt tailored to your document – or duplicate the default prompt in the Prompt Manager and customise it manually.
 :::
 
+### The System Prompt and the fixed output rules
+
+At the top of the list in **Settings → Library** is the **System Prompt**: Supervertaler's base instructions for AI translation (the language pair, inline tags, number formatting). It is sent first in every translation request; the prompt you choose from the Library is **added after it**, never put in its place. You can change it with **Edit System Prompt**, and **Reset to Default** brings back the shipped text. Proofreading does not use it: its base instructions are fixed in the plugin.
+
+*(From v18/19.20.209)* Under the System Prompt, on a pale yellow background, the Library also shows the **output rules** Batch Translate adds at the very end of every request: return translations only, keep every tag, and put any remark in a `[[TC: ...]]` note. They come last so that no prompt, not even an edited System Prompt, can switch them off, and they cannot be edited.
+
+Choosing **(System Prompt only)** in the Batch Operations prompt list sends exactly these two, with no Library prompt between them, plus the context you have switched on (document, translation memory matches, termbase, memory bank). **Preview prompt** on the Batch Operations tab shows the complete request.
+
 ### About the Default Proofreading Prompt
 
 The Default Proofreading Prompt is intentionally short. Most of the structure proofreading needs – persona, the five quality categories (accuracy / completeness / terminology / grammar / number formatting), the output format, the "no full corrected translations" rule, language-specific checks for Dutch / German / French – is **already in the hardcoded base** that every Batch Proofread uses, so the prompt itself only adds what the base doesn't have:

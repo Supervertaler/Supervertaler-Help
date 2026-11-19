@@ -77,9 +77,9 @@ The box takes the place of **Send TM matches to the AI** and **Retry segments le
 
 ## Prompt Selection
 
-When in Proofread mode, the prompt dropdown shows only prompts with the **Proofread** category. This keeps the list focused – translation prompts are hidden. The prompts that come with Supervertaler are listed first, straight under **(Built-in instructions only)**, and hovering over the dropdown summarises what each kind of item means.
+When in Proofread mode, the prompt dropdown shows only prompts with the **Proofread** category. This keeps the list focused – translation prompts are hidden. The prompts that come with Supervertaler are listed first, straight under **(Built-in checks only)** *(called **(Built-in instructions only)** before v18/19.20.209)*, and hovering over the dropdown summarises what each kind of item means.
 
-Until you choose a proofreading prompt, for the project or overall, Proofread uses the **Default Proofreading Prompt** *(from v18/19.20.200; before that, it started on no prompt at all)*. To proofread with Supervertaler's built-in instructions alone – accuracy, completeness, terminology, grammar and number formatting, without the default prompt's rules – choose **(Built-in instructions only)** at the top of the list. That choice is remembered, as is turning off the active proofreading prompt in the Prompt Manager.
+Until you choose a proofreading prompt, for the project or overall, Proofread uses the **Default Proofreading Prompt** *(from v18/19.20.200; before that, it started on no prompt at all)*. To proofread with Supervertaler's built-in instructions alone – accuracy, completeness, terminology, grammar and number formatting, without the default prompt's rules – choose **(Built-in checks only)** at the top of the list. That choice is remembered, as is turning off the active proofreading prompt in the Prompt Manager.
 
 :::note
 You can create custom proofreading prompts in the [Prompt Manager](/trados/settings/prompts/). Set the category to **Proofread** so they appear in the dropdown when proofreading.
