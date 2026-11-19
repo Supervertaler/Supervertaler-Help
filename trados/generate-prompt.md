@@ -128,12 +128,12 @@ A generated prompt follows the structure of professional translation prompts use
 * **Anti-truncation controls** – explicit prohibition of omitting repetitive phrases or collapsing clauses
 * **Input handling rules** – instructions for segment-by-segment translation in Supervertaler
 * **Domain-specific style rules** – mandatory term mappings, register requirements, formatting rules
-* **Terminology hierarchy** – priority order: TM matches > project termbase > domain conventions
+* **Terminology hierarchy** – priority order: project termbase > the document's own usage, including segments you have confirmed > TM matches > domain conventions. TM matches are earlier translations to check against the source, not approved wording, the same as in the [TM matches sent with each request](/trados/context-layers/#5-a-translation-memory-match). *(From v18/19.20.209; earlier versions put TM matches first.)*
 * **Preflight self-check** – internal verification step before producing output
 * **Post-translation integrity assertion** – completeness and faithfulness check
 * **Project context** – AI-generated summary of what the document is about
 * **Project-specific termbase** – all termbase terms, marked as locked and mandatory
-* **TM reference translations** – validated translation pairs as style anchors
+* **Reference translations** – segments you have confirmed in this document, as examples of register and terminology to check against the source; where one disagrees with the termbase, the termbase wins
 * **Output format** – translation only, no commentary, preserve formatting
 * **Segment references** – in a document made of several files, which Trados Studio numbers from 1 in each file, a segment the prompt points to (a defect in the source, say) is named by its file and its number as Studio shows them, with a few words of its text beside the number *(v18.20.201)*
 
