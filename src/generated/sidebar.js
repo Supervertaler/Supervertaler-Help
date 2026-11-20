@@ -307,6 +307,10 @@ const sidebar = [
             "link": "/trados/settings/project-settings/"
           },
           {
+            "label": "Project templates",
+            "link": "/trados/settings/project-templates/"
+          },
+          {
             "label": "Usage Statistics",
             "link": "/trados/settings/usage-statistics/"
           }

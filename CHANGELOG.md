@@ -8,6 +8,12 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-20
+
+From v18/19.20.209, still unreleased. Publish with that release.
+
+- **Trados: Project templates.** A new page under Settings, *Project templates*: what a Studio project template holds, Studio's and Supervertaler's; making one that carries Supervertaler's project settings; the Project templates window (what a template holds, what applying it to the open project would change, keep and add, packages and GroupShare); Studio customers; using a template on another computer; and what a template tells someone you send it to. *General settings* and *Per-Project Settings* link to it. The plugin's Project templates window and its Settings section open it.
+
 ## 2026-11-19
 
 From v18/19.20.209, still unreleased. Publish with that release.

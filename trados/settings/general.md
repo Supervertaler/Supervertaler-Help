@@ -85,6 +85,10 @@ If you do want it for such a project, open it, click **This project's TMs...** a
 [EverTM](/trados/evertm/) needs none of this. It stamps the project, client, document and more on every segment you confirm, with a tick box for each in its own window. See [What is stamped on a segment you confirm](/trados/evertm/#what-is-stamped-on-a-segment-you-confirm).
 :::
 
+## Project templates
+
+A Trados Studio project template can hold Supervertaler's project settings too: the memory bank, prompts, client and termbase choices. **Project templates...** opens a window that shows what each template holds, and applies one to the open project. **Studio customers...** edits Studio's customer list. See [Project templates](/trados/settings/project-templates/).
+
 ## Data folder
 
 Shows where your data folder is. Click **Open** to open it in File Explorer, or **Move…** to move it. See [Data Folder and Team Folder](/trados/data-folder/).
@@ -98,6 +102,7 @@ Optional. A team folder lets a team share its memory banks and prompt library fr
 ## See Also
 
 - [Per-Project Settings](/trados/settings/project-settings/)
+- [Project templates](/trados/settings/project-templates/)
 - [Data Folder and Team Folder](/trados/data-folder/)
 - [Usage Statistics](/trados/settings/usage-statistics/)
 - [EverTM](/trados/evertm/)

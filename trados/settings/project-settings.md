@@ -54,6 +54,10 @@ Global settings (`settings.json`) serve as the defaults for projects that don't 
 
 Settings that are always global (API keys, font size, shortcut preferences) are never overridden by project settings.
 
+## Project templates
+
+Supervertaler also keeps these settings (memory bank, prompts, client and termbase choices) in the Studio project, so Studio's **Create Project Template** takes them along and every project made from that template starts with them. See [Project templates](/trados/settings/project-templates/).
+
 ## Stamping the project's name and client on Studio TMs
 
 Supervertaler can fill in the project's name and its client in the project's TM settings each time you open a project, so that Studio stamps them on every translation unit it stores. The tick boxes for this are on the **General** tab of Supervertaler's settings. See [Studio translation memories](/trados/settings/general/#studio-translation-memories).
@@ -63,6 +67,7 @@ Supervertaler can fill in the project's name and its client in the project's TM 
 ## See Also
 
 - [General settings](/trados/settings/general/)
+- [Project templates](/trados/settings/project-templates/)
 - [EverTM](/trados/evertm/)
 - [TermLens Settings](/trados/settings/termlens/)
 - [AI Settings](/trados/settings/ai-settings/)

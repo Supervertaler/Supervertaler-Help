@@ -80,6 +80,7 @@
   * [Prompt File Format](trados/settings/prompts/prompt-file-format.md)
 * [Backup & Restore](trados/settings/backup.md)
 * [Per-Project Settings](trados/settings/project-settings.md)
+* [Project templates](trados/settings/project-templates.md)
 * [Usage Statistics](trados/settings/usage-statistics.md)
 
 ## 🧩 Reference
