@@ -27,11 +27,17 @@ A template holds names, not contents: the name of a memory bank, not its article
 
 ## Making a template
 
-1. Open a project that is set up the way you want: Studio's TMs and termbases, and Supervertaler's memory bank, prompts, client and termbase ticks.
-2. Open Supervertaler's **Settings** and click **OK**. This writes Supervertaler's project settings into the Studio project. (Changing a setting in the project does the same; this step only matters for a project you set up before v20.209.)
-3. In Studio's **Projects** view, select the project and choose **Create Project Template**.
+The simplest way is from Supervertaler:
 
-Every new project made from that template starts with the same settings, Studio's and Supervertaler's. You don't need to do anything in Supervertaler.
+1. Open a project that is set up the way you want: Studio's TMs and termbases, and Supervertaler's memory bank, prompts, client and termbase ticks.
+2. Open the [Project templates window](#the-project-templates-window) and click **Save project as template...**.
+3. Choose a folder and a name. The folder offered is the one your other templates are in.
+
+The new template holds Studio's settings, as Studio's own **Create Project Template** would make it, and Supervertaler's project settings as they are now. Studio adds it to its list, so it is offered under **New Project** straight away. An existing template is never replaced: to change one, use [Update from project](#updating-a-template-from-a-project).
+
+You can also use Studio's own **Create Project Template** (in the **Projects** view). Open Supervertaler's **Settings** in the project and click **OK** first: that writes Supervertaler's project settings into the Studio project, so the template takes them along. (This only matters for a project you set up before v20.209.)
+
+Every new project made from the template starts with the same settings, Studio's and Supervertaler's.
 
 A project takes a copy. Changing the template later does not change projects made from it earlier, and changing a project does not change the template. Studio's own settings work the same way.
 
@@ -45,6 +51,16 @@ Pick a template, then choose what the table below shows:
 - **What applying it to the open project would change**
 
 Drag the bar between the list and the table to give either more room. The template's file is named under the table; click it to open its folder with the file selected. Press **F1** or click **? Help** for this page.
+
+The buttons:
+
+| Button | What it does |
+| --- | --- |
+| **Apply to this project...** | [Applies the template](#applying-a-template-to-a-project-you-already-have) to the open project. |
+| **Save project as template...** | [Makes a new template](#making-a-template) from the open project. |
+| **Update from project...** | [Replaces everything in the selected template](#updating-a-template-from-a-project) with the open project's settings. |
+| **Edit...** | [Changes the Supervertaler project settings and the customer](#editing-a-template) in the selected template. |
+| **Studio customers...** | Edits [Studio's customer list](#studio-customers). |
 
 The window works on the project open in Studio: the one in the Editor, or else the one selected in the **Projects** view. With no project open, it only shows what each template holds.
 
@@ -94,6 +110,35 @@ A template that cannot be read (moved, deleted, damaged, or on a drive that is o
 ### Projects from a package or GroupShare
 
 A project you received as a package, or from GroupShare, belongs to the agency, and its settings can travel back to them. Supervertaler therefore writes the template's Supervertaler project settings only into its own record on your computer, and leaves the project's Studio TMs, termbases and customer alone.
+
+## Updating a template from a project
+
+Select a template in the list, open the project whose settings it should have, and click **Update from project...**. Supervertaler asks first, then does what Studio does when it updates a template from a project: everything in the template (TMs, termbases, customer, file types, QA and other Studio settings) becomes the project's, and so do Supervertaler's project settings.
+
+Projects already made from the template do not change.
+
+## Editing a template
+
+Select a template and click **Edit...** to change what Supervertaler keeps in it:
+
+- **Memory bank**, **Translate prompt** and **Proofread prompt**. *(not set)* means a project made from the template keeps its own.
+- **Client**.
+- **Studio customer**, chosen from Studio's customer list.
+- **Supervertaler termbases**: tick **Read**, **Write**, **Project termbase** and **AI** for each. A template can have one Project termbase. When none is ticked, a project keeps its own termbase choices; when some are, all others are off in a project made from the template.
+
+A memory bank, prompt or termbase the template names but this computer does not have is shown as *(not on this computer)* and kept, so the template still works on the computer it came from. MultiTerm termbase choices are kept as they are.
+
+Studio's own part of a template (TMs, termbases, file types and the rest) is edited in Studio: **Projects** view > **Project Templates** > **Edit**.
+
+### Only templates in this Studio's list
+
+Supervertaler changes a template only through the Studio that has it in its list (the templates **New Project** offers). Studio keeps its own copy of each template while it runs and writes that copy back when you edit the template in Studio, so a change made behind its back would be lost. A template listed only for another Studio version, or found only in a folder, can be looked at and applied, but not changed: add it to this Studio first (**Projects** view > **Project Templates** > **Import**).
+
+If you have the same template file in several Studio versions, change it in one of them and restart the others before you edit it there.
+
+### If saving fails
+
+Before Supervertaler changes a template, it makes a copy of the file. If anything goes wrong, the copy is put back and the template is as it was. In the unlikely case that putting it back fails too, the message says where the copy is.
 
 ## Studio customers
 

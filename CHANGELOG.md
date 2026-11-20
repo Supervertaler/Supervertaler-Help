@@ -12,7 +12,7 @@ guesswork.
 
 From v18/19.20.209, still unreleased. Publish with that release.
 
-- **Trados: Project templates.** A new page under Settings, *Project templates*: what a Studio project template holds, Studio's and Supervertaler's; making one that carries Supervertaler's project settings; the Project templates window (what a template holds, what applying it to the open project would change, keep and add, packages and GroupShare); Studio customers; using a template on another computer; and what a template tells someone you send it to. *General settings* and *Per-Project Settings* link to it. The plugin's Project templates window and its Settings section open it.
+- **Trados: Project templates.** A new page under Settings, *Project templates*: what a Studio project template holds, Studio's and Supervertaler's; making one that carries Supervertaler's project settings; the Project templates window (what a template holds, what applying it to the open project would change, keep and add, packages and GroupShare); saving the open project as a template, updating a template from a project, and editing a template's Supervertaler project settings and customer (only templates in this Studio's list, with a backup put back on failure); Studio customers; using a template on another computer; and what a template tells someone you send it to. *General settings* and *Per-Project Settings* link to it. The plugin's Project templates window and its Settings section open it.
 
 ## 2026-11-19
 
