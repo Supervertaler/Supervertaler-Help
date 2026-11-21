@@ -6,7 +6,7 @@ title: "FuzzyFixer"
 
 FuzzyFixer **repairs a fuzzy match with AI**. When your translation memory holds a sentence that is close to the one you are translating, but not the same, FuzzyFixer takes the old translation and changes only what the difference requires.
 
-It is a single command for the segment you are working on: **Ctrl+Alt+F** in the Editor, or right-click in the Editor and choose **FuzzyFixer: repair fuzzy match with AI**.
+It is a single command for the segment you are working on: **Ctrl+Alt+F** in the Editor, or right-click in the Editor and choose **FuzzyFixer: repair fuzzy match**.
 
 ## How to use it
 
