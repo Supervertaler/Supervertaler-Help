@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-21
+
+- **Trados: how a prompt is put together, corrected.** *Prompt File Format* (System prompt) said a prompt file is the user prompt, sent after a system prompt holding the termbase and TM matches. For Batch Translate, Translate active segment and Batch Proofread it goes inside the system prompt under `# CUSTOM INSTRUCTIONS`, and TM matches go in the user message; QuickLauncher prompts are the user message. *Prompt Variables* said Batch Translate adds language-specific checks: it adds number-formatting rules, and the checks (Dutch, German, French) are Batch Proofread's. *Default Prompts* named a "no full corrected translations" rule: proofreading now asks for a Corrected line, which Apply writes into the segment. *Reports* said every request has a card: a Batch Translate run has one card for the whole run.
+
 ## 2026-11-20
 
 From v18/19.20.209, still unreleased. Publish with that release.

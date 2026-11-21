@@ -29,7 +29,7 @@ Since v18.20.187 every completed run is also written to `trados\reports` in your
 
 ## AI operation log
 
-When **Log prompts and responses to Reports tab** is enabled in [AI Settings](/trados/settings/ai-settings/), AI calls – Chat, Batch Translate, Translate active segment (Alt+T), Batch Proofread and AutoPrompt – are recorded here together with the prompt, the response, the model used and the token/cost figures. It is the place to audit exactly what was sent to the AI provider and to review cost after the fact. Each request has a card of its own.
+When **Log prompts and responses to Reports tab** is enabled in [AI Settings](/trados/settings/ai-settings/), AI calls – Chat, Batch Translate, Translate active segment (Alt+T), Batch Proofread and AutoPrompt – are recorded here together with the prompt, the response, the model used and the token/cost figures. It is the place to audit exactly what was sent to the AI provider and to review cost after the fact. Each request has a card of its own, except a Batch Translate run: however many batches it sends, it gets one card, with the combined tokens, cost and duration (see [Prompt logging](/trados/settings/ai-settings/#prompt-logging)).
 
 ### The order of the cards (from v18/19.20.208)
 

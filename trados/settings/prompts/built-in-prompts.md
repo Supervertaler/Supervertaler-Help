@@ -24,7 +24,7 @@ Choosing **(System Prompt only)** in the Batch Operations prompt list sends exac
 
 ### About the Default Proofreading Prompt
 
-The Default Proofreading Prompt is intentionally short. Most of the structure proofreading needs – persona, the five quality categories (accuracy / completeness / terminology / grammar / number formatting), the output format, the "no full corrected translations" rule, language-specific checks for Dutch / German / French – is **already in the hardcoded base** that every Batch Proofread uses, so the prompt itself only adds what the base doesn't have:
+The Default Proofreading Prompt is intentionally short. Most of the structure proofreading needs – persona, the five quality categories (accuracy / completeness / terminology / grammar / number formatting), the output format (each problem with a **Corrected:** line that holds the whole translation with the fix made, which **Apply** on the Reports tab writes into the segment), language-specific checks for Dutch / German / French – is **already in the hardcoded base** that every Batch Proofread uses, so the prompt itself only adds what the base doesn't have:
 
 * **Default to OK** – raise an issue only when there's a specific, demonstrable problem in the translation, never speculative concerns.
 * **Citation discipline** – terminology consistency claims must cite specific source segment numbers in the **Evidence:** field, against the full bilingual document context that's auto-included.

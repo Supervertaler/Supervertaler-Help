@@ -40,7 +40,10 @@ Older prompts using the `domain` key instead of `category` are still supported f
 
 ### System prompt
 
-The plugin automatically prepends a system prompt to every AI call. This system prompt includes language pair information, termbase terms (based on your [AI Context settings](/trados/settings/ai-settings/)), and TM matches when enabled. The content you write in a prompt `.md` file is the **user prompt** – it is sent after the system prompt.
+Where the text of a prompt file goes depends on what the prompt is used for.
+
+* **Translate and Proofread prompts** (Batch Translate, Translate active segment `Alt+T`, Batch Proofread): your prompt goes **inside the system prompt**, under the heading `# CUSTOM INSTRUCTIONS`. Supervertaler's own instructions come before it; for translation that is the [System Prompt](/trados/settings/prompts/built-in-prompts/#the-system-prompt-and-the-fixed-output-rules), with the language pair, inline tags and number formatting. The context you have switched on – termbase terms, your memory bank, the document – is added to the system prompt too, and fixed output rules close it, so no prompt can switch them off. The **user message** holds the segments to translate or check, and for translation the translation memory matches when they are switched on. **Preview prompt** on the [Batch Operations tab](/trados/batch-operations/#preview-prompt) shows the complete request.
+* **QuickLauncher prompts**: your prompt, with its [variables](/trados/settings/prompts/prompt-variables/) filled in, is the **user message**, sent after the chat's system prompt.
 
 ### Creating and editing prompts
 
