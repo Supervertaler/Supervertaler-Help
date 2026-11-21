@@ -239,11 +239,11 @@ This setting is per-folder, so you can mix styles – for example, keep a large 
 
 ### Setting up QuickLauncher prompts
 
-Set `category: QuickLauncher` in the YAML frontmatter, or place the file in a folder called `QuickLauncher` inside your `prompt_library`. See [Prompts → Marking a prompt as a QuickLauncher shortcut](/trados/settings/prompts/#marking-a-prompt-as-a-quicklauncher-shortcut) for full details.
+Set `category: QuickLauncher` in the YAML frontmatter, or place the file in a folder called `QuickLauncher` inside your prompt library (`prompt_library\Trados` in your data folder). See [Prompts → Marking a prompt as a QuickLauncher shortcut](/trados/settings/prompts/#marking-a-prompt-as-a-quicklauncher-shortcut) for full details.
 
 ### Shared with Supervertaler for memoQ
 
-QuickLauncher prompts live in the shared `prompt_library` folder used by both Supervertaler for Trados and Supervertaler for memoQ. Any prompt you create in one application is immediately available in the other.
+QuickLauncher prompts live in Supervertaler for Trados's own prompt library, `prompt_library\Trados` in your [data folder](/trados/data-folder/#each-products-own-prompts) *(from v18/19.20.210; before, a `prompt_library` folder shared with Supervertaler for memoQ)*.
 
 
 #### YAML reference

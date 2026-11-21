@@ -25,7 +25,9 @@ Supervertaler/
 │
 ├── licence/                     Your licence                       Shared
 ├── settings/                    Your AI provider API keys          Shared
-├── prompt_library/              Prompts                            Shared *
+├── prompt_library/              Prompts, a folder per product      *
+│   ├── Trados/                  Supervertaler for Trados's prompts (from v18/19.20.210)
+│   └── …                        the older shared prompts, and other products' folders
 ├── memory-banks/                SuperMemory banks                  Shared *
 │   ├── _shared/
 │   └── <bank name>/
@@ -56,9 +58,23 @@ Supervertaler/
 
 ### Shared resources
 
-The **prompt library**, **memory banks** and **resources** folders are shared between all Supervertaler products. Prompts you create or edit in one program are immediately available in the others. The SQLite database (`supervertaler.db`) holds your termbases and translation memories – Workbench has full read-write access, while the Trados plugin reads from it.
+The **memory banks** and **resources** folders are shared between all Supervertaler products. The **prompt library** was shared too until v18/19.20.210; see [Each product's own prompts](#each-products-own-prompts). The SQLite database (`supervertaler.db`) holds your termbases and translation memories – Workbench has full read-write access, while the Trados plugin reads from it.
 
 The **settings** folder holds your AI provider API keys, in `api-keys.json`. That file is **plain text**, on purpose, so that Supervertaler for memoQ and Sidekick can read the same keys; anyone who can open your data folder can read them. From v18/19.20.204 each key is also kept in a copy locked to your Windows account, in `%APPDATA%\Supervertaler\api-keys.locked.json`, outside the data folder. See [AI Settings → API key](/trados/settings/ai-settings/#api-key).
+
+### Each product's own prompts
+
+*From v18/19.20.210.* Supervertaler for Trados keeps its prompts in `prompt_library\Trados`, not in the `prompt_library` folder it used to share with Supervertaler for memoQ and Workbench. Sharing one folder meant every prompt existed in a version for each product, so some were listed twice, and a change made in one product turned up in the others.
+
+The first time Trados Studio starts with v18/19.20.210, Supervertaler **copies** the prompts meant for Trados into `prompt_library\Trados`:
+
+* prompts marked for Trados, and prompts not marked for any product, are copied;
+* prompts marked for another product stay where they are, and so does an unmarked prompt when the same prompt also exists marked for Trados (so **Define** is copied once);
+* names and subfolders stay the same, so the prompts you picked for Batch Translate, Proofread and each project, and your QuickLauncher shortcuts, still find their prompts.
+
+Nothing in the old folder is moved, changed or deleted, so Supervertaler for memoQ and Workbench go on using it as before. If the copy is interrupted, it is finished the next time Studio starts, and a prompt already in `prompt_library\Trados` is never overwritten. When it is done, the folder holds a small file called `.copied-from-shared-library`; once that is there, prompts you delete from your Trados library stay deleted. To copy again, delete that file.
+
+To use a prompt in another product as well, copy its file into that product's folder.
 
 ### Program-specific folders
 
@@ -111,6 +127,8 @@ Anything you add to a memory bank or prompt in that session is saved in your own
 Memory banks and prompts are ordinary files in the team folder, so a change one person saves is in the folder for everyone. If two people edit the same file at the same moment, the last one to save wins, as with any shared document.
 
 Supervertaler Workbench does not use the team folder yet: it keeps using the memory banks and prompts in your own data folder.
+
+In a team folder, too, Supervertaler for Trados uses `prompt_library\Trados` *(from v18/19.20.210)*. The first colleague to start Trados Studio with v18/19.20.210 copies the team's prompts into it, [as above](#each-products-own-prompts); if several start at once, each prompt is still copied only once.
 
 ## Moving your data folder
 

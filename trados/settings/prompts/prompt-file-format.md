@@ -2,7 +2,7 @@
 title: "Prompt File Format"
 ---
 
-Prompts are stored as `.md` files (Markdown with YAML frontmatter). This is the same format used by Supervertaler Workbench, so prompts are automatically shared between both applications via the shared `prompt_library` folder. Legacy `.svprompt` files are still loaded for backward compatibility.
+Prompts are stored as `.md` files (Markdown with YAML frontmatter). Every Supervertaler product uses this format. From v18/19.20.210 each product keeps its prompts in its own folder: Supervertaler for Trados in `prompt_library\Trados` (see [Each product's own prompts](/trados/data-folder/#each-products-own-prompts)), so to use a prompt in another product as well, copy its file across. Legacy `.svprompt` files are still loaded for backward compatibility.
 
 ```yaml
 ---
