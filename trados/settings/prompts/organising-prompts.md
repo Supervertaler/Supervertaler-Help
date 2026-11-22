@@ -2,7 +2,7 @@
 title: "Organising Prompts"
 ---
 
-The Prompt Manager tree mirrors the folder structure inside your prompt library, `prompt_library\Trados` in your data folder. You can:
+The Prompt Manager tree mirrors the folder structure inside your prompt library, `prompt_library_Trados` in your data folder. You can:
 
 - **Create folders** – click **New Folder** in the toolbar
 - **Move prompts** – drag and drop a prompt onto a folder to move it

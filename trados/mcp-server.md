@@ -369,7 +369,7 @@ The AI writes to a bank only when you ask or agree. What protects the bank:
 
 ### Your prompt library *(from v18.20.101)*
 
-The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate. From v18/19.20.210 that is Supervertaler for Trados's own library, `prompt_library\Trados`; Supervertaler for memoQ no longer shares it:
+The AI can read and improve the Markdown prompts in your Supervertaler prompt library – the same ones you use in the QuickLauncher and Batch Translate. From v18/19.20.210 that is Supervertaler for Trados's own library, `prompt_library_Trados`; Supervertaler for memoQ no longer shares it:
 
 * "List my prompts." / "Show me the prompts in my Translate folder."
 * "Show me my Default Translation Prompt."

@@ -22,7 +22,7 @@ Your prompt content here...
 | `category: QuickLauncher` | Marks this prompt as a QuickLauncher item                                |
 | `quicklauncher_label`     | Optional short label shown in the menu – falls back to `name` if omitted |
 
-You can also organise QuickLauncher prompts by placing them in a folder called `QuickLauncher` inside your prompt library (`prompt_library\Trados` in your data folder). Any prompt in that folder is automatically treated as a QuickLauncher prompt.
+You can also organise QuickLauncher prompts by placing them in a folder called `QuickLauncher` inside your prompt library (`prompt_library_Trados` in your data folder). Any prompt in that folder is automatically treated as a QuickLauncher prompt.
 
 :::note
 QuickLauncher prompts are shared with Supervertaler Workbench via the shared prompt library folder.
