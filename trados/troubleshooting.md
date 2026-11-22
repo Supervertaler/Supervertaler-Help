@@ -186,7 +186,7 @@ If you share the database via a cloud-sync folder, ensure the file is fully sync
 
 1. **Check the Read toggle** –open [TermLens Settings](/trados/settings/termlens/) and verify the termbase has **Read** enabled
 2. **Verify the database path** –ensure the path points to the correct `.db` file
-3. **Press F5** to force a full reload of your Supervertaler termbases from disk (note: F5 does not reload MultiTerm termbases)
+3. **Click ↻ in the TermLens panel** to force a full reload of your Supervertaler termbases from disk (it does not reload MultiTerm termbases)
 4. **Reload the database** –click the **gear icon** in the TermLens panel to open settings, then close the dialogue. This forces a reload of the termbase data
 5. **Check language pair** –the termbase source and target languages must match the current Trados project languages. Either direction works (the matcher handles inverted-direction termbases automatically), but the language pair itself must match.
 6. **Check for reversed entries** –if a single specific term you know exists is silently not matching while other terms in the same segment do, the entry may be stored in the wrong direction in the database (e.g. Dutch text in the English column). This typically affects entries created or edited under v4.19.24 or earlier in projects whose direction was the inverse of the termbase's. Open the **Termbase Editor** (double-click the termbase in TermLens Settings), find the term, check whether the source and target columns contain text in the expected languages, and use **Reverse source/target** to fix it. See [Termbase Management](/trados/termbase-management/) for details.
@@ -202,7 +202,7 @@ If you share the database via a cloud-sync folder, ensure the file is fully sync
 1. **Check your Trados project** –verify that MultiTerm termbases are attached via **Project Settings > Language Pairs > Termbases**
 2. **Check the Read toggle** –open Supervertaler Settings (gear icon) and make sure the MultiTerm termbase's Read checkbox is enabled
 3. **Check languages** –the termbase's source and target languages must match the current project's language pair
-4. **Navigate to another segment and back** to trigger a MultiTerm auto-refresh (F5 does not reload MultiTerm termbases – only segment navigation does)
+4. **Navigate to another segment and back** to trigger a MultiTerm auto-refresh (the ↻ button does not reload MultiTerm termbases – only segment navigation does)
 
 :::note
 When you add terms in MultiTerm, navigate to a different segment in Trados to trigger the auto-refresh. TermLens checks for file changes on each segment change.

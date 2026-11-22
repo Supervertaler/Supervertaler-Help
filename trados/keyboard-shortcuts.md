@@ -105,7 +105,6 @@ Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prom
 |---------------------|----------------|--------|
 | `F1` | `F1` | Context-sensitive help |
 | `F2` | `F2` | Expand selection to word boundaries |
-| `F5` | `F5` | Force-reload Supervertaler termbases from disk and refresh TermLens display (does not reload MultiTerm termbases) |
 
 ## Shortcuts for Terms 10+
 

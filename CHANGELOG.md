@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-22
+
+- **Trados: F5 is no longer listed as a TermLens shortcut.** It never worked: the command was never registered with Trados Studio, and it has been removed (v18/19.20.210). *Keyboard Shortcuts* drops the F5 row, and *Troubleshooting* now says to click **↻** in the TermLens panel.
+
 ## 2026-11-21
 
 - **Trados: each product's own prompt library** (from v18/19.20.210). *Data folder* has a new section, *Each product's own prompts*: Supervertaler for Trados keeps its prompts in `prompt_library_Trados`, next to `prompt_library` so older versions of the other products never list them twice, what the first start copies there and what it leaves, that nothing in the old folder changes, and what happens in a team folder. The folder tree, *Shared resources*, *QuickLauncher*, *Prompt File Format*, *Organising Prompts*, *QuickLauncher Shortcuts* and *MCP Server* no longer say the prompt library is shared with memoQ or Workbench.
