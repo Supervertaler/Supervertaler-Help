@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-23
 
+- **memoQ: removing MT marks from a Trados package.** *Removing MT Marks* has a new section, *Projects from a Trados package*: memoQ greys out **Remove** for documents that came in a Trados package (.sdlppx), so you remove the whole package in the **Packages** view, import the clean copies as new, create the return package as usual and check it contains every .sdlxliff before delivering. Step 3 points there when Remove is greyed out, and *Where it works* no longer says the documents can simply be removed.
 - **Trados: the EverTM page no longer says EverTM is unreleased.** The "Not released yet – coming in 18.20.206" notice at the top is gone: EverTM has been in Supervertaler for Trados since version 18/19.20.206.
 
 ## 2026-11-22
