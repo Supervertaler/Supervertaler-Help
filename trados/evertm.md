@@ -31,6 +31,8 @@ A Studio TM is still the right choice for a TM you share on a server, a TM a cli
 
 ## What you get
 
+- **[EverTM Matches](/trados/evertm-matches/)** (from v18/19.20.210): EverTM's matches in a pane of their own, with everything EverTM knows about each, and ways to remove or correct a wrong translation.
+
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM. EverTM scores a fuzzy match the way Studio does (see [Match percentages](#match-percentages)).
 - **Where each match came from.** The project, client, subject and document it was translated for, and who translated it and when (see [What you see in Studio](#what-you-see-in-studio)).
 - **One translation per sentence: the newest.** Where EverTM holds several translations of a sentence, you see the most recent one (see [One translation per sentence](#one-translation-per-sentence-the-newest)).
@@ -52,15 +54,18 @@ EverTM is meant to become the one place for everything you have ever translated:
 - **AI Batch Translate uses EverTM.** Its TM matches, which it sends to the AI with each segment, include EverTM's.
 - **Export to TMX includes the fields, dates and users.**
 
+### New in v18/19.20.210
+
+- **[EverTM Matches](/trados/evertm-matches/), a pane of its own in Studio's Editor.** EverTM's matches with the differences highlighted and a one-line summary under each (client, project, date); the selected match's details, with where EverTM got it; its older translations on request. Insert a match with Alt+Shift+1–9, **remove** a wrong translation from EverTM or **edit** one, with Undo and a list to restore from. Optionally your project's Studio TMs' matches too, clearly marked, so it can take the place of Studio's Translation Results.
+
 ### Planned
 
-- **EverTM Matches, a pane of its own in Studio's Editor**, next to TermLens. It shows EverTM's matches with the differences highlighted, and a one-line summary under each match (client, project, date), so you can tell matches apart at a glance. Below them, the selected match's full details: every field, its dates and users, and its older translations. You can remove a wrong translation from EverTM there, with Undo and a list to restore it from. It can take the place of Studio's Translation Results for EverTM.
 - **A manager for EverTM.** Browse what EverTM holds by client, end client, project, subject or where it came from, with the number of translation units in each. Export just the part you need – all patent work for one client, say – to a TMX file.
 - **A profile per project.** Tell EverTM what a project is – its client and subject – and it tags the translations you confirm with them. The same profile limits EverTM's matches to work that fits: patents only, for example, or never medical texts. It applies everywhere EverTM is used – Translation Results, Analyze, Pre-translate, Batch Translate and EverTM Matches. Translation units without any information always pass, and a switch shows the matches that were left out. Projects made from the same Studio template share a profile.
 - **Keeping language variants apart, if you want to.** Each translation unit remembers the language variant it came with (nl-BE, en-GB and so on), but EverTM mixes the variants when it looks for matches: one memory serves them all. That suits translators who adapt UK or US spelling at the end anyway. For those who would rather keep variants apart, as with separate Studio TMs, a **Language variants** setting will offer three choices: mix them (as now, and the default), mark matches from another variant down by a penalty you choose (an en-US match showing 98% in an en-GB project, say), or offer only matches in the project's exact variant. It can be set per project.
 - **Re-tagging in bulk**, for translation units that came in without information.
 - **Context matches**, where the previous segment matches too.
-- **Cleaning up and editing:** finding near-duplicates, and correcting a translation unit or its information.
+- **Cleaning up:** finding near-duplicates. (Correcting or removing a single translation unit is in [EverTM Matches](/trados/evertm-matches/) from v18/19.20.210.)
 
 ## Your own TMs always come first
 

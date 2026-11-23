@@ -93,6 +93,15 @@ Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prom
 | `Alt+S` | `Option+S` | Open SuperSearch – searches for the selected source/target text across all project files |
 | `Alt+W` | `Option+W` | Search the web for the selected term, in your project's language pair |
 
+## EverTM Matches
+
+| Shortcut (Windows) | Shortcut (Mac) | Action |
+|---------------------|----------------|--------|
+| `Alt+Shift+1` … `Alt+Shift+9` | `Option+Shift+1` … `Option+Shift+9` | Insert [EverTM Matches](/trados/evertm-matches/) match 1 to 9 from the editor. Studio's own **1. Insert symbol** to **9. Insert symbol** take these keys first: remove their shortcuts once in **File > Options > Keyboard Shortcuts > Editor** |
+| `1` … `9`, `Enter`, double-click | same | In the pane: insert that match, or the selected one |
+| `F2` | `F2` | In the pane: **Edit in EverTM...** for the selected match |
+| `Delete` | `Delete` | In the pane: **Remove from EverTM** for the selected match (with Undo) |
+
 ## AutoTagger
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
