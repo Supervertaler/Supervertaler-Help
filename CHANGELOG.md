@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-23
+
+- **Trados: the EverTM page no longer says EverTM is unreleased.** The "Not released yet – coming in 18.20.206" notice at the top is gone: EverTM has been in Supervertaler for Trados since version 18/19.20.206.
+
 ## 2026-11-22
 
 - **Trados: F5 is no longer listed as a TermLens shortcut.** It never worked: the command was never registered with Trados Studio, and it has been removed (v18/19.20.210). *Keyboard Shortcuts* drops the F5 row, and *Troubleshooting* now says to click **↻** in the TermLens panel.
