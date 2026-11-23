@@ -46,13 +46,16 @@ Some clients want the memoQ XLIFF back rather than the project. Then there is no
 When a client sends a Trados package (.sdlppx) and you translate it in memoQ, the documents belong to the package, and memoQ will not remove them one at a time: **Remove** is greyed out. This is memoQ, not a setting your client chose. Remove the whole package instead:
 
 1. **Export and clean** the documents, as in steps 1 and 2 above.
-2. **Remove the package.** In **Project home → Translations**, on the **Documents** tab, click **Packages**. Select the package and remove it.
+2. **Remove the package.** In **Project home → Translations**, on the **Documents** tab, click **Packages**. Select the package's row (the one with the package icon, above its documents) and click **Remove**. The documents go with it.
 3. **Import the clean copies**, as in step 4 above: **Import with options**, **Import as new**.
-4. **Create the return package** (.sdlrpx) as you normally would.
-5. **Check the return package before you deliver.** A return package is a zip file. Make a copy of it, change the copy's extension to .zip and open it: every .sdlxliff file from the original package should be in it.
+4. **Create the return package** (.sdlrpx) as you normally would. memoQ still builds it, although the package is no longer listed.
 
-:::caution[Try it on a small job first]
-Users have delivered return packages made this way, but we have not yet tested how the client's Trados reads them. Keep the files you exported until the client has accepted the job.
+We have tested this from start to finish: a package made in Trados, translated in memoQ with Supervertaler, cleaned this way and opened again in Trados. Trados accepted the return package, and no row showed a machine-translation origin; without cleaning, every row showed **AT**. The files, their IDs and the translations were exactly the same.
+
+If you want to check the return package before you deliver it: it is a zip file. Make a copy, change the copy's extension to .zip and open it. Every .sdlxliff file from the original package should be in it.
+
+:::note[Removing the package can't be undone]
+memoQ cannot bring a removed package back. Keep the .sdlppx and the files you exported until the client has accepted the job.
 :::
 
 ### Where it works
