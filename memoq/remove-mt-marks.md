@@ -21,7 +21,7 @@ Do this when the translation is finished, just before you deliver.
 
    ![The Supervertaler editor with its memoQ menu open and "Remove MT marks from an exported file…" highlighted. The tooltip beside it reads: Clean a memoQ XLIFF you exported, so that its rows no longer say they came from machine translation.](/.gitbook/assets/Supervertaler-for-memoQ-Remove-MT-marks-menu.jpg)
 
-3. **Remove the documents from the project.** Back in **Project home → Translations**, select the same documents and remove them from the project.
+3. **Remove the documents from the project.** Back in **Project home → Translations**, select the same documents and remove them from the project. If **Remove** is greyed out, the documents came in a Trados package: see [Projects from a Trados package](#projects-from-a-trados-package).
 4. **Import the clean copies.** Choose **Documents → Import → Import with options**, open the **Clean** folder and select every file in it (Ctrl+A). In the **Document import options** window the action must say **Import as new**. Click **OK**.
 5. **Check.** Open a document and click a row: the Review tab no longer shows an **Inserted match** line.
 
@@ -41,8 +41,22 @@ Anything you change in memoQ between the export and the import is lost, so do th
 
 Some clients want the memoQ XLIFF back rather than the project. Then there is nothing to import: send the copy from the **Clean** folder. This works with a plain .mqxliff, exported without the skeleton, too.
 
+### Projects from a Trados package
+
+When a client sends a Trados package (.sdlppx) and you translate it in memoQ, the documents belong to the package, and memoQ will not remove them one at a time: **Remove** is greyed out. This is memoQ, not a setting your client chose. Remove the whole package instead:
+
+1. **Export and clean** the documents, as in steps 1 and 2 above.
+2. **Remove the package.** In **Project home → Translations**, on the **Documents** tab, click **Packages**. Select the package and remove it.
+3. **Import the clean copies**, as in step 4 above: **Import with options**, **Import as new**.
+4. **Create the return package** (.sdlrpx) as you normally would.
+5. **Check the return package before you deliver.** A return package is a zip file. Make a copy of it, change the copy's extension to .zip and open it: every .sdlxliff file from the original package should be in it.
+
+:::caution[Try it on a small job first]
+Users have delivered return packages made this way, but we have not yet tested how the client's Trados reads them. Keep the files you exported until the client has accepted the job.
+:::
+
 ### Where it works
 
 - **Local projects:** yes.
-- **Projects from a handoff package:** the documents keep their IDs, so the return package should carry them back as usual. Try it once on a small job before relying on it.
+- **Projects from a Trados package:** yes, by removing the whole package – see [above](#projects-from-a-trados-package).
 - **memoQ server (online) projects:** no. A translator cannot remove documents from an online project, so the clean copies cannot take the originals' place.
