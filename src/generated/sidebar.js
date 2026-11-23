@@ -403,7 +403,7 @@ const sidebar = [
             "link": "/memoq/tracked-changes/"
           },
           {
-            "label": "AI Assistants (Claude Desktop, ChatGPT)",
+            "label": "Supervertaler MCP Server (Claude Desktop, ChatGPT)",
             "link": "/memoq/mcp-server/"
           },
           {

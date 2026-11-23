@@ -1,5 +1,5 @@
 ---
-title: "AI Assistants (Claude Desktop, ChatGPT)"
+title: "Supervertaler MCP Server (Claude Desktop, ChatGPT)"
 ---
 
 Supervertaler for memoQ can connect **Claude Desktop** or **ChatGPT desktop** – or any AI app that runs a local MCP server – to your live memoQ project. You chat in the assistant's window; it reads the document you are translating, your confirmed segments and your termbases, and translates for you. The tokens are billed to your Claude or ChatGPT subscription, not to an API key.

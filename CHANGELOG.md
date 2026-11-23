@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-23
 
+- **memoQ: the AI assistants page is now called *Supervertaler MCP Server (Claude Desktop, ChatGPT)*,** as on the Trados side, so it is found by looking for "MCP".
 - **memoQ: removing MT marks from a Trados package, tested.** *Projects from a Trados package* now says we tested the route from start to finish: Trados accepted the cleaned return package, with no machine-translation origin on any row. The "Try it on a small job first" caution is replaced by a note that removing the package can't be undone, so keep the .sdlppx and the exported files until the client has accepted the job. Checking the return package's contents is now optional, and step 2 says which row to select and that the documents go with the package.
 - **memoQ: removing MT marks from a Trados package.** *Removing MT Marks* has a new section, *Projects from a Trados package*: memoQ greys out **Remove** for documents that came in a Trados package (.sdlppx), so you remove the whole package in the **Packages** view, import the clean copies as new, create the return package as usual and check it contains every .sdlxliff before delivering. Step 3 points there when Remove is greyed out, and *Where it works* no longer says the documents can simply be removed.
 - **Trados: the EverTM page no longer says EverTM is unreleased.** The "Not released yet – coming in 18.20.206" notice at the top is gone: EverTM has been in Supervertaler for Trados since version 18/19.20.206.
