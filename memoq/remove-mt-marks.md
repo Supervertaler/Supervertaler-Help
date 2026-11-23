@@ -41,7 +41,27 @@ Anything you change in memoQ between the export and the import is lost, so do th
 
 Some clients want the memoQ XLIFF back rather than the project. Then there is nothing to import: send the copy from the **Clean** folder. This works with a plain .mqxliff, exported without the skeleton, too.
 
+### Trados return packages
+
+*From version 0.1.32.*
+
+When a client sends a Trados package (.sdlppx) and you translate it in memoQ, what you send back is a return package (.sdlrpx). memoQ writes the machine-translation record into it too, and the client's Trados shows **AT** on every row that came from MT – even the ones you rewrote, which show a faded **AT**. You can clean the return package itself, without changing anything in memoQ:
+
+1. **Create the return package** in memoQ as you normally would.
+2. **Clean it.** In the Supervertaler editor, choose **memoQ → Remove MT marks from a Trados return package…** and select the .sdlrpx. The editor writes a clean copy, under the same name, into a **Clean** folder beside it, and reports how many marks it removed. The return package you created is not changed.
+3. **Deliver the clean copy** from the **Clean** folder.
+
+In the clean copy every row reads as your own translation: Trados shows no **AT** on it. Your translations, the rows' statuses, the package's files and their IDs stay exactly as they were; only the machine-translation origin goes. We tested this with a package made in Trados: the clean return package went back into the Trados project without a complaint, and no row showed MT.
+
+It removes the record of any MT engine, Trados's own neural and adaptive MT included. It also works on a single .sdlxliff, for a client who wants the files rather than a package.
+
+:::note[memoQ still shows the marks]
+Only the copy is cleaned. Inside memoQ the rows still say *machine translation*, so if you export the return package again – after a change, say – clean the new one too.
+:::
+
 ### Projects from a Trados package
+
+If you deliver a return package, [cleaning the return package](#trados-return-packages) is quicker than the steps below. These clean the documents in memoQ itself.
 
 When a client sends a Trados package (.sdlppx) and you translate it in memoQ, the documents belong to the package, and memoQ will not remove them one at a time: **Remove** is greyed out. This is memoQ, not a setting your client chose. Remove the whole package instead:
 
@@ -61,5 +81,5 @@ memoQ cannot bring a removed package back. Keep the .sdlppx and the files you ex
 ### Where it works
 
 - **Local projects:** yes.
-- **Projects from a Trados package:** yes, by removing the whole package – see [above](#projects-from-a-trados-package).
+- **Projects from a Trados package:** yes. Clean the [return package](#trados-return-packages), or the documents themselves by [removing the whole package](#projects-from-a-trados-package).
 - **memoQ server (online) projects:** no. A translator cannot remove documents from an online project, so the clean copies cannot take the originals' place.
