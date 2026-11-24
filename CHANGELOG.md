@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-24
+
+- **Trados: new page *Removing MT Marks*** (coming in v18/19.20.210). The batch task **Supervertaler - Remove MT marks** takes the AT and AI marks (and the faded ones) off project files before delivery: when to use it and the contract caution, the steps, what it removes and what it leaves, locked segments, the report, large projects, how it differs from RWS's Batch Anonymizer, and questions. Listed under *More Tools*.
+
 ## 2026-11-23
 
 - **memoQ: cleaning a Trados return package** (from v0.1.32). *Removing MT Marks* has a new section, *Trados return packages*: the editor's **memoQ → Remove MT marks from a Trados return package…** cleans the .sdlrpx itself, so Trados shows no AT, with nothing to change in memoQ. *Projects from a Trados package* points to it as the quicker route, and *Where it works* names both.
