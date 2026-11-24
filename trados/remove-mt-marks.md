@@ -27,7 +27,7 @@ Do this when the translation is finished, just before you deliver.
 4. **Check.** Open a document: no segment shows AT or AI any more. The task's report is in the **Reports** view.
 5. **Deliver** as usual: create the return package, or send the files.
 
-You can also add the task to a task sequence of your own, in front of **Finalize**. For a return package, run the task first, then click **Create Return Package** on the **Home** ribbon.
+You can also add the task to a task sequence of your own, in front of **Finalize**. For a return package, run the task first, then click **Create Return Package** on the **Home** ribbon, or right-click the project in **Projects** and choose it there.
 
 ### What it removes, and what it leaves
 
