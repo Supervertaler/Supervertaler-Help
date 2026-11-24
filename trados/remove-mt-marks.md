@@ -21,7 +21,7 @@ Segments that Supervertaler writes itself (Batch Translate, Translate active seg
 
 Do this when the translation is finished, just before you deliver.
 
-1. **Close the documents in the Editor.** Save them first.
+1. **Save your work.** Documents open in the Editor can stay open: Studio closes them while the task runs and opens them again afterwards.
 2. **Select the files.** In **Projects**, select the project to clean every file in it; or in **Files**, select the files you want.
 3. **Run the task.** Right-click and choose **Batch Tasks → Supervertaler - Remove MT marks** (or **Home → Batch Tasks**), then click **Finish**.
 4. **Check.** Open a document: no segment shows AT or AI any more. The task's report is in the **Reports** view.
@@ -63,7 +63,7 @@ The Batch Anonymizer also changes where a segment came from, but it leaves a *Be
 
 **Does it remove the AI mark too?** Yes. Studio stores an AI engine's translations as neural machine translation, with the engine's name, so they are removed like any AT.
 
-**I ran it and a segment still shows AT or AI.** Is the segment locked? Was the document open in the Editor while the task ran? Close it and run the task again.
+**I ran it and a segment still shows AT or AI.** Is the segment locked? Locked segments are left as they are. Otherwise, check the task's report in the **Reports** view to see whether the file was finished.
 
 **Can I undo it?** No. Go back to your copy of the project.
 
