@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-24
+
+- **Trados: a plugin that disappears after an update.** *Troubleshooting → The installer finishes, but the plugin never appears* now names updating Studio or the plugin as a typical moment for it, and has a note for people who installed from the App Store inside Studio: that route never shows the installer's **"Remove this plugin from all installation folders"** box, so download the `.sdlplugin` from the App Store website and run it with Studio closed. *Plugin not loading* points there instead of a plain "reinstall".
+
 ## 2026-11-23
 
 - **memoQ: cleaning a Trados return package** (from v0.1.32). *Removing MT Marks* has a new section, *Trados return packages*: the editor's **memoQ → Remove MT marks from a Trados return package…** cleans the .sdlrpx itself, so Trados shows no AT, with nothing to change in memoQ. *Projects from a Trados package* points to it as the quicker route, and *Where it works* names both.

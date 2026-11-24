@@ -14,7 +14,7 @@ Solutions to common issues with the Supervertaler for Trados plugin.
 
 1. **Check Trados version** – the plugin requires **Trados Studio 2022** or later (2022 from v17.20.199)
 2. **Verify .NET Framework** – ensure **.NET Framework 4.8** is installed on your system
-3. **Reinstall the plugin** – remove the plugin via **Trados Plugin Management**, restart Trados, then install it again
+3. **Reinstall the plugin** – see [The installer finishes, but the plugin never appears](#the-installer-finishes-but-the-plugin-never-appears) below: a reinstall only helps if the old copy is removed first
 4. **Check for errors** – open **Trados Plugin Management** and look for error messages next to the Supervertaler plugin entry
 
 :::note
@@ -39,7 +39,7 @@ After installing or updating the plugin, always restart Trados Studio completely
 
 ## The installer finishes, but the plugin never appears
 
-**Symptoms:** You install from the App Store, the Trados Plugin Installer runs through every step and reports success, and then Supervertaler is not in the **View** menu and not in **Plugin Management**. Reinstalling does exactly the same thing. Often the plugin was working before and disappeared on its own.
+**Symptoms:** You install from the App Store, the Trados Plugin Installer runs through every step and reports success, and then Supervertaler is not in the **View** menu and not in **Plugin Management**. Reinstalling does exactly the same thing. Often the plugin was working before and disappeared on its own, for example after you updated Trados Studio or the plugin.
 
 This is the most common installation problem, and it has one cause far more often than any other.
 
@@ -57,6 +57,10 @@ So:
 4. Start Studio.
 
 That is the whole fix in most cases.
+
+:::note[Installed from the App Store inside Studio?]
+Clicking **Install** in the App Store inside Trados Studio never shows the installer, so you never see the **"Remove this plugin from all installation folders"** box, and the old copy can stay where it is. Use the downloaded installer instead: close Studio, download the build for your Studio version from the [RWS App Store website](https://appstore.rws.com/plugin/432), double-click the `.sdlplugin` file and follow the steps above.
+:::
 
 ### Second: is there more than one copy in the Packages folder?
 
