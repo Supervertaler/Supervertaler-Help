@@ -43,6 +43,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | `Ctrl+Shift+T` | Translate multiple segments |
 | `Ctrl+Space` | Insert the currently selected match from the grid |
 | `Alt+1…9` | Insert TermLens term #1…#9 (double-tap for #11…#99) |
+| `Ctrl` (tap) | Show the [TermLens popup](/workbench/termbases/termlens-popup/): the active segment's terms at the cursor. Press and release Ctrl on its own. Then `Left`/`Right` to choose, `Enter` or `1…9` to insert, `Esc` to close |
 | `Ctrl+Alt+Q` | QuickTrans instant-translation popup (works system-wide) |
 | `Ctrl+Q` | Open QuickLauncher (AI prompt actions) |
 
@@ -102,6 +103,7 @@ Master these shortcuts to work faster in Supervertaler. The exact keys are confi
 | `Alt+Up` (or `Ctrl+Shift+1`) | Quick-add the selected term pair to the project termbase |
 | `Alt+Down` (or `Ctrl+Shift+2`) | Quick-add the selected term pair to the background termbase |
 | `Ctrl+Alt+N` | Add the selection to Non-Translatables |
+| `Ctrl` (tap) | Show the [TermLens popup](/workbench/termbases/termlens-popup/); in it, `E` or `Up` edits the highlighted term and `I` or `Down` shows its details |
 
 ## Voice (if enabled)
 
