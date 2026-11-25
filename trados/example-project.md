@@ -4,18 +4,18 @@ title: "Try the example project"
 
 *From v18/19.20.210.*
 
-The example project is a small, ready-made Trados project for trying Supervertaler before you use it on real work. It takes a minute to make, and you can delete it or start it afresh whenever you like.
+The example project is a small, ready-made Trados project for trying Supervertaler before you use it on real work. It takes a minute to create, and you can delete it or start it afresh whenever you like.
 
 Keep this page open beside Studio while you work through it.
 
-## Make the example project
+## Create the example project
 
 1. Open Supervertaler's settings: press **Ctrl+Alt+Shift+S**, or click **Supervertaler Settings** on Studio's **Add-Ins** tab. Both work in every view, with or without a project open.
 2. On the **AI Settings** tab, click **Open example project…**.
 3. Choose the **source language** and the **target language**. One of them has to be English, because the example document is written in English. The lists show languages ("Dutch"); tick **Show language variants** if you want a particular variant, such as "Dutch (Belgium)" or "English (United Kingdom)".
-4. Click **Make the project**.
+4. Click **Create project**.
 
-Supervertaler makes the project in Studio's own Projects folder and opens the document in the Editor. When it is done, a message lists a few things to try, with a button that opens this page.
+Supervertaler creates the project in Studio's own Projects folder and opens the document in the Editor. When it is done, a message lists a few things to try, with a button that opens this page.
 
 ## What is in it
 
@@ -36,7 +36,7 @@ Can't see a panel mentioned below? Studio remembers where each panel goes, so it
 
 ## Things to try
 
-The sentences below are the English ones. If you made the project *into* English, look for the same sentence in your language: the document is the same, in the same order.
+The sentences below are the English ones. If you created the project *into* English, look for the same sentence in your language: the document is the same, in the same order.
 
 ### 1. See the translation memory at work
 
@@ -85,9 +85,9 @@ Open the bank's folder (in the Supervertaler Assistant, **Open folder** next to 
 Click **Open example project…** again and choose the same languages. Supervertaler asks:
 
 * **Open it:** opens the example project as it is, with your changes.
-* **Start afresh:** deletes the example project, with its termbase and memory bank, and makes a new one. Close its document in the Editor first.
+* **Start afresh:** deletes the example project, with its termbase and memory bank, and creates a new one. Close its document in the Editor first.
 
-Choosing other languages makes a second example project next to the first.
+Choosing other languages creates a second example project next to the first.
 
 When you are done, delete the example project in Studio's **Projects** view like any other project.
 
@@ -96,7 +96,7 @@ When you are done, delete the example project in Studio's **Projects** view like
 Everything you tried here works the same way in your own projects. Good next pages:
 
 * [Getting Started](/trados/getting-started/): the settings to check before your first real job.
-* [Memory banks](/trados/ai-assistant/super-memory/): make one for each client.
+* [Memory banks](/trados/ai-assistant/super-memory/): create one for each client.
 * [AI Cost Guide](/trados/ai-cost-guide/): what AI translation costs, and how to keep it low.
 
 Questions or ideas? Ask on [Reddit (r/Supervertaler)](https://www.reddit.com/r/Supervertaler/), where other users can see the answer too.
