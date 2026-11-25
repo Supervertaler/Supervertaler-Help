@@ -42,6 +42,8 @@ The sentences below are the English ones. If you created the project *into* Engl
 
 ### 1. See the translation memory at work
 
+Every sentence with a match in the example translation memory has a Studio comment saying what kind of match it is, so you can find them as you go: look for the comment marker in the Editor, or open the **Comments** pane from Studio's **View** tab for the full list.
+
 Go to the first bullet under **1 Safety instructions**: "Disconnect the appliance from the mains before opening the cover." Studio's **Translation Results** pane shows a 100% match from the example translation memory. So do "Before you open the cover, read the safety instructions." (section 7) and "Connect the hot water pipe to the red outlet." (section 4).
 
 "The maximum water pressure is 0.6 MPa (6 bar)." (section 3) has a match that differs only in its numbers. Studio scores it 100% and fills in the new numbers itself.
