@@ -31,6 +31,10 @@ const sidebar = [
             "link": "/trados/getting-started/"
           },
           {
+            "label": "Try the example project",
+            "link": "/trados/example-project/"
+          },
+          {
             "label": "Licensing & Pricing",
             "link": "/trados/licensing/"
           },

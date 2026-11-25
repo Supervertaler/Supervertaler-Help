@@ -8,6 +8,7 @@
 * [Supervertaler for Trados](trados/README.md)
 * [Installation (Trados)](trados/installation.md)
 * [Getting Started](trados/getting-started.md)
+* [Try the example project](trados/example-project.md)
 * [Licensing & Pricing](trados/licensing.md)
 * [AI Cost Guide](trados/ai-cost-guide.md)
 * [Token Usage & Costs](trados/usage-costs.md)
