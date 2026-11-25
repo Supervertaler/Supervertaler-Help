@@ -47,7 +47,7 @@ This is the most common installation problem, and it has one cause far more ofte
 
 **The installer fails silently if Studio is running.** Not with an error – it completes normally and reports success, having changed nothing that matters.
 
-Each install location holds the plugin twice: the package, and an **unpacked** folder that Studio loads from and holds open the whole time it is running. An installer that cannot replace the unpacked folder leaves the old one in place, and **Studio will not re-extract into an unpacked folder that already exists**. The result is a successful install that changes nothing – even with the cleanup checkbox ticked, because that cleanup cannot delete files that are in use either.
+Each install location holds the plugin twice: the package, and an **unpacked** folder that Studio loads from and holds open the whole time it is running. An installer that cannot replace the unpacked folder leaves the old one in place, sometimes only half deleted. At its next start Studio unpacks the plugin again only when the package is **newer** than the unpacked folder – so once a leftover folder of the same version is in the way, **reinstalling the same version never repairs it**. The result is a successful install that changes nothing – even with the cleanup checkbox ticked, because that cleanup cannot delete files that are in use either.
 
 So:
 
@@ -57,6 +57,10 @@ So:
 4. Start Studio.
 
 That is the whole fix in most cases.
+
+:::tip[Supervertaler warns you]
+From version 18/19.20.210, Supervertaler checks about 30 seconds after Studio starts whether another copy of the same Studio is still running without a window. If it finds one, it tells you its process ID and how to close it in Task Manager. It never closes anything itself.
+:::
 
 :::note[Installed from the App Store inside Studio?]
 Clicking **Install** in the App Store inside Trados Studio never shows the installer, so you never see the **"Remove this plugin from all installation folders"** box, and the old copy can stay where it is. Use the downloaded installer instead: close Studio, download the build for your Studio version from the [RWS App Store website](https://appstore.rws.com/plugin/432), double-click the `.sdlplugin` file and follow the steps above.
@@ -130,7 +134,7 @@ C:\ProgramData\Trados\Trados Studio\19\Plugins\                        <- "This 
 Inside each one there are two folders that matter, and **both** need clearing:
 
 - `Packages` holds the installed `.sdlplugin` file.
-- `Unpacked` holds the files Studio actually loads, extracted from it. This is the one people miss, and it is the one that blocks a reinstall: Studio will not re-extract over an `Unpacked` folder that is already there.
+- `Unpacked` holds the files Studio actually loads, extracted from it. This is the one people miss, and it is the one that blocks a reinstall: Studio unpacks the plugin again only when the package is newer, so a leftover folder of the same version stays in the way.
 
 :::note
 **Two things that catch people out.** `AppData` is hidden by default, so you cannot browse to it – paste the whole path into the File Explorer address bar instead and press Enter.
