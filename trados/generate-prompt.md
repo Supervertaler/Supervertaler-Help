@@ -89,7 +89,7 @@ When you are satisfied with the generated prompt:
 3. Enter a name for your prompt (e.g., "Acme Patent NL-EN")
 4. Click **Save**
 
-The prompt is saved to the **Translate** category in the Prompt Manager and immediately appears in the prompt dropdown on the Batch Operations tab.
+The prompt is saved to the **Translate** category in the Prompt Manager and becomes the prompt Batch Translate uses: it is selected in the prompt dropdown on the Batch Operations tab, for this project and as your default, just as if you had picked it there yourself. To go back, pick another prompt in the dropdown. The proofreading prompt is not changed. *(From v18/19.20.210. Before that, the saved prompt was only added to the dropdown, and you selected it yourself.)*
 
 :::note
 **Generated prompts are formatted in proper Markdown** – `##` headings for each major section, `-` bullet lists, `**bold**` for emphasised terms, and a Markdown table for the project-specific termbase. Open one in Obsidian, VS Code, GitHub, or any Markdown-aware viewer and it renders cleanly with a navigable outline. The prompt is also still a perfectly valid system prompt for the translator AI – the Markdown markup is structural, not output instruction.
@@ -165,7 +165,7 @@ If your termbase contains incorrect or low-quality entries, these will be inject
 
 **Use with Batch Translate**
 
-After saving the generated prompt, select it from the prompt dropdown on the Batch Operations tab. It works with all scopes and providers, just like any other prompt.
+After you save it, the generated prompt is selected in the prompt dropdown on the Batch Operations tab. It works with all scopes and providers, just like any other prompt.
 
 **AutoPrompt always uses your configured AI provider**
 

@@ -90,7 +90,7 @@ The **Supervertaler Assistant** pane is where most of Supervertaler lives. If yo
 
 * **Batch Operations**
   * **Translate** and **Proofread** at the top switch the whole tab between translating the document and checking a translation. The prompt list follows the mode you are in.
-  * **AutoPrompt…** asks the AI to write a translation prompt for this project, from the document, the termbase and the memory bank. When it is done, right-click the AI's message, choose **Save as Prompt…** and give it a name. Then pick it in the **Prompt** list: from then on Batch Translate uses it. See [AutoPrompt](/trados/generate-prompt/).
+  * **AutoPrompt…** asks the AI to write a translation prompt for this project, from the document, the termbase and the memory bank. When it is done, right-click the AI's message, choose **Save as Prompt…** and give it a name. The saved prompt goes straight into the **Prompt** list, selected: from then on Batch Translate uses it. See [AutoPrompt](/trados/generate-prompt/).
   * **Preview prompt** shows exactly what would be sent to the AI, prompt, termbase, memory bank and all, without sending anything.
   * **SuperBench…** has three AI models translate the same segments of this document, and a fourth judge them, so you can see which model suits the work. See [SuperBench](/trados/superbench/).
 * **Chat:** talk to the AI about this project. Ask it to explain a sentence, suggest a better term, or check your translation of a segment. See [Chat](/trados/ai-assistant/chat/).
