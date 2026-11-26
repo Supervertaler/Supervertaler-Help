@@ -759,6 +759,10 @@ const sidebar = [
             "link": "/workbench/ai-translation/chat/"
           },
           {
+            "label": "Supervertaler MCP Server",
+            "link": "/workbench/ai-translation/mcp-server/"
+          },
+          {
             "label": "FuzzyFixer (Adapt Fuzzy Matches)",
             "link": "/workbench/ai-translation/fuzzyfixer/"
           },

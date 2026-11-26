@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-26
+
+- **Workbench: new page, *Supervertaler MCP Server (Workbench)*.** For the first Workbench version after 1.10.381: connecting Claude Desktop (or another app that runs a local MCP server) to the project open in Workbench. What you can ask, installing the extension from the Workbench release on GitHub, the twelve tools (reading the project, segments, the active segment, comments and prompts; going to a segment; term lookup; TM list and search), what it cannot do yet (it changes nothing), privacy, and troubleshooting. In *AI Translation*, after *Chat*. **Publish it together with that Workbench release**: its download link points at a file the release carries.
+
 ## 2026-11-25
 
 - **Trados: new page, *Try the example project*.** For Supervertaler for Trados 18/19.20.210: how to make the example project (source and target language, Settings by **Ctrl+Alt+Shift+S** or the Add-Ins tab), what is in it (document, translation memory with planted exact, number-only, fuzzy and weak matches, termbase, memory bank), and a tour that names the sentences to try each feature on: TM matches, FuzzyFixer, TermLens, Alt+T and Batch Translate, Proofread, QuickLauncher and the memory bank. Linked from the plugin's closing message. In *Get Started*, after *Getting Started*.
