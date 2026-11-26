@@ -8,6 +8,10 @@ This file starts on 2026-09-16. Anything before the entries below is in the git
 history rather than here, because reconstructing it after the fact would be
 guesswork.
 
+## 2026-11-26
+
+- **memoQ 0.1.33.** *Prompt editor*, the usage statistics setting: the ping also sends the processor type and any virtual machine. *Supervertaler MCP Server*, troubleshooting: the fix for ChatGPT desktop seeing Trados instead of memoQ is available now (press **Set up ChatGPT desktop** again), not with Trados 18/19.20.210.
+
 ## 2026-11-25
 
 - **Trados: new page, *Try the example project*.** For Supervertaler for Trados 18/19.20.210: how to make the example project (source and target language, Settings by **Ctrl+Alt+Shift+S** or the Add-Ins tab), what is in it (document, translation memory with planted exact, number-only, fuzzy and weak matches, termbase, memory bank), and a tour that names the sentences to try each feature on: TM matches, FuzzyFixer, TermLens, Alt+T and Batch Translate, Proofread, QuickLauncher and the memory bank. Linked from the plugin's closing message. In *Get Started*, after *Getting Started*.
