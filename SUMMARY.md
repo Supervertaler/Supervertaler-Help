@@ -63,6 +63,7 @@
 * [QuickLauncher](trados/quicklauncher.md)
 * [Text Transforms](trados/text-transforms.md)
 * [SuperCleaner](trados/supercleaner.md)
+* [Removing MT Marks](trados/remove-mt-marks.md)
 
 ## 🧩 Integration
 

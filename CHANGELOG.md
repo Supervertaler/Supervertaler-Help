@@ -21,6 +21,7 @@ guesswork.
 
 - **Trados: a plugin that disappears after an update.** *Troubleshooting → The installer finishes, but the plugin never appears* now names updating Studio or the plugin as a typical moment for it, and has a note for people who installed from the App Store inside Studio: that route never shows the installer's **"Remove this plugin from all installation folders"** box, so download the `.sdlplugin` from the App Store website and run it with Studio closed. *Plugin not loading* points there instead of a plain "reinstall".
 - **Trados: plugin folders for Studio 2022.** *Troubleshooting → Last resort: clean out every copy by hand* now lists the three Studio 2022 folders (`...\Trados Studio\17\Plugins\`) in their own block, like Studio 2024 and 2026, instead of telling you to change `18` to `17`.
+- **Trados: new page *Removing MT Marks*** (coming in v18/19.20.210). The batch task **Supervertaler - Remove MT marks** takes the AT and AI marks (and the faded ones) off project files before delivery: when to use it and the contract caution, the steps, what it removes and what it leaves, locked segments, the report, large projects, how it differs from RWS's Batch Anonymizer, and questions. Listed under *More Tools*.
 
 ## 2026-11-23
 

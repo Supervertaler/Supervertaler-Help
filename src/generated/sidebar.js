@@ -249,6 +249,10 @@ const sidebar = [
           {
             "label": "SuperCleaner",
             "link": "/trados/supercleaner/"
+          },
+          {
+            "label": "Removing MT Marks",
+            "link": "/trados/remove-mt-marks/"
           }
         ]
       },
