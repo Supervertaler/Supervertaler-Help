@@ -68,6 +68,8 @@ The server exposes these tools to the AI app:
 | `create_project` | Create a new Trados Studio project from your source files, optionally from one of your project templates, and add it to the Projects list *(v18/19.20.206)* |
 | `open_project` | Open a project from Studio's Projects list – by its name, or by its project file (`.sdlproj`) – as double-clicking it in the Projects view does. Ask, and it also opens the project's files in the Editor: all of them, or the ones you name *(v18/19.20.206)* |
 | `update_segments` | Write translations and/or set confirmation statuses (see safety rails below). *From v18/19.20.198* it can also update the project's main translation memory as it goes, for the segments it confirms – only when you ask. *From v18/19.20.205* it can also fill a segment with a copy of its source, as Ctrl+Insert does – the way it fills a segment that holds only tags |
+| `merge_segments` | Merge neighbouring segments of one paragraph into one, as Studio's **Merge Segments** (Ctrl+Alt+S) does – when two short sentences read better as one in your target language. The AI suggests it and waits for your yes *(v18/19.20.210; see [Merging and splitting segments](#merging-and-splitting-segments-from-v181920210))* |
+| `split_segment` | Split a segment in two before the words you name, as Studio's **Split Segment** (Alt+Shift+T) does – also the way to undo a merge *(v18/19.20.210)* |
 | `add_term` | Add a term pair to your Write termbases – direction-aware per termbase, with optional definition/domain/notes and source/target abbreviations *(abbreviations from v18/19.20.205)*, termbase targeting by name or by role (project vs background – see below), and a per-termbase echo of exactly what was stored; duplicates echo the existing entry they matched *(scope + duplicate echo v18.20.159)* |
 | `update_term` | Fix an existing entry in your Write termbases – exact-match; can change the term pair and, from v18.20.159, also the entry's notes, definition and domain, and from v18/19.20.205 its abbreviations – only the fields you name change, everything else is preserved |
 | `delete_term` | Remove an entry from your Write termbases – destructive, so the AI confirms first *(v18.20.113)* |
@@ -118,6 +120,24 @@ The server exposes these tools to the AI app:
 * **The translation memory is updated only when you ask** *(from v18/19.20.198)*. Asked to (*"…and update the TM as you go"*), `update_segments` also writes each segment it leaves **Translated**, **Translation Approved** or **Signed Off** to the project's main translation memories – the ones with **Update** ticked in Project Settings – exactly as Studio does when you confirm a segment yourself. A segment the AI rewrites updates the unit it wrote before rather than adding a second one, and translations stored for the same sentence in other places are left alone. **Drafts are never sent**, so nothing reaches the memory unreviewed. The AI's report says, for each segment, whether each memory took it (added, updated, merged or unchanged) or why it was skipped.
 * **A TM update takes effect at once.** Unlike the document edits, it is not undone by closing the document without saving. Save the document afterwards all the same: the link between each segment and its unit in the memory is kept in the document, and it is what lets a later rewrite update that unit instead of adding a duplicate. *(The `update_tm` batch task below does the same for every confirmed segment in a document at once.)*
 * The AI is instructed to only make changes you asked for, and to report exactly what it changed.
+
+### Merging and splitting segments *(from v18/19.20.210)*
+
+Studio cuts the source into segments by the source language's sentence rules, not by what reads well in your target language. Two short sentences often make one better sentence in translation. In this Dutch example, a question and its answer:
+
+> *Gaat jouw pensioen over naar het nieuwe pensioen? Dan krijg je een persoonlijke pensioenpot.*
+> → *If your pension is moving to the new pension system, you will get a personal pension pot.*
+
+The AI knows this, for any language pair and any kind of document. When it sees such a pair it **suggests** the merge and waits for your yes. It does not merge on its own unless you have told it to merge wherever it helps. Once the segments are merged, it writes the translation of the whole sentence into the merged segment. It never fakes a merge by putting the whole translation in one segment and leaving the other empty.
+
+`merge_segments` and `split_segment` run Studio's own **Merge Segments** and **Split Segment** commands, so the result is exactly what you get when you do it by hand. Studio doesn't have to be the window in front.
+
+* **What is refused, with nothing changed:** segments in different paragraphs (a paragraph break is part of the document), segments that are not next to each other, locked segments, and segments that are already **Translated**, **Translation Approved** or **Signed Off**. Studio would stop to ask about those; if you do want them merged, have the AI set them to Draft first. Also refused: two segments whose targets carry the same tag number, a split inside a tag pair (bold or a link that runs across the split point) unless you ask for that, and anything Studio's own command is not available for.
+* **Not where one-to-one alignment matters.** The AI is told not to merge in TM-sensitive jobs, legal or patent text, subtitles, or strings with length limits, and never across headings, list items or table cells.
+* **Undo:** Studio cannot undo a merge with Ctrl+Z, so split the segment again. A split can be undone with Ctrl+Z.
+* **Segment numbers change.** The merged segment keeps one number, and the halves of a split get new ones. The AI reads the segments again before it writes to them.
+* **The TM gets the merged sentence**, as when you merge yourself. Studio may also apply a better TM match to the merged segment if you have that option on (**File → Options → Editor → Automation**).
+* Studio 2024 and 2026 only. In Studio 2022 the tools say they are not available. In memoQ, plugins cannot join or split rows, so the AI asks you to join them (**Ctrl+J**) and then reads them again.
 
 ### Two Studios open at once *(from v18.20.184)*
 
@@ -305,6 +325,8 @@ You talk to the AI in plain language – there are no commands to memorise. The 
 * "Redo segment 14 – too literal, make it flow better, then update it."
 * "Set all my Draft segments to Translated." (status-only changes work too)
 * "Translate segments 20 to 40, set them to Translated and update the TM as you go." *(from v18/19.20.198)*
+* "Segments 3 and 4 would read better as one English sentence – merge them and translate them together." *(from v18/19.20.210)*
+* "Split segment 12 before *Then you get*." *(from v18/19.20.210)*
 
 Everything the AI writes lands as **Draft** unless you say otherwise, locked segments are never touched, and nothing is saved until you save in Studio – except a TM update you asked for, which is written at once.
 

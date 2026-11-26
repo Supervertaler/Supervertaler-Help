@@ -10,6 +10,7 @@ guesswork.
 
 ## 2026-11-26
 
+- **Trados: merging and splitting segments through the AI (18/19.20.210).** *Supervertaler MCP Server*: two new tools in the table, `merge_segments` and `split_segment`, and a new section, *Merging and splitting segments*. It covers when the AI suggests a merge (two short sentences that read better as one in the target language) and what it refuses: different paragraphs, locked or confirmed segments, a split inside a tag pair. A merge can't be undone with Ctrl+Z, and the section says Studio 2022 is not supported. Two examples in the cookbook. *memoQ → Supervertaler MCP Server*: the table says memoQ has no way to do this, so Claude asks you to join the rows (Ctrl+J).
 - **memoQ 0.1.33.** *Prompt editor*, the usage statistics setting: the ping also sends the processor type and any virtual machine. *Supervertaler MCP Server*, troubleshooting: the fix for ChatGPT desktop seeing Trados instead of memoQ is available now (press **Set up ChatGPT desktop** again), not with Trados 18/19.20.210.
 
 ## 2026-11-25

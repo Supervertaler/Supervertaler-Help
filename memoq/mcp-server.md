@@ -151,6 +151,7 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_supermemory_context` | ✓ | One bank’s brief, terminology and style, formatted for the model |
 | `search_supermemory` | ✓ | Full-text search inside a bank |
 | `update_segments`, `insert_into_active_segment` | ✗ | No write access to the editor – use `stage_translations` + Pre-translate |
+| `merge_segments`, `split_segment` | ✗ | memoQ lets no plugin join or split rows. When two short sentences would read better as one in your target language, Claude suggests joining them and asks you to do it (select both rows, **Ctrl+J**), then reads the rows again |
 | `search_tm`, `search_studio_tm`, `compare_document_to_tm` | ✗ | memoQ's TMs are not readable by plugins; confirmed pairs are the substitute |
 | `check_numbers`, `check_tags`, `check_nbsp`, `check_terminology` | ✓ | QA over the live document, paragraph by paragraph – needs the live link. `check_terminology` runs against the termbases ticked Read, so give it a project one: [Termbase from this prompt's terms](/memoq/prompt-editor/#termbase-from-this-prompts-terms) from an AutoPrompt draft |
 | `find_inconsistencies` | ✓ | Repeated source paragraphs translated differently – needs the live link |
