@@ -83,6 +83,18 @@ If you also use the Trados plugin, both extensions coexist – Claude shows them
 
 In memoQ, open a project and click into any segment with Supervertaler selected as the MT engine – that is what starts the plugin's side of the connection. Then ask the assistant: *"What's in my memoQ project?"* If it answers with your language pair and segment count, you are connected.
 
+### If ChatGPT talks about Trados, or finds no memoQ tools
+
+Ask ChatGPT, in a new chat: *"List the exact names of the tools you have from the supervertaler_memoq MCP server. Don't run any commands."*
+
+- **The list includes `list_trados_instances`:** ChatGPT started the server without the setting that tells it to serve memoQ, so it behaved as the Trados server. Supervertaler for Trados 18.20.210 / 19.20.210 and later fixes this: the server recognises memoQ from the folder it is installed in. Press **Set up ChatGPT desktop** again to get the current server, then quit ChatGPT from the notification area and start it again.
+- **The list is empty, or has only `help` and `get_project`:** the server has not reached memoQ yet. Open memoQ, click into a segment, and ask again.
+
+Two more things that can mislead:
+
+- **ChatGPT remembers earlier chats.** If you once connected it to Supervertaler for Trados, it may describe that Trados project from memory, even with Trados closed. Start a new chat outside any ChatGPT project, and check **Settings → Personalization → Memory**.
+- **ChatGPT may work around a missing connection.** It can run a command and read the project name from memoQ's window title. That is not the Supervertaler connection, and it cannot read or translate your segments.
+
 ### Other MCP clients
 
 Claude Code, or anything else that runs a local STDIO server: set up ChatGPT desktop once as above, which puts the server at `C:\Users\<you>\Supervertaler\memoq\mcp\SupervertalerMcpServer.exe`, and register that with the one environment variable set:
@@ -94,6 +106,8 @@ Claude Code, or anything else that runs a local STDIO server: set up ChatGPT des
   "env": { "SUPERVERTALER_HOST": "memoq" }
 }
 ```
+
+If your client has no place for environment variables, use `"args": ["--host", "memoq"]` instead. A server kept in the `memoq\mcp` folder where the setup puts it recognises memoQ even without either.
 
 The server finds memoQ's connection file in your Supervertaler data folder (`C:\Users\<you>\Supervertaler\memoq\runtime\bridge.json`, or wherever you moved that folder). If you ever need to point it somewhere else, `SUPERVERTALER_BRIDGE_FILE` with a full path overrides it.
 
