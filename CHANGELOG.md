@@ -10,7 +10,7 @@ guesswork.
 
 ## 2026-11-26
 
-- **Workbench: new page, *Supervertaler MCP Server (Workbench)*.** For the first Workbench version after 1.10.381: connecting Claude Desktop (or another app that runs a local MCP server) to the project open in Workbench. What you can ask, installing the extension from the Workbench release on GitHub, the sixteen tools (reading the project, segments, the active segment, comments and prompts; going to a segment; term lookup; TM list and search; checks on numbers, tags, non-breaking spaces and inconsistencies), what it cannot do yet (it changes nothing), privacy, and troubleshooting. In *AI Translation*, after *Chat*. **Publish it together with that Workbench release**: its download link points at a file the release carries.
+- **Workbench: new page, *Supervertaler MCP Server (Workbench)*.** For Workbench 1.10.382: connecting Claude Desktop (or another app that runs a local MCP server) to the project open in Workbench. What you can ask, installing the extension from the Workbench release on GitHub, the sixteen tools (reading the project, segments, the active segment, comments and prompts; going to a segment; term lookup; TM list and search; checks on numbers, tags, non-breaking spaces and inconsistencies), what it cannot do yet (it changes nothing), privacy, and troubleshooting. In *AI Translation*, after *Chat*. Its download link points at a file that release carries.
 
 ## 2026-11-25
 

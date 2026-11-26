@@ -8,7 +8,7 @@ It is the same [Supervertaler MCP Server](/trados/mcp-server/) that the Trados a
 
 > **This is a first step: the assistant can look, but not change.** It reads the project and can move your cursor to a segment. It cannot write a translation, change a status, add a term or touch a TM. Writing comes in a later version. See [What it can and cannot do](#what-it-can-and-cannot-do).
 
-> **Windows only for now**, and it needs a Workbench version newer than 1.10.381.
+> **Windows only for now**, and it needs Workbench 1.10.382 or later.
 
 ## What you can ask
 
