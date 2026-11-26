@@ -16,8 +16,8 @@ Supervertaler for Trados sends one anonymous, lightweight ping to the developer 
   * OS version (e.g. Windows 11)
   * Trados Studio version
   * System locale (e.g. en-GB)
-  * Whether Windows runs in a virtual machine, and which kind (Parallels, VMware, VirtualBox or Hyper-V); Parallels usually means a Mac
-  * The processor architecture Trados runs as (x86 for Trados Studio 2022 and 2024, amd64 or arm64 for Trados Studio 2026)
+  * Whether Windows runs in a virtual machine, and which kind (Parallels, VMware, VirtualBox, Hyper-V or QEMU); Parallels usually means a Mac
+  * The computer's processor type: amd64, or arm64 for Windows on ARM, which is almost always an Apple Silicon Mac. Before v18/19.20.210 this was the processor Trados runs as, which on Windows on ARM is the emulated one, not arm64
   * Your Windows display scaling and Windows text size (e.g. 150% and 100%)
   * The Supervertaler **UI scale** setting (e.g. 100%)
 
@@ -53,7 +53,7 @@ As a solo developer, usage statistics provide invaluable insight into:
 * How many people are actually using the plugin
 * Which Trados Studio versions to prioritise for testing and compatibility
 * Which OS versions and locales are most common
-* Whether users run Trados on a Mac (via Parallels) or natively on Windows
+* Whether users run Trados on a Mac (in Parallels, VMware Fusion or UTM) or natively on Windows
 * How many users run large display scaling or text size, so the panels are laid out to work with it
 
 This information directly informs development priorities and compatibility testing.
