@@ -77,7 +77,7 @@ An API key is a billing credential. Anyone who has it can spend money on your ac
 
 ## API key
 
-Enter the provider's API key here. **Test Connection** checks it with a small call.
+Enter the provider's API key here. **Test Connection** checks it with a small call. **Copy**, next to the box, copies the key as it is without showing it *(from v18/19.20.210)*; a hidden key can't be copied with Ctrl+C.
 
 ### One key file for every product (from v18.20.187)
 

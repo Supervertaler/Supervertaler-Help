@@ -93,7 +93,7 @@ Assign prompts to slots in **Settings → Prompts**. Select a QuickLauncher prom
 | `Alt+S` | `Option+S` | Open SuperSearch – searches for the selected source/target text across all project files |
 | `Alt+W` | `Option+W` | Search the web for the selected term, in your project's language pair |
 
-## EverTM Matches (coming in v18/19.20.210)
+## EverTM Matches (from v18/19.20.210)
 
 | Shortcut (Windows) | Shortcut (Mac) | Action |
 |---------------------|----------------|--------|

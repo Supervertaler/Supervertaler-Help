@@ -2,10 +2,6 @@
 title: "Try the example project"
 ---
 
-:::note[Coming in v18/19.20.210]
-The example project arrives in Supervertaler for Trados 18/19.20.210, which is not released yet. This page describes it ahead of the release.
-:::
-
 The example project is a small, ready-made Trados project for trying Supervertaler before you use it on real work. It takes a minute to create, and you can delete it or start it afresh whenever you like.
 
 Keep this page open beside Studio while you work through it.

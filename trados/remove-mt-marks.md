@@ -6,10 +6,6 @@ Trados Studio remembers which segments were filled by machine translation. An un
 
 Once you have reworked a segment, the translation is yours. The batch task **Supervertaler - Remove MT marks** takes the marks out of the files, so those segments read like any you typed yourself.
 
-:::note[Coming in v18/19.20.210]
-Remove MT marks is not released yet: it comes with Supervertaler for Trados v18/19.20.210.
-:::
-
 Segments that Supervertaler writes itself (Batch Translate, Translate active segment, an AI assistant through the [MCP server](/trados/mcp-server/)) already read as your own edit, since version 18/19.20.201. This task is for machine translation from the engines in your project – DeepL, Language Weaver, Google, an AI engine and so on – and for files from before 201.
 
 :::caution[Before you run it]

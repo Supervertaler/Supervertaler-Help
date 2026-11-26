@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Supervertaler MCP Server (Claude Desktop, ChatGPT)"
 ---
 

@@ -31,7 +31,7 @@ A Studio TM is still the right choice for a TM you share on a server, a TM a cli
 
 ## What you get
 
-- **[EverTM Matches](/trados/evertm-matches/)** (coming in v18/19.20.210): EverTM's matches in a pane of their own, with everything EverTM knows about each, and ways to remove or correct a wrong translation.
+- **[EverTM Matches](/trados/evertm-matches/)** (from v18/19.20.210): EverTM's matches in a pane of their own, with everything EverTM knows about each, and ways to remove or correct a wrong translation.
 
 - **Matches in Translation Results**, with a match % and the differences from your segment highlighted, as for any TM. EverTM scores a fuzzy match the way Studio does (see [Match percentages](#match-percentages)).
 - **Where each match came from.** The project, client, subject and document it was translated for, and who translated it and when (see [What you see in Studio](#what-you-see-in-studio)).
@@ -54,7 +54,7 @@ EverTM is meant to become the one place for everything you have ever translated:
 - **AI Batch Translate uses EverTM.** Its TM matches, which it sends to the AI with each segment, include EverTM's.
 - **Export to TMX includes the fields, dates and users.**
 
-### Coming in v18/19.20.210
+### New in v18/19.20.210
 
 - **[EverTM Matches](/trados/evertm-matches/), a pane of its own in Studio's Editor.** EverTM's matches with the differences highlighted and a one-line summary under each (client, project, date); the selected match's details, with where EverTM got it; its older translations on request. Insert a match with Alt+Shift+1–9, **remove** a wrong translation from EverTM or **edit** one, with Undo and a list to restore from. Optionally your project's Studio TMs' matches too, clearly marked, so it can take the place of Studio's Translation Results.
 
@@ -131,7 +131,7 @@ EverTM's window (**Settings...**) opens with a short description: EverTM is one 
 
 ## Learning as you work
 
-With EverTM's **Update** box ticked in the project's TM settings, every segment you confirm is added to EverTM, and so is a batch **Update Main Translation Memories**. Your project TMs are updated as usual: EverTM learns alongside them.
+With EverTM's **Update** box ticked in the project's TM settings, every segment you confirm is added to EverTM, and so is a batch **Update Main Translation Memories**. Your project TMs are updated as usual: EverTM learns alongside them. From v18/19.20.210 the batch's translation units get the project and client too, as confirmed segments always did: EverTM finds the project in Studio's Projects list. A project that is not in that list gives units without a project or client, as before.
 
 - **Found at once.** A segment you confirm is offered straight away, as an exact match, when the same sentence comes up again in that Studio. As a fuzzy match it can take a moment to show on the very next segments, because Studio looks those up ahead of time, before EverTM has indexed the new segment; reopening the document shows it. Another Studio finds the segment within a few seconds. Nothing is rebuilt.
 - **Stored like an import:** once per language pair, whatever its direction and variants, with its formatting.

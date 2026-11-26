@@ -4,10 +4,6 @@ title: "EverTM Matches"
 
 **EverTM Matches** is a pane of its own in Studio's Editor that shows [EverTM](/trados/evertm/)'s matches for the segment you are in, with everything EverTM knows about each: where it came from, its client and project, who translated it and when, and its older translations. You can insert a match, correct it in EverTM, or remove a wrong one. If you switch it on, it shows your project's **Studio TMs'** matches too, so it can stand in for Studio's Translation Results.
 
-:::note[Coming in v18/19.20.210]
-EverTM Matches is not released yet: it comes with Supervertaler for Trados v18/19.20.210.
-:::
-
 It needs a Supervertaler licence (or the trial), like TermLens. EverTM itself, in your project's TM list, stays free.
 
 :::caution[Do this once: free Alt+Shift+1–9]
