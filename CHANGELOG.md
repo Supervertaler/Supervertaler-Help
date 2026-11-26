@@ -16,6 +16,7 @@ guesswork.
 ## 2026-11-25
 
 - **Trados: new page, *Try the example project*.** For Supervertaler for Trados 18/19.20.210: how to make the example project (source and target language, Settings by **Ctrl+Alt+Shift+S** or the Add-Ins tab), what is in it (document, translation memory with planted exact, number-only, fuzzy and weak matches, termbase, memory bank), and a tour that names the sentences to try each feature on: TM matches, FuzzyFixer, TermLens, Alt+T and Batch Translate, Proofread, QuickLauncher and the memory bank. Linked from the plugin's closing message. In *Get Started*, after *Getting Started*.
+- **Trados: the warning about a Studio running in the background** (from v18/19.20.210). *Troubleshooting → The installer finishes, but the plugin never appears* has a tip: Supervertaler now says at startup when another copy of the same Studio runs without a window. The same section and *Last resort* no longer say Studio never unpacks over an existing folder: it does when the package is newer, so what blocks a reinstall is a leftover folder of the same version (seen in Studio 2026's own code, 25 Nov 2026).
 
 ## 2026-11-24
 
