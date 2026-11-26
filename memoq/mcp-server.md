@@ -1,4 +1,4 @@
----
+﻿---
 title: "Supervertaler MCP Server (Claude Desktop, ChatGPT)"
 ---
 
@@ -143,7 +143,8 @@ Everything the Trados server can do that memoQ *cannot* comes down to one fact: 
 | `get_active_segment` | ✓ | The row your cursor is on, with what is selected – needs the live link |
 | `go_to_segment` | ✓ | Asks memoQ to select a row – needs the live link |
 | `get_confirmed_pairs` | ✓ | Segments you have confirmed, via [Self-learning](/memoq/self-learning/) |
-| `lookup_term` / `add_term` | ✓ | Your Supervertaler [termbases](/memoq/terminology/), not memoQ's term bases. `add_term` writes to the project termbase |
+| `lookup_term` / `add_term` | ✓ | Your Supervertaler [termbases](/memoq/terminology/), not memoQ's term bases. `add_term` writes to the project termbase. `lookup_term` hits name their termbase and give the entry's number, so an entry added twice shows up *(from 0.1.34)* |
+| `list_terms` | ✓ | Reads a whole Supervertaler termbase, a page at a time, and changes nothing: every entry with its number, all its source and target terms (synonyms included), definition, notes and dates. Lets the assistant find entries whose form in your text differs from the termbase – inflected, split, or with another preposition – which looking terms up misses. Not memoQ's term bases *(from 0.1.34)* |
 | `stage_translations` | ✓ | **The write channel.** Translations wait until you Pre-translate |
 | `get_staged` / `clear_staged` | ✓ | Inspect and reset the staging area |
 | `list_prompts` / `get_prompt` / `save_prompt` | ✓ | The shared [prompt library](/memoq/prompt-editor/). A prompt Claude saves is recorded as drafted by the chat and marked for memoQ, so it does not appear in Trados’s list and the runtime treats its terminology the way it treats [AutoPrompt’s](/memoq/prompt-editor/#a-drafted-prompt-is-the-only-source-of-terminology) |
