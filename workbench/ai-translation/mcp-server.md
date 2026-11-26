@@ -22,6 +22,7 @@ With Workbench running and a project open:
 * "What do my termbases say about the terms in this sentence?"
 * "How did I translate *sluitkracht* before?" (searches your translation memories)
 * "Read through segments 1 to 100 in Workbench and list anything that looks wrong, with segment numbers."
+* "Check the numbers in my Workbench project." / "Are any tags missing?" / "Did I translate anything inconsistently?"
 * "What do the comments on segment 18 say?"
 * "List my Workbench prompts, and show me the patent one."
 
@@ -83,10 +84,16 @@ Cloud-hosted clients (the claude.ai and chatgpt.com websites) cannot reach a pro
 | `lookup_term` | The terms your termbases have for a piece of text, matched as [TermLens](/workbench/termbases/termlens/) matches them. Only the termbases ticked for the project |
 | `list_tms` | Your translation memories, and which are ticked for the project |
 | `search_tm` | Searches your TMs for a word or phrase, in source or target (a concordance search, not a fuzzy match on a whole segment). The TMs ticked for the project by default; all of them on request |
+| `check_numbers` | Translated segments whose numbers differ from the source. Separators are set aside, so 1.234,56 matches 1,234.56 |
+| `check_tags` | Translated segments with a tag or inline code missing from the target, or one in the target that is not in the source. The same check as **Tools → QA Checks** |
+| `check_nbsp` | Translated segments with fewer non-breaking spaces than their source |
+| `find_inconsistencies` | Repeated source segments translated in more than one way, compared with tags and spacing set aside |
 | `get_comments` | The comments on a segment |
 | `list_prompts` / `get_prompt` | Your [prompt library](/workbench/ai-translation/prompt-library/) |
 
-Not available yet: writing or changing translations and statuses, find and replace, adding or changing terms, adding comments, saving, QA checks, pre-translation and export. Do these in Workbench itself.
+Not available yet: writing or changing translations and statuses, find and replace, adding or changing terms, adding comments, saving, pre-translation and export. Do these in Workbench itself.
+
+**The checks only look at translated segments**, and a finding is not always an error: a number written out as a word, a unit that was converted, formatting that rightly differs. The assistant lists what it found; you decide, and correct in Workbench. Ask it to take you to a segment and your cursor is there.
 
 **Segment numbers** are the numbers in the first column of Workbench's grid, so a number the assistant cites is one you can find.
 
