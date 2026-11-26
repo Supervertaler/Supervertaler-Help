@@ -10,6 +10,8 @@ guesswork.
 
 ## 2026-11-26
 
+- **memoQ: MCP tool `list_terms`.** *Supervertaler MCP Server (Claude Desktop, ChatGPT)*, tool table: new row for `list_terms` (a whole Supervertaler termbase, page by page), and `lookup_term` hits now name their termbase and entry number, for memoQ 0.1.34.
+- **Trados: MCP tool `list_terms`.** *Supervertaler MCP Server*, tool table: new row for `list_terms` (read a whole termbase a page at a time, Supervertaler and Trados `.ttb`/`.sdltb`), for 18/19.20.210. `lookup_term` gives each entry's number; `list_resources` gives each termbase one name and an id that all termbase tools accept; `check_terminology` reports an unknown termbase name as an error.
 - **memoQ 0.1.33.** *Prompt editor*, the usage statistics setting: the ping also sends the processor type and any virtual machine. *Supervertaler MCP Server*, troubleshooting: the fix for ChatGPT desktop seeing Trados instead of memoQ is available now (press **Set up ChatGPT desktop** again), not with Trados 18/19.20.210.
 
 ## 2026-11-25
