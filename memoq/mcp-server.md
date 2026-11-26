@@ -89,6 +89,7 @@ Ask ChatGPT, in a new chat: *"List the exact names of the tools you have from th
 
 - **The list includes `list_trados_instances`:** ChatGPT started the server without the setting that tells it to serve memoQ, so it behaved as the Trados server. Supervertaler for Trados 18.20.210 / 19.20.210 and later fixes this: the server recognises memoQ from the folder it is installed in. Press **Set up ChatGPT desktop** again to get the current server, then quit ChatGPT from the notification area and start it again.
 - **The list is empty, or has only `help` and `get_project`:** the server has not reached memoQ yet. Open memoQ, click into a segment, and ask again.
+- **ChatGPT says the server failed to start with "Windows error 267" ("The directory name is invalid"):** the chat belongs to a ChatGPT project whose folder no longer exists, for example because you renamed or moved the job folder after creating the project. ChatGPT starts the server in that folder, and Windows refuses to start a program in a folder that is not there. Ask in a new chat outside the project, or point the project at the folder's new location.
 
 Two more things that can mislead:
 
