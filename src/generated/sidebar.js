@@ -200,6 +200,19 @@ const sidebar = [
                 "link": "/trados/ai-assistant/super-memory/obsidian-setup/"
               }
             ]
+          },
+          {
+            "label": "EverTM",
+            "items": [
+              {
+                "label": "Overview",
+                "link": "/trados/evertm/"
+              },
+              {
+                "label": "EverTM Matches",
+                "link": "/trados/evertm-matches/"
+              }
+            ]
           }
         ]
       },
