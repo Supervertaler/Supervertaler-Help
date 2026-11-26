@@ -84,6 +84,21 @@ Supervertaler sends the project's [memory bank](/trados/ai-assistant/super-memor
 
 Open the bank's folder (in the Supervertaler Assistant, **Open folder** next to the memory bank list), change or add a rule in `style.md`, and translate a segment again with **Alt+T**: the translation follows the new rule.
 
+### 8. Explore the Supervertaler Assistant
+
+The **Supervertaler Assistant** pane is where most of Supervertaler lives. If you can't see it, open it from Studio's **View** tab. Its tabs are worth a look one by one:
+
+* **Batch Operations**
+  * **Translate** and **Proofread** at the top switch the whole tab between translating the document and checking a translation. The prompt list follows the mode you are in.
+  * **AutoPrompt…** asks the AI to write a translation prompt for this project, from the document, the termbase and the memory bank. When it is done, right-click the AI's message, choose **Save as Prompt…** and give it a name. The saved prompt goes straight into the **Prompt** list, selected: from then on Batch Translate uses it. See [AutoPrompt](/trados/generate-prompt/).
+  * **Preview prompt** shows exactly what would be sent to the AI, prompt, termbase, memory bank and all, without sending anything.
+  * **SuperBench…** has three AI models translate the same segments of this document, and a fourth judge them, so you can see which model suits the work. See [SuperBench](/trados/superbench/).
+* **Chat:** talk to the AI about this project. Ask it to explain a sentence, suggest a better term, or check your translation of a segment. See [Chat](/trados/ai-assistant/chat/).
+* **Import/Export:** export the document for a proofreader as a Word file, bilingual text or HTML, and bring their corrections back into Studio, with each change shown before it is applied. See [Import/Export](/trados/import-export/).
+* **Reports:** the results of a batch proofread, and what your AI calls have cost. See [Reports](/trados/reports/).
+
+Above the tabs is the **SuperMemory** bar: the memory bank in use (the example project's own, `supervertaler-example-…`), **Open folder** to edit its files, and **Report** to see what it contains. See [SuperMemory](/trados/ai-assistant/super-memory/).
+
 ## Starting again, and removing it
 
 Click **Open example project…** again and choose the same languages. Supervertaler asks:
